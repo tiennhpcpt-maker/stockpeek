@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>stockPeek - Liếc phát biết giá</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">📈 <span>stockPeek</span><small>Liếc phát biết giá</small></div>
+    <div class="addbox">
+      <input id="tickerInput" type="text" placeholder="Thêm mã CK, vd: HPG, MWG..." />
+      <button id="addBtn">+ Thêm</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="watchlist">
+      <div class="section-head">
+        <h2>Danh mục theo dõi</h2>
+        <span class="updated" id="quotesUpdated">—</span>
+      </div>
+      <div id="watchlistGrid" class="watchlist-grid"></div>
+    </section>
+
+    <section class="news-feed">
+      <div class="section-head">
+        <h2>Tổng quan thị trường</h2>
+        <span class="updated" id="newsUpdated">—</span>
+      </div>
+      <div id="newsFeed" class="feed"></div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
