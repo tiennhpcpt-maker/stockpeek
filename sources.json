@@ -6,5 +6,9 @@
   {
     "name": "VnEconomy",
     "url": "https://vneconomy.vn/thi-truong-chung-khoan.rss"
+  },
+  {
+    "name": "__test_check__",
+    "url": "https://vnexpress.net/rss/kinh-doanh.rss"
   }
 ]
