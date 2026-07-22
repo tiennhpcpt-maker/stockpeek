@@ -42,5 +42,10 @@
   {
     "name": "Tuổi Trẻ Chứng khoán",
     "url": "https://tuoitre.vn/rss/chung-khoan.rss"
+  },
+  {
+    "name": "TestForeign",
+    "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+    "lang": "en"
   }
 ]
