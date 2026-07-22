@@ -16,36 +16,38 @@ PORT = int(os.environ.get("PORT", 8787))
 HOST = "0.0.0.0" if os.environ.get("PORT") else "127.0.0.1"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PUBLIC_DIR = os.path.join(BASE_DIR, "public")
-SOURCES_FILE = os.path.join(BASE_DIR, "sources.json")
 
 DEFAULT_TICKERS = ["VIC", "VNM", "FPT", "VCB", "HPG"]
 
+# Nguồn mặc định khi trình duyệt chưa lưu tuỳ chỉnh gì (xem thêm public/app.js).
+# Danh sách nguồn thực tế của mỗi người dùng được lưu trên trình duyệt (localStorage),
+# không lưu trên server, để không bị mất khi server khởi động lại.
 DEFAULT_SOURCES = [
     {"name": "24hMoney", "url": "https://24hmoney.vn/rss/chung-khoan.rss"},
     {"name": "VnEconomy", "url": "https://vneconomy.vn/thi-truong-chung-khoan.rss"},
 ]
 
-_news_cache = {"data": None, "ts": 0}
+MAX_SOURCES = 15
+_news_cache = {}  # key: tuple(sorted urls) -> {"data":[...], "ts": float}
 NEWS_CACHE_TTL = 180  # 3 phút
 
 
-def load_sources():
-    if not os.path.isfile(SOURCES_FILE):
-        save_sources(DEFAULT_SOURCES)
-        return [dict(s) for s in DEFAULT_SOURCES]
+def parse_sources_param(raw):
+    if not raw:
+        return DEFAULT_SOURCES
     try:
-        with open(SOURCES_FILE, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            if isinstance(data, list):
-                return data
+        data = json.loads(raw)
+        if not isinstance(data, list):
+            return DEFAULT_SOURCES
+        out = []
+        for item in data[:MAX_SOURCES]:
+            name = str(item.get("name", "")).strip()
+            url = str(item.get("url", "")).strip()
+            if name and url.startswith("http"):
+                out.append({"name": name, "url": url})
+        return out or DEFAULT_SOURCES
     except Exception:
-        pass
-    return [dict(s) for s in DEFAULT_SOURCES]
-
-
-def save_sources(sources):
-    with open(SOURCES_FILE, "w", encoding="utf-8") as f:
-        json.dump(sources, f, ensure_ascii=False, indent=2)
+        return DEFAULT_SOURCES
 
 
 def validate_feed(url):
@@ -113,13 +115,15 @@ def strip_html(s):
     return re.sub("<[^<]+?>", "", s or "").strip()
 
 
-def get_news():
+def get_news(sources):
+    key = tuple(sorted(s["url"] for s in sources))
     now = time.time()
-    if _news_cache["data"] and now - _news_cache["ts"] < NEWS_CACHE_TTL:
-        return _news_cache["data"]
+    cached = _news_cache.get(key)
+    if cached and now - cached["ts"] < NEWS_CACHE_TTL:
+        return cached["data"]
 
     items = []
-    for src in load_sources():
+    for src in sources:
         source = src.get("name", "")
         url = src.get("url", "")
         try:
@@ -141,8 +145,10 @@ def get_news():
         except Exception as e:
             items.append({"source": source, "error": str(e), "title": "", "link": "", "pubDate": "", "summary": ""})
 
-    _news_cache["data"] = items
-    _news_cache["ts"] = now
+    _news_cache[key] = {"data": items, "ts": now}
+    if len(_news_cache) > 30:
+        oldest = min(_news_cache, key=lambda k: _news_cache[k]["ts"])
+        del _news_cache[oldest]
     return items
 
 
@@ -180,15 +186,14 @@ class Handler(BaseHTTPRequestHandler):
             return
 
         if parsed.path == "/api/news":
+            qs = parse_qs(parsed.query)
+            raw_sources = qs.get("sources", [""])[0]
+            sources = parse_sources_param(raw_sources)
             try:
-                data = get_news()
+                data = get_news(sources)
                 self._send_json({"ok": True, "data": data})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
-            return
-
-        if parsed.path == "/api/sources":
-            self._send_json({"ok": True, "data": load_sources()})
             return
 
         self.serve_static(parsed.path)
@@ -202,43 +207,22 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         parsed = urlparse(self.path)
-        if parsed.path == "/api/sources":
+        if parsed.path == "/api/validate-source":
             try:
                 body = self._read_json_body()
             except Exception:
                 self._send_json({"ok": False, "error": "Dữ liệu gửi lên không hợp lệ"}, 400)
                 return
-            name = (body.get("name") or "").strip()
             url = (body.get("url") or "").strip()
-            if not name or not url:
-                self._send_json({"ok": False, "error": "Cần nhập cả tên nguồn và URL"}, 400)
+            if not url:
+                self._send_json({"ok": False, "error": "Thiếu URL"}, 400)
                 return
             try:
                 validate_feed(url)
             except Exception as e:
                 self._send_json({"ok": False, "error": f"Không lấy được RSS từ URL này: {e}"}, 400)
                 return
-            sources = load_sources()
-            if any(s.get("name", "").lower() == name.lower() for s in sources):
-                self._send_json({"ok": False, "error": "Tên nguồn này đã tồn tại"}, 400)
-                return
-            sources.append({"name": name, "url": url})
-            save_sources(sources)
-            _news_cache["data"] = None
-            self._send_json({"ok": True, "data": sources})
-            return
-        self.send_error(404)
-
-    def do_DELETE(self):
-        parsed = urlparse(self.path)
-        if parsed.path == "/api/sources":
-            qs = parse_qs(parsed.query)
-            name = qs.get("name", [""])[0]
-            sources = load_sources()
-            new_sources = [s for s in sources if s.get("name") != name]
-            save_sources(new_sources)
-            _news_cache["data"] = None
-            self._send_json({"ok": True, "data": new_sources})
+            self._send_json({"ok": True})
             return
         self.send_error(404)
 
