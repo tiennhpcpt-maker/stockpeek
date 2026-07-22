@@ -15,7 +15,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs, urlencode
 
 PORT = int(os.environ.get("PORT", 8787))
 HOST = "0.0.0.0" if os.environ.get("PORT") else "127.0.0.1"
@@ -120,7 +120,7 @@ def load_sources():
     return data, sha
 
 
-def add_source_entry(name, url):
+def add_source_entry(name, url, lang="vi"):
     def mutate(sources):
         if not isinstance(sources, list):
             sources = [dict(s) for s in DEFAULT_SOURCES]
@@ -128,7 +128,10 @@ def add_source_entry(name, url):
             raise ValueError("DUP")
         if len(sources) >= MAX_SOURCES:
             raise ValueError("MAX")
-        return sources + [{"name": name, "url": url}]
+        entry = {"name": name, "url": url}
+        if lang != "vi":
+            entry["lang"] = lang
+        return sources + [entry]
 
     return update_github_file(SOURCES_PATH, [dict(s) for s in DEFAULT_SOURCES], mutate, "Cập nhật nguồn tin (stockPeek)")
 
@@ -213,6 +216,22 @@ def strip_html(s):
     return html.unescape(text).strip()
 
 
+def translate_to_vi(text):
+    """Dịch văn bản sang tiếng Việt bằng endpoint dịch miễn phí của Google.
+    Nếu lỗi (mạng, giới hạn truy vấn...) thì trả về nguyên văn gốc."""
+    if not text:
+        return text
+    try:
+        params = urlencode({"client": "gtx", "sl": "auto", "tl": "vi", "dt": "t", "q": text})
+        url = f"https://translate.googleapis.com/translate_a/single?{params}"
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=6) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        return "".join(seg[0] for seg in data[0] if seg and seg[0])
+    except Exception:
+        return text
+
+
 def _pub_ts(pub_date):
     try:
         return parsedate_to_datetime(pub_date).timestamp()
@@ -279,14 +298,21 @@ def get_news():
     for src in sources:
         source = src.get("name", "")
         url = src.get("url", "")
+        is_foreign = src.get("lang", "vi") != "vi"
+        # Nguồn tiếng nước ngoài cần dịch từng bài -> giới hạn số bài để tránh
+        # quá nhiều lượt gọi API dịch miễn phí, làm chậm lần làm mới tin tức.
+        limit = 6 if is_foreign else 12
         try:
             raw = fetch_url(url, timeout=8)
             root = ET.fromstring(raw)
-            for item in root.findall(".//item")[:12]:
+            for item in root.findall(".//item")[:limit]:
                 title = html.unescape((item.findtext("title") or "").strip())
                 link = (item.findtext("link") or "").strip()
                 pub = (item.findtext("pubDate") or "").strip()
                 desc = strip_html(item.findtext("description") or "")[:220]
+                if is_foreign:
+                    title = translate_to_vi(title)
+                    desc = translate_to_vi(desc)
                 if title:
                     items.append({
                         "source": source,
@@ -386,6 +412,7 @@ class Handler(BaseHTTPRequestHandler):
                 return
             name = (body.get("name") or "").strip()
             url = (body.get("url") or "").strip()
+            lang = "en" if body.get("foreign") else "vi"
             if not name or not url:
                 self._send_json({"ok": False, "error": "Cần nhập cả tên nguồn và URL"}, 400)
                 return
@@ -395,7 +422,7 @@ class Handler(BaseHTTPRequestHandler):
                 self._send_json({"ok": False, "error": f"Không lấy được RSS từ URL này: {e}"}, 400)
                 return
             try:
-                new_sources = add_source_entry(name, url)
+                new_sources = add_source_entry(name, url, lang)
                 _news_cache.clear()
                 self._send_json({"ok": True, "data": new_sources})
             except ValueError as e:

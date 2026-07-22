@@ -190,6 +190,7 @@ function renderSources() {
     .map(
       (s) => `<div class="source-manage-row">
         <span class="source-name">${s.name}</span>
+        ${s.lang && s.lang !== "vi" ? '<span class="source-lang-badge">Dịch → VI</span>' : ""}
         <span class="source-url">${s.url}</span>
         <button class="source-remove" onclick="removeSource('${s.name.replace(/'/g, "\\'")}')">Xoá</button>
       </div>`
@@ -200,9 +201,11 @@ function renderSources() {
 async function addSource() {
   const nameInput = document.getElementById("sourceNameInput");
   const urlInput = document.getElementById("sourceUrlInput");
+  const foreignCheck = document.getElementById("sourceForeignCheck");
   const errBox = document.getElementById("sourceError");
   const name = nameInput.value.trim();
   const url = urlInput.value.trim();
+  const foreign = foreignCheck.checked;
   errBox.textContent = "";
   if (!name || !url) {
     errBox.textContent = "Nhập đủ tên nguồn và URL RSS.";
@@ -215,7 +218,7 @@ async function addSource() {
     const res = await fetch("/api/sources", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, url }),
+      body: JSON.stringify({ name, url, foreign }),
     });
     const json = await res.json();
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
@@ -223,6 +226,7 @@ async function addSource() {
     renderSources();
     nameInput.value = "";
     urlInput.value = "";
+    foreignCheck.checked = false;
     refreshNews();
   } catch (e) {
     errBox.textContent = e.message;
