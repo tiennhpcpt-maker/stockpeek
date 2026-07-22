@@ -34,5 +34,10 @@
   {
     "name": "Stockbiz Thị trường",
     "url": "https://stockbiz.vn/api/rss/thi-truong.rss"
+  },
+  {
+    "name": "BBC Business",
+    "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+    "lang": "en"
   }
 ]
