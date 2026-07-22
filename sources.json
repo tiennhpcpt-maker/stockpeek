@@ -14,5 +14,9 @@
   {
     "name": "VnExpress Kinh doanh",
     "url": "https://vnexpress.net/rss/kinh-doanh.rss"
+  },
+  {
+    "name": "Dân Trí Kinh doanh",
+    "url": "https://dantri.com.vn/rss/kinh-doanh.rss"
   }
 ]
