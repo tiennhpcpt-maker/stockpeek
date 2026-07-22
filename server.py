@@ -4,6 +4,7 @@ Chạy: python3 server.py
 Mở trình duyệt: http://127.0.0.1:8787
 """
 import base64
+import difflib
 import json
 import os
 import re
@@ -11,6 +12,7 @@ import time
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
+from email.utils import parsedate_to_datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 
@@ -37,9 +39,10 @@ _news_cache = {}  # key: tuple(sorted urls) -> {"data":[...], "ts": float}
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GITHUB_REPO = os.environ.get("GITHUB_REPO", "tiennhpcpt-maker/stockpeek")
 SOURCES_PATH = "sources.json"
-SOURCES_CACHE_TTL = 20  # giây
+SECTOR_ANALYSIS_PATH = "sector_analysis.json"
+GITHUB_FILE_CACHE_TTL = 20  # giây
 
-_sources_cache = {"data": None, "sha": None, "ts": 0}
+_github_file_cache = {}  # path -> {"data":..., "sha":..., "ts": float}
 
 
 def _github_request(method, url, body=None):
@@ -52,47 +55,58 @@ def _github_request(method, url, body=None):
         return json.loads(resp.read())
 
 
-def load_sources():
+def load_github_file(path, default):
     now = time.time()
-    if _sources_cache["data"] is not None and now - _sources_cache["ts"] < SOURCES_CACHE_TTL:
-        return _sources_cache["data"], _sources_cache["sha"]
+    cached = _github_file_cache.get(path)
+    if cached and now - cached["ts"] < GITHUB_FILE_CACHE_TTL:
+        return cached["data"], cached["sha"]
 
-    url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{SOURCES_PATH}"
+    url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{path}"
     try:
         resp = _github_request("GET", url)
         content = base64.b64decode(resp["content"]).decode("utf-8")
         data = json.loads(content)
         sha = resp["sha"]
-        if not isinstance(data, list):
-            data = [dict(s) for s in DEFAULT_SOURCES]
     except urllib.error.HTTPError as e:
         if e.code == 404:
-            data = [dict(s) for s in DEFAULT_SOURCES]
+            data = default
             sha = None
         else:
             raise
 
-    _sources_cache["data"] = data
-    _sources_cache["sha"] = sha
-    _sources_cache["ts"] = now
+    _github_file_cache[path] = {"data": data, "sha": sha, "ts": now}
+    return data, sha
+
+
+def save_github_file(path, data, message):
+    if not GITHUB_TOKEN:
+        raise RuntimeError("Server chưa cấu hình GITHUB_TOKEN nên không thể lưu dữ liệu")
+    url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{path}"
+    content_b64 = base64.b64encode(
+        json.dumps(data, ensure_ascii=False, indent=2).encode("utf-8")
+    ).decode("ascii")
+    body = {"message": message, "content": content_b64}
+    _, sha = load_github_file(path, data)
+    if sha:
+        body["sha"] = sha
+    resp = _github_request("PUT", url, body)
+    _github_file_cache[path] = {"data": data, "sha": resp["content"]["sha"], "ts": time.time()}
+
+
+def load_sources():
+    data, sha = load_github_file(SOURCES_PATH, [dict(s) for s in DEFAULT_SOURCES])
+    if not isinstance(data, list):
+        data = [dict(s) for s in DEFAULT_SOURCES]
     return data, sha
 
 
 def save_sources(sources):
-    if not GITHUB_TOKEN:
-        raise RuntimeError("Server chưa cấu hình GITHUB_TOKEN nên không thể lưu nguồn tin")
-    url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{SOURCES_PATH}"
-    content_b64 = base64.b64encode(
-        json.dumps(sources, ensure_ascii=False, indent=2).encode("utf-8")
-    ).decode("ascii")
-    body = {"message": "Cập nhật nguồn tin (stockPeek)", "content": content_b64}
-    _, sha = load_sources()
-    if sha:
-        body["sha"] = sha
-    resp = _github_request("PUT", url, body)
-    _sources_cache["data"] = sources
-    _sources_cache["sha"] = resp["content"]["sha"]
-    _sources_cache["ts"] = time.time()
+    save_github_file(SOURCES_PATH, sources, "Cập nhật nguồn tin (stockPeek)")
+
+
+def load_sector_analysis():
+    data, _ = load_github_file(SECTOR_ANALYSIS_PATH, None)
+    return data
 
 
 def validate_feed(url):
@@ -160,6 +174,59 @@ def strip_html(s):
     return re.sub("<[^<]+?>", "", s or "").strip()
 
 
+def _pub_ts(pub_date):
+    try:
+        return parsedate_to_datetime(pub_date).timestamp()
+    except Exception:
+        return 0
+
+
+def _normalize_title(title):
+    t = title.lower()
+    t = re.sub(r"[^\w\s]", " ", t, flags=re.UNICODE)
+    t = re.sub(r"\s+", " ", t).strip()
+    return t
+
+
+SAME_STORY_RATIO = 0.55
+
+
+def cluster_news_items(items):
+    """Gộp các tin có tiêu đề giống nhau (khả năng cùng 1 sự kiện do nhiều
+    nguồn đưa tin) thành 1 nhóm, để hiển thị 1 thẻ kèm trích dẫn từng nguồn."""
+    clusters = []  # [{"norm": str, "items": [...]}]
+    for it in items:
+        norm = _normalize_title(it["title"])
+        best_cluster = None
+        best_ratio = 0
+        for c in clusters:
+            ratio = difflib.SequenceMatcher(None, norm, c["norm"]).ratio()
+            if ratio > best_ratio:
+                best_ratio = ratio
+                best_cluster = c
+        if best_cluster and best_ratio >= SAME_STORY_RATIO:
+            best_cluster["items"].append(it)
+        else:
+            clusters.append({"norm": norm, "items": [it]})
+
+    merged = []
+    for c in clusters:
+        group = sorted(c["items"], key=lambda x: _pub_ts(x["pubDate"]), reverse=True)
+        primary = max(group, key=lambda x: len(x.get("summary", "")))
+        merged.append({
+            "title": primary["title"],
+            "summary": primary["summary"],
+            "pubDate": group[0]["pubDate"],
+            "sourceCount": len(group),
+            "sources": [
+                {"source": g["source"], "title": g["title"], "link": g["link"], "pubDate": g["pubDate"]}
+                for g in group
+            ],
+        })
+    merged.sort(key=lambda m: _pub_ts(m["pubDate"]), reverse=True)
+    return merged
+
+
 def get_news():
     sources, _ = load_sources()
     key = tuple(sorted(s["url"] for s in sources))
@@ -169,6 +236,7 @@ def get_news():
         return cached["data"]
 
     items = []
+    errors = []
     for src in sources:
         source = src.get("name", "")
         url = src.get("url", "")
@@ -189,13 +257,15 @@ def get_news():
                         "summary": desc,
                     })
         except Exception as e:
-            items.append({"source": source, "error": str(e), "title": "", "link": "", "pubDate": "", "summary": ""})
+            errors.append({"source": source, "error": str(e)})
 
-    _news_cache[key] = {"data": items, "ts": now}
+    merged = cluster_news_items(items)
+    data = {"items": merged, "errors": errors}
+    _news_cache[key] = {"data": data, "ts": now}
     if len(_news_cache) > 30:
         oldest = min(_news_cache, key=lambda k: _news_cache[k]["ts"])
         del _news_cache[oldest]
-    return items
+    return data
 
 
 CONTENT_TYPES = {
@@ -234,7 +304,7 @@ class Handler(BaseHTTPRequestHandler):
         if parsed.path == "/api/news":
             try:
                 data = get_news()
-                self._send_json({"ok": True, "data": data})
+                self._send_json({"ok": True, "data": data["items"], "errors": data["errors"]})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return
@@ -242,6 +312,17 @@ class Handler(BaseHTTPRequestHandler):
         if parsed.path == "/api/sources":
             try:
                 data, _ = load_sources()
+                self._send_json({"ok": True, "data": data})
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
+        if parsed.path == "/api/sector-analysis":
+            try:
+                data = load_sector_analysis()
+                if data is None:
+                    self._send_json({"ok": False, "error": "Chưa có dữ liệu phân tích nhóm ngành"}, 404)
+                    return
                 self._send_json({"ok": True, "data": data})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)

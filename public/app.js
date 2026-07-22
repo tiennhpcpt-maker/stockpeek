@@ -134,15 +134,37 @@ function renderNews(items) {
     return;
   }
   feed.innerHTML = valid
-    .map(
-      (it) => `<a class="news-card" href="${it.link}" target="_blank" rel="noopener">
-        <div class="source-row">📰 ${it.source} · ${timeAgo(it.pubDate)}</div>
+    .map((it, i) => {
+      const chips = it.sources
+        .map((s) => `<span class="source-chip">📰 ${s.source}</span>`)
+        .join("");
+      const multiBadge =
+        it.sourceCount > 1 ? `<span class="multi-badge">${it.sourceCount} nguồn đưa tin</span>` : "";
+      const detailItems = it.sources
+        .map(
+          (s) => `<div class="sources-detail-item">
+            <span><span class="sdi-source">${s.source}</span><span class="sdi-title">${s.title}</span></span>
+            <a href="${s.link}" target="_blank" rel="noopener">Mở bài gốc ↗</a>
+          </div>`
+        )
+        .join("");
+      return `<div class="news-card">
+        <div class="source-row">${chips}${multiBadge}<span>· ${timeAgo(it.pubDate)}</span></div>
         <div class="title">${it.title}</div>
         ${it.summary ? `<div class="summary">${it.summary}</div>` : ""}
-        <span class="link-out">Xem tin →</span>
-      </a>`
-    )
+        <button class="link-out" onclick="toggleNewsDetail(${i})">Xem nguồn đưa tin →</button>
+        <div class="sources-detail" id="news-detail-${i}">
+          <div class="sources-detail-label">Nguồn đưa tin · ${it.sourceCount}</div>
+          ${detailItems}
+        </div>
+      </div>`;
+    })
     .join("");
+}
+
+function toggleNewsDetail(i) {
+  const el = document.getElementById(`news-detail-${i}`);
+  if (el) el.classList.toggle("open");
 }
 
 async function refreshSources() {
@@ -166,7 +188,7 @@ function renderSources() {
   }
   list.innerHTML = sources
     .map(
-      (s) => `<div class="source-row">
+      (s) => `<div class="source-manage-row">
         <span class="source-name">${s.name}</span>
         <span class="source-url">${s.url}</span>
         <button class="source-remove" onclick="removeSource('${s.name.replace(/'/g, "\\'")}')">Xoá</button>
@@ -223,6 +245,52 @@ async function removeSource(name) {
   }
 }
 
+async function refreshSectorAnalysis() {
+  const grid = document.getElementById("sectorGrid");
+  try {
+    const res = await fetch("/api/sector-analysis");
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    renderSectorAnalysis(json.data);
+  } catch (e) {
+    grid.innerHTML = `<div class="empty">Chưa có dữ liệu phân tích nhóm ngành.</div>`;
+    document.getElementById("sectorDisclaimer").textContent = "";
+  }
+}
+
+function renderSectorAnalysis(data) {
+  const grid = document.getElementById("sectorGrid");
+  const disclaimerBox = document.getElementById("sectorDisclaimer");
+  disclaimerBox.textContent = data.disclaimer || "";
+  if (data.generated_at) {
+    document.getElementById("sectorUpdated").textContent =
+      "Cập nhật " + new Date(data.generated_at).toLocaleString("vi-VN");
+  }
+  const sectors = data.sectors || [];
+  if (!sectors.length) {
+    grid.innerHTML = '<div class="empty">Chưa có dữ liệu.</div>';
+    return;
+  }
+  grid.innerHTML = sectors
+    .map(
+      (s) => `<div class="sector-card">
+        <div class="sector-name">${s.name}</div>
+        ${s.outlook ? `<div class="sector-outlook">${s.outlook}</div>` : ""}
+        ${(s.picks || [])
+          .map(
+            (p) => `<div class="sector-pick">
+              <span class="pick-ticker">${p.ticker}</span>
+              <span class="pick-reason">${p.reason}${
+                p.source ? `<span class="pick-source">Nguồn: ${p.source}</span>` : ""
+              }</span>
+            </div>`
+          )
+          .join("")}
+      </div>`
+    )
+    .join("");
+}
+
 document.getElementById("addBtn").addEventListener("click", addTicker);
 document.getElementById("tickerInput").addEventListener("keydown", (e) => {
   if (e.key === "Enter") addTicker();
@@ -232,5 +300,6 @@ document.getElementById("addSourceBtn").addEventListener("click", addSource);
 refreshSources();
 refreshQuotes();
 refreshNews();
+refreshSectorAnalysis();
 setInterval(refreshQuotes, QUOTES_INTERVAL_MS);
 setInterval(refreshNews, NEWS_INTERVAL_MS);
