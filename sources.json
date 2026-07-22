@@ -34,5 +34,9 @@
   {
     "name": "BBC Business",
     "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+  },
+  {
+    "name": "WSJ Markets",
+    "url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml"
   }
 ]
