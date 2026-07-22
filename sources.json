@@ -38,5 +38,9 @@
   {
     "name": "WSJ Markets",
     "url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml"
+  },
+  {
+    "name": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/news/rssindex"
   }
 ]
