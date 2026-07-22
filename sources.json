@@ -34,5 +34,9 @@
   {
     "name": "Yahoo Finance",
     "url": "https://finance.yahoo.com/news/rssindex"
+  },
+  {
+    "name": "Thanh Niên Chứng khoán",
+    "url": "https://thanhnien.vn/rss/kinh-te/chung-khoan.rss"
   }
 ]
