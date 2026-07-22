@@ -10,5 +10,9 @@
   {
     "name": "Vietstock",
     "url": "https://vietstock.vn/144/chung-khoan.rss"
+  },
+  {
+    "name": "VnExpress Kinh doanh",
+    "url": "https://vnexpress.net/rss/kinh-doanh.rss"
   }
 ]
