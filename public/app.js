@@ -1,26 +1,9 @@
 const STORAGE_KEY = "stockpeek_watchlist";
-const SOURCES_STORAGE_KEY = "stockpeek_sources";
 const DEFAULT_TICKERS = ["VIC", "VNM", "FPT", "VCB", "HPG"];
-const DEFAULT_SOURCES = [
-  { name: "24hMoney", url: "https://24hmoney.vn/rss/chung-khoan.rss" },
-  { name: "VnEconomy", url: "https://vneconomy.vn/thi-truong-chung-khoan.rss" },
-];
 const QUOTES_INTERVAL_MS = 15000;
 const NEWS_INTERVAL_MS = 3 * 60 * 1000;
 
-function loadSources() {
-  try {
-    const raw = localStorage.getItem(SOURCES_STORAGE_KEY);
-    if (raw) return JSON.parse(raw);
-  } catch (e) {}
-  return DEFAULT_SOURCES.slice();
-}
-
-function saveSources(list) {
-  localStorage.setItem(SOURCES_STORAGE_KEY, JSON.stringify(list));
-}
-
-let sources = loadSources();
+let sources = [];
 
 function loadWatchlist() {
   try {
@@ -132,8 +115,7 @@ function addTicker() {
 async function refreshNews() {
   const feed = document.getElementById("newsFeed");
   try {
-    const q = encodeURIComponent(JSON.stringify(sources));
-    const res = await fetch(`/api/news?sources=${q}`);
+    const res = await fetch("/api/news");
     const json = await res.json();
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
     renderNews(json.data);
@@ -163,6 +145,19 @@ function renderNews(items) {
     .join("");
 }
 
+async function refreshSources() {
+  try {
+    const res = await fetch("/api/sources");
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    sources = json.data;
+    renderSources();
+  } catch (e) {
+    document.getElementById("sourcesList").innerHTML =
+      `<div class="empty">Lỗi lấy danh sách nguồn: ${e.message}</div>`;
+  }
+}
+
 function renderSources() {
   const list = document.getElementById("sourcesList");
   if (!sources.length) {
@@ -171,10 +166,10 @@ function renderSources() {
   }
   list.innerHTML = sources
     .map(
-      (s, i) => `<div class="source-row">
+      (s) => `<div class="source-row">
         <span class="source-name">${s.name}</span>
         <span class="source-url">${s.url}</span>
-        <button class="source-remove" onclick="removeSource(${i})">Xoá</button>
+        <button class="source-remove" onclick="removeSource('${s.name.replace(/'/g, "\\'")}')">Xoá</button>
       </div>`
     )
     .join("");
@@ -191,23 +186,18 @@ async function addSource() {
     errBox.textContent = "Nhập đủ tên nguồn và URL RSS.";
     return;
   }
-  if (sources.some((s) => s.name.toLowerCase() === name.toLowerCase())) {
-    errBox.textContent = "Tên nguồn này đã tồn tại.";
-    return;
-  }
   const btn = document.getElementById("addSourceBtn");
   btn.disabled = true;
   btn.textContent = "Đang kiểm tra...";
   try {
-    const res = await fetch("/api/validate-source", {
+    const res = await fetch("/api/sources", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ url }),
+      body: JSON.stringify({ name, url }),
     });
     const json = await res.json();
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
-    sources.push({ name, url });
-    saveSources(sources);
+    sources = json.data;
     renderSources();
     nameInput.value = "";
     urlInput.value = "";
@@ -220,11 +210,17 @@ async function addSource() {
   }
 }
 
-function removeSource(index) {
-  sources.splice(index, 1);
-  saveSources(sources);
-  renderSources();
-  refreshNews();
+async function removeSource(name) {
+  try {
+    const res = await fetch(`/api/sources?name=${encodeURIComponent(name)}`, { method: "DELETE" });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    sources = json.data;
+    renderSources();
+    refreshNews();
+  } catch (e) {
+    document.getElementById("sourceError").textContent = e.message;
+  }
 }
 
 document.getElementById("addBtn").addEventListener("click", addTicker);
@@ -233,7 +229,7 @@ document.getElementById("tickerInput").addEventListener("keydown", (e) => {
 });
 document.getElementById("addSourceBtn").addEventListener("click", addSource);
 
-renderSources();
+refreshSources();
 refreshQuotes();
 refreshNews();
 setInterval(refreshQuotes, QUOTES_INTERVAL_MS);
