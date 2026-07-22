@@ -1,60 +1,132 @@
 {
-  "generated_at": "2026-07-22T17:30:00+07:00",
+  "generated_at": "2026-07-22T23:25:00+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index đang trong xu hướng điều chỉnh ngắn hạn (quanh vùng 1.700-1.730 điểm cuối tháng 7/2026), thanh khoản suy giảm. SSI Research đánh giá thị trường tháng 7 nhiều khả năng đi ngang dù xác suất tăng theo mùa vụ khoảng 70%, khuyến nghị ưu tiên doanh nghiệp có tăng trưởng lợi nhuận rõ ràng nửa cuối năm.",
+  "market_note": "VN-Index đóng cửa phiên 22/7 tại 1.668,53 điểm, giảm 62,03 điểm (-3,58%) — phiên giảm thứ 4 liên tiếp, về vùng thấp nhất kể từ đầu tháng 4/2026. Sắc đỏ áp đảo với 245 mã giảm so với 75 mã tăng trên HoSE. Khối ngoại bán ròng gần 1.992 tỷ đồng trên 3 sàn, bán mạnh nhất SSI (-292 tỷ), VIC (-207 tỷ), VCB (-201 tỷ); mua ròng mạnh nhất VNM (+167 tỷ), HPG (+52 tỷ).",
   "sectors": [
     {
       "name": "Ngân hàng",
       "outlook": "Dòng tiền lớn quay lại nhóm ngân hàng, khối ngoại mua ròng mạnh nhiều mã trong các phiên gần đây; nhiều ngân hàng công bố lợi nhuận quý 2/2026 tích cực.",
       "picks": [
-        { "ticker": "HDB", "reason": "Khối ngoại mua ròng mạnh nhất nhì thị trường (~90 tỷ đồng/phiên 21/7), nằm trong nhóm ngân hàng dẫn sóng.", "source": "Tin nhanh chứng khoán" },
-        { "ticker": "SHB", "reason": "Dẫn đầu giá trị mua ròng khối ngoại trên HOSE (hơn 107 tỷ đồng/phiên 21/7).", "source": "CafeF" },
-        { "ticker": "MBB", "reason": "Nằm trong danh mục khuyến nghị của SSI Research nhờ khả năng duy trì tăng trưởng lợi nhuận rõ ràng nửa cuối năm.", "source": "SSI Research" }
+        {
+          "ticker": "HDB",
+          "reason": "Khối ngoại mua ròng mạnh nhất nhì thị trường (~90 tỷ đồng/phiên 21/7), nằm trong nhóm ngân hàng dẫn sóng.",
+          "source": "Tin nhanh chứng khoán"
+        },
+        {
+          "ticker": "SHB",
+          "reason": "Dẫn đầu giá trị mua ròng khối ngoại trên HOSE (hơn 107 tỷ đồng/phiên 21/7).",
+          "source": "CafeF"
+        },
+        {
+          "ticker": "MBB",
+          "reason": "Nằm trong danh mục khuyến nghị của SSI Research nhờ khả năng duy trì tăng trưởng lợi nhuận rõ ràng nửa cuối năm.",
+          "source": "SSI Research"
+        }
       ]
     },
     {
       "name": "Thép",
       "outlook": "Dòng tiền khối ngoại trở lại nhóm thép, hưởng lợi từ kỳ vọng đầu tư hạ tầng (cao tốc Bắc-Nam giai đoạn 2, sân bay Long Thành) và chu kỳ phục hồi bất động sản dân dụng.",
       "picks": [
-        { "ticker": "HPG", "reason": "Lựa chọn hàng đầu chủ đề đầu tư hạ tầng; quý 1/2026 lợi nhuận sau thuế gấp 2,7 lần cùng kỳ.", "source": "Người quan sát" },
-        { "ticker": "NKG", "reason": "Cùng nhóm 'dậy sóng' với HPG, HSG nhờ kỳ vọng nhu cầu thép xây dựng tăng 5-8% trong 2026.", "source": "Người quan sát" },
-        { "ticker": "HSG", "reason": "Hưởng lợi chu kỳ phục hồi bất động sản dân dụng và giải ngân đầu tư công.", "source": "Diễn đàn doanh nghiệp" }
+        {
+          "ticker": "HPG",
+          "reason": "Lựa chọn hàng đầu chủ đề đầu tư hạ tầng; quý 1/2026 lợi nhuận sau thuế gấp 2,7 lần cùng kỳ.",
+          "source": "Người quan sát"
+        },
+        {
+          "ticker": "NKG",
+          "reason": "Cùng nhóm 'dậy sóng' với HPG, HSG nhờ kỳ vọng nhu cầu thép xây dựng tăng 5-8% trong 2026.",
+          "source": "Người quan sát"
+        },
+        {
+          "ticker": "HSG",
+          "reason": "Hưởng lợi chu kỳ phục hồi bất động sản dân dụng và giải ngân đầu tư công.",
+          "source": "Diễn đàn doanh nghiệp"
+        }
       ]
     },
     {
       "name": "Bán lẻ",
       "outlook": "Nhóm bán lẻ hiện đại được các CTCK nâng kỳ vọng lợi nhuận (+51% theo BSC) giai đoạn 2026-2030, dù tiêu dùng phục hồi còn chậm.",
       "picks": [
-        { "ticker": "MWG", "reason": "Khuyến nghị Mua vào, giá mục tiêu 109.500đ, tiềm năng tăng giá 39,1% sau nhịp điều chỉnh ~18%.", "source": "VOV" },
-        { "ticker": "FRT", "reason": "Mảng dược phẩm (Long Châu) kỳ vọng là động lực tăng trưởng chính, doanh thu dự phóng +25,7% năm 2026.", "source": "Mirae Asset" },
-        { "ticker": "PNJ", "reason": "VDSC duy trì khuyến nghị Mua nhờ định giá đã chiết khấu sâu.", "source": "VDSC" }
+        {
+          "ticker": "MWG",
+          "reason": "Khuyến nghị Mua vào, giá mục tiêu 109.500đ, tiềm năng tăng giá 39,1% sau nhịp điều chỉnh ~18%.",
+          "source": "VOV"
+        },
+        {
+          "ticker": "FRT",
+          "reason": "Mảng dược phẩm (Long Châu) kỳ vọng là động lực tăng trưởng chính, doanh thu dự phóng +25,7% năm 2026.",
+          "source": "Mirae Asset"
+        },
+        {
+          "ticker": "PNJ",
+          "reason": "VDSC duy trì khuyến nghị Mua nhờ định giá đã chiết khấu sâu.",
+          "source": "VDSC"
+        }
       ]
     },
     {
       "name": "Dầu khí",
       "outlook": "Giá dầu Brent tăng nhanh từ ~72 lên ~82 USD/thùng do căng thẳng địa chính trị Mỹ-Iran, kéo nhóm dầu khí bứt phá ngược dòng thị trường chung.",
       "picks": [
-        { "ticker": "PVD", "reason": "Tăng trần 6,99% phiên gần nhất; giá thuê giàn khoan tăng mạnh, tỷ lệ sử dụng trên 90%, backlog kín lịch.", "source": "Tuổi Trẻ" },
-        { "ticker": "PVS", "reason": "Tăng 5,41%, hưởng lợi trực tiếp từ các hợp đồng EPC/EPCI cơ khí dầu khí.", "source": "Elibook" },
-        { "ticker": "GAS", "reason": "Tăng 3,45%; duy trì dòng tiền vững nhờ nhập khẩu LNG/LPG ổn định trong nửa đầu 2026.", "source": "Elibook" }
+        {
+          "ticker": "PVD",
+          "reason": "Tăng trần 6,99% phiên gần nhất; giá thuê giàn khoan tăng mạnh, tỷ lệ sử dụng trên 90%, backlog kín lịch.",
+          "source": "Tuổi Trẻ"
+        },
+        {
+          "ticker": "PVS",
+          "reason": "Tăng 5,41%, hưởng lợi trực tiếp từ các hợp đồng EPC/EPCI cơ khí dầu khí.",
+          "source": "Elibook"
+        },
+        {
+          "ticker": "GAS",
+          "reason": "Tăng 3,45%; duy trì dòng tiền vững nhờ nhập khẩu LNG/LPG ổn định trong nửa đầu 2026.",
+          "source": "Elibook"
+        }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
       "outlook": "FDI giải ngân 6 tháng đầu 2026 đạt 10,8 tỷ USD (+13% svck), vốn đăng ký mới tăng vọt 113% svck — nền tảng phục hồi mạnh cho nhóm KCN.",
       "picks": [
-        { "ticker": "IDC", "reason": "MBS khuyến nghị Khả quan, giá mục tiêu 58.000đ; mô hình KCN sinh thái được ưa thích.", "source": "MBS / Elibook" },
-        { "ticker": "KBC", "reason": "SSI Research đánh giá tích cực nhờ quỹ đất lớn, backlog cho thuê dồi dào.", "source": "SSI Research" },
-        { "ticker": "BCM", "reason": "Nằm trong nhóm 3 mã (BCM, KBC, IDC) được MBS khuyến nghị tích lũy nhờ triển vọng dài hạn.", "source": "MBS" }
+        {
+          "ticker": "IDC",
+          "reason": "MBS khuyến nghị Khả quan, giá mục tiêu 58.000đ; mô hình KCN sinh thái được ưa thích.",
+          "source": "MBS / Elibook"
+        },
+        {
+          "ticker": "KBC",
+          "reason": "SSI Research đánh giá tích cực nhờ quỹ đất lớn, backlog cho thuê dồi dào.",
+          "source": "SSI Research"
+        },
+        {
+          "ticker": "BCM",
+          "reason": "Nằm trong nhóm 3 mã (BCM, KBC, IDC) được MBS khuyến nghị tích lũy nhờ triển vọng dài hạn.",
+          "source": "MBS"
+        }
       ]
     },
     {
       "name": "Chứng khoán",
       "outlook": "Thanh khoản toàn thị trường suy giảm trong nhịp điều chỉnh khiến nhóm cổ phiếu chứng khoán biến động phân hóa, nhưng thanh khoản nội bộ nhóm này vẫn cải thiện.",
       "picks": [
-        { "ticker": "VND", "reason": "Nằm trong nhóm dẫn đầu thanh khoản giao dịch của ngành chứng khoán gần đây.", "source": "Vietstock" },
-        { "ticker": "FTS", "reason": "Thanh khoản cải thiện, thuộc nhóm cổ phiếu chứng khoán được chú ý về dòng tiền.", "source": "Vietstock" },
-        { "ticker": "SHS", "reason": "Khối lượng giao dịch tăng, nằm trong nhóm cổ phiếu chứng khoán đáng theo dõi.", "source": "Vietstock" }
+        {
+          "ticker": "VND",
+          "reason": "Nằm trong nhóm dẫn đầu thanh khoản giao dịch của ngành chứng khoán gần đây.",
+          "source": "Vietstock"
+        },
+        {
+          "ticker": "FTS",
+          "reason": "Thanh khoản cải thiện, thuộc nhóm cổ phiếu chứng khoán được chú ý về dòng tiền.",
+          "source": "Vietstock"
+        },
+        {
+          "ticker": "SHS",
+          "reason": "Khối lượng giao dịch tăng, nằm trong nhóm cổ phiếu chứng khoán đáng theo dõi.",
+          "source": "Vietstock"
+        }
       ]
     }
   ]
