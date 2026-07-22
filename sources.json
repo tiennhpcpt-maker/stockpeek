@@ -26,5 +26,9 @@
   {
     "name": "Tuổi Trẻ Kinh doanh",
     "url": "https://tuoitre.vn/rss/kinh-doanh.rss"
+  },
+  {
+    "name": "MarketTimes Chứng khoán",
+    "url": "https://markettimes.vn/rss/chung-khoan.rss"
   }
 ]
