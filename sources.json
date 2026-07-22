@@ -6,5 +6,9 @@
   {
     "name": "VnEconomy",
     "url": "https://vneconomy.vn/thi-truong-chung-khoan.rss"
+  },
+  {
+    "name": "https://vietstock.vn/830/chung-khoan/co-phieu.rss",
+    "url": "https://vietstock.vn/830/chung-khoan/co-phieu.rss"
   }
 ]
