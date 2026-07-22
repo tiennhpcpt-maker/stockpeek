@@ -46,5 +46,9 @@
   {
     "name": "VnEconomy 1",
     "url": "https://vneconomy.vn/tai-chinh.rss"
+  },
+  {
+    "name": "VnEconomy 2",
+    "url": "https://vneconomy.vn/tin-moi.rss"
   }
 ]
