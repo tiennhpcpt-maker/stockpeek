@@ -249,6 +249,65 @@ async function removeSource(name) {
   }
 }
 
+async function refreshMarketOverview() {
+  const box = document.getElementById("overviewContent");
+  try {
+    const res = await fetch("/api/market-overview");
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    renderMarketOverview(json.data);
+  } catch (e) {
+    box.innerHTML = '<div class="empty">Chưa có dữ liệu nhận định thị trường chung.</div>';
+  }
+}
+
+function renderMarketOverview(data) {
+  const box = document.getElementById("overviewContent");
+  if (data.generated_at) {
+    document.getElementById("overviewUpdated").textContent =
+      "Cập nhật " + new Date(data.generated_at).toLocaleString("vi-VN");
+  }
+  const highlights = (data.highlights || []).map((h) => `<li>${h}</li>`).join("");
+  const actions = (data.action_notes || []).map((a) => `<li>${a}</li>`).join("");
+  const tech = data.technical_outlook || {};
+
+  box.innerHTML = `
+    <div class="overview-summary">${data.executive_summary || ""}</div>
+    ${
+      highlights
+        ? `<div class="overview-block">
+            <div class="overview-block-title">Điểm nhấn chính</div>
+            <ul class="overview-list">${highlights}</ul>
+          </div>`
+        : ""
+    }
+    ${
+      tech.trend
+        ? `<div class="overview-block">
+            <div class="overview-block-title">Góc nhìn kỹ thuật</div>
+            <div class="overview-tech">
+              <div>${tech.trend}</div>
+              <div class="overview-tech-levels">
+                ${tech.support ? `<span class="tech-chip">Hỗ trợ: ${tech.support}</span>` : ""}
+                ${tech.resistance ? `<span class="tech-chip">Kháng cự: ${tech.resistance}</span>` : ""}
+              </div>
+              ${tech.note ? `<div class="overview-tech-note">${tech.note}</div>` : ""}
+            </div>
+          </div>`
+        : ""
+    }
+    ${
+      actions
+        ? `<div class="overview-block">
+            <div class="overview-block-title">Lưu ý hành động</div>
+            <ul class="overview-list">${actions}</ul>
+          </div>`
+        : ""
+    }
+    ${data.disclaimer ? `<p class="overview-disclaimer">${data.disclaimer}</p>` : ""}
+  `;
+}
+
 async function refreshSectorAnalysis() {
   const grid = document.getElementById("sectorGrid");
   try {
@@ -305,5 +364,6 @@ refreshSources();
 refreshQuotes();
 refreshNews();
 refreshSectorAnalysis();
+refreshMarketOverview();
 setInterval(refreshQuotes, QUOTES_INTERVAL_MS);
 setInterval(refreshNews, NEWS_INTERVAL_MS);

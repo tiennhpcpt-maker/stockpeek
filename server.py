@@ -41,6 +41,7 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GITHUB_REPO = os.environ.get("GITHUB_REPO", "tiennhpcpt-maker/stockpeek")
 SOURCES_PATH = "sources.json"
 SECTOR_ANALYSIS_PATH = "sector_analysis.json"
+MARKET_OVERVIEW_PATH = "market_overview.json"
 GITHUB_FILE_CACHE_TTL = 20  # giây
 
 _github_file_cache = {}  # path -> {"data":..., "sha":..., "ts": float}
@@ -147,6 +148,11 @@ def remove_source_entry(name):
 
 def load_sector_analysis():
     data, _ = load_github_file(SECTOR_ANALYSIS_PATH, None)
+    return data
+
+
+def load_market_overview():
+    data, _ = load_github_file(MARKET_OVERVIEW_PATH, None)
     return data
 
 
@@ -387,6 +393,17 @@ class Handler(BaseHTTPRequestHandler):
                 data = load_sector_analysis()
                 if data is None:
                     self._send_json({"ok": False, "error": "Chưa có dữ liệu phân tích nhóm ngành"}, 404)
+                    return
+                self._send_json({"ok": True, "data": data})
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
+        if parsed.path == "/api/market-overview":
+            try:
+                data = load_market_overview()
+                if data is None:
+                    self._send_json({"ok": False, "error": "Chưa có dữ liệu phân tích chung thị trường"}, 404)
                     return
                 self._send_json({"ok": True, "data": data})
             except Exception as e:
