@@ -217,6 +217,86 @@ def get_quotes(tickers):
     return out
 
 
+INDEX_CONFIGS = [
+    {"name": "VN-INDEX", "slug": "vn-index", "chartSymbol": "VNINDEX"},
+    {"name": "VN30-INDEX", "slug": "vn30-index", "chartSymbol": "VN30"},
+    {"name": "HNX-INDEX", "slug": "hnx-index", "chartSymbol": "HNX"},
+    {"name": "UPCOM", "slug": "upcom-index", "chartSymbol": "UPCOM"},
+]
+INDICES_CACHE_TTL = 30  # giây
+_indices_cache = {"data": None, "ts": 0}
+
+
+def _extract_num(pattern, text):
+    m = re.search(pattern, text)
+    return float(m.group(1)) if m else None
+
+
+def _fetch_index_summary(slug):
+    raw = fetch_url(f"https://24hmoney.vn/indices/{slug}", timeout=10)
+    text = raw.decode("utf-8", errors="ignore")
+    idx = text.find("indicesDetail:{")
+    segment = text[idx : idx + 1500] if idx != -1 else text
+
+    prior = _extract_num(r"prior_market_index:([\d.]+)", segment)
+    change = _extract_num(r"\bchange:(-?[\d.]+)", segment)
+    change_pct = _extract_num(r"change_percent:(-?[\d.]+)", segment)
+    acc_val = _extract_num(r"accumulated_val:([\d.]+)", segment)
+    fbuy = _extract_num(r"foreign_today_buy_value:([\d.]+)", segment)
+    fsell = _extract_num(r"foreign_today_sell_value:([\d.]+)", segment)
+
+    if prior is None or change is None:
+        raise ValueError("Không đọc được dữ liệu chỉ số")
+
+    return {
+        "value": round(prior + change, 2),
+        "change": change,
+        "changePct": change_pct,
+        "tradingValue": acc_val,
+        "foreignNet": round((fbuy or 0) - (fsell or 0), 2),
+    }
+
+
+def _fetch_index_series(chart_symbol):
+    to_ts = int(time.time())
+    from_ts = to_ts - 86400
+    url = (
+        f"https://dchart-api.vndirect.com.vn/dchart/history"
+        f"?symbol={chart_symbol}&resolution=15&from={from_ts}&to={to_ts}"
+    )
+    raw = fetch_url(url, timeout=10)
+    data = json.loads(raw)
+    closes = data.get("c") or []
+    # Giới hạn số điểm để đồ thị nhẹ và mượt
+    if len(closes) > 60:
+        step = len(closes) // 60
+        closes = closes[::step]
+    return closes
+
+
+def get_market_indices():
+    now = time.time()
+    if _indices_cache["data"] is not None and now - _indices_cache["ts"] < INDICES_CACHE_TTL:
+        return _indices_cache["data"]
+
+    result = []
+    for cfg in INDEX_CONFIGS:
+        try:
+            summary = _fetch_index_summary(cfg["slug"])
+            try:
+                summary["series"] = _fetch_index_series(cfg["chartSymbol"])
+            except Exception:
+                summary["series"] = []
+            summary["name"] = cfg["name"]
+            result.append(summary)
+        except Exception as e:
+            result.append({"name": cfg["name"], "error": str(e)})
+
+    _indices_cache["data"] = result
+    _indices_cache["ts"] = now
+    return result
+
+
 def strip_html(s):
     text = re.sub("<[^<]+?>", "", s or "")
     return html.unescape(text).strip()
@@ -367,6 +447,14 @@ class Handler(BaseHTTPRequestHandler):
                 tickers = DEFAULT_TICKERS
             try:
                 data = get_quotes(tickers)
+                self._send_json({"ok": True, "data": data, "ts": time.time()})
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
+        if parsed.path == "/api/indices":
+            try:
+                data = get_market_indices()
                 self._send_json({"ok": True, "data": data, "ts": time.time()})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)

@@ -2,8 +2,86 @@ const STORAGE_KEY = "stockpeek_watchlist";
 const DEFAULT_TICKERS = ["VIC", "VNM", "FPT", "VCB", "HPG"];
 const QUOTES_INTERVAL_MS = 15000;
 const NEWS_INTERVAL_MS = 3 * 60 * 1000;
+const INDICES_INTERVAL_MS = 30000;
 
 let sources = [];
+
+function buildSparklinePath(series, width, height) {
+  if (!series || series.length < 2) return "";
+  const min = Math.min(...series);
+  const max = Math.max(...series);
+  const range = max - min || 1;
+  const stepX = width / (series.length - 1);
+  return series
+    .map((v, i) => {
+      const x = i * stepX;
+      const y = height - ((v - min) / range) * height;
+      return `${i === 0 ? "M" : "L"}${x.toFixed(1)},${y.toFixed(1)}`;
+    })
+    .join(" ");
+}
+
+function renderSparkline(series, isUp) {
+  const w = 90;
+  const h = 34;
+  if (!series || series.length < 2) {
+    return `<svg width="${w}" height="${h}"></svg>`;
+  }
+  const path = buildSparklinePath(series, w, h);
+  const color = isUp ? "var(--up)" : "var(--down)";
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
+    <path d="${path}" fill="none" stroke="${color}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" />
+  </svg>`;
+}
+
+async function refreshIndices() {
+  const grid = document.getElementById("indicesGrid");
+  try {
+    const res = await fetch("/api/indices");
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    renderIndices(json.data);
+    document.getElementById("indicesUpdated").textContent =
+      "Cập nhật " + new Date(json.ts * 1000).toLocaleTimeString("vi-VN");
+  } catch (e) {
+    grid.innerHTML = `<div class="empty">Lỗi lấy dữ liệu chỉ số: ${e.message}</div>`;
+  }
+}
+
+function renderIndices(list) {
+  const grid = document.getElementById("indicesGrid");
+  grid.innerHTML = list
+    .map((idx) => {
+      if (idx.error) {
+        return `<div class="index-card">
+          <div class="index-name">${idx.name}</div>
+          <div class="empty">Không lấy được dữ liệu</div>
+        </div>`;
+      }
+      const isUp = idx.change > 0;
+      const isFlat = idx.change === 0;
+      const statusClass = isFlat ? "status-ref" : isUp ? "status-up" : "status-down";
+      const sign = idx.change > 0 ? "+" : "";
+      const netSign = idx.foreignNet > 0 ? "+" : "";
+      return `<div class="index-card">
+        <div class="index-top">
+          <div class="index-name">${idx.name}</div>
+          ${renderSparkline(idx.series, isUp)}
+        </div>
+        <div class="index-value-row">
+          <span class="index-value ${statusClass}">${idx.value.toLocaleString("vi-VN")}</span>
+          <span class="index-change ${statusClass}">${sign}${idx.change} (${sign}${idx.changePct}%)</span>
+        </div>
+        <div class="index-meta">
+          <span>GTGD (tỷ đồng)</span><span class="index-meta-val">${(idx.tradingValue ?? 0).toLocaleString("vi-VN")}</span>
+        </div>
+        <div class="index-meta">
+          <span>NĐTNN - GT ròng (tỷ đồng)</span><span class="index-meta-val">${netSign}${(idx.foreignNet ?? 0).toLocaleString("vi-VN")}</span>
+        </div>
+      </div>`;
+    })
+    .join("");
+}
 
 function loadWatchlist() {
   try {
@@ -365,5 +443,7 @@ refreshQuotes();
 refreshNews();
 refreshSectorAnalysis();
 refreshMarketOverview();
+refreshIndices();
 setInterval(refreshQuotes, QUOTES_INTERVAL_MS);
 setInterval(refreshNews, NEWS_INTERVAL_MS);
+setInterval(refreshIndices, INDICES_INTERVAL_MS);
