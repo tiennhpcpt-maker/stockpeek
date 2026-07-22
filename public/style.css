@@ -165,3 +165,49 @@ main {
 .news-card .link-out { font-size: 12px; color: var(--accent); margin-top: 8px; display: inline-block; }
 
 .empty { color: var(--text-dim); font-size: 13px; padding: 8px 0; }
+
+.sources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.source-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+.source-name { font-weight: 600; min-width: 100px; }
+.source-url {
+  color: var(--text-dim);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.source-remove {
+  border: none;
+  background: none;
+  color: var(--down);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+.source-addbox {
+  flex-wrap: wrap;
+}
+.source-addbox input {
+  min-width: 180px;
+  flex: 1;
+}
+.source-error {
+  color: var(--down);
+  font-size: 12px;
+  margin-top: 6px;
+  min-height: 14px;
+}

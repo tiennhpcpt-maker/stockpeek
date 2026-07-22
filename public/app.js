@@ -143,12 +143,89 @@ function renderNews(items) {
     .join("");
 }
 
+async function refreshSources() {
+  try {
+    const res = await fetch("/api/sources");
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    renderSources(json.data);
+  } catch (e) {
+    document.getElementById("sourcesList").innerHTML =
+      `<div class="empty">Lỗi lấy danh sách nguồn: ${e.message}</div>`;
+  }
+}
+
+function renderSources(sources) {
+  const list = document.getElementById("sourcesList");
+  if (!sources.length) {
+    list.innerHTML = '<div class="empty">Chưa có nguồn tin nào.</div>';
+    return;
+  }
+  list.innerHTML = sources
+    .map(
+      (s) => `<div class="source-row">
+        <span class="source-name">${s.name}</span>
+        <span class="source-url">${s.url}</span>
+        <button class="source-remove" onclick="removeSource('${s.name.replace(/'/g, "\\'")}')">Xoá</button>
+      </div>`
+    )
+    .join("");
+}
+
+async function addSource() {
+  const nameInput = document.getElementById("sourceNameInput");
+  const urlInput = document.getElementById("sourceUrlInput");
+  const errBox = document.getElementById("sourceError");
+  const name = nameInput.value.trim();
+  const url = urlInput.value.trim();
+  errBox.textContent = "";
+  if (!name || !url) {
+    errBox.textContent = "Nhập đủ tên nguồn và URL RSS.";
+    return;
+  }
+  const btn = document.getElementById("addSourceBtn");
+  btn.disabled = true;
+  btn.textContent = "Đang kiểm tra...";
+  try {
+    const res = await fetch("/api/sources", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, url }),
+    });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    renderSources(json.data);
+    nameInput.value = "";
+    urlInput.value = "";
+    refreshNews();
+  } catch (e) {
+    errBox.textContent = e.message;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "+ Thêm nguồn";
+  }
+}
+
+async function removeSource(name) {
+  try {
+    const res = await fetch(`/api/sources?name=${encodeURIComponent(name)}`, { method: "DELETE" });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    renderSources(json.data);
+    refreshNews();
+  } catch (e) {
+    document.getElementById("sourceError").textContent = e.message;
+  }
+}
+
 document.getElementById("addBtn").addEventListener("click", addTicker);
 document.getElementById("tickerInput").addEventListener("keydown", (e) => {
   if (e.key === "Enter") addTicker();
 });
+document.getElementById("addSourceBtn").addEventListener("click", addSource);
 
 refreshQuotes();
 refreshNews();
+refreshSources();
 setInterval(refreshQuotes, QUOTES_INTERVAL_MS);
 setInterval(refreshNews, NEWS_INTERVAL_MS);
