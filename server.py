@@ -55,11 +55,12 @@ def _github_request(method, url, body=None):
         return json.loads(resp.read())
 
 
-def load_github_file(path, default):
+def load_github_file(path, default, force=False):
     now = time.time()
-    cached = _github_file_cache.get(path)
-    if cached and now - cached["ts"] < GITHUB_FILE_CACHE_TTL:
-        return cached["data"], cached["sha"]
+    if not force:
+        cached = _github_file_cache.get(path)
+        if cached and now - cached["ts"] < GITHUB_FILE_CACHE_TTL:
+            return cached["data"], cached["sha"]
 
     url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{path}"
     try:
@@ -78,19 +79,37 @@ def load_github_file(path, default):
     return data, sha
 
 
-def save_github_file(path, data, message):
-    if not GITHUB_TOKEN:
-        raise RuntimeError("Server chưa cấu hình GITHUB_TOKEN nên không thể lưu dữ liệu")
+def _put_github_file(path, data, sha, message):
     url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{path}"
     content_b64 = base64.b64encode(
         json.dumps(data, ensure_ascii=False, indent=2).encode("utf-8")
     ).decode("ascii")
     body = {"message": message, "content": content_b64}
-    _, sha = load_github_file(path, data)
     if sha:
         body["sha"] = sha
     resp = _github_request("PUT", url, body)
     _github_file_cache[path] = {"data": data, "sha": resp["content"]["sha"], "ts": time.time()}
+
+
+def update_github_file(path, default, mutate_fn, message, max_retries=3):
+    """Đọc file mới nhất, áp dụng mutate_fn(data) -> data_moi, rồi ghi lên GitHub.
+    Nếu có ai khác ghi đè đồng thời (409 conflict), tự động đọc lại bản mới nhất
+    và thử lại, tránh mất dữ liệu người dùng vừa thêm."""
+    if not GITHUB_TOKEN:
+        raise RuntimeError("Server chưa cấu hình GITHUB_TOKEN nên không thể lưu dữ liệu")
+    last_err = None
+    for attempt in range(max_retries):
+        data, sha = load_github_file(path, default, force=True)
+        new_data = mutate_fn(data)
+        try:
+            _put_github_file(path, new_data, sha, message)
+            return new_data
+        except urllib.error.HTTPError as e:
+            last_err = e
+            if e.code == 409:
+                continue
+            raise
+    raise RuntimeError(f"Không thể lưu do xung đột ghi liên tục: {last_err}")
 
 
 def load_sources():
@@ -100,8 +119,26 @@ def load_sources():
     return data, sha
 
 
-def save_sources(sources):
-    save_github_file(SOURCES_PATH, sources, "Cập nhật nguồn tin (stockPeek)")
+def add_source_entry(name, url):
+    def mutate(sources):
+        if not isinstance(sources, list):
+            sources = [dict(s) for s in DEFAULT_SOURCES]
+        if any(s.get("name", "").lower() == name.lower() for s in sources):
+            raise ValueError("DUP")
+        if len(sources) >= MAX_SOURCES:
+            raise ValueError("MAX")
+        return sources + [{"name": name, "url": url}]
+
+    return update_github_file(SOURCES_PATH, [dict(s) for s in DEFAULT_SOURCES], mutate, "Cập nhật nguồn tin (stockPeek)")
+
+
+def remove_source_entry(name):
+    def mutate(sources):
+        if not isinstance(sources, list):
+            sources = [dict(s) for s in DEFAULT_SOURCES]
+        return [s for s in sources if s.get("name") != name]
+
+    return update_github_file(SOURCES_PATH, [dict(s) for s in DEFAULT_SOURCES], mutate, "Cập nhật nguồn tin (stockPeek)")
 
 
 def load_sector_analysis():
@@ -356,17 +393,16 @@ class Handler(BaseHTTPRequestHandler):
                 self._send_json({"ok": False, "error": f"Không lấy được RSS từ URL này: {e}"}, 400)
                 return
             try:
-                sources, _ = load_sources()
-                if any(s.get("name", "").lower() == name.lower() for s in sources):
-                    self._send_json({"ok": False, "error": "Tên nguồn này đã tồn tại"}, 400)
-                    return
-                if len(sources) >= MAX_SOURCES:
-                    self._send_json({"ok": False, "error": f"Chỉ cho phép tối đa {MAX_SOURCES} nguồn"}, 400)
-                    return
-                sources = sources + [{"name": name, "url": url}]
-                save_sources(sources)
+                new_sources = add_source_entry(name, url)
                 _news_cache.clear()
-                self._send_json({"ok": True, "data": sources})
+                self._send_json({"ok": True, "data": new_sources})
+            except ValueError as e:
+                if str(e) == "DUP":
+                    self._send_json({"ok": False, "error": "Tên nguồn này đã tồn tại"}, 400)
+                elif str(e) == "MAX":
+                    self._send_json({"ok": False, "error": f"Chỉ cho phép tối đa {MAX_SOURCES} nguồn"}, 400)
+                else:
+                    self._send_json({"ok": False, "error": str(e)}, 400)
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return
@@ -378,9 +414,7 @@ class Handler(BaseHTTPRequestHandler):
             qs = parse_qs(parsed.query)
             name = qs.get("name", [""])[0]
             try:
-                sources, _ = load_sources()
-                new_sources = [s for s in sources if s.get("name") != name]
-                save_sources(new_sources)
+                new_sources = remove_source_entry(name)
                 _news_cache.clear()
                 self._send_json({"ok": True, "data": new_sources})
             except Exception as e:
