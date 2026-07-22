@@ -5,6 +5,7 @@ Mở trình duyệt: http://127.0.0.1:8787
 """
 import base64
 import difflib
+import html
 import json
 import os
 import re
@@ -208,7 +209,8 @@ def get_quotes(tickers):
 
 
 def strip_html(s):
-    return re.sub("<[^<]+?>", "", s or "").strip()
+    text = re.sub("<[^<]+?>", "", s or "")
+    return html.unescape(text).strip()
 
 
 def _pub_ts(pub_date):
@@ -281,7 +283,7 @@ def get_news():
             raw = fetch_url(url, timeout=8)
             root = ET.fromstring(raw)
             for item in root.findall(".//item")[:12]:
-                title = (item.findtext("title") or "").strip()
+                title = html.unescape((item.findtext("title") or "").strip())
                 link = (item.findtext("link") or "").strip()
                 pub = (item.findtext("pubDate") or "").strip()
                 desc = strip_html(item.findtext("description") or "")[:220]
