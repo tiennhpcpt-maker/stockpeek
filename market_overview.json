@@ -1,22 +1,21 @@
 {
-  "generated_at": "2026-07-23T16:45:00+07:00",
-  "executive_summary": "VN-Index đảo chiều ngoạn mục trong phiên 23/7, đóng cửa tăng 30,85 điểm (+1,85%) lên 1.699,38 điểm, chấm dứt chuỗi 4 phiên giảm liên tiếp đã cuốn mất 136 điểm trước đó. Lực cầu bắt đáy xuất hiện mạnh ở nhóm Vingroup: VIC tăng gần 6%, một mình đóng góp hơn 20 điểm cho chỉ số. Thanh khoản toàn thị trường đạt hơn 21.500 tỷ đồng, dù khối ngoại vẫn bán ròng khoảng 450 tỷ đồng.",
+  "generated_at": "2026-07-23T20:55:00+07:00",
+  "executive_summary": "VN-Index đảo chiều ngoạn mục phiên 23/7, đóng cửa tăng 30,85 điểm (+1,85%) lên 1.699,38 điểm - mức tăng mạnh nhất một tháng qua, chấm dứt chuỗi 4 phiên giảm liên tiếp (mất tổng cộng 136 điểm). Lực cầu bắt đáy xuất hiện mạnh về phiên chiều, dẫn dắt bởi nhóm bất động sản (Vingroup) tăng 4,49% và nhóm chứng khoán tăng 3,09%. Điểm sáng: khối ngoại giảm hơn 91% giá trị bán ròng so với phiên trước, chỉ còn bán ròng gần 160 tỷ đồng.",
   "highlights": [
-    "VIC và VHM là động lực chính của phiên hồi phục: VIC đóng góp khoảng 17,15 điểm, VHM đóng góp khoảng 3,33 điểm cho VN-Index.",
-    "Đây là phiên hồi kỹ thuật sau chuỗi giảm sâu — nhiều chuyên gia trước đó dự báo khả năng thị trường bật hồi tại vùng hỗ trợ 1.640-1.660 điểm, và diễn biến thực tế đã đúng với kịch bản này.",
-    "Khối ngoại dù thị trường hồi phục vẫn duy trì bán ròng (~450 tỷ đồng), cho thấy dòng tiền ngoại chưa thực sự quay lại, đà tăng chủ yếu đến từ lực cầu nội bắt đáy.",
-    "Thanh khoản cải thiện rõ rệt so với các phiên giảm trước đó (hơn 21.500 tỷ đồng toàn thị trường), phản ánh dòng tiền bắt đáy nhập cuộc tích cực hơn."
+    "Bộ đôi Vingroup là động lực chính: VIC tăng 5,89% đóng góp hơn 20 điểm, VHM tăng 4,02% đóng góp khoảng 4,52 điểm cho VN-Index.",
+    "Nhóm chứng khoán bứt phá 3,09% với SSI, VIX, HCM, VND, VCI, MBS, SHS đồng loạt tăng - dấu hiệu dòng tiền quay lại nhóm nhạy với thị trường.",
+    "Khối ngoại thu hẹp mạnh đà bán ròng (chỉ ~160 tỷ, giảm 91% so với phiên trước), mua ròng trở lại SHB (+74,7 tỷ), nhưng vẫn bán mạnh MBB (-153,5 tỷ), TCB (-117,9 tỷ).",
+    "Thanh khoản duy trì trên mức bình quân 20 phiên, phản ánh lực cầu bắt đáy nhập cuộc tích cực."
   ],
   "technical_outlook": {
-    "trend": "Phiên hồi phục kỹ thuật sau 4 phiên giảm liên tiếp, nhưng cần thêm phiên xác nhận để đánh giá đây là đảo chiều xu hướng hay chỉ là nhịp hồi kỹ thuật ngắn hạn trong xu hướng điều chỉnh.",
-    "support": "1.650 - 1.660 điểm (vùng vừa được bảo vệ thành công), xa hơn là 1.580 - 1.600 điểm",
-    "resistance": "1.700 - 1.720 điểm — vùng cần chinh phục lại để xác nhận xu hướng phục hồi bền vững hơn",
-    "note": "Nhiều công ty chứng khoán vẫn khuyến nghị thận trọng, chờ thêm tín hiệu xác nhận trước khi gia tăng tỷ trọng, do khối ngoại chưa ngừng bán ròng."
+    "trend": "Nhịp hồi phục kỹ thuật sau chuỗi giảm sâu, có thể mở rộng nhưng chưa đủ sức đảo ngược xu hướng giảm chủ đạo (chỉ số vẫn đóng cửa dưới MA10, MA20).",
+    "support": "1.650 - 1.660 điểm (vừa bảo vệ thành công), xa hơn 1.580 - 1.600 điểm",
+    "resistance": "1.700 điểm (gần), mục tiêu hồi phục quanh vùng 1.770 điểm",
+    "note": "Các CTCK khuyến nghị thận trọng, giữ tỷ trọng cân bằng, hạn chế mua đuổi theo tâm lý FOMO khi xu hướng tăng chưa được xác nhận."
   },
   "action_notes": [
-    "Theo dõi phiên kế tiếp có giữ được đà tăng và vùng hỗ trợ 1.650-1.660 điểm hay không để xác nhận tín hiệu đảo chiều.",
-    "Thận trọng với các mã đã tăng nóng theo VIC/VHM trong 1 phiên — cần thời gian kiểm chứng độ bền của lực cầu.",
-    "Khối ngoại vẫn bán ròng nên chưa vội kết luận dòng tiền lớn đã quay lại hoàn toàn; ưu tiên quan sát thêm 2-3 phiên tới."
+    "Theo dõi phiên 24/7 có nối dài đà hồi phục và giữ vững mốc 1.700 điểm hay không để xác nhận tín hiệu.",
+    "Ưu tiên quan sát diễn biến khối ngoại - nếu ngừng bán ròng hoàn toàn sẽ củng cố đà phục hồi bền vững hơn."
   ],
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định."
 }
