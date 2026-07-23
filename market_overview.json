@@ -1,21 +1,25 @@
 {
-  "generated_at": "2026-07-23T20:55:00+07:00",
-  "executive_summary": "VN-Index đảo chiều ngoạn mục phiên 23/7, đóng cửa tăng 30,85 điểm (+1,85%) lên 1.699,38 điểm - mức tăng mạnh nhất một tháng qua, chấm dứt chuỗi 4 phiên giảm liên tiếp (mất tổng cộng 136 điểm). Lực cầu bắt đáy xuất hiện mạnh về phiên chiều, dẫn dắt bởi nhóm bất động sản (Vingroup) tăng 4,49% và nhóm chứng khoán tăng 3,09%. Điểm sáng: khối ngoại giảm hơn 91% giá trị bán ròng so với phiên trước, chỉ còn bán ròng gần 160 tỷ đồng.",
+  "generated_at": "2026-07-23T21:26:42+07:00",
+  "executive_summary": "VN-Index tăng đáng kể trong phiên hôm nay, tăng 30,85 điểm (1,85%) lên 1.699,38 điểm. Thanh khoản đạt 20.033,86 tỷ đồng, khối ngoại bán ròng 479,18 tỷ đồng.",
   "highlights": [
-    "Bộ đôi Vingroup là động lực chính: VIC tăng 5,89% đóng góp hơn 20 điểm, VHM tăng 4,02% đóng góp khoảng 4,52 điểm cho VN-Index.",
-    "Nhóm chứng khoán bứt phá 3,09% với SSI, VIX, HCM, VND, VCI, MBS, SHS đồng loạt tăng - dấu hiệu dòng tiền quay lại nhóm nhạy với thị trường.",
-    "Khối ngoại thu hẹp mạnh đà bán ròng (chỉ ~160 tỷ, giảm 91% so với phiên trước), mua ròng trở lại SHB (+74,7 tỷ), nhưng vẫn bán mạnh MBB (-153,5 tỷ), TCB (-117,9 tỷ).",
-    "Thanh khoản duy trì trên mức bình quân 20 phiên, phản ánh lực cầu bắt đáy nhập cuộc tích cực."
+    "VN30-Index tăng 18,42 điểm (1,01%) lên 1.845,32 điểm, thanh khoản 12.112,09 tỷ đồng.",
+    "HNX-Index tăng 5,58 điểm (2,03%) lên 281,07 điểm; UPCOM tăng 0,76 điểm lên 125,53 điểm.",
+    "Khối ngoại trên VN30 bán ròng 601,10 tỷ đồng trong phiên."
   ],
   "technical_outlook": {
-    "trend": "Nhịp hồi phục kỹ thuật sau chuỗi giảm sâu, có thể mở rộng nhưng chưa đủ sức đảo ngược xu hướng giảm chủ đạo (chỉ số vẫn đóng cửa dưới MA10, MA20).",
-    "support": "1.650 - 1.660 điểm (vừa bảo vệ thành công), xa hơn 1.580 - 1.600 điểm",
-    "resistance": "1.700 điểm (gần), mục tiêu hồi phục quanh vùng 1.770 điểm",
-    "note": "Các CTCK khuyến nghị thận trọng, giữ tỷ trọng cân bằng, hạn chế mua đuổi theo tâm lý FOMO khi xu hướng tăng chưa được xác nhận."
+    "trend": "VN-Index đang trong xu hướng tăng ngắn hạn.",
+    "support": "~1.650 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "resistance": "~1.730 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "note": "Đây là ước tính tự động dựa trên số liệu phiên gần nhất, không thay thế phân tích kỹ thuật chuyên sâu."
   },
   "action_notes": [
-    "Theo dõi phiên 24/7 có nối dài đà hồi phục và giữ vững mốc 1.700 điểm hay không để xác nhận tín hiệu.",
-    "Ưu tiên quan sát diễn biến khối ngoại - nếu ngừng bán ròng hoàn toàn sẽ củng cố đà phục hồi bền vững hơn."
+    "Theo dõi diễn biến khối ngoại và thanh khoản trong các phiên tới để đánh giá độ bền của xu hướng.",
+    "Đây là bản cập nhật tự động dựa trên số liệu thị trường thực; nên kết hợp thêm tin tức và báo cáo phân tích chuyên sâu trước khi ra quyết định."
   ],
-  "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định."
+  "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+  "_meta": {
+    "last_sign": 1,
+    "streak": 1,
+    "source": "auto-github-actions"
+  }
 }
