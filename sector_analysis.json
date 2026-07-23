@@ -1,8 +1,29 @@
 {
-  "generated_at": "2026-07-22T23:25:00+07:00",
+  "generated_at": "2026-07-23T16:50:00+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index đóng cửa phiên 22/7 tại 1.668,53 điểm, giảm 62,03 điểm (-3,58%) — phiên giảm thứ 4 liên tiếp, về vùng thấp nhất kể từ đầu tháng 4/2026. Sắc đỏ áp đảo với 245 mã giảm so với 75 mã tăng trên HoSE. Khối ngoại bán ròng gần 1.992 tỷ đồng trên 3 sàn, bán mạnh nhất SSI (-292 tỷ), VIC (-207 tỷ), VCB (-201 tỷ); mua ròng mạnh nhất VNM (+167 tỷ), HPG (+52 tỷ).",
+  "market_note": "VN-Index đảo chiều tăng 30,85 điểm (+1,85%) lên 1.699,38 điểm trong phiên 23/7, chấm dứt chuỗi 4 phiên giảm liên tiếp. Lực cầu bắt đáy tập trung mạnh vào nhóm bất động sản (Vingroup) và chứng khoán, trong khi khối ngoại vẫn bán ròng ~450 tỷ đồng.",
   "sectors": [
+    {
+      "name": "Bất động sản",
+      "outlook": "Nhóm dẫn dắt đà hồi phục toàn thị trường phiên 23/7, ngành bất động sản tăng 4,49% - mạnh nhất thị trường, lực cầu bắt đáy tập trung vào bộ đôi Vingroup.",
+      "picks": [
+        {
+          "ticker": "VIC",
+          "reason": "Tăng 5,89%, đóng góp hơn 20 điểm cho VN-Index - động lực chính của phiên hồi phục.",
+          "source": "Vietstock"
+        },
+        {
+          "ticker": "VHM",
+          "reason": "Tăng 4,02%, đóng góp khoảng 4,52 điểm cho chỉ số chung.",
+          "source": "Vietstock"
+        },
+        {
+          "ticker": "VRE",
+          "reason": "Tăng 1,2% cùng đà hồi phục của nhóm Vingroup.",
+          "source": "Vietstock"
+        }
+      ]
+    },
     {
       "name": "Ngân hàng",
       "outlook": "Dòng tiền lớn quay lại nhóm ngân hàng, khối ngoại mua ròng mạnh nhiều mã trong các phiên gần đây; nhiều ngân hàng công bố lợi nhuận quý 2/2026 tích cực.",
