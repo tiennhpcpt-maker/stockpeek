@@ -1,0 +1,37 @@
+name: Cap nhat nhan dinh thi truong
+
+on:
+  schedule:
+    - cron: "0 1 * * *"   # 8:00 sang gio VN
+    - cron: "30 8 * * *"  # 15:30 chieu gio VN
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Chay script cap nhat
+        run: python3 scripts/update_market_overview.py
+
+      - name: Commit va push neu co thay doi
+        run: |
+          git config user.name "stockpeek-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet market_overview.json; then
+            echo "Khong co thay doi, bo qua commit."
+          else
+            git add market_overview.json
+            git commit -m "Tu dong cap nhat nhan dinh thi truong $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
