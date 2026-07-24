@@ -464,16 +464,146 @@ function renderSectorAnalysis(data) {
 function renderAuthArea() {
   const area = document.getElementById("authArea");
   if (currentUser) {
+    const adminBtn =
+      currentUser.role === "admin"
+        ? `<button id="adminOpenBtn" class="auth-btn">Quản trị</button>`
+        : "";
     area.innerHTML = `
       <span class="auth-name">Xin chào, ${currentUser.name || currentUser.email}</span>
+      ${adminBtn}
       <button id="logoutBtn" class="auth-btn">Đăng xuất</button>
     `;
     document.getElementById("logoutBtn").addEventListener("click", logout);
+    if (currentUser.role === "admin") {
+      document.getElementById("adminOpenBtn").addEventListener("click", openAdminModal);
+    }
   } else {
     area.innerHTML = `<button id="loginOpenBtn" class="auth-btn primary">Đăng nhập</button>`;
     document.getElementById("loginOpenBtn").addEventListener("click", () => openAuthModal());
   }
 }
+
+// ===================== Quản trị tài khoản (admin) =====================
+
+async function openAdminModal() {
+  document.getElementById("adminModalBackdrop").hidden = false;
+  document.getElementById("adminError").textContent = "";
+  await loadAdminUsers();
+}
+
+function closeAdminModal() {
+  document.getElementById("adminModalBackdrop").hidden = true;
+}
+
+async function loadAdminUsers() {
+  const body = document.getElementById("adminUsersBody");
+  const errBox = document.getElementById("adminError");
+  errBox.textContent = "";
+  body.innerHTML = `<tr><td colspan="3">Đang tải...</td></tr>`;
+  try {
+    const res = await fetch("/api/admin/users");
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "Không tải được danh sách");
+    renderAdminUsers(json.data);
+  } catch (e) {
+    body.innerHTML = "";
+    errBox.textContent = e.message;
+  }
+}
+
+function renderAdminUsers(users) {
+  const body = document.getElementById("adminUsersBody");
+  if (!users.length) {
+    body.innerHTML = `<tr><td colspan="3">Chưa có tài khoản nào.</td></tr>`;
+    return;
+  }
+  body.innerHTML = users
+    .map((u) => {
+      const isSelf = currentUser && u.id === currentUser.id;
+      const isAdmin = u.role === "admin";
+      const providerLabel = u.provider === "google" ? "Google" : "Email";
+      const roleToggleLabel = isAdmin ? "Bỏ admin" : "Cấp admin";
+      return `
+        <tr data-id="${u.id}">
+          <td>
+            <div>${escapeHtml(u.name || u.email || "—")}</div>
+            <div class="admin-email">${escapeHtml(u.email || "")} · ${providerLabel} · ${u.watchlist_count} mã / ${u.sources_count} nguồn</div>
+          </td>
+          <td><span class="admin-role-badge ${isAdmin ? "admin" : ""}">${isAdmin ? "Admin" : "User"}</span></td>
+          <td>
+            <div class="admin-actions">
+              <button class="admin-role-btn" ${isSelf ? "disabled" : ""}>${roleToggleLabel}</button>
+              <button class="admin-delete-btn danger" ${isSelf ? "disabled" : ""}>Xoá</button>
+            </div>
+          </td>
+        </tr>
+      `;
+    })
+    .join("");
+
+  body.querySelectorAll(".admin-role-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const tr = e.target.closest("tr");
+      const id = tr.dataset.id;
+      const current = users.find((u) => u.id === id);
+      setAdminRole(id, current.role === "admin" ? "user" : "admin");
+    });
+  });
+  body.querySelectorAll(".admin-delete-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const tr = e.target.closest("tr");
+      const id = tr.dataset.id;
+      const current = users.find((u) => u.id === id);
+      deleteAdminUser(id, current.email || current.name || id);
+    });
+  });
+}
+
+async function setAdminRole(id, role) {
+  const errBox = document.getElementById("adminError");
+  errBox.textContent = "";
+  try {
+    const res = await fetch("/api/admin/users/role", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id, role }),
+    });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "Không đổi được quyền");
+    await loadAdminUsers();
+  } catch (e) {
+    errBox.textContent = e.message;
+  }
+}
+
+async function deleteAdminUser(id, label) {
+  if (!confirm(`Xoá tài khoản "${label}"? Hành động này không thể hoàn tác.`)) return;
+  const errBox = document.getElementById("adminError");
+  errBox.textContent = "";
+  try {
+    const res = await fetch(`/api/admin/users?id=${encodeURIComponent(id)}`, { method: "DELETE" });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "Không xoá được tài khoản");
+    await loadAdminUsers();
+  } catch (e) {
+    errBox.textContent = e.message;
+  }
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  }[c]));
+}
+
+document.getElementById("adminModalClose").addEventListener("click", closeAdminModal);
+document.getElementById("adminModalBackdrop").addEventListener("click", (e) => {
+  if (e.target.id === "adminModalBackdrop") closeAdminModal();
+});
 
 function openAuthModal(errorMsg) {
   document.getElementById("authModalBackdrop").hidden = false;

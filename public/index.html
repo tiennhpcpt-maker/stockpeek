@@ -46,6 +46,26 @@
     </div>
   </div>
 
+  <div id="adminModalBackdrop" class="auth-modal-backdrop" hidden>
+    <div class="auth-modal admin-modal">
+      <button id="adminModalClose" class="auth-modal-close">✕</button>
+      <h3 class="admin-modal-title">Quản trị tài khoản</h3>
+      <div id="adminError" class="auth-error"></div>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Người dùng</th>
+              <th>Quyền</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="adminUsersBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
   <main>
     <section class="indices-panel">
       <div class="section-head">

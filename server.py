@@ -181,6 +181,13 @@ SESSION_MAX_AGE = 30 * 86400  # 30 ngày
 GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID", "")
 GOOGLE_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET", "")
 
+# Các email trong biến môi trường ADMIN_EMAILS luôn được coi là admin, bất kể
+# field "role" trong users.json ghi gì — đây là "admin gốc" không thể bị xoá
+# quyền qua UI, tránh trường hợp tự khoá mình khỏi trang quản trị.
+ADMIN_EMAILS = {
+    e.strip().lower() for e in os.environ.get("ADMIN_EMAILS", "").split(",") if e.strip()
+}
+
 PBKDF2_ITERATIONS = 200_000
 
 
@@ -231,6 +238,14 @@ def verify_session_token(token):
     return payload.get("uid")
 
 
+def _is_admin(user):
+    if not user:
+        return False
+    if (user.get("email") or "").lower() in ADMIN_EMAILS:
+        return True
+    return user.get("role") == "admin"
+
+
 def _public_user(user):
     """Trả về thông tin user an toàn để gửi cho client (không có mật khẩu)."""
     if not user:
@@ -240,6 +255,21 @@ def _public_user(user):
         "email": user.get("email"),
         "name": user.get("name"),
         "provider": user.get("provider"),
+        "role": "admin" if _is_admin(user) else "user",
+    }
+
+
+def _admin_user_view(user):
+    """Thông tin đầy đủ hơn cho bảng quản trị (vẫn không có mật khẩu)."""
+    return {
+        "id": user.get("id"),
+        "email": user.get("email"),
+        "name": user.get("name"),
+        "provider": user.get("provider"),
+        "role": "admin" if _is_admin(user) else "user",
+        "created_at": user.get("created_at"),
+        "watchlist_count": len(user.get("watchlist") or []),
+        "sources_count": len(user.get("sources") or []),
     }
 
 
@@ -295,6 +325,7 @@ def create_local_user(email, password, name):
             "salt": salt_hex,
             "provider": "local",
             "google_id": None,
+            "role": "user",
             "watchlist": list(DEFAULT_TICKERS),
             "sources": [dict(s) for s in DEFAULT_SOURCES],
             "created_at": datetime.now(timezone.utc).isoformat(),
@@ -333,6 +364,7 @@ def find_or_create_google_user(google_id, email, name):
             "salt": None,
             "provider": "google",
             "google_id": google_id,
+            "role": "user",
             "watchlist": list(DEFAULT_TICKERS),
             "sources": [dict(s) for s in DEFAULT_SOURCES],
             "created_at": datetime.now(timezone.utc).isoformat(),
@@ -368,6 +400,34 @@ def update_user_data(user_id, mutate_user_fn):
 
     update_github_file(USERS_PATH, {"users": []}, mutate, "Cap nhat du lieu nguoi dung", repo=GITHUB_USERS_REPO)
     return result["user"]
+
+
+def list_all_users():
+    return load_users()
+
+
+def set_user_role(user_id, role):
+    if role not in ("admin", "user"):
+        raise ValueError("BAD_ROLE")
+
+    def mutate(user):
+        user["role"] = role
+        return user
+
+    return update_user_data(user_id, mutate)
+
+
+def delete_user_account(user_id):
+    def mutate(data):
+        if not isinstance(data, dict) or not isinstance(data.get("users"), list):
+            data = {"users": []}
+        users = data["users"]
+        new_users = [u for u in users if u.get("id") != user_id]
+        if len(new_users) == len(users):
+            raise ValueError("USER_NOT_FOUND")
+        return {"users": new_users}
+
+    update_github_file(USERS_PATH, {"users": []}, mutate, "Xoa tai khoan (admin)", repo=GITHUB_USERS_REPO)
 
 
 def google_oauth_redirect_uri(handler):
@@ -734,6 +794,18 @@ class Handler(BaseHTTPRequestHandler):
         except Exception:
             return None
 
+    def _require_admin(self):
+        """Trả về user hiện tại nếu là admin, ngược lại tự gửi lỗi 401/403 và
+        trả về None — caller chỉ cần `if not user: return`."""
+        user = self._current_user()
+        if not user:
+            self._send_json({"ok": False, "error": "Cần đăng nhập"}, 401)
+            return None
+        if not _is_admin(user):
+            self._send_json({"ok": False, "error": "Yêu cầu quyền admin"}, 403)
+            return None
+        return user
+
     def do_GET(self):
         parsed = urlparse(self.path)
 
@@ -843,6 +915,16 @@ class Handler(BaseHTTPRequestHandler):
                     self._send_json({"ok": False, "error": "Chưa có dữ liệu phân tích chung thị trường"}, 404)
                     return
                 self._send_json({"ok": True, "data": data})
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
+        if parsed.path == "/api/admin/users":
+            if not self._require_admin():
+                return
+            try:
+                users = [_admin_user_view(u) for u in list_all_users()]
+                self._send_json({"ok": True, "data": users})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return
@@ -975,6 +1057,34 @@ class Handler(BaseHTTPRequestHandler):
             self._send_json({"ok": True}, set_cookie=self._clear_cookie_header())
             return
 
+        if parsed.path == "/api/admin/users/role":
+            admin = self._require_admin()
+            if not admin:
+                return
+            try:
+                body = self._read_json_body()
+            except Exception:
+                self._send_json({"ok": False, "error": "Dữ liệu gửi lên không hợp lệ"}, 400)
+                return
+            target_id = (body.get("id") or "").strip()
+            role = (body.get("role") or "").strip()
+            if target_id == admin["id"]:
+                self._send_json({"ok": False, "error": "Không thể tự đổi quyền của chính mình"}, 400)
+                return
+            try:
+                updated = set_user_role(target_id, role)
+                self._send_json({"ok": True, "data": _admin_user_view(updated)})
+            except ValueError as e:
+                if str(e) == "BAD_ROLE":
+                    self._send_json({"ok": False, "error": "Quyền không hợp lệ"}, 400)
+                elif str(e) == "USER_NOT_FOUND":
+                    self._send_json({"ok": False, "error": "Không tìm thấy tài khoản"}, 404)
+                else:
+                    self._send_json({"ok": False, "error": str(e)}, 400)
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
         self.send_error(404)
 
     def do_DELETE(self):
@@ -1005,6 +1115,27 @@ class Handler(BaseHTTPRequestHandler):
             try:
                 new_list = remove_user_ticker(user["id"], ticker)
                 self._send_json({"ok": True, "data": new_list})
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
+        if parsed.path == "/api/admin/users":
+            admin = self._require_admin()
+            if not admin:
+                return
+            qs = parse_qs(parsed.query)
+            target_id = qs.get("id", [""])[0]
+            if target_id == admin["id"]:
+                self._send_json({"ok": False, "error": "Không thể tự xoá tài khoản của chính mình"}, 400)
+                return
+            try:
+                delete_user_account(target_id)
+                self._send_json({"ok": True})
+            except ValueError as e:
+                if str(e) == "USER_NOT_FOUND":
+                    self._send_json({"ok": False, "error": "Không tìm thấy tài khoản"}, 404)
+                else:
+                    self._send_json({"ok": False, "error": str(e)}, 400)
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return
