@@ -268,8 +268,8 @@ def _admin_user_view(user):
         "provider": user.get("provider"),
         "role": "admin" if _is_admin(user) else "user",
         "created_at": user.get("created_at"),
-        "watchlist_count": len(user.get("watchlist") or []),
-        "sources_count": len(user.get("sources") or []),
+        "watchlist": user.get("watchlist") or [],
+        "sources": user.get("sources") or [],
     }
 
 

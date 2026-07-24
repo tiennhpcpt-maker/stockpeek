@@ -282,19 +282,82 @@ body {
   background: var(--accent);
   color: var(--accent-text);
 }
-.admin-actions { display: flex; gap: 6px; justify-content: flex-end; }
+.admin-actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; max-width: 120px; margin-left: auto; }
 .admin-actions button {
-  padding: 5px 10px;
+  padding: 5px 8px;
   border-radius: 6px;
   border: 1px solid var(--border);
   background: var(--card-bg-2);
   color: var(--text);
-  font-size: 12px;
+  font-size: 11.5px;
   cursor: pointer;
+  white-space: nowrap;
 }
 .admin-actions button:hover { border-color: var(--accent); }
 .admin-actions button.danger:hover { border-color: var(--down); color: var(--down); }
 .admin-actions button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.admin-search {
+  width: 100%;
+  padding: 9px 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card-bg-2);
+  color: var(--text);
+  font-size: 13px;
+}
+.admin-search::placeholder { color: var(--text-dim); }
+
+.admin-detail-row td {
+  background: var(--card-bg-2);
+  padding: 12px;
+}
+.admin-detail-block { margin-bottom: 10px; }
+.admin-detail-block:last-child { margin-bottom: 0; }
+.admin-detail-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.admin-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.admin-tag {
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 600;
+}
+.admin-source-row {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+.admin-source-row strong { color: var(--text); }
+
+.admin-confirm-modal {
+  max-width: 380px;
+  text-align: left;
+}
+.admin-confirm-modal p {
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.admin-confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.auth-btn.danger {
+  background: var(--down);
+  color: #fff;
+  border: none;
+}
 
 main {
   max-width: 820px;

@@ -50,18 +50,30 @@
     <div class="auth-modal admin-modal">
       <button id="adminModalClose" class="auth-modal-close">✕</button>
       <h3 class="admin-modal-title">Quản trị tài khoản</h3>
+      <input id="adminSearchInput" class="admin-search" type="text" placeholder="Tìm theo tên hoặc email..." />
       <div id="adminError" class="auth-error"></div>
       <div class="admin-table-wrap">
         <table class="admin-table">
           <thead>
             <tr>
               <th>Người dùng</th>
+              <th>Ngày tạo</th>
               <th>Quyền</th>
               <th></th>
             </tr>
           </thead>
           <tbody id="adminUsersBody"></tbody>
         </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="adminConfirmBackdrop" class="auth-modal-backdrop" hidden>
+    <div class="auth-modal admin-confirm-modal">
+      <p id="adminConfirmText">Xoá tài khoản này?</p>
+      <div class="admin-confirm-actions">
+        <button id="adminConfirmCancel" class="auth-btn">Huỷ</button>
+        <button id="adminConfirmOk" class="auth-btn danger">Xoá</button>
       </div>
     </div>
   </div>

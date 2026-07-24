@@ -485,9 +485,14 @@ function renderAuthArea() {
 
 // ===================== Quản trị tài khoản (admin) =====================
 
+let adminAllUsers = [];
+let adminExpandedId = null;
+let adminPendingDeleteId = null;
+
 async function openAdminModal() {
   document.getElementById("adminModalBackdrop").hidden = false;
   document.getElementById("adminError").textContent = "";
+  document.getElementById("adminSearchInput").value = "";
   await loadAdminUsers();
 }
 
@@ -499,22 +504,39 @@ async function loadAdminUsers() {
   const body = document.getElementById("adminUsersBody");
   const errBox = document.getElementById("adminError");
   errBox.textContent = "";
-  body.innerHTML = `<tr><td colspan="3">Đang tải...</td></tr>`;
+  body.innerHTML = `<tr><td colspan="4">Đang tải...</td></tr>`;
   try {
     const res = await fetch("/api/admin/users");
     const json = await res.json();
     if (!json.ok) throw new Error(json.error || "Không tải được danh sách");
-    renderAdminUsers(json.data);
+    adminAllUsers = json.data;
+    renderAdminUsers(adminAllUsers);
   } catch (e) {
     body.innerHTML = "";
     errBox.textContent = e.message;
   }
 }
 
+function filterAdminUsers() {
+  const q = document.getElementById("adminSearchInput").value.trim().toLowerCase();
+  if (!q) return renderAdminUsers(adminAllUsers);
+  const filtered = adminAllUsers.filter(
+    (u) => (u.email || "").toLowerCase().includes(q) || (u.name || "").toLowerCase().includes(q)
+  );
+  renderAdminUsers(filtered);
+}
+
+function fmtAdminDate(iso) {
+  if (!iso) return "—";
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return "—";
+  return d.toLocaleDateString("vi-VN");
+}
+
 function renderAdminUsers(users) {
   const body = document.getElementById("adminUsersBody");
   if (!users.length) {
-    body.innerHTML = `<tr><td colspan="3">Chưa có tài khoản nào.</td></tr>`;
+    body.innerHTML = `<tr><td colspan="4">Không tìm thấy tài khoản nào.</td></tr>`;
     return;
   }
   body.innerHTML = users
@@ -523,24 +545,64 @@ function renderAdminUsers(users) {
       const isAdmin = u.role === "admin";
       const providerLabel = u.provider === "google" ? "Google" : "Email";
       const roleToggleLabel = isAdmin ? "Bỏ admin" : "Cấp admin";
-      return `
-        <tr data-id="${u.id}">
+      const watchlist = u.watchlist || [];
+      const sources = u.sources || [];
+      const rows = [`
+        <tr class="admin-row" data-id="${u.id}">
           <td>
             <div>${escapeHtml(u.name || u.email || "—")}</div>
-            <div class="admin-email">${escapeHtml(u.email || "")} · ${providerLabel} · ${u.watchlist_count} mã / ${u.sources_count} nguồn</div>
+            <div class="admin-email">${escapeHtml(u.email || "")} · ${providerLabel} · ${watchlist.length} mã / ${sources.length} nguồn</div>
           </td>
+          <td>${fmtAdminDate(u.created_at)}</td>
           <td><span class="admin-role-badge ${isAdmin ? "admin" : ""}">${isAdmin ? "Admin" : "User"}</span></td>
           <td>
             <div class="admin-actions">
+              <button class="admin-detail-btn">${adminExpandedId === u.id ? "Ẩn" : "Chi tiết"}</button>
               <button class="admin-role-btn" ${isSelf ? "disabled" : ""}>${roleToggleLabel}</button>
               <button class="admin-delete-btn danger" ${isSelf ? "disabled" : ""}>Xoá</button>
             </div>
           </td>
         </tr>
-      `;
+      `];
+      if (adminExpandedId === u.id) {
+        const watchlistHtml = watchlist.length
+          ? watchlist.map((t) => `<span class="admin-tag">${escapeHtml(t)}</span>`).join("")
+          : `<span class="admin-email">Chưa có mã nào</span>`;
+        const sourcesHtml = sources.length
+          ? sources
+              .map(
+                (s) =>
+                  `<div class="admin-source-row"><strong>${escapeHtml(s.name || "")}</strong> — ${escapeHtml(s.url || "")}${s.lang === "en" ? " (nước ngoài)" : ""}</div>`
+              )
+              .join("")
+          : `<span class="admin-email">Chưa có nguồn nào</span>`;
+        rows.push(`
+          <tr class="admin-detail-row" data-detail-id="${u.id}">
+            <td colspan="4">
+              <div class="admin-detail-block">
+                <div class="admin-detail-label">Danh mục theo dõi</div>
+                <div class="admin-tags">${watchlistHtml}</div>
+              </div>
+              <div class="admin-detail-block">
+                <div class="admin-detail-label">Nguồn tin riêng</div>
+                ${sourcesHtml}
+              </div>
+            </td>
+          </tr>
+        `);
+      }
+      return rows.join("");
     })
     .join("");
 
+  body.querySelectorAll(".admin-detail-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const tr = e.target.closest("tr");
+      const id = tr.dataset.id;
+      adminExpandedId = adminExpandedId === id ? null : id;
+      renderAdminUsers(users);
+    });
+  });
   body.querySelectorAll(".admin-role-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const tr = e.target.closest("tr");
@@ -554,7 +616,7 @@ function renderAdminUsers(users) {
       const tr = e.target.closest("tr");
       const id = tr.dataset.id;
       const current = users.find((u) => u.id === id);
-      deleteAdminUser(id, current.email || current.name || id);
+      openAdminConfirm(id, current.email || current.name || id);
     });
   });
 }
@@ -576,8 +638,22 @@ async function setAdminRole(id, role) {
   }
 }
 
-async function deleteAdminUser(id, label) {
-  if (!confirm(`Xoá tài khoản "${label}"? Hành động này không thể hoàn tác.`)) return;
+function openAdminConfirm(id, label) {
+  adminPendingDeleteId = id;
+  document.getElementById("adminConfirmText").textContent =
+    `Xoá tài khoản "${label}"? Hành động này không thể hoàn tác.`;
+  document.getElementById("adminConfirmBackdrop").hidden = false;
+}
+
+function closeAdminConfirm() {
+  adminPendingDeleteId = null;
+  document.getElementById("adminConfirmBackdrop").hidden = true;
+}
+
+async function confirmAdminDelete() {
+  const id = adminPendingDeleteId;
+  if (!id) return;
+  closeAdminConfirm();
   const errBox = document.getElementById("adminError");
   errBox.textContent = "";
   try {
@@ -603,6 +679,12 @@ function escapeHtml(s) {
 document.getElementById("adminModalClose").addEventListener("click", closeAdminModal);
 document.getElementById("adminModalBackdrop").addEventListener("click", (e) => {
   if (e.target.id === "adminModalBackdrop") closeAdminModal();
+});
+document.getElementById("adminSearchInput").addEventListener("input", filterAdminUsers);
+document.getElementById("adminConfirmCancel").addEventListener("click", closeAdminConfirm);
+document.getElementById("adminConfirmOk").addEventListener("click", confirmAdminDelete);
+document.getElementById("adminConfirmBackdrop").addEventListener("click", (e) => {
+  if (e.target.id === "adminConfirmBackdrop") closeAdminConfirm();
 });
 
 function openAuthModal(errorMsg) {
