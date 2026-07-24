@@ -1,7 +1,8 @@
 const STORAGE_KEY = "stockpeek_watchlist";
 const DEFAULT_TICKERS = ["VIC", "VNM", "FPT", "VCB", "HPG"];
 const QUOTES_INTERVAL_MS = 15000;
-const NEWS_INTERVAL_MS = 3 * 60 * 1000;
+const LIVE_NEWS_INTERVAL_MS = 15 * 60 * 1000;
+const HOT_NEWS_INTERVAL_MS = 60 * 60 * 1000;
 const INDICES_INTERVAL_MS = 30000;
 
 let sources = [];
@@ -217,28 +218,41 @@ async function addTicker() {
   refreshQuotes();
 }
 
-async function refreshNews() {
-  const feed = document.getElementById("newsFeed");
+// "Tin nóng": 3 tin được nhiều nguồn cùng đưa tin nhất (tín hiệu độ nóng
+// không cần AI — càng nhiều báo cùng đăng thì tin càng đáng chú ý), làm mới
+// mỗi giờ. "Tin trực tiếp": 10 tin mới nhất theo thời gian, làm mới 15 phút/lần.
+
+async function refreshHotNews() {
+  const list = document.getElementById("hotNewsList");
   try {
     const res = await fetch("/api/news");
     const json = await res.json();
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
-    renderNews(json.data);
-    document.getElementById("newsUpdated").textContent =
+    const ranked = json.data
+      .filter((it) => it.title)
+      .slice()
+      .sort((a, b) => b.sourceCount - a.sourceCount || _pubTs(b.pubDate) - _pubTs(a.pubDate))
+      .slice(0, 3);
+    renderHotNews(ranked);
+    document.getElementById("hotNewsUpdated").textContent =
       "Cập nhật " + new Date().toLocaleTimeString("vi-VN");
   } catch (e) {
-    feed.innerHTML = `<div class="empty">Lỗi lấy tin tức: ${e.message}</div>`;
+    list.innerHTML = `<div class="empty">Lỗi lấy tin tức: ${e.message}</div>`;
   }
 }
 
-function renderNews(items) {
-  const feed = document.getElementById("newsFeed");
-  const valid = items.filter((it) => it.title);
-  if (valid.length === 0) {
-    feed.innerHTML = '<div class="empty">Chưa có tin nào.</div>';
+function _pubTs(pubDate) {
+  const t = new Date(pubDate).getTime();
+  return isNaN(t) ? 0 : t;
+}
+
+function renderHotNews(items) {
+  const list = document.getElementById("hotNewsList");
+  if (items.length === 0) {
+    list.innerHTML = '<div class="empty">Chưa có tin nào.</div>';
     return;
   }
-  feed.innerHTML = valid
+  list.innerHTML = items
     .map((it, i) => {
       const chips = it.sources
         .map((s) => `<span class="source-chip">📰 ${s.source}</span>`)
@@ -270,6 +284,45 @@ function renderNews(items) {
 function toggleNewsDetail(i) {
   const el = document.getElementById(`news-detail-${i}`);
   if (el) el.classList.toggle("open");
+}
+
+async function refreshLiveNews() {
+  const body = document.getElementById("liveNewsBody");
+  try {
+    const res = await fetch("/api/news");
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    const latest = json.data
+      .filter((it) => it.title)
+      .slice()
+      .sort((a, b) => _pubTs(b.pubDate) - _pubTs(a.pubDate))
+      .slice(0, 10);
+    renderLiveNews(latest);
+    document.getElementById("liveNewsUpdated").textContent =
+      "Cập nhật " + new Date().toLocaleTimeString("vi-VN");
+  } catch (e) {
+    body.innerHTML = `<tr><td colspan="3">Lỗi lấy tin tức: ${e.message}</td></tr>`;
+  }
+}
+
+function renderLiveNews(items) {
+  const body = document.getElementById("liveNewsBody");
+  if (items.length === 0) {
+    body.innerHTML = `<tr><td colspan="3">Chưa có tin nào.</td></tr>`;
+    return;
+  }
+  body.innerHTML = items
+    .map((it) => {
+      const primary = it.sources[0];
+      const sourceLabel =
+        it.sourceCount > 1 ? `${primary.source} +${it.sourceCount - 1}` : primary.source;
+      return `<tr>
+        <td class="live-news-time">${timeAgo(it.pubDate)}</td>
+        <td class="live-news-source">${sourceLabel}</td>
+        <td class="live-news-title"><a href="${primary.link}" target="_blank" rel="noopener">${it.title}</a></td>
+      </tr>`;
+    })
+    .join("");
 }
 
 async function refreshSources() {
@@ -332,7 +385,8 @@ async function addSource() {
     nameInput.value = "";
     urlInput.value = "";
     foreignCheck.checked = false;
-    refreshNews();
+    refreshLiveNews();
+    refreshHotNews();
   } catch (e) {
     errBox.textContent = e.message;
   } finally {
@@ -348,7 +402,8 @@ async function removeSource(name) {
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
     sources = json.data;
     renderSources();
-    refreshNews();
+    refreshLiveNews();
+    refreshHotNews();
   } catch (e) {
     document.getElementById("sourceError").textContent = e.message;
   }
@@ -860,7 +915,8 @@ async function afterLoginSuccess() {
   await checkAuth();
   refreshQuotes();
   refreshSources();
-  refreshNews();
+  refreshLiveNews();
+  refreshHotNews();
 }
 
 async function logout() {
@@ -872,7 +928,8 @@ async function logout() {
   renderAuthArea();
   refreshQuotes();
   refreshSources();
-  refreshNews();
+  refreshLiveNews();
+  refreshHotNews();
 }
 
 document.getElementById("authModalClose").addEventListener("click", closeAuthModal);
@@ -944,10 +1001,12 @@ checkAuth().then(() => {
   refreshQuotes();
 });
 refreshSources();
-refreshNews();
+refreshLiveNews();
+refreshHotNews();
 refreshSectorAnalysis();
 refreshMarketOverview();
 refreshIndices();
 setInterval(refreshQuotes, QUOTES_INTERVAL_MS);
-setInterval(refreshNews, NEWS_INTERVAL_MS);
+setInterval(refreshLiveNews, LIVE_NEWS_INTERVAL_MS);
+setInterval(refreshHotNews, HOT_NEWS_INTERVAL_MS);
 setInterval(refreshIndices, INDICES_INTERVAL_MS);

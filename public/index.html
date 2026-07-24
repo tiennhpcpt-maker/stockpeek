@@ -102,6 +102,33 @@
   </div>
 
   <main>
+    <section class="hot-news-panel">
+      <div class="section-head">
+        <h2>🔥 Tin nóng</h2>
+        <span class="updated" id="hotNewsUpdated">—</span>
+      </div>
+      <div id="hotNewsList" class="feed"></div>
+    </section>
+
+    <section class="live-news-panel">
+      <div class="section-head">
+        <h2>⚡ Tin trực tiếp</h2>
+        <span class="updated" id="liveNewsUpdated">—</span>
+      </div>
+      <div class="live-news-table-wrap">
+        <table class="live-news-table">
+          <thead>
+            <tr>
+              <th>Giờ</th>
+              <th>Nguồn</th>
+              <th>Tiêu đề</th>
+            </tr>
+          </thead>
+          <tbody id="liveNewsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
     <section class="indices-panel">
       <div class="section-head">
         <h2>Thị trường chứng khoán</h2>
@@ -133,14 +160,6 @@
       </div>
       <p class="sector-disclaimer" id="sectorDisclaimer"></p>
       <div id="sectorGrid" class="sector-grid"></div>
-    </section>
-
-    <section class="news-feed">
-      <div class="section-head">
-        <h2>Tổng quan thị trường</h2>
-        <span class="updated" id="newsUpdated">—</span>
-      </div>
-      <div id="newsFeed" class="feed"></div>
     </section>
 
     <section class="sources-panel">
