@@ -236,6 +236,11 @@ body {
   margin: 0 0 16px;
   font-size: 16px;
 }
+.admin-tabs { margin-bottom: 16px; }
+.admin-sources-list {
+  max-height: 50vh;
+  overflow-y: auto;
+}
 .admin-modal .auth-error {
   text-align: left;
   margin-top: 0;

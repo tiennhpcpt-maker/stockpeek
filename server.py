@@ -128,8 +128,8 @@ def update_github_file(path, default, mutate_fn, message, max_retries=3, repo=No
     raise RuntimeError(f"Không thể lưu do xung đột ghi liên tục: {last_err}")
 
 
-def load_sources():
-    data, sha = load_github_file(SOURCES_PATH, [dict(s) for s in DEFAULT_SOURCES])
+def load_sources(force=False):
+    data, sha = load_github_file(SOURCES_PATH, [dict(s) for s in DEFAULT_SOURCES], force=force)
     if not isinstance(data, list):
         data = [dict(s) for s in DEFAULT_SOURCES]
     return data, sha
@@ -929,6 +929,16 @@ class Handler(BaseHTTPRequestHandler):
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return
 
+        if parsed.path == "/api/admin/sources":
+            if not self._require_admin():
+                return
+            try:
+                data, _ = load_sources(force=True)
+                self._send_json({"ok": True, "data": data})
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
         self.serve_static(parsed.path)
 
     def _read_json_body(self):
@@ -964,6 +974,40 @@ class Handler(BaseHTTPRequestHandler):
                     new_sources = add_user_source(user["id"], name, url, lang)
                 else:
                     new_sources = add_source_entry(name, url, lang)
+                _news_cache.clear()
+                self._send_json({"ok": True, "data": new_sources})
+            except ValueError as e:
+                if str(e) == "DUP":
+                    self._send_json({"ok": False, "error": "Tên nguồn này đã tồn tại"}, 400)
+                elif str(e) == "MAX":
+                    self._send_json({"ok": False, "error": f"Chỉ cho phép tối đa {MAX_SOURCES} nguồn"}, 400)
+                else:
+                    self._send_json({"ok": False, "error": str(e)}, 400)
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
+        if parsed.path == "/api/admin/sources":
+            if not self._require_admin():
+                return
+            try:
+                body = self._read_json_body()
+            except Exception:
+                self._send_json({"ok": False, "error": "Dữ liệu gửi lên không hợp lệ"}, 400)
+                return
+            name = (body.get("name") or "").strip()
+            url = (body.get("url") or "").strip()
+            lang = "en" if body.get("foreign") else "vi"
+            if not name or not url:
+                self._send_json({"ok": False, "error": "Cần nhập cả tên nguồn và URL"}, 400)
+                return
+            try:
+                validate_feed(url)
+            except Exception as e:
+                self._send_json({"ok": False, "error": f"Không lấy được RSS từ URL này: {e}"}, 400)
+                return
+            try:
+                new_sources = add_source_entry(name, url, lang)
                 _news_cache.clear()
                 self._send_json({"ok": True, "data": new_sources})
             except ValueError as e:
@@ -1099,6 +1143,19 @@ class Handler(BaseHTTPRequestHandler):
                     new_sources = remove_user_source(user["id"], name)
                 else:
                     new_sources = remove_source_entry(name)
+                _news_cache.clear()
+                self._send_json({"ok": True, "data": new_sources})
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
+        if parsed.path == "/api/admin/sources":
+            if not self._require_admin():
+                return
+            qs = parse_qs(parsed.query)
+            name = qs.get("name", [""])[0]
+            try:
+                new_sources = remove_source_entry(name)
                 _news_cache.clear()
                 self._send_json({"ok": True, "data": new_sources})
             except Exception as e:

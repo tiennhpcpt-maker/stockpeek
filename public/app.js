@@ -488,12 +488,23 @@ function renderAuthArea() {
 let adminAllUsers = [];
 let adminExpandedId = null;
 let adminPendingDeleteId = null;
+let adminAllSources = [];
 
 async function openAdminModal() {
   document.getElementById("adminModalBackdrop").hidden = false;
   document.getElementById("adminError").textContent = "";
   document.getElementById("adminSearchInput").value = "";
+  switchAdminTab("users");
   await loadAdminUsers();
+}
+
+function switchAdminTab(tab) {
+  const isUsers = tab === "users";
+  document.getElementById("adminTabUsers").classList.toggle("active", isUsers);
+  document.getElementById("adminTabSources").classList.toggle("active", !isUsers);
+  document.getElementById("adminUsersPanel").hidden = !isUsers;
+  document.getElementById("adminSourcesPanel").hidden = isUsers;
+  if (!isUsers && !adminAllSources.length) loadAdminSources();
 }
 
 function closeAdminModal() {
@@ -616,7 +627,11 @@ function renderAdminUsers(users) {
       const tr = e.target.closest("tr");
       const id = tr.dataset.id;
       const current = users.find((u) => u.id === id);
-      openAdminConfirm(id, current.email || current.name || id);
+      const label = current.email || current.name || id;
+      openAdminConfirm(
+        `Xoá tài khoản "${label}"? Hành động này không thể hoàn tác.`,
+        () => deleteAdminUserConfirmed(id)
+      );
     });
   });
 }
@@ -638,22 +653,26 @@ async function setAdminRole(id, role) {
   }
 }
 
-function openAdminConfirm(id, label) {
-  adminPendingDeleteId = id;
-  document.getElementById("adminConfirmText").textContent =
-    `Xoá tài khoản "${label}"? Hành động này không thể hoàn tác.`;
+let adminConfirmCallback = null;
+
+function openAdminConfirm(message, onConfirm) {
+  adminConfirmCallback = onConfirm;
+  document.getElementById("adminConfirmText").textContent = message;
   document.getElementById("adminConfirmBackdrop").hidden = false;
 }
 
 function closeAdminConfirm() {
-  adminPendingDeleteId = null;
+  adminConfirmCallback = null;
   document.getElementById("adminConfirmBackdrop").hidden = true;
 }
 
-async function confirmAdminDelete() {
-  const id = adminPendingDeleteId;
-  if (!id) return;
+function runAdminConfirm() {
+  const cb = adminConfirmCallback;
   closeAdminConfirm();
+  if (cb) cb();
+}
+
+async function deleteAdminUserConfirmed(id) {
   const errBox = document.getElementById("adminError");
   errBox.textContent = "";
   try {
@@ -663,6 +682,111 @@ async function confirmAdminDelete() {
     await loadAdminUsers();
   } catch (e) {
     errBox.textContent = e.message;
+  }
+}
+
+// ===================== Quản trị nguồn tin mặc định (admin) =====================
+
+async function loadAdminSources() {
+  const list = document.getElementById("adminSourcesList");
+  const errBox = document.getElementById("adminSourceError");
+  errBox.textContent = "";
+  list.innerHTML = `<div class="empty">Đang tải...</div>`;
+  try {
+    const res = await fetch("/api/admin/sources");
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "Không tải được danh sách nguồn tin");
+    adminAllSources = json.data;
+    renderAdminSources(adminAllSources);
+  } catch (e) {
+    list.innerHTML = "";
+    errBox.textContent = e.message;
+  }
+}
+
+function filterAdminSources() {
+  const q = document.getElementById("adminSourceSearchInput").value.trim().toLowerCase();
+  if (!q) return renderAdminSources(adminAllSources);
+  const filtered = adminAllSources.filter(
+    (s) => (s.name || "").toLowerCase().includes(q) || (s.url || "").toLowerCase().includes(q)
+  );
+  renderAdminSources(filtered);
+}
+
+function renderAdminSources(list) {
+  const el = document.getElementById("adminSourcesList");
+  if (!list.length) {
+    el.innerHTML = '<div class="empty">Không tìm thấy nguồn tin nào.</div>';
+    return;
+  }
+  el.innerHTML = list
+    .map(
+      (s) => `<div class="source-manage-row">
+        <span class="source-name">${escapeHtml(s.name)}</span>
+        ${s.lang && s.lang !== "vi" ? '<span class="source-lang-badge">Dịch → VI</span>' : ""}
+        <span class="source-url">${escapeHtml(s.url)}</span>
+        <button class="source-remove" data-name="${escapeHtml(s.name)}">Xoá</button>
+      </div>`
+    )
+    .join("");
+  el.querySelectorAll(".source-remove").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const name = btn.dataset.name;
+      openAdminConfirm(
+        `Xoá nguồn tin "${name}" khỏi danh sách mặc định? Hành động này không thể hoàn tác.`,
+        () => deleteAdminSourceConfirmed(name)
+      );
+    });
+  });
+}
+
+async function deleteAdminSourceConfirmed(name) {
+  const errBox = document.getElementById("adminSourceError");
+  errBox.textContent = "";
+  try {
+    const res = await fetch(`/api/admin/sources?name=${encodeURIComponent(name)}`, { method: "DELETE" });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "Không xoá được nguồn tin");
+    await loadAdminSources();
+  } catch (e) {
+    errBox.textContent = e.message;
+  }
+}
+
+async function addAdminSource() {
+  const nameInput = document.getElementById("adminSourceNameInput");
+  const urlInput = document.getElementById("adminSourceUrlInput");
+  const foreignCheck = document.getElementById("adminSourceForeignCheck");
+  const errBox = document.getElementById("adminSourceError");
+  const name = nameInput.value.trim();
+  const url = urlInput.value.trim();
+  const foreign = foreignCheck.checked;
+  errBox.textContent = "";
+  if (!name || !url) {
+    errBox.textContent = "Nhập đủ tên nguồn và URL RSS.";
+    return;
+  }
+  const btn = document.getElementById("adminAddSourceBtn");
+  btn.disabled = true;
+  btn.textContent = "Đang kiểm tra...";
+  try {
+    const res = await fetch("/api/admin/sources", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, url, foreign }),
+    });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    adminAllSources = json.data;
+    renderAdminSources(adminAllSources);
+    nameInput.value = "";
+    urlInput.value = "";
+    foreignCheck.checked = false;
+  } catch (e) {
+    errBox.textContent = e.message;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "+ Thêm nguồn";
   }
 }
 
@@ -682,10 +806,14 @@ document.getElementById("adminModalBackdrop").addEventListener("click", (e) => {
 });
 document.getElementById("adminSearchInput").addEventListener("input", filterAdminUsers);
 document.getElementById("adminConfirmCancel").addEventListener("click", closeAdminConfirm);
-document.getElementById("adminConfirmOk").addEventListener("click", confirmAdminDelete);
+document.getElementById("adminConfirmOk").addEventListener("click", runAdminConfirm);
 document.getElementById("adminConfirmBackdrop").addEventListener("click", (e) => {
   if (e.target.id === "adminConfirmBackdrop") closeAdminConfirm();
 });
+document.getElementById("adminTabUsers").addEventListener("click", () => switchAdminTab("users"));
+document.getElementById("adminTabSources").addEventListener("click", () => switchAdminTab("sources"));
+document.getElementById("adminSourceSearchInput").addEventListener("input", filterAdminSources);
+document.getElementById("adminAddSourceBtn").addEventListener("click", addAdminSource);
 
 function openAuthModal(errorMsg) {
   document.getElementById("authModalBackdrop").hidden = false;

@@ -49,21 +49,44 @@
   <div id="adminModalBackdrop" class="auth-modal-backdrop" hidden>
     <div class="auth-modal admin-modal">
       <button id="adminModalClose" class="auth-modal-close">✕</button>
-      <h3 class="admin-modal-title">Quản trị tài khoản</h3>
-      <input id="adminSearchInput" class="admin-search" type="text" placeholder="Tìm theo tên hoặc email..." />
-      <div id="adminError" class="auth-error"></div>
-      <div class="admin-table-wrap">
-        <table class="admin-table">
-          <thead>
-            <tr>
-              <th>Người dùng</th>
-              <th>Ngày tạo</th>
-              <th>Quyền</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody id="adminUsersBody"></tbody>
-        </table>
+      <h3 class="admin-modal-title">Quản trị</h3>
+
+      <div class="auth-tabs admin-tabs">
+        <button id="adminTabUsers" class="auth-tab active">Tài khoản</button>
+        <button id="adminTabSources" class="auth-tab">Nguồn tin</button>
+      </div>
+
+      <div id="adminUsersPanel">
+        <input id="adminSearchInput" class="admin-search" type="text" placeholder="Tìm theo tên hoặc email..." />
+        <div id="adminError" class="auth-error"></div>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Người dùng</th>
+                <th>Ngày tạo</th>
+                <th>Quyền</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="adminUsersBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="adminSourcesPanel" hidden>
+        <input id="adminSourceSearchInput" class="admin-search" type="text" placeholder="Tìm theo tên hoặc URL..." />
+        <div id="adminSourceError" class="auth-error"></div>
+        <div id="adminSourcesList" class="sources-list admin-sources-list"></div>
+        <div class="addbox source-addbox">
+          <input id="adminSourceNameInput" type="text" placeholder="Tên nguồn, vd: CafeF" />
+          <input id="adminSourceUrlInput" type="text" placeholder="URL RSS, vd: https://vidu.vn/rss/chung-khoan.rss" />
+          <button id="adminAddSourceBtn">+ Thêm nguồn</button>
+        </div>
+        <label class="source-lang-check">
+          <input id="adminSourceForeignCheck" type="checkbox" />
+          Nguồn tiếng nước ngoài (tự động dịch sang tiếng Việt khi hiển thị)
+        </label>
       </div>
     </div>
   </div>
