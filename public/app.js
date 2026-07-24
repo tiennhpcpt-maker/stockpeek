@@ -287,7 +287,7 @@ function toggleNewsDetail(i) {
 }
 
 async function refreshLiveNews() {
-  const body = document.getElementById("liveNewsBody");
+  const list = document.getElementById("liveNewsList");
   try {
     const res = await fetch("/api/news");
     const json = await res.json();
@@ -301,26 +301,25 @@ async function refreshLiveNews() {
     document.getElementById("liveNewsUpdated").textContent =
       "Cập nhật " + new Date().toLocaleTimeString("vi-VN");
   } catch (e) {
-    body.innerHTML = `<tr><td colspan="3">Lỗi lấy tin tức: ${e.message}</td></tr>`;
+    list.innerHTML = `<div class="empty">Lỗi lấy tin tức: ${e.message}</div>`;
   }
 }
 
 function renderLiveNews(items) {
-  const body = document.getElementById("liveNewsBody");
+  const list = document.getElementById("liveNewsList");
   if (items.length === 0) {
-    body.innerHTML = `<tr><td colspan="3">Chưa có tin nào.</td></tr>`;
+    list.innerHTML = '<div class="empty">Chưa có tin nào.</div>';
     return;
   }
-  body.innerHTML = items
+  list.innerHTML = items
     .map((it) => {
       const primary = it.sources[0];
       const sourceLabel =
         it.sourceCount > 1 ? `${primary.source} +${it.sourceCount - 1}` : primary.source;
-      return `<tr>
-        <td class="live-news-time">${timeAgo(it.pubDate)}</td>
-        <td class="live-news-source">${sourceLabel}</td>
-        <td class="live-news-title"><a href="${primary.link}" target="_blank" rel="noopener">${it.title}</a></td>
-      </tr>`;
+      return `<div class="live-news-item">
+        <a class="live-news-title" href="${primary.link}" target="_blank" rel="noopener">${it.title}</a>
+        <div class="live-news-meta">${sourceLabel} · ${timeAgo(it.pubDate)}</div>
+      </div>`;
     })
     .join("");
 }
