@@ -1036,7 +1036,12 @@ class Handler(BaseHTTPRequestHandler):
             except urllib.error.HTTPError as e:
                 err_body = e.read().decode("utf-8", errors="ignore")
                 print(f"[google-oauth] token exchange failed: {e.code} {err_body}")
-                self._redirect_login_error(f"token_exchange_{e.code}")
+                try:
+                    err_json = json.loads(err_body)
+                    err_code = err_json.get("error", "unknown")
+                except Exception:
+                    err_code = "unknown"
+                self._redirect_login_error(f"token_{e.code}_{err_code}")
                 return
 
             id_token = token_resp.get("id_token", "")
