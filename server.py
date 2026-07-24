@@ -20,7 +20,7 @@ from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from http.cookies import SimpleCookie
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import urlparse, parse_qs, urlencode
+from urllib.parse import urlparse, parse_qs, urlencode, quote
 
 PORT = int(os.environ.get("PORT", 8787))
 HOST = "0.0.0.0" if os.environ.get("PORT") else "127.0.0.1"
@@ -1016,9 +1016,7 @@ class Handler(BaseHTTPRequestHandler):
         code = qs.get("code", [""])[0]
         error = qs.get("error", [""])[0]
         if error or not code:
-            self.send_response(302)
-            self.send_header("Location", "/?login_error=google")
-            self.end_headers()
+            self._redirect_login_error(error or "missing_code")
             return
         try:
             redirect_uri = google_oauth_redirect_uri(self)
@@ -1032,10 +1030,20 @@ class Handler(BaseHTTPRequestHandler):
             req = urllib.request.Request(
                 "https://oauth2.googleapis.com/token", data=token_body, method="POST"
             )
-            with urllib.request.urlopen(req, timeout=10) as resp:
-                token_resp = json.loads(resp.read())
+            try:
+                with urllib.request.urlopen(req, timeout=10) as resp:
+                    token_resp = json.loads(resp.read())
+            except urllib.error.HTTPError as e:
+                err_body = e.read().decode("utf-8", errors="ignore")
+                print(f"[google-oauth] token exchange failed: {e.code} {err_body}")
+                self._redirect_login_error(f"token_exchange_{e.code}")
+                return
 
             id_token = token_resp.get("id_token", "")
+            if not id_token:
+                print(f"[google-oauth] no id_token in response: {token_resp}")
+                self._redirect_login_error("no_id_token")
+                return
             payload_b64 = id_token.split(".")[1]
             payload = json.loads(_b64url_decode(payload_b64))
             google_id = payload.get("sub")
@@ -1043,7 +1051,8 @@ class Handler(BaseHTTPRequestHandler):
             name = payload.get("name", "")
 
             if not google_id:
-                raise ValueError("Không lấy được thông tin tài khoản Google")
+                self._redirect_login_error("no_sub")
+                return
 
             user = find_or_create_google_user(google_id, email, name)
             session_token = create_session_token(user["id"])
@@ -1051,10 +1060,14 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header("Location", "/")
             self.send_header("Set-Cookie", self._session_cookie_header(session_token))
             self.end_headers()
-        except Exception:
-            self.send_response(302)
-            self.send_header("Location", "/?login_error=google")
-            self.end_headers()
+        except Exception as e:
+            print(f"[google-oauth] unexpected error: {e!r}")
+            self._redirect_login_error(f"exception_{type(e).__name__}")
+
+    def _redirect_login_error(self, reason):
+        self.send_response(302)
+        self.send_header("Location", f"/?login_error=google&reason={quote(reason)}")
+        self.end_headers()
 
     def serve_static(self, path):
         if path == "/":

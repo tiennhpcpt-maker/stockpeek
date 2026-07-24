@@ -590,13 +590,16 @@ document.getElementById("tickerInput").addEventListener("keydown", (e) => {
 document.getElementById("addSourceBtn").addEventListener("click", addSource);
 
 const urlParams = new URLSearchParams(window.location.search);
+const googleLoginErrorReason = urlParams.get("reason");
 if (urlParams.get("login_error") === "google") {
   window.history.replaceState({}, "", window.location.pathname);
 }
 
 checkAuth().then(() => {
   if (urlParams.get("login_error") === "google") {
-    openAuthModal("Đăng nhập Google thất bại, thử lại nhé.");
+    openAuthModal(
+      "Đăng nhập Google thất bại" + (googleLoginErrorReason ? ` (mã lỗi: ${googleLoginErrorReason})` : "") + ", thử lại nhé."
+    );
   }
   refreshQuotes();
 });
