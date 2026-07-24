@@ -13,7 +13,38 @@
       <input id="tickerInput" type="text" placeholder="Thêm mã CK, vd: HPG, MWG..." />
       <button id="addBtn">+ Thêm</button>
     </div>
+    <div id="authArea" class="auth-area"></div>
   </header>
+
+  <div id="authModalBackdrop" class="auth-modal-backdrop" hidden>
+    <div class="auth-modal">
+      <button id="authModalClose" class="auth-modal-close">✕</button>
+      <div class="auth-tabs">
+        <button id="authTabLogin" class="auth-tab active">Đăng nhập</button>
+        <button id="authTabRegister" class="auth-tab">Đăng ký</button>
+      </div>
+
+      <a id="googleLoginBtn" class="google-btn" href="/auth/google/login">
+        <span>Đăng nhập với Google</span>
+      </a>
+      <div class="auth-divider"><span>hoặc</span></div>
+
+      <form id="loginForm" class="auth-form">
+        <input id="loginEmail" type="email" placeholder="Email" required />
+        <input id="loginPassword" type="password" placeholder="Mật khẩu" required />
+        <button type="submit">Đăng nhập</button>
+      </form>
+
+      <form id="registerForm" class="auth-form" hidden>
+        <input id="registerName" type="text" placeholder="Tên hiển thị" />
+        <input id="registerEmail" type="email" placeholder="Email" required />
+        <input id="registerPassword" type="password" placeholder="Mật khẩu (ít nhất 6 ký tự)" required />
+        <button type="submit">Tạo tài khoản</button>
+      </form>
+
+      <div id="authError" class="auth-error"></div>
+    </div>
+  </div>
 
   <main>
     <section class="indices-panel">

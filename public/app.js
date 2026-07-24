@@ -5,6 +5,7 @@ const NEWS_INTERVAL_MS = 3 * 60 * 1000;
 const INDICES_INTERVAL_MS = 30000;
 
 let sources = [];
+let currentUser = null;
 
 function buildSparklinePath(series, width, height) {
   if (!series || series.length < 2) return "";
@@ -171,21 +172,47 @@ function renderWatchlist(data) {
     .join("");
 }
 
-function removeTicker(t) {
-  watchlist = watchlist.filter((x) => x !== t);
-  saveWatchlist(watchlist);
+async function removeTicker(t) {
+  if (currentUser) {
+    try {
+      const res = await fetch(`/api/watchlist?ticker=${encodeURIComponent(t)}`, { method: "DELETE" });
+      const json = await res.json();
+      if (json.ok) watchlist = json.data;
+    } catch (e) {}
+  } else {
+    watchlist = watchlist.filter((x) => x !== t);
+    saveWatchlist(watchlist);
+  }
   refreshQuotes();
 }
 
-function addTicker() {
+async function addTicker() {
   const input = document.getElementById("tickerInput");
   const raw = input.value.trim().toUpperCase();
   if (!raw) return;
-  raw.split(",").forEach((t) => {
-    t = t.trim();
-    if (t && !watchlist.includes(t)) watchlist.push(t);
-  });
-  saveWatchlist(watchlist);
+  const tickers = raw
+    .split(",")
+    .map((t) => t.trim())
+    .filter(Boolean);
+
+  if (currentUser) {
+    for (const t of tickers) {
+      try {
+        const res = await fetch("/api/watchlist", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ticker: t }),
+        });
+        const json = await res.json();
+        if (json.ok) watchlist = json.data;
+      } catch (e) {}
+    }
+  } else {
+    tickers.forEach((t) => {
+      if (t && !watchlist.includes(t)) watchlist.push(t);
+    });
+    saveWatchlist(watchlist);
+  }
   input.value = "";
   refreshQuotes();
 }
@@ -432,14 +459,148 @@ function renderSectorAnalysis(data) {
     .join("");
 }
 
+// ===================== Đăng nhập / tài khoản =====================
+
+function renderAuthArea() {
+  const area = document.getElementById("authArea");
+  if (currentUser) {
+    area.innerHTML = `
+      <span class="auth-name">Xin chào, ${currentUser.name || currentUser.email}</span>
+      <button id="logoutBtn" class="auth-btn">Đăng xuất</button>
+    `;
+    document.getElementById("logoutBtn").addEventListener("click", logout);
+  } else {
+    area.innerHTML = `<button id="loginOpenBtn" class="auth-btn primary">Đăng nhập</button>`;
+    document.getElementById("loginOpenBtn").addEventListener("click", () => openAuthModal());
+  }
+}
+
+function openAuthModal(errorMsg) {
+  document.getElementById("authModalBackdrop").hidden = false;
+  document.getElementById("authError").textContent = errorMsg || "";
+}
+
+function closeAuthModal() {
+  document.getElementById("authModalBackdrop").hidden = true;
+  document.getElementById("authError").textContent = "";
+}
+
+function switchAuthTab(tab) {
+  const isLogin = tab === "login";
+  document.getElementById("authTabLogin").classList.toggle("active", isLogin);
+  document.getElementById("authTabRegister").classList.toggle("active", !isLogin);
+  document.getElementById("loginForm").hidden = !isLogin;
+  document.getElementById("registerForm").hidden = isLogin;
+  document.getElementById("authError").textContent = "";
+}
+
+async function checkAuth() {
+  try {
+    const res = await fetch("/api/auth/me");
+    const json = await res.json();
+    currentUser = json.ok ? json.data : null;
+  } catch (e) {
+    currentUser = null;
+  }
+  renderAuthArea();
+
+  if (currentUser) {
+    try {
+      const res = await fetch("/api/watchlist");
+      const json = await res.json();
+      if (json.ok && Array.isArray(json.data)) watchlist = json.data;
+    } catch (e) {}
+  } else {
+    watchlist = loadWatchlist();
+  }
+}
+
+async function afterLoginSuccess() {
+  closeAuthModal();
+  await checkAuth();
+  refreshQuotes();
+  refreshSources();
+  refreshNews();
+}
+
+async function logout() {
+  try {
+    await fetch("/api/auth/logout", { method: "POST" });
+  } catch (e) {}
+  currentUser = null;
+  watchlist = loadWatchlist();
+  renderAuthArea();
+  refreshQuotes();
+  refreshSources();
+  refreshNews();
+}
+
+document.getElementById("authModalClose").addEventListener("click", closeAuthModal);
+document.getElementById("authModalBackdrop").addEventListener("click", (e) => {
+  if (e.target.id === "authModalBackdrop") closeAuthModal();
+});
+document.getElementById("authTabLogin").addEventListener("click", () => switchAuthTab("login"));
+document.getElementById("authTabRegister").addEventListener("click", () => switchAuthTab("register"));
+
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = document.getElementById("loginEmail").value.trim();
+  const password = document.getElementById("loginPassword").value;
+  const errBox = document.getElementById("authError");
+  errBox.textContent = "";
+  try {
+    const res = await fetch("/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "Đăng nhập thất bại");
+    await afterLoginSuccess();
+  } catch (e2) {
+    errBox.textContent = e2.message;
+  }
+});
+
+document.getElementById("registerForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const name = document.getElementById("registerName").value.trim();
+  const email = document.getElementById("registerEmail").value.trim();
+  const password = document.getElementById("registerPassword").value;
+  const errBox = document.getElementById("authError");
+  errBox.textContent = "";
+  try {
+    const res = await fetch("/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, password }),
+    });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "Đăng ký thất bại");
+    await afterLoginSuccess();
+  } catch (e2) {
+    errBox.textContent = e2.message;
+  }
+});
+
 document.getElementById("addBtn").addEventListener("click", addTicker);
 document.getElementById("tickerInput").addEventListener("keydown", (e) => {
   if (e.key === "Enter") addTicker();
 });
 document.getElementById("addSourceBtn").addEventListener("click", addSource);
 
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get("login_error") === "google") {
+  window.history.replaceState({}, "", window.location.pathname);
+}
+
+checkAuth().then(() => {
+  if (urlParams.get("login_error") === "google") {
+    openAuthModal("Đăng nhập Google thất bại, thử lại nhé.");
+  }
+  refreshQuotes();
+});
 refreshSources();
-refreshQuotes();
 refreshNews();
 refreshSectorAnalysis();
 refreshMarketOverview();
