@@ -16,6 +16,7 @@ import time
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from http.cookies import SimpleCookie
@@ -700,6 +701,42 @@ def cluster_news_items(items):
     return merged
 
 
+def _fetch_source_items(src):
+    """Lấy tin từ 1 nguồn RSS. Chạy trong thread pool của get_news() nên các
+    nguồn được tải song song thay vì tuần tự - quan trọng vì với 10+ nguồn,
+    tải tuần tự (mỗi nguồn timeout tối đa 8s) có thể cộng dồn tới cả phút,
+    dễ vượt quá thời gian chờ của trình duyệt/Render khi cache hết hạn."""
+    source = src.get("name", "")
+    url = src.get("url", "")
+    is_foreign = src.get("lang", "vi") != "vi"
+    # Nguồn tiếng nước ngoài cần dịch từng bài -> giới hạn số bài để tránh
+    # quá nhiều lượt gọi API dịch miễn phí, làm chậm lần làm mới tin tức.
+    limit = 6 if is_foreign else 12
+    items = []
+    try:
+        raw = fetch_url(url, timeout=8)
+        root = ET.fromstring(raw)
+        for item in root.findall(".//item")[:limit]:
+            title = html.unescape((item.findtext("title") or "").strip())
+            link = (item.findtext("link") or "").strip()
+            pub = (item.findtext("pubDate") or "").strip()
+            desc = strip_html(item.findtext("description") or "")[:220]
+            if is_foreign:
+                title = translate_to_vi(title)
+                desc = translate_to_vi(desc)
+            if title:
+                items.append({
+                    "source": source,
+                    "title": title,
+                    "link": link,
+                    "pubDate": pub,
+                    "summary": desc,
+                })
+        return items, None
+    except Exception as e:
+        return items, {"source": source, "error": str(e)}
+
+
 def get_news(sources=None):
     if sources is None:
         sources, _ = load_sources()
@@ -711,34 +748,12 @@ def get_news(sources=None):
 
     items = []
     errors = []
-    for src in sources:
-        source = src.get("name", "")
-        url = src.get("url", "")
-        is_foreign = src.get("lang", "vi") != "vi"
-        # Nguồn tiếng nước ngoài cần dịch từng bài -> giới hạn số bài để tránh
-        # quá nhiều lượt gọi API dịch miễn phí, làm chậm lần làm mới tin tức.
-        limit = 6 if is_foreign else 12
-        try:
-            raw = fetch_url(url, timeout=8)
-            root = ET.fromstring(raw)
-            for item in root.findall(".//item")[:limit]:
-                title = html.unescape((item.findtext("title") or "").strip())
-                link = (item.findtext("link") or "").strip()
-                pub = (item.findtext("pubDate") or "").strip()
-                desc = strip_html(item.findtext("description") or "")[:220]
-                if is_foreign:
-                    title = translate_to_vi(title)
-                    desc = translate_to_vi(desc)
-                if title:
-                    items.append({
-                        "source": source,
-                        "title": title,
-                        "link": link,
-                        "pubDate": pub,
-                        "summary": desc,
-                    })
-        except Exception as e:
-            errors.append({"source": source, "error": str(e)})
+    if sources:
+        with ThreadPoolExecutor(max_workers=len(sources)) as pool:
+            for src_items, err in pool.map(_fetch_source_items, sources):
+                items.extend(src_items)
+                if err:
+                    errors.append(err)
 
     merged = cluster_news_items(items)
     data = {"items": merged, "errors": errors}
