@@ -1,120 +1,120 @@
 {
-  "generated_at": "2026-07-23T20:55:00+07:00",
+  "generated_at": "2026-07-25T11:11:07+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index hồi phục mạnh +30,85 điểm (+1,85%) lên 1.699,38 điểm phiên 23/7, chấm dứt chuỗi 4 phiên giảm. Dòng tiền bắt đáy tập trung vào bất động sản (Vingroup) và chứng khoán - hai nhóm tăng mạnh nhất thị trường.",
+  "market_note": "VN-Index đảo chiều giảm 13,27 điểm (-0,78%) phiên 24/7, lùi về 1.686,11 điểm sau khi vừa hồi phục mạnh phiên trước. Khối ngoại bán ròng hơn 1.300 tỷ đồng, sắc đỏ lan rộng với 227 mã giảm trên HOSE, tập trung ở nhóm Chứng khoán, Bất động sản và Xây dựng.",
   "sectors": [
     {
       "name": "Bất động sản",
-      "outlook": "Nhóm dẫn dắt đà hồi phục, tăng 4,49% - mạnh nhất thị trường phiên 23/7, lực cầu bắt đáy đổ mạnh vào bộ đôi Vingroup.",
+      "outlook": "Đảo chiều giảm sau 2 phiên tăng mạnh, bộ đôi Vingroup (VIC, VHM) chịu áp lực chốt lời và trở thành lực cản chính của chỉ số phiên 24/7.",
       "picks": [
         {
           "ticker": "VIC",
-          "reason": "Tăng 5,89%, đóng góp hơn 20 điểm cho VN-Index - động lực số 1 của phiên hồi phục.",
+          "reason": "Cùng VHM tạo áp lực lớn nhất lên VN-Index phiên 24/7 sau khi vừa dẫn dắt đà hồi phục phiên trước đó.",
           "source": "Vietstock"
         },
         {
           "ticker": "VHM",
-          "reason": "Tăng 4,02%, đóng góp khoảng 4,52 điểm cho chỉ số chung.",
-          "source": "Dân Trí"
+          "reason": "Nằm trong nhóm cổ phiếu vốn hoá lớn gây áp lực điều chỉnh cho chỉ số chung phiên 24/7.",
+          "source": "Vietstock"
         },
         {
           "ticker": "VRE",
-          "reason": "Tăng 1,2% cùng đà hồi phục của nhóm Vingroup.",
+          "reason": "Biến động theo sát nhóm Vingroup trong nhịp điều chỉnh ngắn hạn.",
           "source": "Vietstock"
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "Bứt phá 3,09% phiên 23/7, dòng tiền quay lại nhóm cổ phiếu nhạy với thị trường khi VN-Index đảo chiều.",
+      "outlook": "Đảo chiều giảm mạnh nhất thị trường phiên 24/7 sau khi dẫn sóng phiên trước, khối ngoại bán ròng quyết liệt cổ phiếu VIX (-50,26 tỷ đồng).",
       "picks": [
         {
           "ticker": "SSI",
-          "reason": "Dẫn đầu nhóm chứng khoán trong phiên bật tăng, thanh khoản cao.",
-          "source": "Người quan sát"
+          "reason": "Cổ phiếu đầu ngành, thường dẫn dắt biến động chung của nhóm chứng khoán.",
+          "source": "Vietstock"
         },
         {
           "ticker": "VND",
-          "reason": "Nằm trong nhóm dẫn dắt đà tăng của cổ phiếu chứng khoán phiên 23/7.",
-          "source": "Người quan sát"
+          "reason": "Được kỳ vọng tiếp tục hưởng lợi khi thanh khoản thị trường cải thiện trong 2026.",
+          "source": "24hMoney"
         },
         {
-          "ticker": "HCM",
-          "reason": "Cùng SSI, VND, VCI dẫn sóng nhóm chứng khoán tăng 3,09%.",
-          "source": "Người quan sát"
+          "ticker": "VCI",
+          "reason": "Chứng khoán Vietcap được khuyến nghị Mua, giá mục tiêu 43.000 đồng/cổ phiếu.",
+          "source": "Vietcap"
         }
       ]
     },
     {
       "name": "Ngân hàng",
-      "outlook": "Phân hóa: một số mã (STB, EIB, SHB) đóng góp cho chỉ số, nhưng khối ngoại vẫn bán ròng mạnh nhiều mã lớn.",
+      "outlook": "Dòng tiền vẫn ở lại nhóm ngân hàng nhưng chọn lọc hơn, nhiều CTCK nâng khuyến nghị Mua các mã đầu ngành trong tháng 7.",
       "picks": [
         {
-          "ticker": "SHB",
-          "reason": "Được khối ngoại mua ròng mạnh nhất phiên 23/7 (+74,7 tỷ đồng), đóng góp tích cực cho chỉ số.",
-          "source": "Tin nhanh chứng khoán"
+          "ticker": "CTG",
+          "reason": "MBS khuyến nghị Mua, tiềm năng tăng giá cao nhất nhóm 66,1%, giá mục tiêu 56.300 đồng/cổ phiếu.",
+          "source": "MBS"
         },
         {
-          "ticker": "STB",
-          "reason": "Nằm trong nhóm ngân hàng đóng góp cho đà hồi phục của VN-Index.",
-          "source": "Vietstock"
+          "ticker": "VPB",
+          "reason": "VPBankS đánh giá tiềm năng tăng giá lên tới 50,4%, nằm trong nhóm 3 cổ phiếu khuyến nghị chính.",
+          "source": "VPBankS"
         },
         {
-          "ticker": "EIB",
-          "reason": "Cùng nhóm ngân hàng góp phần kéo chỉ số phục hồi phiên 23/7.",
-          "source": "Vietstock"
+          "ticker": "MBB",
+          "reason": "Được cả VCBS và VPBankS đồng thời khuyến nghị Mua trong danh mục ngân hàng ưa thích.",
+          "source": "VCBS"
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "Kỳ vọng hưởng lợi từ đầu tư công (cao tốc Bắc-Nam, sân bay Long Thành) và chu kỳ phục hồi bất động sản dân dụng.",
+      "outlook": "Kỳ vọng hưởng lợi từ đầu tư công và chu kỳ phục hồi bất động sản dân dụng, HPG tiếp tục là lựa chọn hàng đầu ngành vật liệu xây dựng.",
       "picks": [
         {
           "ticker": "HPG",
-          "reason": "Lựa chọn hàng đầu chủ đề đầu tư hạ tầng, kết quả kinh doanh quý gần nhất tích cực.",
-          "source": "Người quan sát"
-        },
-        {
-          "ticker": "NKG",
-          "reason": "Kỳ vọng nhu cầu thép xây dựng tăng 5-8% trong 2026.",
-          "source": "Người quan sát"
+          "reason": "SSI duy trì khuyến nghị Mua, nâng giá mục tiêu 12 tháng lên 36.000 đồng/cổ phiếu - lựa chọn hàng đầu ngành thép 2026.",
+          "source": "SSI"
         },
         {
           "ticker": "HSG",
-          "reason": "Hưởng lợi chu kỳ phục hồi bất động sản dân dụng và giải ngân đầu tư công.",
-          "source": "Diễn đàn doanh nghiệp"
+          "reason": "Cùng NKG, VSC được đánh giá triển vọng tích cực nhờ chu kỳ phục hồi ngành thép nội địa.",
+          "source": "Diễn đàn Doanh nghiệp"
+        },
+        {
+          "ticker": "NKG",
+          "reason": "Kỳ vọng hưởng lợi khi giá thép và nhu cầu xây dựng phục hồi cùng chu kỳ ngành.",
+          "source": "Diễn đàn Doanh nghiệp"
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "Nhóm bán lẻ hiện đại được CTCK nâng kỳ vọng lợi nhuận giai đoạn 2026-2030, ổn định cùng tiêu dùng nội địa.",
+      "outlook": "Định giá nhiều mã bán lẻ vẫn dưới trung bình 5 năm dù dòng tiền có dấu hiệu chốt lời ngắn hạn ở một số mã.",
       "picks": [
         {
           "ticker": "MWG",
-          "reason": "Khuyến nghị Mua, tiềm năng tăng giá sau nhịp điều chỉnh, dẫn đầu bán lẻ hiện đại.",
+          "reason": "CTCK duy trì khuyến nghị Mua sau nhịp điều chỉnh khoảng 18% trong 3 tháng gần đây.",
           "source": "VOV"
         },
         {
           "ticker": "FRT",
-          "reason": "Mảng dược phẩm Long Châu là động lực tăng trưởng chính năm 2026.",
-          "source": "Mirae Asset"
+          "reason": "Nằm trong nhóm cổ phiếu đáng chú ý nhờ mảng dược phẩm Long Châu tiếp tục là động lực tăng trưởng.",
+          "source": "VOV"
         },
         {
           "ticker": "PNJ",
-          "reason": "Định giá đã chiết khấu sâu, được VDSC khuyến nghị Mua.",
+          "reason": "Bị khối ngoại bán ròng mạnh phiên 24/7, nhưng VDSC vẫn duy trì khuyến nghị Mua nhờ định giá đã chiết khấu sâu.",
           "source": "VDSC"
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "FDI giải ngân 6 tháng đầu 2026 đạt 10,8 tỷ USD (+13% svck), nền tảng phục hồi mạnh cho nhóm KCN.",
+      "outlook": "FDI đăng ký 5 tháng đầu 2026 đạt 9,1 tỷ USD, gấp 2,45 lần cùng kỳ - cổ phiếu KCN thường tăng giá trước 6-12 tháng so với thời điểm lợi nhuận doanh nghiệp bứt phá.",
       "picks": [
         {
           "ticker": "IDC",
-          "reason": "MBS khuyến nghị Khả quan, mô hình KCN sinh thái được ưa thích.",
+          "reason": "MBS khuyến nghị Khả quan, mô hình KCN sinh thái được ưa thích dù lợi nhuận quý 1/2026 giảm do thiếu nguồn thu bàn giao đất.",
           "source": "MBS"
         },
         {
@@ -124,7 +124,7 @@
         },
         {
           "ticker": "BCM",
-          "reason": "Nằm trong nhóm BCM/KBC/IDC được MBS khuyến nghị tích lũy dài hạn.",
+          "reason": "Nằm trong nhóm BCM/KBC/IDC được MBS khuyến nghị tích luỹ dài hạn, đón sóng phục hồi lợi nhuận từ 2027.",
           "source": "MBS"
         }
       ]
