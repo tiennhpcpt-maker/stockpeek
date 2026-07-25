@@ -1,8 +1,8 @@
 const STORAGE_KEY = "stockpeek_watchlist";
 const DEFAULT_TICKERS = ["VIC", "VNM", "FPT", "VCB", "HPG"];
 const QUOTES_INTERVAL_MS = 15000;
-const LIVE_NEWS_INTERVAL_MS = 15 * 60 * 1000;
-const HOT_NEWS_INTERVAL_MS = 60 * 60 * 1000;
+const LIVE_NEWS_INTERVAL_MS = 60 * 1000;
+const HOT_NEWS_INTERVAL_MS = 60 * 1000;
 const INDICES_INTERVAL_MS = 30000;
 
 let sources = [];

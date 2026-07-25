@@ -35,7 +35,7 @@ DEFAULT_SOURCES = [
 ]
 
 MAX_SOURCES = 15
-NEWS_CACHE_TTL = 180  # 3 phút
+NEWS_CACHE_TTL = 60  # 1 phút - để Tin nóng/Tin trực tiếp cập nhật gần thời gian thực
 _news_cache = {}  # key: tuple(sorted urls) -> {"data":[...], "ts": float}
 
 # Danh sách nguồn tin được lưu chung trong file sources.json của chính repo GitHub
