@@ -374,10 +374,22 @@ main {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  gap: 8px 16px;
   margin: 32px 0 12px;
 }
 .section-head h2 { font-size: 15px; margin: 0; letter-spacing: 0.2px; }
-.updated { font-size: 12px; color: var(--text-dim); }
+.updated { font-size: 12px; color: var(--text-dim); white-space: nowrap; }
+
+/* Màn hình hẹp: tiêu đề dài + "Cập nhật ..." cùng xuống 2 dòng khiến
+   hàng bị chật (không chồng lên nhau, nhưng sát nhau khó đọc) - xếp dọc
+   thay vì ép nằm ngang. */
+@media (max-width: 480px) {
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
 
 /* ---- Thị trường chứng khoán (chỉ số) ---- */
 .indices-grid {
