@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-07-28T10:32:21+07:00",
+  "generated_at": "2026-07-28T14:38:20+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index giảm 3,17 điểm (-0,19%) phiên 28/07, đóng cửa 1.666 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index tăng 9,60 điểm (0,58%) phiên 28/07, đóng cửa 1.679 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "2/8 mã tăng giá phiên 28/07, dẫn đầu là STB (+0,55%), trong khi VPB giảm sâu nhất nhóm (-2,04%).",
+      "outlook": "6/8 mã tăng giá phiên 28/07, dẫn đầu là MBB (+2,08%), trong khi VPB giảm sâu nhất nhóm (-1,22%).",
       "picks": [
         {
-          "ticker": "STB",
-          "reason": "Tăng 0,55% phiên 28/07, khối lượng khớp lệnh 43.980 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MBB",
+          "reason": "Tăng 2,08% phiên 28/07, khối lượng khớp lệnh 1.654.600 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "BID",
-          "reason": "Tăng 0,43% phiên 28/07, khối lượng khớp lệnh 114.500 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,15% phiên 28/07, khối lượng khớp lệnh 263.880 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "1/6 mã tăng giá phiên 28/07, dẫn đầu là DXG (+2,31%), trong khi PDR giảm sâu nhất nhóm (-3,59%).",
+      "outlook": "5/6 mã tăng giá phiên 28/07, dẫn đầu là DXG (+2,31%).",
       "picks": [
         {
           "ticker": "DXG",
-          "reason": "Tăng 2,31% phiên 28/07, khối lượng khớp lệnh 429.140 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,31% phiên 28/07, khối lượng khớp lệnh 1.195.490 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VHM",
-          "reason": "Đi ngang (0%) phiên 28/07, khối lượng khớp lệnh 74.920 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "NVL",
+          "reason": "Tăng 1,57% phiên 28/07, khối lượng khớp lệnh 1.437.900 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "5/6 mã tăng giá phiên 28/07, dẫn đầu là VIX (+3,40%), trong khi HCM giảm sâu nhất nhóm (-2,00%).",
+      "outlook": "5/6 mã tăng giá phiên 28/07, dẫn đầu là VND (+6,84%), trong khi HCM giảm sâu nhất nhóm (-0,40%).",
       "picks": [
         {
-          "ticker": "VIX",
-          "reason": "Tăng 3,40% phiên 28/07, khối lượng khớp lệnh 2.493.050 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VND",
+          "reason": "Tăng 6,84% phiên 28/07, khối lượng khớp lệnh 1.751.100 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "SSI",
-          "reason": "Tăng 2,05% phiên 28/07, khối lượng khớp lệnh 1.020.970 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VCI",
+          "reason": "Tăng 6,78% phiên 28/07, khối lượng khớp lệnh 1.647.130 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "1/3 mã tăng giá phiên 28/07, dẫn đầu là HPG (+0,49%), trong khi HSG giảm sâu nhất nhóm (-0,50%).",
+      "outlook": "3/3 mã tăng giá phiên 28/07, dẫn đầu là HSG (+3,48%).",
       "picks": [
         {
-          "ticker": "HPG",
-          "reason": "Tăng 0,49% phiên 28/07, khối lượng khớp lệnh 979.950 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "HSG",
+          "reason": "Tăng 3,48% phiên 28/07, khối lượng khớp lệnh 317.190 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "NKG",
-          "reason": "Giảm 0,48% phiên 28/07, khối lượng khớp lệnh 47.330 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "HPG",
+          "reason": "Tăng 2,95% phiên 28/07, khối lượng khớp lệnh 2.609.150 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "2/4 mã tăng giá phiên 28/07, dẫn đầu là PNJ (+6,99%), trong khi FRT giảm sâu nhất nhóm (-2,50%).",
+      "outlook": "2/4 mã tăng giá phiên 28/07, dẫn đầu là MWG (+2,84%), trong khi FRT giảm sâu nhất nhóm (-2,04%).",
       "picks": [
         {
-          "ticker": "PNJ",
-          "reason": "Tăng 6,99% phiên 28/07, khối lượng khớp lệnh 595.810 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MWG",
+          "reason": "Tăng 2,84% phiên 28/07, khối lượng khớp lệnh 676.020 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "MWG",
-          "reason": "Tăng 0,79% phiên 28/07, khối lượng khớp lệnh 338.750 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "DGW",
+          "reason": "Tăng 2,56% phiên 28/07, khối lượng khớp lệnh 65.580 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "3/4 mã tăng giá phiên 28/07, dẫn đầu là BCM (+1,14%), trong khi KBC giảm sâu nhất nhóm (-1,62%).",
+      "outlook": "4/4 mã tăng giá phiên 28/07, dẫn đầu là IDC (+2,22%).",
       "picks": [
         {
-          "ticker": "BCM",
-          "reason": "Tăng 1,14% phiên 28/07, khối lượng khớp lệnh 24.020 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "IDC",
+          "reason": "Tăng 2,22% phiên 28/07, khối lượng khớp lệnh 108.120 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "IDC",
-          "reason": "Tăng 0,32% phiên 28/07, khối lượng khớp lệnh 22.410 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "BCM",
+          "reason": "Tăng 1,28% phiên 28/07, khối lượng khớp lệnh 76.030 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "0/4 mã tăng giá phiên 28/07, mã ít biến động nhất là GAS (0%), trong khi PLX giảm sâu nhất nhóm (-1,07%).",
+      "outlook": "1/4 mã tăng giá phiên 28/07, dẫn đầu là PVS (+0,90%), trong khi PLX giảm sâu nhất nhóm (-0,76%).",
       "picks": [
         {
-          "ticker": "GAS",
-          "reason": "Đi ngang (0%) phiên 28/07, khối lượng khớp lệnh 18.340 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "PVS",
+          "reason": "Tăng 0,90% phiên 28/07, khối lượng khớp lệnh 231.340 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "PVD",
-          "reason": "Giảm 0,27% phiên 28/07, khối lượng khớp lệnh 37.570 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "GAS",
+          "reason": "Đi ngang (0%) phiên 28/07, khối lượng khớp lệnh 59.700 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "2/3 mã tăng giá phiên 28/07, dẫn đầu là VNM (+1,55%), trong khi SAB giảm sâu nhất nhóm (-0,69%).",
+      "outlook": "2/3 mã tăng giá phiên 28/07, dẫn đầu là MSN (+2,82%), trong khi SAB giảm sâu nhất nhóm (-0,69%).",
       "picks": [
         {
-          "ticker": "VNM",
-          "reason": "Tăng 1,55% phiên 28/07, khối lượng khớp lệnh 169.540 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MSN",
+          "reason": "Tăng 2,82% phiên 28/07, khối lượng khớp lệnh 521.530 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "MSN",
-          "reason": "Tăng 0,16% phiên 28/07, khối lượng khớp lệnh 93.200 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VNM",
+          "reason": "Tăng 2,76% phiên 28/07, khối lượng khớp lệnh 488.920 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     }
