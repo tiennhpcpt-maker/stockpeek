@@ -1,131 +1,117 @@
 {
-  "generated_at": "2026-07-25T11:11:07+07:00",
+  "generated_at": "2026-07-28T10:32:21+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index đảo chiều giảm 13,27 điểm (-0,78%) phiên 24/7, lùi về 1.686,11 điểm sau khi vừa hồi phục mạnh phiên trước. Khối ngoại bán ròng hơn 1.300 tỷ đồng, sắc đỏ lan rộng với 227 mã giảm trên HOSE, tập trung ở nhóm Chứng khoán, Bất động sản và Xây dựng.",
+  "market_note": "VN-Index giảm 3,17 điểm (-0,19%) phiên 28/07, đóng cửa 1.666 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
-      "name": "Bất động sản",
-      "outlook": "Đảo chiều giảm sau 2 phiên tăng mạnh, bộ đôi Vingroup (VIC, VHM) chịu áp lực chốt lời và trở thành lực cản chính của chỉ số phiên 24/7.",
+      "name": "Ngân hàng",
+      "outlook": "2/8 mã tăng giá phiên 28/07, dẫn đầu là STB (+0,55%), trong khi VPB giảm sâu nhất nhóm (-2,04%).",
       "picks": [
         {
-          "ticker": "VIC",
-          "reason": "Cùng VHM tạo áp lực lớn nhất lên VN-Index phiên 24/7 sau khi vừa dẫn dắt đà hồi phục phiên trước đó.",
-          "source": "Vietstock"
+          "ticker": "STB",
+          "reason": "Tăng 0,55% phiên 28/07, khối lượng khớp lệnh 43.980 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+        },
+        {
+          "ticker": "BID",
+          "reason": "Tăng 0,43% phiên 28/07, khối lượng khớp lệnh 114.500 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+        }
+      ]
+    },
+    {
+      "name": "Bất động sản",
+      "outlook": "1/6 mã tăng giá phiên 28/07, dẫn đầu là DXG (+2,31%), trong khi PDR giảm sâu nhất nhóm (-3,59%).",
+      "picks": [
+        {
+          "ticker": "DXG",
+          "reason": "Tăng 2,31% phiên 28/07, khối lượng khớp lệnh 429.140 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "VHM",
-          "reason": "Nằm trong nhóm cổ phiếu vốn hoá lớn gây áp lực điều chỉnh cho chỉ số chung phiên 24/7.",
-          "source": "Vietstock"
-        },
-        {
-          "ticker": "VRE",
-          "reason": "Biến động theo sát nhóm Vingroup trong nhịp điều chỉnh ngắn hạn.",
-          "source": "Vietstock"
+          "reason": "Đi ngang (0%) phiên 28/07, khối lượng khớp lệnh 74.920 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "Đảo chiều giảm mạnh nhất thị trường phiên 24/7 sau khi dẫn sóng phiên trước, khối ngoại bán ròng quyết liệt cổ phiếu VIX (-50,26 tỷ đồng).",
+      "outlook": "5/6 mã tăng giá phiên 28/07, dẫn đầu là VIX (+3,40%), trong khi HCM giảm sâu nhất nhóm (-2,00%).",
       "picks": [
+        {
+          "ticker": "VIX",
+          "reason": "Tăng 3,40% phiên 28/07, khối lượng khớp lệnh 2.493.050 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+        },
         {
           "ticker": "SSI",
-          "reason": "Cổ phiếu đầu ngành, thường dẫn dắt biến động chung của nhóm chứng khoán.",
-          "source": "Vietstock"
-        },
-        {
-          "ticker": "VND",
-          "reason": "Được kỳ vọng tiếp tục hưởng lợi khi thanh khoản thị trường cải thiện trong 2026.",
-          "source": "24hMoney"
-        },
-        {
-          "ticker": "VCI",
-          "reason": "Chứng khoán Vietcap được khuyến nghị Mua, giá mục tiêu 43.000 đồng/cổ phiếu.",
-          "source": "Vietcap"
-        }
-      ]
-    },
-    {
-      "name": "Ngân hàng",
-      "outlook": "Dòng tiền vẫn ở lại nhóm ngân hàng nhưng chọn lọc hơn, nhiều CTCK nâng khuyến nghị Mua các mã đầu ngành trong tháng 7.",
-      "picks": [
-        {
-          "ticker": "CTG",
-          "reason": "MBS khuyến nghị Mua, tiềm năng tăng giá cao nhất nhóm 66,1%, giá mục tiêu 56.300 đồng/cổ phiếu.",
-          "source": "MBS"
-        },
-        {
-          "ticker": "VPB",
-          "reason": "VPBankS đánh giá tiềm năng tăng giá lên tới 50,4%, nằm trong nhóm 3 cổ phiếu khuyến nghị chính.",
-          "source": "VPBankS"
-        },
-        {
-          "ticker": "MBB",
-          "reason": "Được cả VCBS và VPBankS đồng thời khuyến nghị Mua trong danh mục ngân hàng ưa thích.",
-          "source": "VCBS"
+          "reason": "Tăng 2,05% phiên 28/07, khối lượng khớp lệnh 1.020.970 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "Kỳ vọng hưởng lợi từ đầu tư công và chu kỳ phục hồi bất động sản dân dụng, HPG tiếp tục là lựa chọn hàng đầu ngành vật liệu xây dựng.",
+      "outlook": "1/3 mã tăng giá phiên 28/07, dẫn đầu là HPG (+0,49%), trong khi HSG giảm sâu nhất nhóm (-0,50%).",
       "picks": [
         {
           "ticker": "HPG",
-          "reason": "SSI duy trì khuyến nghị Mua, nâng giá mục tiêu 12 tháng lên 36.000 đồng/cổ phiếu - lựa chọn hàng đầu ngành thép 2026.",
-          "source": "SSI"
-        },
-        {
-          "ticker": "HSG",
-          "reason": "Cùng NKG, VSC được đánh giá triển vọng tích cực nhờ chu kỳ phục hồi ngành thép nội địa.",
-          "source": "Diễn đàn Doanh nghiệp"
+          "reason": "Tăng 0,49% phiên 28/07, khối lượng khớp lệnh 979.950 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "NKG",
-          "reason": "Kỳ vọng hưởng lợi khi giá thép và nhu cầu xây dựng phục hồi cùng chu kỳ ngành.",
-          "source": "Diễn đàn Doanh nghiệp"
+          "reason": "Giảm 0,48% phiên 28/07, khối lượng khớp lệnh 47.330 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "Định giá nhiều mã bán lẻ vẫn dưới trung bình 5 năm dù dòng tiền có dấu hiệu chốt lời ngắn hạn ở một số mã.",
+      "outlook": "2/4 mã tăng giá phiên 28/07, dẫn đầu là PNJ (+6,99%), trong khi FRT giảm sâu nhất nhóm (-2,50%).",
       "picks": [
         {
-          "ticker": "MWG",
-          "reason": "CTCK duy trì khuyến nghị Mua sau nhịp điều chỉnh khoảng 18% trong 3 tháng gần đây.",
-          "source": "VOV"
-        },
-        {
-          "ticker": "FRT",
-          "reason": "Nằm trong nhóm cổ phiếu đáng chú ý nhờ mảng dược phẩm Long Châu tiếp tục là động lực tăng trưởng.",
-          "source": "VOV"
-        },
-        {
           "ticker": "PNJ",
-          "reason": "Bị khối ngoại bán ròng mạnh phiên 24/7, nhưng VDSC vẫn duy trì khuyến nghị Mua nhờ định giá đã chiết khấu sâu.",
-          "source": "VDSC"
+          "reason": "Tăng 6,99% phiên 28/07, khối lượng khớp lệnh 595.810 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+        },
+        {
+          "ticker": "MWG",
+          "reason": "Tăng 0,79% phiên 28/07, khối lượng khớp lệnh 338.750 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "FDI đăng ký 5 tháng đầu 2026 đạt 9,1 tỷ USD, gấp 2,45 lần cùng kỳ - cổ phiếu KCN thường tăng giá trước 6-12 tháng so với thời điểm lợi nhuận doanh nghiệp bứt phá.",
+      "outlook": "3/4 mã tăng giá phiên 28/07, dẫn đầu là BCM (+1,14%), trong khi KBC giảm sâu nhất nhóm (-1,62%).",
       "picks": [
         {
-          "ticker": "IDC",
-          "reason": "MBS khuyến nghị Khả quan, mô hình KCN sinh thái được ưa thích dù lợi nhuận quý 1/2026 giảm do thiếu nguồn thu bàn giao đất.",
-          "source": "MBS"
-        },
-        {
-          "ticker": "KBC",
-          "reason": "SSI Research đánh giá tích cực nhờ quỹ đất lớn, backlog cho thuê dồi dào.",
-          "source": "SSI Research"
-        },
-        {
           "ticker": "BCM",
-          "reason": "Nằm trong nhóm BCM/KBC/IDC được MBS khuyến nghị tích luỹ dài hạn, đón sóng phục hồi lợi nhuận từ 2027.",
-          "source": "MBS"
+          "reason": "Tăng 1,14% phiên 28/07, khối lượng khớp lệnh 24.020 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+        },
+        {
+          "ticker": "IDC",
+          "reason": "Tăng 0,32% phiên 28/07, khối lượng khớp lệnh 22.410 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+        }
+      ]
+    },
+    {
+      "name": "Dầu khí",
+      "outlook": "0/4 mã tăng giá phiên 28/07, mã ít biến động nhất là GAS (0%), trong khi PLX giảm sâu nhất nhóm (-1,07%).",
+      "picks": [
+        {
+          "ticker": "GAS",
+          "reason": "Đi ngang (0%) phiên 28/07, khối lượng khớp lệnh 18.340 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+        },
+        {
+          "ticker": "PVD",
+          "reason": "Giảm 0,27% phiên 28/07, khối lượng khớp lệnh 37.570 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+        }
+      ]
+    },
+    {
+      "name": "Thực phẩm - Đồ uống",
+      "outlook": "2/3 mã tăng giá phiên 28/07, dẫn đầu là VNM (+1,55%), trong khi SAB giảm sâu nhất nhóm (-0,69%).",
+      "picks": [
+        {
+          "ticker": "VNM",
+          "reason": "Tăng 1,55% phiên 28/07, khối lượng khớp lệnh 169.540 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+        },
+        {
+          "ticker": "MSN",
+          "reason": "Tăng 0,16% phiên 28/07, khối lượng khớp lệnh 93.200 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     }
