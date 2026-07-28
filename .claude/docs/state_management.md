@@ -30,8 +30,8 @@ Không có framework, không có store — toàn bộ state là biến `let` to�
 | Tin trực tiếp (`refreshLiveNews`) | `LIVE_NEWS_INTERVAL_MS` | 60s |
 | Tin nóng (`refreshHotNews`) | `HOT_NEWS_INTERVAL_MS` | 60s |
 
-Cả `refreshLiveNews` và `refreshHotNews` đều gọi `/api/news` độc lập (không share 1 lần fetch) — cache 60s phía server (`NEWS_CACHE_TTL`) khiến việc này không tốn thêm chi phí RSS thật khi 2 interval trùng thời điểm. Đừng rút ngắn thêm các interval này mà không kiểm tra lại thời gian tải RSS thật trên production trước (xem [news_pipeline.md](news_pipeline.md)).
+Cả `refreshLiveNews(category)` và `refreshHotNews(category)` đều gọi `/api/news?category=...` độc lập (không share 1 lần fetch) — cache 60s phía server (`NEWS_CACHE_TTL`, key theo `(category, urls)`) khiến việc này không tốn thêm chi phí RSS thật khi 2 interval trùng thời điểm. Đừng rút ngắn thêm các interval này mà không kiểm tra lại thời gian tải RSS thật trên production trước (xem [news_pipeline.md](news_pipeline.md)).
 
-## Sau khi login/logout/đổi nguồn tin, luôn gọi lại đủ 2 hàm tin tức
+## Sau khi login/logout/đổi nguồn tin, luôn gọi lại đủ 2 hàm tin tức (cả 2 category)
 
-Bất kỳ chỗ nào đổi trạng thái đăng nhập hoặc danh sách nguồn tin (`afterLoginSuccess`, `logout`, `addSource`, `removeSource`) đều phải gọi cả `refreshLiveNews()` **và** `refreshHotNews()` — không chỉ 1 trong 2 — vì nguồn tin đổi thì cả "Tin nóng" lẫn "Tin trực tiếp" đều cần tính lại.
+Bất kỳ chỗ nào đổi trạng thái đăng nhập hoặc danh sách nguồn tin (`afterLoginSuccess`, `logout`, `addSource`, `removeSource`) đều phải gọi cả `refreshAllLiveNews()` **và** `refreshAllHotNews()` (2 hàm wrapper gọi `refreshLiveNews`/`refreshHotNews` cho cả `"stock"` lẫn `"tech"`) — không chỉ 1 trong 2 — vì nguồn tin đổi thì cả "Tin nóng" lẫn "Tin trực tiếp" của cả 2 chuyên mục đều cần tính lại.

@@ -33,6 +33,7 @@ DEFAULT_TICKERS = ["VIC", "VNM", "FPT", "VCB", "HPG"]
 DEFAULT_SOURCES = [
     {"name": "24hMoney", "url": "https://24hmoney.vn/rss/chung-khoan.rss"},
     {"name": "VnEconomy", "url": "https://vneconomy.vn/thi-truong-chung-khoan.rss"},
+    {"name": "VnExpress Số hóa", "url": "https://vnexpress.net/rss/khoa-hoc-cong-nghe.rss", "category": "tech"},
 ]
 
 MAX_SOURCES = 15
@@ -136,17 +137,24 @@ def load_sources(force=False):
     return data, sha
 
 
-def add_source_entry(name, url, lang="vi"):
+def _source_category(src):
+    return src.get("category") or "stock"
+
+
+def add_source_entry(name, url, lang="vi", category="stock"):
     def mutate(sources):
         if not isinstance(sources, list):
             sources = [dict(s) for s in DEFAULT_SOURCES]
         if any(s.get("name", "").lower() == name.lower() for s in sources):
             raise ValueError("DUP")
-        if len(sources) >= MAX_SOURCES:
+        same_category = [s for s in sources if _source_category(s) == category]
+        if len(same_category) >= MAX_SOURCES:
             raise ValueError("MAX")
         entry = {"name": name, "url": url}
         if lang != "vi":
             entry["lang"] = lang
+        if category != "stock":
+            entry["category"] = category
         return sources + [entry]
 
     return update_github_file(SOURCES_PATH, [dict(s) for s in DEFAULT_SOURCES], mutate, "Cập nhật nguồn tin (stockPeek)")
@@ -439,16 +447,19 @@ def google_oauth_redirect_uri(handler):
 
 # ===================== Danh mục / nguồn tin riêng theo tài khoản =====================
 
-def add_user_source(user_id, name, url, lang="vi"):
+def add_user_source(user_id, name, url, lang="vi", category="stock"):
     def mutate(user):
         sources = user.get("sources") or []
         if any(s.get("name", "").lower() == name.lower() for s in sources):
             raise ValueError("DUP")
-        if len(sources) >= MAX_SOURCES:
+        same_category = [s for s in sources if _source_category(s) == category]
+        if len(same_category) >= MAX_SOURCES:
             raise ValueError("MAX")
         entry = {"name": name, "url": url}
         if lang != "vi":
             entry["lang"] = lang
+        if category != "stock":
+            entry["category"] = category
         user["sources"] = sources + [entry]
         return user
 
@@ -737,10 +748,11 @@ def _fetch_source_items(src):
         return items, {"source": source, "error": str(e)}
 
 
-def get_news(sources=None):
+def get_news(sources=None, category="stock"):
     if sources is None:
         sources, _ = load_sources()
-    key = tuple(sorted(s["url"] for s in sources))
+    sources = [s for s in sources if _source_category(s) == category]
+    key = (category, tuple(sorted(s["url"] for s in sources)))
     now = time.time()
     cached = _news_cache.get(key)
     if cached and now - cached["ts"] < NEWS_CACHE_TTL:
@@ -847,9 +859,13 @@ class Handler(BaseHTTPRequestHandler):
 
         if parsed.path == "/api/news":
             try:
+                qs = parse_qs(parsed.query)
+                category = qs.get("category", ["stock"])[0]
+                if category not in ("stock", "tech"):
+                    category = "stock"
                 user = self._current_user()
                 sources = user["sources"] if user else None
-                data = get_news(sources)
+                data = get_news(sources, category)
                 self._send_json({"ok": True, "data": data["items"], "errors": data["errors"]})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
@@ -975,6 +991,7 @@ class Handler(BaseHTTPRequestHandler):
             name = (body.get("name") or "").strip()
             url = (body.get("url") or "").strip()
             lang = "en" if body.get("foreign") else "vi"
+            category = "tech" if body.get("category") == "tech" else "stock"
             if not name or not url:
                 self._send_json({"ok": False, "error": "Cần nhập cả tên nguồn và URL"}, 400)
                 return
@@ -986,9 +1003,9 @@ class Handler(BaseHTTPRequestHandler):
             try:
                 user = self._current_user()
                 if user:
-                    new_sources = add_user_source(user["id"], name, url, lang)
+                    new_sources = add_user_source(user["id"], name, url, lang, category)
                 else:
-                    new_sources = add_source_entry(name, url, lang)
+                    new_sources = add_source_entry(name, url, lang, category)
                 _news_cache.clear()
                 self._send_json({"ok": True, "data": new_sources})
             except ValueError as e:
@@ -1013,6 +1030,7 @@ class Handler(BaseHTTPRequestHandler):
             name = (body.get("name") or "").strip()
             url = (body.get("url") or "").strip()
             lang = "en" if body.get("foreign") else "vi"
+            category = "tech" if body.get("category") == "tech" else "stock"
             if not name or not url:
                 self._send_json({"ok": False, "error": "Cần nhập cả tên nguồn và URL"}, 400)
                 return
@@ -1022,7 +1040,7 @@ class Handler(BaseHTTPRequestHandler):
                 self._send_json({"ok": False, "error": f"Không lấy được RSS từ URL này: {e}"}, 400)
                 return
             try:
-                new_sources = add_source_entry(name, url, lang)
+                new_sources = add_source_entry(name, url, lang, category)
                 _news_cache.clear()
                 self._send_json({"ok": True, "data": new_sources})
             except ValueError as e:

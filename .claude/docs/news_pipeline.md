@@ -4,16 +4,24 @@
 
 ```
 sources.json (mặc định) hoặc user["sources"] (cá nhân, nếu đã đăng nhập)
-  → get_news(sources)               [server.py]
+  → get_news(sources, category)     [server.py] — lọc nguồn theo category trước khi fetch
       → _fetch_source_items(src)    chạy song song cho từng nguồn (ThreadPoolExecutor)
       → cluster_news_items(items)   gộp tin trùng nội dung từ nhiều nguồn
-      → cache 60s theo key = sorted(url nguồn)
-  → GET /api/news  →  { items: [...], errors: [...] }
-  → client: refreshHotNews() lọc top 3 theo sourceCount
-  → client: refreshLiveNews() lọc top 10 theo pubDate
+      → cache 60s theo key = (category, sorted(url nguồn))
+  → GET /api/news?category=stock|tech  →  { items: [...], errors: [...] }
+  → client: refreshHotNews(category) lọc top 3 theo sourceCount
+  → client: refreshLiveNews(category) lọc top 10 theo pubDate
 ```
 
-`/api/news` **luôn trả về toàn bộ tin đã gộp** (không phân trang, không giới hạn ở server) — việc chọn "3 tin nóng" hay "10 tin mới" là lọc **phía client**, không có 2 endpoint riêng cho 2 khu vực này.
+`/api/news` **luôn trả về toàn bộ tin đã gộp của 1 category** (không phân trang, không giới hạn ở server) — việc chọn "3 tin nóng" hay "10 tin mới" là lọc **phía client**, không có 2 endpoint riêng cho 2 khu vực này.
+
+## Chuyên mục tin tức (category): "stock" vs "tech"
+
+Mỗi nguồn tin trong `sources.json`/`user["sources"]` có field `"category"` — `"stock"` (chứng khoán, giá trị mặc định) hoặc `"tech"` (công nghệ). **Nguồn không có field này được coi là `"stock"`** (`_source_category()` trong `server.py`), giữ tương thích ngược với các nguồn đã lưu trước khi có khái niệm category. Giống pattern của `"lang"` (chỉ ghi field khi khác mặc định `"vi"`), field `"category"` chỉ được ghi vào entry khi khác mặc định `"stock"`.
+
+Toàn bộ UI (Tin nóng, Tin trực tiếp) hiện có **2 bộ độc lập** — 1 cho `stock`, 1 cho `tech` — mỗi bộ gọi `/api/news?category=...` riêng, render vào DOM riêng (xem `NEWS_DOM` trong `app.js`). Thêm/xoá nguồn tin qua UI đều có bước chọn category (radio `stock`/`tech`), gửi kèm trong body của `POST /api/sources` và `POST /api/admin/sources`.
+
+`MAX_SOURCES` (giới hạn số nguồn tối đa) được tính **theo từng category riêng**, không phải tổng số nguồn — thêm 15 nguồn `stock` không chặn việc thêm nguồn `tech` đầu tiên.
 
 ## Tải song song, không tuần tự — lý do là lịch sử sự cố thật
 

@@ -83,6 +83,10 @@
           <input id="adminSourceUrlInput" type="text" placeholder="URL RSS, vd: https://vidu.vn/rss/chung-khoan.rss" />
           <button id="adminAddSourceBtn">+ Thêm nguồn</button>
         </div>
+        <div class="source-category-check">
+          <label><input type="radio" name="adminSourceCategory" value="stock" checked /> 📊 Chứng khoán</label>
+          <label><input type="radio" name="adminSourceCategory" value="tech" /> 💻 Công nghệ</label>
+        </div>
         <label class="source-lang-check">
           <input id="adminSourceForeignCheck" type="checkbox" />
           Nguồn tiếng nước ngoài (tự động dịch sang tiếng Việt khi hiển thị)
@@ -104,7 +108,7 @@
   <main>
     <section class="hot-news-panel">
       <div class="section-head">
-        <h2>🔥 Tin nóng</h2>
+        <h2>🔥 Tin nóng chứng khoán</h2>
         <span class="updated" id="hotNewsUpdated">—</span>
       </div>
       <div id="hotNewsList" class="feed"></div>
@@ -112,10 +116,26 @@
 
     <section class="live-news-panel">
       <div class="section-head">
-        <h2>⚡ Tin trực tiếp</h2>
+        <h2>⚡ Tin trực tiếp chứng khoán</h2>
         <span class="updated" id="liveNewsUpdated">—</span>
       </div>
       <div id="liveNewsList" class="live-news-list"></div>
+    </section>
+
+    <section class="hot-news-panel">
+      <div class="section-head">
+        <h2>🔥 Tin nóng công nghệ</h2>
+        <span class="updated" id="hotNewsUpdatedTech">—</span>
+      </div>
+      <div id="hotNewsListTech" class="feed"></div>
+    </section>
+
+    <section class="live-news-panel">
+      <div class="section-head">
+        <h2>⚡ Tin trực tiếp công nghệ</h2>
+        <span class="updated" id="liveNewsUpdatedTech">—</span>
+      </div>
+      <div id="liveNewsListTech" class="live-news-list"></div>
     </section>
 
     <section class="indices-panel">
@@ -160,6 +180,10 @@
         <input id="sourceNameInput" type="text" placeholder="Tên nguồn, vd: CafeF" />
         <input id="sourceUrlInput" type="text" placeholder="URL RSS, vd: https://vidu.vn/rss/chung-khoan.rss" />
         <button id="addSourceBtn">+ Thêm nguồn</button>
+      </div>
+      <div class="source-category-check">
+        <label><input type="radio" name="sourceCategory" value="stock" checked /> 📊 Chứng khoán</label>
+        <label><input type="radio" name="sourceCategory" value="tech" /> 💻 Công nghệ</label>
       </div>
       <label class="source-lang-check">
         <input id="sourceForeignCheck" type="checkbox" />

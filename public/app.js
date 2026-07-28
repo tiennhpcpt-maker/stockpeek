@@ -221,11 +221,29 @@ async function addTicker() {
 // "Tin nóng": 3 tin được nhiều nguồn cùng đưa tin nhất (tín hiệu độ nóng
 // không cần AI — càng nhiều báo cùng đăng thì tin càng đáng chú ý), làm mới
 // mỗi giờ. "Tin trực tiếp": 10 tin mới nhất theo thời gian, làm mới 15 phút/lần.
+// Tin tức chia 2 chuyên mục độc lập ("stock"/"tech"), mỗi chuyên mục có DOM
+// riêng (NEWS_DOM) và gọi /api/news?category=... riêng.
 
-async function refreshHotNews() {
-  const list = document.getElementById("hotNewsList");
+const NEWS_DOM = {
+  stock: {
+    hotList: "hotNewsList",
+    hotUpdated: "hotNewsUpdated",
+    liveList: "liveNewsList",
+    liveUpdated: "liveNewsUpdated",
+  },
+  tech: {
+    hotList: "hotNewsListTech",
+    hotUpdated: "hotNewsUpdatedTech",
+    liveList: "liveNewsListTech",
+    liveUpdated: "liveNewsUpdatedTech",
+  },
+};
+
+async function refreshHotNews(category = "stock") {
+  const dom = NEWS_DOM[category];
+  const list = document.getElementById(dom.hotList);
   try {
-    const res = await fetch("/api/news");
+    const res = await fetch(`/api/news?category=${category}`);
     const json = await res.json();
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
     const ranked = json.data
@@ -233,12 +251,17 @@ async function refreshHotNews() {
       .slice()
       .sort((a, b) => b.sourceCount - a.sourceCount || _pubTs(b.pubDate) - _pubTs(a.pubDate))
       .slice(0, 3);
-    renderHotNews(ranked);
-    document.getElementById("hotNewsUpdated").textContent =
+    renderHotNews(ranked, category);
+    document.getElementById(dom.hotUpdated).textContent =
       "Cập nhật " + new Date().toLocaleTimeString("vi-VN");
   } catch (e) {
     list.innerHTML = `<div class="empty">Lỗi lấy tin tức: ${e.message}</div>`;
   }
+}
+
+function refreshAllHotNews() {
+  refreshHotNews("stock");
+  refreshHotNews("tech");
 }
 
 function _pubTs(pubDate) {
@@ -246,8 +269,8 @@ function _pubTs(pubDate) {
   return isNaN(t) ? 0 : t;
 }
 
-function renderHotNews(items) {
-  const list = document.getElementById("hotNewsList");
+function renderHotNews(items, category = "stock") {
+  const list = document.getElementById(NEWS_DOM[category].hotList);
   if (items.length === 0) {
     list.innerHTML = '<div class="empty">Chưa có tin nào.</div>';
     return;
@@ -259,6 +282,7 @@ function renderHotNews(items) {
         .join("");
       const multiBadge =
         it.sourceCount > 1 ? `<span class="multi-badge">${it.sourceCount} nguồn đưa tin</span>` : "";
+      const detailId = `news-detail-${category}-${i}`;
       const detailItems = it.sources
         .map(
           (s) => `<div class="sources-detail-item">
@@ -271,8 +295,8 @@ function renderHotNews(items) {
         <div class="source-row">${chips}${multiBadge}<span>· ${timeAgo(it.pubDate)}</span></div>
         <div class="title">${it.title}</div>
         ${it.summary ? `<div class="summary">${it.summary}</div>` : ""}
-        <button class="link-out" onclick="toggleNewsDetail(${i})">Xem nguồn đưa tin →</button>
-        <div class="sources-detail" id="news-detail-${i}">
+        <button class="link-out" onclick="toggleNewsDetail('${detailId}')">Xem nguồn đưa tin →</button>
+        <div class="sources-detail" id="${detailId}">
           <div class="sources-detail-label">Nguồn đưa tin · ${it.sourceCount}</div>
           ${detailItems}
         </div>
@@ -281,15 +305,16 @@ function renderHotNews(items) {
     .join("");
 }
 
-function toggleNewsDetail(i) {
-  const el = document.getElementById(`news-detail-${i}`);
+function toggleNewsDetail(id) {
+  const el = document.getElementById(id);
   if (el) el.classList.toggle("open");
 }
 
-async function refreshLiveNews() {
-  const list = document.getElementById("liveNewsList");
+async function refreshLiveNews(category = "stock") {
+  const dom = NEWS_DOM[category];
+  const list = document.getElementById(dom.liveList);
   try {
-    const res = await fetch("/api/news");
+    const res = await fetch(`/api/news?category=${category}`);
     const json = await res.json();
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
     const latest = json.data
@@ -297,16 +322,21 @@ async function refreshLiveNews() {
       .slice()
       .sort((a, b) => _pubTs(b.pubDate) - _pubTs(a.pubDate))
       .slice(0, 10);
-    renderLiveNews(latest);
-    document.getElementById("liveNewsUpdated").textContent =
+    renderLiveNews(latest, category);
+    document.getElementById(dom.liveUpdated).textContent =
       "Cập nhật " + new Date().toLocaleTimeString("vi-VN");
   } catch (e) {
     list.innerHTML = `<div class="empty">Lỗi lấy tin tức: ${e.message}</div>`;
   }
 }
 
-function renderLiveNews(items) {
-  const list = document.getElementById("liveNewsList");
+function refreshAllLiveNews() {
+  refreshLiveNews("stock");
+  refreshLiveNews("tech");
+}
+
+function renderLiveNews(items, category = "stock") {
+  const list = document.getElementById(NEWS_DOM[category].liveList);
   if (items.length === 0) {
     list.innerHTML = '<div class="empty">Chưa có tin nào.</div>';
     return;
@@ -347,6 +377,7 @@ function renderSources() {
     .map(
       (s) => `<div class="source-manage-row">
         <span class="source-name">${s.name}</span>
+        <span class="source-category-badge">${s.category === "tech" ? "💻 Công nghệ" : "📊 Chứng khoán"}</span>
         ${s.lang && s.lang !== "vi" ? '<span class="source-lang-badge">Dịch → VI</span>' : ""}
         <span class="source-url">${s.url}</span>
         <button class="source-remove" onclick="removeSource('${s.name.replace(/'/g, "\\'")}')">Xoá</button>
@@ -359,10 +390,12 @@ async function addSource() {
   const nameInput = document.getElementById("sourceNameInput");
   const urlInput = document.getElementById("sourceUrlInput");
   const foreignCheck = document.getElementById("sourceForeignCheck");
+  const categoryInput = document.querySelector('input[name="sourceCategory"]:checked');
   const errBox = document.getElementById("sourceError");
   const name = nameInput.value.trim();
   const url = urlInput.value.trim();
   const foreign = foreignCheck.checked;
+  const category = categoryInput ? categoryInput.value : "stock";
   errBox.textContent = "";
   if (!name || !url) {
     errBox.textContent = "Nhập đủ tên nguồn và URL RSS.";
@@ -375,7 +408,7 @@ async function addSource() {
     const res = await fetch("/api/sources", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, url, foreign }),
+      body: JSON.stringify({ name, url, foreign, category }),
     });
     const json = await res.json();
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
@@ -384,8 +417,9 @@ async function addSource() {
     nameInput.value = "";
     urlInput.value = "";
     foreignCheck.checked = false;
-    refreshLiveNews();
-    refreshHotNews();
+    document.querySelector('input[name="sourceCategory"][value="stock"]').checked = true;
+    refreshAllLiveNews();
+    refreshAllHotNews();
   } catch (e) {
     errBox.textContent = e.message;
   } finally {
@@ -401,8 +435,8 @@ async function removeSource(name) {
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
     sources = json.data;
     renderSources();
-    refreshLiveNews();
-    refreshHotNews();
+    refreshAllLiveNews();
+    refreshAllHotNews();
   } catch (e) {
     document.getElementById("sourceError").textContent = e.message;
   }
@@ -777,6 +811,7 @@ function renderAdminSources(list) {
     .map(
       (s) => `<div class="source-manage-row">
         <span class="source-name">${escapeHtml(s.name)}</span>
+        <span class="source-category-badge">${s.category === "tech" ? "💻 Công nghệ" : "📊 Chứng khoán"}</span>
         ${s.lang && s.lang !== "vi" ? '<span class="source-lang-badge">Dịch → VI</span>' : ""}
         <span class="source-url">${escapeHtml(s.url)}</span>
         <button class="source-remove" data-name="${escapeHtml(s.name)}">Xoá</button>
@@ -811,10 +846,12 @@ async function addAdminSource() {
   const nameInput = document.getElementById("adminSourceNameInput");
   const urlInput = document.getElementById("adminSourceUrlInput");
   const foreignCheck = document.getElementById("adminSourceForeignCheck");
+  const categoryInput = document.querySelector('input[name="adminSourceCategory"]:checked');
   const errBox = document.getElementById("adminSourceError");
   const name = nameInput.value.trim();
   const url = urlInput.value.trim();
   const foreign = foreignCheck.checked;
+  const category = categoryInput ? categoryInput.value : "stock";
   errBox.textContent = "";
   if (!name || !url) {
     errBox.textContent = "Nhập đủ tên nguồn và URL RSS.";
@@ -827,7 +864,7 @@ async function addAdminSource() {
     const res = await fetch("/api/admin/sources", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, url, foreign }),
+      body: JSON.stringify({ name, url, foreign, category }),
     });
     const json = await res.json();
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
@@ -836,6 +873,7 @@ async function addAdminSource() {
     nameInput.value = "";
     urlInput.value = "";
     foreignCheck.checked = false;
+    document.querySelector('input[name="adminSourceCategory"][value="stock"]').checked = true;
   } catch (e) {
     errBox.textContent = e.message;
   } finally {
@@ -914,8 +952,8 @@ async function afterLoginSuccess() {
   await checkAuth();
   refreshQuotes();
   refreshSources();
-  refreshLiveNews();
-  refreshHotNews();
+  refreshAllLiveNews();
+  refreshAllHotNews();
 }
 
 async function logout() {
@@ -927,8 +965,8 @@ async function logout() {
   renderAuthArea();
   refreshQuotes();
   refreshSources();
-  refreshLiveNews();
-  refreshHotNews();
+  refreshAllLiveNews();
+  refreshAllHotNews();
 }
 
 document.getElementById("authModalClose").addEventListener("click", closeAuthModal);
@@ -1000,12 +1038,12 @@ checkAuth().then(() => {
   refreshQuotes();
 });
 refreshSources();
-refreshLiveNews();
-refreshHotNews();
+refreshAllLiveNews();
+refreshAllHotNews();
 refreshSectorAnalysis();
 refreshMarketOverview();
 refreshIndices();
 setInterval(refreshQuotes, QUOTES_INTERVAL_MS);
-setInterval(refreshLiveNews, LIVE_NEWS_INTERVAL_MS);
-setInterval(refreshHotNews, HOT_NEWS_INTERVAL_MS);
+setInterval(refreshAllLiveNews, LIVE_NEWS_INTERVAL_MS);
+setInterval(refreshAllHotNews, HOT_NEWS_INTERVAL_MS);
 setInterval(refreshIndices, INDICES_INTERVAL_MS);
