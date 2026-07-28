@@ -335,6 +335,18 @@ function refreshAllLiveNews() {
   refreshLiveNews("tech");
 }
 
+// Tab chuyển đổi giữa 2 luồng tin — chỉ ẩn/hiện DOM, cả 2 category vẫn được
+// làm mới nền theo interval (xem refreshAllHotNews/refreshAllLiveNews) để
+// chuyển tab không phải chờ tải lại.
+function switchNewsCategory(category) {
+  document.querySelectorAll(".news-group").forEach((el) => {
+    el.hidden = el.dataset.category !== category;
+  });
+  document.querySelectorAll(".news-tab").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.category === category);
+  });
+}
+
 function renderLiveNews(items, category = "stock") {
   const list = document.getElementById(NEWS_DOM[category].liveList);
   if (items.length === 0) {
@@ -1022,6 +1034,9 @@ document.getElementById("tickerInput").addEventListener("keydown", (e) => {
   if (e.key === "Enter") addTicker();
 });
 document.getElementById("addSourceBtn").addEventListener("click", addSource);
+document.querySelectorAll(".news-tab").forEach((btn) => {
+  btn.addEventListener("click", () => switchNewsCategory(btn.dataset.category));
+});
 
 const urlParams = new URLSearchParams(window.location.search);
 const googleLoginErrorReason = urlParams.get("reason");

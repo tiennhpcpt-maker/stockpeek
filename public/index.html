@@ -106,37 +106,46 @@
   </div>
 
   <main>
-    <section class="hot-news-panel">
-      <div class="section-head">
-        <h2>🔥 Tin nóng chứng khoán</h2>
-        <span class="updated" id="hotNewsUpdated">—</span>
-      </div>
-      <div id="hotNewsList" class="feed"></div>
-    </section>
+    <div class="news-tabs" id="newsTabs">
+      <button class="news-tab active" data-category="stock">📊 Chứng khoán</button>
+      <button class="news-tab" data-category="tech">💻 Công nghệ</button>
+    </div>
 
-    <section class="live-news-panel">
-      <div class="section-head">
-        <h2>⚡ Tin trực tiếp chứng khoán</h2>
-        <span class="updated" id="liveNewsUpdated">—</span>
-      </div>
-      <div id="liveNewsList" class="live-news-list"></div>
-    </section>
+    <div class="news-group" data-category="stock">
+      <section class="hot-news-panel">
+        <div class="section-head">
+          <h2>🔥 Tin nóng chứng khoán</h2>
+          <span class="updated" id="hotNewsUpdated">—</span>
+        </div>
+        <div id="hotNewsList" class="feed"></div>
+      </section>
 
-    <section class="hot-news-panel">
-      <div class="section-head">
-        <h2>🔥 Tin nóng công nghệ</h2>
-        <span class="updated" id="hotNewsUpdatedTech">—</span>
-      </div>
-      <div id="hotNewsListTech" class="feed"></div>
-    </section>
+      <section class="live-news-panel">
+        <div class="section-head">
+          <h2>⚡ Tin trực tiếp chứng khoán</h2>
+          <span class="updated" id="liveNewsUpdated">—</span>
+        </div>
+        <div id="liveNewsList" class="live-news-list"></div>
+      </section>
+    </div>
 
-    <section class="live-news-panel">
-      <div class="section-head">
-        <h2>⚡ Tin trực tiếp công nghệ</h2>
-        <span class="updated" id="liveNewsUpdatedTech">—</span>
-      </div>
-      <div id="liveNewsListTech" class="live-news-list"></div>
-    </section>
+    <div class="news-group" data-category="tech" hidden>
+      <section class="hot-news-panel">
+        <div class="section-head">
+          <h2>🔥 Tin nóng công nghệ</h2>
+          <span class="updated" id="hotNewsUpdatedTech">—</span>
+        </div>
+        <div id="hotNewsListTech" class="feed"></div>
+      </section>
+
+      <section class="live-news-panel">
+        <div class="section-head">
+          <h2>⚡ Tin trực tiếp công nghệ</h2>
+          <span class="updated" id="liveNewsUpdatedTech">—</span>
+        </div>
+        <div id="liveNewsListTech" class="live-news-list"></div>
+      </section>
+    </div>
 
     <section class="indices-panel">
       <div class="section-head">
