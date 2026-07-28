@@ -738,6 +738,21 @@ main {
 .empty { color: var(--text-dim); font-size: 13px; padding: 8px 0; }
 
 /* ---- Nguồn tin tức (quản lý) ---- */
+.sources-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+.toggle-icon {
+  font-size: 12px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.sources-body {
+  margin-top: 4px;
+}
+.sources-body #resetSourcesBtn {
+  margin-bottom: 10px;
+}
 .sources-list {
   display: flex;
   flex-direction: column;

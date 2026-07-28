@@ -181,25 +181,28 @@
     </section>
 
     <section class="sources-panel">
-      <div class="section-head">
+      <div class="section-head sources-toggle" id="sourcesToggle">
         <h2>Nguồn tin tức</h2>
+        <span class="toggle-icon" id="sourcesToggleIcon">▸ Xem / sửa</span>
+      </div>
+      <div id="sourcesBody" class="sources-body" hidden>
         <button id="resetSourcesBtn" class="auth-btn" hidden>↺ Đặt lại về mặc định</button>
+        <div id="sourcesList" class="sources-list"></div>
+        <div class="addbox source-addbox">
+          <input id="sourceNameInput" type="text" placeholder="Tên nguồn, vd: CafeF" />
+          <input id="sourceUrlInput" type="text" placeholder="URL RSS, vd: https://vidu.vn/rss/chung-khoan.rss" />
+          <button id="addSourceBtn">+ Thêm nguồn</button>
+        </div>
+        <div class="source-category-check">
+          <label><input type="radio" name="sourceCategory" value="stock" checked /> 📊 Chứng khoán</label>
+          <label><input type="radio" name="sourceCategory" value="tech" /> 💻 Công nghệ</label>
+        </div>
+        <label class="source-lang-check">
+          <input id="sourceForeignCheck" type="checkbox" />
+          Nguồn tiếng nước ngoài (tự động dịch sang tiếng Việt khi hiển thị)
+        </label>
+        <div id="sourceError" class="source-error"></div>
       </div>
-      <div id="sourcesList" class="sources-list"></div>
-      <div class="addbox source-addbox">
-        <input id="sourceNameInput" type="text" placeholder="Tên nguồn, vd: CafeF" />
-        <input id="sourceUrlInput" type="text" placeholder="URL RSS, vd: https://vidu.vn/rss/chung-khoan.rss" />
-        <button id="addSourceBtn">+ Thêm nguồn</button>
-      </div>
-      <div class="source-category-check">
-        <label><input type="radio" name="sourceCategory" value="stock" checked /> 📊 Chứng khoán</label>
-        <label><input type="radio" name="sourceCategory" value="tech" /> 💻 Công nghệ</label>
-      </div>
-      <label class="source-lang-check">
-        <input id="sourceForeignCheck" type="checkbox" />
-        Nguồn tiếng nước ngoài (tự động dịch sang tiếng Việt khi hiển thị)
-      </label>
-      <div id="sourceError" class="source-error"></div>
     </section>
   </main>
 

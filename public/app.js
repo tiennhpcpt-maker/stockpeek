@@ -1055,6 +1055,11 @@ document.getElementById("tickerInput").addEventListener("keydown", (e) => {
   if (e.key === "Enter") addTicker();
 });
 document.getElementById("addSourceBtn").addEventListener("click", addSource);
+document.getElementById("sourcesToggle").addEventListener("click", () => {
+  const body = document.getElementById("sourcesBody");
+  body.hidden = !body.hidden;
+  document.getElementById("sourcesToggleIcon").textContent = body.hidden ? "▸ Xem / sửa" : "▾ Thu gọn";
+});
 document.getElementById("resetSourcesBtn").addEventListener("click", () => {
   openAdminConfirm(
     "Xoá toàn bộ nguồn tin riêng đang dùng, thay bằng danh sách mặc định mới nhất (cả chứng khoán lẫn công nghệ)?",
