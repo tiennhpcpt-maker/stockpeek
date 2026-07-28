@@ -476,6 +476,21 @@ def remove_user_source(user_id, name):
     return updated["sources"]
 
 
+def reset_user_sources(user_id):
+    """Xoá toàn bộ nguồn tin riêng của tài khoản, thay bằng bản sao danh sách
+    mặc định (sources.json) tại thời điểm gọi — dùng khi danh sách mặc định
+    đã có thêm nguồn mới (vd: category mới) mà tài khoản cũ chưa có, vì danh
+    sách riêng chỉ là snapshot lúc tạo tài khoản, không tự đồng bộ theo sau."""
+    default_sources, _ = load_sources()
+
+    def mutate(user):
+        user["sources"] = [dict(s) for s in default_sources]
+        return user
+
+    updated = update_user_data(user_id, mutate)
+    return updated["sources"]
+
+
 def add_user_ticker(user_id, ticker):
     def mutate(user):
         watchlist = user.get("watchlist") or []
@@ -1015,6 +1030,19 @@ class Handler(BaseHTTPRequestHandler):
                     self._send_json({"ok": False, "error": f"Chỉ cho phép tối đa {MAX_SOURCES} nguồn"}, 400)
                 else:
                     self._send_json({"ok": False, "error": str(e)}, 400)
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
+        if parsed.path == "/api/sources/reset":
+            user = self._current_user()
+            if not user:
+                self._send_json({"ok": False, "error": "Cần đăng nhập"}, 401)
+                return
+            try:
+                new_sources = reset_user_sources(user["id"])
+                _news_cache.clear()
+                self._send_json({"ok": True, "data": new_sources})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return

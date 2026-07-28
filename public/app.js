@@ -373,9 +373,30 @@ async function refreshSources() {
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
     sources = json.data;
     renderSources();
+    document.getElementById("resetSourcesBtn").hidden = !json.personal;
   } catch (e) {
     document.getElementById("sourcesList").innerHTML =
       `<div class="empty">Lỗi lấy danh sách nguồn: ${e.message}</div>`;
+  }
+}
+
+async function resetSources() {
+  const errBox = document.getElementById("sourceError");
+  errBox.textContent = "";
+  const btn = document.getElementById("resetSourcesBtn");
+  btn.disabled = true;
+  try {
+    const res = await fetch("/api/sources/reset", { method: "POST" });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    sources = json.data;
+    renderSources();
+    refreshAllLiveNews();
+    refreshAllHotNews();
+  } catch (e) {
+    errBox.textContent = e.message;
+  } finally {
+    btn.disabled = false;
   }
 }
 
@@ -1034,6 +1055,12 @@ document.getElementById("tickerInput").addEventListener("keydown", (e) => {
   if (e.key === "Enter") addTicker();
 });
 document.getElementById("addSourceBtn").addEventListener("click", addSource);
+document.getElementById("resetSourcesBtn").addEventListener("click", () => {
+  openAdminConfirm(
+    "Xoá toàn bộ nguồn tin riêng đang dùng, thay bằng danh sách mặc định mới nhất (cả chứng khoán lẫn công nghệ)?",
+    resetSources
+  );
+});
 document.querySelectorAll(".news-tab").forEach((btn) => {
   btn.addEventListener("click", () => switchNewsCategory(btn.dataset.category));
 });
