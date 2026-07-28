@@ -547,6 +547,27 @@ async function refreshSectorAnalysis() {
   }
 }
 
+// Tính lại phân tích nhóm ngành từ giá/khối lượng thật (không AI, xem
+// compute_sector_analysis() trong server.py) — chỉ admin mới thấy nút này.
+async function regenerateSectorAnalysis() {
+  const btn = document.getElementById("refreshSectorBtn");
+  const updatedEl = document.getElementById("sectorUpdated");
+  btn.disabled = true;
+  const original = btn.textContent;
+  btn.textContent = "Đang cập nhật...";
+  try {
+    const res = await fetch("/api/admin/sector-analysis/refresh", { method: "POST" });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    renderSectorAnalysis(json.data);
+  } catch (e) {
+    updatedEl.textContent = "Lỗi cập nhật: " + e.message;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = original;
+  }
+}
+
 function renderSectorAnalysis(data) {
   const grid = document.getElementById("sectorGrid");
   const disclaimerBox = document.getElementById("sectorDisclaimer");
@@ -584,6 +605,7 @@ function renderSectorAnalysis(data) {
 
 function renderAuthArea() {
   const area = document.getElementById("authArea");
+  document.getElementById("refreshSectorBtn").hidden = !currentUser || currentUser.role !== "admin";
   if (currentUser) {
     const adminBtn =
       currentUser.role === "admin"
@@ -1055,6 +1077,7 @@ document.getElementById("tickerInput").addEventListener("keydown", (e) => {
   if (e.key === "Enter") addTicker();
 });
 document.getElementById("addSourceBtn").addEventListener("click", addSource);
+document.getElementById("refreshSectorBtn").addEventListener("click", regenerateSectorAnalysis);
 document.getElementById("sourcesToggle").addEventListener("click", () => {
   const body = document.getElementById("sourcesBody");
   body.hidden = !body.hidden;

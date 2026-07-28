@@ -17,7 +17,7 @@ import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from http.cookies import SimpleCookie
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -653,6 +653,135 @@ def get_market_indices():
     return result
 
 
+# ===================== Phân tích theo nhóm ngành (tính toán số liệu thật, không AI) =====================
+# Giống triết lý của scripts/update_market_overview.py: dùng số liệu giá/khối lượng thật
+# từ VPS data feed (get_quotes) để tự xếp hạng mã tăng/giảm mạnh nhất mỗi nhóm ngành,
+# viết outlook/picks theo mẫu câu cố định — không gọi API AI trả phí.
+VN_TZ = timezone(timedelta(hours=7))
+
+SECTOR_ANALYSIS_DISCLAIMER = (
+    "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, "
+    "không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ "
+    "trước khi ra quyết định."
+)
+
+SECTOR_TICKERS = [
+    ("Ngân hàng", ["VCB", "BID", "CTG", "TCB", "MBB", "ACB", "VPB", "STB"]),
+    ("Bất động sản", ["VIC", "VHM", "VRE", "NVL", "PDR", "DXG"]),
+    ("Chứng khoán", ["SSI", "VND", "VCI", "HCM", "VIX", "MBS"]),
+    ("Thép", ["HPG", "HSG", "NKG"]),
+    ("Bán lẻ", ["MWG", "PNJ", "FRT", "DGW"]),
+    ("Bất động sản khu công nghiệp", ["IDC", "KBC", "BCM", "SZC"]),
+    ("Dầu khí", ["GAS", "PLX", "PVD", "PVS"]),
+    ("Thực phẩm - Đồ uống", ["VNM", "MSN", "SAB"]),
+]
+SECTOR_PICKS_PER_GROUP = 2
+
+
+def _fmt_vn_num(n, decimals=2):
+    s = f"{abs(n):,.{decimals}f}"
+    s = s.replace(",", "X").replace(".", ",").replace("X", ".")
+    return f"-{s}" if n < 0 else s
+
+
+def _fmt_vn_vol(n):
+    return f"{n:,}".replace(",", ".")
+
+
+def _build_sector_group(name, tickers, quotes_by_ticker, date_label):
+    rows = [(t, quotes_by_ticker[t]) for t in tickers if t in quotes_by_ticker]
+    if not rows:
+        return None
+    rows.sort(key=lambda r: r[1]["changePct"], reverse=True)
+    total = len(rows)
+    up = sum(1 for _, q in rows if q["changePct"] > 0)
+    best_ticker, best = rows[0]
+    worst_ticker, worst = rows[-1]
+
+    if best["changePct"] > 0:
+        lead = f"dẫn đầu là {best_ticker} (+{_fmt_vn_num(best['changePct'])}%)"
+    elif best["changePct"] == 0:
+        lead = f"mã ít biến động nhất là {best_ticker} (0%)"
+    else:
+        lead = f"mã giảm ít nhất là {best_ticker} ({_fmt_vn_num(best['changePct'])}%)"
+    tail = (
+        f", trong khi {worst_ticker} giảm sâu nhất nhóm ({_fmt_vn_num(worst['changePct'])}%)."
+        if worst_ticker != best_ticker and worst["changePct"] < 0
+        else "."
+    )
+    outlook = f"{up}/{total} mã tăng giá phiên {date_label}, {lead}{tail}"
+
+    picks = []
+    for ticker, q in rows[:SECTOR_PICKS_PER_GROUP]:
+        if q["changePct"] > 0:
+            reason = (
+                f"Tăng {_fmt_vn_num(q['changePct'])}% phiên {date_label}, khối lượng khớp lệnh "
+                f"{_fmt_vn_vol(q['volume'])} cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+            )
+        elif q["changePct"] == 0:
+            reason = (
+                f"Đi ngang (0%) phiên {date_label}, khối lượng khớp lệnh "
+                f"{_fmt_vn_vol(q['volume'])} cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+            )
+        else:
+            reason = (
+                f"Giảm {_fmt_vn_num(abs(q['changePct']))}% phiên {date_label}, khối lượng khớp lệnh "
+                f"{_fmt_vn_vol(q['volume'])} cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+            )
+        picks.append({"ticker": ticker, "reason": reason})
+
+    return {"name": name, "outlook": outlook, "picks": picks}
+
+
+def compute_sector_analysis():
+    """Tính lại toàn bộ sector_analysis.json từ giá/khối lượng thật — không dùng AI.
+    Ngược lại với get_news(), hàm này không cache vì chỉ chạy khi admin bấm nút
+    "Cập nhật" (không chạy theo interval), nên không cần tối ưu tần suất gọi."""
+    now_vn = datetime.now(VN_TZ)
+    date_label = now_vn.strftime("%d/%m")
+
+    all_tickers = sorted({t for _, tickers in SECTOR_TICKERS for t in tickers})
+    quotes = get_quotes(all_tickers)
+    quotes_by_ticker = {q["ticker"]: q for q in quotes}
+
+    sectors = []
+    for name, tickers in SECTOR_TICKERS:
+        group = _build_sector_group(name, tickers, quotes_by_ticker, date_label)
+        if group:
+            sectors.append(group)
+
+    if not sectors:
+        raise RuntimeError("Không lấy được dữ liệu giá cho bất kỳ nhóm ngành nào")
+
+    try:
+        vni = _fetch_index_summary("vn-index")
+        verb = "tăng" if vni["change"] >= 0 else "giảm"
+        market_note = (
+            f"VN-Index {verb} {_fmt_vn_num(abs(vni['change']))} điểm "
+            f"({_fmt_vn_num(vni['changePct'])}%) phiên {date_label}, đóng cửa "
+            f"{_fmt_vn_num(vni['value'], 0)} điểm. Dữ liệu nhóm ngành bên dưới tính từ giá "
+            f"khớp lệnh thực tế các mã tiêu biểu."
+        )
+    except Exception:
+        market_note = f"Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên {date_label}."
+
+    return {
+        "generated_at": now_vn.strftime("%Y-%m-%dT%H:%M:%S+07:00"),
+        "disclaimer": SECTOR_ANALYSIS_DISCLAIMER,
+        "market_note": market_note,
+        "sectors": sectors,
+    }
+
+
+def refresh_sector_analysis():
+    data = compute_sector_analysis()
+
+    def mutate(_current):
+        return data
+
+    return update_github_file(SECTOR_ANALYSIS_PATH, data, mutate, "Cập nhật phân tích nhóm ngành (tự động, không AI)")
+
+
 def strip_html(s):
     text = re.sub("<[^<]+?>", "", s or "")
     return html.unescape(text).strip()
@@ -1078,6 +1207,16 @@ class Handler(BaseHTTPRequestHandler):
                     self._send_json({"ok": False, "error": f"Chỉ cho phép tối đa {MAX_SOURCES} nguồn"}, 400)
                 else:
                     self._send_json({"ok": False, "error": str(e)}, 400)
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
+        if parsed.path == "/api/admin/sector-analysis/refresh":
+            if not self._require_admin():
+                return
+            try:
+                data = refresh_sector_analysis()
+                self._send_json({"ok": True, "data": data})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return
