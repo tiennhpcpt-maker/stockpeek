@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-27T11:32:21+07:00",
-  "executive_summary": "VN-Index giảm nhẹ trong phiên hôm nay, giảm 3,58 điểm (-0,21%) lên 1.682,53 điểm, đánh dấu phiên giảm thứ 8 liên tiếp. Thanh khoản đạt 5.228,58 tỷ đồng, khối ngoại bán ròng 359,64 tỷ đồng.",
+  "generated_at": "2026-07-28T10:55:54+07:00",
+  "executive_summary": "VN-Index tăng nhẹ trong phiên hôm nay, tăng 0,47 điểm (0,03%) lên 1.669,48 điểm. Thanh khoản đạt 5.945,01 tỷ đồng, khối ngoại mua ròng 348,46 tỷ đồng.",
   "highlights": [
-    "VN30-Index tăng 1,43 điểm (0,08%) lên 1.830,79 điểm, thanh khoản 2.550,78 tỷ đồng.",
-    "HNX-Index tăng 2,81 điểm (1,03%) lên 275,80 điểm; UPCOM tăng 0,38 điểm lên 126,27 điểm.",
-    "Khối ngoại trên VN30 bán ròng 100,58 tỷ đồng trong phiên."
+    "VN30-Index tăng 3,68 điểm (—%) lên 1.810,18 điểm, thanh khoản 3.154,20 tỷ đồng.",
+    "HNX-Index giảm 0,96 điểm (-0,36%) lên 268,39 điểm; UPCOM giảm 0,42 điểm lên 125,84 điểm.",
+    "Khối ngoại trên VN30 mua ròng 141,61 tỷ đồng trong phiên."
   ],
   "technical_outlook": {
-    "trend": "VN-Index đang trong xu hướng giảm ngắn hạn, đánh dấu phiên giảm thứ 8 liên tiếp.",
-    "support": "~1.680 điểm (ước tính tự động từ biến động phiên gần nhất)",
-    "resistance": "~1.690 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "trend": "VN-Index đang trong xu hướng tăng ngắn hạn.",
+    "support": "~1.670 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "resistance": "~1.670 điểm (ước tính tự động từ biến động phiên gần nhất)",
     "note": "Đây là ước tính tự động dựa trên số liệu phiên gần nhất, không thay thế phân tích kỹ thuật chuyên sâu."
   },
   "action_notes": [
@@ -18,8 +18,8 @@
   ],
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
   "_meta": {
-    "last_sign": -1,
-    "streak": 8,
+    "last_sign": 1,
+    "streak": 1,
     "source": "auto-github-actions"
   }
 }
