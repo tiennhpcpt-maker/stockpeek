@@ -74,5 +74,48 @@
     "name": "Dân Trí Sức mạnh số",
     "url": "https://dantri.com.vn/rss/suc-manh-so.rss",
     "category": "tech"
+  },
+  {
+    "name": "Tuổi Trẻ Nhịp sống số",
+    "url": "https://tuoitre.vn/rss/nhip-song-so.rss",
+    "category": "tech"
+  },
+  {
+    "name": "Znews Công nghệ",
+    "url": "https://znews.vn/rss/cong-nghe.rss",
+    "category": "tech"
+  },
+  {
+    "name": "Tinh Tế",
+    "url": "https://tinhte.vn/rss/",
+    "category": "tech"
+  },
+  {
+    "name": "Sforum",
+    "url": "https://cellphones.com.vn/sforum/feed",
+    "category": "tech"
+  },
+  {
+    "name": "MarketTimes Công nghệ",
+    "url": "https://markettimes.vn/rss/cong-nghe.rss",
+    "category": "tech"
+  },
+  {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/feed/",
+    "category": "tech",
+    "lang": "en"
+  },
+  {
+    "name": "BBC Technology",
+    "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+    "category": "tech",
+    "lang": "en"
+  },
+  {
+    "name": "Engadget",
+    "url": "https://www.engadget.com/rss.xml",
+    "category": "tech",
+    "lang": "en"
   }
 ]
