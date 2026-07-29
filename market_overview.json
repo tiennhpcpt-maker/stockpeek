@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-29T10:59:57+07:00",
-  "executive_summary": "VN-Index tăng nhẹ trong phiên hôm nay, tăng 1,49 điểm (0,09%) lên 1.682,11 điểm, đánh dấu phiên tăng thứ 3 liên tiếp. Thanh khoản đạt 4.803,30 tỷ đồng, khối ngoại bán ròng 43,81 tỷ đồng.",
+  "generated_at": "2026-07-29T18:02:23+07:00",
+  "executive_summary": "VN-Index tăng đáng kể trong phiên hôm nay, tăng 24,06 điểm (1,43%) lên 1.704,68 điểm, đánh dấu phiên tăng thứ 4 liên tiếp. Thanh khoản đạt 14.388,21 tỷ đồng, khối ngoại bán ròng 88,04 tỷ đồng.",
   "highlights": [
-    "VN30-Index giảm 3,95 điểm (-0,22%) lên 1.820,40 điểm, thanh khoản 3.353,70 tỷ đồng.",
-    "HNX-Index tăng 2,04 điểm (0,76%) lên 271,49 điểm; UPCOM giảm 0,35 điểm lên 125,39 điểm.",
-    "Khối ngoại trên VN30 mua ròng 36,42 tỷ đồng trong phiên."
+    "VN30-Index tăng 24,77 điểm (1,36%) lên 1.849,12 điểm, thanh khoản 9.223,75 tỷ đồng.",
+    "HNX-Index tăng 2,23 điểm (0,83%) lên 271,68 điểm; UPCOM tăng 0,41 điểm lên 126,15 điểm.",
+    "Khối ngoại trên VN30 bán ròng 4,07 tỷ đồng trong phiên."
   ],
   "technical_outlook": {
-    "trend": "VN-Index đang trong xu hướng tăng ngắn hạn, đánh dấu phiên tăng thứ 3 liên tiếp.",
-    "support": "~1.680 điểm (ước tính tự động từ biến động phiên gần nhất)",
-    "resistance": "~1.680 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "trend": "VN-Index đang trong xu hướng tăng ngắn hạn, đánh dấu phiên tăng thứ 4 liên tiếp.",
+    "support": "~1.670 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "resistance": "~1.730 điểm (ước tính tự động từ biến động phiên gần nhất)",
     "note": "Đây là ước tính tự động dựa trên số liệu phiên gần nhất, không thay thế phân tích kỹ thuật chuyên sâu."
   },
   "action_notes": [
@@ -19,7 +19,7 @@
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
   "_meta": {
     "last_sign": 1,
-    "streak": 3,
+    "streak": 4,
     "source": "auto-github-actions"
   }
 }
