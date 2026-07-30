@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-07-29T16:33:49+07:00",
+  "generated_at": "2026-07-30T08:00:21+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index tăng 24,06 điểm (1,43%) phiên 29/07, đóng cửa 1.705 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index tăng 24,06 điểm (1,43%) phiên 30/07, đóng cửa 1.705 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "3/8 mã tăng giá phiên 29/07, dẫn đầu là CTG (+1,21%), trong khi STB giảm sâu nhất nhóm (-1,38%).",
+      "outlook": "0/8 mã tăng giá phiên 30/07, mã giảm ít nhất là VCB (-100,00%), trong khi STB giảm sâu nhất nhóm (-100,00%).",
       "picks": [
         {
-          "ticker": "CTG",
-          "reason": "Tăng 1,21% phiên 29/07, khối lượng khớp lệnh 917.850 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VCB",
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "BID",
-          "reason": "Tăng 1,00% phiên 29/07, khối lượng khớp lệnh 222.890 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "4/6 mã tăng giá phiên 29/07, dẫn đầu là VRE (+6,81%), trong khi NVL giảm sâu nhất nhóm (-0,77%).",
+      "outlook": "0/6 mã tăng giá phiên 30/07, mã giảm ít nhất là VIC (-100,00%), trong khi DXG giảm sâu nhất nhóm (-100,00%).",
       "picks": [
         {
-          "ticker": "VRE",
-          "reason": "Tăng 6,81% phiên 29/07, khối lượng khớp lệnh 831.480 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VIC",
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "VHM",
-          "reason": "Tăng 6,14% phiên 29/07, khối lượng khớp lệnh 657.060 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "2/6 mã tăng giá phiên 29/07, dẫn đầu là VCI (+5,58%), trong khi VIX giảm sâu nhất nhóm (-0,81%).",
+      "outlook": "0/6 mã tăng giá phiên 30/07, mã giảm ít nhất là SSI (-100,00%), trong khi MBS giảm sâu nhất nhóm (-100,00%).",
       "picks": [
         {
-          "ticker": "VCI",
-          "reason": "Tăng 5,58% phiên 29/07, khối lượng khớp lệnh 1.094.930 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "SSI",
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "SSI",
-          "reason": "Tăng 1,09% phiên 29/07, khối lượng khớp lệnh 1.880.740 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VND",
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "3/3 mã tăng giá phiên 29/07, dẫn đầu là HPG (+3,10%).",
+      "outlook": "0/3 mã tăng giá phiên 30/07, mã giảm ít nhất là HPG (-100,00%), trong khi NKG giảm sâu nhất nhóm (-100,00%).",
       "picks": [
         {
           "ticker": "HPG",
-          "reason": "Tăng 3,10% phiên 29/07, khối lượng khớp lệnh 3.625.000 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "NKG",
-          "reason": "Tăng 2,35% phiên 29/07, khối lượng khớp lệnh 187.220 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "HSG",
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "4/4 mã tăng giá phiên 29/07, dẫn đầu là DGW (+4,12%).",
+      "outlook": "0/4 mã tăng giá phiên 30/07, mã giảm ít nhất là MWG (-100,00%), trong khi DGW giảm sâu nhất nhóm (-100,00%).",
       "picks": [
         {
-          "ticker": "DGW",
-          "reason": "Tăng 4,12% phiên 29/07, khối lượng khớp lệnh 72.930 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MWG",
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "MWG",
-          "reason": "Tăng 3,58% phiên 29/07, khối lượng khớp lệnh 461.300 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PNJ",
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "1/4 mã tăng giá phiên 29/07, dẫn đầu là KBC (+0,36%), trong khi BCM giảm sâu nhất nhóm (-1,55%).",
+      "outlook": "0/4 mã tăng giá phiên 30/07, mã giảm ít nhất là IDC (-100,00%), trong khi SZC giảm sâu nhất nhóm (-100,00%).",
       "picks": [
         {
-          "ticker": "KBC",
-          "reason": "Tăng 0,36% phiên 29/07, khối lượng khớp lệnh 106.400 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "IDC",
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "SZC",
-          "reason": "Giảm 0,29% phiên 29/07, khối lượng khớp lệnh 23.090 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "KBC",
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "4/4 mã tăng giá phiên 29/07, dẫn đầu là GAS (+1,34%).",
+      "outlook": "0/4 mã tăng giá phiên 30/07, mã giảm ít nhất là GAS (-100,00%), trong khi PVS giảm sâu nhất nhóm (-100,00%).",
       "picks": [
         {
           "ticker": "GAS",
-          "reason": "Tăng 1,34% phiên 29/07, khối lượng khớp lệnh 99.300 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "PLX",
-          "reason": "Tăng 0,76% phiên 29/07, khối lượng khớp lệnh 98.400 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "2/3 mã tăng giá phiên 29/07, dẫn đầu là MSN (+0,91%), trong khi SAB giảm sâu nhất nhóm (-0,35%).",
+      "outlook": "0/3 mã tăng giá phiên 30/07, mã giảm ít nhất là VNM (-100,00%), trong khi SAB giảm sâu nhất nhóm (-100,00%).",
       "picks": [
         {
-          "ticker": "MSN",
-          "reason": "Tăng 0,91% phiên 29/07, khối lượng khớp lệnh 369.260 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VNM",
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "VNM",
-          "reason": "Tăng 0,67% phiên 29/07, khối lượng khớp lệnh 619.980 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MSN",
+          "reason": "Giảm 100,00% phiên 30/07, khối lượng khớp lệnh 0 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     }
