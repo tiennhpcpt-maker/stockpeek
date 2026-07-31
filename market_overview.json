@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-30T17:37:57+07:00",
-  "executive_summary": "VN-Index tăng đáng kể trong phiên hôm nay, tăng 39,98 điểm (2,35%) lên 1.744,66 điểm, đánh dấu phiên tăng thứ 6 liên tiếp. Thanh khoản đạt 20.264,06 tỷ đồng, khối ngoại mua ròng 677,28 tỷ đồng.",
+  "generated_at": "2026-07-31T11:18:14+07:00",
+  "executive_summary": "VN-Index tăng nhẹ trong phiên hôm nay, tăng 5,02 điểm (0,29%) lên 1.749,68 điểm, đánh dấu phiên tăng thứ 7 liên tiếp. Thanh khoản đạt 9.243,98 tỷ đồng, khối ngoại bán ròng 494,60 tỷ đồng.",
   "highlights": [
-    "VN30-Index tăng 37,15 điểm (2,01%) lên 1.886,27 điểm, thanh khoản 11.203,10 tỷ đồng.",
-    "HNX-Index tăng 3,37 điểm (1,24%) lên 275,05 điểm; UPCOM tăng 0,35 điểm lên 126,50 điểm.",
-    "Khối ngoại trên VN30 mua ròng 542,30 tỷ đồng trong phiên."
+    "VN30-Index giảm 0,84 điểm (-0,04%) lên 1.885,43 điểm, thanh khoản 5.281,14 tỷ đồng.",
+    "HNX-Index giảm 1,81 điểm (-0,66%) lên 273,24 điểm; UPCOM tăng 0,04 điểm lên 126,54 điểm.",
+    "Khối ngoại trên VN30 bán ròng 136,47 tỷ đồng trong phiên."
   ],
   "technical_outlook": {
-    "trend": "VN-Index đang trong xu hướng tăng ngắn hạn, đánh dấu phiên tăng thứ 6 liên tiếp.",
-    "support": "~1.680 điểm (ước tính tự động từ biến động phiên gần nhất)",
-    "resistance": "~1.780 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "trend": "VN-Index đang trong xu hướng tăng ngắn hạn, đánh dấu phiên tăng thứ 7 liên tiếp.",
+    "support": "~1.740 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "resistance": "~1.750 điểm (ước tính tự động từ biến động phiên gần nhất)",
     "note": "Đây là ước tính tự động dựa trên số liệu phiên gần nhất, không thay thế phân tích kỹ thuật chuyên sâu."
   },
   "action_notes": [
@@ -19,7 +19,7 @@
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
   "_meta": {
     "last_sign": 1,
-    "streak": 6,
+    "streak": 7,
     "source": "auto-github-actions"
   }
 }
