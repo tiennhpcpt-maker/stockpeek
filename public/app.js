@@ -150,16 +150,16 @@ function renderWatchlist(data) {
     .map((t) => {
       const d = byTicker[t];
       if (!d) {
-        return `<div class="stock-card">
-          <button class="remove" onclick="removeTicker('${t}')">✕</button>
-          <div class="ticker">${t}</div>
+        return `<div class="stock-card" data-ticker="${escapeHtml(t)}">
+          <button class="remove">✕</button>
+          <div class="ticker">${escapeHtml(t)}</div>
           <div class="empty">Không có dữ liệu</div>
         </div>`;
       }
       const sign = d.change > 0 ? "+" : "";
-      return `<div class="stock-card">
-        <button class="remove" onclick="removeTicker('${t}')">✕</button>
-        <div class="ticker">${d.ticker}</div>
+      return `<div class="stock-card" data-ticker="${escapeHtml(t)}">
+        <button class="remove">✕</button>
+        <div class="ticker">${escapeHtml(d.ticker)}</div>
         <div class="price status-${d.status}">${fmtVnd(d.last)}</div>
         <div class="change status-${d.status}">${sign}${fmtVnd(d.change)} (${sign}${d.changePct}%)</div>
         <div class="meta">
@@ -171,6 +171,9 @@ function renderWatchlist(data) {
       </div>`;
     })
     .join("");
+  grid.querySelectorAll(".stock-card .remove").forEach((btn) => {
+    btn.addEventListener("click", () => removeTicker(btn.closest(".stock-card").dataset.ticker));
+  });
 }
 
 async function removeTicker(t) {
@@ -269,6 +272,18 @@ function _pubTs(pubDate) {
   return isNaN(t) ? 0 : t;
 }
 
+// Tin tức (title/summary/link) đến từ RSS của nguồn do người dùng (kể cả
+// người chưa đăng nhập) thêm vào -> phải coi là dữ liệu KHÔNG đáng tin,
+// escape trước khi chèn innerHTML và chỉ cho phép link http/https.
+function safeUrl(url) {
+  try {
+    const u = new URL(url, window.location.origin);
+    return u.protocol === "http:" || u.protocol === "https:" ? u.href : "#";
+  } catch (e) {
+    return "#";
+  }
+}
+
 function renderHotNews(items, category = "stock") {
   const list = document.getElementById(NEWS_DOM[category].hotList);
   if (items.length === 0) {
@@ -278,7 +293,7 @@ function renderHotNews(items, category = "stock") {
   list.innerHTML = items
     .map((it, i) => {
       const chips = it.sources
-        .map((s) => `<span class="source-chip">📰 ${s.source}</span>`)
+        .map((s) => `<span class="source-chip">📰 ${escapeHtml(s.source)}</span>`)
         .join("");
       const multiBadge =
         it.sourceCount > 1 ? `<span class="multi-badge">${it.sourceCount} nguồn đưa tin</span>` : "";
@@ -286,16 +301,16 @@ function renderHotNews(items, category = "stock") {
       const detailItems = it.sources
         .map(
           (s) => `<div class="sources-detail-item">
-            <span><span class="sdi-source">${s.source}</span><span class="sdi-title">${s.title}</span></span>
-            <a href="${s.link}" target="_blank" rel="noopener">Mở bài gốc ↗</a>
+            <span><span class="sdi-source">${escapeHtml(s.source)}</span><span class="sdi-title">${escapeHtml(s.title)}</span></span>
+            <a href="${escapeHtml(safeUrl(s.link))}" target="_blank" rel="noopener">Mở bài gốc ↗</a>
           </div>`
         )
         .join("");
       return `<div class="news-card">
         <div class="source-row">${chips}${multiBadge}<span>· ${timeAgo(it.pubDate)}</span></div>
-        <div class="title">${it.title}</div>
-        ${it.summary ? `<div class="summary">${it.summary}</div>` : ""}
-        <button class="link-out" onclick="toggleNewsDetail('${detailId}')">Xem nguồn đưa tin →</button>
+        <div class="title">${escapeHtml(it.title)}</div>
+        ${it.summary ? `<div class="summary">${escapeHtml(it.summary)}</div>` : ""}
+        <button class="link-out" data-detail-id="${detailId}">Xem nguồn đưa tin →</button>
         <div class="sources-detail" id="${detailId}">
           <div class="sources-detail-label">Nguồn đưa tin · ${it.sourceCount}</div>
           ${detailItems}
@@ -303,6 +318,9 @@ function renderHotNews(items, category = "stock") {
       </div>`;
     })
     .join("");
+  list.querySelectorAll(".link-out").forEach((btn) => {
+    btn.addEventListener("click", () => toggleNewsDetail(btn.dataset.detailId));
+  });
 }
 
 function toggleNewsDetail(id) {
@@ -356,10 +374,11 @@ function renderLiveNews(items, category = "stock") {
   list.innerHTML = items
     .map((it) => {
       const primary = it.sources[0];
-      const sourceLabel =
-        it.sourceCount > 1 ? `${primary.source} +${it.sourceCount - 1}` : primary.source;
+      const sourceLabel = escapeHtml(
+        it.sourceCount > 1 ? `${primary.source} +${it.sourceCount - 1}` : primary.source
+      );
       return `<div class="live-news-item">
-        <a class="live-news-title" href="${primary.link}" target="_blank" rel="noopener">${it.title}</a>
+        <a class="live-news-title" href="${escapeHtml(safeUrl(primary.link))}" target="_blank" rel="noopener">${escapeHtml(it.title)}</a>
         <div class="live-news-meta">${sourceLabel} · ${timeAgo(it.pubDate)}</div>
       </div>`;
     })
@@ -409,14 +428,17 @@ function renderSources() {
   list.innerHTML = sources
     .map(
       (s) => `<div class="source-manage-row">
-        <span class="source-name">${s.name}</span>
+        <span class="source-name">${escapeHtml(s.name)}</span>
         <span class="source-category-badge">${s.category === "tech" ? "💻 Công nghệ" : "📊 Chứng khoán"}</span>
         ${s.lang && s.lang !== "vi" ? '<span class="source-lang-badge">Dịch → VI</span>' : ""}
-        <span class="source-url">${s.url}</span>
-        <button class="source-remove" onclick="removeSource('${s.name.replace(/'/g, "\\'")}')">Xoá</button>
+        <span class="source-url">${escapeHtml(s.url)}</span>
+        <button class="source-remove" data-name="${escapeHtml(s.name)}">Xoá</button>
       </div>`
     )
     .join("");
+  list.querySelectorAll(".source-remove").forEach((btn) => {
+    btn.addEventListener("click", () => removeSource(btn.dataset.name));
+  });
 }
 
 async function addSource() {

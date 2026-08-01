@@ -8,10 +8,13 @@ import difflib
 import hashlib
 import hmac
 import html
+import ipaddress
 import json
 import os
 import re
 import secrets
+import socket
+import threading
 import time
 import urllib.error
 import urllib.request
@@ -198,6 +201,26 @@ ADMIN_EMAILS = {
 }
 
 PBKDF2_ITERATIONS = 200_000
+
+# Chặn brute-force mật khẩu: tối đa LOGIN_RATE_LIMIT lần thử đăng nhập trong
+# LOGIN_RATE_WINDOW giây, tính theo IP client (không phân biệt email nhập vào,
+# để chặn cả kiểu dò nhiều email từ cùng 1 nguồn).
+LOGIN_RATE_LIMIT = 10
+LOGIN_RATE_WINDOW = 5 * 60
+_login_attempts = {}  # ip -> [timestamps]
+_login_attempts_lock = threading.Lock()
+
+
+def _check_login_rate_limit(ip):
+    now = time.time()
+    with _login_attempts_lock:
+        attempts = [t for t in _login_attempts.get(ip, []) if now - t < LOGIN_RATE_WINDOW]
+        attempts.append(now)
+        _login_attempts[ip] = attempts
+        if len(_login_attempts) > 1000:
+            oldest_ip = min(_login_attempts, key=lambda k: _login_attempts[k][-1])
+            del _login_attempts[oldest_ip]
+        return len(attempts) <= LOGIN_RATE_LIMIT
 
 
 def hash_password(password, salt_hex=None):
@@ -513,7 +536,7 @@ def remove_user_ticker(user_id, ticker):
 
 
 def validate_feed(url):
-    raw = fetch_url(url, timeout=8)
+    raw = fetch_feed_url(url, timeout=8)
     root = ET.fromstring(raw)
     if len(root.findall(".//item")) == 0:
         raise ValueError("Không tìm thấy bài viết nào — có thể URL không phải định dạng RSS")
@@ -523,6 +546,45 @@ def fetch_url(url, timeout=8):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
+
+
+def _is_public_hostname(hostname):
+    """Chặn SSRF: nguồn RSS do người dùng (kể cả ẩn danh) nhập vào không được
+    trỏ tới địa chỉ nội bộ/loopback/link-local (vd: 127.0.0.1, 169.254.169.254
+    - địa chỉ metadata cloud, mạng LAN nội bộ của host chạy server)."""
+    try:
+        infos = socket.getaddrinfo(hostname, None)
+    except Exception:
+        return False
+    if not infos:
+        return False
+    for info in infos:
+        raw_ip = info[4][0].split("%")[0]
+        try:
+            ip = ipaddress.ip_address(raw_ip)
+        except ValueError:
+            return False
+        if (
+            ip.is_private
+            or ip.is_loopback
+            or ip.is_link_local
+            or ip.is_reserved
+            or ip.is_multicast
+            or ip.is_unspecified
+        ):
+            return False
+    return True
+
+
+def fetch_feed_url(url, timeout=8):
+    """Fetch URL do người dùng nhập (thêm nguồn RSS) - áp thêm kiểm tra
+    ngăn SSRF so với fetch_url() dùng cho các URL cố định (VPS, 24hMoney...)."""
+    parsed = urlparse(url)
+    if parsed.scheme not in ("http", "https"):
+        raise ValueError("Chỉ hỗ trợ URL http/https")
+    if not parsed.hostname or not _is_public_hostname(parsed.hostname):
+        raise ValueError("URL không hợp lệ hoặc trỏ tới địa chỉ nội bộ")
+    return fetch_url(url, timeout=timeout)
 
 
 def get_quotes(tickers):
@@ -869,7 +931,7 @@ def _fetch_source_items(src):
     limit = 6 if is_foreign else 12
     items = []
     try:
-        raw = fetch_url(url, timeout=8)
+        raw = fetch_feed_url(url, timeout=8)
         root = ET.fromstring(raw)
         for item in root.findall(".//item")[:limit]:
             title = html.unescape((item.findtext("title") or "").strip())
@@ -945,6 +1007,12 @@ class Handler(BaseHTTPRequestHandler):
 
     def _clear_cookie_header(self):
         return "session=; Path=/; HttpOnly; Max-Age=0; SameSite=Lax"
+
+    def _client_ip(self):
+        xff = self.headers.get("X-Forwarded-For")
+        if xff:
+            return xff.split(",")[0].strip()
+        return self.client_address[0]
 
     def _current_user(self):
         cookie_header = self.headers.get("Cookie")
@@ -1278,6 +1346,11 @@ class Handler(BaseHTTPRequestHandler):
             except Exception:
                 self._send_json({"ok": False, "error": "Dữ liệu gửi lên không hợp lệ"}, 400)
                 return
+            if not _check_login_rate_limit(self._client_ip()):
+                self._send_json(
+                    {"ok": False, "error": "Quá nhiều lần thử đăng nhập, vui lòng thử lại sau vài phút"}, 429
+                )
+                return
             email = (body.get("email") or "").strip().lower()
             password = body.get("password") or ""
             try:
@@ -1403,8 +1476,22 @@ class Handler(BaseHTTPRequestHandler):
         qs = parse_qs(parsed.query)
         code = qs.get("code", [""])[0]
         error = qs.get("error", [""])[0]
+        state = qs.get("state", [""])[0]
         if error or not code:
             self._redirect_login_error(error or "missing_code")
+            return
+        cookie_state = ""
+        cookie_header = self.headers.get("Cookie")
+        if cookie_header:
+            c = SimpleCookie()
+            try:
+                c.load(cookie_header)
+                if "oauth_state" in c:
+                    cookie_state = c["oauth_state"].value
+            except Exception:
+                pass
+        if not state or not cookie_state or not hmac.compare_digest(state, cookie_state):
+            self._redirect_login_error("state_mismatch")
             return
         try:
             redirect_uri = google_oauth_redirect_uri(self)
@@ -1452,6 +1539,7 @@ class Handler(BaseHTTPRequestHandler):
             self.send_response(302)
             self.send_header("Location", "/")
             self.send_header("Set-Cookie", self._session_cookie_header(session_token))
+            self.send_header("Set-Cookie", "oauth_state=; Path=/; HttpOnly; Max-Age=0; SameSite=Lax")
             self.end_headers()
         except Exception as e:
             print(f"[google-oauth] unexpected error: {e!r}")
@@ -1460,6 +1548,7 @@ class Handler(BaseHTTPRequestHandler):
     def _redirect_login_error(self, reason):
         self.send_response(302)
         self.send_header("Location", f"/?login_error=google&reason={quote(reason)}")
+        self.send_header("Set-Cookie", "oauth_state=; Path=/; HttpOnly; Max-Age=0; SameSite=Lax")
         self.end_headers()
 
     def serve_static(self, path):
