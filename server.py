@@ -41,7 +41,8 @@ DEFAULT_SOURCES = [
 
 MAX_SOURCES = 15
 NEWS_CACHE_TTL = 60  # 1 phút - để Tin nóng/Tin trực tiếp cập nhật gần thời gian thực
-_news_cache = {}  # key: tuple(sorted urls) -> {"data":[...], "ts": float}
+_news_cache = {}  # key: tuple(sorted urls) -> {"data":[...], "ts": float, "lock": Lock}
+_news_cache_meta_lock = threading.Lock()
 
 # Danh sách nguồn tin được lưu chung trong file sources.json của chính repo GitHub
 # (qua GitHub Contents API), để mọi thiết bị (điện thoại, máy tính...) đều thấy
@@ -933,22 +934,30 @@ def _fetch_source_items(src):
     try:
         raw = fetch_feed_url(url, timeout=8)
         root = ET.fromstring(raw)
+        parsed = []
         for item in root.findall(".//item")[:limit]:
             title = html.unescape((item.findtext("title") or "").strip())
             link = (item.findtext("link") or "").strip()
             pub = (item.findtext("pubDate") or "").strip()
             desc = strip_html(item.findtext("description") or "")[:220]
-            if is_foreign:
-                title = translate_to_vi(title)
-                desc = translate_to_vi(desc)
             if title:
-                items.append({
-                    "source": source,
-                    "title": title,
-                    "link": link,
-                    "pubDate": pub,
-                    "summary": desc,
-                })
+                parsed.append({"source": source, "title": title, "link": link, "pubDate": pub, "summary": desc})
+
+        if is_foreign and parsed:
+            # Dịch title+summary của tất cả bài song song thay vì tuần tự -
+            # endpoint dịch miễn phí không có SLA (timeout 6s/lượt), tuần tự
+            # tới 12 lượt gọi (6 bài x title+summary) có thể kéo dài hơn 1
+            # phút và làm get_news() phải đợi (ThreadPoolExecutor.map đợi
+            # thread chậm nhất). Song song thì tệ nhất cũng chỉ mất ~1 lượt.
+            texts = [p["title"] for p in parsed] + [p["summary"] for p in parsed]
+            with ThreadPoolExecutor(max_workers=len(texts)) as translate_pool:
+                translated = list(translate_pool.map(translate_to_vi, texts))
+            n = len(parsed)
+            for i, p in enumerate(parsed):
+                p["title"] = translated[i]
+                p["summary"] = translated[n + i]
+
+        items = parsed
         return items, None
     except Exception as e:
         return items, {"source": source, "error": str(e)}
@@ -959,27 +968,44 @@ def get_news(sources=None, category="stock"):
         sources, _ = load_sources()
     sources = [s for s in sources if _source_category(s) == category]
     key = (category, tuple(sorted(s["url"] for s in sources)))
-    now = time.time()
+
     cached = _news_cache.get(key)
-    if cached and now - cached["ts"] < NEWS_CACHE_TTL:
+    if cached and time.time() - cached["ts"] < NEWS_CACHE_TTL:
         return cached["data"]
 
-    items = []
-    errors = []
-    if sources:
-        with ThreadPoolExecutor(max_workers=len(sources)) as pool:
-            for src_items, err in pool.map(_fetch_source_items, sources):
-                items.extend(src_items)
-                if err:
-                    errors.append(err)
+    # refreshHotNews() và refreshLiveNews() ở client cùng gọi /api/news cho
+    # cùng category gần như đồng thời (lúc tải trang, và mỗi 60s trùng
+    # NEWS_CACHE_TTL) - khoá theo key để request đến sau đợi request đang
+    # fetch xong rồi dùng chung kết quả, thay vì cả 2 cùng miss cache và tự
+    # fetch+dịch trùng lặp toàn bộ nguồn.
+    with _news_cache_meta_lock:
+        entry = _news_cache.setdefault(key, {"data": None, "ts": 0, "lock": threading.Lock()})
+        fetch_lock = entry["lock"]
 
-    merged = cluster_news_items(items)
-    data = {"items": merged, "errors": errors}
-    _news_cache[key] = {"data": data, "ts": now}
-    if len(_news_cache) > 30:
-        oldest = min(_news_cache, key=lambda k: _news_cache[k]["ts"])
-        del _news_cache[oldest]
-    return data
+    with fetch_lock:
+        if entry["data"] is not None and time.time() - entry["ts"] < NEWS_CACHE_TTL:
+            return entry["data"]
+
+        items = []
+        errors = []
+        if sources:
+            with ThreadPoolExecutor(max_workers=len(sources)) as pool:
+                for src_items, err in pool.map(_fetch_source_items, sources):
+                    items.extend(src_items)
+                    if err:
+                        errors.append(err)
+
+        merged = cluster_news_items(items)
+        data = {"items": merged, "errors": errors}
+        entry["data"] = data
+        entry["ts"] = time.time()
+
+        with _news_cache_meta_lock:
+            if len(_news_cache) > 30:
+                oldest = min(_news_cache, key=lambda k: _news_cache[k]["ts"])
+                if oldest != key:
+                    del _news_cache[oldest]
+        return data
 
 
 CONTENT_TYPES = {
