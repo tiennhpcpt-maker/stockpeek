@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-02T17:14:43+07:00",
-  "executive_summary": "VN-Index giảm nhẹ trong phiên hôm nay, giảm 8,88 điểm (-0,51%) lên 1.735,78 điểm, đánh dấu phiên giảm thứ 5 liên tiếp. Thanh khoản đạt 19.021,63 tỷ đồng, khối ngoại bán ròng 306,82 tỷ đồng.",
+  "generated_at": "2026-08-03T11:25:18+07:00",
+  "executive_summary": "VN-Index tăng đáng kể trong phiên hôm nay, tăng 19,53 điểm (1,13%) lên 1.755,31 điểm. Thanh khoản đạt 7.698,41 tỷ đồng, khối ngoại mua ròng 525,42 tỷ đồng.",
   "highlights": [
-    "VN30-Index giảm 14,20 điểm (-0,75%) lên 1.872,07 điểm, thanh khoản 10.593,99 tỷ đồng.",
-    "HNX-Index giảm 3,80 điểm (-1,38%) lên 271,25 điểm; UPCOM tăng 0,09 điểm lên 126,59 điểm.",
-    "Khối ngoại trên VN30 mua ròng 79,26 tỷ đồng trong phiên."
+    "VN30-Index tăng 30,87 điểm (1,65%) lên 1.902,94 điểm, thanh khoản 4.530,58 tỷ đồng.",
+    "HNX-Index tăng 7,90 điểm (2,91%) lên 279,15 điểm; UPCOM tăng 0,43 điểm lên 127,02 điểm.",
+    "Khối ngoại trên VN30 mua ròng 476,17 tỷ đồng trong phiên."
   ],
   "technical_outlook": {
-    "trend": "VN-Index đang trong xu hướng giảm ngắn hạn, đánh dấu phiên giảm thứ 5 liên tiếp.",
-    "support": "~1.720 điểm (ước tính tự động từ biến động phiên gần nhất)",
-    "resistance": "~1.740 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "trend": "VN-Index đang trong xu hướng tăng ngắn hạn.",
+    "support": "~1.730 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "resistance": "~1.770 điểm (ước tính tự động từ biến động phiên gần nhất)",
     "note": "Đây là ước tính tự động dựa trên số liệu phiên gần nhất, không thay thế phân tích kỹ thuật chuyên sâu."
   },
   "action_notes": [
@@ -18,8 +18,8 @@
   ],
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
   "_meta": {
-    "last_sign": -1,
-    "streak": 5,
+    "last_sign": 1,
+    "streak": 1,
     "source": "auto-github-actions"
   }
 }
