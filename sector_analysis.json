@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-08-04T12:49:30+07:00",
+  "generated_at": "2026-08-05T10:35:13+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 04/08.",
+  "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 05/08.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "2/8 mã tăng giá phiên 04/08, dẫn đầu là STB (+1,54%), trong khi VCB giảm sâu nhất nhóm (-1,32%).",
+      "outlook": "5/8 mã tăng giá phiên 05/08, dẫn đầu là TCB (+0,67%), trong khi ACB giảm sâu nhất nhóm (-0,45%).",
       "picks": [
         {
-          "ticker": "STB",
-          "reason": "Tăng 1,54% phiên 04/08, khối lượng khớp lệnh 110.030 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "TCB",
+          "reason": "Tăng 0,67% phiên 05/08, khối lượng khớp lệnh 382.670 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "MBB",
-          "reason": "Tăng 0,83% phiên 04/08, khối lượng khớp lệnh 860.830 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "BID",
+          "reason": "Tăng 0,39% phiên 05/08, khối lượng khớp lệnh 120.470 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "4/6 mã tăng giá phiên 04/08, dẫn đầu là VHM (+2,97%), trong khi DXG giảm sâu nhất nhóm (-0,92%).",
+      "outlook": "6/6 mã tăng giá phiên 05/08, dẫn đầu là VHM (+3,53%).",
       "picks": [
         {
           "ticker": "VHM",
-          "reason": "Tăng 2,97% phiên 04/08, khối lượng khớp lệnh 291.220 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 3,53% phiên 05/08, khối lượng khớp lệnh 340.890 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VIC",
-          "reason": "Tăng 2,58% phiên 04/08, khối lượng khớp lệnh 227.400 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "NVL",
+          "reason": "Tăng 3,36% phiên 05/08, khối lượng khớp lệnh 1.825.930 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "0/6 mã tăng giá phiên 04/08, mã ít biến động nhất là VCI (0%), trong khi SSI giảm sâu nhất nhóm (-1,02%).",
+      "outlook": "6/6 mã tăng giá phiên 05/08, dẫn đầu là HCM (+4,18%).",
       "picks": [
         {
-          "ticker": "VCI",
-          "reason": "Đi ngang (0%) phiên 04/08, khối lượng khớp lệnh 326.880 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "HCM",
+          "reason": "Tăng 4,18% phiên 05/08, khối lượng khớp lệnh 600.310 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VND",
-          "reason": "Giảm 0,30% phiên 04/08, khối lượng khớp lệnh 289.790 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "VIX",
+          "reason": "Tăng 1,80% phiên 05/08, khối lượng khớp lệnh 2.084.440 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "0/3 mã tăng giá phiên 04/08, mã giảm ít nhất là HSG (-0,91%), trong khi NKG giảm sâu nhất nhóm (-1,78%).",
+      "outlook": "2/3 mã tăng giá phiên 05/08, dẫn đầu là HPG (+0,45%).",
       "picks": [
         {
-          "ticker": "HSG",
-          "reason": "Giảm 0,91% phiên 04/08, khối lượng khớp lệnh 68.800 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "HPG",
+          "reason": "Tăng 0,45% phiên 05/08, khối lượng khớp lệnh 832.810 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "HPG",
-          "reason": "Giảm 1,77% phiên 04/08, khối lượng khớp lệnh 1.114.550 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "NKG",
+          "reason": "Tăng 0,45% phiên 05/08, khối lượng khớp lệnh 59.310 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "3/4 mã tăng giá phiên 04/08, dẫn đầu là PNJ (+5,58%), trong khi MWG giảm sâu nhất nhóm (-1,24%).",
+      "outlook": "3/4 mã tăng giá phiên 05/08, dẫn đầu là PNJ (+5,22%).",
       "picks": [
         {
           "ticker": "PNJ",
-          "reason": "Tăng 5,58% phiên 04/08, khối lượng khớp lệnh 474.100 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 5,22% phiên 05/08, khối lượng khớp lệnh 361.380 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "DGW",
-          "reason": "Tăng 3,37% phiên 04/08, khối lượng khớp lệnh 56.990 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "FRT",
+          "reason": "Tăng 2,18% phiên 05/08, khối lượng khớp lệnh 43.940 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "4/4 mã tăng giá phiên 04/08, dẫn đầu là BCM (+2,30%).",
+      "outlook": "3/4 mã tăng giá phiên 05/08, dẫn đầu là SZC (+1,07%), trong khi KBC giảm sâu nhất nhóm (-0,35%).",
       "picks": [
         {
-          "ticker": "BCM",
-          "reason": "Tăng 2,30% phiên 04/08, khối lượng khớp lệnh 24.620 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "SZC",
+          "reason": "Tăng 1,07% phiên 05/08, khối lượng khớp lệnh 13.640 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "SZC",
-          "reason": "Tăng 1,08% phiên 04/08, khối lượng khớp lệnh 18.520 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "BCM",
+          "reason": "Tăng 0,81% phiên 05/08, khối lượng khớp lệnh 16.000 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "3/4 mã tăng giá phiên 04/08, dẫn đầu là PVS (+0,58%), trong khi GAS giảm sâu nhất nhóm (-2,25%).",
+      "outlook": "0/4 mã tăng giá phiên 05/08, mã giảm ít nhất là PLX (-0,45%), trong khi PVD giảm sâu nhất nhóm (-1,93%).",
       "picks": [
         {
-          "ticker": "PVS",
-          "reason": "Tăng 0,58% phiên 04/08, khối lượng khớp lệnh 52.770 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PLX",
+          "reason": "Giảm 0,45% phiên 05/08, khối lượng khớp lệnh 51.210 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "PVD",
-          "reason": "Tăng 0,28% phiên 04/08, khối lượng khớp lệnh 76.470 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "GAS",
+          "reason": "Giảm 0,86% phiên 05/08, khối lượng khớp lệnh 31.280 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "0/3 mã tăng giá phiên 04/08, mã giảm ít nhất là MSN (-0,44%), trong khi VNM giảm sâu nhất nhóm (-1,99%).",
+      "outlook": "0/3 mã tăng giá phiên 05/08, mã giảm ít nhất là MSN (-0,29%), trong khi SAB giảm sâu nhất nhóm (-1,11%).",
       "picks": [
         {
           "ticker": "MSN",
-          "reason": "Giảm 0,44% phiên 04/08, khối lượng khớp lệnh 159.310 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,29% phiên 05/08, khối lượng khớp lệnh 136.740 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "SAB",
-          "reason": "Giảm 0,78% phiên 04/08, khối lượng khớp lệnh 20.390 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "VNM",
+          "reason": "Giảm 0,84% phiên 05/08, khối lượng khớp lệnh 181.930 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     }
