@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-12T10:19:58+07:00",
-  "executive_summary": "VN-Index tăng nhẹ trong phiên hôm nay, tăng 14,19 điểm (—%) lên 1.787,60 điểm. Thanh khoản đạt 3.791,61 tỷ đồng, khối ngoại bán ròng 52,04 tỷ đồng.",
+  "generated_at": "2026-08-12T16:40:12+07:00",
+  "executive_summary": "VN-Index tăng đáng kể trong phiên hôm nay, tăng 19,77 điểm (1,11%) lên 1.793,18 điểm, đánh dấu phiên tăng thứ 2 liên tiếp. Thanh khoản đạt 14.041,15 tỷ đồng, khối ngoại mua ròng 315,55 tỷ đồng.",
   "highlights": [
-    "VN30-Index tăng 14,29 điểm (—%) lên 1.936,82 điểm, thanh khoản 2.058,23 tỷ đồng.",
-    "HNX-Index giảm 2,59 điểm (-0,89%) lên 288,32 điểm; UPCOM tăng 0,69 điểm lên 127,87 điểm.",
-    "Khối ngoại trên VN30 bán ròng 56,99 tỷ đồng trong phiên."
+    "VN30-Index tăng 13,93 điểm (0,72%) lên 1.936,46 điểm, thanh khoản 7.458,94 tỷ đồng.",
+    "HNX-Index giảm 2,46 điểm (-0,85%) lên 288,45 điểm; UPCOM tăng 0,33 điểm lên 127,51 điểm.",
+    "Khối ngoại trên VN30 mua ròng 110,65 tỷ đồng trong phiên."
   ],
   "technical_outlook": {
-    "trend": "VN-Index đang trong xu hướng tăng ngắn hạn.",
-    "support": "~1.770 điểm (ước tính tự động từ biến động phiên gần nhất)",
-    "resistance": "~1.800 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "trend": "VN-Index đang trong xu hướng tăng ngắn hạn, đánh dấu phiên tăng thứ 2 liên tiếp.",
+    "support": "~1.760 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "resistance": "~1.810 điểm (ước tính tự động từ biến động phiên gần nhất)",
     "note": "Đây là ước tính tự động dựa trên số liệu phiên gần nhất, không thay thế phân tích kỹ thuật chuyên sâu."
   },
   "action_notes": [
@@ -19,7 +19,7 @@
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
   "_meta": {
     "last_sign": 1,
-    "streak": 1,
+    "streak": 2,
     "source": "auto-github-actions"
   }
 }
