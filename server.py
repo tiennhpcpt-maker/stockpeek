@@ -26,6 +26,8 @@ from http.cookies import SimpleCookie
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs, urlencode, quote
 
+import jwt  # thư viện ngoài duy nhất — cần để ký JWT RS256 cho xác thực GitHub App
+
 PORT = int(os.environ.get("PORT", 8787))
 HOST = "0.0.0.0" if os.environ.get("PORT") else "127.0.0.1"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -48,7 +50,13 @@ _news_cache_meta_lock = threading.Lock()
 # (qua GitHub Contents API), để mọi thiết bị (điện thoại, máy tính...) đều thấy
 # cùng một danh sách, và không bị mất khi server khởi động lại (đĩa của Render
 # free bị xoá mỗi lần restart, nhưng dữ liệu trong git thì không).
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
+# Xác thực bằng GitHub App (thay vì personal access token tĩnh) để không còn
+# phải tự tay đổi token khi hết hạn: server tự ký JWT bằng private key của App,
+# đổi lấy installation access token ngắn hạn (~1h, tự làm mới), xem _get_installation_token().
+GITHUB_APP_ID = os.environ.get("GITHUB_APP_ID", "")
+GITHUB_APP_PRIVATE_KEY = os.environ.get("GITHUB_APP_PRIVATE_KEY", "")
+GITHUB_APP_INSTALLATION_ID = os.environ.get("GITHUB_APP_INSTALLATION_ID", "")
+GITHUB_APP_CONFIGURED = bool(GITHUB_APP_ID and GITHUB_APP_PRIVATE_KEY and GITHUB_APP_INSTALLATION_ID)
 GITHUB_REPO = os.environ.get("GITHUB_REPO", "tiennhpcpt-maker/stockpeek")
 # Repo RIÊNG TƯ khác với repo code công khai ở trên — chỉ dùng để lưu tài khoản
 # người dùng (email, mật khẩu đã băm, danh mục/nguồn riêng). Tuyệt đối không
@@ -62,11 +70,52 @@ GITHUB_FILE_CACHE_TTL = 20  # giây
 
 _github_file_cache = {}  # (repo, path) -> {"data":..., "sha":..., "ts": float}
 
+_installation_token_lock = threading.Lock()
+_installation_token_cache = {"token": None, "expires_at": 0.0}
+
+
+def _make_app_jwt():
+    now = int(time.time())
+    payload = {
+        "iat": now - 60,  # trừ hao lệch giờ đồng hồ, GitHub sẽ từ chối JWT có iat ở tương lai
+        "exp": now + 540,  # tối đa GitHub cho phép là 10 phút
+        "iss": GITHUB_APP_ID,
+    }
+    return jwt.encode(payload, GITHUB_APP_PRIVATE_KEY, algorithm="RS256")
+
+
+def _get_installation_token():
+    """Đổi JWT của GitHub App lấy installation access token (sống ~1h).
+    Cache lại và chỉ đổi mới khi gần hết hạn, tránh gọi API GitHub App mỗi request."""
+    with _installation_token_lock:
+        if _installation_token_cache["token"] and time.time() < _installation_token_cache["expires_at"] - 60:
+            return _installation_token_cache["token"]
+        url = f"https://api.github.com/app/installations/{GITHUB_APP_INSTALLATION_ID}/access_tokens"
+        req = urllib.request.Request(
+            url,
+            data=b"",
+            headers={
+                "User-Agent": "stockPeek",
+                "Accept": "application/vnd.github+json",
+                "Authorization": f"Bearer {_make_app_jwt()}",
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            resp_data = json.loads(resp.read())
+        token = resp_data["token"]
+        expires_at = datetime.strptime(resp_data["expires_at"], "%Y-%m-%dT%H:%M:%SZ").replace(
+            tzinfo=timezone.utc
+        ).timestamp()
+        _installation_token_cache["token"] = token
+        _installation_token_cache["expires_at"] = expires_at
+        return token
+
 
 def _github_request(method, url, body=None):
     headers = {"User-Agent": "stockPeek", "Accept": "application/vnd.github+json"}
-    if GITHUB_TOKEN:
-        headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
+    if GITHUB_APP_CONFIGURED:
+        headers["Authorization"] = f"Bearer {_get_installation_token()}"
     data = json.dumps(body).encode("utf-8") if body is not None else None
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
     with urllib.request.urlopen(req, timeout=10) as resp:
@@ -116,8 +165,8 @@ def update_github_file(path, default, mutate_fn, message, max_retries=3, repo=No
     """Đọc file mới nhất, áp dụng mutate_fn(data) -> data_moi, rồi ghi lên GitHub.
     Nếu có ai khác ghi đè đồng thời (409 conflict), tự động đọc lại bản mới nhất
     và thử lại, tránh mất dữ liệu người dùng vừa thêm."""
-    if not GITHUB_TOKEN:
-        raise RuntimeError("Server chưa cấu hình GITHUB_TOKEN nên không thể lưu dữ liệu")
+    if not GITHUB_APP_CONFIGURED:
+        raise RuntimeError("Server chưa cấu hình GitHub App (GITHUB_APP_ID/PRIVATE_KEY/INSTALLATION_ID) nên không thể lưu dữ liệu")
     repo = repo or GITHUB_REPO
     last_err = None
     for attempt in range(max_retries):
