@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-08-05T10:35:13+07:00",
+  "generated_at": "2026-09-10T22:05:07+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 05/08.",
+  "market_note": "VN-Index tăng 2,11 điểm (0,12%) phiên 10/09, đóng cửa 1.829 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "5/8 mã tăng giá phiên 05/08, dẫn đầu là TCB (+0,67%), trong khi ACB giảm sâu nhất nhóm (-0,45%).",
+      "outlook": "3/8 mã tăng giá phiên 10/09, dẫn đầu là STB (+1,69%), trong khi MBB giảm sâu nhất nhóm (-0,50%).",
       "picks": [
         {
-          "ticker": "TCB",
-          "reason": "Tăng 0,67% phiên 05/08, khối lượng khớp lệnh 382.670 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "STB",
+          "reason": "Tăng 1,69% phiên 10/09, khối lượng khớp lệnh 316.890 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "BID",
-          "reason": "Tăng 0,39% phiên 05/08, khối lượng khớp lệnh 120.470 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VCB",
+          "reason": "Tăng 0,51% phiên 10/09, khối lượng khớp lệnh 306.600 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "6/6 mã tăng giá phiên 05/08, dẫn đầu là VHM (+3,53%).",
+      "outlook": "2/6 mã tăng giá phiên 10/09, dẫn đầu là VHM (+1,39%), trong khi NVL giảm sâu nhất nhóm (-1,15%).",
       "picks": [
         {
           "ticker": "VHM",
-          "reason": "Tăng 3,53% phiên 05/08, khối lượng khớp lệnh 340.890 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,39% phiên 10/09, khối lượng khớp lệnh 1.607.420 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "NVL",
-          "reason": "Tăng 3,36% phiên 05/08, khối lượng khớp lệnh 1.825.930 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VRE",
+          "reason": "Tăng 0,57% phiên 10/09, khối lượng khớp lệnh 390.320 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "6/6 mã tăng giá phiên 05/08, dẫn đầu là HCM (+4,18%).",
+      "outlook": "3/6 mã tăng giá phiên 10/09, dẫn đầu là VIX (+1,47%), trong khi HCM giảm sâu nhất nhóm (-0,19%).",
       "picks": [
         {
-          "ticker": "HCM",
-          "reason": "Tăng 4,18% phiên 05/08, khối lượng khớp lệnh 600.310 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VIX",
+          "reason": "Tăng 1,47% phiên 10/09, khối lượng khớp lệnh 2.559.950 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VIX",
-          "reason": "Tăng 1,80% phiên 05/08, khối lượng khớp lệnh 2.084.440 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "SSI",
+          "reason": "Tăng 0,48% phiên 10/09, khối lượng khớp lệnh 1.280.750 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "2/3 mã tăng giá phiên 05/08, dẫn đầu là HPG (+0,45%).",
+      "outlook": "0/3 mã tăng giá phiên 10/09, mã giảm ít nhất là HPG (-0,91%), trong khi HSG giảm sâu nhất nhóm (-0,94%).",
       "picks": [
         {
           "ticker": "HPG",
-          "reason": "Tăng 0,45% phiên 05/08, khối lượng khớp lệnh 832.810 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 0,91% phiên 10/09, khối lượng khớp lệnh 1.339.140 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "NKG",
-          "reason": "Tăng 0,45% phiên 05/08, khối lượng khớp lệnh 59.310 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 0,93% phiên 10/09, khối lượng khớp lệnh 67.340 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "3/4 mã tăng giá phiên 05/08, dẫn đầu là PNJ (+5,22%).",
+      "outlook": "3/4 mã tăng giá phiên 10/09, dẫn đầu là DGW (+6,93%), trong khi FRT giảm sâu nhất nhóm (-0,36%).",
       "picks": [
         {
-          "ticker": "PNJ",
-          "reason": "Tăng 5,22% phiên 05/08, khối lượng khớp lệnh 361.380 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "DGW",
+          "reason": "Tăng 6,93% phiên 10/09, khối lượng khớp lệnh 502.210 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "FRT",
-          "reason": "Tăng 2,18% phiên 05/08, khối lượng khớp lệnh 43.940 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MWG",
+          "reason": "Tăng 1,82% phiên 10/09, khối lượng khớp lệnh 249.620 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "3/4 mã tăng giá phiên 05/08, dẫn đầu là SZC (+1,07%), trong khi KBC giảm sâu nhất nhóm (-0,35%).",
+      "outlook": "1/4 mã tăng giá phiên 10/09, dẫn đầu là KBC (+0,19%), trong khi BCM giảm sâu nhất nhóm (-1,45%).",
       "picks": [
         {
-          "ticker": "SZC",
-          "reason": "Tăng 1,07% phiên 05/08, khối lượng khớp lệnh 13.640 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "KBC",
+          "reason": "Tăng 0,19% phiên 10/09, khối lượng khớp lệnh 87.690 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "BCM",
-          "reason": "Tăng 0,81% phiên 05/08, khối lượng khớp lệnh 16.000 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "IDC",
+          "reason": "Giảm 0,65% phiên 10/09, khối lượng khớp lệnh 89.230 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "0/4 mã tăng giá phiên 05/08, mã giảm ít nhất là PLX (-0,45%), trong khi PVD giảm sâu nhất nhóm (-1,93%).",
+      "outlook": "1/4 mã tăng giá phiên 10/09, dẫn đầu là PVS (+0,78%), trong khi GAS giảm sâu nhất nhóm (-1,28%).",
       "picks": [
         {
-          "ticker": "PLX",
-          "reason": "Giảm 0,45% phiên 05/08, khối lượng khớp lệnh 51.210 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "PVS",
+          "reason": "Tăng 0,78% phiên 10/09, khối lượng khớp lệnh 181.370 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "GAS",
-          "reason": "Giảm 0,86% phiên 05/08, khối lượng khớp lệnh 31.280 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "PVD",
+          "reason": "Giảm 0,80% phiên 10/09, khối lượng khớp lệnh 440.660 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "0/3 mã tăng giá phiên 05/08, mã giảm ít nhất là MSN (-0,29%), trong khi SAB giảm sâu nhất nhóm (-1,11%).",
+      "outlook": "3/3 mã tăng giá phiên 10/09, dẫn đầu là VNM (+0,49%).",
       "picks": [
         {
-          "ticker": "MSN",
-          "reason": "Giảm 0,29% phiên 05/08, khối lượng khớp lệnh 136.740 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "VNM",
+          "reason": "Tăng 0,49% phiên 10/09, khối lượng khớp lệnh 189.040 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VNM",
-          "reason": "Giảm 0,84% phiên 05/08, khối lượng khớp lệnh 181.930 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "SAB",
+          "reason": "Tăng 0,45% phiên 10/09, khối lượng khớp lệnh 30.640 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     }
