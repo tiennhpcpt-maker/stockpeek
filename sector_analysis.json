@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-09-11T20:01:57+07:00",
+  "generated_at": "2026-09-12T12:45:06+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index giảm 34,02 điểm (-1,86%) phiên 11/09, đóng cửa 1.795 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index giảm 34,02 điểm (-1,86%) phiên 12/09, đóng cửa 1.795 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "0/8 mã tăng giá phiên 11/09, mã giảm ít nhất là STB (-0,90%), trong khi TCB giảm sâu nhất nhóm (-2,47%).",
+      "outlook": "0/8 mã tăng giá phiên 12/09, mã giảm ít nhất là STB (-0,90%), trong khi TCB giảm sâu nhất nhóm (-2,47%).",
       "picks": [
         {
           "ticker": "STB",
-          "reason": "Giảm 0,90% phiên 11/09, khối lượng khớp lệnh 825.280 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,90% phiên 12/09, khối lượng khớp lệnh 825.280 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "VCB",
-          "reason": "Giảm 1,36% phiên 11/09, khối lượng khớp lệnh 436.520 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 1,36% phiên 12/09, khối lượng khớp lệnh 436.520 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "0/6 mã tăng giá phiên 11/09, mã giảm ít nhất là VHM (-1,50%), trong khi NVL giảm sâu nhất nhóm (-5,06%).",
+      "outlook": "0/6 mã tăng giá phiên 12/09, mã giảm ít nhất là VHM (-1,50%), trong khi NVL giảm sâu nhất nhóm (-5,06%).",
       "picks": [
         {
           "ticker": "VHM",
-          "reason": "Giảm 1,50% phiên 11/09, khối lượng khớp lệnh 670.080 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 1,50% phiên 12/09, khối lượng khớp lệnh 670.080 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "VIC",
-          "reason": "Giảm 1,78% phiên 11/09, khối lượng khớp lệnh 426.400 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 1,78% phiên 12/09, khối lượng khớp lệnh 426.400 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "0/6 mã tăng giá phiên 11/09, mã giảm ít nhất là HCM (-3,04%), trong khi VCI giảm sâu nhất nhóm (-5,87%).",
+      "outlook": "0/6 mã tăng giá phiên 12/09, mã giảm ít nhất là HCM (-3,04%), trong khi VCI giảm sâu nhất nhóm (-5,87%).",
       "picks": [
         {
           "ticker": "HCM",
-          "reason": "Giảm 3,04% phiên 11/09, khối lượng khớp lệnh 584.120 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 3,04% phiên 12/09, khối lượng khớp lệnh 584.120 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "SSI",
-          "reason": "Giảm 3,33% phiên 11/09, khối lượng khớp lệnh 2.401.070 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 3,33% phiên 12/09, khối lượng khớp lệnh 2.401.070 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "0/3 mã tăng giá phiên 11/09, mã giảm ít nhất là HPG (-2,52%), trong khi NKG giảm sâu nhất nhóm (-4,23%).",
+      "outlook": "0/3 mã tăng giá phiên 12/09, mã giảm ít nhất là HPG (-2,52%), trong khi NKG giảm sâu nhất nhóm (-4,23%).",
       "picks": [
         {
           "ticker": "HPG",
-          "reason": "Giảm 2,52% phiên 11/09, khối lượng khớp lệnh 2.203.170 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 2,52% phiên 12/09, khối lượng khớp lệnh 2.203.170 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "HSG",
-          "reason": "Giảm 2,86% phiên 11/09, khối lượng khớp lệnh 275.530 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 2,86% phiên 12/09, khối lượng khớp lệnh 275.530 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "0/4 mã tăng giá phiên 11/09, mã giảm ít nhất là DGW (-0,78%), trong khi PNJ giảm sâu nhất nhóm (-2,36%).",
+      "outlook": "0/4 mã tăng giá phiên 12/09, mã giảm ít nhất là DGW (-0,78%), trong khi PNJ giảm sâu nhất nhóm (-2,36%).",
       "picks": [
         {
           "ticker": "DGW",
-          "reason": "Giảm 0,78% phiên 11/09, khối lượng khớp lệnh 378.100 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,78% phiên 12/09, khối lượng khớp lệnh 378.100 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "FRT",
-          "reason": "Giảm 2,14% phiên 11/09, khối lượng khớp lệnh 27.460 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 2,14% phiên 12/09, khối lượng khớp lệnh 27.460 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "0/4 mã tăng giá phiên 11/09, mã giảm ít nhất là KBC (-1,85%), trong khi BCM giảm sâu nhất nhóm (-4,55%).",
+      "outlook": "0/4 mã tăng giá phiên 12/09, mã giảm ít nhất là KBC (-1,85%), trong khi BCM giảm sâu nhất nhóm (-4,55%).",
       "picks": [
         {
           "ticker": "KBC",
-          "reason": "Giảm 1,85% phiên 11/09, khối lượng khớp lệnh 96.090 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 1,85% phiên 12/09, khối lượng khớp lệnh 96.090 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "SZC",
-          "reason": "Giảm 2,44% phiên 11/09, khối lượng khớp lệnh 35.300 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 2,44% phiên 12/09, khối lượng khớp lệnh 35.300 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "1/4 mã tăng giá phiên 11/09, dẫn đầu là PVD (+0,27%), trong khi GAS giảm sâu nhất nhóm (-2,01%).",
+      "outlook": "1/4 mã tăng giá phiên 12/09, dẫn đầu là PVD (+0,27%), trong khi GAS giảm sâu nhất nhóm (-2,01%).",
       "picks": [
         {
           "ticker": "PVD",
-          "reason": "Tăng 0,27% phiên 11/09, khối lượng khớp lệnh 1.032.200 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,27% phiên 12/09, khối lượng khớp lệnh 1.032.200 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "PVS",
-          "reason": "Giảm 0,78% phiên 11/09, khối lượng khớp lệnh 555.180 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,78% phiên 12/09, khối lượng khớp lệnh 555.180 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "0/3 mã tăng giá phiên 11/09, mã giảm ít nhất là SAB (-2,23%), trong khi MSN giảm sâu nhất nhóm (-3,20%).",
+      "outlook": "0/3 mã tăng giá phiên 12/09, mã giảm ít nhất là SAB (-2,23%), trong khi MSN giảm sâu nhất nhóm (-3,20%).",
       "picks": [
         {
           "ticker": "SAB",
-          "reason": "Giảm 2,23% phiên 11/09, khối lượng khớp lệnh 76.790 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 2,23% phiên 12/09, khối lượng khớp lệnh 76.790 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "VNM",
-          "reason": "Giảm 2,76% phiên 11/09, khối lượng khớp lệnh 404.730 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 2,76% phiên 12/09, khối lượng khớp lệnh 404.730 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     }
