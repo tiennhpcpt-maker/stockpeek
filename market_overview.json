@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-14T12:37:33+07:00",
-  "executive_summary": "VN-Index giảm nhẹ trong phiên hôm nay, giảm 4,41 điểm (-0,25%) lên 1.790,80 điểm, đánh dấu phiên giảm thứ 7 liên tiếp. Thanh khoản đạt 6.968,97 tỷ đồng, khối ngoại mua ròng 225,72 tỷ đồng.",
+  "generated_at": "2026-09-14T22:09:58+07:00",
+  "executive_summary": "VN-Index giảm nhẹ trong phiên hôm nay, giảm 6,98 điểm (-0,39%) lên 1.788,23 điểm, đánh dấu phiên giảm thứ 8 liên tiếp. Thanh khoản đạt 19.538,14 tỷ đồng, khối ngoại mua ròng 825,17 tỷ đồng.",
   "highlights": [
-    "VN30-Index giảm 0,34 điểm (-0,02%) lên 1.936,35 điểm, thanh khoản 4.123,46 tỷ đồng.",
-    "HNX-Index giảm 0,37 điểm (-0,14%) lên 272,31 điểm; UPCOM giảm 0,52 điểm lên 126,03 điểm.",
-    "Khối ngoại trên VN30 mua ròng 284,66 tỷ đồng trong phiên."
+    "VN30-Index giảm 8,12 điểm (—%) lên 1.928,57 điểm, thanh khoản 10.442,00 tỷ đồng.",
+    "HNX-Index giảm 0,74 điểm (-0,27%) lên 271,94 điểm; UPCOM giảm 0,92 điểm lên 125,63 điểm.",
+    "Khối ngoại trên VN30 mua ròng 677,61 tỷ đồng trong phiên."
   ],
   "technical_outlook": {
-    "trend": "VN-Index đang trong xu hướng giảm ngắn hạn, đánh dấu phiên giảm thứ 7 liên tiếp.",
+    "trend": "VN-Index đang trong xu hướng giảm ngắn hạn, đánh dấu phiên giảm thứ 8 liên tiếp.",
     "support": "~1.780 điểm (ước tính tự động từ biến động phiên gần nhất)",
     "resistance": "~1.800 điểm (ước tính tự động từ biến động phiên gần nhất)",
     "note": "Đây là ước tính tự động dựa trên số liệu phiên gần nhất, không thay thế phân tích kỹ thuật chuyên sâu."
@@ -19,7 +19,7 @@
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
   "_meta": {
     "last_sign": -1,
-    "streak": 7,
+    "streak": 8,
     "source": "auto-github-actions"
   }
 }
