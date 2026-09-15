@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-09-15T13:08:30+07:00",
+  "generated_at": "2026-09-15T20:53:05+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index tăng 14,56 điểm (0,81%) phiên 15/09, đóng cửa 1.803 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index tăng 22,92 điểm (1,28%) phiên 15/09, đóng cửa 1.811 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "8/8 mã tăng giá phiên 15/09, dẫn đầu là CTG (+2,18%).",
+      "outlook": "7/8 mã tăng giá phiên 15/09, dẫn đầu là BID (+2,94%), trong khi STB giảm sâu nhất nhóm (-0,52%).",
       "picks": [
         {
-          "ticker": "CTG",
-          "reason": "Tăng 2,18% phiên 15/09, khối lượng khớp lệnh 429.360 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "BID",
+          "reason": "Tăng 2,94% phiên 15/09, khối lượng khớp lệnh 581.000 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "VCB",
-          "reason": "Tăng 1,71% phiên 15/09, khối lượng khớp lệnh 449.700 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,56% phiên 15/09, khối lượng khớp lệnh 954.720 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "1/6 mã tăng giá phiên 15/09, dẫn đầu là VIC (+0,08%), trong khi PDR giảm sâu nhất nhóm (-0,87%).",
+      "outlook": "2/6 mã tăng giá phiên 15/09, dẫn đầu là PDR (+0,43%), trong khi VHM giảm sâu nhất nhóm (-0,42%).",
       "picks": [
         {
-          "ticker": "VIC",
-          "reason": "Tăng 0,08% phiên 15/09, khối lượng khớp lệnh 64.490 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PDR",
+          "reason": "Tăng 0,43% phiên 15/09, khối lượng khớp lệnh 281.550 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VHM",
-          "reason": "Giảm 0,14% phiên 15/09, khối lượng khớp lệnh 307.740 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "NVL",
+          "reason": "Tăng 0,42% phiên 15/09, khối lượng khớp lệnh 934.320 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "6/6 mã tăng giá phiên 15/09, dẫn đầu là VIX (+2,78%).",
+      "outlook": "6/6 mã tăng giá phiên 15/09, dẫn đầu là VIX (+2,38%).",
       "picks": [
         {
           "ticker": "VIX",
-          "reason": "Tăng 2,78% phiên 15/09, khối lượng khớp lệnh 1.807.520 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,38% phiên 15/09, khối lượng khớp lệnh 3.285.270 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VND",
-          "reason": "Tăng 2,05% phiên 15/09, khối lượng khớp lệnh 692.790 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "SSI",
+          "reason": "Tăng 1,72% phiên 15/09, khối lượng khớp lệnh 1.640.450 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "2/3 mã tăng giá phiên 15/09, dẫn đầu là HPG (+0,72%).",
+      "outlook": "2/3 mã tăng giá phiên 15/09, dẫn đầu là HPG (+1,44%).",
       "picks": [
         {
           "ticker": "HPG",
-          "reason": "Tăng 0,72% phiên 15/09, khối lượng khớp lệnh 542.840 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,44% phiên 15/09, khối lượng khớp lệnh 1.193.720 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "NKG",
-          "reason": "Tăng 0,50% phiên 15/09, khối lượng khớp lệnh 89.050 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "HSG",
+          "reason": "Tăng 0,50% phiên 15/09, khối lượng khớp lệnh 348.080 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "3/4 mã tăng giá phiên 15/09, dẫn đầu là PNJ (+2,51%), trong khi DGW giảm sâu nhất nhóm (-0,98%).",
+      "outlook": "3/4 mã tăng giá phiên 15/09, dẫn đầu là PNJ (+3,62%), trong khi FRT giảm sâu nhất nhóm (-3,01%).",
       "picks": [
         {
           "ticker": "PNJ",
-          "reason": "Tăng 2,51% phiên 15/09, khối lượng khớp lệnh 184.870 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 3,62% phiên 15/09, khối lượng khớp lệnh 343.070 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "FRT",
-          "reason": "Tăng 0,90% phiên 15/09, khối lượng khớp lệnh 5.450 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MWG",
+          "reason": "Tăng 2,01% phiên 15/09, khối lượng khớp lệnh 189.310 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "2/4 mã tăng giá phiên 15/09, dẫn đầu là BCM (+1,54%), trong khi KBC giảm sâu nhất nhóm (-0,94%).",
+      "outlook": "2/4 mã tăng giá phiên 15/09, dẫn đầu là BCM (+2,56%), trong khi KBC giảm sâu nhất nhóm (-1,51%).",
       "picks": [
         {
           "ticker": "BCM",
-          "reason": "Tăng 1,54% phiên 15/09, khối lượng khớp lệnh 21.390 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,56% phiên 15/09, khối lượng khớp lệnh 43.870 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "IDC",
-          "reason": "Tăng 0,65% phiên 15/09, khối lượng khớp lệnh 41.100 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,98% phiên 15/09, khối lượng khớp lệnh 72.550 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "4/4 mã tăng giá phiên 15/09, dẫn đầu là GAS (+4,20%).",
+      "outlook": "4/4 mã tăng giá phiên 15/09, dẫn đầu là GAS (+6,65%).",
       "picks": [
         {
           "ticker": "GAS",
-          "reason": "Tăng 4,20% phiên 15/09, khối lượng khớp lệnh 158.580 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 6,65% phiên 15/09, khối lượng khớp lệnh 373.320 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "PVS",
-          "reason": "Tăng 3,68% phiên 15/09, khối lượng khớp lệnh 163.430 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PLX",
+          "reason": "Tăng 5,96% phiên 15/09, khối lượng khớp lệnh 1.124.400 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "3/3 mã tăng giá phiên 15/09, dẫn đầu là VNM (+0,84%).",
+      "outlook": "2/3 mã tăng giá phiên 15/09, dẫn đầu là MSN (+1,20%), trong khi SAB giảm sâu nhất nhóm (-0,45%).",
       "picks": [
         {
-          "ticker": "VNM",
-          "reason": "Tăng 0,84% phiên 15/09, khối lượng khớp lệnh 93.080 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MSN",
+          "reason": "Tăng 1,20% phiên 15/09, khối lượng khớp lệnh 210.410 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "MSN",
-          "reason": "Tăng 0,45% phiên 15/09, khối lượng khớp lệnh 119.710 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VNM",
+          "reason": "Tăng 0,67% phiên 15/09, khối lượng khớp lệnh 183.530 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     }
