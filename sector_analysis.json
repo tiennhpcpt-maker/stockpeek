@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-09-14T22:15:46+07:00",
+  "generated_at": "2026-09-15T13:08:30+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index giảm 6,98 điểm (-0,39%) phiên 14/09, đóng cửa 1.788 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index tăng 14,56 điểm (0,81%) phiên 15/09, đóng cửa 1.803 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "4/8 mã tăng giá phiên 14/09, dẫn đầu là VPB (+0,93%), trong khi STB giảm sâu nhất nhóm (-1,16%).",
+      "outlook": "8/8 mã tăng giá phiên 15/09, dẫn đầu là CTG (+2,18%).",
       "picks": [
         {
-          "ticker": "VPB",
-          "reason": "Tăng 0,93% phiên 14/09, khối lượng khớp lệnh 2.570.540 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "CTG",
+          "reason": "Tăng 2,18% phiên 15/09, khối lượng khớp lệnh 429.360 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "TCB",
-          "reason": "Tăng 0,79% phiên 14/09, khối lượng khớp lệnh 1.177.700 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VCB",
+          "reason": "Tăng 1,71% phiên 15/09, khối lượng khớp lệnh 449.700 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "1/6 mã tăng giá phiên 14/09, dẫn đầu là VRE (+0,59%), trong khi NVL giảm sâu nhất nhóm (-2,05%).",
+      "outlook": "1/6 mã tăng giá phiên 15/09, dẫn đầu là VIC (+0,08%), trong khi PDR giảm sâu nhất nhóm (-0,87%).",
       "picks": [
         {
-          "ticker": "VRE",
-          "reason": "Tăng 0,59% phiên 14/09, khối lượng khớp lệnh 602.420 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VIC",
+          "reason": "Tăng 0,08% phiên 15/09, khối lượng khớp lệnh 64.490 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "DXG",
-          "reason": "Đi ngang (0%) phiên 14/09, khối lượng khớp lệnh 758.350 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "VHM",
+          "reason": "Giảm 0,14% phiên 15/09, khối lượng khớp lệnh 307.740 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "0/6 mã tăng giá phiên 14/09, mã ít biến động nhất là SSI (0%), trong khi VIX giảm sâu nhất nhóm (-4,91%).",
+      "outlook": "6/6 mã tăng giá phiên 15/09, dẫn đầu là VIX (+2,78%).",
       "picks": [
         {
-          "ticker": "SSI",
-          "reason": "Đi ngang (0%) phiên 14/09, khối lượng khớp lệnh 2.451.800 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "VIX",
+          "reason": "Tăng 2,78% phiên 15/09, khối lượng khớp lệnh 1.807.520 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "MBS",
-          "reason": "Giảm 0,61% phiên 14/09, khối lượng khớp lệnh 368.440 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "VND",
+          "reason": "Tăng 2,05% phiên 15/09, khối lượng khớp lệnh 692.790 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "0/3 mã tăng giá phiên 14/09, mã giảm ít nhất là HSG (-0,98%), trong khi HPG giảm sâu nhất nhóm (-1,88%).",
+      "outlook": "2/3 mã tăng giá phiên 15/09, dẫn đầu là HPG (+0,72%).",
       "picks": [
         {
-          "ticker": "HSG",
-          "reason": "Giảm 0,98% phiên 14/09, khối lượng khớp lệnh 272.980 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "HPG",
+          "reason": "Tăng 0,72% phiên 15/09, khối lượng khớp lệnh 542.840 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "NKG",
-          "reason": "Giảm 0,98% phiên 14/09, khối lượng khớp lệnh 227.980 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Tăng 0,50% phiên 15/09, khối lượng khớp lệnh 89.050 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "1/4 mã tăng giá phiên 14/09, dẫn đầu là DGW (+3,60%), trong khi PNJ giảm sâu nhất nhóm (-3,75%).",
+      "outlook": "3/4 mã tăng giá phiên 15/09, dẫn đầu là PNJ (+2,51%), trong khi DGW giảm sâu nhất nhóm (-0,98%).",
       "picks": [
         {
-          "ticker": "DGW",
-          "reason": "Tăng 3,60% phiên 14/09, khối lượng khớp lệnh 309.690 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PNJ",
+          "reason": "Tăng 2,51% phiên 15/09, khối lượng khớp lệnh 184.870 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "MWG",
-          "reason": "Giảm 2,10% phiên 14/09, khối lượng khớp lệnh 324.650 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "FRT",
+          "reason": "Tăng 0,90% phiên 15/09, khối lượng khớp lệnh 5.450 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "2/4 mã tăng giá phiên 14/09, dẫn đầu là IDC (+2,33%), trong khi SZC giảm sâu nhất nhóm (-2,22%).",
+      "outlook": "2/4 mã tăng giá phiên 15/09, dẫn đầu là BCM (+1,54%), trong khi KBC giảm sâu nhất nhóm (-0,94%).",
       "picks": [
         {
-          "ticker": "IDC",
-          "reason": "Tăng 2,33% phiên 14/09, khối lượng khớp lệnh 164.380 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "BCM",
+          "reason": "Tăng 1,54% phiên 15/09, khối lượng khớp lệnh 21.390 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "BCM",
-          "reason": "Tăng 0,39% phiên 14/09, khối lượng khớp lệnh 38.440 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "IDC",
+          "reason": "Tăng 0,65% phiên 15/09, khối lượng khớp lệnh 41.100 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "4/4 mã tăng giá phiên 14/09, dẫn đầu là GAS (+3,38%).",
+      "outlook": "4/4 mã tăng giá phiên 15/09, dẫn đầu là GAS (+4,20%).",
       "picks": [
         {
           "ticker": "GAS",
-          "reason": "Tăng 3,38% phiên 14/09, khối lượng khớp lệnh 163.410 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 4,20% phiên 15/09, khối lượng khớp lệnh 158.580 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "PVD",
-          "reason": "Tăng 2,16% phiên 14/09, khối lượng khớp lệnh 587.530 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PVS",
+          "reason": "Tăng 3,68% phiên 15/09, khối lượng khớp lệnh 163.430 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "2/3 mã tăng giá phiên 14/09, dẫn đầu là SAB (+2,05%), trong khi VNM giảm sâu nhất nhóm (-1,00%).",
+      "outlook": "3/3 mã tăng giá phiên 15/09, dẫn đầu là VNM (+0,84%).",
       "picks": [
         {
-          "ticker": "SAB",
-          "reason": "Tăng 2,05% phiên 14/09, khối lượng khớp lệnh 67.780 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VNM",
+          "reason": "Tăng 0,84% phiên 15/09, khối lượng khớp lệnh 93.080 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "MSN",
-          "reason": "Tăng 0,15% phiên 14/09, khối lượng khớp lệnh 425.050 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,45% phiên 15/09, khối lượng khớp lệnh 119.710 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     }
