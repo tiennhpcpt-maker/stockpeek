@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-09-16T20:45:03+07:00",
+  "generated_at": "2026-09-17T13:06:58+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index giảm 1,04 điểm (-0,06%) phiên 16/09, đóng cửa 1.810 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index tăng 15,17 điểm (0,84%) phiên 17/09, đóng cửa 1.825 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "4/8 mã tăng giá phiên 16/09, dẫn đầu là ACB (+2,26%), trong khi BID giảm sâu nhất nhóm (-1,22%).",
+      "outlook": "7/8 mã tăng giá phiên 17/09, dẫn đầu là VPB (+1,81%), trong khi ACB giảm sâu nhất nhóm (-0,22%).",
       "picks": [
         {
-          "ticker": "ACB",
-          "reason": "Tăng 2,26% phiên 16/09, khối lượng khớp lệnh 801.780 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VPB",
+          "reason": "Tăng 1,81% phiên 17/09, khối lượng khớp lệnh 1.769.630 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "MBB",
-          "reason": "Tăng 1,50% phiên 16/09, khối lượng khớp lệnh 909.860 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "STB",
+          "reason": "Tăng 1,32% phiên 17/09, khối lượng khớp lệnh 85.850 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "1/6 mã tăng giá phiên 16/09, dẫn đầu là NVL (+2,08%), trong khi DXG giảm sâu nhất nhóm (-1,86%).",
+      "outlook": "6/6 mã tăng giá phiên 17/09, dẫn đầu là DXG (+2,84%).",
       "picks": [
         {
-          "ticker": "NVL",
-          "reason": "Tăng 2,08% phiên 16/09, khối lượng khớp lệnh 1.399.920 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "DXG",
+          "reason": "Tăng 2,84% phiên 17/09, khối lượng khớp lệnh 1.289.960 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VIC",
-          "reason": "Giảm 0,04% phiên 16/09, khối lượng khớp lệnh 401.400 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "VRE",
+          "reason": "Tăng 1,57% phiên 17/09, khối lượng khớp lệnh 222.000 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "0/6 mã tăng giá phiên 16/09, mã giảm ít nhất là SSI (-0,48%), trong khi VCI giảm sâu nhất nhóm (-2,78%).",
+      "outlook": "6/6 mã tăng giá phiên 17/09, dẫn đầu là VCI (+6,49%).",
       "picks": [
         {
-          "ticker": "SSI",
-          "reason": "Giảm 0,48% phiên 16/09, khối lượng khớp lệnh 1.394.780 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "VCI",
+          "reason": "Tăng 6,49% phiên 17/09, khối lượng khớp lệnh 1.175.200 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "HCM",
-          "reason": "Giảm 0,99% phiên 16/09, khối lượng khớp lệnh 307.280 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "SSI",
+          "reason": "Tăng 4,14% phiên 17/09, khối lượng khớp lệnh 3.022.810 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "0/3 mã tăng giá phiên 16/09, mã giảm ít nhất là HSG (-0,99%), trong khi NKG giảm sâu nhất nhóm (-1,19%).",
+      "outlook": "3/3 mã tăng giá phiên 17/09, dẫn đầu là HPG (+1,91%).",
       "picks": [
         {
-          "ticker": "HSG",
-          "reason": "Giảm 0,99% phiên 16/09, khối lượng khớp lệnh 143.550 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "HPG",
+          "reason": "Tăng 1,91% phiên 17/09, khối lượng khớp lệnh 969.650 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "HPG",
-          "reason": "Giảm 1,18% phiên 16/09, khối lượng khớp lệnh 1.227.750 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "NKG",
+          "reason": "Tăng 1,70% phiên 17/09, khối lượng khớp lệnh 85.480 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "1/4 mã tăng giá phiên 16/09, dẫn đầu là MWG (+0,42%), trong khi DGW giảm sâu nhất nhóm (-3,46%).",
+      "outlook": "3/4 mã tăng giá phiên 17/09, dẫn đầu là MWG (+2,66%), trong khi PNJ giảm sâu nhất nhóm (-0,68%).",
       "picks": [
         {
           "ticker": "MWG",
-          "reason": "Tăng 0,42% phiên 16/09, khối lượng khớp lệnh 201.770 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,66% phiên 17/09, khối lượng khớp lệnh 185.920 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "FRT",
-          "reason": "Giảm 0,78% phiên 16/09, khối lượng khớp lệnh 40.180 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Tăng 2,27% phiên 17/09, khối lượng khớp lệnh 16.140 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "1/4 mã tăng giá phiên 16/09, dẫn đầu là BCM (+1,00%), trong khi KBC giảm sâu nhất nhóm (-0,38%).",
+      "outlook": "4/4 mã tăng giá phiên 17/09, dẫn đầu là IDC (+1,94%).",
       "picks": [
         {
-          "ticker": "BCM",
-          "reason": "Tăng 1,00% phiên 16/09, khối lượng khớp lệnh 67.250 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "IDC",
+          "reason": "Tăng 1,94% phiên 17/09, khối lượng khớp lệnh 124.940 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "IDC",
-          "reason": "Đi ngang (0%) phiên 16/09, khối lượng khớp lệnh 198.880 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "SZC",
+          "reason": "Tăng 1,71% phiên 17/09, khối lượng khớp lệnh 14.330 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "3/4 mã tăng giá phiên 16/09, dẫn đầu là PLX (+2,28%), trong khi GAS giảm sâu nhất nhóm (-2,19%).",
+      "outlook": "0/4 mã tăng giá phiên 17/09, mã giảm ít nhất là GAS (-1,23%), trong khi PVS giảm sâu nhất nhóm (-2,62%).",
       "picks": [
         {
-          "ticker": "PLX",
-          "reason": "Tăng 2,28% phiên 16/09, khối lượng khớp lệnh 1.174.520 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "GAS",
+          "reason": "Giảm 1,23% phiên 17/09, khối lượng khớp lệnh 104.220 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "PVS",
-          "reason": "Tăng 0,29% phiên 16/09, khối lượng khớp lệnh 556.970 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PLX",
+          "reason": "Giảm 1,31% phiên 17/09, khối lượng khớp lệnh 303.750 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "0/3 mã tăng giá phiên 16/09, mã ít biến động nhất là MSN (0%), trong khi SAB giảm sâu nhất nhóm (-1,01%).",
+      "outlook": "3/3 mã tăng giá phiên 17/09, dẫn đầu là VNM (+1,34%).",
       "picks": [
         {
-          "ticker": "MSN",
-          "reason": "Đi ngang (0%) phiên 16/09, khối lượng khớp lệnh 260.010 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "VNM",
+          "reason": "Tăng 1,34% phiên 17/09, khối lượng khớp lệnh 89.390 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VNM",
-          "reason": "Giảm 0,17% phiên 16/09, khối lượng khớp lệnh 173.740 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "MSN",
+          "reason": "Tăng 1,04% phiên 17/09, khối lượng khớp lệnh 147.400 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     }
