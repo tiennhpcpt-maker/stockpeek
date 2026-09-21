@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-09-21T13:16:32+07:00",
+  "generated_at": "2026-09-21T22:20:34+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index giảm 13,87 điểm (-0,76%) phiên 21/09, đóng cửa 1.802 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index giảm 15,99 điểm (-0,88%) phiên 21/09, đóng cửa 1.800 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "6/8 mã tăng giá phiên 21/09, dẫn đầu là BID (+1,68%), trong khi VCB giảm sâu nhất nhóm (-1,17%).",
+      "outlook": "6/8 mã tăng giá phiên 21/09, dẫn đầu là VPB (+3,64%), trong khi STB giảm sâu nhất nhóm (-1,92%).",
       "picks": [
         {
-          "ticker": "BID",
-          "reason": "Tăng 1,68% phiên 21/09, khối lượng khớp lệnh 247.100 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VPB",
+          "reason": "Tăng 3,64% phiên 21/09, khối lượng khớp lệnh 3.329.070 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "ACB",
-          "reason": "Tăng 0,91% phiên 21/09, khối lượng khớp lệnh 331.420 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "CTG",
+          "reason": "Tăng 2,48% phiên 21/09, khối lượng khớp lệnh 793.190 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "1/6 mã tăng giá phiên 21/09, dẫn đầu là NVL (+0,39%), trong khi VRE giảm sâu nhất nhóm (-2,35%).",
+      "outlook": "0/6 mã tăng giá phiên 21/09, mã ít biến động nhất là PDR (0%), trong khi VHM giảm sâu nhất nhóm (-4,08%).",
       "picks": [
         {
-          "ticker": "NVL",
-          "reason": "Tăng 0,39% phiên 21/09, khối lượng khớp lệnh 1.506.980 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PDR",
+          "reason": "Đi ngang (0%) phiên 21/09, khối lượng khớp lệnh 181.380 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
-          "ticker": "PDR",
-          "reason": "Đi ngang (0%) phiên 21/09, khối lượng khớp lệnh 80.390 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "DXG",
+          "reason": "Giảm 0,47% phiên 21/09, khối lượng khớp lệnh 545.410 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "0/6 mã tăng giá phiên 21/09, mã giảm ít nhất là MBS (-1,76%), trong khi SSI giảm sâu nhất nhóm (-2,34%).",
+      "outlook": "0/6 mã tăng giá phiên 21/09, mã giảm ít nhất là MBS (-1,76%), trong khi VND giảm sâu nhất nhóm (-3,29%).",
       "picks": [
         {
           "ticker": "MBS",
-          "reason": "Giảm 1,76% phiên 21/09, khối lượng khớp lệnh 120.360 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 1,76% phiên 21/09, khối lượng khớp lệnh 255.460 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "VIX",
-          "reason": "Giảm 1,90% phiên 21/09, khối lượng khớp lệnh 1.370.520 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "HCM",
+          "reason": "Giảm 1,96% phiên 21/09, khối lượng khớp lệnh 244.480 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "2/3 mã tăng giá phiên 21/09, dẫn đầu là NKG (+0,91%), trong khi HPG giảm sâu nhất nhóm (-1,62%).",
+      "outlook": "1/3 mã tăng giá phiên 21/09, dẫn đầu là NKG (+0,91%), trong khi HPG giảm sâu nhất nhóm (-2,09%).",
       "picks": [
         {
           "ticker": "NKG",
-          "reason": "Tăng 0,91% phiên 21/09, khối lượng khớp lệnh 76.240 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,91% phiên 21/09, khối lượng khớp lệnh 127.020 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "HSG",
-          "reason": "Tăng 0,49% phiên 21/09, khối lượng khớp lệnh 64.070 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 0,49% phiên 21/09, khối lượng khớp lệnh 146.910 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "2/4 mã tăng giá phiên 21/09, dẫn đầu là FRT (+0,61%), trong khi MWG giảm sâu nhất nhóm (-1,38%).",
+      "outlook": "1/4 mã tăng giá phiên 21/09, dẫn đầu là PNJ (+0,41%), trong khi DGW giảm sâu nhất nhóm (-1,10%).",
       "picks": [
         {
-          "ticker": "FRT",
-          "reason": "Tăng 0,61% phiên 21/09, khối lượng khớp lệnh 6.990 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PNJ",
+          "reason": "Tăng 0,41% phiên 21/09, khối lượng khớp lệnh 175.430 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "PNJ",
-          "reason": "Tăng 0,14% phiên 21/09, khối lượng khớp lệnh 98.820 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "FRT",
+          "reason": "Giảm 0,61% phiên 21/09, khối lượng khớp lệnh 23.730 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "1/4 mã tăng giá phiên 21/09, dẫn đầu là IDC (+0,93%), trong khi BCM giảm sâu nhất nhóm (-0,99%).",
+      "outlook": "1/4 mã tăng giá phiên 21/09, dẫn đầu là IDC (+3,11%), trong khi BCM giảm sâu nhất nhóm (-1,12%).",
       "picks": [
         {
           "ticker": "IDC",
-          "reason": "Tăng 0,93% phiên 21/09, khối lượng khớp lệnh 82.230 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 3,11% phiên 21/09, khối lượng khớp lệnh 238.720 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "SZC",
-          "reason": "Giảm 0,28% phiên 21/09, khối lượng khớp lệnh 19.010 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "KBC",
+          "reason": "Đi ngang (0%) phiên 21/09, khối lượng khớp lệnh 134.040 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "4/4 mã tăng giá phiên 21/09, dẫn đầu là GAS (+1,14%).",
+      "outlook": "2/4 mã tăng giá phiên 21/09, dẫn đầu là PVD (+0,78%), trong khi PLX giảm sâu nhất nhóm (-1,47%).",
       "picks": [
         {
-          "ticker": "GAS",
-          "reason": "Tăng 1,14% phiên 21/09, khối lượng khớp lệnh 63.220 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PVD",
+          "reason": "Tăng 0,78% phiên 21/09, khối lượng khớp lệnh 488.300 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "PVD",
-          "reason": "Tăng 1,04% phiên 21/09, khối lượng khớp lệnh 233.230 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "GAS",
+          "reason": "Tăng 0,68% phiên 21/09, khối lượng khớp lệnh 145.270 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "0/3 mã tăng giá phiên 21/09, mã giảm ít nhất là SAB (-0,68%), trong khi VNM giảm sâu nhất nhóm (-1,14%).",
+      "outlook": "0/3 mã tăng giá phiên 21/09, mã giảm ít nhất là MSN (-1,02%), trong khi VNM giảm sâu nhất nhóm (-1,47%).",
       "picks": [
         {
-          "ticker": "SAB",
-          "reason": "Giảm 0,68% phiên 21/09, khối lượng khớp lệnh 22.940 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "MSN",
+          "reason": "Giảm 1,02% phiên 21/09, khối lượng khớp lệnh 363.190 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "MSN",
-          "reason": "Giảm 0,73% phiên 21/09, khối lượng khớp lệnh 170.980 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "SAB",
+          "reason": "Giảm 1,02% phiên 21/09, khối lượng khớp lệnh 60.080 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     }
