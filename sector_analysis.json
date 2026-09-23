@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-09-23T12:55:16+07:00",
+  "generated_at": "2026-09-23T20:52:21+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index tăng 2,21 điểm (0,12%) phiên 23/09, đóng cửa 1.819 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index giảm 15,28 điểm (-0,84%) phiên 23/09, đóng cửa 1.802 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "5/8 mã tăng giá phiên 23/09, dẫn đầu là TCB (+3,41%), trong khi VPB giảm sâu nhất nhóm (-0,18%).",
+      "outlook": "3/8 mã tăng giá phiên 23/09, dẫn đầu là TCB (+2,63%), trong khi ACB giảm sâu nhất nhóm (-0,91%).",
       "picks": [
         {
           "ticker": "TCB",
-          "reason": "Tăng 3,41% phiên 23/09, khối lượng khớp lệnh 2.736.740 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,63% phiên 23/09, khối lượng khớp lệnh 3.900.710 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "STB",
-          "reason": "Tăng 1,17% phiên 23/09, khối lượng khớp lệnh 65.860 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "BID",
+          "reason": "Tăng 0,41% phiên 23/09, khối lượng khớp lệnh 287.460 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "1/6 mã tăng giá phiên 23/09, dẫn đầu là VRE (+0,20%), trong khi NVL giảm sâu nhất nhóm (-1,59%).",
+      "outlook": "0/6 mã tăng giá phiên 23/09, mã ít biến động nhất là DXG (0%), trong khi VIC giảm sâu nhất nhóm (-3,20%).",
       "picks": [
         {
-          "ticker": "VRE",
-          "reason": "Tăng 0,20% phiên 23/09, khối lượng khớp lệnh 108.490 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "DXG",
+          "reason": "Đi ngang (0%) phiên 23/09, khối lượng khớp lệnh 568.710 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
-          "ticker": "VHM",
-          "reason": "Giảm 0,14% phiên 23/09, khối lượng khớp lệnh 258.400 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "VRE",
+          "reason": "Giảm 0,80% phiên 23/09, khối lượng khớp lệnh 321.730 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "3/6 mã tăng giá phiên 23/09, dẫn đầu là HCM (+1,80%), trong khi VCI giảm sâu nhất nhóm (-0,49%).",
+      "outlook": "1/6 mã tăng giá phiên 23/09, dẫn đầu là HCM (+2,00%), trong khi VCI giảm sâu nhất nhóm (-0,98%).",
       "picks": [
         {
           "ticker": "HCM",
-          "reason": "Tăng 1,80% phiên 23/09, khối lượng khớp lệnh 115.760 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,00% phiên 23/09, khối lượng khớp lệnh 341.060 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "SSI",
-          "reason": "Tăng 0,72% phiên 23/09, khối lượng khớp lệnh 696.020 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 0,48% phiên 23/09, khối lượng khớp lệnh 1.563.280 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "1/3 mã tăng giá phiên 23/09, dẫn đầu là NKG (+0,10%).",
+      "outlook": "0/3 mã tăng giá phiên 23/09, mã ít biến động nhất là HSG (0%), trong khi HPG giảm sâu nhất nhóm (-0,47%).",
       "picks": [
         {
-          "ticker": "NKG",
-          "reason": "Tăng 0,10% phiên 23/09, khối lượng khớp lệnh 49.970 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "HSG",
+          "reason": "Đi ngang (0%) phiên 23/09, khối lượng khớp lệnh 125.460 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
-          "ticker": "HPG",
-          "reason": "Đi ngang (0%) phiên 23/09, khối lượng khớp lệnh 501.580 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "NKG",
+          "reason": "Đi ngang (0%) phiên 23/09, khối lượng khớp lệnh 131.440 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "3/4 mã tăng giá phiên 23/09, dẫn đầu là FRT (+2,98%), trong khi PNJ giảm sâu nhất nhóm (-1,68%).",
+      "outlook": "3/4 mã tăng giá phiên 23/09, dẫn đầu là FRT (+6,95%), trong khi PNJ giảm sâu nhất nhóm (-1,40%).",
       "picks": [
         {
           "ticker": "FRT",
-          "reason": "Tăng 2,98% phiên 23/09, khối lượng khớp lệnh 69.700 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 6,95% phiên 23/09, khối lượng khớp lệnh 164.710 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "DGW",
-          "reason": "Tăng 1,55% phiên 23/09, khối lượng khớp lệnh 68.880 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 3,22% phiên 23/09, khối lượng khớp lệnh 334.350 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "2/4 mã tăng giá phiên 23/09, dẫn đầu là SZC (+1,69%).",
+      "outlook": "2/4 mã tăng giá phiên 23/09, dẫn đầu là SZC (+2,26%).",
       "picks": [
         {
           "ticker": "SZC",
-          "reason": "Tăng 1,69% phiên 23/09, khối lượng khớp lệnh 23.110 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,26% phiên 23/09, khối lượng khớp lệnh 34.060 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "BCM",
-          "reason": "Tăng 1,12% phiên 23/09, khối lượng khớp lệnh 18.120 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,87% phiên 23/09, khối lượng khớp lệnh 35.040 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "1/4 mã tăng giá phiên 23/09, dẫn đầu là PLX (+0,27%), trong khi PVD giảm sâu nhất nhóm (-0,26%).",
+      "outlook": "0/4 mã tăng giá phiên 23/09, mã ít biến động nhất là PVS (0%), trong khi GAS giảm sâu nhất nhóm (-1,40%).",
       "picks": [
         {
-          "ticker": "PLX",
-          "reason": "Tăng 0,27% phiên 23/09, khối lượng khớp lệnh 124.140 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PVS",
+          "reason": "Đi ngang (0%) phiên 23/09, khối lượng khớp lệnh 243.080 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
-          "ticker": "GAS",
-          "reason": "Đi ngang (0%) phiên 23/09, khối lượng khớp lệnh 49.790 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "PLX",
+          "reason": "Giảm 0,27% phiên 23/09, khối lượng khớp lệnh 250.240 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "0/3 mã tăng giá phiên 23/09, mã giảm ít nhất là SAB (-0,11%), trong khi VNM giảm sâu nhất nhóm (-0,49%).",
+      "outlook": "0/3 mã tăng giá phiên 23/09, mã giảm ít nhất là MSN (-0,71%), trong khi VNM giảm sâu nhất nhóm (-1,14%).",
       "picks": [
         {
-          "ticker": "SAB",
-          "reason": "Giảm 0,11% phiên 23/09, khối lượng khớp lệnh 10.420 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "MSN",
+          "reason": "Giảm 0,71% phiên 23/09, khối lượng khớp lệnh 334.600 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "MSN",
-          "reason": "Giảm 0,28% phiên 23/09, khối lượng khớp lệnh 151.980 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "SAB",
+          "reason": "Giảm 1,01% phiên 23/09, khối lượng khớp lệnh 24.430 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     }
