@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-09-25T13:08:23+07:00",
+  "generated_at": "2026-09-25T21:11:12+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index tăng 8,70 điểm (0,49%) phiên 25/09, đóng cửa 1.784 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index tăng 10,02 điểm (0,56%) phiên 25/09, đóng cửa 1.785 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "4/8 mã tăng giá phiên 25/09, dẫn đầu là VPB (+4,52%), trong khi BID giảm sâu nhất nhóm (-0,42%).",
+      "outlook": "3/8 mã tăng giá phiên 25/09, dẫn đầu là VPB (+4,07%), trong khi STB giảm sâu nhất nhóm (-0,52%).",
       "picks": [
         {
           "ticker": "VPB",
-          "reason": "Tăng 4,52% phiên 25/09, khối lượng khớp lệnh 1.632.470 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 4,07% phiên 25/09, khối lượng khớp lệnh 4.684.400 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "STB",
-          "reason": "Tăng 0,65% phiên 25/09, khối lượng khớp lệnh 33.200 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "TCB",
+          "reason": "Tăng 0,91% phiên 25/09, khối lượng khớp lệnh 2.789.980 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "4/6 mã tăng giá phiên 25/09, dẫn đầu là VHM (+3,21%), trong khi NVL giảm sâu nhất nhóm (-2,46%).",
+      "outlook": "3/6 mã tăng giá phiên 25/09, dẫn đầu là VHM (+5,66%), trong khi NVL giảm sâu nhất nhóm (-2,87%).",
       "picks": [
         {
           "ticker": "VHM",
-          "reason": "Tăng 3,21% phiên 25/09, khối lượng khớp lệnh 424.320 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 5,66% phiên 25/09, khối lượng khớp lệnh 1.145.270 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "VRE",
-          "reason": "Tăng 1,24% phiên 25/09, khối lượng khớp lệnh 144.830 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,45% phiên 25/09, khối lượng khớp lệnh 386.520 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "3/6 mã tăng giá phiên 25/09, dẫn đầu là MBS (+0,61%), trong khi VCI giảm sâu nhất nhóm (-0,50%).",
+      "outlook": "0/6 mã tăng giá phiên 25/09, mã giảm ít nhất là SSI (-0,72%), trong khi VCI giảm sâu nhất nhóm (-1,49%).",
       "picks": [
         {
-          "ticker": "MBS",
-          "reason": "Tăng 0,61% phiên 25/09, khối lượng khớp lệnh 89.450 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "SSI",
+          "reason": "Giảm 0,72% phiên 25/09, khối lượng khớp lệnh 1.168.950 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "VIX",
-          "reason": "Tăng 0,39% phiên 25/09, khối lượng khớp lệnh 835.660 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 0,78% phiên 25/09, khối lượng khớp lệnh 1.920.170 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "1/3 mã tăng giá phiên 25/09, dẫn đầu là HSG (+0,50%), trong khi HPG giảm sâu nhất nhóm (-0,24%).",
+      "outlook": "0/3 mã tăng giá phiên 25/09, mã ít biến động nhất là HSG (0%), trong khi HPG giảm sâu nhất nhóm (-0,72%).",
       "picks": [
         {
           "ticker": "HSG",
-          "reason": "Tăng 0,50% phiên 25/09, khối lượng khớp lệnh 112.220 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Đi ngang (0%) phiên 25/09, khối lượng khớp lệnh 171.280 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
           "ticker": "NKG",
-          "reason": "Đi ngang (0%) phiên 25/09, khối lượng khớp lệnh 56.870 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "reason": "Đi ngang (0%) phiên 25/09, khối lượng khớp lệnh 109.900 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "2/4 mã tăng giá phiên 25/09, dẫn đầu là PNJ (+0,60%), trong khi DGW giảm sâu nhất nhóm (-1,97%).",
+      "outlook": "1/4 mã tăng giá phiên 25/09, dẫn đầu là MWG (+0,69%), trong khi DGW giảm sâu nhất nhóm (-2,84%).",
       "picks": [
         {
-          "ticker": "PNJ",
-          "reason": "Tăng 0,60% phiên 25/09, khối lượng khớp lệnh 260.960 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MWG",
+          "reason": "Tăng 0,69% phiên 25/09, khối lượng khớp lệnh 177.860 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "MWG",
-          "reason": "Tăng 0,41% phiên 25/09, khối lượng khớp lệnh 70.010 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "FRT",
+          "reason": "Giảm 0,07% phiên 25/09, khối lượng khớp lệnh 75.590 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "0/4 mã tăng giá phiên 25/09, mã giảm ít nhất là BCM (-0,37%), trong khi SZC giảm sâu nhất nhóm (-1,10%).",
+      "outlook": "0/4 mã tăng giá phiên 25/09, mã giảm ít nhất là KBC (-0,19%), trong khi SZC giảm sâu nhất nhóm (-1,92%).",
       "picks": [
         {
-          "ticker": "BCM",
-          "reason": "Giảm 0,37% phiên 25/09, khối lượng khớp lệnh 23.160 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "KBC",
+          "reason": "Giảm 0,19% phiên 25/09, khối lượng khớp lệnh 74.830 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "IDC",
-          "reason": "Giảm 0,60% phiên 25/09, khối lượng khớp lệnh 42.600 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,60% phiên 25/09, khối lượng khớp lệnh 127.460 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "0/4 mã tăng giá phiên 25/09, mã ít biến động nhất là PLX (0%), trong khi PVS giảm sâu nhất nhóm (-0,31%).",
+      "outlook": "0/4 mã tăng giá phiên 25/09, mã ít biến động nhất là PLX (0%), trong khi PVS giảm sâu nhất nhóm (-2,17%).",
       "picks": [
         {
           "ticker": "PLX",
-          "reason": "Đi ngang (0%) phiên 25/09, khối lượng khớp lệnh 152.280 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "reason": "Đi ngang (0%) phiên 25/09, khối lượng khớp lệnh 390.940 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
-          "ticker": "PVD",
-          "reason": "Đi ngang (0%) phiên 25/09, khối lượng khớp lệnh 194.910 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "GAS",
+          "reason": "Giảm 1,83% phiên 25/09, khối lượng khớp lệnh 104.270 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "1/3 mã tăng giá phiên 25/09, dẫn đầu là SAB (+0,11%), trong khi VNM giảm sâu nhất nhóm (-0,99%).",
+      "outlook": "0/3 mã tăng giá phiên 25/09, mã giảm ít nhất là SAB (-0,57%), trong khi VNM giảm sâu nhất nhóm (-1,32%).",
       "picks": [
         {
           "ticker": "SAB",
-          "reason": "Tăng 0,11% phiên 25/09, khối lượng khớp lệnh 10.950 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 0,57% phiên 25/09, khối lượng khớp lệnh 27.470 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "MSN",
-          "reason": "Giảm 0,14% phiên 25/09, khối lượng khớp lệnh 168.850 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,99% phiên 25/09, khối lượng khớp lệnh 430.540 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     }
