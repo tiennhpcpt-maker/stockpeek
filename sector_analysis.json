@@ -1,47 +1,47 @@
 {
-  "generated_at": "2026-09-29T13:51:21+07:00",
+  "generated_at": "2026-09-29T22:06:28+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index giảm 5,47 điểm (-0,31%) phiên 29/09, đóng cửa 1.775 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index giảm 2,95 điểm (-0,17%) phiên 29/09, đóng cửa 1.778 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "0/8 mã tăng giá phiên 29/09, mã ít biến động nhất là BID (0%), trong khi TCB giảm sâu nhất nhóm (-1,22%).",
+      "outlook": "1/8 mã tăng giá phiên 29/09, dẫn đầu là BID (+0,42%), trong khi STB giảm sâu nhất nhóm (-1,81%).",
       "picks": [
         {
           "ticker": "BID",
-          "reason": "Đi ngang (0%) phiên 29/09, khối lượng khớp lệnh 168.020 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "reason": "Tăng 0,42% phiên 29/09, khối lượng khớp lệnh 221.250 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "ACB",
-          "reason": "Đi ngang (0%) phiên 29/09, khối lượng khớp lệnh 352.240 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "VPB",
+          "reason": "Đi ngang (0%) phiên 29/09, khối lượng khớp lệnh 1.658.830 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "1/6 mã tăng giá phiên 29/09, dẫn đầu là VHM (+0,58%), trong khi NVL giảm sâu nhất nhóm (-6,79%).",
+      "outlook": "1/6 mã tăng giá phiên 29/09, dẫn đầu là VHM (+0,43%), trong khi NVL giảm sâu nhất nhóm (-6,79%).",
       "picks": [
         {
           "ticker": "VHM",
-          "reason": "Tăng 0,58% phiên 29/09, khối lượng khớp lệnh 573.920 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,43% phiên 29/09, khối lượng khớp lệnh 740.930 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VRE",
-          "reason": "Giảm 0,61% phiên 29/09, khối lượng khớp lệnh 213.820 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "PDR",
+          "reason": "Đi ngang (0%) phiên 29/09, khối lượng khớp lệnh 390.960 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "3/6 mã tăng giá phiên 29/09, dẫn đầu là VIX (+0,81%), trong khi HCM giảm sâu nhất nhóm (-0,84%).",
+      "outlook": "3/6 mã tăng giá phiên 29/09, dẫn đầu là HCM (+2,30%), trong khi MBS giảm sâu nhất nhóm (-1,27%).",
       "picks": [
         {
-          "ticker": "VIX",
-          "reason": "Tăng 0,81% phiên 29/09, khối lượng khớp lệnh 1.500.290 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "HCM",
+          "reason": "Tăng 2,30% phiên 29/09, khối lượng khớp lệnh 372.090 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "VND",
-          "reason": "Tăng 0,72% phiên 29/09, khối lượng khớp lệnh 556.310 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,72% phiên 29/09, khối lượng khớp lệnh 717.900 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
@@ -51,67 +51,67 @@
       "picks": [
         {
           "ticker": "HSG",
-          "reason": "Tăng 1,92% phiên 29/09, khối lượng khớp lệnh 156.170 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,92% phiên 29/09, khối lượng khớp lệnh 211.300 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "NKG",
-          "reason": "Tăng 0,42% phiên 29/09, khối lượng khớp lệnh 116.680 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "HPG",
+          "reason": "Tăng 0,50% phiên 29/09, khối lượng khớp lệnh 1.877.390 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "1/4 mã tăng giá phiên 29/09, dẫn đầu là DGW (+0,55%), trong khi PNJ giảm sâu nhất nhóm (-6,84%).",
+      "outlook": "2/4 mã tăng giá phiên 29/09, dẫn đầu là FRT (+1,43%), trong khi PNJ giảm sâu nhất nhóm (-6,84%).",
       "picks": [
         {
-          "ticker": "DGW",
-          "reason": "Tăng 0,55% phiên 29/09, khối lượng khớp lệnh 103.260 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "FRT",
+          "reason": "Tăng 1,43% phiên 29/09, khối lượng khớp lệnh 75.980 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "MWG",
-          "reason": "Giảm 0,28% phiên 29/09, khối lượng khớp lệnh 90.690 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "DGW",
+          "reason": "Tăng 0,55% phiên 29/09, khối lượng khớp lệnh 154.470 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "1/4 mã tăng giá phiên 29/09, dẫn đầu là BCM (+0,90%), trong khi KBC giảm sâu nhất nhóm (-1,55%).",
+      "outlook": "2/4 mã tăng giá phiên 29/09, dẫn đầu là BCM (+1,41%), trong khi KBC giảm sâu nhất nhóm (-1,16%).",
       "picks": [
         {
           "ticker": "BCM",
-          "reason": "Tăng 0,90% phiên 29/09, khối lượng khớp lệnh 23.130 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,41% phiên 29/09, khối lượng khớp lệnh 34.410 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "SZC",
-          "reason": "Giảm 0,29% phiên 29/09, khối lượng khớp lệnh 13.110 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "IDC",
+          "reason": "Tăng 0,30% phiên 29/09, khối lượng khớp lệnh 61.920 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "4/4 mã tăng giá phiên 29/09, dẫn đầu là PLX (+2,53%).",
+      "outlook": "4/4 mã tăng giá phiên 29/09, dẫn đầu là PLX (+2,39%).",
       "picks": [
         {
           "ticker": "PLX",
-          "reason": "Tăng 2,53% phiên 29/09, khối lượng khớp lệnh 411.240 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,39% phiên 29/09, khối lượng khớp lệnh 532.390 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "PVS",
-          "reason": "Tăng 1,50% phiên 29/09, khối lượng khớp lệnh 493.860 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,10% phiên 29/09, khối lượng khớp lệnh 720.600 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "0/3 mã tăng giá phiên 29/09, mã ít biến động nhất là MSN (0%), trong khi VNM giảm sâu nhất nhóm (-0,50%).",
+      "outlook": "1/3 mã tăng giá phiên 29/09, dẫn đầu là MSN (+0,58%), trong khi SAB giảm sâu nhất nhóm (-0,69%).",
       "picks": [
         {
           "ticker": "MSN",
-          "reason": "Đi ngang (0%) phiên 29/09, khối lượng khớp lệnh 135.760 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "reason": "Tăng 0,58% phiên 29/09, khối lượng khớp lệnh 192.750 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "SAB",
-          "reason": "Giảm 0,46% phiên 29/09, khối lượng khớp lệnh 47.920 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "VNM",
+          "reason": "Đi ngang (0%) phiên 29/09, khối lượng khớp lệnh 126.830 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     }
