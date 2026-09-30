@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-09-30T13:39:23+07:00",
+  "generated_at": "2026-09-30T22:21:28+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 30/09.",
+  "market_note": "VN-Index giảm 9,11 điểm (-0,51%) phiên 30/09, đóng cửa 1.769 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "5/8 mã tăng giá phiên 30/09, dẫn đầu là VPB (+1,53%), trong khi STB giảm sâu nhất nhóm (-1,45%).",
+      "outlook": "5/8 mã tăng giá phiên 30/09, dẫn đầu là VPB (+1,96%), trong khi STB giảm sâu nhất nhóm (-2,37%).",
       "picks": [
         {
           "ticker": "VPB",
-          "reason": "Tăng 1,53% phiên 30/09, khối lượng khớp lệnh 919.000 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,96% phiên 30/09, khối lượng khớp lệnh 1.677.490 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "CTG",
-          "reason": "Tăng 1,34% phiên 30/09, khối lượng khớp lệnh 317.360 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,84% phiên 30/09, khối lượng khớp lệnh 467.220 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "2/6 mã tăng giá phiên 30/09, dẫn đầu là VRE (+0,62%), trong khi PDR giảm sâu nhất nhóm (-1,33%).",
+      "outlook": "1/6 mã tăng giá phiên 30/09, dẫn đầu là VRE (+0,83%), trong khi VHM giảm sâu nhất nhóm (-1,86%).",
       "picks": [
         {
           "ticker": "VRE",
-          "reason": "Tăng 0,62% phiên 30/09, khối lượng khớp lệnh 147.350 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,83% phiên 30/09, khối lượng khớp lệnh 314.620 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "DXG",
-          "reason": "Tăng 0,49% phiên 30/09, khối lượng khớp lệnh 324.040 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Đi ngang (0%) phiên 30/09, khối lượng khớp lệnh 686.470 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "4/6 mã tăng giá phiên 30/09, dẫn đầu là MBS (+1,29%), trong khi HCM giảm sâu nhất nhóm (-0,41%).",
+      "outlook": "1/6 mã tăng giá phiên 30/09, dẫn đầu là MBS (+0,65%), trong khi HCM giảm sâu nhất nhóm (-2,66%).",
       "picks": [
         {
           "ticker": "MBS",
-          "reason": "Tăng 1,29% phiên 30/09, khối lượng khớp lệnh 100.280 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,65% phiên 30/09, khối lượng khớp lệnh 204.170 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VCI",
-          "reason": "Tăng 0,77% phiên 30/09, khối lượng khớp lệnh 253.700 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "SSI",
+          "reason": "Giảm 0,25% phiên 30/09, khối lượng khớp lệnh 1.501.110 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "1/3 mã tăng giá phiên 30/09, dẫn đầu là NKG (+0,11%), trong khi HSG giảm sâu nhất nhóm (-0,99%).",
+      "outlook": "0/3 mã tăng giá phiên 30/09, mã giảm ít nhất là NKG (-0,11%), trong khi HSG giảm sâu nhất nhóm (-0,99%).",
       "picks": [
         {
           "ticker": "NKG",
-          "reason": "Tăng 0,11% phiên 30/09, khối lượng khớp lệnh 69.770 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 0,11% phiên 30/09, khối lượng khớp lệnh 121.170 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "HPG",
-          "reason": "Giảm 0,25% phiên 30/09, khối lượng khớp lệnh 838.490 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,74% phiên 30/09, khối lượng khớp lệnh 1.335.030 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "3/4 mã tăng giá phiên 30/09, dẫn đầu là FRT (+1,83%), trong khi PNJ giảm sâu nhất nhóm (-6,99%).",
+      "outlook": "2/4 mã tăng giá phiên 30/09, dẫn đầu là FRT (+3,52%), trong khi PNJ giảm sâu nhất nhóm (-6,99%).",
       "picks": [
         {
           "ticker": "FRT",
-          "reason": "Tăng 1,83% phiên 30/09, khối lượng khớp lệnh 56.170 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 3,52% phiên 30/09, khối lượng khớp lệnh 127.430 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "MWG",
-          "reason": "Tăng 0,70% phiên 30/09, khối lượng khớp lệnh 173.350 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,70% phiên 30/09, khối lượng khớp lệnh 296.600 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "3/4 mã tăng giá phiên 30/09, dẫn đầu là SZC (+1,74%), trong khi KBC giảm sâu nhất nhóm (-0,98%).",
+      "outlook": "3/4 mã tăng giá phiên 30/09, dẫn đầu là SZC (+0,58%), trong khi KBC giảm sâu nhất nhóm (-0,39%).",
       "picks": [
         {
           "ticker": "SZC",
-          "reason": "Tăng 1,74% phiên 30/09, khối lượng khớp lệnh 15.360 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,58% phiên 30/09, khối lượng khớp lệnh 24.850 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "BCM",
-          "reason": "Tăng 1,64% phiên 30/09, khối lượng khớp lệnh 35.470 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "IDC",
+          "reason": "Tăng 0,30% phiên 30/09, khối lượng khớp lệnh 176.220 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "0/4 mã tăng giá phiên 30/09, mã giảm ít nhất là PVS (-1,47%), trong khi PVD giảm sâu nhất nhóm (-2,64%).",
+      "outlook": "0/4 mã tăng giá phiên 30/09, mã giảm ít nhất là PVS (-1,76%), trong khi PVD giảm sâu nhất nhóm (-3,43%).",
       "picks": [
         {
           "ticker": "PVS",
-          "reason": "Giảm 1,47% phiên 30/09, khối lượng khớp lệnh 214.390 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 1,76% phiên 30/09, khối lượng khớp lệnh 353.950 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "PLX",
-          "reason": "Giảm 1,65% phiên 30/09, khối lượng khớp lệnh 159.890 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 2,33% phiên 30/09, khối lượng khớp lệnh 271.260 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "2/3 mã tăng giá phiên 30/09, dẫn đầu là MSN (+0,86%), trong khi VNM giảm sâu nhất nhóm (-0,83%).",
+      "outlook": "0/3 mã tăng giá phiên 30/09, mã giảm ít nhất là SAB (-0,35%), trong khi VNM giảm sâu nhất nhóm (-1,49%).",
       "picks": [
         {
-          "ticker": "MSN",
-          "reason": "Tăng 0,86% phiên 30/09, khối lượng khớp lệnh 251.390 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "SAB",
+          "reason": "Giảm 0,35% phiên 30/09, khối lượng khớp lệnh 36.140 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "SAB",
-          "reason": "Tăng 0,12% phiên 30/09, khối lượng khớp lệnh 20.350 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MSN",
+          "reason": "Giảm 0,58% phiên 30/09, khối lượng khớp lệnh 412.210 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     }
