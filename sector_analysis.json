@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-10-07T14:11:23+07:00",
+  "generated_at": "2026-10-07T22:47:29+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index giảm 7,82 điểm (-0,44%) phiên 07/10, đóng cửa 1.751 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index giảm 5,69 điểm (-0,32%) phiên 07/10, đóng cửa 1.753 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "2/8 mã tăng giá phiên 07/10, dẫn đầu là VPB (+1,08%), trong khi STB giảm sâu nhất nhóm (-1,48%).",
+      "outlook": "2/8 mã tăng giá phiên 07/10, dẫn đầu là VPB (+0,86%), trong khi STB giảm sâu nhất nhóm (-1,33%).",
       "picks": [
         {
           "ticker": "VPB",
-          "reason": "Tăng 1,08% phiên 07/10, khối lượng khớp lệnh 1.023.820 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,86% phiên 07/10, khối lượng khớp lệnh 1.544.450 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "ACB",
-          "reason": "Tăng 0,73% phiên 07/10, khối lượng khớp lệnh 775.860 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,24% phiên 07/10, khối lượng khớp lệnh 937.820 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "0/6 mã tăng giá phiên 07/10, mã giảm ít nhất là NVL (-0,96%), trong khi VRE giảm sâu nhất nhóm (-1,68%).",
+      "outlook": "0/6 mã tăng giá phiên 07/10, mã ít biến động nhất là PDR (0%), trong khi VRE giảm sâu nhất nhóm (-2,31%).",
       "picks": [
         {
-          "ticker": "NVL",
-          "reason": "Giảm 0,96% phiên 07/10, khối lượng khớp lệnh 2.518.600 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "PDR",
+          "reason": "Đi ngang (0%) phiên 07/10, khối lượng khớp lệnh 206.160 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
-          "ticker": "DXG",
-          "reason": "Giảm 1,01% phiên 07/10, khối lượng khớp lệnh 347.250 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "VIC",
+          "reason": "Giảm 0,86% phiên 07/10, khối lượng khớp lệnh 399.500 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "0/6 mã tăng giá phiên 07/10, mã giảm ít nhất là SSI (-0,25%), trong khi MBS giảm sâu nhất nhóm (-1,95%).",
+      "outlook": "0/6 mã tăng giá phiên 07/10, mã giảm ít nhất là SSI (-0,51%), trong khi HCM giảm sâu nhất nhóm (-2,13%).",
       "picks": [
         {
           "ticker": "SSI",
-          "reason": "Giảm 0,25% phiên 07/10, khối lượng khớp lệnh 783.360 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,51% phiên 07/10, khối lượng khớp lệnh 1.061.260 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "VCI",
-          "reason": "Giảm 1,03% phiên 07/10, khối lượng khớp lệnh 334.350 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 1,55% phiên 07/10, khối lượng khớp lệnh 397.810 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "0/3 mã tăng giá phiên 07/10, mã giảm ít nhất là HSG (-0,10%), trong khi NKG giảm sâu nhất nhóm (-1,38%).",
+      "outlook": "0/3 mã tăng giá phiên 07/10, mã giảm ít nhất là HSG (-0,10%), trong khi NKG giảm sâu nhất nhóm (-1,27%).",
       "picks": [
         {
           "ticker": "HSG",
-          "reason": "Giảm 0,10% phiên 07/10, khối lượng khớp lệnh 108.500 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,10% phiên 07/10, khối lượng khớp lệnh 139.830 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "HPG",
-          "reason": "Giảm 0,49% phiên 07/10, khối lượng khớp lệnh 928.570 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,73% phiên 07/10, khối lượng khớp lệnh 1.339.510 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "2/4 mã tăng giá phiên 07/10, dẫn đầu là FRT (+2,76%), trong khi PNJ giảm sâu nhất nhóm (-6,95%).",
+      "outlook": "2/4 mã tăng giá phiên 07/10, dẫn đầu là FRT (+3,79%), trong khi PNJ giảm sâu nhất nhóm (-6,20%).",
       "picks": [
         {
           "ticker": "FRT",
-          "reason": "Tăng 2,76% phiên 07/10, khối lượng khớp lệnh 65.530 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 3,79% phiên 07/10, khối lượng khớp lệnh 126.860 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "MWG",
-          "reason": "Tăng 1,47% phiên 07/10, khối lượng khớp lệnh 383.160 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,53% phiên 07/10, khối lượng khớp lệnh 535.650 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "3/4 mã tăng giá phiên 07/10, dẫn đầu là IDC (+2,06%).",
+      "outlook": "4/4 mã tăng giá phiên 07/10, dẫn đầu là IDC (+5,01%).",
       "picks": [
         {
           "ticker": "IDC",
-          "reason": "Tăng 2,06% phiên 07/10, khối lượng khớp lệnh 216.410 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 5,01% phiên 07/10, khối lượng khớp lệnh 336.290 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "SZC",
-          "reason": "Tăng 1,50% phiên 07/10, khối lượng khớp lệnh 18.470 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,10% phiên 07/10, khối lượng khớp lệnh 20.500 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "1/4 mã tăng giá phiên 07/10, dẫn đầu là PVS (+0,60%), trong khi PVD giảm sâu nhất nhóm (-1,08%).",
+      "outlook": "0/4 mã tăng giá phiên 07/10, mã ít biến động nhất là PLX (0%), trong khi PVD giảm sâu nhất nhóm (-1,61%).",
       "picks": [
         {
-          "ticker": "PVS",
-          "reason": "Tăng 0,60% phiên 07/10, khối lượng khớp lệnh 268.180 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PLX",
+          "reason": "Đi ngang (0%) phiên 07/10, khối lượng khớp lệnh 204.670 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
-          "ticker": "PLX",
-          "reason": "Giảm 0,41% phiên 07/10, khối lượng khớp lệnh 159.740 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "PVS",
+          "reason": "Đi ngang (0%) phiên 07/10, khối lượng khớp lệnh 328.130 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "2/3 mã tăng giá phiên 07/10, dẫn đầu là MSN (+4,17%), trong khi VNM giảm sâu nhất nhóm (-0,17%).",
+      "outlook": "2/3 mã tăng giá phiên 07/10, dẫn đầu là MSN (+4,44%), trong khi VNM giảm sâu nhất nhóm (-0,68%).",
       "picks": [
         {
           "ticker": "MSN",
-          "reason": "Tăng 4,17% phiên 07/10, khối lượng khớp lệnh 1.255.610 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 4,44% phiên 07/10, khối lượng khớp lệnh 1.556.340 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "SAB",
-          "reason": "Tăng 0,24% phiên 07/10, khối lượng khớp lệnh 21.060 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,71% phiên 07/10, khối lượng khớp lệnh 29.290 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     }
