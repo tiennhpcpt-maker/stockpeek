@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-10-09T22:34:57+07:00",
+  "generated_at": "2026-10-10T14:01:13+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index giảm 3,88 điểm (-0,22%) phiên 09/10, đóng cửa 1.735 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index giảm 3,88 điểm (-0,22%) phiên 10/10, đóng cửa 1.735 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "5/8 mã tăng giá phiên 09/10, dẫn đầu là VPB (+1,49%), trong khi ACB giảm sâu nhất nhóm (-0,98%).",
+      "outlook": "5/8 mã tăng giá phiên 10/10, dẫn đầu là VPB (+1,49%), trong khi ACB giảm sâu nhất nhóm (-0,98%).",
       "picks": [
         {
           "ticker": "VPB",
-          "reason": "Tăng 1,49% phiên 09/10, khối lượng khớp lệnh 2.015.590 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,49% phiên 10/10, khối lượng khớp lệnh 2.015.590 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "TCB",
-          "reason": "Tăng 1,41% phiên 09/10, khối lượng khớp lệnh 1.520.770 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,41% phiên 10/10, khối lượng khớp lệnh 1.520.770 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "5/6 mã tăng giá phiên 09/10, dẫn đầu là NVL (+6,83%), trong khi VIC giảm sâu nhất nhóm (-1,10%).",
+      "outlook": "5/6 mã tăng giá phiên 10/10, dẫn đầu là NVL (+6,83%), trong khi VIC giảm sâu nhất nhóm (-1,10%).",
       "picks": [
         {
           "ticker": "NVL",
-          "reason": "Tăng 6,83% phiên 09/10, khối lượng khớp lệnh 7.309.690 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 6,83% phiên 10/10, khối lượng khớp lệnh 7.309.690 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "PDR",
-          "reason": "Tăng 1,80% phiên 09/10, khối lượng khớp lệnh 939.660 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,80% phiên 10/10, khối lượng khớp lệnh 939.660 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "2/6 mã tăng giá phiên 09/10, dẫn đầu là VIX (+3,10%), trong khi HCM giảm sâu nhất nhóm (-1,91%).",
+      "outlook": "2/6 mã tăng giá phiên 10/10, dẫn đầu là VIX (+3,10%), trong khi HCM giảm sâu nhất nhóm (-1,91%).",
       "picks": [
         {
           "ticker": "VIX",
-          "reason": "Tăng 3,10% phiên 09/10, khối lượng khớp lệnh 4.571.430 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 3,10% phiên 10/10, khối lượng khớp lệnh 4.571.430 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "VND",
-          "reason": "Tăng 0,76% phiên 09/10, khối lượng khớp lệnh 1.761.440 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,76% phiên 10/10, khối lượng khớp lệnh 1.761.440 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "1/3 mã tăng giá phiên 09/10, dẫn đầu là NKG (+1,53%), trong khi HPG giảm sâu nhất nhóm (-0,25%).",
+      "outlook": "1/3 mã tăng giá phiên 10/10, dẫn đầu là NKG (+1,53%), trong khi HPG giảm sâu nhất nhóm (-0,25%).",
       "picks": [
         {
           "ticker": "NKG",
-          "reason": "Tăng 1,53% phiên 09/10, khối lượng khớp lệnh 257.490 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,53% phiên 10/10, khối lượng khớp lệnh 257.490 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "HSG",
-          "reason": "Giảm 0,10% phiên 09/10, khối lượng khớp lệnh 200.110 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,10% phiên 10/10, khối lượng khớp lệnh 200.110 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "1/4 mã tăng giá phiên 09/10, dẫn đầu là PNJ (+6,85%), trong khi DGW giảm sâu nhất nhóm (-1,05%).",
+      "outlook": "1/4 mã tăng giá phiên 10/10, dẫn đầu là PNJ (+6,85%), trong khi DGW giảm sâu nhất nhóm (-1,05%).",
       "picks": [
         {
           "ticker": "PNJ",
-          "reason": "Tăng 6,85% phiên 09/10, khối lượng khớp lệnh 714.680 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 6,85% phiên 10/10, khối lượng khớp lệnh 714.680 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "MWG",
-          "reason": "Giảm 0,26% phiên 09/10, khối lượng khớp lệnh 280.140 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,26% phiên 10/10, khối lượng khớp lệnh 280.140 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "2/4 mã tăng giá phiên 09/10, dẫn đầu là IDC (+1,72%), trong khi BCM giảm sâu nhất nhóm (-2,17%).",
+      "outlook": "2/4 mã tăng giá phiên 10/10, dẫn đầu là IDC (+1,72%), trong khi BCM giảm sâu nhất nhóm (-2,17%).",
       "picks": [
         {
           "ticker": "IDC",
-          "reason": "Tăng 1,72% phiên 09/10, khối lượng khớp lệnh 179.300 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,72% phiên 10/10, khối lượng khớp lệnh 179.300 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "KBC",
-          "reason": "Tăng 0,39% phiên 09/10, khối lượng khớp lệnh 107.550 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,39% phiên 10/10, khối lượng khớp lệnh 107.550 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "0/4 mã tăng giá phiên 09/10, mã giảm ít nhất là PVD (-0,27%), trong khi GAS giảm sâu nhất nhóm (-1,59%).",
+      "outlook": "0/4 mã tăng giá phiên 10/10, mã giảm ít nhất là PVD (-0,27%), trong khi GAS giảm sâu nhất nhóm (-1,59%).",
       "picks": [
         {
           "ticker": "PVD",
-          "reason": "Giảm 0,27% phiên 09/10, khối lượng khớp lệnh 541.870 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,27% phiên 10/10, khối lượng khớp lệnh 541.870 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "PLX",
-          "reason": "Giảm 0,66% phiên 09/10, khối lượng khớp lệnh 746.580 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,66% phiên 10/10, khối lượng khớp lệnh 746.580 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "0/3 mã tăng giá phiên 09/10, mã ít biến động nhất là MSN (0%), trong khi VNM giảm sâu nhất nhóm (-0,35%).",
+      "outlook": "0/3 mã tăng giá phiên 10/10, mã ít biến động nhất là MSN (0%), trong khi VNM giảm sâu nhất nhóm (-0,35%).",
       "picks": [
         {
           "ticker": "MSN",
-          "reason": "Đi ngang (0%) phiên 09/10, khối lượng khớp lệnh 503.760 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "reason": "Đi ngang (0%) phiên 10/10, khối lượng khớp lệnh 503.760 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
           "ticker": "SAB",
-          "reason": "Giảm 0,23% phiên 09/10, khối lượng khớp lệnh 47.480 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,23% phiên 10/10, khối lượng khớp lệnh 47.480 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     }
