@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-10-12T14:18:29+07:00",
+  "generated_at": "2026-10-13T01:13:50+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index giảm 14,47 điểm (-0,83%) phiên 12/10, đóng cửa 1.721 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index giảm 14,11 điểm (-0,81%) phiên 13/10, đóng cửa 1.721 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "6/8 mã tăng giá phiên 12/10, dẫn đầu là VPB (+2,52%), trong khi BID giảm sâu nhất nhóm (-0,15%).",
+      "outlook": "5/8 mã tăng giá phiên 13/10, dẫn đầu là VPB (+2,52%), trong khi STB giảm sâu nhất nhóm (-0,59%).",
       "picks": [
         {
           "ticker": "VPB",
-          "reason": "Tăng 2,52% phiên 12/10, khối lượng khớp lệnh 2.845.000 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,52% phiên 13/10, khối lượng khớp lệnh 3.076.910 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "ACB",
-          "reason": "Tăng 1,24% phiên 12/10, khối lượng khớp lệnh 724.410 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,49% phiên 13/10, khối lượng khớp lệnh 796.910 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "2/6 mã tăng giá phiên 12/10, dẫn đầu là NVL (+2,74%), trong khi VIC giảm sâu nhất nhóm (-2,88%).",
+      "outlook": "2/6 mã tăng giá phiên 13/10, dẫn đầu là NVL (+1,83%), trong khi VHM giảm sâu nhất nhóm (-3,18%).",
       "picks": [
         {
           "ticker": "NVL",
-          "reason": "Tăng 2,74% phiên 12/10, khối lượng khớp lệnh 1.537.590 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,83% phiên 13/10, khối lượng khớp lệnh 1.867.270 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "DXG",
-          "reason": "Tăng 2,15% phiên 12/10, khối lượng khớp lệnh 533.150 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,54% phiên 13/10, khối lượng khớp lệnh 632.350 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "2/6 mã tăng giá phiên 12/10, dẫn đầu là HCM (+0,86%), trong khi MBS giảm sâu nhất nhóm (-0,68%).",
+      "outlook": "3/6 mã tăng giá phiên 13/10, dẫn đầu là VIX (+0,43%), trong khi MBS giảm sâu nhất nhóm (-0,68%).",
       "picks": [
         {
-          "ticker": "HCM",
-          "reason": "Tăng 0,86% phiên 12/10, khối lượng khớp lệnh 127.210 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VIX",
+          "reason": "Tăng 0,43% phiên 13/10, khối lượng khớp lệnh 2.015.500 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "SSI",
-          "reason": "Tăng 0,26% phiên 12/10, khối lượng khớp lệnh 972.220 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,26% phiên 13/10, khối lượng khớp lệnh 1.116.330 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "3/3 mã tăng giá phiên 12/10, dẫn đầu là NKG (+6,67%).",
+      "outlook": "3/3 mã tăng giá phiên 13/10, dẫn đầu là NKG (+6,89%).",
       "picks": [
         {
           "ticker": "NKG",
-          "reason": "Tăng 6,67% phiên 12/10, khối lượng khớp lệnh 458.120 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 6,89% phiên 13/10, khối lượng khớp lệnh 500.020 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "HPG",
-          "reason": "Tăng 2,99% phiên 12/10, khối lượng khớp lệnh 2.889.180 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "HSG",
+          "reason": "Tăng 3,54% phiên 13/10, khối lượng khớp lệnh 526.830 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "2/4 mã tăng giá phiên 12/10, dẫn đầu là DGW (+0,21%), trong khi PNJ giảm sâu nhất nhóm (-5,64%).",
+      "outlook": "0/4 mã tăng giá phiên 13/10, mã giảm ít nhất là FRT (-0,07%), trong khi PNJ giảm sâu nhất nhóm (-6,92%).",
       "picks": [
         {
-          "ticker": "DGW",
-          "reason": "Tăng 0,21% phiên 12/10, khối lượng khớp lệnh 69.380 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "FRT",
+          "reason": "Giảm 0,07% phiên 13/10, khối lượng khớp lệnh 47.490 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "FRT",
-          "reason": "Tăng 0,20% phiên 12/10, khối lượng khớp lệnh 43.970 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MWG",
+          "reason": "Giảm 0,40% phiên 13/10, khối lượng khớp lệnh 151.400 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "1/4 mã tăng giá phiên 12/10, dẫn đầu là SZC (+2,37%), trong khi IDC giảm sâu nhất nhóm (-2,54%).",
+      "outlook": "2/4 mã tăng giá phiên 13/10, dẫn đầu là SZC (+3,25%), trong khi IDC giảm sâu nhất nhóm (-0,56%).",
       "picks": [
         {
           "ticker": "SZC",
-          "reason": "Tăng 2,37% phiên 12/10, khối lượng khớp lệnh 22.160 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 3,25% phiên 13/10, khối lượng khớp lệnh 30.200 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "BCM",
-          "reason": "Đi ngang (0%) phiên 12/10, khối lượng khớp lệnh 16.960 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "reason": "Tăng 0,26% phiên 13/10, khối lượng khớp lệnh 21.090 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "0/4 mã tăng giá phiên 12/10, mã giảm ít nhất là PVD (-1,65%), trong khi PLX giảm sâu nhất nhóm (-2,68%).",
+      "outlook": "0/4 mã tăng giá phiên 13/10, mã giảm ít nhất là PVS (-1,18%), trong khi PLX giảm sâu nhất nhóm (-3,08%).",
       "picks": [
         {
-          "ticker": "PVD",
-          "reason": "Giảm 1,65% phiên 12/10, khối lượng khớp lệnh 252.550 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "PVS",
+          "reason": "Giảm 1,18% phiên 13/10, khối lượng khớp lệnh 251.990 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "PVS",
-          "reason": "Giảm 2,36% phiên 12/10, khối lượng khớp lệnh 216.280 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "PVD",
+          "reason": "Giảm 1,65% phiên 13/10, khối lượng khớp lệnh 285.100 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "2/3 mã tăng giá phiên 12/10, dẫn đầu là SAB (+0,35%), trong khi MSN giảm sâu nhất nhóm (-1,35%).",
+      "outlook": "2/3 mã tăng giá phiên 13/10, dẫn đầu là VNM (+1,21%), trong khi MSN giảm sâu nhất nhóm (-1,48%).",
       "picks": [
         {
-          "ticker": "SAB",
-          "reason": "Tăng 0,35% phiên 12/10, khối lượng khớp lệnh 15.940 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VNM",
+          "reason": "Tăng 1,21% phiên 13/10, khối lượng khớp lệnh 121.380 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VNM",
-          "reason": "Tăng 0,17% phiên 12/10, khối lượng khớp lệnh 71.750 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "SAB",
+          "reason": "Tăng 0,47% phiên 13/10, khối lượng khớp lệnh 21.020 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     }
