@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-10-13T23:27:59+07:00",
+  "generated_at": "2026-10-14T13:06:19+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "VN-Index giảm 1,56 điểm (-0,09%) phiên 13/10, đóng cửa 1.719 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
+  "market_note": "VN-Index giảm 9,70 điểm (-0,56%) phiên 14/10, đóng cửa 1.710 điểm. Dữ liệu nhóm ngành bên dưới tính từ giá khớp lệnh thực tế các mã tiêu biểu.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "1/8 mã tăng giá phiên 13/10, dẫn đầu là TCB (+1,07%), trong khi STB giảm sâu nhất nhóm (-1,94%).",
+      "outlook": "3/8 mã tăng giá phiên 14/10, dẫn đầu là MBB (+1,31%), trong khi STB giảm sâu nhất nhóm (-1,52%).",
       "picks": [
         {
-          "ticker": "TCB",
-          "reason": "Tăng 1,07% phiên 13/10, khối lượng khớp lệnh 2.317.970 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MBB",
+          "reason": "Tăng 1,31% phiên 14/10, khối lượng khớp lệnh 1.033.300 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "ACB",
-          "reason": "Đi ngang (0%) phiên 13/10, khối lượng khớp lệnh 426.920 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "VCB",
+          "reason": "Tăng 0,18% phiên 14/10, khối lượng khớp lệnh 96.900 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "3/6 mã tăng giá phiên 13/10, dẫn đầu là VIC (+1,37%), trong khi PDR giảm sâu nhất nhóm (-1,33%).",
+      "outlook": "0/6 mã tăng giá phiên 14/10, mã giảm ít nhất là VRE (-0,22%), trong khi NVL giảm sâu nhất nhóm (-2,24%).",
       "picks": [
         {
-          "ticker": "VIC",
-          "reason": "Tăng 1,37% phiên 13/10, khối lượng khớp lệnh 313.380 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VRE",
+          "reason": "Giảm 0,22% phiên 14/10, khối lượng khớp lệnh 64.500 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "DXG",
-          "reason": "Tăng 1,01% phiên 13/10, khối lượng khớp lệnh 790.940 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 0,70% phiên 14/10, khối lượng khớp lệnh 85.250 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "0/6 mã tăng giá phiên 13/10, mã giảm ít nhất là VCI (-0,54%), trong khi VND giảm sâu nhất nhóm (-1,90%).",
+      "outlook": "1/6 mã tăng giá phiên 14/10, dẫn đầu là MBS (+0,69%), trong khi VCI giảm sâu nhất nhóm (-0,82%).",
       "picks": [
         {
-          "ticker": "VCI",
-          "reason": "Giảm 0,54% phiên 13/10, khối lượng khớp lệnh 579.650 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "MBS",
+          "reason": "Tăng 0,69% phiên 14/10, khối lượng khớp lệnh 115.960 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "MBS",
-          "reason": "Giảm 0,68% phiên 13/10, khối lượng khớp lệnh 167.950 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "SSI",
+          "reason": "Đi ngang (0%) phiên 14/10, khối lượng khớp lệnh 542.820 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "0/3 mã tăng giá phiên 13/10, mã giảm ít nhất là NKG (-1,01%), trong khi HSG giảm sâu nhất nhóm (-1,95%).",
+      "outlook": "1/3 mã tăng giá phiên 14/10, dẫn đầu là HSG (+0,50%), trong khi NKG giảm sâu nhất nhóm (-0,41%).",
       "picks": [
         {
-          "ticker": "NKG",
-          "reason": "Giảm 1,01% phiên 13/10, khối lượng khớp lệnh 123.450 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "HSG",
+          "reason": "Tăng 0,50% phiên 14/10, khối lượng khớp lệnh 118.470 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "HPG",
-          "reason": "Giảm 1,21% phiên 13/10, khối lượng khớp lệnh 1.156.160 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Đi ngang (0%) phiên 14/10, khối lượng khớp lệnh 372.780 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "1/4 mã tăng giá phiên 13/10, dẫn đầu là PNJ (+5,79%), trong khi FRT giảm sâu nhất nhóm (-3,81%).",
+      "outlook": "1/4 mã tăng giá phiên 14/10, dẫn đầu là DGW (+0,98%), trong khi PNJ giảm sâu nhất nhóm (-2,60%).",
       "picks": [
         {
-          "ticker": "PNJ",
-          "reason": "Tăng 5,79% phiên 13/10, khối lượng khớp lệnh 1.370.920 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "DGW",
+          "reason": "Tăng 0,98% phiên 14/10, khối lượng khớp lệnh 66.590 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "MWG",
-          "reason": "Giảm 1,06% phiên 13/10, khối lượng khớp lệnh 266.380 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 1,34% phiên 14/10, khối lượng khớp lệnh 160.640 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "1/4 mã tăng giá phiên 13/10, dẫn đầu là KBC (+1,38%), trong khi IDC giảm sâu nhất nhóm (-2,83%).",
+      "outlook": "0/4 mã tăng giá phiên 14/10, mã giảm ít nhất là BCM (-0,92%), trong khi IDC giảm sâu nhất nhóm (-3,79%).",
       "picks": [
         {
-          "ticker": "KBC",
-          "reason": "Tăng 1,38% phiên 13/10, khối lượng khớp lệnh 163.760 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "BCM",
+          "reason": "Giảm 0,92% phiên 14/10, khối lượng khớp lệnh 15.460 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "SZC",
-          "reason": "Đi ngang (0%) phiên 13/10, khối lượng khớp lệnh 27.520 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "KBC",
+          "reason": "Giảm 0,97% phiên 14/10, khối lượng khớp lệnh 33.710 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "0/4 mã tăng giá phiên 13/10, mã giảm ít nhất là PVD (-0,56%), trong khi PVS giảm sâu nhất nhóm (-1,49%).",
+      "outlook": "1/4 mã tăng giá phiên 14/10, dẫn đầu là PLX (+0,42%), trong khi GAS giảm sâu nhất nhóm (-0,64%).",
       "picks": [
         {
-          "ticker": "PVD",
-          "reason": "Giảm 0,56% phiên 13/10, khối lượng khớp lệnh 299.480 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "PLX",
+          "reason": "Tăng 0,42% phiên 14/10, khối lượng khớp lệnh 98.180 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "GAS",
-          "reason": "Giảm 0,63% phiên 13/10, khối lượng khớp lệnh 117.880 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "PVD",
+          "reason": "Giảm 0,28% phiên 14/10, khối lượng khớp lệnh 109.220 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "0/3 mã tăng giá phiên 13/10, mã giảm ít nhất là SAB (-0,12%), trong khi MSN giảm sâu nhất nhóm (-2,74%).",
+      "outlook": "1/3 mã tăng giá phiên 14/10, dẫn đầu là MSN (+0,42%), trong khi VNM giảm sâu nhất nhóm (-0,86%).",
       "picks": [
         {
-          "ticker": "SAB",
-          "reason": "Giảm 0,12% phiên 13/10, khối lượng khớp lệnh 26.180 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "MSN",
+          "reason": "Tăng 0,42% phiên 14/10, khối lượng khớp lệnh 152.920 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VNM",
-          "reason": "Giảm 0,68% phiên 13/10, khối lượng khớp lệnh 165.480 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "SAB",
+          "reason": "Giảm 0,23% phiên 14/10, khối lượng khớp lệnh 6.390 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     }
