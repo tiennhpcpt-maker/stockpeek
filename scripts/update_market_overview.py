@@ -17,10 +17,10 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_PATH = os.path.join(REPO_ROOT, "market_overview.json")
 
 INDEX_CONFIGS = [
-    {"name": "VN-INDEX", "slug": "vn-index"},
-    {"name": "VN30-INDEX", "slug": "vn30-index"},
-    {"name": "HNX-INDEX", "slug": "hnx-index"},
-    {"name": "UPCOM", "slug": "upcom-index"},
+    {"name": "VN-INDEX", "slug": "vn-index", "vpsCode": "10"},
+    {"name": "VN30-INDEX", "slug": "vn30-index", "vpsCode": "11"},
+    {"name": "HNX-INDEX", "slug": "hnx-index", "vpsCode": "02"},
+    {"name": "UPCOM", "slug": "upcom-index", "vpsCode": "03"},
 ]
 
 DISCLAIMER = (
@@ -62,6 +62,31 @@ def fetch_index_summary(slug):
         "changePct": change_pct,
         "tradingValue": acc_val,
         "foreignNet": round((fbuy or 0) - (fsell or 0), 2),
+    }
+
+
+def fetch_index_summary_vps(vps_code):
+    """Nguon chinh: VPS data feed (giong server.py). 24hMoney chan IP GitHub Actions/Render
+    nen chi con dung de bo sung GT rong NDTNN, khong dung lam nguon chinh nua."""
+    raw = fetch_url(f"https://bgapidatafeed.vps.com.vn/getlistindexdetail/{vps_code}", timeout=8)
+    rows = json.loads(raw)
+    d = rows[0] if rows else None
+    if not d or d.get("cIndex") is None or d.get("oIndex") is None:
+        raise ValueError("VPS khong tra du lieu chi so")
+    cur = float(d["cIndex"])
+    prior = float(d["oIndex"])
+    change = round(cur - prior, 2)
+    change_pct = round(change / prior * 100, 2) if prior else 0.0
+    try:
+        trading_value = round(float(d.get("value") or 0) / 1000, 2)  # trieu dong -> ty dong
+    except (TypeError, ValueError):
+        trading_value = None
+    return {
+        "value": round(cur, 2),
+        "change": change,
+        "changePct": change_pct,
+        "tradingValue": trading_value,
+        "foreignNet": None,  # VPS khong co; bo sung tu 24hMoney neu truy cap duoc
     }
 
 
@@ -116,11 +141,17 @@ def build_overview(indices, now_vn):
     if streak >= 2:
         streak_phrase = f", đánh dấu phiên {verb} thứ {streak} liên tiếp"
 
+    if vni["foreignNet"] is None:
+        foreign_phrase = "khối ngoại: không có dữ liệu GT ròng"
+    else:
+        foreign_phrase = (
+            f"khối ngoại {'mua ròng' if vni['foreignNet'] >= 0 else 'bán ròng'} "
+            f"{fmt_vn(abs(vni['foreignNet']))} tỷ đồng"
+        )
     executive_summary = (
         f"VN-Index {verb} {mag} trong phiên hôm nay, {'tăng' if vni['change']>=0 else 'giảm'} "
         f"{fmt_vn(abs(vni['change']))} điểm ({fmt_vn(vni['changePct'])}%) lên {fmt_vn(vni['value'])} "
-        f"điểm{streak_phrase}. Thanh khoản đạt {fmt_vn(vni['tradingValue'])} tỷ đồng, khối ngoại "
-        f"{'mua ròng' if vni['foreignNet'] >= 0 else 'bán ròng'} {fmt_vn(abs(vni['foreignNet']))} tỷ đồng."
+        f"điểm{streak_phrase}. Thanh khoản đạt {fmt_vn(vni['tradingValue'])} tỷ đồng, {foreign_phrase}."
     )
 
     highlights = [
@@ -129,8 +160,14 @@ def build_overview(indices, now_vn):
         f"HNX-Index {'tăng' if hnx['change']>=0 else 'giảm'} {fmt_vn(abs(hnx['change']))} điểm "
         f"({fmt_vn(hnx['changePct'])}%) lên {fmt_vn(hnx['value'])} điểm; UPCOM {'tăng' if upcom['change']>=0 else 'giảm'} "
         f"{fmt_vn(abs(upcom['change']))} điểm lên {fmt_vn(upcom['value'])} điểm.",
-        f"Khối ngoại trên VN30 {'mua ròng' if vn30['foreignNet'] >= 0 else 'bán ròng'} "
-        f"{fmt_vn(abs(vn30['foreignNet']))} tỷ đồng trong phiên.",
+        (
+            "Khối ngoại trên VN30: không có dữ liệu GT ròng."
+            if vn30["foreignNet"] is None
+            else (
+                f"Khối ngoại trên VN30 {'mua ròng' if vn30['foreignNet'] >= 0 else 'bán ròng'} "
+                f"{fmt_vn(abs(vn30['foreignNet']))} tỷ đồng trong phiên."
+            )
+        ),
     ]
 
     support = round((vni["value"] - abs(vni["change"]) * 1.5) / 10) * 10
@@ -162,7 +199,15 @@ def build_overview(indices, now_vn):
 def main():
     indices = []
     for cfg in INDEX_CONFIGS:
-        summary = fetch_index_summary(cfg["slug"])
+        try:
+            summary = fetch_index_summary_vps(cfg["vpsCode"])
+            try:  # bo sung GT rong NDTNN neu 24hMoney khong chan
+                extra = fetch_index_summary(cfg["slug"])
+                summary["foreignNet"] = extra.get("foreignNet")
+            except Exception:
+                pass
+        except Exception:
+            summary = fetch_index_summary(cfg["slug"])  # du phong
         summary["name"] = cfg["name"]
         indices.append(summary)
 
