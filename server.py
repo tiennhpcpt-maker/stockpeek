@@ -686,10 +686,10 @@ def get_quotes(tickers):
 
 
 INDEX_CONFIGS = [
-    {"name": "VN-INDEX", "slug": "vn-index", "chartSymbol": "VNINDEX"},
-    {"name": "VN30-INDEX", "slug": "vn30-index", "chartSymbol": "VN30"},
-    {"name": "HNX-INDEX", "slug": "hnx-index", "chartSymbol": "HNX"},
-    {"name": "UPCOM", "slug": "upcom-index", "chartSymbol": "UPCOM"},
+    {"name": "VN-INDEX", "slug": "vn-index", "chartSymbol": "VNINDEX", "vpsCode": "10"},
+    {"name": "VN30-INDEX", "slug": "vn30-index", "chartSymbol": "VN30", "vpsCode": "11"},
+    {"name": "HNX-INDEX", "slug": "hnx-index", "chartSymbol": "HNX", "vpsCode": "02"},
+    {"name": "UPCOM", "slug": "upcom-index", "chartSymbol": "UPCOM", "vpsCode": "03"},
 ]
 INDICES_CACHE_TTL = 30  # giây
 _indices_cache = {"data": None, "ts": 0}
@@ -725,6 +725,33 @@ def _fetch_index_summary(slug):
     }
 
 
+def _fetch_index_summary_vps(vps_code):
+    """Nguồn chính: VPS data feed (cùng nguồn với get_quotes, chạy ổn từ Render).
+    24hMoney trả 403 cho IP của Render nên không dùng làm nguồn chính nữa.
+    Trường ot = "thay đổi|%|GTGD (triệu đồng)|mã tăng|mã giảm|mã đứng giá";
+    dấu của thay đổi lấy từ cIndex - oIndex vì ot không mang dấu."""
+    raw = fetch_url(f"https://bgapidatafeed.vps.com.vn/getlistindexdetail/{vps_code}", timeout=8)
+    rows = json.loads(raw)
+    d = rows[0] if rows else None
+    if not d or d.get("cIndex") is None or d.get("oIndex") is None:
+        raise ValueError("VPS không trả dữ liệu chỉ số")
+    cur = float(d["cIndex"])
+    prior = float(d["oIndex"])
+    change = round(cur - prior, 2)
+    change_pct = round(change / prior * 100, 2) if prior else 0.0
+    try:
+        trading_value = round(float(d.get("value") or 0) / 1000, 2)  # triệu đồng -> tỷ đồng
+    except (TypeError, ValueError):
+        trading_value = None
+    return {
+        "value": round(cur, 2),
+        "change": change,
+        "changePct": change_pct,
+        "tradingValue": trading_value,
+        "foreignNet": None,  # VPS không có; bổ sung từ 24hMoney nếu truy cập được
+    }
+
+
 def _fetch_index_series(chart_symbol):
     to_ts = int(time.time())
     from_ts = to_ts - 86400
@@ -750,7 +777,15 @@ def get_market_indices():
     result = []
     for cfg in INDEX_CONFIGS:
         try:
-            summary = _fetch_index_summary(cfg["slug"])
+            try:
+                summary = _fetch_index_summary_vps(cfg["vpsCode"])
+                try:  # bổ sung GT ròng NĐTNN nếu 24hMoney không chặn
+                    extra = _fetch_index_summary(cfg["slug"])
+                    summary["foreignNet"] = extra.get("foreignNet")
+                except Exception:
+                    pass
+            except Exception:
+                summary = _fetch_index_summary(cfg["slug"])  # dự phòng
             try:
                 summary["series"] = _fetch_index_series(cfg["chartSymbol"])
             except Exception:

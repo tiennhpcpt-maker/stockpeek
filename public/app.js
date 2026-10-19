@@ -64,7 +64,8 @@ function renderIndices(list) {
       const isFlat = idx.change === 0;
       const statusClass = isFlat ? "status-ref" : isUp ? "status-up" : "status-down";
       const sign = idx.change > 0 ? "+" : "";
-      const netSign = idx.foreignNet > 0 ? "+" : "";
+      const hasNet = idx.foreignNet !== null && idx.foreignNet !== undefined;
+      const netSign = hasNet && idx.foreignNet > 0 ? "+" : "";
       return `<div class="index-card">
         <div class="index-top">
           <div class="index-name">${idx.name}</div>
@@ -78,7 +79,7 @@ function renderIndices(list) {
           <span>GTGD (tỷ đồng)</span><span class="index-meta-val">${(idx.tradingValue ?? 0).toLocaleString("vi-VN")}</span>
         </div>
         <div class="index-meta">
-          <span>NĐTNN - GT ròng (tỷ đồng)</span><span class="index-meta-val">${netSign}${(idx.foreignNet ?? 0).toLocaleString("vi-VN")}</span>
+          <span>NĐTNN - GT ròng (tỷ đồng)</span><span class="index-meta-val">${hasNet ? netSign + idx.foreignNet.toLocaleString("vi-VN") : "—"}</span>
         </div>
       </div>`;
     })
