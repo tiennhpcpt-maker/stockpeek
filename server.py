@@ -700,8 +700,8 @@ def _extract_num(pattern, text):
     return float(m.group(1)) if m else None
 
 
-def _fetch_index_summary(slug):
-    raw = fetch_url(f"https://24hmoney.vn/indices/{slug}", timeout=10)
+def _fetch_index_summary(slug, timeout=10):
+    raw = fetch_url(f"https://24hmoney.vn/indices/{slug}", timeout=timeout)
     text = raw.decode("utf-8", errors="ignore")
     idx = text.find("indicesDetail:{")
     segment = text[idx : idx + 1500] if idx != -1 else text
@@ -769,31 +769,39 @@ def _fetch_index_series(chart_symbol):
     return closes
 
 
+def _fetch_one_index(cfg):
+    try:
+        try:
+            summary = _fetch_index_summary_vps(cfg["vpsCode"])
+            try:  # bổ sung GT ròng NĐTNN nếu 24hMoney không chặn; timeout ngắn vì
+                  # đang biết 24hMoney chặn IP Render/GitHub Actions, không để nó
+                  # kéo dài cả request chỉ vì 1 trường phụ.
+                extra = _fetch_index_summary(cfg["slug"], timeout=4)
+                summary["foreignNet"] = extra.get("foreignNet")
+            except Exception:
+                pass
+        except Exception:
+            summary = _fetch_index_summary(cfg["slug"])  # dự phòng
+        try:
+            summary["series"] = _fetch_index_series(cfg["chartSymbol"])
+        except Exception:
+            summary["series"] = []
+        summary["name"] = cfg["name"]
+        return summary
+    except Exception as e:
+        return {"name": cfg["name"], "error": str(e)}
+
+
 def get_market_indices():
     now = time.time()
     if _indices_cache["data"] is not None and now - _indices_cache["ts"] < INDICES_CACHE_TTL:
         return _indices_cache["data"]
 
-    result = []
-    for cfg in INDEX_CONFIGS:
-        try:
-            try:
-                summary = _fetch_index_summary_vps(cfg["vpsCode"])
-                try:  # bổ sung GT ròng NĐTNN nếu 24hMoney không chặn
-                    extra = _fetch_index_summary(cfg["slug"])
-                    summary["foreignNet"] = extra.get("foreignNet")
-                except Exception:
-                    pass
-            except Exception:
-                summary = _fetch_index_summary(cfg["slug"])  # dự phòng
-            try:
-                summary["series"] = _fetch_index_series(cfg["chartSymbol"])
-            except Exception:
-                summary["series"] = []
-            summary["name"] = cfg["name"]
-            result.append(summary)
-        except Exception as e:
-            result.append({"name": cfg["name"], "error": str(e)})
+    # 4 chỉ số tải song song (giống ThreadPoolExecutor trong get_news()) — tải
+    # tuần tự từng khiến /api/indices mất ~40s trên Render vì mỗi chỉ số tự nó
+    # đã gọi 3 API ngoài (VPS, 24hMoney, vndirect) nối tiếp nhau.
+    with ThreadPoolExecutor(max_workers=len(INDEX_CONFIGS)) as pool:
+        result = list(pool.map(_fetch_one_index, INDEX_CONFIGS))
 
     _indices_cache["data"] = result
     _indices_cache["ts"] = now
