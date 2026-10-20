@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-19T22:49:54+07:00",
-  "executive_summary": "VN-Index giảm nhẹ trong phiên hôm nay, giảm 16,07 điểm (-0,94%) lên 1.689,84 điểm. Thanh khoản đạt 13.354,74 tỷ đồng, khối ngoại: không có dữ liệu GT ròng.",
+  "generated_at": "2026-10-20T12:33:54+07:00",
+  "executive_summary": "VN-Index giảm nhẹ trong phiên hôm nay, giảm 10,83 điểm (-0,64%) lên 1.679,01 điểm, đánh dấu phiên giảm thứ 2 liên tiếp. Thanh khoản đạt 5.060,23 tỷ đồng, khối ngoại: không có dữ liệu GT ròng.",
   "highlights": [
-    "VN30-Index giảm 16,23 điểm (-0,87%) lên 1.839,18 điểm, thanh khoản 7.905,32 tỷ đồng.",
-    "HNX-Index giảm 1,22 điểm (-0,47%) lên 257,91 điểm; UPCOM tăng 0,15 điểm lên 125,02 điểm.",
+    "VN30-Index giảm 9,73 điểm (-0,53%) lên 1.829,45 điểm, thanh khoản 2.619,50 tỷ đồng.",
+    "HNX-Index giảm 1,82 điểm (-0,71%) lên 256,09 điểm; UPCOM tăng 0,15 điểm lên 125,17 điểm.",
     "Khối ngoại trên VN30: không có dữ liệu GT ròng."
   ],
   "technical_outlook": {
-    "trend": "VN-Index đang trong xu hướng giảm ngắn hạn.",
-    "support": "~1.670 điểm (ước tính tự động từ biến động phiên gần nhất)",
-    "resistance": "~1.710 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "trend": "VN-Index đang trong xu hướng giảm ngắn hạn, đánh dấu phiên giảm thứ 2 liên tiếp.",
+    "support": "~1.660 điểm (ước tính tự động từ biến động phiên gần nhất)",
+    "resistance": "~1.690 điểm (ước tính tự động từ biến động phiên gần nhất)",
     "note": "Đây là ước tính tự động dựa trên số liệu phiên gần nhất, không thay thế phân tích kỹ thuật chuyên sâu."
   },
   "action_notes": [
@@ -19,7 +19,7 @@
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
   "_meta": {
     "last_sign": -1,
-    "streak": 1,
+    "streak": 2,
     "source": "auto-github-actions"
   }
 }
