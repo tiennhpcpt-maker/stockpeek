@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-10-21T12:58:50+07:00",
+  "generated_at": "2026-10-21T21:08:47+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
   "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 21/10.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "8/8 mã tăng giá phiên 21/10, dẫn đầu là STB (+1,77%).",
+      "outlook": "7/8 mã tăng giá phiên 21/10, dẫn đầu là MBB (+1,78%).",
       "picks": [
         {
-          "ticker": "STB",
-          "reason": "Tăng 1,77% phiên 21/10, khối lượng khớp lệnh 81.110 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MBB",
+          "reason": "Tăng 1,78% phiên 21/10, khối lượng khớp lệnh 1.213.080 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "BID",
-          "reason": "Tăng 1,63% phiên 21/10, khối lượng khớp lệnh 158.230 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,34% phiên 21/10, khối lượng khớp lệnh 324.600 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "6/6 mã tăng giá phiên 21/10, dẫn đầu là VIC (+5,98%).",
+      "outlook": "5/6 mã tăng giá phiên 21/10, dẫn đầu là VIC (+6,99%).",
       "picks": [
         {
           "ticker": "VIC",
-          "reason": "Tăng 5,98% phiên 21/10, khối lượng khớp lệnh 119.500 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 6,99% phiên 21/10, khối lượng khớp lệnh 243.420 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "VHM",
-          "reason": "Tăng 5,19% phiên 21/10, khối lượng khớp lệnh 700.870 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 6,92% phiên 21/10, khối lượng khớp lệnh 1.384.740 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "6/6 mã tăng giá phiên 21/10, dẫn đầu là VIX (+4,53%).",
+      "outlook": "6/6 mã tăng giá phiên 21/10, dẫn đầu là VIX (+4,12%).",
       "picks": [
         {
           "ticker": "VIX",
-          "reason": "Tăng 4,53% phiên 21/10, khối lượng khớp lệnh 3.493.370 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 4,12% phiên 21/10, khối lượng khớp lệnh 5.175.720 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "MBS",
-          "reason": "Tăng 2,61% phiên 21/10, khối lượng khớp lệnh 367.520 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VCI",
+          "reason": "Tăng 3,41% phiên 21/10, khối lượng khớp lệnh 1.122.740 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "3/3 mã tăng giá phiên 21/10, dẫn đầu là NKG (+4,46%).",
+      "outlook": "3/3 mã tăng giá phiên 21/10, dẫn đầu là NKG (+3,57%).",
       "picks": [
         {
           "ticker": "NKG",
-          "reason": "Tăng 4,46% phiên 21/10, khối lượng khớp lệnh 818.460 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 3,57% phiên 21/10, khối lượng khớp lệnh 1.113.000 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "HSG",
-          "reason": "Tăng 3,26% phiên 21/10, khối lượng khớp lệnh 538.690 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,86% phiên 21/10, khối lượng khớp lệnh 723.220 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "3/4 mã tăng giá phiên 21/10, dẫn đầu là PNJ (+1,77%), trong khi DGW giảm sâu nhất nhóm (-0,65%).",
+      "outlook": "3/4 mã tăng giá phiên 21/10, dẫn đầu là FRT (+1,74%), trong khi PNJ giảm sâu nhất nhóm (-2,78%).",
       "picks": [
         {
-          "ticker": "PNJ",
-          "reason": "Tăng 1,77% phiên 21/10, khối lượng khớp lệnh 748.540 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "FRT",
+          "reason": "Tăng 1,74% phiên 21/10, khối lượng khớp lệnh 97.520 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "FRT",
-          "reason": "Tăng 1,07% phiên 21/10, khối lượng khớp lệnh 36.750 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MWG",
+          "reason": "Tăng 1,20% phiên 21/10, khối lượng khớp lệnh 274.910 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "4/4 mã tăng giá phiên 21/10, dẫn đầu là SZC (+3,76%).",
+      "outlook": "3/4 mã tăng giá phiên 21/10, dẫn đầu là SZC (+4,30%), trong khi IDC giảm sâu nhất nhóm (-0,85%).",
       "picks": [
         {
           "ticker": "SZC",
-          "reason": "Tăng 3,76% phiên 21/10, khối lượng khớp lệnh 92.180 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 4,30% phiên 21/10, khối lượng khớp lệnh 147.570 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "KBC",
-          "reason": "Tăng 0,56% phiên 21/10, khối lượng khớp lệnh 177.020 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,93% phiên 21/10, khối lượng khớp lệnh 246.120 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "1/4 mã tăng giá phiên 21/10, dẫn đầu là PLX (+0,14%), trong khi PVS giảm sâu nhất nhóm (-1,25%).",
+      "outlook": "2/4 mã tăng giá phiên 21/10, dẫn đầu là GAS (+0,79%), trong khi PVS giảm sâu nhất nhóm (-0,62%).",
       "picks": [
         {
-          "ticker": "PLX",
-          "reason": "Tăng 0,14% phiên 21/10, khối lượng khớp lệnh 159.980 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "GAS",
+          "reason": "Tăng 0,79% phiên 21/10, khối lượng khớp lệnh 64.990 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "GAS",
-          "reason": "Giảm 0,13% phiên 21/10, khối lượng khớp lệnh 30.920 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "PLX",
+          "reason": "Tăng 0,14% phiên 21/10, khối lượng khớp lệnh 303.740 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "3/3 mã tăng giá phiên 21/10, dẫn đầu là MSN (+1,09%).",
+      "outlook": "3/3 mã tăng giá phiên 21/10, dẫn đầu là SAB (+1,17%).",
       "picks": [
         {
-          "ticker": "MSN",
-          "reason": "Tăng 1,09% phiên 21/10, khối lượng khớp lệnh 481.500 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "SAB",
+          "reason": "Tăng 1,17% phiên 21/10, khối lượng khớp lệnh 47.400 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "SAB",
-          "reason": "Tăng 0,58% phiên 21/10, khối lượng khớp lệnh 21.220 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VNM",
+          "reason": "Tăng 1,04% phiên 21/10, khối lượng khớp lệnh 278.520 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     }
