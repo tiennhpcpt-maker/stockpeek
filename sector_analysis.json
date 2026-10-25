@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-10-24T19:56:03+07:00",
+  "generated_at": "2026-10-25T13:02:22+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 24/10.",
+  "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 25/10.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "7/8 mã tăng giá phiên 24/10, dẫn đầu là STB (+6,86%), trong khi MBB giảm sâu nhất nhóm (-0,50%).",
+      "outlook": "7/8 mã tăng giá phiên 25/10, dẫn đầu là STB (+6,86%), trong khi MBB giảm sâu nhất nhóm (-0,50%).",
       "picks": [
         {
           "ticker": "STB",
-          "reason": "Tăng 6,86% phiên 24/10, khối lượng khớp lệnh 823.430 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 6,86% phiên 25/10, khối lượng khớp lệnh 823.430 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "ACB",
-          "reason": "Tăng 3,90% phiên 24/10, khối lượng khớp lệnh 4.099.220 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 3,90% phiên 25/10, khối lượng khớp lệnh 4.099.220 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "3/6 mã tăng giá phiên 24/10, dẫn đầu là VIC (+1,55%), trong khi DXG giảm sâu nhất nhóm (-1,42%).",
+      "outlook": "3/6 mã tăng giá phiên 25/10, dẫn đầu là VIC (+1,55%), trong khi DXG giảm sâu nhất nhóm (-1,42%).",
       "picks": [
         {
           "ticker": "VIC",
-          "reason": "Tăng 1,55% phiên 24/10, khối lượng khớp lệnh 202.060 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,55% phiên 25/10, khối lượng khớp lệnh 202.060 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "PDR",
-          "reason": "Tăng 0,83% phiên 24/10, khối lượng khớp lệnh 840.530 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,83% phiên 25/10, khối lượng khớp lệnh 840.530 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "3/6 mã tăng giá phiên 24/10, dẫn đầu là VIX (+1,20%), trong khi SSI giảm sâu nhất nhóm (-0,99%).",
+      "outlook": "3/6 mã tăng giá phiên 25/10, dẫn đầu là VIX (+1,20%), trong khi SSI giảm sâu nhất nhóm (-0,99%).",
       "picks": [
         {
           "ticker": "VIX",
-          "reason": "Tăng 1,20% phiên 24/10, khối lượng khớp lệnh 3.989.330 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,20% phiên 25/10, khối lượng khớp lệnh 3.989.330 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "MBS",
-          "reason": "Tăng 0,64% phiên 24/10, khối lượng khớp lệnh 287.300 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,64% phiên 25/10, khối lượng khớp lệnh 287.300 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "1/3 mã tăng giá phiên 24/10, dẫn đầu là HSG (+0,91%), trong khi HPG giảm sâu nhất nhóm (-1,41%).",
+      "outlook": "1/3 mã tăng giá phiên 25/10, dẫn đầu là HSG (+0,91%), trong khi HPG giảm sâu nhất nhóm (-1,41%).",
       "picks": [
         {
           "ticker": "HSG",
-          "reason": "Tăng 0,91% phiên 24/10, khối lượng khớp lệnh 365.260 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,91% phiên 25/10, khối lượng khớp lệnh 365.260 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "NKG",
-          "reason": "Đi ngang (0%) phiên 24/10, khối lượng khớp lệnh 584.260 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "reason": "Đi ngang (0%) phiên 25/10, khối lượng khớp lệnh 584.260 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "2/4 mã tăng giá phiên 24/10, dẫn đầu là DGW (+1,09%), trong khi PNJ giảm sâu nhất nhóm (-6,18%).",
+      "outlook": "2/4 mã tăng giá phiên 25/10, dẫn đầu là DGW (+1,09%), trong khi PNJ giảm sâu nhất nhóm (-6,18%).",
       "picks": [
         {
           "ticker": "DGW",
-          "reason": "Tăng 1,09% phiên 24/10, khối lượng khớp lệnh 125.490 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,09% phiên 25/10, khối lượng khớp lệnh 125.490 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "MWG",
-          "reason": "Tăng 0,27% phiên 24/10, khối lượng khớp lệnh 212.730 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,27% phiên 25/10, khối lượng khớp lệnh 212.730 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "3/4 mã tăng giá phiên 24/10, dẫn đầu là SZC (+3,06%), trong khi KBC giảm sâu nhất nhóm (-0,37%).",
+      "outlook": "3/4 mã tăng giá phiên 25/10, dẫn đầu là SZC (+3,06%), trong khi KBC giảm sâu nhất nhóm (-0,37%).",
       "picks": [
         {
           "ticker": "SZC",
-          "reason": "Tăng 3,06% phiên 24/10, khối lượng khớp lệnh 128.630 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 3,06% phiên 25/10, khối lượng khớp lệnh 128.630 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "BCM",
-          "reason": "Tăng 2,08% phiên 24/10, khối lượng khớp lệnh 129.850 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,08% phiên 25/10, khối lượng khớp lệnh 129.850 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "1/4 mã tăng giá phiên 24/10, dẫn đầu là GAS (+0,26%), trong khi PLX giảm sâu nhất nhóm (-1,12%).",
+      "outlook": "1/4 mã tăng giá phiên 25/10, dẫn đầu là GAS (+0,26%), trong khi PLX giảm sâu nhất nhóm (-1,12%).",
       "picks": [
         {
           "ticker": "GAS",
-          "reason": "Tăng 0,26% phiên 24/10, khối lượng khớp lệnh 77.500 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,26% phiên 25/10, khối lượng khớp lệnh 77.500 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "PVS",
-          "reason": "Giảm 0,62% phiên 24/10, khối lượng khớp lệnh 185.110 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,62% phiên 25/10, khối lượng khớp lệnh 185.110 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "1/3 mã tăng giá phiên 24/10, dẫn đầu là MSN (+0,41%), trong khi VNM giảm sâu nhất nhóm (-0,86%).",
+      "outlook": "1/3 mã tăng giá phiên 25/10, dẫn đầu là MSN (+0,41%), trong khi VNM giảm sâu nhất nhóm (-0,86%).",
       "picks": [
         {
           "ticker": "MSN",
-          "reason": "Tăng 0,41% phiên 24/10, khối lượng khớp lệnh 470.110 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,41% phiên 25/10, khối lượng khớp lệnh 470.110 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "SAB",
-          "reason": "Giảm 0,46% phiên 24/10, khối lượng khớp lệnh 21.690 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,46% phiên 25/10, khối lượng khớp lệnh 21.690 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     }
