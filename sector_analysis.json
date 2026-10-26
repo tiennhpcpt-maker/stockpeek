@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-10-26T13:06:30+07:00",
+  "generated_at": "2026-10-26T22:29:27+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
   "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 26/10.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "0/8 mã tăng giá phiên 26/10, mã giảm ít nhất là BID (-0,44%), trong khi VPB giảm sâu nhất nhóm (-1,24%).",
+      "outlook": "0/8 mã tăng giá phiên 26/10, mã ít biến động nhất là ACB (0%), trong khi VPB giảm sâu nhất nhóm (-2,07%).",
       "picks": [
         {
-          "ticker": "BID",
-          "reason": "Giảm 0,44% phiên 26/10, khối lượng khớp lệnh 151.600 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "ACB",
+          "reason": "Đi ngang (0%) phiên 26/10, khối lượng khớp lệnh 884.230 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
-          "ticker": "TCB",
-          "reason": "Giảm 0,73% phiên 26/10, khối lượng khớp lệnh 938.250 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "CTG",
+          "reason": "Giảm 1,13% phiên 26/10, khối lượng khớp lệnh 488.020 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "1/6 mã tăng giá phiên 26/10, dẫn đầu là VIC (+1,10%), trong khi PDR giảm sâu nhất nhóm (-2,88%).",
+      "outlook": "1/6 mã tăng giá phiên 26/10, dẫn đầu là VIC (+0,21%), trong khi PDR giảm sâu nhất nhóm (-3,70%).",
       "picks": [
         {
           "ticker": "VIC",
-          "reason": "Tăng 1,10% phiên 26/10, khối lượng khớp lệnh 117.930 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,21% phiên 26/10, khối lượng khớp lệnh 221.860 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VHM",
-          "reason": "Giảm 0,31% phiên 26/10, khối lượng khớp lệnh 221.520 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "NVL",
+          "reason": "Giảm 0,47% phiên 26/10, khối lượng khớp lệnh 2.876.320 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "0/6 mã tăng giá phiên 26/10, mã ít biến động nhất là SSI (0%), trong khi VCI giảm sâu nhất nhóm (-1,53%).",
+      "outlook": "1/6 mã tăng giá phiên 26/10, dẫn đầu là HCM (+0,62%), trong khi VCI giảm sâu nhất nhóm (-2,30%).",
       "picks": [
         {
-          "ticker": "SSI",
-          "reason": "Đi ngang (0%) phiên 26/10, khối lượng khớp lệnh 629.360 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "HCM",
+          "reason": "Tăng 0,62% phiên 26/10, khối lượng khớp lệnh 528.830 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "HCM",
-          "reason": "Đi ngang (0%) phiên 26/10, khối lượng khớp lệnh 138.930 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "SSI",
+          "reason": "Giảm 0,75% phiên 26/10, khối lượng khớp lệnh 1.451.610 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "0/3 mã tăng giá phiên 26/10, mã ít biến động nhất là HPG (0%), trong khi HSG giảm sâu nhất nhóm (-0,90%).",
+      "outlook": "0/3 mã tăng giá phiên 26/10, mã giảm ít nhất là HPG (-0,24%), trong khi NKG giảm sâu nhất nhóm (-1,67%).",
       "picks": [
         {
           "ticker": "HPG",
-          "reason": "Đi ngang (0%) phiên 26/10, khối lượng khớp lệnh 460.030 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "reason": "Giảm 0,24% phiên 26/10, khối lượng khớp lệnh 1.047.810 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "NKG",
-          "reason": "Giảm 0,83% phiên 26/10, khối lượng khớp lệnh 160.510 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "HSG",
+          "reason": "Giảm 0,45% phiên 26/10, khối lượng khớp lệnh 168.650 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "1/4 mã tăng giá phiên 26/10, dẫn đầu là PNJ (+0,57%), trong khi FRT giảm sâu nhất nhóm (-1,27%).",
+      "outlook": "0/4 mã tăng giá phiên 26/10, mã ít biến động nhất là PNJ (0%), trong khi DGW giảm sâu nhất nhóm (-2,16%).",
       "picks": [
         {
           "ticker": "PNJ",
-          "reason": "Tăng 0,57% phiên 26/10, khối lượng khớp lệnh 384.570 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Đi ngang (0%) phiên 26/10, khối lượng khớp lệnh 583.720 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
-          "ticker": "DGW",
-          "reason": "Giảm 0,43% phiên 26/10, khối lượng khớp lệnh 44.570 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "MWG",
+          "reason": "Giảm 0,93% phiên 26/10, khối lượng khớp lệnh 168.890 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "1/4 mã tăng giá phiên 26/10, dẫn đầu là BCM (+0,48%), trong khi SZC giảm sâu nhất nhóm (-1,24%).",
+      "outlook": "1/4 mã tăng giá phiên 26/10, dẫn đầu là IDC (+1,39%), trong khi SZC giảm sâu nhất nhóm (-1,98%).",
       "picks": [
         {
-          "ticker": "BCM",
-          "reason": "Tăng 0,48% phiên 26/10, khối lượng khớp lệnh 53.680 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "IDC",
+          "reason": "Tăng 1,39% phiên 26/10, khối lượng khớp lệnh 126.850 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "KBC",
-          "reason": "Giảm 0,56% phiên 26/10, khối lượng khớp lệnh 57.960 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "BCM",
+          "reason": "Giảm 0,72% phiên 26/10, khối lượng khớp lệnh 88.410 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "4/4 mã tăng giá phiên 26/10, dẫn đầu là GAS (+2,94%).",
+      "outlook": "3/4 mã tăng giá phiên 26/10, dẫn đầu là GAS (+2,81%), trong khi PVS giảm sâu nhất nhóm (-0,62%).",
       "picks": [
         {
           "ticker": "GAS",
-          "reason": "Tăng 2,94% phiên 26/10, khối lượng khớp lệnh 127.970 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 2,81% phiên 26/10, khối lượng khớp lệnh 173.890 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "PLX",
-          "reason": "Tăng 1,27% phiên 26/10, khối lượng khớp lệnh 183.990 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,56% phiên 26/10, khối lượng khớp lệnh 273.180 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "0/3 mã tăng giá phiên 26/10, mã giảm ít nhất là VNM (-0,17%), trong khi MSN giảm sâu nhất nhóm (-0,81%).",
+      "outlook": "0/3 mã tăng giá phiên 26/10, mã ít biến động nhất là VNM (0%), trong khi MSN giảm sâu nhất nhóm (-1,62%).",
       "picks": [
         {
           "ticker": "VNM",
-          "reason": "Giảm 0,17% phiên 26/10, khối lượng khớp lệnh 75.410 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Đi ngang (0%) phiên 26/10, khối lượng khớp lệnh 127.980 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
           "ticker": "SAB",
-          "reason": "Giảm 0,35% phiên 26/10, khối lượng khớp lệnh 14.160 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,35% phiên 26/10, khối lượng khớp lệnh 25.580 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     }
