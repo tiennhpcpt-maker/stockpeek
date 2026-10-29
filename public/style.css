@@ -842,3 +842,78 @@ main {
   margin-top: 6px;
   min-height: 14px;
 }
+
+/* ---- Giao diện app trên điện thoại (PWA) ----
+   Trên màn hình hẹp, mỗi lúc chỉ hiện 1 nhóm section theo tab đang chọn
+   ở thanh dưới đáy (body[data-view], set trong app.js). Desktop giữ nguyên
+   dạng 1 trang cuộn dài, thanh tab bị ẩn. */
+.bottom-nav { display: none; }
+
+@media (max-width: 720px) {
+  body {
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior-y: contain;
+  }
+
+  .topbar {
+    padding: calc(10px + env(safe-area-inset-top)) 16px 10px;
+    gap: 10px;
+  }
+  .brand { font-size: 18px; }
+  .addbox { width: 100%; order: 3; }
+  .addbox input { flex: 1; min-width: 0; font-size: 16px; } /* 16px: iOS không tự zoom khi gõ */
+  body:not([data-view="watchlist"]) .topbar > .addbox { display: none; }
+
+  main { padding: 12px 12px calc(84px + env(safe-area-inset-bottom)); }
+  main > [data-view] > .section-head:first-child { margin-top: 16px; }
+
+  body[data-view="news"] main > [data-view]:not([data-view="news"]),
+  body[data-view="market"] main > [data-view]:not([data-view="market"]),
+  body[data-view="watchlist"] main > [data-view]:not([data-view="watchlist"]),
+  body[data-view="sector"] main > [data-view]:not([data-view="sector"]) {
+    display: none;
+  }
+
+  .indices-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .index-card { padding: 12px; }
+  .index-top { gap: 6px; }
+  .index-name { white-space: nowrap; font-size: 14px; }
+  .index-top svg { min-width: 0; flex-shrink: 1; }
+  .index-meta { font-size: 10.5px; gap: 6px; }
+  .index-value { font-size: 19px; }
+  .watchlist-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .stock-card .price { font-size: 20px; }
+
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bottom-nav button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 8px 0 10px;
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .bottom-nav button span { font-size: 20px; line-height: 1; filter: grayscale(1); opacity: 0.7; }
+  .bottom-nav button.active { color: var(--accent); }
+  .bottom-nav button.active span { filter: none; opacity: 1; }
+}
+
+@media (max-width: 360px) {
+  .indices-grid, .watchlist-grid { grid-template-columns: 1fr; }
+}

@@ -1140,3 +1140,45 @@ setInterval(refreshQuotes, QUOTES_INTERVAL_MS);
 setInterval(refreshAllLiveNews, LIVE_NEWS_INTERVAL_MS);
 setInterval(refreshAllHotNews, HOT_NEWS_INTERVAL_MS);
 setInterval(refreshIndices, INDICES_INTERVAL_MS);
+
+// ---- Bản app trên điện thoại (PWA) ----
+const MOBILE_VIEW_KEY = "stockpeek.mobileView";
+
+function switchMobileView(view) {
+  document.body.dataset.view = view;
+  document.querySelectorAll("#bottomNav button").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.view === view);
+  });
+  window.scrollTo(0, 0);
+  try { localStorage.setItem(MOBILE_VIEW_KEY, view); } catch (e) {}
+}
+
+document.querySelectorAll("#bottomNav button").forEach((btn) => {
+  btn.addEventListener("click", () => switchMobileView(btn.dataset.view));
+});
+let savedMobileView = "news";
+try { savedMobileView = localStorage.getItem(MOBILE_VIEW_KEY) || "news"; } catch (e) {}
+switchMobileView(document.querySelector(`#bottomNav button[data-view="${savedMobileView}"]`) ? savedMobileView : "news");
+
+// App cài trên điện thoại bị hệ điều hành "đóng băng" khi chuyển sang app khác,
+// setInterval ngừng chạy - mở lại thì tải mới ngay thay vì hiện giá cũ.
+let lastHiddenAt = 0;
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    lastHiddenAt = Date.now();
+    return;
+  }
+  if (lastHiddenAt && Date.now() - lastHiddenAt > 30 * 1000) {
+    refreshQuotes();
+    refreshIndices();
+    refreshAllLiveNews();
+    refreshAllHotNews();
+    refreshMarketOverview();
+  }
+});
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch((e) => console.warn("[sw] đăng ký lỗi", e));
+  });
+}

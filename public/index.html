@@ -2,7 +2,15 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0b0b0c" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="stockPeek" />
+<link rel="manifest" href="/manifest.webmanifest" />
+<link rel="icon" type="image/png" href="/icon-192.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <title>stockPeek - Liếc phát biết giá</title>
 <link rel="stylesheet" href="/style.css" />
 </head>
@@ -106,12 +114,12 @@
   </div>
 
   <main>
-    <div class="news-tabs" id="newsTabs">
+    <div class="news-tabs" id="newsTabs" data-view="news">
       <button class="news-tab active" data-category="stock">📊 Chứng khoán</button>
       <button class="news-tab" data-category="tech">💻 Công nghệ</button>
     </div>
 
-    <div class="news-group" data-category="stock">
+    <div class="news-group" data-category="stock" data-view="news">
       <section class="hot-news-panel">
         <div class="section-head">
           <h2>🔥 Tin nóng chứng khoán</h2>
@@ -129,7 +137,7 @@
       </section>
     </div>
 
-    <div class="news-group" data-category="tech" hidden>
+    <div class="news-group" data-category="tech" data-view="news" hidden>
       <section class="hot-news-panel">
         <div class="section-head">
           <h2>🔥 Tin nóng công nghệ</h2>
@@ -147,7 +155,7 @@
       </section>
     </div>
 
-    <section class="indices-panel">
+    <section class="indices-panel" data-view="market">
       <div class="section-head">
         <h2>Thị trường chứng khoán</h2>
         <span class="updated" id="indicesUpdated">—</span>
@@ -155,7 +163,7 @@
       <div id="indicesGrid" class="indices-grid"></div>
     </section>
 
-    <section class="watchlist">
+    <section class="watchlist" data-view="watchlist">
       <div class="section-head">
         <h2>Danh mục theo dõi</h2>
         <span class="updated" id="quotesUpdated">—</span>
@@ -163,7 +171,7 @@
       <div id="watchlistGrid" class="watchlist-grid"></div>
     </section>
 
-    <section class="overview-panel">
+    <section class="overview-panel" data-view="market">
       <div class="section-head">
         <h2>Nhận định thị trường chung</h2>
         <span class="updated" id="overviewUpdated">—</span>
@@ -171,7 +179,7 @@
       <div id="overviewContent"></div>
     </section>
 
-    <section class="sector-panel">
+    <section class="sector-panel" data-view="sector">
       <div class="section-head">
         <h2>Phân tích theo nhóm ngành</h2>
         <div class="section-head-actions">
@@ -183,7 +191,7 @@
       <div id="sectorGrid" class="sector-grid"></div>
     </section>
 
-    <section class="sources-panel">
+    <section class="sources-panel" data-view="news">
       <div class="section-head sources-toggle" id="sourcesToggle">
         <h2>Nguồn tin tức</h2>
         <span class="toggle-icon" id="sourcesToggleIcon">▸ Xem / sửa</span>
@@ -208,6 +216,14 @@
       </div>
     </section>
   </main>
+
+  <!-- Thanh tab dưới đáy, chỉ hiện trên điện thoại (xem style.css) -->
+  <nav class="bottom-nav" id="bottomNav">
+    <button data-view="news" class="active"><span>📰</span>Tin tức</button>
+    <button data-view="market"><span>📊</span>Thị trường</button>
+    <button data-view="watchlist"><span>⭐</span>Danh mục</button>
+    <button data-view="sector"><span>🏭</span>Ngành</button>
+  </nav>
 
   <script src="/app.js"></script>
 </body>
