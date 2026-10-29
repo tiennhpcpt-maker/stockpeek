@@ -1182,3 +1182,70 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/sw.js").catch((e) => console.warn("[sw] đăng ký lỗi", e));
   });
 }
+
+// ---- Nút "Cài app" ----
+// Android/Chrome: bắt sự kiện beforeinstallprompt để bấm nút là hiện hộp cài.
+// iPhone: Safari không có API cài, chỉ hiện hướng dẫn "Chia sẻ → Thêm vào MH chính".
+const installBtn = document.getElementById("installAppBtn");
+const installBackdrop = document.getElementById("installModalBackdrop");
+const ua = navigator.userAgent;
+const isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+const isInAppBrowser = /Zalo|FBAN|FBAV|FB_IAB|Instagram|Line\//i.test(ua);
+const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+let deferredInstallPrompt = null;
+
+function openInstallGuide() {
+  let html;
+  if (isInAppBrowser) {
+    html = `<p>Bạn đang mở trang trong <b>Zalo/Facebook</b> nên không cài được app.</p>
+      <ol>
+        <li>Bấm nút <b>⋯</b> (góc trên/dưới bên phải)</li>
+        <li>Chọn <b>Mở bằng trình duyệt</b> (${isIOS ? "Safari" : "Chrome"})</li>
+        <li>Bấm lại nút <b>📲 Cài app</b> trên trang</li>
+      </ol>`;
+  } else if (isIOS) {
+    html = `<ol>
+        <li>Bấm nút <b>Chia sẻ</b> (ô vuông có mũi tên ⬆️) ở thanh dưới của Safari</li>
+        <li>Kéo xuống, chọn <b>Thêm vào MH chính</b> (Add to Home Screen)</li>
+        <li>Bấm <b>Thêm</b> ở góc trên bên phải</li>
+      </ol>
+      <p>Icon stockPeek sẽ hiện ngoài màn hình chính, bấm vào là mở app toàn màn hình.</p>`;
+  } else {
+    html = `<ol>
+        <li>Bấm menu <b>⋮</b> ở góc trên bên phải của Chrome</li>
+        <li>Chọn <b>Cài đặt ứng dụng</b> hoặc <b>Thêm vào màn hình chính</b></li>
+        <li>Bấm <b>Cài đặt</b></li>
+      </ol>`;
+  }
+  document.getElementById("installModalBody").innerHTML = html;
+  installBackdrop.hidden = false;
+}
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  installBtn.hidden = false;
+});
+window.addEventListener("appinstalled", () => {
+  deferredInstallPrompt = null;
+  installBtn.hidden = true;
+});
+installBtn.addEventListener("click", async () => {
+  if (deferredInstallPrompt) {
+    deferredInstallPrompt.prompt();
+    await deferredInstallPrompt.userChoice;
+    deferredInstallPrompt = null;
+    return;
+  }
+  openInstallGuide();
+});
+document.getElementById("installModalClose").addEventListener("click", () => { installBackdrop.hidden = true; });
+installBackdrop.addEventListener("click", (e) => {
+  if (e.target === installBackdrop) installBackdrop.hidden = true;
+});
+// iPhone và trình duyệt trong Zalo/Facebook không bao giờ có beforeinstallprompt - hiện nút ngay.
+// Android Chrome nếu chưa có sự kiện (đã cài rồi hoặc Chrome chưa cho cài) thì vẫn hiện nút
+// trên điện thoại để chỉ đường qua menu ⋮.
+if (!isStandalone && (isIOS || isInAppBrowser || /Android/.test(ua))) {
+  installBtn.hidden = false;
+}

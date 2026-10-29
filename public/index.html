@@ -21,8 +21,17 @@
       <input id="tickerInput" type="text" placeholder="Thêm mã CK, vd: HPG, MWG..." />
       <button id="addBtn">+ Thêm</button>
     </div>
+    <button id="installAppBtn" class="auth-btn primary install-btn" hidden>📲 Cài app</button>
     <div id="authArea" class="auth-area"></div>
   </header>
+
+  <div id="installModalBackdrop" class="auth-modal-backdrop" hidden>
+    <div class="auth-modal install-modal">
+      <button id="installModalClose" class="auth-modal-close">✕</button>
+      <h3 class="admin-modal-title">📲 Cài stockPeek lên điện thoại</h3>
+      <div id="installModalBody"></div>
+    </div>
+  </div>
 
   <div id="authModalBackdrop" class="auth-modal-backdrop" hidden>
     <div class="auth-modal">

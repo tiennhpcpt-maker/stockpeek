@@ -917,3 +917,14 @@ main {
 @media (max-width: 360px) {
   .indices-grid, .watchlist-grid { grid-template-columns: 1fr; }
 }
+
+/* ---- Nút + hướng dẫn cài app ---- */
+.install-btn { white-space: nowrap; }
+.install-modal ol { padding-left: 20px; margin: 12px 0 0; line-height: 1.7; font-size: 14px; }
+.install-modal p { font-size: 14px; line-height: 1.5; margin: 10px 0 0; color: var(--text-dim); }
+.install-modal b { color: var(--text); }
+@media (max-width: 720px) {
+  .brand small { display: none; }
+  .topbar .install-btn { margin-left: auto; padding: 8px 10px; }
+  .topbar .install-btn + .auth-area { margin-left: 0; }
+}
