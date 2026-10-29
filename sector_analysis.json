@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-10-28T22:28:50+07:00",
+  "generated_at": "2026-10-29T13:26:56+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 28/10.",
+  "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 29/10.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "6/8 mã tăng giá phiên 28/10, dẫn đầu là VCB (+2,50%), trong khi TCB giảm sâu nhất nhóm (-0,15%).",
+      "outlook": "1/8 mã tăng giá phiên 29/10, dẫn đầu là BID (+1,04%), trong khi VPB giảm sâu nhất nhóm (-1,91%).",
       "picks": [
         {
-          "ticker": "VCB",
-          "reason": "Tăng 2,50% phiên 28/10, khối lượng khớp lệnh 645.370 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "BID",
+          "reason": "Tăng 1,04% phiên 29/10, khối lượng khớp lệnh 519.490 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VPB",
-          "reason": "Tăng 1,29% phiên 28/10, khối lượng khớp lệnh 1.236.520 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "CTG",
+          "reason": "Đi ngang (0%) phiên 29/10, khối lượng khớp lệnh 597.730 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "1/6 mã tăng giá phiên 28/10, dẫn đầu là VIC (+0,33%), trong khi VRE giảm sâu nhất nhóm (-1,23%).",
+      "outlook": "0/6 mã tăng giá phiên 29/10, mã giảm ít nhất là VIC (-0,25%), trong khi PDR giảm sâu nhất nhóm (-2,16%).",
       "picks": [
         {
           "ticker": "VIC",
-          "reason": "Tăng 0,33% phiên 28/10, khối lượng khớp lệnh 186.820 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 0,25% phiên 29/10, khối lượng khớp lệnh 89.490 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "VHM",
-          "reason": "Đi ngang (0%) phiên 28/10, khối lượng khớp lệnh 550.290 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "DXG",
+          "reason": "Giảm 0,90% phiên 29/10, khối lượng khớp lệnh 370.530 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "2/6 mã tăng giá phiên 28/10, dẫn đầu là VIX (+1,22%), trong khi HCM giảm sâu nhất nhóm (-2,09%).",
+      "outlook": "5/6 mã tăng giá phiên 29/10, dẫn đầu là VND (+1,49%).",
       "picks": [
         {
-          "ticker": "VIX",
-          "reason": "Tăng 1,22% phiên 28/10, khối lượng khớp lệnh 1.994.730 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VND",
+          "reason": "Tăng 1,49% phiên 29/10, khối lượng khớp lệnh 572.300 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VND",
-          "reason": "Tăng 0,75% phiên 28/10, khối lượng khớp lệnh 470.270 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VIX",
+          "reason": "Tăng 0,80% phiên 29/10, khối lượng khớp lệnh 1.575.880 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "1/3 mã tăng giá phiên 28/10, dẫn đầu là NKG (+0,83%), trong khi HPG giảm sâu nhất nhóm (-1,19%).",
+      "outlook": "1/3 mã tăng giá phiên 29/10, dẫn đầu là HPG (+2,17%), trong khi NKG giảm sâu nhất nhóm (-0,82%).",
       "picks": [
         {
-          "ticker": "NKG",
-          "reason": "Tăng 0,83% phiên 28/10, khối lượng khớp lệnh 428.820 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "HPG",
+          "reason": "Tăng 2,17% phiên 29/10, khối lượng khớp lệnh 2.865.030 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "HSG",
-          "reason": "Đi ngang (0%) phiên 28/10, khối lượng khớp lệnh 250.660 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "reason": "Đi ngang (0%) phiên 29/10, khối lượng khớp lệnh 353.150 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "2/4 mã tăng giá phiên 28/10, dẫn đầu là PNJ (+0,59%), trong khi DGW giảm sâu nhất nhóm (-6,92%).",
+      "outlook": "0/4 mã tăng giá phiên 29/10, mã giảm ít nhất là MWG (-0,79%), trong khi PNJ giảm sâu nhất nhóm (-5,25%).",
       "picks": [
         {
-          "ticker": "PNJ",
-          "reason": "Tăng 0,59% phiên 28/10, khối lượng khớp lệnh 425.190 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MWG",
+          "reason": "Giảm 0,79% phiên 29/10, khối lượng khớp lệnh 97.460 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "MWG",
-          "reason": "Tăng 0,40% phiên 28/10, khối lượng khớp lệnh 479.080 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "DGW",
+          "reason": "Giảm 1,06% phiên 29/10, khối lượng khớp lệnh 98.820 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "2/4 mã tăng giá phiên 28/10, dẫn đầu là SZC (+1,52%), trong khi BCM giảm sâu nhất nhóm (-1,85%).",
+      "outlook": "1/4 mã tăng giá phiên 29/10, dẫn đầu là BCM (+0,38%), trong khi SZC giảm sâu nhất nhóm (-1,99%).",
       "picks": [
         {
-          "ticker": "SZC",
-          "reason": "Tăng 1,52% phiên 28/10, khối lượng khớp lệnh 86.590 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "BCM",
+          "reason": "Tăng 0,38% phiên 29/10, khối lượng khớp lệnh 44.020 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "KBC",
-          "reason": "Tăng 0,19% phiên 28/10, khối lượng khớp lệnh 165.270 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 1,48% phiên 29/10, khối lượng khớp lệnh 69.240 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "3/4 mã tăng giá phiên 28/10, dẫn đầu là PVD (+1,62%), trong khi GAS giảm sâu nhất nhóm (-1,52%).",
+      "outlook": "0/4 mã tăng giá phiên 29/10, mã giảm ít nhất là PVD (-3,72%), trong khi GAS giảm sâu nhất nhóm (-4,12%).",
       "picks": [
         {
           "ticker": "PVD",
-          "reason": "Tăng 1,62% phiên 28/10, khối lượng khớp lệnh 300.190 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 3,72% phiên 29/10, khối lượng khớp lệnh 411.240 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "PVS",
-          "reason": "Tăng 0,63% phiên 28/10, khối lượng khớp lệnh 119.660 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PLX",
+          "reason": "Giảm 3,96% phiên 29/10, khối lượng khớp lệnh 632.190 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "3/3 mã tăng giá phiên 28/10, dẫn đầu là MSN (+1,09%).",
+      "outlook": "0/3 mã tăng giá phiên 29/10, mã giảm ít nhất là SAB (-0,70%), trong khi MSN giảm sâu nhất nhóm (-1,89%).",
       "picks": [
         {
-          "ticker": "MSN",
-          "reason": "Tăng 1,09% phiên 28/10, khối lượng khớp lệnh 481.400 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "SAB",
+          "reason": "Giảm 0,70% phiên 29/10, khối lượng khớp lệnh 24.030 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "VNM",
-          "reason": "Tăng 1,04% phiên 28/10, khối lượng khớp lệnh 236.280 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Giảm 0,86% phiên 29/10, khối lượng khớp lệnh 98.350 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     }
