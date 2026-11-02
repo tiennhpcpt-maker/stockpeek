@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-11-02T14:37:24+07:00",
+  "generated_at": "2026-11-03T01:51:29+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 02/11.",
+  "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 03/11.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "0/8 mã tăng giá phiên 02/11, mã giảm ít nhất là CTG (-1,32%), trong khi VPB giảm sâu nhất nhóm (-6,10%).",
+      "outlook": "0/8 mã tăng giá phiên 03/11, mã giảm ít nhất là TCB (-0,93%), trong khi VPB giảm sâu nhất nhóm (-6,10%).",
       "picks": [
         {
-          "ticker": "CTG",
-          "reason": "Giảm 1,32% phiên 02/11, khối lượng khớp lệnh 1.060.560 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "TCB",
+          "reason": "Giảm 0,93% phiên 03/11, khối lượng khớp lệnh 2.538.650 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "STB",
-          "reason": "Giảm 1,96% phiên 02/11, khối lượng khớp lệnh 387.790 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 1,81% phiên 03/11, khối lượng khớp lệnh 417.010 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "0/6 mã tăng giá phiên 02/11, mã ít biến động nhất là NVL (0%), trong khi PDR giảm sâu nhất nhóm (-5,31%).",
+      "outlook": "1/6 mã tăng giá phiên 03/11, dẫn đầu là VIC (+0,41%), trong khi VRE giảm sâu nhất nhóm (-4,57%).",
       "picks": [
         {
-          "ticker": "NVL",
-          "reason": "Đi ngang (0%) phiên 02/11, khối lượng khớp lệnh 1.082.850 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "VIC",
+          "reason": "Tăng 0,41% phiên 03/11, khối lượng khớp lệnh 250.320 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VIC",
-          "reason": "Giảm 0,87% phiên 02/11, khối lượng khớp lệnh 216.500 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "NVL",
+          "reason": "Giảm 0,48% phiên 03/11, khối lượng khớp lệnh 1.311.180 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "0/6 mã tăng giá phiên 02/11, mã giảm ít nhất là MBS (-0,67%), trong khi VND giảm sâu nhất nhóm (-2,99%).",
+      "outlook": "0/6 mã tăng giá phiên 03/11, mã giảm ít nhất là HCM (-0,22%), trong khi SSI giảm sâu nhất nhóm (-2,33%).",
       "picks": [
         {
-          "ticker": "MBS",
-          "reason": "Giảm 0,67% phiên 02/11, khối lượng khớp lệnh 309.180 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "HCM",
+          "reason": "Giảm 0,22% phiên 03/11, khối lượng khớp lệnh 397.550 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
           "ticker": "VCI",
-          "reason": "Giảm 0,81% phiên 02/11, khối lượng khớp lệnh 892.220 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,27% phiên 03/11, khối lượng khớp lệnh 924.090 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "0/3 mã tăng giá phiên 02/11, mã giảm ít nhất là HPG (-2,86%), trong khi HSG giảm sâu nhất nhóm (-5,07%).",
+      "outlook": "0/3 mã tăng giá phiên 03/11, mã giảm ít nhất là NKG (-1,68%), trong khi HSG giảm sâu nhất nhóm (-5,07%).",
       "picks": [
         {
-          "ticker": "HPG",
-          "reason": "Giảm 2,86% phiên 02/11, khối lượng khớp lệnh 2.342.600 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "NKG",
+          "reason": "Giảm 1,68% phiên 03/11, khối lượng khớp lệnh 886.120 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "NKG",
-          "reason": "Giảm 4,62% phiên 02/11, khối lượng khớp lệnh 841.260 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "HPG",
+          "reason": "Giảm 2,86% phiên 03/11, khối lượng khớp lệnh 2.546.510 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "1/4 mã tăng giá phiên 02/11, dẫn đầu là PNJ (+0,32%), trong khi FRT giảm sâu nhất nhóm (-6,99%).",
+      "outlook": "1/4 mã tăng giá phiên 03/11, dẫn đầu là PNJ (+0,65%), trong khi FRT giảm sâu nhất nhóm (-6,99%).",
       "picks": [
         {
           "ticker": "PNJ",
-          "reason": "Tăng 0,32% phiên 02/11, khối lượng khớp lệnh 884.090 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 0,65% phiên 03/11, khối lượng khớp lệnh 905.960 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "MWG",
-          "reason": "Giảm 3,38% phiên 02/11, khối lượng khớp lệnh 432.510 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 2,16% phiên 03/11, khối lượng khớp lệnh 485.500 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "0/4 mã tăng giá phiên 02/11, mã giảm ít nhất là KBC (-1,15%), trong khi IDC giảm sâu nhất nhóm (-3,51%).",
+      "outlook": "0/4 mã tăng giá phiên 03/11, mã giảm ít nhất là KBC (-0,19%), trong khi IDC giảm sâu nhất nhóm (-4,68%).",
       "picks": [
         {
           "ticker": "KBC",
-          "reason": "Giảm 1,15% phiên 02/11, khối lượng khớp lệnh 98.000 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Giảm 0,19% phiên 03/11, khối lượng khớp lệnh 113.390 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "BCM",
-          "reason": "Giảm 2,86% phiên 02/11, khối lượng khớp lệnh 81.770 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "SZC",
+          "reason": "Giảm 1,55% phiên 03/11, khối lượng khớp lệnh 91.260 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "0/4 mã tăng giá phiên 02/11, mã giảm ít nhất là PVD (-2,23%), trong khi GAS giảm sâu nhất nhóm (-3,85%).",
+      "outlook": "0/4 mã tăng giá phiên 03/11, mã giảm ít nhất là GAS (-1,28%), trong khi PLX giảm sâu nhất nhóm (-2,94%).",
       "picks": [
         {
-          "ticker": "PVD",
-          "reason": "Giảm 2,23% phiên 02/11, khối lượng khớp lệnh 652.620 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "GAS",
+          "reason": "Giảm 1,28% phiên 03/11, khối lượng khớp lệnh 77.660 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "PLX",
-          "reason": "Giảm 2,94% phiên 02/11, khối lượng khớp lệnh 330.240 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "PVD",
+          "reason": "Giảm 1,39% phiên 03/11, khối lượng khớp lệnh 697.460 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "0/3 mã tăng giá phiên 02/11, mã giảm ít nhất là VNM (-1,58%), trong khi MSN giảm sâu nhất nhóm (-2,00%).",
+      "outlook": "0/3 mã tăng giá phiên 03/11, mã giảm ít nhất là MSN (-0,86%), trong khi SAB giảm sâu nhất nhóm (-1,65%).",
       "picks": [
         {
-          "ticker": "VNM",
-          "reason": "Giảm 1,58% phiên 02/11, khối lượng khớp lệnh 365.900 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "MSN",
+          "reason": "Giảm 0,86% phiên 03/11, khối lượng khớp lệnh 711.050 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         },
         {
-          "ticker": "SAB",
-          "reason": "Giảm 1,77% phiên 02/11, khối lượng khớp lệnh 66.780 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "VNM",
+          "reason": "Giảm 1,58% phiên 03/11, khối lượng khớp lệnh 433.540 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     }
