@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-11-04T09:33:31+07:00",
+  "generated_at": "2026-11-04T14:27:58+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
   "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 04/11.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "3/8 mã tăng giá phiên 04/11, dẫn đầu là STB (+1,20%), trong khi TCB giảm sâu nhất nhóm (-0,93%).",
+      "outlook": "8/8 mã tăng giá phiên 04/11, dẫn đầu là VPB (+3,77%).",
       "picks": [
         {
-          "ticker": "STB",
-          "reason": "Tăng 1,20% phiên 04/11, khối lượng khớp lệnh 8.660 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VPB",
+          "reason": "Tăng 3,77% phiên 04/11, khối lượng khớp lệnh 1.421.190 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VCB",
-          "reason": "Tăng 0,93% phiên 04/11, khối lượng khớp lệnh 27.680 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "CTG",
+          "reason": "Tăng 3,16% phiên 04/11, khối lượng khớp lệnh 1.003.040 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "1/6 mã tăng giá phiên 04/11, dẫn đầu là DXG (+0,10%), trong khi VIC giảm sâu nhất nhóm (-1,41%).",
+      "outlook": "6/6 mã tăng giá phiên 04/11, dẫn đầu là DXG (+6,57%).",
       "picks": [
         {
           "ticker": "DXG",
-          "reason": "Tăng 0,10% phiên 04/11, khối lượng khớp lệnh 14.170 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 6,57% phiên 04/11, khối lượng khớp lệnh 3.335.700 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "NVL",
-          "reason": "Giảm 0,49% phiên 04/11, khối lượng khớp lệnh 61.590 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "ticker": "PDR",
+          "reason": "Tăng 4,07% phiên 04/11, khối lượng khớp lệnh 632.920 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "5/6 mã tăng giá phiên 04/11, dẫn đầu là MBS (+2,00%), trong khi HCM giảm sâu nhất nhóm (-0,42%).",
+      "outlook": "6/6 mã tăng giá phiên 04/11, dẫn đầu là VND (+6,90%).",
       "picks": [
         {
-          "ticker": "MBS",
-          "reason": "Tăng 2,00% phiên 04/11, khối lượng khớp lệnh 33.020 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VND",
+          "reason": "Tăng 6,90% phiên 04/11, khối lượng khớp lệnh 2.161.360 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VCI",
-          "reason": "Tăng 1,32% phiên 04/11, khối lượng khớp lệnh 58.040 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VIX",
+          "reason": "Tăng 6,78% phiên 04/11, khối lượng khớp lệnh 5.401.450 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "0/3 mã tăng giá phiên 04/11, mã ít biến động nhất là HSG (0%), trong khi HPG giảm sâu nhất nhóm (-0,24%).",
+      "outlook": "3/3 mã tăng giá phiên 04/11, dẫn đầu là HSG (+3,74%).",
       "picks": [
         {
           "ticker": "HSG",
-          "reason": "Đi ngang (0%) phiên 04/11, khối lượng khớp lệnh 4.000 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "reason": "Tăng 3,74% phiên 04/11, khối lượng khớp lệnh 351.470 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "NKG",
-          "reason": "Đi ngang (0%) phiên 04/11, khối lượng khớp lệnh 13.180 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "reason": "Tăng 2,07% phiên 04/11, khối lượng khớp lệnh 698.450 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "2/4 mã tăng giá phiên 04/11, dẫn đầu là PNJ (+0,34%), trong khi DGW giảm sâu nhất nhóm (-0,52%).",
+      "outlook": "3/4 mã tăng giá phiên 04/11, dẫn đầu là DGW (+3,39%), trong khi PNJ giảm sâu nhất nhóm (-0,68%).",
       "picks": [
         {
-          "ticker": "PNJ",
-          "reason": "Tăng 0,34% phiên 04/11, khối lượng khớp lệnh 74.280 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "DGW",
+          "reason": "Tăng 3,39% phiên 04/11, khối lượng khớp lệnh 108.750 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "FRT",
-          "reason": "Tăng 0,07% phiên 04/11, khối lượng khớp lệnh 350 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MWG",
+          "reason": "Tăng 2,77% phiên 04/11, khối lượng khớp lệnh 253.630 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "2/4 mã tăng giá phiên 04/11, dẫn đầu là SZC (+0,52%), trong khi KBC giảm sâu nhất nhóm (-0,38%).",
+      "outlook": "4/4 mã tăng giá phiên 04/11, dẫn đầu là SZC (+6,75%).",
       "picks": [
         {
           "ticker": "SZC",
-          "reason": "Tăng 0,52% phiên 04/11, khối lượng khớp lệnh 5.690 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 6,75% phiên 04/11, khối lượng khớp lệnh 163.810 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "BCM",
-          "reason": "Tăng 0,13% phiên 04/11, khối lượng khớp lệnh 5.320 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "IDC",
+          "reason": "Tăng 5,72% phiên 04/11, khối lượng khớp lệnh 96.020 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "0/4 mã tăng giá phiên 04/11, mã ít biến động nhất là PVS (0%), trong khi PVD giảm sâu nhất nhóm (-1,43%).",
+      "outlook": "4/4 mã tăng giá phiên 04/11, dẫn đầu là PVS (+2,01%).",
       "picks": [
         {
           "ticker": "PVS",
-          "reason": "Đi ngang (0%) phiên 04/11, khối lượng khớp lệnh 3.170 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "reason": "Tăng 2,01% phiên 04/11, khối lượng khớp lệnh 155.250 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "PLX",
-          "reason": "Giảm 0,76% phiên 04/11, khối lượng khớp lệnh 12.180 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
+          "reason": "Tăng 1,52% phiên 04/11, khối lượng khớp lệnh 180.820 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "3/3 mã tăng giá phiên 04/11, dẫn đầu là VNM (+0,36%).",
+      "outlook": "3/3 mã tăng giá phiên 04/11, dẫn đầu là MSN (+4,03%).",
       "picks": [
         {
-          "ticker": "VNM",
-          "reason": "Tăng 0,36% phiên 04/11, khối lượng khớp lệnh 13.220 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MSN",
+          "reason": "Tăng 4,03% phiên 04/11, khối lượng khớp lệnh 486.470 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "SAB",
-          "reason": "Tăng 0,36% phiên 04/11, khối lượng khớp lệnh 1.120 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VNM",
+          "reason": "Tăng 1,78% phiên 04/11, khối lượng khớp lệnh 320.450 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     }
