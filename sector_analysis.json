@@ -1,117 +1,117 @@
 {
-  "generated_at": "2026-11-03T23:37:20+07:00",
+  "generated_at": "2026-11-04T09:33:31+07:00",
   "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
-  "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 03/11.",
+  "market_note": "Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên 04/11.",
   "sectors": [
     {
       "name": "Ngân hàng",
-      "outlook": "3/8 mã tăng giá phiên 03/11, dẫn đầu là STB (+2,30%), trong khi VPB giảm sâu nhất nhóm (-1,62%).",
+      "outlook": "3/8 mã tăng giá phiên 04/11, dẫn đầu là STB (+1,20%), trong khi TCB giảm sâu nhất nhóm (-0,93%).",
       "picks": [
         {
           "ticker": "STB",
-          "reason": "Tăng 2,30% phiên 03/11, khối lượng khớp lệnh 253.550 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "reason": "Tăng 1,20% phiên 04/11, khối lượng khớp lệnh 8.660 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "CTG",
-          "reason": "Tăng 1,01% phiên 03/11, khối lượng khớp lệnh 588.740 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VCB",
+          "reason": "Tăng 0,93% phiên 04/11, khối lượng khớp lệnh 27.680 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản",
-      "outlook": "2/6 mã tăng giá phiên 03/11, dẫn đầu là VRE (+0,87%), trong khi VIC giảm sâu nhất nhóm (-3,31%).",
+      "outlook": "1/6 mã tăng giá phiên 04/11, dẫn đầu là DXG (+0,10%), trong khi VIC giảm sâu nhất nhóm (-1,41%).",
       "picks": [
         {
-          "ticker": "VRE",
-          "reason": "Tăng 0,87% phiên 03/11, khối lượng khớp lệnh 202.390 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "DXG",
+          "reason": "Tăng 0,10% phiên 04/11, khối lượng khớp lệnh 14.170 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "DXG",
-          "reason": "Tăng 0,41% phiên 03/11, khối lượng khớp lệnh 372.610 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "NVL",
+          "reason": "Giảm 0,49% phiên 04/11, khối lượng khớp lệnh 61.590 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Chứng khoán",
-      "outlook": "4/6 mã tăng giá phiên 03/11, dẫn đầu là VCI (+2,71%), trong khi VND giảm sâu nhất nhóm (-0,38%).",
+      "outlook": "5/6 mã tăng giá phiên 04/11, dẫn đầu là MBS (+2,00%), trong khi HCM giảm sâu nhất nhóm (-0,42%).",
       "picks": [
         {
-          "ticker": "VCI",
-          "reason": "Tăng 2,71% phiên 03/11, khối lượng khớp lệnh 1.152.500 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "MBS",
+          "reason": "Tăng 2,00% phiên 04/11, khối lượng khớp lệnh 33.020 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "HCM",
-          "reason": "Tăng 1,94% phiên 03/11, khối lượng khớp lệnh 269.470 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VCI",
+          "reason": "Tăng 1,32% phiên 04/11, khối lượng khớp lệnh 58.040 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thép",
-      "outlook": "3/3 mã tăng giá phiên 03/11, dẫn đầu là HPG (+4,17%).",
+      "outlook": "0/3 mã tăng giá phiên 04/11, mã ít biến động nhất là HSG (0%), trong khi HPG giảm sâu nhất nhóm (-0,24%).",
       "picks": [
         {
-          "ticker": "HPG",
-          "reason": "Tăng 4,17% phiên 03/11, khối lượng khớp lệnh 3.247.270 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "HSG",
+          "reason": "Đi ngang (0%) phiên 04/11, khối lượng khớp lệnh 4.000 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
-          "ticker": "HSG",
-          "reason": "Tăng 3,88% phiên 03/11, khối lượng khớp lệnh 302.270 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "NKG",
+          "reason": "Đi ngang (0%) phiên 04/11, khối lượng khớp lệnh 13.180 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bán lẻ",
-      "outlook": "1/4 mã tăng giá phiên 03/11, dẫn đầu là DGW (+0,66%), trong khi PNJ giảm sâu nhất nhóm (-5,45%).",
+      "outlook": "2/4 mã tăng giá phiên 04/11, dẫn đầu là PNJ (+0,34%), trong khi DGW giảm sâu nhất nhóm (-0,52%).",
       "picks": [
         {
-          "ticker": "DGW",
-          "reason": "Tăng 0,66% phiên 03/11, khối lượng khớp lệnh 100.550 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "PNJ",
+          "reason": "Tăng 0,34% phiên 04/11, khối lượng khớp lệnh 74.280 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
           "ticker": "FRT",
-          "reason": "Đi ngang (0%) phiên 03/11, khối lượng khớp lệnh 53.150 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "reason": "Tăng 0,07% phiên 04/11, khối lượng khớp lệnh 350 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Bất động sản khu công nghiệp",
-      "outlook": "3/4 mã tăng giá phiên 03/11, dẫn đầu là IDC (+1,84%), trong khi BCM giảm sâu nhất nhóm (-0,13%).",
+      "outlook": "2/4 mã tăng giá phiên 04/11, dẫn đầu là SZC (+0,52%), trong khi KBC giảm sâu nhất nhóm (-0,38%).",
       "picks": [
         {
-          "ticker": "IDC",
-          "reason": "Tăng 1,84% phiên 03/11, khối lượng khớp lệnh 35.940 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "SZC",
+          "reason": "Tăng 0,52% phiên 04/11, khối lượng khớp lệnh 5.690 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "SZC",
-          "reason": "Tăng 1,32% phiên 03/11, khối lượng khớp lệnh 69.600 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "BCM",
+          "reason": "Tăng 0,13% phiên 04/11, khối lượng khớp lệnh 5.320 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Dầu khí",
-      "outlook": "0/4 mã tăng giá phiên 03/11, mã ít biến động nhất là PLX (0%), trong khi GAS giảm sâu nhất nhóm (-2,08%).",
+      "outlook": "0/4 mã tăng giá phiên 04/11, mã ít biến động nhất là PVS (0%), trong khi PVD giảm sâu nhất nhóm (-1,43%).",
       "picks": [
         {
-          "ticker": "PLX",
-          "reason": "Đi ngang (0%) phiên 03/11, khối lượng khớp lệnh 159.790 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "PVS",
+          "reason": "Đi ngang (0%) phiên 04/11, khối lượng khớp lệnh 3.170 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
         },
         {
-          "ticker": "PVS",
-          "reason": "Đi ngang (0%) phiên 03/11, khối lượng khớp lệnh 145.930 cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
+          "ticker": "PLX",
+          "reason": "Giảm 0,76% phiên 04/11, khối lượng khớp lệnh 12.180 cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
         }
       ]
     },
     {
       "name": "Thực phẩm - Đồ uống",
-      "outlook": "2/3 mã tăng giá phiên 03/11, dẫn đầu là SAB (+0,60%).",
+      "outlook": "3/3 mã tăng giá phiên 04/11, dẫn đầu là VNM (+0,36%).",
       "picks": [
         {
-          "ticker": "SAB",
-          "reason": "Tăng 0,60% phiên 03/11, khối lượng khớp lệnh 17.310 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "VNM",
+          "reason": "Tăng 0,36% phiên 04/11, khối lượng khớp lệnh 13.220 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         },
         {
-          "ticker": "VNM",
-          "reason": "Tăng 0,54% phiên 03/11, khối lượng khớp lệnh 190.560 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
+          "ticker": "SAB",
+          "reason": "Tăng 0,36% phiên 04/11, khối lượng khớp lệnh 1.120 cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
         }
       ]
     }
