@@ -650,25 +650,39 @@ function fmtReportDate(d) {
   return day ? `${day}/${m}/${y}` : d;
 }
 
+const ANALYSIS_KIND = {
+  bulletin: { badge: "📧 Bản tin sáng", label: "Bản tin sáng" },
+  weekly: { badge: "📅 Báo cáo tuần", label: "Báo cáo tuần" },
+  monthly: { badge: "🗓️ Tổng kết tháng", label: "Tổng kết tháng" },
+  company: { badge: "🏢 Phân tích doanh nghiệp", label: "Phân tích DN" },
+};
+
 function buildDailyReportEntries() {
   const select = document.getElementById("reportSelect");
   const prev = select.value;
-  const entries = [];
-  const seen = new Set();
+  const byKey = new Map();
+  const getEntry = (date, session, sortKey) => {
+    const key = `${date}|${session}`;
+    if (!byKey.has(key)) byKey.set(key, { key, date, session, sortKey: sortKey || date, report: null, analyses: [] });
+    const e = byKey.get(key);
+    if (sortKey && sortKey > e.sortKey) e.sortKey = sortKey;
+    return e;
+  };
   for (const r of dailyReportData.reports || []) {
-    const key = `${r.date}|${r.session}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    entries.push({ key, date: r.date, session: r.session, sortKey: r.generated_at || r.date, report: r });
+    const e = getEntry(r.date, r.session, r.generated_at);
+    if (!e.report) e.report = r;
   }
-  for (const a of dailyReportData.analyses || []) {
-    if (entries.some((e) => e.date === a.date)) continue;
-    const key = `${a.date}|ai`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    entries.push({ key, date: a.date, session: "ai", sortKey: a.generated_at || a.date, report: null });
+  // Bài có session (bản tin sáng/chiều) gắn đúng phiên đó; bài không có session
+  // (báo cáo tuần/tháng, phân tích DN) gắn vào mục mới nhất của ngày, hoặc mục riêng.
+  const analyses = dailyReportData.analyses || [];
+  for (const a of analyses.filter((a) => a.session)) {
+    getEntry(a.date, a.session, a.generated_at).analyses.push(a);
   }
-  entries.sort((a, b) => (a.sortKey < b.sortKey ? 1 : -1));
+  for (const a of analyses.filter((a) => !a.session)) {
+    const sameDay = [...byKey.values()].filter((e) => e.date === a.date).sort((x, y) => (x.sortKey < y.sortKey ? 1 : -1));
+    (sameDay[0] || getEntry(a.date, "ai", a.generated_at)).analyses.push(a);
+  }
+  const entries = [...byKey.values()].sort((a, b) => (a.sortKey < b.sortKey ? 1 : -1));
   dailyReportEntries = entries;
 
   if (!entries.length) {
@@ -677,8 +691,13 @@ function buildDailyReportEntries() {
       '<div class="empty">Chưa có báo cáo nào. Báo cáo đầu tiên sẽ được tạo lúc 8:30 hoặc 16:00 ngày giao dịch tới.</div>';
     return;
   }
+  const entryLabel = (e) => {
+    if (e.report) return SESSION_LABEL[e.session] || e.session;
+    const kinds = [...new Set(e.analyses.map((a) => (ANALYSIS_KIND[a.kind] || {}).label || "Phân tích"))];
+    return kinds.join(" + ");
+  };
   select.innerHTML = entries
-    .map((e) => `<option value="${escapeHtml(e.key)}">${fmtReportDate(e.date)} · ${SESSION_LABEL[e.session] || e.session}</option>`)
+    .map((e) => `<option value="${escapeHtml(e.key)}">${fmtReportDate(e.date)} · ${escapeHtml(entryLabel(e))}</option>`)
     .join("");
   select.value = entries.some((e) => e.key === prev) ? prev : entries[0].key;
   renderDailyReport(select.value);
@@ -755,11 +774,14 @@ function renderAnalysis(a) {
     .map((t) => `<div class="sector-pick"><span class="pick-ticker">${escapeHtml(t.ticker)}</span><span class="pick-reason">${escapeHtml(t.note || "")}</span></div>`)
     .join("");
   return `<div class="report-card report-ai">
-    <span class="ai-badge">🤖 Phân tích của Claude</span>
+    <span class="ai-badge">${(ANALYSIS_KIND[a.kind] || {}).badge || "🤖 Phân tích của Claude"}</span>
     <h3>${escapeHtml(a.title || "Phân tích thị trường")}</h3>
-    <div class="report-meta">${a.generated_at ? "Viết lúc " + new Date(a.generated_at).toLocaleString("vi-VN") : ""}</div>
+    <div class="report-meta">${a.generated_at ? "Lập lúc " + new Date(a.generated_at).toLocaleString("vi-VN") : ""}${a.origin ? " · " + escapeHtml(a.origin) : ""}</div>
     ${a.summary ? `<div class="report-summary">${escapeHtml(a.summary)}</div>` : ""}
     ${list(a.key_findings) ? `<div class="overview-block"><div class="overview-block-title">Điểm chính</div><ul class="overview-list">${list(a.key_findings)}</ul></div>` : ""}
+    ${(a.sections || [])
+      .map((sec) => `<div class="overview-block"><div class="overview-block-title">${escapeHtml(sec.title || "")}</div><ul class="overview-list">${list(sec.items)}</ul></div>`)
+      .join("")}
     ${sectors ? `<div class="overview-block"><div class="overview-block-title">Nhóm ngành</div><ul class="overview-list">${sectors}</ul></div>` : ""}
     ${tickers ? `<div class="overview-block"><div class="overview-block-title">Mã đáng chú ý</div>${tickers}</div>` : ""}
     ${list(a.action_items) ? `<div class="overview-block"><div class="overview-block-title">Việc nên làm</div><ul class="overview-list">${list(a.action_items)}</ul></div>` : ""}
@@ -772,10 +794,7 @@ function renderDailyReport(key) {
   const box = document.getElementById("reportContent");
   const entry = dailyReportEntries.find((e) => e.key === key);
   if (!entry) return;
-  const firstOfDate = dailyReportEntries.find((e) => e.date === entry.date) === entry;
-  const analyses = (dailyReportData.analyses || []).filter(
-    (a) => a.date === entry.date && (a.session ? a.session === entry.session || entry.session === "ai" : firstOfDate)
-  );
+  const analyses = entry.analyses;
   const r = entry.report;
   let html = analyses.map(renderAnalysis).join("");
   if (r) {
@@ -794,8 +813,8 @@ function renderDailyReport(key) {
       ${r.disclaimer ? `<p class="overview-disclaimer">${escapeHtml(r.disclaimer)}</p>` : ""}
     </div>`;
   }
-  if (!analyses.length && firstOfDate) {
-    html += '<p class="report-empty-ai">Chưa có bài phân tích của Claude cho ngày này.</p>';
+  if (!analyses.length) {
+    html += '<p class="report-empty-ai">Chưa có bài phân tích cho phiên này.</p>';
   }
   box.innerHTML = html;
 }

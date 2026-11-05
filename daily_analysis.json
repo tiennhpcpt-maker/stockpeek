@@ -1,0 +1,989 @@
+{
+  "items": [
+    {
+      "date": "2026-11-05",
+      "session": "morning",
+      "generated_at": "2026-11-05T07:38:18+07:00",
+      "title": "Bản tin sáng 05/11: VN-Index hồi 1,97%, lấy lại mốc 1.700",
+      "summary": "VN-Index đóng cửa phiên 04/11 tại 1.733,02 điểm (+1,97%, +33,40 điểm), ngắt chuỗi 4 phiên giảm và lấy lại mốc 1.700. Thanh khoản HoSE bật lên 17.950 tỷ đồng (+39%), cho thấy dòng tiền nội nhập cuộc. Khối ngoại vẫn bán ròng nhưng thu hẹp còn 65-70 tỷ đồng, mua tập trung FPT, MSN. Ba mã nổi bật theo chấm điểm: MSN, HPG, VIC.",
+      "key_findings": [
+        "VN-Index +1,97% lên 1.733,02 điểm, ngắt chuỗi 4 phiên giảm (28/10-03/11 đã mất 3,8%).",
+        "Thanh khoản HoSE 17.950 tỷ đồng, +39% so với phiên trước, cao hơn TB30 (~12.319 tỷ).",
+        "Khối ngoại bán ròng chỉ còn 65-70 tỷ (từ ~500 tỷ); mua FPT, MSN; bán MBB, ACB.",
+        "Kỹ thuật: trên MA5 (~1.728), quanh MA20 (1.730-1.735) nhưng vẫn dưới MA10 (~1.747); hỗ trợ 1.700.",
+        "KQKD Q3 phân hoá: VIC (LNST x7,5), VHM (+419%), HPG (+106%), PVT (+40%), HDB (LNTT 9T +24,2%) đối lập SSI (-24%), HCM (-32,5%), PVD (-75%)."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 05/11",
+          "items": [
+            "Tích cực: vượt và giữ trên 1.747 điểm (MA10), thanh khoản ≥15.000 tỷ.",
+            "Cơ sở: dao động 1.715-1.747 điểm, khối ngoại bán ròng nhẹ dưới 100 tỷ.",
+            "Tiêu cực: thủng 1.700-1.715 điểm, khối ngoại bán ròng mạnh trở lại (>300 tỷ).",
+            "Dữ liệu đang nghiêng về: Cơ sở/Tích cực."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "NHNN: lãi suất cho vay mới cuối tháng 10 giảm 0,2-0,5 điểm %, huy động giảm ~0,4 điểm %.",
+            "CPI tháng 10 +5,09% YoY; PMI sản xuất 52,3 điểm (tháng thứ 16 trên 50).",
+            "Vàng SJC 139,4-142,4 triệu/lượng; tỷ giá trung tâm 25.627đ/USD.",
+            "S&P 500 +0,36%, Nasdaq +0,83% (03/11); Brent 103,60 USD/thùng."
+          ]
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "MSN",
+          "note": "5/6 điểm — khối ngoại mua ròng 8/10 phiên (+669,75 tỷ/10 phiên), KQKD 9T ước gấp 1,5 lần cả năm 2025. Theo dõi: giữ trên 65.000-67.000đ."
+        },
+        {
+          "ticker": "HPG",
+          "note": "4/6 điểm — LNST Q3 +106% YoY, dòng tiền ngoại dương nhưng chưa đều. Hỗ trợ quanh 20.000đ."
+        },
+        {
+          "ticker": "VIC",
+          "note": "3,5/6 điểm — KQKD đột biến nhưng đà giá tuần chuyển âm (-2,9%). Theo dõi vùng 225.000-240.000đ."
+        }
+      ],
+      "action_items": [
+        "MSN, HPG: cân nhắc giải ngân thăm dò nếu VN-Index giữ trên 1.700-1.730 và mã giữ vùng hỗ trợ.",
+        "Đối chiếu lại dữ liệu khối ngoại phiên 04-05/11 trước khi giải ngân (nguồn CafeF/Vietstock bị chặn sáng nay).",
+        "Hạn chế tăng tỷ trọng MBB, ACB khi còn bị bán ròng; theo dõi VIC quanh 225.000-240.000đ."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư",
+        "CafeF",
+        "Tinnhanhchungkhoan",
+        "Vietstock"
+      ],
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-04",
+      "session": "morning",
+      "generated_at": "2026-11-04T07:44:25+07:00",
+      "title": "Bản tin sáng 04/11: VN-Index giảm phiên thứ 4, thủng 1.700",
+      "summary": "VN-Index đóng cửa phiên 03/11 tại 1.699,62 điểm (-0,65%), phiên giảm thứ tư liên tiếp, mất mốc 1.700 dù thanh khoản giảm 32% còn ~12.600 tỷ đồng (thận trọng, chưa phải bán tháo). Khối ngoại bán ròng ước tính phiên thứ 8 liên tiếp, tập trung MBB, VCB. Chỉ số nằm dưới toàn bộ các đường MA. Ba mã nổi bật: MSN, VIC, HPG nhờ KQKD Q3 vượt trội.",
+      "key_findings": [
+        "VN-Index giảm 4 phiên liên tiếp: 1.766,65 → 1.699,62 điểm (28/10-03/11, -3,8%).",
+        "Thanh khoản co lại: 15.840 tỷ (02/11) xuống ~12.600 tỷ (03/11), dưới TB30.",
+        "Khối ngoại bán ròng phiên thứ 8 (lũy kế năm ~122.447 tỷ); bán MBB, VCB, ACB, STB, FPT; mua MSN, VIX, PNJ, HPG.",
+        "KQKD Q3 phân hoá: VIC x7,5, VHM +419%, MSN +131% đối lập SSI -24%, HCM -32,5%.",
+        "Kỹ thuật: dưới cả 4 đường MA; hỗ trợ 1.700, kháng cự 1.730-1.747."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 04/11",
+          "items": [
+            "Tích cực: vượt và giữ 1.730-1.747 điểm, thanh khoản vượt TB30.",
+            "Cơ sở: dao động 1.690-1.730 điểm, khối ngoại bán ròng thu hẹp.",
+            "Tiêu cực: thủng 1.700 kèm thanh khoản đột biến, bán tháo lan rộng.",
+            "Dữ liệu đang nghiêng về: Cơ sở/thận trọng."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "CPI tháng 10 +5,09% YoY; PMI 52,3 điểm.",
+            "Giá điện bán lẻ -2%, thuế TTĐB xăng về 0% từ 1/11.",
+            "Kospi -3,59% (03/11); Brent -7,63% còn 104,77 USD/thùng."
+          ]
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "MSN",
+          "note": "5/6 điểm — dòng tiền ngoại và KQKD đồng thuận tích cực. Giữ trên 65.000-67.000đ."
+        },
+        {
+          "ticker": "VIC",
+          "note": "4,5/6 điểm — KQKD đột biến nhưng khối ngoại bán ròng mạnh sau tin, rủi ro chốt lời."
+        },
+        {
+          "ticker": "HPG",
+          "note": "4/6 điểm — KQKD vượt trội, dòng tiền chưa ổn định. Hỗ trợ quanh 20.000đ."
+        }
+      ],
+      "action_items": [
+        "MSN: cân nhắc giải ngân thăm dò nếu VN-Index giữ trên 1.700 và MSN giữ trên 65.000đ.",
+        "Hạn chế tăng tỷ trọng VCB, MBB, STB, FPT đang bị bán ròng mạnh.",
+        "VIC: theo dõi vùng 230.000-240.000đ, cân nhắc chốt lời một phần nếu khối ngoại bán tiếp."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư",
+        "CafeF",
+        "Vietstock",
+        "VnEconomy"
+      ],
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-03",
+      "generated_at": "2026-11-03T13:32:13+07:00",
+      "kind": "company",
+      "origin": "Phân tích doanh nghiệp (email)",
+      "title": "Phân tích doanh nghiệp IDC, MML, FOC (khối ngoại mua ròng 5 phiên)",
+      "summary": "Ba mã IDC, MML, FOC đều có kinh doanh Q3/2026 đi xuống và tín hiệu kỹ thuật \"Bán mạnh\", nhưng tài chính và định giá khác nhau nhiều. IDC đáng chú ý nhất: định giá rẻ, ~5.700 tỷ doanh thu đã nhận tiền chưa ghi nhận, dự án mới từ 2027 — ngắn hạn yếu, trung hạn nghiêng tích cực. FOC tài chính rất mạnh nhưng tăng trưởng đảo chiều — trung tính. MML lợi nhuận giảm, định giá cao, rủi ro pha loãng — trung tính nghiêng tiêu cực. Khối ngoại mua MML, FOC quá nhỏ để coi là tín hiệu.",
+      "key_findings": [
+        "IDC: DT Q3 2.076 tỷ (-27,7%), LNST Q3 -41% đến -45%; P/E ~6 (ngành 15,5), ROE ~26%, cổ tức ~9%; khối ngoại mua ~80 tỷ/8 phiên.",
+        "MML: DT Q3 2.646 tỷ (+11%), LNST Q3 98 tỷ (-3,8%); P/E 18,4 (ngành 14,0); không cổ tức, free float ~8,8%.",
+        "FOC: DT Q3 199 tỷ (-10,3%), LNST 36,5 tỷ (-20,7%); không vay nợ, P/E ~6,5, ROE ~22%, cổ tức ~17%."
+      ],
+      "tickers": [
+        {
+          "ticker": "IDC",
+          "note": "Ngắn hạn yếu (biên gộp Q3 giảm còn 32,4%, tồn kho kỷ lục), trung hạn tích cực nhờ Vinh Quang, Tân Phước 1 bàn giao từ Q1/2027."
+        },
+        {
+          "ticker": "FOC",
+          "note": "Phù hợp mục tiêu cổ tức; giá nhiều khả năng đi ngang 53.000-65.000đ."
+        },
+        {
+          "ticker": "MML",
+          "note": "Doanh thu tăng nhờ thịt chế biến nhưng giá heo hơi thấp hơn giá thành; chờ giá heo hồi phục."
+        }
+      ],
+      "action_items": [
+        "IDC: chờ KQKD Q4/2026 (cuối tháng 1/2027), theo dõi giá vượt lại MA200.",
+        "MML, FOC: không xem chuỗi mua ròng khối ngoại là tín hiệu.",
+        "Kiểm tra lại dòng tiền kinh doanh và bảng cân đối trước khi quyết định."
+      ],
+      "sources": [
+        "TCBS",
+        "Tinnhanhchungkhoan",
+        "Vietstock",
+        "CafeF",
+        "24hMoney"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-03",
+      "generated_at": "2026-11-03T08:19:19+07:00",
+      "kind": "monthly",
+      "origin": "Tổng kết tháng (email)",
+      "title": "Tổng hợp mã được đề xuất trong tháng (05/10 – 02/11/2026)",
+      "summary": "Phạm vi: 21 email TCBS \"Cơ hội đầu tư\" và 21 bản tin sáng. TCBS mỗi ngày khuyến nghị một mã và gần như không lặp lại (21 lần, 20 mã), 2/3 là \"Chờ mua\". Xét riêng khuyến nghị chính thức thì không có mã nổi trội; cộng thêm báo cáo TCBS và đề xuất trong bản tin sáng, VIC, TCB, VHM, HPG được nhắc nhiều nhất — nhưng hướng đề xuất đổi qua lại theo dòng tiền khối ngoại.",
+      "key_findings": [
+        "Chỉ có 2 khuyến nghị Mua cả tháng, đều là ngân hàng quốc doanh: CTG (@29.500, 09/10) và VCB (@56.300, 14/10).",
+        "TCBS phủ nhiều nhất nhóm Chứng khoán (CTS, VCI, VCK, HCM) và Ngân hàng (CTG, VCB, VPB, EVF).",
+        "VIC đổi chiều từ \"hạn chế mua đuổi\" (12-20/10) sang \"cân nhắc gia tăng\" (27/10-03/11); VHM ngược lại.",
+        "CTG và VCB đều có tín hiệu kỹ thuật \"Bán mạnh\"; phiên 02/11 VCB giảm 4,8%."
+      ],
+      "sections": [
+        {
+          "title": "Mã được nhắc nhiều nhất (cả 3 nguồn)",
+          "items": [
+            "VIC: 7 lần — 3 tích cực / 3 thận trọng / 1 theo dõi.",
+            "TCB: 6 lần — nghiêng tích cực.",
+            "VHM: 6 lần — nghiêng thận trọng.",
+            "HPG: 5 lần — tích cực / theo dõi.",
+            "VCB: 4 lần — nghiêng tích cực.",
+            "MSN: 4 lần — tích cực.",
+            "HSG: 4 lần — theo dõi.",
+            "BMP, PNJ, VPB, ACB, STB, NKG: 3 lần mỗi mã."
+          ]
+        },
+        {
+          "title": "Khuyến nghị chính thức của TCBS (21 lần)",
+          "items": [
+            "Mua: 2 lần (9,5%) — CTG, VCB.",
+            "Nắm giữ: 5 lần (23,8%) — HPG, EVF, MSN, VPB, HCM.",
+            "Chờ mua: 14 lần (66,7%) — CTS, DMX, VCI, VCK, ACV, PDR, BMP (2 lần), PNJ, DDV, FMC, SCS, NTC, PVS."
+          ]
+        }
+      ],
+      "action_items": [
+        "Cân nhắc thêm TCB, VCB, HPG, MSN vào danh mục theo dõi; theo dõi VHM, PNJ ở góc độ rủi ro.",
+        "Theo dõi riêng CTG, VCB cho đến khi kỹ thuật cải thiện.",
+        "Bổ sung nguồn khuyến nghị từ VnEconomy, Vietstock, 24hMoney để có nhiều nguồn so sánh hơn."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư",
+        "Bản tin chứng khoán sáng",
+        "VnEconomy"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-03",
+      "session": "morning",
+      "generated_at": "2026-11-03T07:18:13+07:00",
+      "title": "Bản tin sáng 03/11: VN-Index -1,77%, khối ngoại bán ròng 7 phiên",
+      "summary": "VN-Index đóng cửa phiên 02/11 tại 1.710,72 điểm (-1,77%, -30,90 điểm), phiên giảm thứ ba liên tiếp và mạnh nhất kể từ 11/9, do áp lực bán lan rộng ở Ngân hàng, Dầu khí, BĐS KCN, Phân bón, Thép. Thanh khoản tăng 32,5% lên 15.840 tỷ đồng nhờ lực cầu bắt đáy. Khối ngoại bán ròng phiên thứ bảy liên tiếp (523,4 tỷ). Chỉ số dưới toàn bộ MA5/10/20/50; hỗ trợ 1.700, kháng cự 1.735-1.747.",
+      "key_findings": [
+        "Khớp lệnh HoSE 15.840 tỷ, cao hơn 28,6% TB30 phiên.",
+        "Khối ngoại bán ròng 7 phiên, tập trung MBB, VCB, ACB, STB, FPT; mua MSN, VIX, PNJ, BVH, TCH.",
+        "Mất MA20, dưới MA50 phiên thứ sáu liên tiếp.",
+        "KQKD Q3: VIC lãi gấp ~7,5 lần; VHM +419%; VCB LNTT 9T +22,1%.",
+        "STB thay Quyền Tổng giám đốc từ 02/11."
+      ],
+      "tickers": [
+        {
+          "ticker": "HCM",
+          "note": "TCBS khuyến nghị Nắm giữ (P/B ~1,8x, P/E ~21x, ROE ~10%)."
+        },
+        {
+          "ticker": "STB",
+          "note": "Theo dõi sau thay đổi nhân sự điều hành."
+        }
+      ],
+      "action_items": [
+        "Theo dõi sát hỗ trợ 1.700; nếu thủng kèm thanh khoản tăng, cân nhắc hạ tỷ trọng Ngân hàng, Dầu khí, Thép.",
+        "Theo dõi HCM và STB.",
+        "Cân nhắc nhóm KQKD vượt trội (VIC, VHM, VCB) khi thị trường ổn định."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-02",
+      "session": "morning",
+      "generated_at": "2026-11-02T07:19:27+07:00",
+      "title": "Bản tin sáng 02/11: tuần trước VN-Index -1,83%",
+      "summary": "VN-Index đóng cửa phiên 30/10 tại 1.741,62 điểm (-0,80%), phiên điều chỉnh thứ hai liên tiếp, thấp nhất từ 21/10; cả tuần mất 1,83% (-32,53 điểm). Áp lực bán lan rộng ở Ngân hàng, Chứng khoán, Thép, Bán lẻ; khối ngoại bán ròng phiên thứ sáu liên tiếp. Châu Á giảm mạnh cuối tuần (Kospi -3,48%, Nikkei -2,12%). Điểm sáng: VHM lợi nhuận Q3 +419%, TCBS khuyến nghị chờ mua PVS.",
+      "key_findings": [
+        "VN-Index mất gần 25 điểm trong hai phiên 29-30/10.",
+        "Khối ngoại bán ròng >630 tỷ phiên 30/10, tập trung VIC, TCB, MBB; mua VHM, VCB, VJC.",
+        "VHM và GAS là điểm tựa hiếm hoi của chỉ số.",
+        "Kỹ thuật: dưới MA5 (~1.758), MA10 (~1.745), MA50 (~1.773), chỉ còn trên MA20 (~1.737).",
+        "Mỹ giảm 29/10 (Nasdaq -1,38%); Kospi -3,48%, Nikkei -2,12% phiên 30/10."
+      ],
+      "tickers": [
+        {
+          "ticker": "VHM",
+          "note": "Lợi nhuận Q3 +419%, có thể là điểm tựa cho chỉ số."
+        },
+        {
+          "ticker": "PVS",
+          "note": "TCBS khuyến nghị Chờ mua; theo dõi tiến độ nghiệm thu dự án."
+        }
+      ],
+      "action_items": [
+        "Hạn chế giải ngân mới, giảm margin, theo dõi hỗ trợ 1.737 (MA20).",
+        "Theo dõi cổ phiếu trụ và KQKD Q3 (VHM, PVS).",
+        "Chờ phản ứng của VN-Index quanh hỗ trợ/kháng cự sau đà giảm của thị trường quốc tế."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-30",
+      "session": "morning",
+      "generated_at": "2026-10-30T07:17:48+07:00",
+      "title": "Bản tin sáng 30/10: VN-Index -0,62%, HPG là điểm sáng",
+      "summary": "VN-Index giảm 0,62% phiên 29/10, đóng cửa 1.755,61 điểm, thấp nhất từ 21/10, do áp lực bán lan rộng. Thanh khoản HoSE giảm ~5% còn 14.500 tỷ đồng; khối ngoại bán ròng phiên thứ 5 liên tiếp (>450 tỷ). HPG là điểm sáng với KQKD Q3 vượt kỳ vọng (lợi nhuận +106% YoY). Chỉ số mất MA5/MA50, hỗ trợ gần nhất 1.737-1.741 điểm.",
+      "key_findings": [
+        "VN-Index: 1.766,65 (28/10) → 1.755,61 (29/10).",
+        "Thanh khoản HoSE ~15.300 tỷ → ~14.500 tỷ.",
+        "Khối ngoại bán ròng ~267 tỷ → ~450 tỷ, cường độ tăng.",
+        "HPG Q3: doanh thu 62.669 tỷ (+70%), LNST 8.265 tỷ (+106%).",
+        "Fed giữ lãi suất 3,75-4,00%; Brent 115,32 USD/thùng."
+      ],
+      "tickers": [
+        {
+          "ticker": "HPG",
+          "note": "KQKD Q3 vượt kỳ vọng, LNST +106% YoY."
+        },
+        {
+          "ticker": "NTC",
+          "note": "TCBS khuyến nghị Chờ mua."
+        },
+        {
+          "ticker": "SCS",
+          "note": "TCBS khuyến nghị Chờ mua (phiên trước)."
+        }
+      ],
+      "action_items": [
+        "Theo dõi hỗ trợ 1.737-1.741; cân nhắc hạ tỷ trọng nếu mất mốc này.",
+        "Đánh giá lại rủi ro nếu khối ngoại bán ròng sang phiên thứ 6.",
+        "Quan sát NTC, SCS theo khuyến nghị chờ mua."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-29",
+      "session": "morning",
+      "generated_at": "2026-10-29T07:18:18+07:00",
+      "kind": "bulletin",
+      "title": "Bản tin sáng 29/10: VN-Index +0,27%, chờ Fed",
+      "summary": "VN-Index đóng cửa phiên 28/10 tại 1.766,65 điểm (+0,27%), chấm dứt hai phiên điều chỉnh nhờ VIC và nhóm Ngân hàng. Thanh khoản HoSE đạt hơn 15.300 tỷ đồng (+10%), nhưng khối ngoại bán ròng ~267 tỷ, phiên thứ tư liên tiếp. Chỉ số vẫn dưới kháng cự MA50 (~1.772) phiên thứ ba. Điểm cần theo dõi: quyết định lãi suất của Fed rạng sáng 29/10.",
+      "key_findings": [
+        "Ngân hàng và VIC dẫn dắt; Công nghệ (FPT bị bán ròng mạnh nhất) và Thép điều chỉnh.",
+        "Khối ngoại bán ròng 4 phiên liên tiếp nhưng quy mô giảm.",
+        "Kỹ thuật: trên MA5/10/20, dưới MA50 (~1.772); hỗ trợ MA5 ~1.765.",
+        "Chính phủ xây dựng phương án giảm giá điện bán lẻ và xem xét thuế TTĐB xăng về 0%.",
+        "KQKD Q3: MWG LNST ~3.500 tỷ (gần gấp đôi), 9T vượt 5% kế hoạch; OCB LNTT 9T +20,2%."
+      ],
+      "tickers": [
+        {
+          "ticker": "SCS",
+          "note": "TCBS Chờ mua — LNST Q3 -4,8% nhưng biên gộp ~79%, ROE >43%, cổ tức ~10,3%; rủi ro sân bay Long Thành 2027."
+        },
+        {
+          "ticker": "FMC",
+          "note": "TCBS Chờ mua — LNST Q3 gần gấp đôi, 9T hoàn thành kế hoạch năm; rủi ro thuế chống bán phá giá tại Mỹ."
+        },
+        {
+          "ticker": "MWG",
+          "note": "LNST Q3 ~3.500 tỷ, gần gấp đôi cùng kỳ."
+        }
+      ],
+      "action_items": [
+        "Theo dõi phản ứng thị trường sau quyết định lãi suất Fed trước khi giải ngân hoặc chốt lời.",
+        "Nếu VN-Index vượt MA50 (~1.772) với thanh khoản >15.000 tỷ, xem xét tăng tỷ trọng Ngân hàng, VIC, TCB, VCB.",
+        "Nghiên cứu SCS, FMC (TCBS Chờ mua) và nhóm Điện - Xăng dầu đón chính sách từ 1/11."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-28",
+      "session": "morning",
+      "generated_at": "2026-10-28T07:21:54+07:00",
+      "kind": "bulletin",
+      "title": "Bản tin sáng 28/10: điều chỉnh phiên thứ 2, kháng cự MA50",
+      "summary": "VN-Index giảm nhẹ 0,10% về 1.761,87 điểm phiên 27/10, phiên điều chỉnh thứ hai liên tiếp. Áp lực bán ở Ngân hàng và Công nghiệp, trong khi VIC và Thép nâng đỡ. Khối ngoại bán ròng phiên thứ ba (hơn 400 tỷ), thanh khoản nhích 3% lên ~13.930 tỷ. Chỉ số trên các MA ngắn hạn nhưng dưới MA50 (~1.772) — kháng cự cần theo dõi trước quyết định của Fed.",
+      "key_findings": [
+        "VN-Index: 1.763,55 (26/10, -0,60%) → 1.761,87 (27/10, -0,10%).",
+        "Khối ngoại bán ròng ~900 tỷ (26/10) và >400 tỷ (27/10); bán FPT, HDB, VPL; mua MSN, TCB, VIC.",
+        "VIC phát hành 230 tỷ Won (~4.500 tỷ đồng) trái phiếu quốc tế, lãi suất 8%/năm.",
+        "OCB: LNTT Q3 hơn 1.653 tỷ (+7,5%), 9T 4.123 tỷ (+20,2%).",
+        "Quốc tế tích cực: S&P 500 +0,70% (26/10), Kospi +3,09%, Nikkei +1,7% (27/10)."
+      ],
+      "tickers": [
+        {
+          "ticker": "FMC",
+          "note": "TCBS Chờ mua — LNST Q3 188 tỷ, gần gấp đôi; biên gộp 16,7%. Rủi ro thuế POR20 tại Mỹ."
+        },
+        {
+          "ticker": "DDV",
+          "note": "TCBS Chờ mua nhưng lợi nhuận Q3 -96% do giá lưu huỳnh tăng; hạn chế giải ngân."
+        }
+      ],
+      "action_items": [
+        "Giải ngân khi VN-Index vượt MA50 (~1.772) kèm thanh khoản tăng; nếu thất bại thì thận trọng.",
+        "Quan sát quyết định Fed và bán ròng khối ngoại trước khi mở vị thế Ngân hàng.",
+        "FMC có thể tích lũy theo khuyến nghị; hạn chế DDV."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-27",
+      "session": "morning",
+      "generated_at": "2026-10-27T07:18:04+07:00",
+      "kind": "bulletin",
+      "title": "Bản tin sáng 27/10: VN-Index -0,60%, mất lại MA50",
+      "summary": "VN-Index đóng cửa phiên 26/10 tại 1.763,55 điểm (-0,60%), ngắt chuỗi hồi phục do áp lực bán ở Ngân hàng, Chứng khoán và Công nghệ. Thanh khoản HoSE giảm hơn 20% còn ~13.530 tỷ; khối ngoại bán ròng ~900 tỷ, tập trung FPT, HDB, VPL. Chỉ số mất MA50 (~1.772) chỉ sau một phiên vượt lên.",
+      "key_findings": [
+        "Ngân hàng giảm đồng loạt; VIC và Dầu khí là điểm sáng hiếm hoi.",
+        "Thanh khoản sụt hơn 20% — dòng tiền thận trọng đứng ngoài.",
+        "Khối ngoại bán FPT, HDB, VPL; gom MSN, TCB, VIC.",
+        "MA50 (~1.772) thành kháng cự; MA5 (~1.746) là hỗ trợ gần nhất.",
+        "NHNN cấp bổ sung hạn mức tín dụng cho 35 dự án lớn (~1,7 triệu tỷ nhu cầu vốn)."
+      ],
+      "tickers": [
+        {
+          "ticker": "VIC",
+          "note": "Phát hành ~4.500 tỷ đồng trái phiếu tại Hàn Quốc, lãi 8%/năm; được khối ngoại gom ròng."
+        },
+        {
+          "ticker": "DDV",
+          "note": "TCBS Chờ mua nhưng lợi nhuận Q3 -96% YoY do giá lưu huỳnh."
+        }
+      ],
+      "action_items": [
+        "Chỉ giải ngân thêm khi VN-Index vượt bền MA50 (~1.772); hạ tỷ trọng nếu thủng MA5 (~1.746).",
+        "Ưu tiên các mã được khối ngoại gom ròng (MSN, TCB, VIC) nếu dòng tiền quay lại.",
+        "Lưu ý rủi ro từ chứng khoán Mỹ và giá hàng hoá."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-26",
+      "session": "morning",
+      "generated_at": "2026-10-26T07:17:36+07:00",
+      "kind": "bulletin",
+      "title": "Bản tin sáng 26/10: tuần trước VN-Index +4%, vượt MA50",
+      "summary": "Phiên 23/10 VN-Index tăng 0,77% lên 1.774,15 điểm, cao nhất từ 29/9; cả tuần +4,0% (+68,24 điểm), vượt MA50 sau 17 phiên. Thanh khoản HoSE ~16.950 tỷ (+11%). Khối ngoại bán ròng ~480 tỷ, chấm dứt 2 phiên mua ròng. Dòng tiền tập trung Ngân hàng và VIC; kháng cự gần nhất 1.800 điểm.",
+      "key_findings": [
+        "VN-Index 1.774,15 điểm (+0,77%); tuần +68,24 điểm.",
+        "Khối ngoại bán mạnh ACB, FPT, PNJ; TCB được mua nhiều nhất.",
+        "Kỹ thuật: vượt MA50 (~1.772); hỗ trợ ~1.738, kháng cự 1.800.",
+        "Quốc tế: Nasdaq -2,60%; dầu Brent +4% lên ~113 USD/thùng.",
+        "KDH ký vay ~13.500 tỷ với CTG cho dự án BT tại TP.HCM."
+      ],
+      "tickers": [
+        {
+          "ticker": "VPB",
+          "note": "TCBS Nắm giữ — LNTT Q3 +20,3%, tín dụng +28,4% YTD; nợ nhóm 2 tăng lên 3,6%, NIM 4,9%."
+        }
+      ],
+      "action_items": [
+        "Theo dõi kháng cự 1.800; nếu giữ trên MA50, xem xét tăng tỷ trọng Ngân hàng và nhóm Vingroup.",
+        "Hạn chế mua đuổi Chứng khoán, Dầu khí, Công nghệ.",
+        "Giữ VPB nhưng theo dõi nợ nhóm 2 và NIM."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-24",
+      "generated_at": "2026-10-24T16:42:38+07:00",
+      "kind": "weekly",
+      "title": "Báo cáo tuần 19-23/10: VN-Index +4%, dòng tiền Vingroup & Ngân hàng",
+      "summary": "VN-Index tăng 68,24 điểm (+4%) lên 1.774,15 điểm, chấm dứt chuỗi 4 tuần giảm; MACD cắt lên đường signal, Stochastic rời vùng quá bán. Đà tăng tập trung ở VIC/VHM (riêng hai mã góp ~19 điểm phiên 22/10). Khối ngoại bán ròng ~1.071 tỷ, giảm mạnh so với các tuần trước, có 2 phiên mua ròng. Dầu Brent ~113 USD/thùng, cao nhất từ 18/5.",
+      "key_findings": [
+        "ACB/VCB: khối ngoại bán ròng ACB ~470 tỷ phiên 23/10, lớn nhất thị trường.",
+        "VHM: dự báo lợi nhuận Q3 chênh lệch rất lớn giữa các CTCK (4.601-17.251 tỷ).",
+        "PNJ rủi ro cao: Q3 lỗ ~258 tỷ, dự kiến phát hành riêng lẻ tối đa 550 triệu cổ phiếu.",
+        "FPT cơ bản tốt (LNTT 9T +17%, mảng AI +55%) nhưng khối ngoại vẫn bán, sở hữu nước ngoài dưới 28%.",
+        "Dầu khí phân hoá: PVD +5% phiên 22/10, PVT, PVP giảm sâu; CRE -9,44% trong tuần."
+      ],
+      "sections": [
+        {
+          "title": "Mã dưới 20.000đ (theo bài viết, cần tự kiểm tra lại giá)",
+          "items": [
+            "EIB 17.850đ — TPS Mua.",
+            "SHB 10.900đ — TCBS Tích lũy.",
+            "HHV 9.660đ — BSC mục tiêu 12.300, cắt lỗ dưới 9.250.",
+            "TNG 19.000đ — BVSC mục tiêu 24.400.",
+            "NKG ~12.000đ — VDSC mục tiêu 14.400.",
+            "HSG ~10.400đ — BSC Nắm giữ 11.800.",
+            "HDG ~15.000đ — MBS Khả quan.",
+            "HPG 20.950đ (sát ngưỡng) — VCBS mục tiêu 31.313."
+          ]
+        }
+      ],
+      "action_items": [
+        "Chờ thanh khoản tăng và dòng tiền lan ra ngoài nhóm Vingroup; hỗ trợ 1.725-1.735, thủng 1.680 thì ưu tiên quản trị rủi ro.",
+        "Theo dõi KQKD Q3 ngân hàng và VHM; tránh PNJ đến khi rõ phương án phát hành.",
+        "Nhóm dưới 20.000đ: ưu tiên mã có tín hiệu kỹ thuật và giá mục tiêu (EIB, HHV, TNG, NKG)."
+      ],
+      "sources": [
+        "Vietstock",
+        "Tinnhanhchungkhoan",
+        "CafeF",
+        "Nhân Dân",
+        "VOV",
+        "Dân Trí",
+        "Investing.com"
+      ],
+      "origin": "Báo cáo tuần (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-23",
+      "generated_at": "2026-10-23T07:17:21+07:00",
+      "title": "Bản tin sáng 23/10: VN-Index +1,26%, khối ngoại mua ròng 2 phiên",
+      "summary": "VN-Index tăng 1,26% (+21,96 điểm) lên 1.760,63 điểm phiên 22/10, cao nhất từ 30/9, nhờ nhóm Vingroup và Dầu khí. Thanh khoản HoSE giảm gần 25% còn ~15.300 tỷ, khối ngoại mua ròng phiên thứ hai (~340 tỷ). Chỉ số chưa vượt kháng cự MA50 (~1.772) sau 17 phiên. Dầu Brent tăng hơn 3% lên ~112 USD/thùng; Kospi, Nikkei giảm sâu.",
+      "key_findings": [
+        "Dòng tiền dẫn dắt ở Vingroup và Dầu khí; Ngân hàng, Chứng khoán điều chỉnh.",
+        "Thanh khoản giảm mạnh dù chỉ số tăng — đà tăng chưa được dòng tiền mới xác nhận.",
+        "Khối ngoại mua ròng 2 phiên liên tiếp, hỗ trợ tâm lý ngắn hạn.",
+        "MSN Q3: doanh thu 36.981 tỷ (+74,7%), LNST 4.552 tỷ (gấp 2,4 lần); 9T 10.325 tỷ, vượt kế hoạch.",
+        "Châu Á giảm sâu (Kospi -3,52%, Nikkei -2,65%) trong khi Mỹ tăng (Nasdaq +1,05%)."
+      ],
+      "tickers": [
+        {
+          "ticker": "MSN",
+          "note": "TCBS Nắm giữ — KQKD Q3 vượt kỳ vọng, có thể đạt kịch bản lợi nhuận cao 11.500 tỷ cả năm."
+        }
+      ],
+      "action_items": [
+        "Theo dõi kháng cự MA50 (~1.772); bứt phá kèm thanh khoản thì cân nhắc giải ngân nhóm Vingroup, Dầu khí.",
+        "Tiếp tục nắm giữ MSN, theo dõi KQKD Q4.",
+        "Thận trọng với Ngân hàng, Chứng khoán; lưu ý biến động châu Á và giá dầu."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-22",
+      "generated_at": "2026-10-22T07:17:29+07:00",
+      "title": "Bản tin sáng 22/10: VN-Index +2,76%, phiên tăng mạnh nhất nửa năm",
+      "summary": "VN-Index bùng nổ phiên 21/10 với mức tăng 2,76% (+46,70 điểm) lên 1.738,67 điểm — mạnh nhất hơn nửa năm, lấy lại mốc 1.700. Dòng tiền lan toả vào nhóm Vingroup (VIC, VHM, VRE tăng trần), Ngân hàng và Chứng khoán; thanh khoản HoSE tăng hơn 50% lên ~20.290 tỷ. Khối ngoại mua ròng trở lại (~193 tỷ). Chỉ số vẫn dưới MA20 (~1.739) và MA50 (~1.773).",
+      "key_findings": [
+        "VIC, VHM, VRE tăng trần là động lực chính, cộng hưởng Ngân hàng và Chứng khoán.",
+        "Thanh khoản tăng hơn 50% — dòng tiền trở lại sau giai đoạn trầm lắng.",
+        "Khối ngoại mua ròng ~193 tỷ, chấm dứt chuỗi bán ròng (lũy kế năm vẫn bán >118.000 tỷ).",
+        "KQKD Q3: TCB LNTT >10.370 tỷ (+26%, cao nhất lịch sử), LPB +29%; SSI -24%; PNJ lỗ 258 tỷ.",
+        "VPS: LNST 9T 3.233 tỷ (+26,1%), dẫn đầu thị phần môi giới."
+      ],
+      "tickers": [
+        {
+          "ticker": "TCB",
+          "note": "LNTT Q3 hơn 10.370 tỷ (+26% YoY), cao nhất từ trước đến nay."
+        },
+        {
+          "ticker": "LPB",
+          "note": "LNTT Q3 4.448 tỷ (+29% YoY)."
+        },
+        {
+          "ticker": "PNJ",
+          "note": "Rủi ro: lỗ Q3 258 tỷ, dự kiến chào bán riêng lẻ tới 550 triệu cổ phiếu — tạm dừng giải ngân."
+        }
+      ],
+      "action_items": [
+        "Theo dõi bứt phá MA20 (~1.739) và MA50 (~1.773); nếu về dưới 1.700, cân nhắc chốt lời nhóm đã tăng nóng.",
+        "Quan sát TCB, LPB để giải ngân khi thị trường điều chỉnh; tạm dừng PNJ.",
+        "Theo dõi thêm 2-3 phiên để xác nhận xu hướng mua ròng của khối ngoại."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư",
+        "VPS"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-21",
+      "generated_at": "2026-10-21T07:18:11+07:00",
+      "title": "Bản tin sáng 21/10: VN-Index giằng co dưới 1.700, ngân hàng giảm lãi suất",
+      "summary": "VN-Index phiên 20/10 tăng nhẹ 0,13% lên 1.691,97 điểm sau khi có lúc thủng 1.680; chỉ số dưới 1.700 và dưới cả bốn đường MA, phiên thứ 15 dưới MA50. Thanh khoản đi ngang ~13.300 tỷ, khối ngoại bán ròng gần 275 tỷ. Vietcombank, VietinBank giảm lãi suất huy động 0,5 điểm % từ 20/10 — tín hiệu nới lỏng hỗ trợ thanh khoản.",
+      "key_findings": [
+        "Hỗ trợ gần nhất 1.680, kháng cự 1.698-1.700.",
+        "Khối ngoại bán ACB, VHM, KDC; mua TCB, HPG, FRT.",
+        "Dưới MA5 (~1.698), MA10 (~1.716), MA20 (~1.742), MA50 (~1.773).",
+        "Lãi suất huy động 12 tháng tại VCB, CTG giảm từ 5,9% xuống 5,4%/năm.",
+        "KQKD Q3: NT2, PHR tích cực; VIX (LNTT -94%) và BMP (-9%) kém."
+      ],
+      "tickers": [
+        {
+          "ticker": "TCB",
+          "note": "Được khối ngoại mua ròng, là lực đỡ chính của chỉ số."
+        },
+        {
+          "ticker": "HPG",
+          "note": "Được khối ngoại mua ròng."
+        },
+        {
+          "ticker": "BMP",
+          "note": "TCBS Chờ mua — lợi nhuận Q3 giảm; tạm hoãn giải ngân."
+        }
+      ],
+      "action_items": [
+        "Chưa giải ngân mạnh khi còn dưới MA50; chỉ mua thăm dò TCB, HPG khi kiểm định hỗ trợ 1.680 với thanh khoản cải thiện.",
+        "Đặt dừng lỗ chặt với ACB, VHM đang bị bán ròng.",
+        "Rà soát danh mục theo KQKD Q3 (NT2, PHR tích cực; VIX, BMP kém)."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư",
+        "VPS"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-20",
+      "generated_at": "2026-10-20T07:17:41+07:00",
+      "title": "Bản tin sáng 20/10: VN-Index -0,94%, thấp nhất từ 28/7",
+      "summary": "VN-Index đóng cửa phiên 19/10 giảm 0,94% (-16,07 điểm) về 1.689,84 điểm, mất mốc 1.700, thấp nhất từ 28/7, do áp lực bán chiều từ Ngân hàng và VIC. Thanh khoản tăng hơn 21% lên trên 13.350 tỷ; khối ngoại bán ròng gần 800 tỷ (lũy kế năm >118.000 tỷ). Chỉ số dưới MA50 14 phiên, hỗ trợ ~1.680. Điểm tích cực: KQKD Q3 của VPB, TCX và chủ trương giảm lãi suất cho vay 1,5-2%.",
+      "key_findings": [
+        "VIC là mã gây sức ép lớn nhất; Dầu khí, Chứng khoán, Bán lẻ hạn chế đà giảm.",
+        "Khối ngoại bán VCB, VHM, ACB; mua FRT, MBB, BVH.",
+        "Dưới cả 4 đường MA (MA50 ~1.775); kháng cự 1.700-1.704.",
+        "VPB LNTT 9T ~30.000 tỷ (+47%); TCX LNTT Q3 2.152 tỷ, cao nhất lịch sử; BMP -8,9%.",
+        "NHNN yêu cầu giảm lãi suất cho vay 1,5-2%/năm, huy động giảm tối thiểu 0,5%/năm."
+      ],
+      "tickers": [
+        {
+          "ticker": "VPB",
+          "note": "LNTT 9T ~30.000 tỷ (+47%), đạt 72,4% kế hoạch."
+        },
+        {
+          "ticker": "TCX",
+          "note": "LNTT Q3 2.152 tỷ, cao nhất lịch sử."
+        },
+        {
+          "ticker": "BMP",
+          "note": "TCBS Chờ mua; chưa nên giải ngân khi giá PVC còn cao."
+        }
+      ],
+      "action_items": [
+        "Theo dõi hỗ trợ 1.680; thủng thì hạ tỷ trọng/margin nhóm bị khối ngoại bán ròng (VCB, VHM, ACB, VIC).",
+        "Theo dõi nhóm hưởng lợi giảm lãi suất và KQKD tốt (VPB, TCX).",
+        "Chưa giải ngân BMP."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-19",
+      "generated_at": "2026-10-19T07:18:06+07:00",
+      "title": "Bản tin sáng 19/10: VN-Index ngắt chuỗi 7 phiên giảm",
+      "summary": "VN-Index phiên 16/10 tăng 0,45% (+7,56 điểm) lên 1.705,91 điểm, chấm dứt chuỗi 7 phiên giảm nhờ Ngân hàng và VHM. Thanh khoản giảm hơn 25% (~11.000 tỷ). Khối ngoại bán ròng ~530 tỷ (lũy kế năm hơn 117.000 tỷ). Chỉ số vẫn dưới toàn bộ các đường MA, kỹ thuật còn yếu.",
+      "key_findings": [
+        "Khối ngoại bán HDB, VIC, FRT; mua FPT, CTG, MBB.",
+        "Dưới MA5 (~1.710) đến MA50 (~1.776), phiên thứ 13 dưới MA50; hỗ trợ 1.700 rồi 1.680.",
+        "Ngân hàng dẫn dắt: CTG +2,68%, SHB +2,4%, BID +2,26%.",
+        "VHM trúng thầu 5 tuyến đường sắt đô thị Hà Nội (~900.000 tỷ); SHB LNTT 9T ~14.300 tỷ (+17%).",
+        "SJS LNST Q3 ~1.012 tỷ; HDB tăng vốn điều lệ lên 65.069 tỷ."
+      ],
+      "tickers": [
+        {
+          "ticker": "PDR",
+          "note": "TCBS Chờ mua — dự án Lotte Eco Smart City Thủ Thiêm khởi công 23/10."
+        },
+        {
+          "ticker": "VHM",
+          "note": "Trúng thầu 5 tuyến đường sắt đô thị Hà Nội."
+        }
+      ],
+      "action_items": [
+        "Theo dõi vùng 1.700-1.729 để điều chỉnh tỷ trọng, ưu tiên Ngân hàng nếu bứt phá.",
+        "Giữ PDR ở trạng thái chờ mua, theo dõi dự án Thủ Thiêm.",
+        "Thận trọng với khối ngoại bán ròng kéo dài và thanh khoản giảm."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-16",
+      "generated_at": "2026-10-16T07:17:35+07:00",
+      "title": "Bản tin sáng 16/10: VN-Index giảm phiên thứ 7, dưới 1.700",
+      "summary": "VN-Index đóng cửa phiên 15/10 tại 1.698,35 điểm (-0,38%), phiên giảm thứ 7 liên tiếp, thấp nhất từ 28/7. Thanh khoản HoSE tăng lên hơn 14.800 tỷ (+7,8%) nhưng khối ngoại bán ròng gần 690 tỷ (lũy kế năm hơn 117.000 tỷ). Áp lực bán ở Dầu khí, VHM, một số Ngân hàng/Bảo hiểm; Chứng khoán và một số Ngân hàng/Công nghệ lớn nâng đỡ. Chỉ số dưới cả 4 đường MA 12 phiên — theo dõi hỗ trợ 1.680.",
+      "key_findings": [
+        "7 phiên giảm liên tiếp; MA5 ~1.716, MA10 ~1.732, MA20 ~1.760, MA50 ~1.778.",
+        "Khối ngoại bán VIC, STB, TCB; mua MBB, VPB, PVT.",
+        "CPI Mỹ tháng 9 +3,7% (cao hơn dự báo); S&P 500 -1,11%; Kospi giảm hơn 7,5% phiên 15/10.",
+        "MBS LNTT Q3 -6%; POW doanh thu 9T +77%, vượt 26% kế hoạch.",
+        "VCB P/B ở vùng thấp nhất 5 năm."
+      ],
+      "tickers": [
+        {
+          "ticker": "VCB",
+          "note": "TCBS Mua, giá mục tiêu 56.300đ — P/B thấp nhất 5 năm."
+        },
+        {
+          "ticker": "EVF",
+          "note": "TCBS Nắm giữ — chào bán riêng lẻ cao hơn thị giá ~18%."
+        },
+        {
+          "ticker": "POW",
+          "note": "Doanh thu 9T +77%, vượt 26% kế hoạch."
+        }
+      ],
+      "action_items": [
+        "Hạn chế giải ngân mạnh khi chưa lấy lại MA5 (~1.716); mất 1.680 thì giảm tỷ trọng.",
+        "Theo dõi VCB và nhóm Ngân hàng/Chứng khoán đang được nâng đỡ.",
+        "Thận trọng rủi ro quốc tế và các mã bị khối ngoại bán liên tục (VIC, STB, TCB, VHM)."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-15",
+      "generated_at": "2026-10-15T07:18:04+07:00",
+      "title": "Bản tin sáng 15/10: giảm phiên thứ 6, Thép đi ngược thị trường",
+      "summary": "VN-Index phiên 14/10 giảm 0,85% về 1.704,87 điểm, phiên điều chỉnh thứ sáu, thấp nhất từ 29/7, do Vingroup, Bất động sản, Bán lẻ bị bán mạnh. Thanh khoản nhích lên hơn 13.700 tỷ (+4,3%), khối ngoại bán ròng 772 tỷ (VIC, VHM, FRT). Chỉ số dưới MA50 11 phiên; hỗ trợ tâm lý 1.700. Điểm sáng: nhóm Thép (NKG, HSG, HPG) và khuyến nghị MUA VCB của TCBS.",
+      "key_findings": [
+        "Thép ngược dòng: NKG tăng trần (+6,82%), HSG +4,48%, HPG +1,71%; HPG được khối ngoại mua ròng.",
+        "TCB được chấp thuận tăng vốn thêm tối đa 35.731 tỷ (cổ tức cổ phiếu 50% + ESOP).",
+        "GDA được chấp thuận niêm yết hơn 149 triệu cổ phiếu trên HoSE.",
+        "Kỹ thuật: dưới MA5 (~1.724) đến MA50 (~1.779); kháng cự MA5.",
+        "Vàng SJC 140,3-143,3 triệu/lượng; tỷ giá trung tâm 25.646đ/USD."
+      ],
+      "tickers": [
+        {
+          "ticker": "VCB",
+          "note": "TCBS Mua @56.300 — P/B 1,9x thấp nhất 5 năm, ROE lõi ~17%, kỳ vọng NIM hồi phục."
+        },
+        {
+          "ticker": "HPG",
+          "note": "Ngược dòng thị trường, được khối ngoại mua ròng."
+        },
+        {
+          "ticker": "NKG",
+          "note": "Tăng trần +6,82% phiên 14/10."
+        }
+      ],
+      "action_items": [
+        "Theo dõi hỗ trợ 1.700; mất mốc kèm thanh khoản tăng thì hạ tỷ trọng BĐS, Bán lẻ, Vingroup.",
+        "Xem xét giải ngân VCB theo khuyến nghị MUA; theo dõi nhóm Thép.",
+        "Hạn chế margin cao khi khối ngoại bán ròng kéo dài."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-14",
+      "generated_at": "2026-10-14T07:18:06+07:00",
+      "title": "Bản tin sáng 14/10: giảm phiên thứ 5, hỗ trợ 1.700-1.711",
+      "summary": "VN-Index giảm phiên thứ năm, đóng cửa 13/10 tại 1.719,42 điểm (-0,09%), thấp nhất từ 29/7 và dưới MA50 phiên thứ mười. Thanh khoản HoSE nhích lên hơn 13.100 tỷ (+1,42%), khối ngoại bán ròng 434 tỷ (lũy kế năm hơn 115.000 tỷ). Bất động sản (VIC) và một số Ngân hàng nâng đỡ; Dầu khí và Tiêu dùng thiết yếu là gánh nặng. Chưa có tín hiệu đảo chiều rõ ràng.",
+      "key_findings": [
+        "Dưới cả 4 đường MA (MA5 ~1.734, MA50 ~1.780); hỗ trợ 1.700-1.711.",
+        "Khối ngoại bán ròng 583 tỷ rồi 434 tỷ trong 2 phiên.",
+        "Thép ngược dòng: HPG +2,99%, HSG +3,54%, NKG +6,89%.",
+        "KBC LNST Q3 937 tỷ, gấp ~3 lần cùng kỳ; HPG sản lượng thép 9T +39%."
+      ],
+      "tickers": [
+        {
+          "ticker": "KBC",
+          "note": "LNST Q3 937 tỷ, gấp ~3 lần cùng kỳ nhờ doanh thu KCN."
+        },
+        {
+          "ticker": "ACV",
+          "note": "TCBS Chờ mua — động lực Long Thành nhưng dư địa tăng giá đã hẹp."
+        },
+        {
+          "ticker": "VCK",
+          "note": "TCBS Chờ mua — thị phần môi giới giảm còn 11,54%, P/B ~2,1x cao hơn ngành."
+        }
+      ],
+      "action_items": [
+        "Theo dõi hỗ trợ 1.700-1.711; nếu xuyên phá, hạn chế margin và hạ tỷ trọng cổ phiếu beta cao.",
+        "Quan sát nhóm Thép và VIC; chờ ACV, VCK về vùng giá hấp dẫn hơn.",
+        "Hạn chế mở vị thế mới ở Dầu khí, Bán lẻ, Vingroup."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-13",
+      "generated_at": "2026-10-13T08:15:15+07:00",
+      "title": "Bản tin sáng 13/10: giảm phiên thứ 4, Thép hút dòng tiền",
+      "summary": "VN-Index giảm 0,81% (-14,11 điểm) về 1.720,98 điểm phiên 12/10, phiên điều chỉnh thứ tư, chạm đáy từ 29/7. Thanh khoản HoSE còn gần 13.000 tỷ; khối ngoại bán ròng 583 tỷ (lũy kế năm hơn 115.000 tỷ). Áp lực từ Vingroup, Dầu khí, Bán lẻ; Thép và một số Ngân hàng lớn bù đắp. Chỉ số dưới cả 4 đường MA 9 phiên — hỗ trợ 1.700-1.716.",
+      "key_findings": [
+        "Kỹ thuật: MA5 ~1.742, MA10 ~1.749, MA20 ~1.776, MA50 ~1.780.",
+        "Khối ngoại bán TCB, PNJ, FPT; mua mạnh HPG, HDB, NVL (HPG dẫn đầu).",
+        "Thép tăng mạnh ngược dòng: HPG +2,99%, HSG +3,54%, NKG +6,89%; Dầu khí giảm mạnh nhất.",
+        "HPG sản lượng bán thép 9T 10,3 triệu tấn (+39%), Q3 3,8 triệu tấn (+54%).",
+        "NVL: tổ chức liên quan Chủ tịch bán 2,58 triệu cổ phiếu."
+      ],
+      "tickers": [
+        {
+          "ticker": "HPG",
+          "note": "Dẫn đầu mua ròng khối ngoại, sản lượng 9T +39%."
+        },
+        {
+          "ticker": "VCK",
+          "note": "TCBS Chờ mua — định giá P/B ~2,1x đã phản ánh lợi thế, chờ vùng giá chiết khấu."
+        }
+      ],
+      "action_items": [
+        "Theo dõi hỗ trợ 1.700-1.716; mất vùng này thì đánh giá lại tỷ trọng Dầu khí, nhóm Vingroup.",
+        "Quan sát nhóm Thép (HPG, HSG, NKG), giải ngân từng phần khi thị trường ổn định.",
+        "Tạm quan sát VCK, chưa vội giải ngân."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-12",
+      "generated_at": "2026-10-12T11:45:43+07:00",
+      "title": "Bản tin sáng 12/10: khối ngoại bán ròng 9.200 tỷ qua thoả thuận MCH",
+      "summary": "VN-Index đóng cửa phiên 09/10 giảm 0,22% về 1.735,09 điểm, phiên giảm thứ ba, thấp nhất từ 20/8. Thanh khoản HoSE tăng 73% lên hơn 27.500 tỷ nhưng chủ yếu nhờ thoả thuận đột biến tại MCH. Khối ngoại bán ròng hơn 9.200 tỷ (lũy kế năm gần 115.000 tỷ). Chỉ số dưới toàn bộ MA, phiên thứ 8 dưới MA50; hỗ trợ 1.716-1.726.",
+      "key_findings": [
+        "Áp lực bán ở Ngân hàng, Dầu khí, Công nghệ; VIC điều chỉnh mạnh.",
+        "Dầu khí giảm mạnh nhất (-1,73%); Brent -1,6% về ~102,5 USD/thùng.",
+        "Khối ngoại mua VHM, SHB, TCB; bán MCH (thoả thuận), HDB, FPT.",
+        "Vàng SJC tăng lên 141,8-144,8 triệu/lượng; dự báo lạm phát 2026 khoảng 4,5-5,0%.",
+        "Fed để ngỏ khả năng tạm dừng tăng lãi suất tháng 10."
+      ],
+      "tickers": [
+        {
+          "ticker": "CTG",
+          "note": "TCBS Mua, mục tiêu 29.500đ — NIM cải thiện, P/B 1,15x thấp nhất nhóm quốc doanh, ROE 22,2%."
+        }
+      ],
+      "action_items": [
+        "Theo dõi hỗ trợ 1.716-1.726; xuyên phá thì giảm tỷ trọng cổ phiếu rủi ro cao.",
+        "Xem xét giải ngân CTG theo khuyến nghị MUA.",
+        "Hạn chế mua đuổi Dầu khí, Công nghệ; thanh khoản đột biến phiên 09/10 không phản ánh lực cầu thực."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-08",
+      "generated_at": "2026-10-08T08:23:42+07:00",
+      "title": "Bản tin sáng 08/10: khối ngoại bán ròng 11 phiên liên tiếp",
+      "summary": "VN-Index đóng cửa phiên 07/10 giảm 0,32% xuống 1.753,39 điểm, ngắt mạch hồi phục hai phiên do nhóm Vingroup và Chứng khoán điều chỉnh. Thanh khoản giảm hơn 22% còn hơn 15.000 tỷ. Khối ngoại bán ròng hơn 900 tỷ, phiên thứ 11 liên tiếp (lũy kế năm ~105.000 tỷ). Chỉ số dưới MA50 phiên thứ 6; chứng khoán Mỹ lập kỷ lục mới hỗ trợ tâm lý.",
+      "key_findings": [
+        "Vận tải - Cảng biển, Tiêu dùng, Bán lẻ, Cao su, Dầu khí là điểm sáng.",
+        "Khối ngoại bán PNJ, TCB, HDB; mua MSN, BSR, VIB.",
+        "Kỹ thuật: trên MA5 (~1.751), dưới MA10 (~1.764); hỗ trợ 1.750, sau đó 1.727-1.738.",
+        "T. Rowe Price bán 5,46 triệu cổ phiếu PNJ, không còn là cổ đông lớn.",
+        "Masan (Lepus) đăng ký mua tới 73 triệu cổ phiếu MCH, nâng sở hữu lên gần 75%."
+      ],
+      "tickers": [
+        {
+          "ticker": "VCI",
+          "note": "TCBS Chờ mua — P/B ~1,3x thấp hơn ngành; chờ KQKD Q3."
+        },
+        {
+          "ticker": "MCH",
+          "note": "Masan đăng ký mua thêm để nâng sở hữu lên gần 75%."
+        },
+        {
+          "ticker": "GMD",
+          "note": "Giao dịch không hưởng quyền cổ phiếu thưởng 50% (chốt 8/10)."
+        }
+      ],
+      "action_items": [
+        "Theo dõi nhóm Chứng khoán và Vingroup trước khi giải ngân thêm.",
+        "Quan sát hỗ trợ 1.750; vượt MA10 (~1.764) là tín hiệu đảo chiều ngắn hạn.",
+        "Cân nhắc nhóm được khối ngoại mua ròng (MSN, BSR, VIB) và nhóm dòng tiền thay thế."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-07",
+      "generated_at": "2026-10-07T08:38:48+07:00",
+      "title": "Bản tin sáng 07/10: hồi phục phiên thứ 2, thanh khoản +43%",
+      "summary": "VN-Index phiên 06/10 tăng 0,34% lên 1.759,08 điểm, hồi phục phiên thứ hai nhờ lực cầu bắt đáy cuối phiên ở Vingroup, Ngân hàng lớn, Dầu khí, Chứng khoán. Thanh khoản cải thiện mạnh (+43-45%) nhưng khối ngoại bán ròng hơn 2.500 tỷ, phiên thứ 10 liên tiếp (lũy kế năm hơn 104.000 tỷ). Chỉ số vẫn dưới MA10/MA20/MA50; hỗ trợ 1.750-1.754, kháng cự MA10 (~1.769).",
+      "key_findings": [
+        "Thanh khoản khớp lệnh ~14.500 tỷ (+43%), cao hơn TB30.",
+        "Khối ngoại bán HDB, VJC, PNJ; mua SHB, VIC, GMD.",
+        "Thông tư 145/2026/TT-BTC về cơ chế CCP cho chứng khoán, hiệu lực 16/11/2026.",
+        "NVL ước LNST 9T hơn 2.800 tỷ, bác bỏ tin đồn phá sản.",
+        "Chủ tịch DIG đăng ký mua thêm 5 triệu cổ phiếu."
+      ],
+      "tickers": [
+        {
+          "ticker": "DMX",
+          "note": "TCBS Chờ mua."
+        },
+        {
+          "ticker": "NVL",
+          "note": "Ước LNST 9T hơn 2.800 tỷ đồng."
+        },
+        {
+          "ticker": "DIG",
+          "note": "Chủ tịch HĐQT đăng ký mua thêm 5 triệu cổ phiếu."
+        }
+      ],
+      "action_items": [
+        "Theo dõi hỗ trợ 1.750-1.754; hạn chế mở vị thế mới nếu mất ngưỡng và khối ngoại tiếp tục bán.",
+        "Quan sát DMX, NVL, DIG; chỉ giải ngân khi dòng tiền xác nhận.",
+        "Lưu ý rủi ro khối ngoại bán ròng 10 phiên và tác động Thông tư 145."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-06",
+      "generated_at": "2026-10-06T09:33:00+07:00",
+      "title": "Bản tin sáng 06/10: VN-Index ngắt chuỗi 5 phiên giảm",
+      "summary": "VN-Index phiên 05/10 tăng 0,89% (+15,49 điểm) lên 1.753,20 điểm, chấm dứt 5 phiên giảm, nhưng thanh khoản khớp lệnh giảm 29,9% xuống thấp nhất từ 20/8 và khối ngoại bán ròng phiên thứ 9. Lực kéo từ Vingroup, Thép và một số Ngân hàng/Bán lẻ. Chỉ số dưới toàn bộ MA5-MA50. Vĩ mô tích cực (GDP 9 tháng +9,01%) nhưng TCBS khuyên thận trọng với cổ phiếu chứng khoán.",
+      "key_findings": [
+        "Thanh khoản khớp lệnh HoSE 10.126 tỷ, thấp hơn 24,9% TB30.",
+        "Khối ngoại bán TCB, VHM, PNJ, VNM; mua HPG, DGW, GMD.",
+        "GDP Q3 +9,95% YoY, 9T +9,01%; nhập siêu 19,42 tỷ USD; CPI 9T +4,52%.",
+        "Việc làm Mỹ yếu làm giảm kỳ vọng Fed tăng lãi suất; Nasdaq +1,19%.",
+        "PNJ dự kiến trích lập dự phòng 7.071 tỷ liên quan sự cố kim cương."
+      ],
+      "tickers": [
+        {
+          "ticker": "CTS",
+          "note": "TCBS Chờ mua — P/B ~1,9x cao hơn ngành, beta ~1,2; chờ thanh khoản cải thiện."
+        },
+        {
+          "ticker": "PNJ",
+          "note": "Rủi ro trích lập dự phòng 7.071 tỷ đồng."
+        }
+      ],
+      "action_items": [
+        "Chỉ giải ngân mới khi vượt vững 1.757-1.775 kèm thanh khoản cải thiện.",
+        "Rà soát mã bị khối ngoại bán mạnh (TCB, VHM, PNJ, VNM); chưa tăng tỷ trọng CTS.",
+        "Cập nhật rủi ro PNJ và tái cấu trúc GEE."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    }
+  ]
+}

@@ -950,7 +950,8 @@ DAILY_REPORTS_PATH = "daily_reports.json"
 DAILY_ANALYSIS_PATH = "daily_analysis.json"
 DAILY_REPORTS_KEEP = 60          # số bản báo cáo tự động lưu lại
 DAILY_ANALYSIS_KEEP = 60
-DAILY_REPORTS_API_LIMIT = 20     # số bản trả về cho web
+DAILY_REPORTS_API_LIMIT = 20     # số bản báo cáo tự động trả về cho web
+DAILY_ANALYSIS_API_LIMIT = 60    # số bài phân tích trả về cho web
 DAILY_REPORT_SLOTS = [           # (phiên, giờ, phút, hết khung giờ bù — giờ VN)
     ("morning", 8, 30, 16),
     ("afternoon", 16, 0, 24),
@@ -1151,7 +1152,7 @@ def start_daily_report_scheduler():
 
 def load_daily_reports():
     reports = _load_report_list(DAILY_REPORTS_PATH)[:DAILY_REPORTS_API_LIMIT]
-    analyses = _load_report_list(DAILY_ANALYSIS_PATH)[:DAILY_REPORTS_API_LIMIT]
+    analyses = _load_report_list(DAILY_ANALYSIS_PATH)[:DAILY_ANALYSIS_API_LIMIT]
     return {"reports": reports, "analyses": analyses}
 
 
