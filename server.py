@@ -63,8 +63,6 @@ GITHUB_REPO = os.environ.get("GITHUB_REPO", "tiennhpcpt-maker/stockpeek")
 # được lưu các thông tin này trong GITHUB_REPO vì repo đó là Public.
 GITHUB_USERS_REPO = os.environ.get("GITHUB_USERS_REPO", "tiennhpcpt-maker/stockpeek-users")
 SOURCES_PATH = "sources.json"
-SECTOR_ANALYSIS_PATH = "sector_analysis.json"
-MARKET_OVERVIEW_PATH = "market_overview.json"
 USERS_PATH = "users.json"
 GITHUB_FILE_CACHE_TTL = 20  # giây
 
@@ -220,16 +218,6 @@ def remove_source_entry(name):
         return [s for s in sources if s.get("name") != name]
 
     return update_github_file(SOURCES_PATH, [dict(s) for s in DEFAULT_SOURCES], mutate, "Cập nhật nguồn tin (stockPeek)")
-
-
-def load_sector_analysis():
-    data, _ = load_github_file(SECTOR_ANALYSIS_PATH, None)
-    return data
-
-
-def load_market_overview():
-    data, _ = load_github_file(MARKET_OVERVIEW_PATH, None)
-    return data
 
 
 # ===================== Đăng nhập / tài khoản =====================
@@ -868,10 +856,12 @@ def get_market_indices():
     return result
 
 
-# ===================== Phân tích theo nhóm ngành (tính toán số liệu thật, không AI) =====================
-# Giống triết lý của scripts/update_market_overview.py: dùng số liệu giá/khối lượng thật
-# từ VPS data feed (get_quotes) để tự xếp hạng mã tăng/giảm mạnh nhất mỗi nhóm ngành,
-# viết outlook/picks theo mẫu câu cố định — không gọi API AI trả phí.
+# ===================== Nhóm ngành (số liệu giá thật, không AI) =====================
+# Một hàm thống kê ngành dùng chung cho tab "Ngành" (trực tiếp, get_live_sectors)
+# và báo cáo cuối phiên (_report_market_block) — để 2 nơi không bao giờ lệch số.
+# Trước đây tab Ngành đọc sector_analysis.json, tab Thị trường đọc
+# market_overview.json (2 workflow GitHub Actions ghi 2 lần/ngày) — trùng nội dung
+# với báo cáo ngày và lệch giờ nhau, đã bỏ (xem .claude/docs/architecture.md).
 VN_TZ = timezone(timedelta(hours=7))
 
 SECTOR_ANALYSIS_DISCLAIMER = (
@@ -890,7 +880,6 @@ SECTOR_TICKERS = [
     ("Dầu khí", ["GAS", "PLX", "PVD", "PVS"]),
     ("Thực phẩm - Đồ uống", ["VNM", "MSN", "SAB"]),
 ]
-SECTOR_PICKS_PER_GROUP = 2
 
 
 def _fmt_vn_num(n, decimals=2):
@@ -899,102 +888,95 @@ def _fmt_vn_num(n, decimals=2):
     return f"-{s}" if n < 0 else s
 
 
-def _fmt_vn_vol(n):
-    return f"{n:,}".replace(",", ".")
-
-
-def _build_sector_group(name, tickers, quotes_by_ticker, date_label):
-    rows = [(t, quotes_by_ticker[t]) for t in tickers if t in quotes_by_ticker]
-    if not rows:
-        return None
-    rows.sort(key=lambda r: r[1]["changePct"], reverse=True)
-    total = len(rows)
-    up = sum(1 for _, q in rows if q["changePct"] > 0)
-    best_ticker, best = rows[0]
-    worst_ticker, worst = rows[-1]
-
-    if best["changePct"] > 0:
-        lead = f"dẫn đầu là {best_ticker} (+{_fmt_vn_num(best['changePct'])}%)"
-    elif best["changePct"] == 0:
-        lead = f"mã ít biến động nhất là {best_ticker} (0%)"
-    else:
-        lead = f"mã giảm ít nhất là {best_ticker} ({_fmt_vn_num(best['changePct'])}%)"
-    tail = (
-        f", trong khi {worst_ticker} giảm sâu nhất nhóm ({_fmt_vn_num(worst['changePct'])}%)."
-        if worst_ticker != best_ticker and worst["changePct"] < 0
-        else "."
-    )
-    outlook = f"{up}/{total} mã tăng giá phiên {date_label}, {lead}{tail}"
-
-    picks = []
-    for ticker, q in rows[:SECTOR_PICKS_PER_GROUP]:
-        if q["changePct"] > 0:
-            reason = (
-                f"Tăng {_fmt_vn_num(q['changePct'])}% phiên {date_label}, khối lượng khớp lệnh "
-                f"{_fmt_vn_vol(q['volume'])} cổ phiếu — mã dẫn đầu đà tăng của nhóm ngành hôm nay."
-            )
-        elif q["changePct"] == 0:
-            reason = (
-                f"Đi ngang (0%) phiên {date_label}, khối lượng khớp lệnh "
-                f"{_fmt_vn_vol(q['volume'])} cổ phiếu — trong nhóm mã ít biến động nhất ngành hôm nay."
-            )
-        else:
-            reason = (
-                f"Giảm {_fmt_vn_num(abs(q['changePct']))}% phiên {date_label}, khối lượng khớp lệnh "
-                f"{_fmt_vn_vol(q['volume'])} cổ phiếu, vẫn là mã ít giảm nhất nhóm ngành hôm nay."
-            )
-        picks.append({"ticker": ticker, "reason": reason})
-
-    return {"name": name, "outlook": outlook, "picks": picks}
-
-
-def compute_sector_analysis():
-    """Tính lại toàn bộ sector_analysis.json từ giá/khối lượng thật — không dùng AI.
-    Ngược lại với get_news(), hàm này không cache vì chỉ chạy khi admin bấm nút
-    "Cập nhật" (không chạy theo interval), nên không cần tối ưu tần suất gọi."""
-    now_vn = datetime.now(VN_TZ)
-    date_label = now_vn.strftime("%d/%m")
-
-    all_tickers = sorted({t for _, tickers in SECTOR_TICKERS for t in tickers})
-    quotes = get_quotes(all_tickers)
-    quotes_by_ticker = {q["ticker"]: q for q in quotes}
-
-    sectors = []
+def _sector_stats(by_ticker, with_tickers=False):
+    """Thống kê từng nhóm ngành từ dict ticker -> quote, sắp theo % bình quân giảm dần."""
+    out = []
     for name, tickers in SECTOR_TICKERS:
-        group = _build_sector_group(name, tickers, quotes_by_ticker, date_label)
-        if group:
-            sectors.append(group)
+        rows = [by_ticker[t] for t in tickers if t in by_ticker]
+        if not rows:
+            continue
+        best = max(rows, key=lambda q: q["changePct"])
+        item = {
+            "name": name,
+            "avgChangePct": round(sum(q["changePct"] for q in rows) / len(rows), 2),
+            "up": sum(1 for q in rows if q["changePct"] > 0),
+            "down": sum(1 for q in rows if q["changePct"] < 0),
+            "total": len(rows),
+            "leader": {"ticker": best["ticker"], "changePct": best["changePct"]},
+        }
+        if with_tickers:
+            item["tickers"] = [
+                {"ticker": q["ticker"], "last": q["last"], "changePct": q["changePct"], "volume": q["volume"]}
+                for q in sorted(rows, key=lambda q: -q["changePct"])
+            ]
+        out.append(item)
+    out.sort(key=lambda x: x["avgChangePct"], reverse=True)
+    return out
 
-    if not sectors:
-        raise RuntimeError("Không lấy được dữ liệu giá cho bất kỳ nhóm ngành nào")
 
+def _trading_status(now_vn):
+    if now_vn.weekday() >= 5:
+        return "closed", "Nghỉ cuối tuần"
+    hm = now_vn.hour * 60 + now_vn.minute
+    if hm < 9 * 60:
+        return "pre", "Chưa mở cửa"
+    if hm < 15 * 60:
+        return "open", "Trong phiên"
+    return "closed", "Đã đóng cửa"
+
+
+LIVE_SECTORS_CACHE_TTL = 30  # giây; giá bên dưới đã có cache riêng trong get_quotes()
+_live_sectors_cache = {"data": None, "ts": 0}
+
+
+def get_live_sectors():
+    """Tab "Ngành": tính trực tiếp từ giá khớp lệnh (dùng chung cache của get_quotes).
+    Trước giờ mở cửa VPS chưa có giá khớp (last = 0) → lấy bảng ngành của báo cáo
+    cuối phiên gần nhất. Kèm nhận định ngành của bản tin Claude mới nhất nếu có."""
+    now = time.time()
+    if _live_sectors_cache["data"] is not None and now - _live_sectors_cache["ts"] < LIVE_SECTORS_CACHE_TTL:
+        return _live_sectors_cache["data"]
+
+    now_vn = datetime.now(VN_TZ)
+    status, status_label = _trading_status(now_vn)
+    all_tickers = sorted({t for _, tickers in SECTOR_TICKERS for t in tickers})
     try:
-        vni = _fetch_index_summary("vn-index")
-        verb = "tăng" if vni["change"] >= 0 else "giảm"
-        market_note = (
-            f"VN-Index {verb} {_fmt_vn_num(abs(vni['change']))} điểm "
-            f"({_fmt_vn_num(vni['changePct'])}%) phiên {date_label}, đóng cửa "
-            f"{_fmt_vn_num(vni['value'], 0)} điểm. Dữ liệu nhóm ngành bên dưới tính từ giá "
-            f"khớp lệnh thực tế các mã tiêu biểu."
-        )
+        quotes = [q for q in get_quotes(all_tickers) if q["last"] > 0 and q["ref"] > 0]
     except Exception:
-        market_note = f"Dữ liệu nhóm ngành cập nhật tự động từ giá khớp lệnh thực tế phiên {date_label}."
+        quotes = []
 
-    return {
+    result = {
         "generated_at": now_vn.strftime("%Y-%m-%dT%H:%M:%S+07:00"),
+        "status": status,
+        "statusLabel": status_label,
         "disclaimer": SECTOR_ANALYSIS_DISCLAIMER,
-        "market_note": market_note,
-        "sectors": sectors,
     }
+    if len(quotes) >= len(all_tickers) // 2:
+        result["live"] = True
+        result["sectors"] = _sector_stats({q["ticker"]: q for q in quotes}, with_tickers=True)
+    else:
+        prev = next((r for r in _load_report_list(DAILY_REPORTS_PATH)
+                     if r.get("session") == "afternoon" and r.get("market")), None)
+        if not prev:
+            raise RuntimeError("Chưa có giá khớp lệnh và chưa có báo cáo cuối phiên nào để hiển thị")
+        result["live"] = False
+        result["asOf"] = prev["date"]
+        result["sectors"] = prev["market"].get("sectors", [])
 
-
-def refresh_sector_analysis():
-    data = compute_sector_analysis()
-
-    def mutate(_current):
-        return data
-
-    return update_github_file(SECTOR_ANALYSIS_PATH, data, mutate, "Cập nhật phân tích nhóm ngành (tự động, không AI)")
+    analysis = _latest_analysis()
+    if analysis:
+        # Bản tin thường không có nhận định theo ngành mà có "mã đáng chú ý" kèm
+        # ghi chú — gắn ghi chú đó vào đúng thẻ ngành chứa mã trên frontend.
+        notes = {t.get("ticker"): t.get("note", "") for t in analysis.get("tickers") or [] if t.get("ticker")}
+        if analysis.get("sectors") or notes:
+            result["views"] = {
+                "date": analysis.get("date"),
+                "title": analysis.get("title"),
+                "items": analysis.get("sectors") or [],
+                "tickerNotes": notes,
+            }
+    _live_sectors_cache.update(data=result, ts=now)
+    return result
 
 
 # ===================== Báo cáo hàng ngày (tự động, không AI) =====================
@@ -1070,21 +1052,7 @@ def _report_market_block(date_label):
         quotes = []
     by_ticker = {q["ticker"]: q for q in quotes}
 
-    sectors = []
-    for name, tickers in SECTOR_TICKERS:
-        rows = [by_ticker[t] for t in tickers if t in by_ticker]
-        if not rows:
-            continue
-        best = max(rows, key=lambda q: q["changePct"])
-        sectors.append({
-            "name": name,
-            "avgChangePct": round(sum(q["changePct"] for q in rows) / len(rows), 2),
-            "up": sum(1 for q in rows if q["changePct"] > 0),
-            "down": sum(1 for q in rows if q["changePct"] < 0),
-            "total": len(rows),
-            "leader": {"ticker": best["ticker"], "changePct": best["changePct"]},
-        })
-    sectors.sort(key=lambda s: s["avgChangePct"], reverse=True)
+    sectors = _sector_stats(by_ticker)
 
     def slim(q):
         return {"ticker": q["ticker"], "last": q["last"], "changePct": q["changePct"], "volume": q["volume"]}
@@ -1214,6 +1182,34 @@ def load_daily_reports():
     reports = _load_report_list(DAILY_REPORTS_PATH)[:DAILY_REPORTS_API_LIMIT]
     analyses = _load_report_list(DAILY_ANALYSIS_PATH)[:DAILY_ANALYSIS_API_LIMIT]
     return {"reports": reports, "analyses": analyses}
+
+
+MARKET_VIEW_MAX_AGE_DAYS = 4  # bản tin cũ hơn thế thì không coi là "nhận định hiện tại"
+
+
+def _latest_analysis():
+    """Bản tin Claude mới nhất (bản tin sáng/báo cáo tuần — phân tích doanh nghiệp
+    hay tổng kết tháng không phải nhận định thị trường chung)."""
+    cutoff = (datetime.now(VN_TZ) - timedelta(days=MARKET_VIEW_MAX_AGE_DAYS)).strftime("%Y-%m-%d")
+    items = [a for a in _load_report_list(DAILY_ANALYSIS_PATH)
+             if a.get("date", "") >= cutoff and a.get("kind") in (None, "bulletin", "weekly")]
+    items.sort(key=lambda a: (a.get("date", ""), a.get("generated_at", "")), reverse=True)
+    return items[0] if items else None
+
+
+def get_market_view():
+    """Tab "Thị trường": nhận định lấy từ bản tin Claude mới nhất (tổng hợp báo cáo
+    các CTCK). Không có bản tin gần đây thì dùng tóm tắt báo cáo tự động gần nhất."""
+    out = {"analysis": None, "auto": None}
+    a = _latest_analysis()
+    if a:
+        out["analysis"] = {k: a.get(k) for k in (
+            "date", "session", "kind", "generated_at", "title", "summary", "key_findings",
+            "sections", "action_items", "sources", "origin", "disclaimer")}
+    r = next(iter(_load_report_list(DAILY_REPORTS_PATH)), None)
+    if r:
+        out["auto"] = {k: r.get(k) for k in ("date", "session", "generated_at", "title", "summary", "disclaimer")}
+    return out
 
 
 def strip_html(s):
@@ -1541,11 +1537,7 @@ class Handler(BaseHTTPRequestHandler):
 
         if parsed.path == "/api/sector-analysis":
             try:
-                data = load_sector_analysis()
-                if data is None:
-                    self._send_json({"ok": False, "error": "Chưa có dữ liệu phân tích nhóm ngành"}, 404)
-                    return
-                self._send_json({"ok": True, "data": data})
+                self._send_json({"ok": True, "data": get_live_sectors()})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return
@@ -1559,11 +1551,7 @@ class Handler(BaseHTTPRequestHandler):
 
         if parsed.path == "/api/market-overview":
             try:
-                data = load_market_overview()
-                if data is None:
-                    self._send_json({"ok": False, "error": "Chưa có dữ liệu phân tích chung thị trường"}, 404)
-                    return
-                self._send_json({"ok": True, "data": data})
+                self._send_json({"ok": True, "data": get_market_view()})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return
@@ -1696,16 +1684,6 @@ class Handler(BaseHTTPRequestHandler):
                 with _daily_report_lock:
                     report = generate_daily_report(session)
                 self._send_json({"ok": True, "data": report})
-            except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
-            return
-
-        if parsed.path == "/api/admin/sector-analysis/refresh":
-            if not self._require_admin():
-                return
-            try:
-                data = refresh_sector_analysis()
-                self._send_json({"ok": True, "data": data})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return

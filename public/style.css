@@ -1004,3 +1004,20 @@ main {
   .report-indices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .bottom-nav button { font-size: 10.5px; }
 }
+
+/* ---- Tab Thị trường: nhận định lấy từ bản tin ---- */
+.overview-source { font-size: 13px; color: var(--text-dim); margin-bottom: 8px; }
+.overview-stale {
+  font-size: 13px; color: var(--ref); background: var(--card-bg-2);
+  border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; margin-bottom: 10px;
+}
+.overview-more { display: inline-block; margin-top: 10px; font-size: 13px; color: var(--accent); text-decoration: none; }
+.overview-more:hover { text-decoration: underline; }
+
+/* ---- Tab Ngành: bảng ngành trực tiếp ---- */
+.sector-card .sector-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.sector-card .sector-head .sector-name { margin-bottom: 0; }
+.sector-avg { font-weight: 700; font-size: 15px; white-space: nowrap; }
+.sector-card .report-chips { margin: 8px 0 4px; }
+.report-chip.has-note { border-color: var(--accent); }
+.sector-view { font-size: 13px; margin-top: 8px; color: var(--text); }

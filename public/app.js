@@ -4,6 +4,7 @@ const QUOTES_INTERVAL_MS = 15000;
 const LIVE_NEWS_INTERVAL_MS = 60 * 1000;
 const HOT_NEWS_INTERVAL_MS = 60 * 1000;
 const INDICES_INTERVAL_MS = 30000;
+const SECTOR_INTERVAL_MS = 60 * 1000;
 
 let sources = [];
 let currentUser = null;
@@ -498,65 +499,69 @@ async function removeSource(name) {
   }
 }
 
+// ===================== Tab Thị trường: nhận định =====================
+// Nhận định lấy từ bản tin Claude mới nhất (tổng hợp báo cáo các CTCK, xem
+// get_market_view() trong server.py); chưa có bản tin gần đây thì hiện tóm tắt
+// báo cáo tự động gần nhất. Số liệu chỉ số nằm ở khối "Thị trường chứng khoán" ngay trên.
 async function refreshMarketOverview() {
   const box = document.getElementById("overviewContent");
   try {
     const res = await fetch("/api/market-overview");
     const json = await res.json();
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
-    renderMarketOverview(json.data);
+    renderMarketOverview(json.data || {});
   } catch (e) {
-    box.innerHTML = '<div class="empty">Chưa có dữ liệu nhận định thị trường chung.</div>';
+    box.innerHTML = '<div class="empty">Chưa tải được nhận định thị trường.</div>';
   }
+}
+
+function isTodayVN(dateStr) {
+  const today = new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Ho_Chi_Minh" });
+  return dateStr === today;
 }
 
 function renderMarketOverview(data) {
   const box = document.getElementById("overviewContent");
-  if (data.generated_at) {
-    document.getElementById("overviewUpdated").textContent =
-      "Cập nhật " + new Date(data.generated_at).toLocaleString("vi-VN");
+  const updatedEl = document.getElementById("overviewUpdated");
+  const list = (arr) => (arr || []).map((x) => `<li>${escapeHtml(x)}</li>`).join("");
+  const a = data.analysis;
+  if (a) {
+    updatedEl.textContent = a.generated_at ? "Lập lúc " + new Date(a.generated_at).toLocaleString("vi-VN") : "";
+    const stale = !isTodayVN(a.date)
+      ? `<div class="overview-stale">Chưa có bản tin hôm nay — đang hiện bản tin ngày ${fmtReportDate(a.date)}.</div>`
+      : "";
+    box.innerHTML = `
+      ${stale}
+      <div class="overview-source">${(ANALYSIS_KIND[a.kind] || {}).badge || "📧 Bản tin"} · ${escapeHtml(a.title || "")}</div>
+      ${a.summary ? `<div class="overview-summary">${escapeHtml(a.summary)}</div>` : ""}
+      ${list(a.key_findings) ? `<div class="overview-block"><div class="overview-block-title">Điểm chính</div><ul class="overview-list">${list(a.key_findings)}</ul></div>` : ""}
+      ${(a.sections || [])
+        .map((sec) => `<div class="overview-block"><div class="overview-block-title">${escapeHtml(sec.title || "")}</div><ul class="overview-list">${list(sec.items)}</ul></div>`)
+        .join("")}
+      ${list(a.action_items) ? `<div class="overview-block"><div class="overview-block-title">Việc nên làm</div><ul class="overview-list">${list(a.action_items)}</ul></div>` : ""}
+      ${a.sources?.length ? `<div class="report-meta">Nguồn: ${escapeHtml(a.sources.join(", "))}</div>` : ""}
+      <a href="#" class="overview-more" data-goto="report">Xem bản đầy đủ và các ngày trước trong tab Báo cáo →</a>
+      ${a.disclaimer ? `<p class="overview-disclaimer">${escapeHtml(a.disclaimer)}</p>` : ""}
+    `;
+  } else if (data.auto) {
+    const r = data.auto;
+    updatedEl.textContent = r.generated_at ? "Tạo tự động lúc " + new Date(r.generated_at).toLocaleString("vi-VN") : "";
+    box.innerHTML = `
+      <div class="overview-stale">Chưa có bản tin phân tích gần đây — đang hiện tóm tắt tự động (${escapeHtml(r.title || "")}).</div>
+      <div class="overview-summary">${escapeHtml(r.summary || "")}</div>
+      <a href="#" class="overview-more" data-goto="report">Xem chi tiết trong tab Báo cáo →</a>
+      ${r.disclaimer ? `<p class="overview-disclaimer">${escapeHtml(r.disclaimer)}</p>` : ""}
+    `;
+  } else {
+    updatedEl.textContent = "—";
+    box.innerHTML = '<div class="empty">Chưa có nhận định thị trường.</div>';
   }
-  const highlights = (data.highlights || []).map((h) => `<li>${h}</li>`).join("");
-  const actions = (data.action_notes || []).map((a) => `<li>${a}</li>`).join("");
-  const tech = data.technical_outlook || {};
-
-  box.innerHTML = `
-    <div class="overview-summary">${data.executive_summary || ""}</div>
-    ${
-      highlights
-        ? `<div class="overview-block">
-            <div class="overview-block-title">Điểm nhấn chính</div>
-            <ul class="overview-list">${highlights}</ul>
-          </div>`
-        : ""
-    }
-    ${
-      tech.trend
-        ? `<div class="overview-block">
-            <div class="overview-block-title">Góc nhìn kỹ thuật</div>
-            <div class="overview-tech">
-              <div>${tech.trend}</div>
-              <div class="overview-tech-levels">
-                ${tech.support ? `<span class="tech-chip">Hỗ trợ: ${tech.support}</span>` : ""}
-                ${tech.resistance ? `<span class="tech-chip">Kháng cự: ${tech.resistance}</span>` : ""}
-              </div>
-              ${tech.note ? `<div class="overview-tech-note">${tech.note}</div>` : ""}
-            </div>
-          </div>`
-        : ""
-    }
-    ${
-      actions
-        ? `<div class="overview-block">
-            <div class="overview-block-title">Lưu ý hành động</div>
-            <ul class="overview-list">${actions}</ul>
-          </div>`
-        : ""
-    }
-    ${data.disclaimer ? `<p class="overview-disclaimer">${data.disclaimer}</p>` : ""}
-  `;
 }
 
+// ===================== Tab Ngành: bảng ngành trực tiếp =====================
+// Tính từ giá khớp lệnh trên server (get_live_sectors(), cache 30s) — cùng hàm
+// thống kê với báo cáo cuối phiên nên 2 nơi không lệch số. Trước giờ mở cửa
+// server trả bảng ngành của phiên trước (live = false, asOf = ngày phiên đó).
 async function refreshSectorAnalysis() {
   const grid = document.getElementById("sectorGrid");
   try {
@@ -565,62 +570,52 @@ async function refreshSectorAnalysis() {
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
     renderSectorAnalysis(json.data);
   } catch (e) {
-    grid.innerHTML = `<div class="empty">Chưa có dữ liệu phân tích nhóm ngành.</div>`;
-    document.getElementById("sectorDisclaimer").textContent = "";
-  }
-}
-
-// Tính lại phân tích nhóm ngành từ giá/khối lượng thật (không AI, xem
-// compute_sector_analysis() trong server.py) — chỉ admin mới thấy nút này.
-async function regenerateSectorAnalysis() {
-  const btn = document.getElementById("refreshSectorBtn");
-  const updatedEl = document.getElementById("sectorUpdated");
-  btn.disabled = true;
-  const original = btn.textContent;
-  btn.textContent = "Đang cập nhật...";
-  try {
-    const res = await fetch("/api/admin/sector-analysis/refresh", { method: "POST" });
-    const json = await res.json();
-    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
-    renderSectorAnalysis(json.data);
-  } catch (e) {
-    updatedEl.textContent = "Lỗi cập nhật: " + e.message;
-  } finally {
-    btn.disabled = false;
-    btn.textContent = original;
+    if (!grid.querySelector(".sector-card")) {
+      grid.innerHTML = `<div class="empty">Chưa tải được dữ liệu nhóm ngành.</div>`;
+    }
   }
 }
 
 function renderSectorAnalysis(data) {
   const grid = document.getElementById("sectorGrid");
-  const disclaimerBox = document.getElementById("sectorDisclaimer");
-  disclaimerBox.textContent = data.disclaimer || "";
-  if (data.generated_at) {
-    document.getElementById("sectorUpdated").textContent =
-      "Cập nhật " + new Date(data.generated_at).toLocaleString("vi-VN");
-  }
+  document.getElementById("sectorDisclaimer").textContent = data.disclaimer || "";
+  const when = data.generated_at ? new Date(data.generated_at).toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" }) : "";
+  document.getElementById("sectorUpdated").textContent = data.live
+    ? `${data.statusLabel || ""} · cập nhật ${when}`
+    : `${data.statusLabel || ""} · số liệu phiên ${fmtReportDate(data.asOf)}`;
+
+  const views = data.views || {};
+  const notes = views.tickerNotes || {};
+  const viewByName = new Map((views.items || []).map((v) => [v.name, v.view]));
+  const noteSource = views.date ? `Bản tin ${fmtReportDate(views.date)}` : "Bản tin";
+
   const sectors = data.sectors || [];
   if (!sectors.length) {
     grid.innerHTML = '<div class="empty">Chưa có dữ liệu.</div>';
     return;
   }
   grid.innerHTML = sectors
-    .map(
-      (s) => `<div class="sector-card">
-        <div class="sector-name">${s.name}</div>
-        ${s.outlook ? `<div class="sector-outlook">${s.outlook}</div>` : ""}
-        ${(s.picks || [])
-          .map(
-            (p) => `<div class="sector-pick">
-              <span class="pick-ticker">${p.ticker}</span>
-              <span class="pick-reason">${p.reason}${
-                p.source ? `<span class="pick-source">Nguồn: ${p.source}</span>` : ""
-              }</span>
-            </div>`
-          )
-          .join("")}
-      </div>`
-    )
+    .map((s) => {
+      const tickers = s.tickers || (s.leader ? [s.leader] : []);
+      const chips = tickers
+        .map((t) => `<span class="report-chip${notes[t.ticker] ? " has-note" : ""}"><b>${escapeHtml(t.ticker)}</b><span class="${pctClass(t.changePct)}">${fmtPct(t.changePct)}</span></span>`)
+        .join("");
+      const noteRows = tickers
+        .filter((t) => notes[t.ticker])
+        .map((t) => `<div class="sector-pick"><span class="pick-ticker">${escapeHtml(t.ticker)}</span><span class="pick-reason">${escapeHtml(notes[t.ticker])}<span class="pick-source">Nguồn: ${escapeHtml(noteSource)}</span></span></div>`)
+        .join("");
+      const view = viewByName.get(s.name);
+      return `<div class="sector-card">
+        <div class="sector-head">
+          <div class="sector-name">${escapeHtml(s.name)}</div>
+          <div class="sector-avg ${pctClass(s.avgChangePct)}">${fmtPct(s.avgChangePct)}</div>
+        </div>
+        <div class="sector-outlook">${s.up}/${s.total} mã tăng${s.down ? `, ${s.down} mã giảm` : ""}</div>
+        <div class="report-chips">${chips}</div>
+        ${view ? `<div class="sector-view">📧 ${escapeHtml(view)}</div>` : ""}
+        ${noteRows}
+      </div>`;
+    })
     .join("");
 }
 
@@ -630,7 +625,6 @@ function renderSectorAnalysis(data) {
 // daily_analysis.json) — có thể có hoặc không cho từng ngày.
 let dailyReportData = { reports: [], analyses: [] };
 let dailyReportEntries = [];
-const SESSION_LABEL = { morning: "Bản tin sáng", afternoon: "Cuối phiên", ai: "Phân tích" };
 
 async function refreshDailyReports() {
   const box = document.getElementById("reportContent");
@@ -657,32 +651,26 @@ const ANALYSIS_KIND = {
   company: { badge: "🏢 Phân tích doanh nghiệp", label: "Phân tích DN" },
 };
 
+// Mỗi ngày là 1 mục: bản tin/bài phân tích Claude + báo cáo tự động 8:30 và 16:00.
 function buildDailyReportEntries() {
   const select = document.getElementById("reportSelect");
   const prev = select.value;
-  const byKey = new Map();
-  const getEntry = (date, session, sortKey) => {
-    const key = `${date}|${session}`;
-    if (!byKey.has(key)) byKey.set(key, { key, date, session, sortKey: sortKey || date, report: null, analyses: [] });
-    const e = byKey.get(key);
-    if (sortKey && sortKey > e.sortKey) e.sortKey = sortKey;
-    return e;
+  const byDate = new Map();
+  const getEntry = (date) => {
+    if (!byDate.has(date)) byDate.set(date, { key: date, date, morning: null, afternoon: null, analyses: [] });
+    return byDate.get(date);
   };
   for (const r of dailyReportData.reports || []) {
-    const e = getEntry(r.date, r.session, r.generated_at);
-    if (!e.report) e.report = r;
+    const e = getEntry(r.date);
+    const slot = r.session === "afternoon" ? "afternoon" : "morning";
+    if (!e[slot] || (r.generated_at || "") > (e[slot].generated_at || "")) e[slot] = r;
   }
-  // Bài có session (bản tin sáng/chiều) gắn đúng phiên đó; bài không có session
-  // (báo cáo tuần/tháng, phân tích DN) gắn vào mục mới nhất của ngày, hoặc mục riêng.
-  const analyses = dailyReportData.analyses || [];
-  for (const a of analyses.filter((a) => a.session)) {
-    getEntry(a.date, a.session, a.generated_at).analyses.push(a);
+  const kindOrder = { bulletin: 0, weekly: 1, monthly: 2, company: 3 };
+  for (const a of dailyReportData.analyses || []) getEntry(a.date).analyses.push(a);
+  for (const e of byDate.values()) {
+    e.analyses.sort((x, y) => (kindOrder[x.kind] ?? 9) - (kindOrder[y.kind] ?? 9));
   }
-  for (const a of analyses.filter((a) => !a.session)) {
-    const sameDay = [...byKey.values()].filter((e) => e.date === a.date).sort((x, y) => (x.sortKey < y.sortKey ? 1 : -1));
-    (sameDay[0] || getEntry(a.date, "ai", a.generated_at)).analyses.push(a);
-  }
-  const entries = [...byKey.values()].sort((a, b) => (a.sortKey < b.sortKey ? 1 : -1));
+  const entries = [...byDate.values()].sort((a, b) => (a.date < b.date ? 1 : -1));
   dailyReportEntries = entries;
 
   if (!entries.length) {
@@ -692,9 +680,10 @@ function buildDailyReportEntries() {
     return;
   }
   const entryLabel = (e) => {
-    if (e.report) return SESSION_LABEL[e.session] || e.session;
-    const kinds = [...new Set(e.analyses.map((a) => (ANALYSIS_KIND[a.kind] || {}).label || "Phân tích"))];
-    return kinds.join(" + ");
+    const parts = [...new Set(e.analyses.map((a) => (ANALYSIS_KIND[a.kind] || {}).label || "Phân tích"))];
+    if (e.afternoon) parts.push("Cuối phiên");
+    else if (e.morning) parts.push("Tin sáng");
+    return parts.join(" + ");
   };
   select.innerHTML = entries
     .map((e) => `<option value="${escapeHtml(e.key)}">${fmtReportDate(e.date)} · ${escapeHtml(entryLabel(e))}</option>`)
@@ -790,31 +779,35 @@ function renderAnalysis(a) {
   </div>`;
 }
 
+function renderAutoReport(r, { withMarket }) {
+  const mentioned = (r.mentioned_tickers || [])
+    .map((t) => `<span class="report-chip"><b>${escapeHtml(t.ticker)}</b>${t.count} tin</span>`)
+    .join("");
+  return `<div class="report-card">
+    <h3>${escapeHtml(r.title || "Báo cáo")}</h3>
+    <div class="report-meta">Tạo tự động lúc ${new Date(r.generated_at).toLocaleString("vi-VN")} · số liệu giá thật, không AI</div>
+    <div class="report-summary">${escapeHtml(r.summary || "")}</div>
+    ${withMarket ? renderReportMarket(r.market) : ""}
+    ${mentioned ? `<div class="overview-block" style="margin-top:14px"><div class="overview-block-title">Mã được nhắc trong tin</div><div class="report-chips">${mentioned}</div></div>` : ""}
+    ${renderReportNews(r.hot_news)}
+    ${r.disclaimer ? `<p class="overview-disclaimer">${escapeHtml(r.disclaimer)}</p>` : ""}
+  </div>`;
+}
+
 function renderDailyReport(key) {
   const box = document.getElementById("reportContent");
   const entry = dailyReportEntries.find((e) => e.key === key);
   if (!entry) return;
-  const analyses = entry.analyses;
-  const r = entry.report;
-  let html = analyses.map(renderAnalysis).join("");
-  if (r) {
-    const mentioned = (r.mentioned_tickers || [])
-      .map((t) => `<span class="report-chip"><b>${escapeHtml(t.ticker)}</b>${t.count} tin</span>`)
-      .join("");
-    html += `<div class="report-card">
-      <h3>${escapeHtml(r.title || "Báo cáo")}</h3>
-      <div class="report-meta">Tạo tự động lúc ${new Date(r.generated_at).toLocaleString("vi-VN")}${
-        r.market_from ? ` · số liệu thị trường của phiên ${fmtReportDate(r.market_from)}` : ""
-      }</div>
-      <div class="report-summary">${escapeHtml(r.summary || "")}</div>
-      ${renderReportMarket(r.market)}
-      ${mentioned ? `<div class="overview-block" style="margin-top:14px"><div class="overview-block-title">Mã được nhắc trong tin</div><div class="report-chips">${mentioned}</div></div>` : ""}
-      ${renderReportNews(r.hot_news)}
-      ${r.disclaimer ? `<p class="overview-disclaimer">${escapeHtml(r.disclaimer)}</p>` : ""}
-    </div>`;
+  let html = entry.analyses.map(renderAnalysis).join("");
+  if (entry.afternoon) {
+    // Báo cáo cuối phiên đã gồm tin nổi bật 24h, nên không lặp lại bản tin sáng tự động.
+    html += renderAutoReport(entry.afternoon, { withMarket: true });
+  } else if (entry.morning) {
+    // Số liệu thị trường của bản 8:30 chỉ là bản sao phiên trước (đã có ở mục ngày đó).
+    html += renderAutoReport(entry.morning, { withMarket: false });
   }
-  if (!analyses.length) {
-    html += '<p class="report-empty-ai">Chưa có bài phân tích cho phiên này.</p>';
+  if (!entry.analyses.length) {
+    html += '<p class="report-empty-ai">Chưa có bản tin phân tích cho ngày này.</p>';
   }
   box.innerHTML = html;
 }
@@ -845,7 +838,6 @@ async function generateDailyReportNow() {
 
 function renderAuthArea() {
   const area = document.getElementById("authArea");
-  document.getElementById("refreshSectorBtn").hidden = !currentUser || currentUser.role !== "admin";
   document.getElementById("generateReportBtn").hidden = !currentUser || currentUser.role !== "admin";
   if (currentUser) {
     const adminBtn =
@@ -1318,7 +1310,6 @@ document.getElementById("tickerInput").addEventListener("keydown", (e) => {
   if (e.key === "Enter") addTicker();
 });
 document.getElementById("addSourceBtn").addEventListener("click", addSource);
-document.getElementById("refreshSectorBtn").addEventListener("click", regenerateSectorAnalysis);
 document.getElementById("generateReportBtn").addEventListener("click", generateDailyReportNow);
 document.getElementById("reportSelect").addEventListener("change", (e) => renderDailyReport(e.target.value));
 document.getElementById("sourcesToggle").addEventListener("click", () => {
@@ -1362,6 +1353,8 @@ setInterval(refreshQuotes, QUOTES_INTERVAL_MS);
 setInterval(refreshAllLiveNews, LIVE_NEWS_INTERVAL_MS);
 setInterval(refreshAllHotNews, HOT_NEWS_INTERVAL_MS);
 setInterval(refreshIndices, INDICES_INTERVAL_MS);
+setInterval(refreshSectorAnalysis, SECTOR_INTERVAL_MS);
+setInterval(refreshMarketOverview, 10 * 60 * 1000);
 
 // ---- Bản app trên điện thoại (PWA) ----
 const MOBILE_VIEW_KEY = "stockpeek.mobileView";
@@ -1396,7 +1389,23 @@ document.addEventListener("visibilitychange", () => {
     refreshAllLiveNews();
     refreshAllHotNews();
     refreshMarketOverview();
+    refreshSectorAnalysis();
     refreshDailyReports();
+  }
+});
+
+// Link "Xem trong tab Báo cáo" ở tab Thị trường: điện thoại thì chuyển tab dưới
+// đáy, máy tính (mọi khối cùng 1 trang) thì cuộn tới khối Báo cáo.
+document.addEventListener("click", (e) => {
+  const link = e.target.closest("[data-goto]");
+  if (!link) return;
+  e.preventDefault();
+  const view = link.dataset.goto;
+  const nav = document.getElementById("bottomNav");
+  if (nav && getComputedStyle(nav).display !== "none") {
+    switchMobileView(view);
+  } else {
+    document.querySelector(`main > section[data-view="${view}"]`)?.scrollIntoView({ behavior: "smooth" });
   }
 });
 

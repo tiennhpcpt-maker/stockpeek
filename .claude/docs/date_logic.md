@@ -4,7 +4,7 @@ Không có thư viện date (không moment/dayjs/date-fns). Toàn bộ xử lý 
 
 ## Múi giờ: luôn lưu giờ Việt Nam dạng `+07:00`, không lưu UTC trần
 
-Các file `market_overview.json` và `sector_analysis.json` lưu `generated_at` dạng ISO có offset rõ ràng, ví dụ:
+Các file `daily_reports.json` và `daily_analysis.json` (trước đây cả `market_overview.json`/`sector_analysis.json`, nay đã ngừng dùng) lưu `generated_at` dạng ISO có offset rõ ràng, ví dụ:
 
 ```
 "generated_at": "2026-07-25T11:11:07+07:00"
@@ -27,7 +27,7 @@ TZ='Asia/Ho_Chi_Minh' date +"%Y-%m-%dT%H:%M:%S+07:00"
 
 Comment bên cạnh mỗi dòng cron **là quy đổi giờ VN**, viết tay — GitHub không tự hiển thị giờ VN. Khi thêm/sửa cron mới, luôn cộng thêm comment quy đổi kiểu này (giờ VN = giờ UTC + 7), và luôn viết field cron bằng UTC.
 
-**Lưu ý về độ chính xác**: cron miễn phí của GitHub Actions không đảm bảo chạy đúng giờ tuyệt đối — quan sát thực tế 3 lần chạy đầu của `update-market-overview.yml` lệch giờ đáng kể so với lịch khai báo. Không giả định "đã đặt cron 8:00 sáng thì chắc chắn có dữ liệu mới lúc 8:05" — luôn kiểm tra `generated_at` thực tế thay vì tin vào lịch cron.
+**Lưu ý về độ chính xác**: cron miễn phí của GitHub Actions không đảm bảo chạy đúng giờ tuyệt đối — quan sát thực tế 3 lần chạy đầu của `update-market-overview.yml` lệch giờ đáng kể so với lịch khai báo. Ngày 05/11/2026 lần chạy "15:30" thực tế chạy lúc 14:33 — trước ATC, ra số liệu sai so với giá đóng cửa; đây là một lý do workflow này đã bị tắt. Không giả định "đã đặt cron 8:00 sáng thì chắc chắn có dữ liệu mới lúc 8:05" — luôn kiểm tra `generated_at` thực tế thay vì tin vào lịch cron.
 
 ## Parse `pubDate` từ RSS (định dạng RFC 2822, không phải ISO)
 
