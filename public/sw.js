@@ -1,7 +1,7 @@
 // Service worker cho bản cài trên điện thoại (PWA).
 // Chiến lược: luôn lấy mạng trước (giá/tin phải mới), mất mạng mới dùng
 // bản đã lưu lần cuối để app vẫn mở được và hiện dữ liệu gần nhất.
-const CACHE = "stockpeek-v2";
+const CACHE = "stockpeek-v3";
 const SHELL = ["/", "/style.css", "/app.js", "/manifest.webmanifest", "/icon-192.png"];
 
 self.addEventListener("install", (event) => {

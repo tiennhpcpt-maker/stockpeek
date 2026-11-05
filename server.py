@@ -937,6 +937,224 @@ def refresh_sector_analysis():
     return update_github_file(SECTOR_ANALYSIS_PATH, data, mutate, "Cập nhật phân tích nhóm ngành (tự động, không AI)")
 
 
+# ===================== Báo cáo hàng ngày (tự động, không AI) =====================
+# Server tự tạo báo cáo 2 lần/ngày giao dịch (8:30 trước phiên, 16:00 sau đóng cửa)
+# bằng 1 luồng nền trong chính server.py — KHÔNG dùng GitHub Actions vì GitHub App
+# không có quyền `workflow` để thêm file workflow mới (xem CLAUDE.md mục 5).
+# keep-alive.yml ping mỗi 10 phút nên server luôn thức đúng giờ; nếu lỡ giờ do
+# restart, luồng nền tự bù khi chạy lại (vẫn trong khung giờ của phiên đó).
+#
+# Bài phân tích do Claude viết (scheduled task trên máy cá nhân) nằm ở file riêng
+# DAILY_ANALYSIS_PATH, được push bằng git — server chỉ đọc, không ghi file đó.
+DAILY_REPORTS_PATH = "daily_reports.json"
+DAILY_ANALYSIS_PATH = "daily_analysis.json"
+DAILY_REPORTS_KEEP = 60          # số bản báo cáo tự động lưu lại
+DAILY_ANALYSIS_KEEP = 60
+DAILY_REPORTS_API_LIMIT = 20     # số bản trả về cho web
+DAILY_REPORT_SLOTS = [           # (phiên, giờ, phút, hết khung giờ bù — giờ VN)
+    ("morning", 8, 30, 16),
+    ("afternoon", 16, 0, 24),
+]
+DAILY_REPORT_RETRY_SECONDS = 10 * 60
+DAILY_REPORT_SCHEDULER_ENABLED = os.environ.get("DAILY_REPORT_SCHEDULER", "1") != "0"
+_daily_report_last_attempt = {}
+_daily_report_lock = threading.Lock()
+_TICKER_WORD_RE = re.compile(r"\b[A-Z][A-Z0-9]{2}\b")
+
+
+def _report_hot_news(limit=8):
+    """Lấy tin được nhiều nguồn cùng đưa nhất trong 24h qua (cùng thuật toán Tin nóng)."""
+    try:
+        items = get_news(category="stock").get("items", [])
+    except Exception:
+        return []
+    cutoff = time.time() - 24 * 3600
+    recent = [it for it in items if _pub_ts(it["pubDate"]) >= cutoff] or items
+    recent = sorted(recent, key=lambda it: (it["sourceCount"], _pub_ts(it["pubDate"])), reverse=True)
+    out = []
+    for it in recent[:limit]:
+        srcs = it.get("sources") or [{}]
+        first = next((s for s in srcs if s.get("title") == it["title"]), srcs[0])
+        out.append({
+            "title": it["title"],
+            "link": first.get("link", ""),
+            "pubDate": it["pubDate"],
+            "sourceCount": it["sourceCount"],
+            "sources": sorted({s["source"] for s in it.get("sources", [])}),
+        })
+    return out
+
+
+def _mentioned_tickers(news, known):
+    counts = {}
+    for it in news:
+        for w in set(_TICKER_WORD_RE.findall(it["title"])):
+            if w in known:
+                counts[w] = counts.get(w, 0) + 1
+    return [{"ticker": t, "count": c} for t, c in sorted(counts.items(), key=lambda x: -x[1])[:8]]
+
+
+def _report_market_block(date_label):
+    """Chỉ số + nhóm ngành + top mã tăng/giảm/khối lượng từ giá khớp lệnh thật."""
+    indices = []
+    for idx in get_market_indices():
+        if idx.get("error"):
+            continue
+        indices.append({k: idx.get(k) for k in ("name", "value", "change", "changePct", "tradingValue", "foreignNet")})
+
+    all_tickers = sorted({t for _, tickers in SECTOR_TICKERS for t in tickers})
+    try:
+        quotes = [q for q in get_quotes(all_tickers) if q["last"] > 0 and q["ref"] > 0]
+    except Exception:
+        quotes = []
+    by_ticker = {q["ticker"]: q for q in quotes}
+
+    sectors = []
+    for name, tickers in SECTOR_TICKERS:
+        rows = [by_ticker[t] for t in tickers if t in by_ticker]
+        if not rows:
+            continue
+        best = max(rows, key=lambda q: q["changePct"])
+        sectors.append({
+            "name": name,
+            "avgChangePct": round(sum(q["changePct"] for q in rows) / len(rows), 2),
+            "up": sum(1 for q in rows if q["changePct"] > 0),
+            "down": sum(1 for q in rows if q["changePct"] < 0),
+            "total": len(rows),
+            "leader": {"ticker": best["ticker"], "changePct": best["changePct"]},
+        })
+    sectors.sort(key=lambda s: s["avgChangePct"], reverse=True)
+
+    def slim(q):
+        return {"ticker": q["ticker"], "last": q["last"], "changePct": q["changePct"], "volume": q["volume"]}
+
+    movers = {
+        "gainers": [slim(q) for q in sorted(quotes, key=lambda q: -q["changePct"]) if q["changePct"] > 0][:5],
+        "losers": [slim(q) for q in sorted(quotes, key=lambda q: q["changePct"]) if q["changePct"] < 0][:5],
+        "volume": [slim(q) for q in sorted(quotes, key=lambda q: -q["volume"])][:5],
+    }
+
+    lines = []
+    vni = next((i for i in indices if i["name"] == "VN-INDEX"), None)
+    if vni and vni.get("value"):
+        verb = "tăng" if vni["change"] > 0 else ("giảm" if vni["change"] < 0 else "đứng giá")
+        s = (f"VN-Index {verb} {_fmt_vn_num(abs(vni['change']))} điểm ({_fmt_vn_num(vni['changePct'])}%) "
+             f"phiên {date_label}, đạt {_fmt_vn_num(vni['value'])} điểm")
+        if vni.get("tradingValue"):
+            s += f", giá trị giao dịch {_fmt_vn_num(vni['tradingValue'])} tỷ đồng"
+        lines.append(s + ".")
+    if len(sectors) >= 2:
+        top, bottom = sectors[0], sectors[-1]
+        lines.append(
+            f"Nhóm ngành mạnh nhất: {top['name']} (bình quân {_fmt_vn_num(top['avgChangePct'])}%, "
+            f"{top['up']}/{top['total']} mã tăng); yếu nhất: {bottom['name']} "
+            f"({_fmt_vn_num(bottom['avgChangePct'])}%)."
+        )
+    if movers["gainers"]:
+        lines.append("Tăng mạnh: " + ", ".join(f"{q['ticker']} (+{_fmt_vn_num(q['changePct'])}%)" for q in movers["gainers"][:3]) + ".")
+    if movers["losers"]:
+        lines.append("Giảm mạnh: " + ", ".join(f"{q['ticker']} ({_fmt_vn_num(q['changePct'])}%)" for q in movers["losers"][:3]) + ".")
+    return {"indices": indices, "sectors": sectors, "movers": movers, "summary": " ".join(lines)}
+
+
+def compute_daily_report(session, previous_reports=None):
+    now_vn = datetime.now(VN_TZ)
+    date_label = now_vn.strftime("%d/%m")
+    known = {t for _, tickers in SECTOR_TICKERS for t in tickers}
+    news = _report_hot_news()
+    report = {
+        "date": now_vn.strftime("%Y-%m-%d"),
+        "session": session,
+        "generated_at": now_vn.strftime("%Y-%m-%dT%H:%M:%S+07:00"),
+        "disclaimer": SECTOR_ANALYSIS_DISCLAIMER,
+        "hot_news": news,
+        "mentioned_tickers": _mentioned_tickers(news, known),
+    }
+    if session == "afternoon":
+        report["title"] = f"Báo cáo cuối phiên {date_label}"
+        report["market"] = _report_market_block(date_label)
+    else:
+        # 8:30 chưa mở cửa — giá VPS lúc này chưa khớp lệnh, nên lấy lại số liệu
+        # cuối phiên gần nhất đã lưu thay vì tính từ giá chưa có ý nghĩa.
+        report["title"] = f"Bản tin sáng {date_label}"
+        prev = next((r for r in (previous_reports or []) if r.get("session") == "afternoon" and r.get("market")), None)
+        if prev:
+            report["market"] = prev["market"]
+            report["market_from"] = prev["date"]
+    headline = ""
+    if news:
+        headline = f"Tin được nhiều nguồn đưa nhất: \"{news[0]['title']}\" ({news[0]['sourceCount']} nguồn)."
+    market_summary = (report.get("market") or {}).get("summary", "")
+    if session == "morning" and market_summary:
+        market_summary = "Phiên trước: " + market_summary
+    report["summary"] = " ".join(x for x in (market_summary, headline) if x) or "Chưa đủ dữ liệu để tóm tắt."
+    return report
+
+
+def _load_report_list(path):
+    data, _ = load_github_file(path, {"items": []})
+    items = data.get("items") if isinstance(data, dict) else None
+    return items if isinstance(items, list) else []
+
+
+def generate_daily_report(session):
+    previous = _load_report_list(DAILY_REPORTS_PATH)
+    report = compute_daily_report(session, previous)
+
+    def mutate(current):
+        items = current.get("items") if isinstance(current, dict) else None
+        items = [r for r in (items or []) if not (r.get("date") == report["date"] and r.get("session") == session)]
+        items.insert(0, report)
+        items.sort(key=lambda r: r.get("generated_at", ""), reverse=True)
+        return {"items": items[:DAILY_REPORTS_KEEP]}
+
+    update_github_file(DAILY_REPORTS_PATH, {"items": []}, mutate, f"Báo cáo hàng ngày {report['date']} ({session}) — tự động, không AI")
+    return report
+
+
+def _daily_report_tick():
+    now_vn = datetime.now(VN_TZ)
+    if now_vn.weekday() >= 5:
+        return
+    today = now_vn.strftime("%Y-%m-%d")
+    for session, hh, mm, until_h in DAILY_REPORT_SLOTS:
+        start = now_vn.replace(hour=hh, minute=mm, second=0, microsecond=0)
+        if not (start <= now_vn and now_vn.hour < until_h):
+            continue
+        key = (today, session)
+        if time.time() - _daily_report_last_attempt.get(key, 0) < DAILY_REPORT_RETRY_SECONDS:
+            continue
+        if any(r.get("date") == today and r.get("session") == session for r in _load_report_list(DAILY_REPORTS_PATH)):
+            _daily_report_last_attempt[key] = time.time()
+            continue
+        _daily_report_last_attempt[key] = time.time()
+        with _daily_report_lock:
+            generate_daily_report(session)
+        print(f"[daily-report] Đã tạo báo cáo {today} ({session})")
+
+
+def _daily_report_loop():
+    time.sleep(30)  # để server khởi động xong rồi mới gọi API ngoài
+    while True:
+        try:
+            _daily_report_tick()
+        except Exception as e:
+            print(f"[daily-report] Lỗi: {e}")
+        time.sleep(60)
+
+
+def start_daily_report_scheduler():
+    if not (DAILY_REPORT_SCHEDULER_ENABLED and GITHUB_APP_CONFIGURED):
+        return
+    threading.Thread(target=_daily_report_loop, name="daily-report", daemon=True).start()
+
+
+def load_daily_reports():
+    reports = _load_report_list(DAILY_REPORTS_PATH)[:DAILY_REPORTS_API_LIMIT]
+    analyses = _load_report_list(DAILY_ANALYSIS_PATH)[:DAILY_REPORTS_API_LIMIT]
+    return {"reports": reports, "analyses": analyses}
+
+
 def strip_html(s):
     text = re.sub("<[^<]+?>", "", s or "")
     return html.unescape(text).strip()
@@ -1271,6 +1489,13 @@ class Handler(BaseHTTPRequestHandler):
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return
 
+        if parsed.path == "/api/daily-reports":
+            try:
+                self._send_json({"ok": True, "data": load_daily_reports()})
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
         if parsed.path == "/api/market-overview":
             try:
                 data = load_market_overview()
@@ -1395,6 +1620,21 @@ class Handler(BaseHTTPRequestHandler):
                     self._send_json({"ok": False, "error": f"Chỉ cho phép tối đa {MAX_SOURCES} nguồn"}, 400)
                 else:
                     self._send_json({"ok": False, "error": str(e)}, 400)
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
+        if parsed.path == "/api/admin/daily-report/generate":
+            if not self._require_admin():
+                return
+            body = self._read_json_body() or {}
+            session = body.get("session")
+            if session not in ("morning", "afternoon"):
+                session = "afternoon" if datetime.now(VN_TZ).hour >= 16 else "morning"
+            try:
+                with _daily_report_lock:
+                    report = generate_daily_report(session)
+                self._send_json({"ok": True, "data": report})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return
@@ -1697,6 +1937,7 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     server = ThreadingHTTPServer((HOST, PORT), Handler)
+    start_daily_report_scheduler()
     print(f"stockPeek đang chạy tại http://{HOST}:{PORT}  (Ctrl+C để dừng)")
     try:
         server.serve_forever()

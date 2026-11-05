@@ -200,6 +200,18 @@
       <div id="sectorGrid" class="sector-grid"></div>
     </section>
 
+    <section class="report-panel" data-view="report">
+      <div class="section-head">
+        <h2>📋 Báo cáo hàng ngày</h2>
+        <div class="section-head-actions">
+          <select id="reportSelect" class="report-select" aria-label="Chọn bản báo cáo"></select>
+          <button id="generateReportBtn" class="auth-btn" hidden>🔄 Tạo ngay</button>
+        </div>
+      </div>
+      <p class="sector-disclaimer">Tự động tạo lúc 8:30 (bản tin sáng) và 16:00 (cuối phiên) các ngày giao dịch. Phần "Phân tích của Claude" được bổ sung khi có.</p>
+      <div id="reportContent"></div>
+    </section>
+
     <section class="sources-panel" data-view="news">
       <div class="section-head sources-toggle" id="sourcesToggle">
         <h2>Nguồn tin tức</h2>
@@ -232,6 +244,7 @@
     <button data-view="market"><span>📊</span>Thị trường</button>
     <button data-view="watchlist"><span>⭐</span>Danh mục</button>
     <button data-view="sector"><span>🏭</span>Ngành</button>
+    <button data-view="report"><span>📋</span>Báo cáo</button>
   </nav>
 
   <script src="/app.js"></script>

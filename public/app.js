@@ -624,11 +624,210 @@ function renderSectorAnalysis(data) {
     .join("");
 }
 
+// ===================== Báo cáo hàng ngày =====================
+// reports: tạo tự động bởi server (8:30 + 16:00, xem generate_daily_report()).
+// analyses: bài phân tích do Claude viết (scheduled task trên máy cá nhân push
+// daily_analysis.json) — có thể có hoặc không cho từng ngày.
+let dailyReportData = { reports: [], analyses: [] };
+let dailyReportEntries = [];
+const SESSION_LABEL = { morning: "Bản tin sáng", afternoon: "Cuối phiên", ai: "Phân tích" };
+
+async function refreshDailyReports() {
+  const box = document.getElementById("reportContent");
+  try {
+    const res = await fetch("/api/daily-reports");
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    dailyReportData = json.data || { reports: [], analyses: [] };
+    buildDailyReportEntries();
+  } catch (e) {
+    box.innerHTML = '<div class="empty">Chưa tải được báo cáo hàng ngày.</div>';
+  }
+}
+
+function fmtReportDate(d) {
+  const [y, m, day] = (d || "").split("-");
+  return day ? `${day}/${m}/${y}` : d;
+}
+
+function buildDailyReportEntries() {
+  const select = document.getElementById("reportSelect");
+  const prev = select.value;
+  const entries = [];
+  const seen = new Set();
+  for (const r of dailyReportData.reports || []) {
+    const key = `${r.date}|${r.session}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    entries.push({ key, date: r.date, session: r.session, sortKey: r.generated_at || r.date, report: r });
+  }
+  for (const a of dailyReportData.analyses || []) {
+    if (entries.some((e) => e.date === a.date)) continue;
+    const key = `${a.date}|ai`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    entries.push({ key, date: a.date, session: "ai", sortKey: a.generated_at || a.date, report: null });
+  }
+  entries.sort((a, b) => (a.sortKey < b.sortKey ? 1 : -1));
+  dailyReportEntries = entries;
+
+  if (!entries.length) {
+    select.innerHTML = "";
+    document.getElementById("reportContent").innerHTML =
+      '<div class="empty">Chưa có báo cáo nào. Báo cáo đầu tiên sẽ được tạo lúc 8:30 hoặc 16:00 ngày giao dịch tới.</div>';
+    return;
+  }
+  select.innerHTML = entries
+    .map((e) => `<option value="${escapeHtml(e.key)}">${fmtReportDate(e.date)} · ${SESSION_LABEL[e.session] || e.session}</option>`)
+    .join("");
+  select.value = entries.some((e) => e.key === prev) ? prev : entries[0].key;
+  renderDailyReport(select.value);
+}
+
+function pctClass(v) {
+  return v > 0 ? "up-text" : v < 0 ? "down-text" : "ref-text";
+}
+
+function fmtPct(v) {
+  if (v === null || v === undefined) return "—";
+  return (v > 0 ? "+" : "") + Number(v).toLocaleString("vi-VN", { maximumFractionDigits: 2 }) + "%";
+}
+
+function renderReportMarket(market) {
+  if (!market) return "";
+  const indices = (market.indices || [])
+    .map(
+      (i) => `<div class="report-index">
+        <div class="ri-name">${escapeHtml(i.name)}</div>
+        <div class="ri-value">${Number(i.value).toLocaleString("vi-VN", { maximumFractionDigits: 2 })}</div>
+        <div class="ri-change ${pctClass(i.change)}">${i.change > 0 ? "+" : ""}${Number(i.change).toLocaleString("vi-VN", { maximumFractionDigits: 2 })} (${fmtPct(i.changePct)})</div>
+      </div>`
+    )
+    .join("");
+  const sectors = (market.sectors || [])
+    .map(
+      (s) => `<tr>
+        <td>${escapeHtml(s.name)}</td>
+        <td class="num ${pctClass(s.avgChangePct)}">${fmtPct(s.avgChangePct)}</td>
+        <td class="num">${s.up}/${s.total} tăng</td>
+      </tr>`
+    )
+    .join("");
+  const moverChips = (list) =>
+    (list || [])
+      .map((q) => `<span class="report-chip"><b>${escapeHtml(q.ticker)}</b><span class="${pctClass(q.changePct)}">${fmtPct(q.changePct)}</span></span>`)
+      .join("");
+  const volChips = (market.movers?.volume || [])
+    .map((q) => `<span class="report-chip"><b>${escapeHtml(q.ticker)}</b>${fmtVol(q.volume)}</span>`)
+    .join("");
+  const mv = market.movers || {};
+  return `
+    ${indices ? `<div class="report-indices">${indices}</div>` : ""}
+    <div class="report-cols">
+      ${sectors ? `<div><div class="overview-block-title">Nhóm ngành (bình quân % thay đổi)</div><table class="report-table">${sectors}</table></div>` : ""}
+      <div>
+        ${mv.gainers?.length ? `<div class="overview-block"><div class="overview-block-title">Tăng mạnh</div><div class="report-chips">${moverChips(mv.gainers)}</div></div>` : ""}
+        ${mv.losers?.length ? `<div class="overview-block"><div class="overview-block-title">Giảm mạnh</div><div class="report-chips">${moverChips(mv.losers)}</div></div>` : ""}
+        ${volChips ? `<div class="overview-block"><div class="overview-block-title">Khối lượng lớn nhất</div><div class="report-chips">${volChips}</div></div>` : ""}
+      </div>
+    </div>`;
+}
+
+function renderReportNews(news) {
+  if (!news || !news.length) return "";
+  const items = news
+    .map((n) => {
+      const href = safeUrl(n.link);
+      const title = escapeHtml(n.title);
+      return `<li>${href ? `<a href="${href}" target="_blank" rel="noopener">${title}</a>` : title}
+        <span class="rn-meta">${n.sourceCount} nguồn · ${escapeHtml((n.sources || []).join(", "))} · ${timeAgo(n.pubDate)}</span></li>`;
+    })
+    .join("");
+  return `<div class="overview-block"><div class="overview-block-title">Tin nổi bật (nhiều nguồn cùng đưa)</div><ul class="report-news">${items}</ul></div>`;
+}
+
+function renderAnalysis(a) {
+  const list = (arr) => (arr || []).map((x) => `<li>${escapeHtml(x)}</li>`).join("");
+  const sectors = (a.sectors || [])
+    .map((s) => `<li><b>${escapeHtml(s.name)}:</b> ${escapeHtml(s.view || "")}</li>`)
+    .join("");
+  const tickers = (a.tickers || [])
+    .map((t) => `<div class="sector-pick"><span class="pick-ticker">${escapeHtml(t.ticker)}</span><span class="pick-reason">${escapeHtml(t.note || "")}</span></div>`)
+    .join("");
+  return `<div class="report-card report-ai">
+    <span class="ai-badge">🤖 Phân tích của Claude</span>
+    <h3>${escapeHtml(a.title || "Phân tích thị trường")}</h3>
+    <div class="report-meta">${a.generated_at ? "Viết lúc " + new Date(a.generated_at).toLocaleString("vi-VN") : ""}</div>
+    ${a.summary ? `<div class="report-summary">${escapeHtml(a.summary)}</div>` : ""}
+    ${list(a.key_findings) ? `<div class="overview-block"><div class="overview-block-title">Điểm chính</div><ul class="overview-list">${list(a.key_findings)}</ul></div>` : ""}
+    ${sectors ? `<div class="overview-block"><div class="overview-block-title">Nhóm ngành</div><ul class="overview-list">${sectors}</ul></div>` : ""}
+    ${tickers ? `<div class="overview-block"><div class="overview-block-title">Mã đáng chú ý</div>${tickers}</div>` : ""}
+    ${list(a.action_items) ? `<div class="overview-block"><div class="overview-block-title">Việc nên làm</div><ul class="overview-list">${list(a.action_items)}</ul></div>` : ""}
+    ${a.sources?.length ? `<div class="report-meta">Nguồn: ${escapeHtml(a.sources.join(", "))}</div>` : ""}
+    ${a.disclaimer ? `<p class="overview-disclaimer">${escapeHtml(a.disclaimer)}</p>` : ""}
+  </div>`;
+}
+
+function renderDailyReport(key) {
+  const box = document.getElementById("reportContent");
+  const entry = dailyReportEntries.find((e) => e.key === key);
+  if (!entry) return;
+  const firstOfDate = dailyReportEntries.find((e) => e.date === entry.date) === entry;
+  const analyses = (dailyReportData.analyses || []).filter(
+    (a) => a.date === entry.date && (a.session ? a.session === entry.session || entry.session === "ai" : firstOfDate)
+  );
+  const r = entry.report;
+  let html = analyses.map(renderAnalysis).join("");
+  if (r) {
+    const mentioned = (r.mentioned_tickers || [])
+      .map((t) => `<span class="report-chip"><b>${escapeHtml(t.ticker)}</b>${t.count} tin</span>`)
+      .join("");
+    html += `<div class="report-card">
+      <h3>${escapeHtml(r.title || "Báo cáo")}</h3>
+      <div class="report-meta">Tạo tự động lúc ${new Date(r.generated_at).toLocaleString("vi-VN")}${
+        r.market_from ? ` · số liệu thị trường của phiên ${fmtReportDate(r.market_from)}` : ""
+      }</div>
+      <div class="report-summary">${escapeHtml(r.summary || "")}</div>
+      ${renderReportMarket(r.market)}
+      ${mentioned ? `<div class="overview-block" style="margin-top:14px"><div class="overview-block-title">Mã được nhắc trong tin</div><div class="report-chips">${mentioned}</div></div>` : ""}
+      ${renderReportNews(r.hot_news)}
+      ${r.disclaimer ? `<p class="overview-disclaimer">${escapeHtml(r.disclaimer)}</p>` : ""}
+    </div>`;
+  }
+  if (!analyses.length && firstOfDate) {
+    html += '<p class="report-empty-ai">Chưa có bài phân tích của Claude cho ngày này.</p>';
+  }
+  box.innerHTML = html;
+}
+
+async function generateDailyReportNow() {
+  const btn = document.getElementById("generateReportBtn");
+  const original = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = "Đang tạo...";
+  try {
+    const res = await fetch("/api/admin/daily-report/generate", { method: "POST" });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    document.getElementById("reportSelect").value = "";
+    await refreshDailyReports();
+  } catch (e) {
+    document.getElementById("reportContent").insertAdjacentHTML(
+      "afterbegin",
+      `<div class="auth-error">Lỗi tạo báo cáo: ${escapeHtml(e.message)}</div>`
+    );
+  } finally {
+    btn.disabled = false;
+    btn.textContent = original;
+  }
+}
+
 // ===================== Đăng nhập / tài khoản =====================
 
 function renderAuthArea() {
   const area = document.getElementById("authArea");
   document.getElementById("refreshSectorBtn").hidden = !currentUser || currentUser.role !== "admin";
+  document.getElementById("generateReportBtn").hidden = !currentUser || currentUser.role !== "admin";
   if (currentUser) {
     const adminBtn =
       currentUser.role === "admin"
@@ -1101,6 +1300,8 @@ document.getElementById("tickerInput").addEventListener("keydown", (e) => {
 });
 document.getElementById("addSourceBtn").addEventListener("click", addSource);
 document.getElementById("refreshSectorBtn").addEventListener("click", regenerateSectorAnalysis);
+document.getElementById("generateReportBtn").addEventListener("click", generateDailyReportNow);
+document.getElementById("reportSelect").addEventListener("change", (e) => renderDailyReport(e.target.value));
 document.getElementById("sourcesToggle").addEventListener("click", () => {
   const body = document.getElementById("sourcesBody");
   body.hidden = !body.hidden;
@@ -1135,7 +1336,9 @@ refreshAllLiveNews();
 refreshAllHotNews();
 refreshSectorAnalysis();
 refreshMarketOverview();
+refreshDailyReports();
 refreshIndices();
+setInterval(refreshDailyReports, 10 * 60 * 1000);
 setInterval(refreshQuotes, QUOTES_INTERVAL_MS);
 setInterval(refreshAllLiveNews, LIVE_NEWS_INTERVAL_MS);
 setInterval(refreshAllHotNews, HOT_NEWS_INTERVAL_MS);
@@ -1174,6 +1377,7 @@ document.addEventListener("visibilitychange", () => {
     refreshAllLiveNews();
     refreshAllHotNews();
     refreshMarketOverview();
+    refreshDailyReports();
   }
 });
 
