@@ -637,10 +637,70 @@ def fetch_feed_url(url, timeout=8):
     return fetch_url(url, timeout=timeout)
 
 
+QUOTES_FRESH_TTL = 10   # giây: dưới ngưỡng này trả cache, không gọi VPS
+QUOTES_STALE_TTL = 120  # giây: tới ngưỡng này vẫn trả cache ngay + làm mới ngầm
+_quotes_cache = {}      # ticker -> (dict giá, thời điểm lấy)
+_quotes_lock = threading.Lock()
+_quotes_refreshing = set()  # các mã đang được luồng nền làm mới
+
+
 def get_quotes(tickers):
+    """Giá cổ phiếu có cache theo từng mã (stale-while-revalidate).
+    VPS getliststockdata mất ~9s khi gọi từ IP Render (local chỉ ~0,06s), nên
+    không thể để mỗi request người dùng chờ trọn lần gọi đó: mã nào còn mới thì
+    trả luôn; mã đã cũ nhưng chưa quá QUOTES_STALE_TTL thì trả bản cũ ngay và
+    làm mới ở luồng nền; chỉ mã chưa có/quá cũ mới phải chờ gọi VPS."""
+    now = time.time()
+    missing, stale = [], []
+    with _quotes_lock:
+        for t in tickers:
+            entry = _quotes_cache.get(t)
+            age = now - entry[1] if entry else None
+            if entry is None or age >= QUOTES_STALE_TTL:
+                missing.append(t)
+            elif age >= QUOTES_FRESH_TTL and t not in _quotes_refreshing:
+                stale.append(t)
+        _quotes_refreshing.update(stale)
+
+    if stale:
+        def _bg(ts=stale):
+            try:
+                _fetch_and_cache_quotes(ts)
+            except Exception:
+                pass
+            finally:
+                with _quotes_lock:
+                    _quotes_refreshing.difference_update(ts)
+        threading.Thread(target=_bg, daemon=True).start()
+
+    if missing:
+        _fetch_and_cache_quotes(missing)
+
+    with _quotes_lock:
+        return [_quotes_cache[t][0] for t in tickers
+                if t in _quotes_cache and _quotes_cache[t][0] is not None]
+
+
+def _fetch_and_cache_quotes(tickers):
+    data = _fetch_quotes_vps(tickers)
+    ts = time.time()
+    with _quotes_lock:
+        for q in data:
+            if q.get("ticker"):
+                _quotes_cache[q["ticker"]] = (q, ts)
+        # Mã VPS không trả về (sai mã/huỷ niêm yết) cũng cache là None để không
+        # gọi lại VPS (~9s trên Render) ở mọi lượt làm mới của người dùng đó.
+        returned = {q.get("ticker") for q in data}
+        for t in tickers:
+            if t not in returned:
+                _quotes_cache[t] = (None, ts)
+    return data
+
+
+def _fetch_quotes_vps(tickers):
     key = ",".join(tickers)
     url = f"https://bgapidatafeed.vps.com.vn/getliststockdata/{key}"
-    raw = fetch_url(url)
+    raw = fetch_url(url, timeout=15)
     data = json.loads(raw)
     out = []
     for item in data:
