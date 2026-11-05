@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "date": "2026-11-05",
+      "session": "morning",
+      "generated_at": "2026-11-05T15:26:52+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "Khi cổ phiếu penny không còn 'sóng'",
+          "link": "https://stockbiz.vn/tin-tuc/khi-co-phieu-penny-khong-con-song/42642222",
+          "pubDate": "Thu, 05 Nov 2026 09:56:57 +0700",
+          "sourceCount": 3,
+          "sources": [
+            "24hMoney",
+            "Stockbiz Thị trường",
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "Tài khoản chứng khoán mở mới đạt hơn 252 ngàn trong tháng 10",
+          "link": "http://vietstock.vn/2026/11/tai-khoan-chung-khoan-mo-moi-dat-hon-252-ngan-trong-thang-10-830-1511818.htm",
+          "pubDate": "Thu, 05 Nov 2026 08:16:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Cổ phiếu ngành dầu khí vẫn chưa kết thúc đợt suy yếu",
+          "link": "https://24hmoney.vn/news/co-phieu-nganh-dau-khi-van-chua-ket-thuc-dot-suy-yeu-c1a2854720.html",
+          "pubDate": "Thu, 05 Nov 2026 14:56:06 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Lộ diện đại gia sàn chứng khoán “ôm” hàng trăm nghìn tỷ đồng gửi ngân hàng",
+          "link": "https://dantri.com.vn/kinh-doanh/lo-dien-dai-gia-san-chung-khoan-om-hang-tram-nghin-ty-dong-gui-ngan-hang-20261105124624686.htm",
+          "pubDate": "Thu, 05 Nov 2026 13:21:08 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "Dân Trí Kinh doanh"
+          ]
+        },
+        {
+          "title": "Giá vàng miếng lên cao nhất gần một tháng",
+          "link": "https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-5-11-5141000.html",
+          "pubDate": "Thu, 05 Nov 2026 10:09:04 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Cổ phiếu đáng chú ý ngày 5/11: FPT, DXG, TCH",
+          "link": "https://stockbiz.vn/tin-tuc/co-phieu-dang-chu-y-ngay-511-fpt-dxg-tch/42643047",
+          "pubDate": "Thu, 05 Nov 2026 01:53:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "VN-Index cần thêm thời gian xác nhận, khuyến nghị nâng tỉ trọng cổ phiếu",
+          "link": "https://stockbiz.vn/tin-tuc/vn-index-can-them-thoi-gian-xac-nhan-khuyen-nghi-nang-ti-trong-co-phieu/42642202",
+          "pubDate": "Thu, 05 Nov 2026 00:25:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "Cục Thuế chấn chỉnh việc yêu cầu người dân từ chối nhận tiền thuế nộp thừa",
+          "link": "https://dantri.com.vn/kinh-doanh/cuc-thue-chan-chinh-viec-yeu-cau-nguoi-dan-tu-choi-nhan-tien-thue-nop-thua-20261104210250316.htm",
+          "pubDate": "Thu, 05 Nov 2026 04:40:06 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        }
+      ],
+      "mentioned_tickers": [
+        {
+          "ticker": "DXG",
+          "count": 1
+        }
+      ],
+      "title": "Bản tin sáng 05/11",
+      "summary": "Tin được nhiều nguồn đưa nhất: \"Khi cổ phiếu penny không còn 'sóng'\" (3 nguồn)."
+    }
+  ]
+}
