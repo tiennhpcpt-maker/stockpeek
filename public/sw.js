@@ -1,7 +1,7 @@
 // Service worker cho bản cài trên điện thoại (PWA).
 // Chiến lược: luôn lấy mạng trước (giá/tin phải mới), mất mạng mới dùng
 // bản đã lưu lần cuối để app vẫn mở được và hiện dữ liệu gần nhất.
-const CACHE = "stockpeek-v6";
+const CACHE = "stockpeek-v7";
 const SHELL = ["/", "/style.css", "/app.js", "/manifest.webmanifest", "/icon-192.png"];
 
 self.addEventListener("install", (event) => {
@@ -22,9 +22,14 @@ self.addEventListener("fetch", (event) => {
   // Không đụng tới request ghi dữ liệu, đăng nhập (OAuth redirect) hay domain khác.
   if (req.method !== "GET" || url.origin !== self.location.origin) return;
   if (url.pathname.startsWith("/auth/") || url.pathname.startsWith("/api/auth/") || url.pathname.startsWith("/api/admin/")) return;
+  // Kiểm tra phiên bản phải luôn hỏi server thật — trả bản đã lưu có thể gây tải lại vòng lặp khi mất mạng.
+  if (url.pathname === "/api/version") return;
 
   event.respondWith(
-    fetch(req)
+    // cache: "no-cache" = luôn hỏi lại server, không lấy bản cũ trong cache HTTP của trình duyệt.
+    // Không áp cho điều hướng trang (một số trình duyệt từ chối tuỳ chọn này với
+    // request navigate); trang HTML đã có header Cache-Control: no-cache từ server.
+    (req.mode === "navigate" ? fetch(req) : fetch(req, { cache: "no-cache" }))
       .then((res) => {
         if (res.ok) {
           const copy = res.clone();

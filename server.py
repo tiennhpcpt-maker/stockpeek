@@ -1486,6 +1486,28 @@ def get_news(sources=None, category="stock"):
         return data
 
 
+def _compute_app_version():
+    """Mã phiên bản giao diện = băm nội dung public/ lúc server khởi động. Đổi bất
+    kỳ file giao diện nào rồi deploy là mã đổi → app trên điện thoại (PWA) tự
+    nhận ra qua /api/version và tải lại, không cần cài lại app. Sửa riêng
+    server.py thì mã không đổi, không bắt người dùng tải lại vô ích."""
+    h = hashlib.sha1()
+    for root, dirs, files in os.walk(PUBLIC_DIR):
+        dirs.sort()
+        for name in sorted(files):
+            fp = os.path.join(root, name)
+            h.update(os.path.relpath(fp, PUBLIC_DIR).encode())
+            with open(fp, "rb") as f:
+                h.update(f.read())
+    return h.hexdigest()[:12]
+
+
+APP_VERSION = _compute_app_version()
+
+# HTML/JS/CSS/manifest/sw.js: luôn hỏi lại server (no-cache) để không kẹt bản cũ
+# trong cache HTTP của trình duyệt điện thoại; ảnh icon thì cho cache 1 ngày.
+NO_CACHE_EXTS = {".html", ".css", ".js", ".webmanifest"}
+
 CONTENT_TYPES = {
     ".html": "text/html; charset=utf-8",
     ".css": "text/css; charset=utf-8",
@@ -1502,6 +1524,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Cache-Control", "no-store")
         if set_cookie:
             self.send_header("Set-Cookie", set_cookie)
         self.end_headers()
@@ -1553,6 +1576,10 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         parsed = urlparse(self.path)
+
+        if parsed.path == "/api/version":
+            self._send_json({"ok": True, "version": APP_VERSION})
+            return
 
         if parsed.path == "/api/quotes":
             qs = parse_qs(parsed.query)
@@ -2075,9 +2102,12 @@ class Handler(BaseHTTPRequestHandler):
         ext = os.path.splitext(file_path)[1]
         with open(file_path, "rb") as f:
             body = f.read()
+        if ext == ".html":
+            body = body.replace(b"__APP_VERSION__", APP_VERSION.encode())
         self.send_response(200)
         self.send_header("Content-Type", CONTENT_TYPES.get(ext, "application/octet-stream"))
         self.send_header("Content-Length", str(len(body)))
+        self.send_header("Cache-Control", "no-cache" if ext in NO_CACHE_EXTS else "public, max-age=86400")
         self.end_headers()
         self.wfile.write(body)
 

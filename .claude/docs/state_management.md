@@ -35,3 +35,10 @@ Cả `refreshLiveNews(category)` và `refreshHotNews(category)` đều gọi `/a
 ## Sau khi login/logout/đổi nguồn tin, luôn gọi lại đủ 2 hàm tin tức (cả 2 category)
 
 Bất kỳ chỗ nào đổi trạng thái đăng nhập hoặc danh sách nguồn tin (`afterLoginSuccess`, `logout`, `addSource`, `removeSource`) đều phải gọi cả `refreshAllLiveNews()` **và** `refreshAllHotNews()` (2 hàm wrapper gọi `refreshLiveNews`/`refreshHotNews` cho cả `"stock"` lẫn `"tech"`) — không chỉ 1 trong 2 — vì nguồn tin đổi thì cả "Tin nóng" lẫn "Tin trực tiếp" của cả 2 chuyên mục đều cần tính lại.
+
+## Tự cập nhật giao diện trên app điện thoại (PWA) — không cần cài lại
+
+- Server tính `APP_VERSION` = băm nội dung `public/` lúc khởi động, gắn vào `<html data-app-version>` (thay chuỗi `__APP_VERSION__` khi phục vụ HTML) và trả ở `GET /api/version`. Chỉ sửa `server.py` thì mã không đổi.
+- `app.js` (`checkForAppUpdate`): mở lại app từ nền (`visibilitychange`) hoặc 3s sau khi mở → có bản mới thì **tự tải lại** (chặn lặp bằng `sessionStorage`, tối đa 1 lần/60s); đang dùng thì cứ 5 phút kiểm tra, có bản mới chỉ **hiện thanh "Tải lại"**.
+- HTML/JS/CSS/manifest/sw.js trả `Cache-Control: no-cache`; JSON trả `no-store`. `sw.js` không chặn `/api/version` (trả bản đã lưu khi mất mạng có thể gây tải lại vòng lặp).
+- Vì vậy **không cần tăng số `CACHE` trong `sw.js`** mỗi lần sửa giao diện nữa (service worker vốn lấy mạng trước).

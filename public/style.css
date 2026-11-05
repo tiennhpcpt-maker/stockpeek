@@ -1023,3 +1023,18 @@ main {
 .report-chip.has-note { border-color: var(--accent); }
 .sector-view { font-size: 13px; margin-top: 8px; color: var(--text); }
 .sector-notice { grid-column: 1 / -1; }
+
+/* ---- Thanh báo có bản cập nhật giao diện ---- */
+.update-banner {
+  position: fixed; left: 50%; transform: translateX(-50%);
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  z-index: 50; display: flex; align-items: center; gap: 12px;
+  background: var(--card-bg-2); color: var(--text);
+  border: 1px solid var(--accent); border-radius: 12px;
+  padding: 10px 12px 10px 16px; font-size: 14px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  max-width: calc(100% - 32px);
+}
+@media (max-width: 720px) {
+  .update-banner { bottom: calc(76px + env(safe-area-inset-bottom)); }
+}

@@ -1460,6 +1460,63 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// ---- Tự cập nhật giao diện (không cần cài lại app) ----
+// Server gắn mã phiên bản (băm nội dung public/) vào <html data-app-version>.
+// App so với /api/version: mở lại app (từ nền) mà có bản mới thì tải lại luôn;
+// đang dùng dở thì hiện thanh "Có bản mới" để người dùng tự bấm, không cắt ngang.
+const APP_VERSION = document.documentElement.dataset.appVersion || "";
+const UPDATE_CHECK_INTERVAL_MS = 5 * 60 * 1000;
+const RELOAD_GUARD_KEY = "stockpeek.lastAutoReload";
+
+async function fetchServerVersion() {
+  try {
+    const res = await fetch("/api/version", { cache: "no-store" });
+    const json = await res.json();
+    return json.ok ? json.version : null;
+  } catch (e) {
+    return null; // mất mạng: bỏ qua, lần sau kiểm tra lại
+  }
+}
+
+function reloadForUpdate() {
+  // Chống vòng lặp tải lại (ví dụ đúng lúc Render đang chuyển bản deploy).
+  try {
+    const last = Number(sessionStorage.getItem(RELOAD_GUARD_KEY) || 0);
+    if (Date.now() - last < 60 * 1000) return false;
+    sessionStorage.setItem(RELOAD_GUARD_KEY, String(Date.now()));
+  } catch (e) {}
+  location.reload();
+  return true;
+}
+
+function showUpdateBanner() {
+  if (document.getElementById("updateBanner")) return;
+  const bar = document.createElement("div");
+  bar.id = "updateBanner";
+  bar.className = "update-banner";
+  bar.innerHTML = '<span>🔄 Đã có bản cập nhật mới</span><button type="button" class="auth-btn primary">Tải lại</button>';
+  bar.querySelector("button").addEventListener("click", () => location.reload());
+  document.body.appendChild(bar);
+}
+
+async function checkForAppUpdate({ autoReload }) {
+  if (!APP_VERSION || APP_VERSION.startsWith("__")) return; // chạy file tĩnh, không qua server
+  const latest = await fetchServerVersion();
+  if (!latest || latest === APP_VERSION) return;
+  if (!(autoReload && reloadForUpdate())) showUpdateBanner();
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) return;
+  checkForAppUpdate({ autoReload: true });
+  navigator.serviceWorker?.getRegistration().then((r) => r && r.update()).catch(() => {});
+});
+setInterval(() => {
+  if (!document.hidden) checkForAppUpdate({ autoReload: false });
+}, UPDATE_CHECK_INTERVAL_MS);
+// Vừa mở app mà trang lấy từ bộ nhớ đệm (lúc mất mạng) thì tải lại sang bản mới luôn.
+setTimeout(() => checkForAppUpdate({ autoReload: true }), 3000);
+
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("/sw.js").catch((e) => console.warn("[sw] đăng ký lỗi", e));
