@@ -10,7 +10,8 @@ File đầu vào là 1 object JSON:
   "kind": "bulletin|weekly|monthly|company",  # tuỳ chọn, quyết định nhãn hiển thị
   "origin": "Bản tin chứng khoán sáng (email)",  # tuỳ chọn, ghi nguồn gốc bài
   "title": "...", "summary": "...",
-  "key_findings": ["..."], "sections": [{"title": "...", "items": ["..."]}], "sectors": [{"name": "...", "view": "..."}],
+  "key_findings": ["..."], "sections": [{"title": "...", "items": ["..."]}],
+  "sectors": [{"name": "Ngân hàng", "view": "..."}],   # name phải thuộc SECTOR_NAMES bên dưới
   "tickers": [{"ticker": "HPG", "note": "..."}], "action_items": ["..."],
   "sources": ["24hMoney", ...], "disclaimer": "..."
 }
@@ -27,6 +28,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PATH = os.path.join(ROOT, "daily_analysis.json")
 KEEP = 60
 VN_TZ = timezone(timedelta(hours=7))
+# Tên ngành phải khớp CHÍNH XÁC SECTOR_TICKERS trong server.py — tab "Ngành" gắn
+# nhận định vào thẻ ngành theo tên. Đổi danh sách ngành ở server thì sửa cả ở đây.
+SECTOR_NAMES = [
+    "Ngân hàng", "Bất động sản", "Chứng khoán", "Thép", "Bán lẻ",
+    "Bất động sản khu công nghiệp", "Dầu khí", "Thực phẩm - Đồ uống",
+]
 DISCLAIMER = (
     "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, "
     "không phải khuyến nghị đầu tư."
@@ -51,6 +58,11 @@ def add_entry(entry):
     for sec in entry.get("sections", []):
         if not isinstance(sec, dict) or not isinstance(sec.get("items", []), list):
             sys.exit("'sections' phải là danh sách {title, items[]}")
+    for sec in entry.get("sectors", []):
+        if not isinstance(sec, dict) or not str(sec.get("view", "")).strip():
+            sys.exit("'sectors' phải là danh sách {name, view} và view không được rỗng")
+        if sec.get("name") not in SECTOR_NAMES:
+            sys.exit(f"Tên ngành không hợp lệ: {sec.get('name')!r}. Chỉ dùng: {', '.join(SECTOR_NAMES)}")
     for key in ("key_findings", "action_items", "sources", "sectors", "tickers"):
         if key in entry and not isinstance(entry[key], list):
             sys.exit(f"'{key}' phải là danh sách")

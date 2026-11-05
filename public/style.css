@@ -733,7 +733,8 @@ main {
   color: var(--text);
   line-height: 1.45;
 }
-.sector-pick .pick-source {
+.sector-pick .pick-source,
+.sector-view .pick-source {
   font-size: 11px;
   color: var(--text-dim);
   display: block;

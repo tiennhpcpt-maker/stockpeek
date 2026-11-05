@@ -60,7 +60,33 @@
       ],
       "kind": "bulletin",
       "origin": "Bản tin chứng khoán sáng (email)",
-      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư.",
+      "sectors": [
+        {
+          "name": "Ngân hàng",
+          "view": "Khối ngoại bán ròng liên tục: STB bị bán 10/10 phiên (-430 tỷ), VCB -239 tỷ, MBB -584 tỷ trong 10 phiên tính đến 03/11, ACB tiếp tục bị bán phiên 04/11. Điểm sáng là HDB (LNTT 9 tháng +24,2%); bản tin khuyên hạn chế tăng tỷ trọng MBB, ACB."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "KQKD Q3 nhóm Vingroup rất mạnh: VIC LNST gấp ~7,5 lần cùng kỳ (9 tháng vượt 25% kế hoạch), VHM +419%. Tuy vậy giá chưa phản ánh: VIC -2,9% và VHM -2,5% trong 1 tuần."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "KQKD Q3 đi xuống: SSI -24%, HCM -32,5% so với cùng kỳ. Khối ngoại bán ròng SSI (-206 tỷ/10 phiên, dữ liệu đến 03/11) dù giá SSI vẫn +3,3% trong 1 tuần."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG có LNST Q3 +106% so với cùng kỳ, khối ngoại mua ròng không đều (+177 tỷ/10 phiên, dữ liệu đến 03/11); HPG nằm trong top 3 mã nổi bật của bản tin."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "Phân hoá: PVD có LNST Q3 -75% dù doanh thu +25% (TCBS: \"Chờ mua\"), PVS bị khối ngoại bán ròng 78 tỷ/10 phiên; ngược lại PVT (vận tải dầu khí) LNST Q3 +40%, 9 tháng +61%."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN dẫn dắt nhóm: khối ngoại mua ròng 8/10 phiên (+670 tỷ, dữ liệu đến 03/11) và mua tập trung phiên 04/11; KQKD 9 tháng ước gấp 1,5 lần cả năm 2025."
+        }
+      ]
     },
     {
       "date": "2026-11-04",

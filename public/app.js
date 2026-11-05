@@ -612,11 +612,21 @@ function renderSectorAnalysis(data) {
         </div>
         <div class="sector-outlook">${s.up}/${s.total} mã tăng${s.down ? `, ${s.down} mã giảm` : ""}</div>
         <div class="report-chips">${chips}</div>
-        ${view ? `<div class="sector-view">📧 ${escapeHtml(view)}</div>` : ""}
+        ${view ? `<div class="sector-view">📧 ${escapeHtml(view)}<span class="pick-source">Nguồn: ${escapeHtml(noteSource)}</span></div>` : ""}
         ${noteRows}
       </div>`;
     })
     .join("");
+  // Nhận định cho ngành không có thẻ (tên lệch danh sách SECTOR_TICKERS) vẫn hiện, không bị mất.
+  const shown = new Set(sectors.map((s) => s.name));
+  const extra = (views.items || []).filter((v) => v.view && !shown.has(v.name));
+  if (extra.length) {
+    grid.insertAdjacentHTML(
+      "beforeend",
+      `<div class="sector-card"><div class="sector-name">📧 Nhận định ngành khác (${escapeHtml(noteSource)})</div>
+        <ul class="overview-list">${extra.map((v) => `<li><b>${escapeHtml(v.name)}:</b> ${escapeHtml(v.view)}</li>`).join("")}</ul></div>`
+    );
+  }
 }
 
 // ===================== Báo cáo hàng ngày =====================
