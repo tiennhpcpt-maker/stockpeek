@@ -46,6 +46,8 @@ Mọi "ghi dữ liệu" là commit trực tiếp vào 1 trong 2 repo GitHub, qua
 | Giá cổ phiếu theo mã | `_quotes_cache` | 10s mới / 120s trả bản cũ + làm mới ngầm | VPS mất ~9s từ IP Render nên không để request chờ |
 | Bảng ngành trực tiếp | `_live_sectors_cache` | 30s | tính từ `_quotes_cache` |
 
+Luồng nền `_market_warm_loop` (tắt bằng env `MARKET_WARMER=0`) làm mới giá các mã ngành/mặc định + chỉ số mỗi `MARKET_WARM_INTERVAL` = 30s, để người dùng không phải chờ lần gọi VPS ~9s (đo được 16s ở lần đầu sau restart nếu không có luồng này).
+
 Vì cache nằm trong RAM, mỗi lần Render free-tier restart (spin-down/spin-up) mọi cache về rỗng — request đầu tiên sau đó luôn là cache-miss thật (xem [news_pipeline.md](news_pipeline.md) về vì sao việc này từng gây timeout).
 
 ## Tự động hoá — GitHub Actions, không phải Claude cloud

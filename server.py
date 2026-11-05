@@ -1172,6 +1172,32 @@ def _daily_report_loop():
         time.sleep(60)
 
 
+MARKET_WARM_INTERVAL = 30  # giây
+
+
+def _market_warm_loop():
+    """Giữ sẵn giá các mã ngành/mặc định và chỉ số trong cache. VPS mất ~9s/lần từ
+    IP Render; không có luồng này thì người xem đầu tiên sau mỗi lần restart hoặc
+    sau > QUOTES_STALE_TTL không ai xem phải chờ trọn lần gọi đó (đo được 16s)."""
+    tickers = sorted({t for _, ts in SECTOR_TICKERS for t in ts} | set(DEFAULT_TICKERS))
+    while True:
+        try:
+            _fetch_and_cache_quotes(tickers)
+        except Exception as e:
+            print(f"[market-warm] Lỗi giá: {e}")
+        try:
+            get_market_indices()
+        except Exception as e:
+            print(f"[market-warm] Lỗi chỉ số: {e}")
+        time.sleep(MARKET_WARM_INTERVAL)
+
+
+def start_market_warmer():
+    if os.environ.get("MARKET_WARMER", "1") == "0":
+        return
+    threading.Thread(target=_market_warm_loop, name="market-warm", daemon=True).start()
+
+
 def start_daily_report_scheduler():
     if not (DAILY_REPORT_SCHEDULER_ENABLED and GITHUB_APP_CONFIGURED):
         return
@@ -1977,6 +2003,7 @@ class Handler(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     server = ThreadingHTTPServer((HOST, PORT), Handler)
     start_daily_report_scheduler()
+    start_market_warmer()
     print(f"stockPeek đang chạy tại http://{HOST}:{PORT}  (Ctrl+C để dừng)")
     try:
         server.serve_forever()
