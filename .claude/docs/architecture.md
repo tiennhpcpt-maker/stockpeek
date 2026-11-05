@@ -69,3 +69,17 @@ Mỗi số liệu chỉ có 1 nguồn, các tab không lặp nhau:
 - **📊 Thị trường** = tình hình lúc này. Khối chỉ số trực tiếp (`/api/indices`) + nhận định lấy từ **bản tin Claude mới nhất** trong `daily_analysis.json` (`get_market_view()`, chỉ `kind` bulletin/weekly, tối đa `MARKET_VIEW_MAX_AGE_DAYS` ngày). Không có bản tin gần đây thì hiện tóm tắt báo cáo tự động gần nhất. Route vẫn là `GET /api/market-overview`.
 - **🏭 Ngành** = bảng ngành trực tiếp (`get_live_sectors()`, `GET /api/sector-analysis`), tính từ giá khớp lệnh bằng `_sector_stats()` — **cùng hàm** với báo cáo cuối phiên nên không lệch số. Trước giờ mở cửa (VPS chưa có giá khớp) trả bảng ngành của báo cáo cuối phiên gần nhất (`live=false`, `asOf`). Ghi chú "mã đáng chú ý" của bản tin Claude được gắn vào thẻ ngành chứa mã đó. Trường `sectors` ({name, view}) của bản tin hiện trong thẻ ngành cùng tên — `name` phải khớp nguyên văn `SECTOR_TICKERS` (`scripts/add_daily_analysis.py` kiểm tra bằng `SECTOR_NAMES`, đổi ngành thì sửa cả 2 nơi); tên lệch thì hiện ở khối "Nhận định ngành khác".
 - **📋 Báo cáo** = lưu trữ theo ngày: mỗi ngày 1 mục gồm bài Claude + báo cáo tự động. Có bản cuối phiên thì không hiện bản 8:30 (tin trùng, số liệu thị trường của bản 8:30 chỉ là bản sao phiên trước).
+
+## Dự phòng hiển thị bản tin / báo cáo / ngành (từ 11/2026)
+
+Nguyên tắc: các tab Thị trường, Ngành, Báo cáo **không bao giờ để trống** khi còn bất kỳ dữ liệu cũ nào — hiện bản cũ kèm cảnh báo ⚠️.
+
+| Lớp | Lỗi | Dự phòng |
+|---|---|---|
+| Server `_load_report_list` (chỉ đọc) | GitHub API lỗi / 404 / rỗng | bản đọc được gần nhất trong RAM → file `daily_*.json` đi kèm bản deploy. Ghi (`update_github_file`, `force=True`) KHÔNG bao giờ dùng dự phòng. API trả `dataSource` = github/memory/bundled |
+| Server `get_market_view` | bản tin cũ hơn `MARKET_VIEW_MAX_AGE_DAYS` | vẫn trả bản tin + `stale: true`, web kèm tóm tắt tự động mới nhất |
+| Server `get_live_sectors` | chưa có giá khớp / VPS lỗi | báo cáo cuối phiên → báo cáo bất kỳ có số liệu ngành → kết quả trực tiếp gần nhất trong RAM → `sector_analysis.json` cũ (`legacy: true`) |
+| Server `get_quotes` | VPS lỗi | trả giá cũ trong cache dù quá `QUOTES_STALE_TTL` |
+| Trình duyệt `fetchWithFallback` | không gọi được server / API lỗi | bản tải thành công gần nhất trong localStorage (`stockpeek.cache.*`) |
+
+Vì vậy **không xoá** `sector_analysis.json`, `daily_reports.json`, `daily_analysis.json` khỏi repo.

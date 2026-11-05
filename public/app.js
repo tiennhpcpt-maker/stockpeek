@@ -499,6 +499,39 @@ async function removeSource(name) {
   }
 }
 
+// ===================== Dữ liệu dự phòng phía trình duyệt =====================
+// Bản tin/báo cáo/ngành tải thành công thì lưu vào localStorage; lần sau server
+// lỗi hoặc mất mạng thì hiện bản đã lưu kèm ghi chú, thay vì để trống.
+const OFFLINE_KEY_PREFIX = "stockpeek.cache.";
+
+async function fetchWithFallback(name, url) {
+  try {
+    const res = await fetch(url);
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
+    try {
+      localStorage.setItem(OFFLINE_KEY_PREFIX + name, JSON.stringify({ savedAt: Date.now(), data: json.data }));
+    } catch (e) {}
+    return { data: json.data, savedAt: null };
+  } catch (err) {
+    let saved = null;
+    try { saved = JSON.parse(localStorage.getItem(OFFLINE_KEY_PREFIX + name) || "null"); } catch (e) {}
+    if (saved && saved.data) return { data: saved.data, savedAt: saved.savedAt };
+    throw err;
+  }
+}
+
+// Ghi chú hiện trên đầu khối khi dữ liệu không phải bản mới nhất từ máy chủ.
+function fallbackNotice(savedAt, dataSource) {
+  if (savedAt) {
+    return `<div class="overview-stale">⚠️ Không kết nối được máy chủ — đang hiện dữ liệu đã lưu lúc ${new Date(savedAt).toLocaleString("vi-VN")}.</div>`;
+  }
+  if (dataSource && dataSource !== "github") {
+    return '<div class="overview-stale">⚠️ Máy chủ tạm không đọc được dữ liệu mới nhất — đang hiện bản dự phòng, có thể thiếu bài vừa đăng.</div>';
+  }
+  return "";
+}
+
 // ===================== Tab Thị trường: nhận định =====================
 // Nhận định lấy từ bản tin Claude mới nhất (tổng hợp báo cáo các CTCK, xem
 // get_market_view() trong server.py); chưa có bản tin gần đây thì hiện tóm tắt
@@ -506,10 +539,8 @@ async function removeSource(name) {
 async function refreshMarketOverview() {
   const box = document.getElementById("overviewContent");
   try {
-    const res = await fetch("/api/market-overview");
-    const json = await res.json();
-    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
-    renderMarketOverview(json.data || {});
+    const { data, savedAt } = await fetchWithFallback("market", "/api/market-overview");
+    renderMarketOverview(data || {}, savedAt);
   } catch (e) {
     box.innerHTML = '<div class="empty">Chưa tải được nhận định thị trường.</div>';
   }
@@ -520,18 +551,25 @@ function isTodayVN(dateStr) {
   return dateStr === today;
 }
 
-function renderMarketOverview(data) {
+function renderMarketOverview(data, savedAt) {
   const box = document.getElementById("overviewContent");
   const updatedEl = document.getElementById("overviewUpdated");
   const list = (arr) => (arr || []).map((x) => `<li>${escapeHtml(x)}</li>`).join("");
   const a = data.analysis;
   if (a) {
     updatedEl.textContent = a.generated_at ? "Lập lúc " + new Date(a.generated_at).toLocaleString("vi-VN") : "";
-    const stale = !isTodayVN(a.date)
-      ? `<div class="overview-stale">Chưa có bản tin hôm nay — đang hiện bản tin ngày ${fmtReportDate(a.date)}.</div>`
+    const stale = data.stale
+      ? `<div class="overview-stale">⚠️ Bản tin phân tích đã lâu chưa được cập nhật — đang hiện bản tin ngày ${fmtReportDate(a.date)}, chỉ nên tham khảo. Số liệu mới nhất xem ở khối tóm tắt tự động bên dưới.</div>`
+      : !isTodayVN(a.date)
+        ? `<div class="overview-stale">Chưa có bản tin hôm nay — đang hiện bản tin ngày ${fmtReportDate(a.date)}.</div>`
+        : "";
+    const autoBlock = data.stale && data.auto
+      ? `<div class="overview-block"><div class="overview-block-title">Tóm tắt tự động mới nhất · ${escapeHtml(data.auto.title || "")}</div><div class="overview-summary">${escapeHtml(data.auto.summary || "")}</div></div>`
       : "";
     box.innerHTML = `
+      ${fallbackNotice(savedAt, data.dataSource)}
       ${stale}
+      ${autoBlock}
       <div class="overview-source">${(ANALYSIS_KIND[a.kind] || {}).badge || "📧 Bản tin"} · ${escapeHtml(a.title || "")}</div>
       ${a.summary ? `<div class="overview-summary">${escapeHtml(a.summary)}</div>` : ""}
       ${list(a.key_findings) ? `<div class="overview-block"><div class="overview-block-title">Điểm chính</div><ul class="overview-list">${list(a.key_findings)}</ul></div>` : ""}
@@ -547,6 +585,7 @@ function renderMarketOverview(data) {
     const r = data.auto;
     updatedEl.textContent = r.generated_at ? "Tạo tự động lúc " + new Date(r.generated_at).toLocaleString("vi-VN") : "";
     box.innerHTML = `
+      ${fallbackNotice(savedAt, data.dataSource)}
       <div class="overview-stale">Chưa có bản tin phân tích gần đây — đang hiện tóm tắt tự động (${escapeHtml(r.title || "")}).</div>
       <div class="overview-summary">${escapeHtml(r.summary || "")}</div>
       <a href="#" class="overview-more" data-goto="report">Xem chi tiết trong tab Báo cáo →</a>
@@ -565,10 +604,8 @@ function renderMarketOverview(data) {
 async function refreshSectorAnalysis() {
   const grid = document.getElementById("sectorGrid");
   try {
-    const res = await fetch("/api/sector-analysis");
-    const json = await res.json();
-    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
-    renderSectorAnalysis(json.data);
+    const { data, savedAt } = await fetchWithFallback("sector", "/api/sector-analysis");
+    renderSectorAnalysis(data, savedAt);
   } catch (e) {
     if (!grid.querySelector(".sector-card")) {
       grid.innerHTML = `<div class="empty">Chưa tải được dữ liệu nhóm ngành.</div>`;
@@ -576,13 +613,17 @@ async function refreshSectorAnalysis() {
   }
 }
 
-function renderSectorAnalysis(data) {
+function renderSectorAnalysis(data, savedAt) {
   const grid = document.getElementById("sectorGrid");
   document.getElementById("sectorDisclaimer").textContent = data.disclaimer || "";
   const when = data.generated_at ? new Date(data.generated_at).toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" }) : "";
   document.getElementById("sectorUpdated").textContent = data.live
     ? `${data.statusLabel || ""} · cập nhật ${when}`
     : `${data.statusLabel || ""} · số liệu phiên ${fmtReportDate(data.asOf)}`;
+  let notice = fallbackNotice(savedAt, data.dataSource);
+  if (!savedAt && data.legacy) {
+    notice += `<div class="overview-stale">⚠️ Chưa lấy được giá — đang hiện bảng ngành dự phòng ngày ${fmtReportDate(data.asOf)}.</div>`;
+  }
 
   const views = data.views || {};
   const notes = views.tickerNotes || {};
@@ -594,7 +635,7 @@ function renderSectorAnalysis(data) {
     grid.innerHTML = '<div class="empty">Chưa có dữ liệu.</div>';
     return;
   }
-  grid.innerHTML = sectors
+  grid.innerHTML = (notice ? `<div class="sector-notice">${notice}</div>` : "") + sectors
     .map((s) => {
       const tickers = s.tickers || (s.leader ? [s.leader] : []);
       const chips = tickers
@@ -608,9 +649,9 @@ function renderSectorAnalysis(data) {
       return `<div class="sector-card">
         <div class="sector-head">
           <div class="sector-name">${escapeHtml(s.name)}</div>
-          <div class="sector-avg ${pctClass(s.avgChangePct)}">${fmtPct(s.avgChangePct)}</div>
+          ${s.avgChangePct != null ? `<div class="sector-avg ${pctClass(s.avgChangePct)}">${fmtPct(s.avgChangePct)}</div>` : ""}
         </div>
-        <div class="sector-outlook">${s.up}/${s.total} mã tăng${s.down ? `, ${s.down} mã giảm` : ""}</div>
+        <div class="sector-outlook">${s.total != null ? `${s.up}/${s.total} mã tăng${s.down ? `, ${s.down} mã giảm` : ""}` : escapeHtml(s.outlook || "")}</div>
         <div class="report-chips">${chips}</div>
         ${view ? `<div class="sector-view">📧 ${escapeHtml(view)}<span class="pick-source">Nguồn: ${escapeHtml(noteSource)}</span></div>` : ""}
         ${noteRows}
@@ -635,14 +676,14 @@ function renderSectorAnalysis(data) {
 // daily_analysis.json) — có thể có hoặc không cho từng ngày.
 let dailyReportData = { reports: [], analyses: [] };
 let dailyReportEntries = [];
+let dailyReportNotice = "";
 
 async function refreshDailyReports() {
   const box = document.getElementById("reportContent");
   try {
-    const res = await fetch("/api/daily-reports");
-    const json = await res.json();
-    if (!json.ok) throw new Error(json.error || "lỗi không xác định");
-    dailyReportData = json.data || { reports: [], analyses: [] };
+    const { data, savedAt } = await fetchWithFallback("reports", "/api/daily-reports");
+    dailyReportData = data || { reports: [], analyses: [] };
+    dailyReportNotice = fallbackNotice(savedAt, dailyReportData.dataSource);
     buildDailyReportEntries();
   } catch (e) {
     box.innerHTML = '<div class="empty">Chưa tải được báo cáo hàng ngày.</div>';
@@ -808,7 +849,7 @@ function renderDailyReport(key) {
   const box = document.getElementById("reportContent");
   const entry = dailyReportEntries.find((e) => e.key === key);
   if (!entry) return;
-  let html = entry.analyses.map(renderAnalysis).join("");
+  let html = dailyReportNotice + entry.analyses.map(renderAnalysis).join("");
   if (entry.afternoon) {
     // Báo cáo cuối phiên đã gồm tin nổi bật 24h, nên không lặp lại bản tin sáng tự động.
     html += renderAutoReport(entry.afternoon, { withMarket: true });

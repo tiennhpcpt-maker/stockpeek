@@ -662,7 +662,14 @@ def get_quotes(tickers):
         threading.Thread(target=_bg, daemon=True).start()
 
     if missing:
-        _fetch_and_cache_quotes(missing)
+        try:
+            _fetch_and_cache_quotes(missing)
+        except Exception:
+            # VPS lỗi: còn giá cũ (quá QUOTES_STALE_TTL) của mã nào thì trả giá đó,
+            # chỉ báo lỗi khi không có gì trong cache cho toàn bộ các mã được hỏi.
+            with _quotes_lock:
+                if not any(_quotes_cache.get(t, (None,))[0] for t in tickers):
+                    raise
 
     with _quotes_lock:
         return [_quotes_cache[t][0] for t in tickers
@@ -929,6 +936,23 @@ LIVE_SECTORS_CACHE_TTL = 30  # giây; giá bên dưới đã có cache riêng tr
 _live_sectors_cache = {"data": None, "ts": 0}
 
 
+_live_sectors_last_good = {}
+
+
+def _legacy_sector_snapshot():
+    """Dự phòng cuối cùng: sector_analysis.json cũ đi kèm bản deploy (workflow tạo
+    file này đã tắt từ 11/2026). Chỉ có câu mô tả, không có số liệu % theo ngành."""
+    try:
+        with open(os.path.join(BASE_DIR, "sector_analysis.json"), encoding="utf-8") as f:
+            old = json.load(f)
+    except Exception:
+        return None
+    sectors = [{"name": x.get("name"), "outlook": x.get("outlook", "")} for x in old.get("sectors", []) if x.get("name")]
+    if not sectors:
+        return None
+    return {"live": False, "asOf": str(old.get("generated_at", ""))[:10], "sectors": sectors, "legacy": True}
+
+
 def get_live_sectors():
     """Tab "Ngành": tính trực tiếp từ giá khớp lệnh (dùng chung cache của get_quotes).
     Trước giờ mở cửa VPS chưa có giá khớp (last = 0) → lấy bảng ngành của báo cáo
@@ -955,13 +979,22 @@ def get_live_sectors():
         result["live"] = True
         result["sectors"] = _sector_stats({q["ticker"]: q for q in quotes}, with_tickers=True)
     else:
-        prev = next((r for r in _load_report_list(DAILY_REPORTS_PATH)
-                     if r.get("session") == "afternoon" and r.get("market")), None)
-        if not prev:
-            raise RuntimeError("Chưa có giá khớp lệnh và chưa có báo cáo cuối phiên nào để hiển thị")
-        result["live"] = False
-        result["asOf"] = prev["date"]
-        result["sectors"] = prev["market"].get("sectors", [])
+        reports = _load_report_list(DAILY_REPORTS_PATH)
+        prev = (next((r for r in reports if r.get("session") == "afternoon" and (r.get("market") or {}).get("sectors")), None)
+                or next((r for r in reports if (r.get("market") or {}).get("sectors")), None))
+        if prev:
+            result["live"] = False
+            result["asOf"] = prev.get("market_from") or prev["date"]
+            result["sectors"] = prev["market"]["sectors"]
+        elif _live_sectors_last_good.get("sectors"):
+            result["live"] = False
+            result["asOf"] = _live_sectors_last_good["generated_at"][:10]
+            result["sectors"] = _live_sectors_last_good["sectors"]
+        else:
+            legacy = _legacy_sector_snapshot()
+            if not legacy:
+                raise RuntimeError("Chưa có giá khớp lệnh và chưa có dữ liệu ngành dự phòng nào")
+            result.update(legacy)
 
     analysis = _latest_analysis()
     if analysis:
@@ -975,6 +1008,9 @@ def get_live_sectors():
                 "items": analysis.get("sectors") or [],
                 "tickerNotes": notes,
             }
+    result["dataSource"] = _data_source(DAILY_REPORTS_PATH, DAILY_ANALYSIS_PATH)
+    if result.get("live"):
+        _live_sectors_last_good.update(generated_at=result["generated_at"], sectors=result["sectors"])
     _live_sectors_cache.update(data=result, ts=now)
     return result
 
@@ -1120,10 +1156,50 @@ def compute_daily_report(session, previous_reports=None):
     return report
 
 
-def _load_report_list(path):
-    data, _ = load_github_file(path, {"items": []})
+# Nguồn dữ liệu của lần đọc gần nhất: "github" | "memory" | "bundled" — web dùng để
+# báo "đang hiện dữ liệu dự phòng" thay vì để trống khi GitHub API lỗi.
+_report_last_good = {}
+_report_source = {}
+
+
+def _items_of(data):
     items = data.get("items") if isinstance(data, dict) else None
     return items if isinstance(items, list) else []
+
+
+def _load_report_list(path):
+    """Chỉ dùng để ĐỌC (ghi luôn đi qua update_github_file với force=True, không
+    bao giờ dùng bản dự phòng). Thứ tự dự phòng khi GitHub API lỗi (mạng, rate
+    limit, token GitHub App): bản đọc thành công gần nhất trong RAM → bản file đi
+    kèm code lúc deploy (repo public chứa sẵn daily_reports/daily_analysis.json)."""
+    try:
+        data, _ = load_github_file(path, {"items": []})
+        items = _items_of(data)
+        if items:
+            _report_last_good[path] = items
+            _report_source[path] = "github"
+            return items
+        # Rỗng/404 (repo đổi tên, cấu hình sai...) — 2 file này thực tế không bao giờ rỗng.
+        print(f"[report] {path} trên GitHub rỗng hoặc không tồn tại — thử dữ liệu dự phòng")
+    except Exception as e:
+        print(f"[report] Không đọc được {path} từ GitHub ({e}) — dùng dữ liệu dự phòng")
+    if path in _report_last_good:
+        _report_source[path] = "memory"
+        return _report_last_good[path]
+    try:
+        with open(os.path.join(BASE_DIR, path), encoding="utf-8") as f:
+            items = _items_of(json.load(f))
+        _report_source[path] = "bundled"
+        return items
+    except Exception:
+        _report_source[path] = "none"
+        return []
+
+
+def _data_source(*paths):
+    """'github' nếu mọi file đều đọc được từ GitHub, ngược lại trả nguồn dự phòng kém nhất."""
+    order = ["github", "memory", "bundled", "none"]
+    return max((_report_source.get(p, "github") for p in paths), key=order.index)
 
 
 def generate_daily_report(session):
@@ -1207,34 +1283,43 @@ def start_daily_report_scheduler():
 def load_daily_reports():
     reports = _load_report_list(DAILY_REPORTS_PATH)[:DAILY_REPORTS_API_LIMIT]
     analyses = _load_report_list(DAILY_ANALYSIS_PATH)[:DAILY_ANALYSIS_API_LIMIT]
-    return {"reports": reports, "analyses": analyses}
+    return {"reports": reports, "analyses": analyses,
+            "dataSource": _data_source(DAILY_REPORTS_PATH, DAILY_ANALYSIS_PATH)}
 
 
 MARKET_VIEW_MAX_AGE_DAYS = 4  # bản tin cũ hơn thế thì không coi là "nhận định hiện tại"
 
 
 def _latest_analysis():
-    """Bản tin Claude mới nhất (bản tin sáng/báo cáo tuần — phân tích doanh nghiệp
-    hay tổng kết tháng không phải nhận định thị trường chung)."""
+    """Bản tin Claude mới nhất, ưu tiên bản tin sáng/báo cáo tuần (phân tích doanh
+    nghiệp hay tổng kết tháng không phải nhận định thị trường chung); không có thì
+    lấy bài mới nhất loại bất kỳ. Không lọc theo tuổi — việc bài cũ được báo bằng
+    is_stale_analysis() để web cảnh báo, chứ không để trống."""
+    items = sorted(_load_report_list(DAILY_ANALYSIS_PATH),
+                   key=lambda a: (a.get("date", ""), a.get("generated_at", "")), reverse=True)
+    preferred = [a for a in items if a.get("kind") in (None, "bulletin", "weekly")]
+    return (preferred or items or [None])[0]
+
+
+def is_stale_analysis(a):
     cutoff = (datetime.now(VN_TZ) - timedelta(days=MARKET_VIEW_MAX_AGE_DAYS)).strftime("%Y-%m-%d")
-    items = [a for a in _load_report_list(DAILY_ANALYSIS_PATH)
-             if a.get("date", "") >= cutoff and a.get("kind") in (None, "bulletin", "weekly")]
-    items.sort(key=lambda a: (a.get("date", ""), a.get("generated_at", "")), reverse=True)
-    return items[0] if items else None
+    return bool(a) and a.get("date", "") < cutoff
 
 
 def get_market_view():
     """Tab "Thị trường": nhận định lấy từ bản tin Claude mới nhất (tổng hợp báo cáo
     các CTCK). Không có bản tin gần đây thì dùng tóm tắt báo cáo tự động gần nhất."""
-    out = {"analysis": None, "auto": None}
+    out = {"analysis": None, "auto": None, "stale": False}
     a = _latest_analysis()
     if a:
         out["analysis"] = {k: a.get(k) for k in (
             "date", "session", "kind", "generated_at", "title", "summary", "key_findings",
             "sections", "action_items", "sources", "origin", "disclaimer")}
+        out["stale"] = is_stale_analysis(a)
     r = next(iter(_load_report_list(DAILY_REPORTS_PATH)), None)
     if r:
         out["auto"] = {k: r.get(k) for k in ("date", "session", "generated_at", "title", "summary", "disclaimer")}
+    out["dataSource"] = _data_source(DAILY_REPORTS_PATH, DAILY_ANALYSIS_PATH)
     return out
 
 

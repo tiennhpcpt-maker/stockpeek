@@ -1022,3 +1022,4 @@ main {
 .sector-card .report-chips { margin: 8px 0 4px; }
 .report-chip.has-note { border-color: var(--accent); }
 .sector-view { font-size: 13px; margin-top: 8px; color: var(--text); }
+.sector-notice { grid-column: 1 / -1; }
