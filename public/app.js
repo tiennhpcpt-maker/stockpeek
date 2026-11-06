@@ -570,7 +570,7 @@ function renderMarketOverview(data, savedAt) {
       ${fallbackNotice(savedAt, data.dataSource)}
       ${stale}
       ${autoBlock}
-      <div class="overview-source">${(ANALYSIS_KIND[a.kind] || {}).badge || "📧 Bản tin"} · ${escapeHtml(a.title || "")}</div>
+      <div class="overview-source">${analysisKind(a).badge || "📧 Bản tin"} · ${escapeHtml(a.title || "")}</div>
       ${a.summary ? `<div class="overview-summary">${escapeHtml(a.summary)}</div>` : ""}
       ${list(a.key_findings) ? `<div class="overview-block"><div class="overview-block-title">Điểm chính</div><ul class="overview-list">${list(a.key_findings)}</ul></div>` : ""}
       ${(a.sections || [])
@@ -696,11 +696,22 @@ function fmtReportDate(d) {
 }
 
 const ANALYSIS_KIND = {
-  bulletin: { badge: "📧 Bản tin sáng", label: "Bản tin sáng" },
+  bulletin: { badge: "📧 Bản tin", label: "Bản tin" },
   weekly: { badge: "📅 Báo cáo tuần", label: "Báo cáo tuần" },
   monthly: { badge: "🗓️ Tổng kết tháng", label: "Tổng kết tháng" },
   company: { badge: "🏢 Phân tích doanh nghiệp", label: "Phân tích DN" },
 };
+
+// Nhãn theo loại bài; bản tin còn tách theo phiên gửi mail: trưa, chiều (bài cũ không có phiên = sáng).
+const BULLETIN_SESSION_NAME = { midday: "trưa", afternoon: "chiều" };
+function analysisKind(a) {
+  const base = ANALYSIS_KIND[a && a.kind] || {};
+  if (a && a.kind === "bulletin") {
+    const name = BULLETIN_SESSION_NAME[a.session] || "sáng";
+    return { badge: `📧 Bản tin ${name}`, label: `Bản tin ${name}` };
+  }
+  return base;
+}
 
 // Mỗi ngày là 1 mục: bản tin/bài phân tích Claude + báo cáo tự động 8:30 và 16:00.
 function buildDailyReportEntries() {
@@ -719,7 +730,7 @@ function buildDailyReportEntries() {
   const kindOrder = { bulletin: 0, weekly: 1, monthly: 2, company: 3 };
   for (const a of dailyReportData.analyses || []) getEntry(a.date).analyses.push(a);
   for (const e of byDate.values()) {
-    e.analyses.sort((x, y) => (kindOrder[x.kind] ?? 9) - (kindOrder[y.kind] ?? 9));
+    e.analyses.sort((x, y) => ((kindOrder[x.kind] ?? 9) - (kindOrder[y.kind] ?? 9)) || (y.generated_at || "").localeCompare(x.generated_at || ""));
   }
   const entries = [...byDate.values()].sort((a, b) => (a.date < b.date ? 1 : -1));
   dailyReportEntries = entries;
@@ -731,7 +742,7 @@ function buildDailyReportEntries() {
     return;
   }
   const entryLabel = (e) => {
-    const parts = [...new Set(e.analyses.map((a) => (ANALYSIS_KIND[a.kind] || {}).label || "Phân tích"))];
+    const parts = [...new Set(e.analyses.map((a) => analysisKind(a).label || "Phân tích"))];
     if (e.afternoon) parts.push("Cuối phiên");
     else if (e.morning) parts.push("Tin sáng");
     return parts.join(" + ");
@@ -814,7 +825,7 @@ function renderAnalysis(a) {
     .map((t) => `<div class="sector-pick"><span class="pick-ticker">${escapeHtml(t.ticker)}</span><span class="pick-reason">${escapeHtml(t.note || "")}</span></div>`)
     .join("");
   return `<div class="report-card report-ai">
-    <span class="ai-badge">${(ANALYSIS_KIND[a.kind] || {}).badge || "🤖 Phân tích của Claude"}</span>
+    <span class="ai-badge">${analysisKind(a).badge || "🤖 Phân tích của Claude"}</span>
     <h3>${escapeHtml(a.title || "Phân tích thị trường")}</h3>
     <div class="report-meta">${a.generated_at ? "Lập lúc " + new Date(a.generated_at).toLocaleString("vi-VN") : ""}${a.origin ? " · " + escapeHtml(a.origin) : ""}</div>
     ${a.summary ? `<div class="report-summary">${escapeHtml(a.summary)}</div>` : ""}

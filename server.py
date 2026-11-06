@@ -1291,7 +1291,7 @@ MARKET_VIEW_MAX_AGE_DAYS = 4  # bản tin cũ hơn thế thì không coi là "nh
 
 
 def _latest_analysis():
-    """Bản tin Claude mới nhất, ưu tiên bản tin sáng/báo cáo tuần (phân tích doanh
+    """Bản tin Claude mới nhất, ưu tiên bản tin (sáng/trưa/chiều)/báo cáo tuần (phân tích doanh
     nghiệp hay tổng kết tháng không phải nhận định thị trường chung); không có thì
     lấy bài mới nhất loại bất kỳ. Không lọc theo tuổi — việc bài cũ được báo bằng
     is_stale_analysis() để web cảnh báo, chứ không để trống."""

@@ -6,9 +6,9 @@ Dùng bởi scheduled task "stockpeek-phan-tich-ngay" trên máy cá nhân:
 File đầu vào là 1 object JSON:
 {
   "date": "2026-11-05",            # bắt buộc, YYYY-MM-DD giờ VN
-  "session": "morning|afternoon",  # tuỳ chọn
+  "session": "morning|midday|afternoon",  # tuỳ chọn; bản tin trưa = midday, chiều = afternoon
   "kind": "bulletin|weekly|monthly|company",  # tuỳ chọn, quyết định nhãn hiển thị
-  "origin": "Bản tin chứng khoán sáng (email)",  # tuỳ chọn, ghi nguồn gốc bài
+  "origin": "Bản tin chứng khoán trưa (email)",  # tuỳ chọn, ghi nguồn gốc bài
   "title": "...", "summary": "...",
   "key_findings": ["..."], "sections": [{"title": "...", "items": ["..."]}],
   "sectors": [{"name": "Ngân hàng", "view": "..."}],   # name phải thuộc SECTOR_NAMES bên dưới
@@ -51,8 +51,8 @@ def main():
 def add_entry(entry):
     if not isinstance(entry, dict) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(entry.get("date", ""))):
         sys.exit("Thiếu hoặc sai trường 'date' (YYYY-MM-DD)")
-    if entry.get("session") not in (None, "morning", "afternoon"):
-        sys.exit("'session' chỉ nhận morning hoặc afternoon")
+    if entry.get("session") not in (None, "morning", "midday", "afternoon"):
+        sys.exit("'session' chỉ nhận morning, midday hoặc afternoon")
     if entry.get("kind") not in (None, "bulletin", "weekly", "monthly", "company"):
         sys.exit("'kind' chỉ nhận bulletin, weekly, monthly hoặc company")
     for sec in entry.get("sections", []):
