@@ -1,6 +1,122 @@
 {
   "items": [
     {
+      "date": "2026-11-06",
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "generated_at": "2026-11-06T07:30:25+07:00",
+      "title": "Bản tin sáng 06/11: VN-Index tăng phiên thứ hai nhưng vẫn kẹt dưới MA10, khối ngoại bán ròng mạnh hơn",
+      "summary": "VN-Index tăng phiên thứ hai liên tiếp, +0,44% (+7,71 điểm) lên 1.740,73 điểm phiên 05/11, nhưng biên độ thu hẹp và thanh khoản HoSE giảm khoảng 9% còn hơn 15.800 tỷ đồng. Khối ngoại bán ròng gần 240 tỷ đồng (tập trung VCB, VHM, VPB), điểm sáng hiếm hoi là VIX được mua ròng mạnh nhất (~450 tỷ đồng). Chỉ số vẫn mắc kẹt giữa MA5 (~1.725) và MA10 (~1.745-1.747), kịch bản cơ sở là dao động 1.725-1.745 điểm. Ba mã nổi bật MSN, HPG, VIC được giữ nguyên từ bản tin 05/11, chưa chấm điểm lại.",
+      "key_findings": [
+        "VN-Index +0,44% lên 1.740,73 điểm (05/11), nối tiếp phiên +1,97% ngày 04/11 nhưng biên độ tăng thu hẹp.",
+        "Thanh khoản khớp lệnh HoSE hơn 15.800 tỷ đồng, giảm ~9% so với phiên 04/11 (~17.950 tỷ) - dòng tiền thận trọng gần kháng cự MA10.",
+        "Khối ngoại bán ròng gần 240 tỷ đồng (phiên trước chỉ 65-70 tỷ), xả VCB, VHM, VPB; VIX được mua ròng ~450 tỷ đồng.",
+        "Kỹ thuật: đóng cửa trên MA5 (~1.725) nhưng dưới MA10 (~1.745); cần vượt vùng này để xác nhận hồi phục.",
+        "DPM nâng kế hoạch LNST 2026 từ 680 tỷ lên 1.445 tỷ đồng (+112%); 9 tháng đạt 1.371 tỷ (+59% YoY, 95% KH mới)."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 06/11",
+          "items": [
+            "Tích cực: vượt và giữ vững trên 1.745-1.747 điểm (MA10); thanh khoản tăng trở lại từ 15.800 tỷ; khối ngoại giảm bán hoặc mua ròng trở lại.",
+            "Cơ sở (đang được nghiêng về): dao động 1.725-1.745 điểm giữa MA5 và MA10; thanh khoản 14.000-16.000 tỷ; khối ngoại bán ròng dưới 240 tỷ/phiên.",
+            "Tiêu cực: thủng MA5 (~1.725), lùi về dưới 1.700 điểm; bán tháo kèm thanh khoản bất thường; khối ngoại bán ròng trên 300 tỷ."
+          ]
+        },
+        {
+          "title": "Xu hướng các phiên gần đây",
+          "items": [
+            "02/11: 1.710,72 (-1,77%), GTGD 15.840 tỷ, khối ngoại bán ròng 523,4 tỷ.",
+            "03/11: 1.699,62 (-0,65%), ~12.600 tỷ, khối ngoại bán ròng ước >500 tỷ.",
+            "04/11: 1.733,02 (+1,97%), 17.950 tỷ, khối ngoại bán ròng nhẹ 65-70 tỷ.",
+            "05/11: 1.740,73 (+0,44%), 15.800 tỷ, khối ngoại bán ròng ~240 tỷ."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Tỷ giá trung tâm 05/11: 25.623 đồng/USD (-4 đồng).",
+            "Chính phủ yêu cầu đẩy nhanh giải ngân vốn chương trình mục tiêu quốc gia - đến 31/10 mới đạt ~1.439 tỷ (~8,73% kế hoạch); Bộ Tài chính hoàn thiện phương án vốn đầu tư công trung hạn 2026-2030 trước 15/11.",
+            "Chứng khoán Mỹ tăng mạnh phiên 04/11 sau bầu cử giữa kỳ: Dow Jones +3,03% (53.356,12), S&P 500 +1,58% (7.688,62), Nasdaq +1,44% (25.736,51).",
+            "Dầu Brent giảm 8,7% còn 94,62 USD/thùng (04/11); Kospi giảm hơn 5% phiên 05/11.",
+            "Bộ Công Thương hoàn thiện dự thảo Nghị định thay thế NĐ 83/2014 về kinh doanh xăng dầu, bỏ công bố giá cơ sở định kỳ; Quốc hội nghe tờ trình sửa Nghị quyết 107/2023/QH15 về thuế tối thiểu toàn cầu."
+          ]
+        },
+        {
+          "title": "Tin doanh nghiệp",
+          "items": [
+            "DPM: nâng KH LNST 2026 lên 1.445 tỷ đồng, doanh thu lên 19.000 tỷ đồng; 9 tháng LNST 1.371 tỷ (+59% YoY).",
+            "VND: ĐHCĐ bất thường 2026, chốt quyền tham dự 25/11/2026.",
+            "PVT: TCBS khuyến nghị Nắm giữ - Q3 doanh thu 5.610 tỷ (+26,9% YoY), LNTT 613 tỷ (+40,6% YoY, -29,2% QoQ do 3 tàu dầu thô bảo trì định kỳ); P/E 7,1x, P/B 1,1x thấp hơn ngành.",
+            "TCBS công bố báo cáo mới 05/11: cập nhật ngành Chứng khoán Q3/2026, PVD, VCG."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Ngân hàng",
+          "view": "Nhóm ngân hàng chịu áp lực bán của khối ngoại phiên 05/11, tập trung VCB và VPB; ở chiều ngược lại HDB có nền KQKD tốt với LNTT 9 tháng 18.379 tỷ đồng (+24,2% YoY), ROE 22,8%."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "Bất động sản bị khối ngoại xả mạnh (VHM nằm trong nhóm bán ròng lớn nhất phiên 05/11); VHM -8,84%/1 tháng tính đến 03/11, VIC dù KQKD đột biến (LNST gấp 7,5 lần YoY) nhưng đà giá tuần đã chuyển âm (-2,90%)."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "Điểm sáng dòng tiền ngoại phiên 05/11 thuộc về nhóm chứng khoán khi VIX được mua ròng mạnh nhất thị trường (~450 tỷ đồng); SSI tăng +3,29%/1 tuần (đến 04/11) nhưng khối ngoại bán ròng 205,71 tỷ/10 phiên, VND sắp họp ĐHCĐ bất thường (chốt quyền 25/11)."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG giữ vị trí trong top mã nổi bật nhờ KQKD Q3 vượt trội (LNST +106% YoY), giá quanh 20.500đ (03/11) với hỗ trợ 20.000đ; dòng tiền ngoại dương nhưng không đều."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "Giá dầu Brent giảm 8,7% còn 94,62 USD/thùng (04/11) là yếu tố bất lợi ngắn hạn cho ngành; PVT được TCBS khuyến nghị Nắm giữ với Q3 LNTT +40,6% YoY và P/E 7,1x thấp hơn ngành, trong khi dự thảo nghị định mới về kinh doanh xăng dầu đang hoàn thiện."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN là mã dẫn đầu bảng chấm điểm (5 điểm) với dòng tiền ngoại mạnh nhất nhóm theo dõi tính đến 03/11 (8/10 phiên mua ròng, +669,75 tỷ/10 phiên) và KQKD 9 tháng ước gấp 1,5 lần cả năm 2025."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "MSN",
+          "note": "5 điểm (giữ nguyên từ 05/11) - 69.400đ (03/11); khối ngoại mua ròng 8/10 phiên (+669,75 tỷ), KQKD 9 tháng ước gấp 1,5 lần năm 2025. Theo dõi trên 65.000-67.000đ; dừng nếu thủng 65.000đ hoặc khối ngoại đảo chiều bán mạnh."
+        },
+        {
+          "ticker": "HPG",
+          "note": "4 điểm - 20.500đ (03/11); LNST Q3 +106% YoY, dòng tiền ngoại dương không đều. Hỗ trợ quanh 20.000đ."
+        },
+        {
+          "ticker": "VIC",
+          "note": "3,5 điểm - 234.000đ (04/11); LNST gấp 7,5 lần YoY, 9 tháng vượt 25% KH nhưng giá -2,90%/1 tuần. Vùng theo dõi 225.000-240.000đ; giảm ưu tiên nếu dưới 225.000đ."
+        },
+        {
+          "ticker": "VIX",
+          "note": "Mới - khối ngoại mua ròng ~450 tỷ đồng phiên 05/11, mạnh nhất thị trường; cần xác nhận thêm 1-2 phiên để loại trừ giao dịch thỏa thuận đơn lẻ."
+        },
+        {
+          "ticker": "PVT",
+          "note": "TCBS khuyến nghị Nắm giữ - 21.000đ (04/11); Q3 LNTT 613 tỷ (+40,6% YoY), sụt QoQ do bảo trì tàu mang tính tạm thời; chờ nhịp giảm của thị trường để giải ngân."
+        },
+        {
+          "ticker": "DPM",
+          "note": "Nâng KH LNST 2026 lên 1.445 tỷ (+112%), 9 tháng đã đạt 95% KH mới."
+        }
+      ],
+      "action_items": [
+        "MSN/HPG/VIC: giữ trạng thái theo dõi, chưa giải ngân thêm cho đến khi dữ liệu dòng tiền khối ngoại và đà giá phiên 05-06/11 được xác nhận lại.",
+        "VIX: theo dõi sát 1-2 phiên để xác nhận dòng tiền ngoại bền vững trước khi đưa vào danh sách ứng viên chính thức.",
+        "Hạn chế tăng tỷ trọng VCB, VHM, VPB cho đến khi VN-Index vượt và giữ vững trên 1.745-1.747 điểm kèm thanh khoản cải thiện."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư (05/11, 04/11)",
+        "Bản tin sáng 04-05/11"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
       "date": "2026-11-05",
       "session": "morning",
       "generated_at": "2026-11-05T07:38:18+07:00",
