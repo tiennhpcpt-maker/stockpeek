@@ -2,6 +2,325 @@
   "items": [
     {
       "date": "2026-11-06",
+      "session": "afternoon",
+      "generated_at": "2026-11-06T16:00:21+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "Dòng tiền ngoại đảo chiều mua ròng 378 tỷ, một cổ phiếu BĐS được săn đón",
+          "link": "https://24hmoney.vn/news/dong-tien-ngoai-dao-chieu-mua-rong-378-ty-mot-co-phieu-bds-duoc-san-don-c1a2855243.html",
+          "pubDate": "Fri, 06 Nov 2026 15:24:26 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney"
+          ]
+        },
+        {
+          "title": "Con gái Chủ tịch PNJ bị bán giải chấp thêm 2.3 triệu cổ phiếu, thị giá PNJ về đáy mới",
+          "link": "https://24hmoney.vn/news/con-gai-chu-tich-pnj-bi-ban-giai-chap-them-23-trieu-co-phieu-thi-gia-pnj-ve-day-moi-c1a2855158.html",
+          "pubDate": "Fri, 06 Nov 2026 13:20:28 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Quỹ ngoại quản lý gần 800 triệu Euro lỗ gần 15% từ đầu năm 2026",
+          "link": "http://vietstock.vn/2026/11/quy-ngoai-quan-ly-gan-800-trieu-euro-lo-gan-15-tu-dau-nam-2026-3358-1512366.htm",
+          "pubDate": "Fri, 06 Nov 2026 13:10:48 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Góc nhìn 06/11: Áp lực bán gia tăng?",
+          "link": "http://vietstock.vn/2026/11/goc-nhin-0611-ap-luc-ban-gia-tang-145-1512119.htm",
+          "pubDate": "Thu, 05 Nov 2026 19:31:29 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Blog chứng khoán: Lịch sử có lặp lại?",
+          "link": "https://vneconomy.vn/blog-chung-khoan-lich-su-co-lap-lai.htm",
+          "pubDate": "Thu, 05 Nov 2026 09:47:36 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "TCB Quý III/2026: Hai gang màu trái chiều",
+          "link": "https://24hmoney.vn/news/tcb-quy-iii-2026-hai-gang-mau-trai-chieu-c30a2855238.html",
+          "pubDate": "Fri, 06 Nov 2026 15:49:26 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "24hMoney"
+          ]
+        },
+        {
+          "title": "Thanh khoản cải thiện trong nhóm blue-chips, đà phục hồi vẫn yếu ớt",
+          "link": "https://vneconomy.vn/thanh-khoan-cai-thien-trong-nhom-blue-chips-da-phuc-hoi-van-yeu-ot.htm",
+          "pubDate": "Fri, 06 Nov 2026 08:39:19 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "Chuẩn bị cho biến động thị trường bằng tư duy quản trị bền vững",
+          "link": "https://stockbiz.vn/tin-tuc/chuan-bi-cho-bien-dong-thi-truong-bang-tu-duy-quan-tri-ben-vung/42682835",
+          "pubDate": "Fri, 06 Nov 2026 08:14:00 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "Stockbiz Thị trường"
+          ]
+        }
+      ],
+      "mentioned_tickers": [
+        {
+          "ticker": "PNJ",
+          "count": 1
+        },
+        {
+          "ticker": "TCB",
+          "count": 1
+        }
+      ],
+      "title": "Báo cáo cuối phiên 06/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1725.36,
+            "change": -15.37,
+            "changePct": -0.88,
+            "tradingValue": 18799.44,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1846.39,
+            "change": -18.84,
+            "changePct": -1.01,
+            "tradingValue": 9153.72,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 256.73,
+            "change": 0.12,
+            "changePct": 0.05,
+            "tradingValue": 1135.81,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 121.75,
+            "change": -0.73,
+            "changePct": -0.6,
+            "tradingValue": 472.82,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": 1.22,
+            "up": 4,
+            "down": 1,
+            "total": 6,
+            "leader": {
+              "ticker": "VND",
+              "changePct": 5.28
+            }
+          },
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": 1.18,
+            "up": 3,
+            "down": 0,
+            "total": 3,
+            "leader": {
+              "ticker": "MSN",
+              "changePct": 1.96
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.38,
+            "up": 3,
+            "down": 5,
+            "total": 8,
+            "leader": {
+              "ticker": "STB",
+              "changePct": 1.16
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -0.43,
+            "up": 2,
+            "down": 4,
+            "total": 6,
+            "leader": {
+              "ticker": "DXG",
+              "changePct": 2.33
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": -0.98,
+            "up": 0,
+            "down": 4,
+            "total": 4,
+            "leader": {
+              "ticker": "BCM",
+              "changePct": -0.13
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": -1.05,
+            "up": 0,
+            "down": 4,
+            "total": 4,
+            "leader": {
+              "ticker": "GAS",
+              "changePct": -0.67
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -1.38,
+            "up": 0,
+            "down": 4,
+            "total": 4,
+            "leader": {
+              "ticker": "PNJ",
+              "changePct": -0.66
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": -1.85,
+            "up": 0,
+            "down": 3,
+            "total": 3,
+            "leader": {
+              "ticker": "HSG",
+              "changePct": -1.36
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "VND",
+              "last": 14950,
+              "changePct": 5.28,
+              "volume": 4045800
+            },
+            {
+              "ticker": "DXG",
+              "last": 11000,
+              "changePct": 2.33,
+              "volume": 3162740
+            },
+            {
+              "ticker": "MSN",
+              "last": 73000,
+              "changePct": 1.96,
+              "volume": 638810
+            },
+            {
+              "ticker": "VIX",
+              "last": 13350,
+              "changePct": 1.91,
+              "volume": 9387810
+            },
+            {
+              "ticker": "PDR",
+              "last": 11750,
+              "changePct": 1.73,
+              "volume": 732540
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "NKG",
+              "last": 12150,
+              "changePct": -2.8,
+              "volume": 781580
+            },
+            {
+              "ticker": "DGW",
+              "last": 38500,
+              "changePct": -2.41,
+              "volume": 106730
+            },
+            {
+              "ticker": "SZC",
+              "last": 20350,
+              "changePct": -1.93,
+              "volume": 126370
+            },
+            {
+              "ticker": "VHM",
+              "last": 62100,
+              "changePct": -1.9,
+              "volume": 519210
+            },
+            {
+              "ticker": "HCM",
+              "last": 23550,
+              "changePct": -1.87,
+              "volume": 525440
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 13350,
+              "changePct": 1.91,
+              "volume": 9387810
+            },
+            {
+              "ticker": "VND",
+              "last": 14950,
+              "changePct": 5.28,
+              "volume": 4045800
+            },
+            {
+              "ticker": "DXG",
+              "last": 11000,
+              "changePct": 2.33,
+              "volume": 3162740
+            },
+            {
+              "ticker": "SSI",
+              "last": 20400,
+              "changePct": 0.0,
+              "volume": 3115840
+            },
+            {
+              "ticker": "NVL",
+              "last": 10300,
+              "changePct": -1.44,
+              "volume": 2859240
+            }
+          ]
+        },
+        "summary": "VN-Index giảm 15,37 điểm (-0,88%) phiên 06/11, đạt 1.725,36 điểm, giá trị giao dịch 18.799,44 tỷ đồng. Nhóm ngành mạnh nhất: Chứng khoán (bình quân 1,22%, 4/6 mã tăng); yếu nhất: Thép (-1,85%). Tăng mạnh: VND (+5,28%), DXG (+2,33%), MSN (+1,96%). Giảm mạnh: NKG (-2,80%), DGW (-2,41%), SZC (-1,93%)."
+      },
+      "summary": "VN-Index giảm 15,37 điểm (-0,88%) phiên 06/11, đạt 1.725,36 điểm, giá trị giao dịch 18.799,44 tỷ đồng. Nhóm ngành mạnh nhất: Chứng khoán (bình quân 1,22%, 4/6 mã tăng); yếu nhất: Thép (-1,85%). Tăng mạnh: VND (+5,28%), DXG (+2,33%), MSN (+1,96%). Giảm mạnh: NKG (-2,80%), DGW (-2,41%), SZC (-1,93%). Tin được nhiều nguồn đưa nhất: \"Dòng tiền ngoại đảo chiều mua ròng 378 tỷ, một cổ phiếu BĐS được săn đón\" (2 nguồn)."
+    },
+    {
+      "date": "2026-11-06",
       "session": "morning",
       "generated_at": "2026-11-06T08:35:01+07:00",
       "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
