@@ -1,6 +1,6 @@
 ---
 name: deploy
-description: Đưa thay đổi code của stockPeek (thư mục /Users/nguyenhuutien/Desktop/stock-peek) lên production tại stockpeek.onrender.com — commit, push lên GitHub, bấm Manual Deploy trên Render, rồi xác nhận đã lên production thật. Dùng skill này bất cứ khi nào người dùng nói "deploy", "đưa lên production", "push lên Render", "cập nhật trang live", "lên bản mới", hoặc sau khi vừa sửa xong code stockPeek và có vẻ muốn thấy thay đổi trên trang thật — kể cả khi họ chỉ nói ngắn gọn "làm luôn" hay "lên đi" sau một thay đổi code. Không dùng cho việc chỉ sửa code mà chưa muốn public.
+description: Đưa thay đổi code của stockPeek (thư mục /Users/nguyenhuutien/Desktop/Các dự án claude/stock-peek) lên production tại stockpeek.onrender.com — commit, push lên GitHub, bấm Manual Deploy trên Render, rồi xác nhận đã lên production thật. Dùng skill này bất cứ khi nào người dùng nói "deploy", "đưa lên production", "push lên Render", "cập nhật trang live", "lên bản mới", hoặc sau khi vừa sửa xong code stockPeek và có vẻ muốn thấy thay đổi trên trang thật — kể cả khi họ chỉ nói ngắn gọn "làm luôn" hay "lên đi" sau một thay đổi code. Không dùng cho việc chỉ sửa code mà chưa muốn public.
 ---
 
 # Deploy stockPeek lên production
@@ -19,7 +19,7 @@ Quy trình này có nhiều bước con người dễ quên hoặc làm sai th�
 ### 1. Kiểm tra có gì để deploy không
 
 ```bash
-cd /Users/nguyenhuutien/Desktop/stock-peek && git status --short
+cd "/Users/nguyenhuutien/Desktop/Các dự án claude/stock-peek" && git status --short
 ```
 
 Nếu working tree sạch VÀ không có commit nào ở local chưa push (`git log origin/main..HEAD --oneline` rỗng) — nghĩa là không có gì mới để deploy. Báo lại cho người dùng thay vì bấm Manual Deploy vô ích.

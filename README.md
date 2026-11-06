@@ -20,7 +20,7 @@ Render có gói **Free** cho web service, không tốn tiền, nhưng sẽ "ng�
 3. Trong thư mục dự án này, chạy (thay `<your-username>` bằng tên GitHub của bạn):
 
 ```bash
-cd ~/Desktop/stock-peek
+cd ~/"Desktop/Các dự án claude/stock-peek"
 git init
 git add .
 git commit -m "stockPeek: xem giá CK + tin tức"
