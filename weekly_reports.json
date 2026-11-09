@@ -1,0 +1,1778 @@
+{
+  "items": [
+    {
+      "schema_version": 1,
+      "week_id": "2026-W45",
+      "period": {
+        "from": "2026-11-02",
+        "to": "2026-11-06",
+        "label": "02-06/11/2026"
+      },
+      "generated_at": "2026-11-09T09:00:00+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức, không phải khuyến nghị đầu tư. Số liệu lấy từ báo chí, có chỗ các nguồn lệch nhau (xem data_quality).",
+      "summary": {
+        "headline": "VN-Index giảm 0,93% còn 1.725,36 điểm, tuần giảm thứ hai liên tiếp; khối ngoại đảo chiều mua ròng phiên 6/11.",
+        "vnindex_close": 1725.36,
+        "vnindex_week_change": -16.26,
+        "vnindex_week_pct": -0.93,
+        "prev_week_close": 1741.62,
+        "foreign_net_week_bn": {
+          "hose": -869.03,
+          "all_markets": -810.5
+        },
+        "support": "1.700-1.730 (mất 1.700 có thể về ~1.680)",
+        "resistance": "1.750-1.780"
+      },
+      "days": [
+        {
+          "date": "2026-11-02",
+          "weekday": "Thứ Hai",
+          "vnindex": {
+            "close": 1710.72,
+            "change": -30.9,
+            "pct": -1.77,
+            "derived": true
+          },
+          "vn30": {
+            "close": 1813.41,
+            "derived": true
+          },
+          "hnx": {
+            "close": 250.55,
+            "derived": true
+          },
+          "upcom": {
+            "close": 121.95,
+            "derived": true
+          },
+          "liquidity_hose_bn": 15900,
+          "liquidity_note": "khoảng, báo chỉ nêu số làm tròn",
+          "foreign_hose_bn": -524.41,
+          "foreign_all_bn": -453,
+          "top_foreign_buy": [
+            "MSN ~90",
+            "VIX >40",
+            "PNJ ~29",
+            "BVH ~25",
+            "TCH ~25"
+          ],
+          "top_foreign_sell": [
+            "MBB ~182",
+            "VCB ~155",
+            "ACB >118",
+            "STB ~106",
+            "FPT ~86"
+          ],
+          "sectors_up": [],
+          "sectors_down": [],
+          "notable": [
+            "Bốn cổ phiếu ngân hàng bị khối ngoại bán ròng ~560 tỷ"
+          ],
+          "levels": null,
+          "tag": "Giảm mạnh"
+        },
+        {
+          "date": "2026-11-03",
+          "weekday": "Thứ Ba",
+          "vnindex": {
+            "close": 1699.62,
+            "change": -11.1,
+            "pct": -0.65
+          },
+          "vn30": {
+            "close": 1815.6
+          },
+          "hnx": {
+            "close": 251.42
+          },
+          "upcom": {
+            "close": 122.05
+          },
+          "liquidity_hose_bn": 12939,
+          "foreign_hose_bn": -502.18,
+          "foreign_all_bn": null,
+          "top_foreign_buy": [
+            "HPG +227",
+            "SHB +125",
+            "VHM +119"
+          ],
+          "top_foreign_sell": [
+            "MBB -255",
+            "VCB -219",
+            "VIC -114"
+          ],
+          "sectors_up": [
+            "Thép",
+            "Cao su",
+            "Nhựa"
+          ],
+          "sectors_down": [
+            "Bảo hiểm",
+            "Bất động sản",
+            "Dầu khí"
+          ],
+          "notable": [
+            "HPG +4,2%",
+            "OCB +4,4%",
+            "HSG ~+4%",
+            "VIC -3,31% (kéo ~12 điểm)",
+            "VPB -1,6%"
+          ],
+          "levels": {
+            "support": "1.700 (đóng cửa dưới mốc)",
+            "resistance": null
+          },
+          "tag": "Thủng 1.700"
+        },
+        {
+          "date": "2026-11-04",
+          "weekday": "Thứ Tư",
+          "vnindex": {
+            "close": 1733.02,
+            "change": 33.4,
+            "pct": 1.97
+          },
+          "vn30": {
+            "close": 1862.07
+          },
+          "hnx": {
+            "close": 257.88
+          },
+          "upcom": {
+            "close": 122.61
+          },
+          "liquidity_hose_bn": 17954,
+          "liquidity_note": "một nguồn ghi 17.464",
+          "foreign_hose_bn": -65.47,
+          "foreign_all_bn": -70.2,
+          "top_foreign_buy": [
+            "FPT +183",
+            "MSN +175",
+            "CTG +82"
+          ],
+          "top_foreign_sell": [
+            "MBB -198",
+            "ACB -93",
+            "BSR -83"
+          ],
+          "sectors_up": [
+            "Chứng khoán (+5,97%)",
+            "Phần mềm & dịch vụ (+6,78%)",
+            "Tín dụng (+2,50%)",
+            "Vận tải (+2,42%)"
+          ],
+          "sectors_down": [
+            "Phần cứng & thiết bị (-0,93%)",
+            "Thương mại hàng thiết yếu (-0,59%)"
+          ],
+          "notable": [
+            "FPT, VIX, VND, VCI, TCX, CTS kịch trần",
+            "SSI +6,5%",
+            "Đóng góp điểm: VCB +2,27, VHM +2,23, VPB +2,03"
+          ],
+          "levels": {
+            "support": "~1.700",
+            "resistance": "~1.750"
+          },
+          "tag": "Bứt phá +33 điểm"
+        },
+        {
+          "date": "2026-11-05",
+          "weekday": "Thứ Năm",
+          "vnindex": {
+            "close": 1740.73,
+            "change": 7.71,
+            "pct": 0.44
+          },
+          "vn30": null,
+          "hnx": {
+            "close": 256.61
+          },
+          "upcom": {
+            "close": 122.48
+          },
+          "liquidity_hose_bn": 15830,
+          "foreign_hose_bn": -170.56,
+          "foreign_all_bn": null,
+          "top_foreign_buy": [
+            "VIX +452 (có nguồn ghi, chưa đối chiếu được)",
+            "CTG +101"
+          ],
+          "top_foreign_sell": [],
+          "sectors_up": [
+            "Bất động sản (+1,21%)",
+            "Tiêu dùng không thiết yếu (+0,89%)",
+            "Truyền thông (+0,69%)"
+          ],
+          "sectors_down": [
+            "CNTT (-1,81%)",
+            "Điện-nước-khí đốt",
+            "Thực phẩm & đồ uống"
+          ],
+          "notable": [
+            "VIC +1,71% (đóng góp ~6,5 điểm)",
+            "STB +2,22%",
+            "FPT -1,86%",
+            "Chứng khoán chốt lời: ORS -2,03%, BSI -1,70%"
+          ],
+          "levels": {
+            "support": "1.700",
+            "resistance": "1.780-1.800"
+          },
+          "tag": "Hồi phục, rung lắc chiều"
+        },
+        {
+          "date": "2026-11-06",
+          "weekday": "Thứ Sáu",
+          "vnindex": {
+            "close": 1725.36,
+            "change": -15.37,
+            "pct": -0.88
+          },
+          "vn30": {
+            "close": 1846.39
+          },
+          "hnx": {
+            "close": 256.73
+          },
+          "upcom": {
+            "close": 121.75
+          },
+          "liquidity_hose_bn": 18799,
+          "foreign_hose_bn": 393.59,
+          "foreign_all_bn": 436,
+          "top_foreign_buy": [
+            "KDH ~171",
+            "VND ~99",
+            "VIX ~93",
+            "MSN ~86",
+            "VIC ~75"
+          ],
+          "top_foreign_sell": [
+            "FPT ~151",
+            "VCB ~111",
+            "MBB ~44",
+            "MCH ~42",
+            "BSR ~33"
+          ],
+          "sectors_up": [
+            "Dịch vụ tài chính",
+            "Truyền thông (theo một nguồn)"
+          ],
+          "sectors_down": [
+            "CNTT (-3,66%)",
+            "Hóa chất",
+            "Bất động sản",
+            "Thép",
+            "Bán lẻ (~-1,3%)"
+          ],
+          "notable": [
+            "VND +5,3%",
+            "KDH +5,2%",
+            "FPT -3,97% còn 50.800đ",
+            "VIC, VHM kéo giảm ~8 điểm",
+            "Chấm dứt chuỗi 10 phiên khối ngoại bán ròng"
+          ],
+          "levels": {
+            "support": "1.700-1.730",
+            "resistance": "1.750-1.780"
+          },
+          "tag": "Đảo chiều giảm, ngoại mua ròng"
+        }
+      ],
+      "sector_flows": [
+        {
+          "sector": "Chứng khoán",
+          "status": "Hút tiền",
+          "signal": 1,
+          "tickers": [
+            "VND",
+            "VIX",
+            "SSI",
+            "SHS",
+            "CTS"
+          ],
+          "evidence": "Ngành +5,97% (4/11); khối ngoại mua VIX, VND (5-6/11); chốt lời nhẹ 5/11",
+          "outlook": "Có thể còn hút tiền ngắn hạn nhưng biên độ lớn, cần xác nhận thêm vài phiên"
+        },
+        {
+          "sector": "Bất động sản",
+          "status": "Phân hóa",
+          "signal": 0,
+          "tickers": [
+            "KDH",
+            "TCH",
+            "NLG",
+            "DXG",
+            "VIC",
+            "VHM"
+          ],
+          "evidence": "Midcap được mua (KDH +5,2%, ngoại mua ~171 tỷ 6/11); Vingroup biến động mạnh (VIC -3,31% 3/11, +1,71% 5/11, -1,47% 6/11)",
+          "outlook": "Dòng tiền chọn lọc, Vingroup tiếp tục quyết định điểm số chỉ số"
+        },
+        {
+          "sector": "Ngân hàng",
+          "status": "Phân hóa",
+          "signal": 0,
+          "tickers": [
+            "CTG",
+            "STB",
+            "VPB",
+            "VCB",
+            "MBB",
+            "ACB"
+          ],
+          "evidence": "Giá bật mạnh 4/11 nhưng khối ngoại bán ròng cả tuần MBB 653 tỷ, VCB 588 tỷ, ACB 315 tỷ",
+          "outlook": "Giữ vai trò trụ nhưng chịu áp lực bán ngoại"
+        },
+        {
+          "sector": "CNTT",
+          "status": "Xả tiền",
+          "signal": -1,
+          "tickers": [
+            "FPT",
+            "CMG",
+            "ELC"
+          ],
+          "evidence": "FPT trần 4/11 rồi -1,86% (5/11), -3,97% (6/11); ngành -3,66% ngày 6/11; ngoại bán FPT ~151 tỷ",
+          "outlook": "Áp lực có thể còn; cơ bản KQKD tốt là điểm tựa trung hạn"
+        },
+        {
+          "sector": "Thép - Vật liệu",
+          "status": "Đảo chiều yếu",
+          "signal": -1,
+          "tickers": [
+            "HPG",
+            "HSG",
+            "NKG",
+            "GVR"
+          ],
+          "evidence": "Tăng 3/11 (HPG +4,2%, ngoại mua HPG 227 tỷ) nhưng yếu lại 6/11 (HPG -1,4%, GVR -2,8%)",
+          "outlook": "Chưa có tín hiệu duy trì"
+        },
+        {
+          "sector": "Dầu khí",
+          "status": "Yếu",
+          "signal": -1,
+          "tickers": [
+            "BSR",
+            "PLX",
+            "GAS"
+          ],
+          "evidence": "Nằm trong nhóm giảm 3/11; BSR bị ngoại bán 4/11 và 6/11; ngành ~-0,75% (6/11)",
+          "outlook": "Chưa có tín hiệu đảo chiều"
+        }
+      ],
+      "watchlist": [
+        {
+          "ticker": "KDH",
+          "sector": "Bất động sản",
+          "signal": "THEO DÕI",
+          "reason": "Ngoại mua ròng nhiều nhất 6/11; BSC mục tiêu 16.400",
+          "week_pct": 8.63
+        },
+        {
+          "ticker": "TCH",
+          "sector": "Bất động sản",
+          "signal": "THEO DÕI",
+          "reason": "SHS tăng tỷ trọng, mục tiêu 16.100",
+          "week_pct": 13.92
+        },
+        {
+          "ticker": "CTG",
+          "sector": "Ngân hàng",
+          "signal": "THEO DÕI",
+          "reason": "TCBS đánh giá hấp dẫn; ngoại mua 4/11 và 5/11",
+          "week_pct": 5.12
+        },
+        {
+          "ticker": "CTD",
+          "sector": "Xây dựng",
+          "signal": "THEO DÕI",
+          "reason": "VCBS Mua, giá hợp lý 79.761",
+          "week_pct": 6.72
+        },
+        {
+          "ticker": "VND",
+          "sector": "Chứng khoán",
+          "signal": "THEO DÕI",
+          "reason": "+5,3% ngày 6/11, ngoại mua ~99 tỷ; biến động mạnh",
+          "week_pct": null
+        },
+        {
+          "ticker": "FPT",
+          "sector": "CNTT",
+          "signal": "RỦI RO NGẮN HẠN",
+          "reason": "Bị ngoại bán ròng lớn nhất ngày 6/11; cơ bản vẫn tốt",
+          "week_pct": null
+        },
+        {
+          "ticker": "VCB",
+          "sector": "Ngân hàng",
+          "signal": "RỦI RO NGẮN HẠN",
+          "reason": "Ngoại bán ròng 588 tỷ cả tuần; AGR vẫn khuyến nghị Mua",
+          "week_pct": -4.8
+        },
+        {
+          "ticker": "TNH",
+          "sector": "Khác",
+          "signal": "RỦI RO",
+          "reason": "Giảm sâu nhất tuần -15,67%",
+          "week_pct": -15.67
+        },
+        {
+          "ticker": "TAL",
+          "sector": "Khác",
+          "signal": "ĐẦU CƠ",
+          "reason": "Tăng mạnh nhất tuần +13,51%, quá mua kỹ thuật",
+          "week_pct": 13.51
+        }
+      ],
+      "outlook": {
+        "base_case": "SSI cho rằng VN-Index có thể tạo đáy ngắn hạn trong tháng 11 (lãi suất hạ nhiệt, định giá hấp dẫn, yếu tố mùa vụ).",
+        "risks": [
+          "Khối ngoại bán ròng lũy kế 10 tháng ~119.100 tỷ",
+          "Lợi nhuận quý IV có thể tăng chậm",
+          "Mất 1.700 có thể về ~1.680"
+        ],
+        "actions": [
+          "Theo dõi vùng hỗ trợ 1.700-1.730",
+          "Chờ khối ngoại mua ròng thêm vài phiên trước khi coi là đảo chiều",
+          "Kiểm tra giá thực tế trên bảng giá trước khi quyết định"
+        ]
+      },
+      "data_quality": [
+        "Số liệu 2/11 (VN-Index, VN30, HNX, UPCoM) được suy ra từ số các phiên sau, không phải số công bố trực tiếp (derived=true)",
+        "Khối ngoại HOSE 5/11: -170,56 tỷ (tổng kết tuần Tin nhanh) so với -239 (Công Luận) và -225 (Vietstock)",
+        "Thanh khoản HOSE 4/11: 17.954 tỷ (Thời báo Tài chính) so với 17.464 tỷ (VietnamPlus)",
+        "Độ rộng thị trường 4/11 và 3/11 các nguồn lệch nhau nên không đưa vào",
+        "Khối ngoại 6/11 toàn thị trường: 435-436 tỷ (đa số) so với 370-500 tỷ ở một số nguồn",
+        "Tổng khối ngoại HOSE cả tuần -869,03 tỷ (Tin nhanh) khớp tổng 5 phiên; ACBS ghi -965 tỷ"
+      ],
+      "sources": [
+        "Tinnhanhchungkhoan",
+        "Vietstock",
+        "Thời báo Tài chính VN",
+        "CafeF",
+        "VietnamPlus",
+        "Thương Trường",
+        "Công Luận",
+        "Dân trí",
+        "Diễn đàn Doanh nghiệp"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "week_id": "2026-W44",
+      "partial": true,
+      "period": {
+        "from": "2026-10-26",
+        "to": "2026-10-30",
+        "label": "26-30/10/2026"
+      },
+      "generated_at": "2026-10-30T17:00:00+07:00",
+      "disclaimer": "Day la tong hop thong tin tham khao tu tin tuc, khong phai khuyen nghi dau tu.",
+      "summary": {
+        "headline": "VN-Index tuan 26-30/10/2026 giam 32,53 diem (-1,83%) ve 1.741,62 diem, dut mach phuc hoi +4% tuan truoc; khoi ngoai ban rong ~2.600 ty, noi dai chuoi 6 tuan lien tiep.",
+        "vnindex_close": 1741.62,
+        "vnindex_week_pct": -1.83,
+        "foreign_net_week_bn": {
+          "hose": null,
+          "all_markets": -2600
+        },
+        "prev_week_close": 1774.15,
+        "vnindex_week_change": -32.53
+      },
+      "days": [],
+      "sector_flows": [
+        {
+          "sector": "Nang luong (Dau khi - Tien ich)",
+          "status": "Tich cuc (diem sang hiem hoi)",
+          "signal": 1,
+          "tickers": [
+            "GAS",
+            "KOS"
+          ],
+          "evidence": "GAS +2,63% phien 30/10; KOS +6,84% phien 30/10 nhung bien dong cuc doan, -19,6%/tuan (Vietstock, Hanoimoi)",
+          "outlook": "Co the tiep tuc la tru ngan han neu gia dau/khi thuan loi, nhung do rong hep (vai ma) nen kho lan toa"
+        },
+        {
+          "sector": "Vat lieu (Thep - Phan bon - Cao su)",
+          "status": "Tieu cuc manh (xa manh nhat)",
+          "signal": -1,
+          "tickers": [
+            "MSR"
+          ],
+          "evidence": "MSR -5,53/-5,99% phien 30/10; nhom Vat lieu -2,12% phien 30/10 (Vietstock)",
+          "outlook": "Ap luc dieu chinh co the con tiep dien ngan han sau chuoi tang nong tuan 12-16/10"
+        },
+        {
+          "sector": "Tai chinh (Ngan hang - Chung khoan)",
+          "status": "Tieu cuc (duoi ap luc)",
+          "signal": -1,
+          "tickers": [
+            "EIB",
+            "TCB",
+            "MBB",
+            "ORS",
+            "VIX"
+          ],
+          "evidence": "EIB -4,17%, TCB -3,36%, MBB -2,03%, ORS -4,07%, VIX -3,23% phien 30/10; VCB/TCB/MBB/LPB keo giam chi so nhieu nhat tuan (Vietstock)",
+          "outlook": "Can theo doi vung ho tro ky thuat va KQKD Q3 de xac nhan tao day ngan han"
+        },
+        {
+          "sector": "Bat dong san",
+          "status": "Phan hoa",
+          "signal": 0,
+          "tickers": [
+            "VHM",
+            "DXG",
+            "VIC",
+            "TCH",
+            "DIG"
+          ],
+          "evidence": "VHM +1,45%, DXG +2,23%; TCH -2,87%, DIG -2,45% phien 30/10; VIC bi ban rong ngoai manh nhat thi truong (Vietstock)",
+          "outlook": "Dong tien chon loc theo cau chuyen rieng (KQKD, phap ly du an) hon lan toa toan nganh"
+        },
+        {
+          "sector": "Cong nghiep",
+          "status": "Tieu cuc",
+          "signal": -1,
+          "tickers": [
+            "ACV",
+            "VSC"
+          ],
+          "evidence": "ACV -4,41%, VSC -4,35% phien 30/10 (Vietstock)",
+          "outlook": "Chua co tin hieu dao chieu ro"
+        },
+        {
+          "sector": "Ban le - Tieu dung",
+          "status": "Phan hoa (ap luc ban rong ngoai o mot so ma)",
+          "signal": 0,
+          "tickers": [
+            "MWG",
+            "PNJ",
+            "MCH"
+          ],
+          "evidence": "MWG +306 ty tu doanh mua rong 30/10; MCH ban rong ~9.602 ty, PNJ ~2.135 ty trong thang 10 (Tinnhanhchungkhoan)",
+          "outlook": "MWG co the la diem sang ngan han nho tu doanh; PNJ/MCH con chiu ap luc co cau danh muc ngoai"
+        },
+        {
+          "sector": "Cong nghe - Vien thong",
+          "status": "Tieu cuc",
+          "signal": -1,
+          "tickers": [
+            "FPT"
+          ],
+          "evidence": "FPT bi ban rong ~1.872 ty trong thang 10, lon thu 4 toan thi truong (Tinnhanhchungkhoan)",
+          "outlook": "Ap luc dong von ngoai co the con tiep dien, nhung nen tang KQKD 9 thang van tich cuc"
+        },
+        {
+          "sector": "Khoi ngoai toan thi truong",
+          "status": "Tieu cuc (ban rong ky luc thang)",
+          "signal": -1,
+          "tickers": [
+            "MCH",
+            "HDB",
+            "PNJ",
+            "FPT",
+            "ACB",
+            "MSR"
+          ],
+          "evidence": "Ban rong ~2.600 ty tuan (Vietstock); luy ke thang 10 ban rong ky luc ~20.844 ty - cao nhat tu dau nam (Tinnhanhchungkhoan)",
+          "outlook": "Ap luc ban rong kho dao chieu ngay, chuoi ban rong da keo dai 6 tuan lien tiep"
+        }
+      ],
+      "watchlist": [
+        {
+          "ticker": "VHM",
+          "sector": "Bat dong san",
+          "signal": "MUA",
+          "reason": "Khoi ngoai mua rong nhieu nhat phien 30/10 (+69 ty); +1,45% phien 30/10 nguoc dong thi truong",
+          "week_pct": null
+        },
+        {
+          "ticker": "MWG",
+          "sector": "Ban le",
+          "signal": "MUA",
+          "reason": "Tu doanh mua rong manh nhat thi truong phien 30/10 (+306 ty dong)",
+          "week_pct": null
+        },
+        {
+          "ticker": "GAS",
+          "sector": "Dau khi - Nang luong",
+          "signal": "MUA",
+          "reason": "Tang 2,63% phien 30/10, diem sang hiem hoi keo nhom Tien ich",
+          "week_pct": null
+        },
+        {
+          "ticker": "SGN",
+          "sector": "Van tai (Hang khong)",
+          "signal": "MUA",
+          "reason": "Tang 16,73%/tuan, tiem can dinh thang 1/2026",
+          "week_pct": null
+        },
+        {
+          "ticker": "VIC",
+          "sector": "Bat dong san",
+          "signal": "RUI RO",
+          "reason": "Bi khoi ngoai ban rong manh nhat thi truong phien 30/10 (~354 ty), la ma keo giam chi so manh nhat",
+          "week_pct": null
+        },
+        {
+          "ticker": "TCB",
+          "sector": "Ngan hang",
+          "signal": "RUI RO",
+          "reason": "Giam 3,36% phien 30/10, cung VCB/MBB/LPB la luc keo giam chi so lon nhat tuan",
+          "week_pct": null
+        },
+        {
+          "ticker": "EIB",
+          "sector": "Ngan hang",
+          "signal": "RUI RO",
+          "reason": "Giam manh nhat nhom ngan hang phien 30/10 (-4,17%)",
+          "week_pct": null
+        },
+        {
+          "ticker": "MSR",
+          "sector": "Vat lieu - Khoang san",
+          "signal": "RUI RO",
+          "reason": "Giam 5,53-5,99% phien 30/10 du duoc khoi ngoai mua rong nhieu nhat thang 10 (~3.223 ty) - phan ky giua dong von ngoai va gia",
+          "week_pct": null
+        },
+        {
+          "ticker": "PVP",
+          "sector": "Dau khi (Van tai dau khi)",
+          "signal": "RUI RO",
+          "reason": "Giam 14,15%/tuan, thung duong MA50",
+          "week_pct": null
+        },
+        {
+          "ticker": "PNJ / MCH / HDB / FPT / ACB",
+          "sector": "Ban le - Tieu dung / Ngan hang / Cong nghe",
+          "signal": "RUI RO",
+          "reason": "Bi khoi ngoai ban rong nhieu nhat thang 10/2026: MCH ~9.602 ty, HDB ~3.389 ty, PNJ ~2.135 ty, FPT ~1.872 ty, ACB ~1.447 ty (ban rong tinh luy ke ca thang)",
+          "week_pct": null
+        },
+        {
+          "ticker": "KOS",
+          "sector": "Khac (bien dong cuc doan)",
+          "signal": "RUI RO",
+          "reason": "Tran phien 30/10 (+6,84%) sau 29 phien san lien tiep, nhung van giam 19,6%/tuan va ~90% so dinh 7/11/2025; rui ro dau co rat cao, khong phai khuyen nghi mua",
+          "week_pct": null
+        }
+      ],
+      "outlook": {
+        "risks": [
+          "Nhom Vat lieu (thep/phan bon/cao su) ban thao dien rong; cac tru ngan hang (VCB, TCB, MBB, LPB, EIB) dong loat giam keo chi so; khoi ngoai ban rong ky luc thang 10 (~20.844 ty); KOS bien dong cuc doan, rui ro dau co rat cao; VN-Index can giu 1.700-1.735."
+        ]
+      },
+      "data_quality": [
+        "Nhap lai tu file theo doi tren Drive (BaoCao_ChungKhoan_TheoDoi), chu khong dau, khong co so lieu tung ngay; so lieu lay nguyen van tu nhat ky tuan."
+      ],
+      "sources": [
+        "Vietstock",
+        "Tinnhanhchungkhoan/Investing.com",
+        "CafeF",
+        "Hanoimoi",
+        "ABS Research"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "week_id": "2026-W43",
+      "partial": true,
+      "period": {
+        "from": "2026-10-19",
+        "to": "2026-10-23",
+        "label": "19-23/10/2026"
+      },
+      "generated_at": "2026-10-23T17:00:00+07:00",
+      "disclaimer": "Day la tong hop thong tin tham khao tu tin tuc, khong phai khuyen nghi dau tu.",
+      "summary": {
+        "headline": "VN-Index tuan 19-23/10/2026 tang 68,24 diem (+4%) len 1.774,15 diem, cham dut chuoi 4 tuan giam; khoi ngoai ban rong ~1.071 ty, giam manh so voi cac tuan truoc.",
+        "vnindex_close": 1774.15,
+        "vnindex_week_pct": 4.0,
+        "foreign_net_week_bn": {
+          "hose": null,
+          "all_markets": -1071
+        },
+        "prev_week_close": 1705.91,
+        "vnindex_week_change": 68.24
+      },
+      "days": [],
+      "sector_flows": [
+        {
+          "sector": "Bat dong san",
+          "status": "Tich cuc manh (dan dau)",
+          "signal": 1,
+          "tickers": [
+            "VIC",
+            "VHM",
+            "VRE",
+            "VPI",
+            "KBC"
+          ],
+          "evidence": "+1,08% tuan; +6,13% phien 21/10, +3,29% phien 22/10; VIC/VHM dong gop ~19 diem phien 22/10; VPI +19,33%/tuan; CRE -9,44%/tuan (Vietstock)",
+          "outlook": "Da tang phu thuoc nhom Vingroup; can lan toa sang midcap. KQKD Q3 (dac biet VHM) se quyet dinh tinh ben vung"
+        },
+        {
+          "sector": "Ngan hang",
+          "status": "Tich cuc - phan hoa",
+          "signal": 0,
+          "tickers": [
+            "TCB",
+            "CTG",
+            "BID",
+            "EIB",
+            "ACB",
+            "VCB"
+          ],
+          "evidence": "Nhom Tai chinh +1,22% tuan; TCB duoc mua rong lien tuc; ACB bi khoi ngoai+tu doanh ban 313 ty (19/10), ~470 ty (23/10)",
+          "outlook": "Co the tiep tuc la tru do neu VN-Index giu 1.735; theo doi ap luc ban ACB/VCB va KQKD Q3"
+        },
+        {
+          "sector": "Ban le - Tieu dung",
+          "status": "Tich cuc - phan hoa",
+          "signal": 0,
+          "tickers": [
+            "FRT",
+            "MWG",
+            "MSN",
+            "PNJ"
+          ],
+          "evidence": "Nhom ban le +1,05% phien 20/10; FRT dan dau mua rong ngoai; PNJ lo 258 ty Q3/2026 (CafeF)",
+          "outlook": "FRT/MWG/MSN co the duy tri; PNJ can tranh do lo Q3 va rui ro pha loang"
+        },
+        {
+          "sector": "Nang luong - Dau khi",
+          "status": "Phan hoa (thuong nguon huong loi)",
+          "signal": 0,
+          "tickers": [
+            "PVD",
+            "BSR",
+            "PVS",
+            "PVT",
+            "PVP"
+          ],
+          "evidence": "Brent ~113 USD/thung 23/10 (VOV); PVD +5% phien 22/10; PVT -4,96%, PVP -6,99% phien 21/10",
+          "outlook": "Thuong nguon co the huong loi neu Brent duy tri >110 USD, nhung bien dong dia chinh tri cao; van tai dau khi yeu"
+        },
+        {
+          "sector": "Thep - Vat lieu",
+          "status": "Phan hoa",
+          "signal": 0,
+          "tickers": [
+            "HPG",
+            "NKG",
+            "HSG",
+            "GVR",
+            "MSR"
+          ],
+          "evidence": "Vat lieu +1,56% phien 20/10; HPG keo giam chi so cuoi tuan; VCBS Mua HPG (TP 31.313), VDSC Mua NKG (TP 14.400)",
+          "outlook": "Dinh gia hap dan (nhieu ma P/B <1), duoc CTCK khuyen nghi Mua, nhung dong tien ngan han chua ro"
+        },
+        {
+          "sector": "Xay dung - KCN - Logistics",
+          "status": "Tich cuc",
+          "signal": 1,
+          "tickers": [
+            "HHV",
+            "KBC",
+            "GMD",
+            "ACV",
+            "CTD"
+          ],
+          "evidence": "GMD +4,55%, ACV +3,37% phien 22/10; HHV/KBC duoc TPS/BSC khuyen nghi Mua; CTD mau hinh Triangle muc tieu 73.000-74.000 (Vietstock)",
+          "outlook": "Huong loi dau tu cong va dong von FDI; co the tiep tuc thu hut dong tien chon loc"
+        },
+        {
+          "sector": "Cong nghe - Vien thong",
+          "status": "Trung tinh (co ban tot, bi ban rong)",
+          "signal": 0,
+          "tickers": [
+            "FPT"
+          ],
+          "evidence": "FPT bi ban rong nhieu phien; so huu NN <28% (Investing.com)",
+          "outlook": "Ap luc tu dong von ngoai chua dut; KQKD 9T tang 17% la diem tua trung han"
+        },
+        {
+          "sector": "Dich vu truyen thong",
+          "status": "Tieu cuc",
+          "signal": -1,
+          "tickers": [
+            "VNZ",
+            "FOX",
+            "VGI",
+            "YEG"
+          ],
+          "evidence": "Giam manh nhat tuan (-1,06%) (Vietstock)",
+          "outlook": "Anh huong han che len chi so"
+        },
+        {
+          "sector": "Khoi ngoai toan thi truong",
+          "status": "Ban rong nhung ha nhiet",
+          "signal": -1,
+          "tickers": [],
+          "evidence": "Ban rong ~1.071 ty tuan (HOSE ~965, HNX ~106); 2 phien mua rong 21-22/10; luy ke ban rong >100.000 ty tu dau nam (Stockbiz, Vietstock)",
+          "outlook": "Ap luc ban giam ro; xu huong dai han con phu thuoc dong von toan cau va lo trinh nang hang FTSE (phan bo den cuoi 2027)"
+        }
+      ],
+      "watchlist": [
+        {
+          "ticker": "TCB",
+          "sector": "Ngan hang",
+          "signal": "MUA",
+          "reason": "Khoi ngoai mua rong manh nhieu phien (345 ty 20/10, 290 ty 21/10); TCBS khuyen nghi Nam giu; tang 3,01% tuan",
+          "week_pct": null
+        },
+        {
+          "ticker": "CTG",
+          "sector": "Ngan hang",
+          "signal": "MUA",
+          "reason": "VPBankSC khuyen nghi Mua; tu doanh mua rong ~230 ty phien 19/10; +1,31% phien 23/10",
+          "week_pct": null
+        },
+        {
+          "ticker": "EIB",
+          "sector": "Ngan hang",
+          "signal": "MUA",
+          "reason": "Pha trendline giam ngan han, xac nhan 2 day, KL +167% so TB20; tang 9,17% tuan; gia < 20.000 d, van duoi EMA50/100/200",
+          "week_pct": null
+        },
+        {
+          "ticker": "SHB",
+          "sector": "Ngan hang",
+          "signal": "THEO DOI",
+          "reason": "TCBS khuyen nghi Tich luy; tang 2,35% tuan; gia < 20.000 d",
+          "week_pct": null
+        },
+        {
+          "ticker": "ACB",
+          "sector": "Ngan hang",
+          "signal": "RUI RO",
+          "reason": "Ca khoi ngoai (~93 ty) va tu doanh (~220 ty) cung ban rong phien 19/10; khoi ngoai ban ~470 ty phien 23/10 - lon nhat thi truong",
+          "week_pct": null
+        },
+        {
+          "ticker": "VPB",
+          "sector": "Ngan hang",
+          "signal": "THEO DOI",
+          "reason": "Agriseco Tang ty trong, upside ~17%; giam 1,63% tuan (24.500 -> 24.100 d)",
+          "week_pct": null
+        },
+        {
+          "ticker": "VIC",
+          "sector": "Bat dong san",
+          "signal": "MUA",
+          "reason": "Dong gop tich cuc nhat cho VN-Index ca tuan (+5,9 diem); +6,99% phien 21/10, +4,16% phien 22/10; luu y rui ro tap trung he sinh thai Vingroup",
+          "week_pct": null
+        },
+        {
+          "ticker": "VHM",
+          "sector": "Bat dong san",
+          "signal": "THEO DOI",
+          "reason": "Tang 6,92% phien 21/10, 3,56% phien 22/10; du phong LNST Q3 lech lon giua cac CTCK (SSI ~4.601 ty / VCBS ~15.230 / MBS ~17.251) - phu thuoc ky hop dong ban buon",
+          "week_pct": null
+        },
+        {
+          "ticker": "VPI",
+          "sector": "Bat dong san",
+          "signal": "THEO DOI",
+          "reason": "Tang manh nhat thi truong tuan (+19,33%) sau 7 phien giam tuan truoc; bien dong rat manh 2 chieu, can xac nhan",
+          "week_pct": null
+        },
+        {
+          "ticker": "KBC",
+          "sector": "Bat dong san (KCN)",
+          "signal": "MUA",
+          "reason": "BSC: P/B 0,9x thap hon TB 5 nam; DT Q3/2026 +136,6% len 3.187 ty; tang 4,25% tuan; muc tieu 34.000",
+          "week_pct": null
+        },
+        {
+          "ticker": "DXG",
+          "sector": "Bat dong san",
+          "signal": "THEO DOI",
+          "reason": "Ve duoi menh gia; Vietcap ha gia muc tieu 14% do giam du bao moi gioi, lui tien do mo ban; gia < 20.000 d, can xac nhan lai",
+          "week_pct": null
+        },
+        {
+          "ticker": "DIG",
+          "sector": "Bat dong san",
+          "signal": "RUI RO",
+          "reason": "Giam 38% tu dinh thang 5; Chu tich bi ban giai chap >8 trieu cp thang 7; LN gop Q2 giam >60%",
+          "week_pct": null
+        },
+        {
+          "ticker": "HDG",
+          "sector": "Bat dong san",
+          "signal": "THEO DOI",
+          "reason": "MBS Kha quan tu tuan 12-16/10; gia < 20.000 d theo du lieu 16/10, can xac nhan lai gia",
+          "week_pct": null
+        },
+        {
+          "ticker": "FRT",
+          "sector": "Ban le",
+          "signal": "MUA",
+          "reason": "Dan dau khoi ngoai mua rong (151 ty 19/10, 78 ty 20/10); duoc khuyen nghi Mua ngay 20/10; muc tieu 170.000",
+          "week_pct": null
+        },
+        {
+          "ticker": "MWG",
+          "sector": "Ban le",
+          "signal": "MUA",
+          "reason": "Dan dat nhom ban le +1,05% phien 20/10",
+          "week_pct": null
+        },
+        {
+          "ticker": "PNJ",
+          "sector": "Ban le",
+          "signal": "RUI RO",
+          "reason": "Q3/2026 lo rong ~258 ty, DT -14%; du kien phat hanh rieng le toi da 550 trieu cp (~8.000 ty) - rui ro pha loang lon",
+          "week_pct": null
+        },
+        {
+          "ticker": "HPG",
+          "sector": "Thep",
+          "signal": "THEO DOI",
+          "reason": "VCBS Mua, upside ~48% nho thue chong ban pha gia HRC TQ va Dung Quat 2; nhung keo giam VN-Index cuoi tuan, khoi ngoai/tu doanh ban rong mot so phien",
+          "week_pct": null
+        },
+        {
+          "ticker": "NKG",
+          "sector": "Thep",
+          "signal": "MUA",
+          "reason": "VDSC Mua (muc tieu 14.400); xuat khau phuc hoi (Brazil); dinh gia P/B 0,9x; gia < 20.000 d, can xac nhan",
+          "week_pct": null
+        },
+        {
+          "ticker": "HSG",
+          "sector": "Thep",
+          "signal": "THEO DOI",
+          "reason": "BSC Nam giu, P/B muc tieu 0,85x; co the vuot KH loi nhuan 500-600 ty; gia < 20.000 d theo du lieu 16/10",
+          "week_pct": null
+        },
+        {
+          "ticker": "HHV",
+          "sector": "Xay dung - Ha tang",
+          "signal": "MUA",
+          "reason": "Pha trendline giam dai han, KL +88% so TB20; ho tro 9.270-9.330, cat lo duoi 9.250; tang 1,68% tuan",
+          "week_pct": null
+        },
+        {
+          "ticker": "TNG",
+          "sector": "Det may",
+          "signal": "MUA",
+          "reason": "BVSC Outperform, upside ~29%; P/E ~5,1x thap hon TB 1 nam 6,3x; tang 6,74% tuan; gia < 20.000 d",
+          "week_pct": null
+        },
+        {
+          "ticker": "FPT",
+          "sector": "Cong nghe",
+          "signal": "THEO DOI",
+          "reason": "9T/2026 DT +12,4%, LNTT +17%, AI/Data +55%; nhung bi khoi ngoai ban rong nhieu phien (146 ty 23/10) - co ban tot, ap luc den tu dong von ngoai",
+          "week_pct": null
+        },
+        {
+          "ticker": "PVD",
+          "sector": "Dau khi",
+          "signal": "THEO DOI",
+          "reason": "Tang 5% phien 22/10 khi Brent len ~113 USD/thung; phu thuoc dia chinh tri Trung Dong",
+          "week_pct": null
+        },
+        {
+          "ticker": "PVT",
+          "sector": "Dau khi",
+          "signal": "RUI RO",
+          "reason": "Giam 4,96% phien 21/10 cung PVP (-6,99%) du gia dau tang",
+          "week_pct": null
+        },
+        {
+          "ticker": "CRE",
+          "sector": "Bat dong san",
+          "signal": "RUI RO",
+          "reason": "Giam manh nhat thi truong tuan (-9,44%); khong tim thay thong tin moi giai thich nguyen nhan",
+          "week_pct": null
+        },
+        {
+          "ticker": "DCM",
+          "sector": "Hoa chat - Phan bon",
+          "signal": "MUA",
+          "reason": "Bnews (DSC): 6T/2026 LN 1.856 ty (+54,7%); P/E 6,44x so TB 5 nam 10,85x; muc tieu 42.000",
+          "week_pct": null
+        },
+        {
+          "ticker": "GMD",
+          "sector": "Van tai - Logistics",
+          "signal": "MUA",
+          "reason": "Kafi Mua (muc tieu 94.500); +4,55% phien 22/10; tu doanh mua rong 21/10",
+          "week_pct": null
+        }
+      ],
+      "outlook": {
+        "risks": [
+          "Da tang phu thuoc nhom von hoa lon (VIC, VHM ~19 diem rieng phien 22/10), do rong va thanh khoan chua xac nhan; ACB bi ca khoi ngoai va tu doanh ban rong; khoi ngoai ban rong luy ke >100.000 ty tu dau nam; PNJ lo 258 ty Q3 va ke hoach phat hanh rieng le (~8.000 ty) - rui ro pha loang."
+        ]
+      },
+      "data_quality": [
+        "Nhap lai tu file theo doi tren Drive (BaoCao_ChungKhoan_TheoDoi), chu khong dau, khong co so lieu tung ngay; so lieu lay nguyen van tu nhat ky tuan."
+      ],
+      "sources": [
+        "Vietstock",
+        "Tinnhanhchungkhoan",
+        "Nhan Dan",
+        "Bao Phap Luat",
+        "CafeF",
+        "Tien Phong",
+        "VOV",
+        "Bnews",
+        "Investing.com"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "week_id": "2026-W42",
+      "partial": true,
+      "period": {
+        "from": "2026-10-12",
+        "to": "2026-10-16",
+        "label": "12-16/10/2026"
+      },
+      "generated_at": "2026-10-16T17:00:00+07:00",
+      "disclaimer": "Day la tong hop thong tin tham khao tu tin tuc, khong phai khuyen nghi dau tu.",
+      "summary": {
+        "headline": "VN-Index tuan 12-16/10/2026 giam 29,18 diem (-1,68%) ve 1.705,91 diem; thi truong phan hoa theo cau chuyen rieng; khoi ngoai ban rong phien thu 11 lien tiep.",
+        "vnindex_close": 1705.91,
+        "vnindex_week_pct": -1.68,
+        "foreign_net_week_bn": {
+          "hose": null,
+          "all_markets": -3105
+        },
+        "prev_week_close": 1735.09,
+        "vnindex_week_change": -29.18
+      },
+      "days": [],
+      "sector_flows": [
+        {
+          "sector": "Ngan hang",
+          "status": "Phan hoa - tich cuc cuoi tuan",
+          "signal": 0,
+          "tickers": [
+            "CTG",
+            "BID",
+            "SHB",
+            "TPB",
+            "MBB",
+            "TCB",
+            "HDB"
+          ],
+          "evidence": "CTG +2,68%, SHB +2,4%, BID +2,26%, TPB +2,13% phien 16/10 keo VN-Index dut chuoi giam; TCB bi ban rong manh nhat 12/10 (khoi ngoai 115 ty, tu doanh 85 ty) (Vietstock)",
+          "outlook": "Co the tiep tuc la tru do ngan han neu VN-Index giu moc 1.700, nhung can theo doi ap luc ban khoi ngoai tai TCB/HDB"
+        },
+        {
+          "sector": "Thep",
+          "status": "Tich cuc (hut tien) dau tuan",
+          "signal": 1,
+          "tickers": [
+            "VGS",
+            "NKG",
+            "HSG",
+            "HPG",
+            "TVN"
+          ],
+          "evidence": "VGS +7,64%, NKG +6,89%, HSG +3,54%, HPG +2,99% phien 12/10; HSG +5,05%/tuan dung huong khuyen nghi Mua TPS (CafeF, Tinnhanhchungkhoan)",
+          "outlook": "Co the duy tri ngan han nho gia thep noi dia on dinh va dong tien luan chuyen; can xac nhan them sau nhip tang nong dau tuan"
+        },
+        {
+          "sector": "Bat dong san",
+          "status": "Phan hoa manh",
+          "signal": 0,
+          "tickers": [
+            "VHM",
+            "KDH",
+            "SJS",
+            "HDG",
+            "VRE",
+            "VIC",
+            "VPI"
+          ],
+          "evidence": "VHM +3,57%/tuan, dong gop +3,74 diem VN-Index (lon nhat); VIC -1,38%/tuan nhung lay di -4,81 diem; VPI giam sau nhat thi truong -13,33%/tuan; SJS tang tran 16/10 nho KQKD Q3 ky luc (Vietstock)",
+          "outlook": "Dong tien chon loc theo cau chuyen rieng (KQKD Q3) hon la lan toa toan nganh; VIC/VPI la rui ro can theo doi them"
+        },
+        {
+          "sector": "Dau khi - Nang luong",
+          "status": "Tieu cuc (bi rut tien)",
+          "signal": -1,
+          "tickers": [
+            "GAS",
+            "PLX",
+            "BSR"
+          ],
+          "evidence": "GAS -5,7%/tuan (80.700 -> 76.100 d); PLX -3,08% phien 12/10; BSR khang cu ky thuat vung 30.000-33.500 (Vietstock PTKT)",
+          "outlook": "Rui ro tiep tuc dieu chinh ngan han; GAS giam manh du duoc khuyen nghi Mua (VPBankSC); can theo doi gia dau the gioi"
+        },
+        {
+          "sector": "Phan bon - Hoa chat - Cao su",
+          "status": "Tieu cuc",
+          "signal": -1,
+          "tickers": [
+            "DCM",
+            "DGC",
+            "DDV",
+            "DPR",
+            "GVR",
+            "DPM"
+          ],
+          "evidence": "DCM -2,73%/tuan du duoc khuyen nghi Mua (DSC); GVR -4,87%/tuan, DPR -2,52%/tuan du VCBS dinh gia hop ly; DPM Stochastic cat len tu vung qua ban (Vietstock PTKT)",
+          "outlook": "Ap luc giam co the con tiep dien ngan han; rieng DPM dang co tin hieu phuc hoi ky thuat, can xac nhan them"
+        },
+        {
+          "sector": "Cong nghe - Vien thong",
+          "status": "Tin hieu tich cuc don le",
+          "signal": 0,
+          "tickers": [
+            "FPT"
+          ],
+          "evidence": "FPT duoc khoi ngoai mua rong manh phien 16/10 (Vietstock - Nhip dap thi truong)",
+          "outlook": "Can theo doi them 1-2 phien de xac nhan dao chieu, vi tuan truoc FPT con la ma giam manh nhat nhom"
+        },
+        {
+          "sector": "Khoi ngoai toan thi truong",
+          "status": "Tieu cuc (ban rong keo dai)",
+          "signal": -1,
+          "tickers": [
+            "TCB",
+            "HDB",
+            "VIC",
+            "FRT",
+            "PNJ"
+          ],
+          "evidence": "Ban rong khoang 3.000 ty dong tren HOSE va 105 ty dong tren HNX trong tuan 12-16/10/2026 (Vietstock)",
+          "outlook": "Ap luc ban rong ngoai co the con keo dai (da 11 phien lien tiep tinh den 16/10); can theo doi dau hieu dao chieu"
+        }
+      ],
+      "watchlist": [
+        {
+          "ticker": "MBB",
+          "sector": "Ngan hang",
+          "signal": "MUA",
+          "reason": "TPS khuyen nghi Mua dau tuan; tang 4,2% tuan (19.050 -> 19.850 d), dung huong khuyen nghi",
+          "week_pct": null
+        },
+        {
+          "ticker": "HSG",
+          "sector": "Thep",
+          "signal": "MUA",
+          "reason": "TPS khuyen nghi Mua; ca nhom thep dong loat tang phien 12/10; tang 5,05% tuan, dung huong khuyen nghi",
+          "week_pct": null
+        },
+        {
+          "ticker": "HDG",
+          "sector": "Bat dong san",
+          "signal": "MUA",
+          "reason": "MBS khuyen nghi Kha quan, tich luy dan; tang 2,74% tuan, dung huong khuyen nghi",
+          "week_pct": null
+        },
+        {
+          "ticker": "HPG",
+          "sector": "Thep",
+          "signal": "MUA",
+          "reason": "Duoc ca khoi ngoai (128 ty) va tu doanh (38 ty) mua rong manh nhat phien 12/10, cung nhip tang ca nhom thep",
+          "week_pct": null
+        },
+        {
+          "ticker": "VPB",
+          "sector": "Ngan hang",
+          "signal": "MUA",
+          "reason": "Tu doanh mua rong manh nhat thi truong phien 12/10 (223 ty dong)",
+          "week_pct": null
+        },
+        {
+          "ticker": "CTG",
+          "sector": "Ngan hang",
+          "signal": "MUA",
+          "reason": "Tang 2,68% phien 16/10, cung BID/SHB/TPB keo VN-Index hoi phuc, dut chuoi 7 phien giam",
+          "week_pct": null
+        },
+        {
+          "ticker": "FPT",
+          "sector": "Cong nghe",
+          "signal": "THEO DOI",
+          "reason": "Duoc khoi ngoai mua rong manh phien 16/10, dao chieu so voi tuan truoc; tin hieu 1 phien, can xac nhan them",
+          "week_pct": null
+        },
+        {
+          "ticker": "SJS",
+          "sector": "Bat dong san",
+          "signal": "THEO DOI",
+          "reason": "Tang tran phien 16/10 nho KQKD Q3 dat muc cao ky luc; tin hieu don le mot phien, can theo doi them",
+          "week_pct": null
+        },
+        {
+          "ticker": "TCB",
+          "sector": "Ngan hang",
+          "signal": "RUI RO",
+          "reason": "Bi ca khoi ngoai (115 ty) va tu doanh (85 ty) ban rong manh nhat phien 12/10",
+          "week_pct": null
+        },
+        {
+          "ticker": "HDB",
+          "sector": "Ngan hang",
+          "signal": "RUI RO",
+          "reason": "Breakout ky thuat dau tuan nhung sau do bi khoi ngoai ban rong manh, chiu ap luc lon nhat phien cuoi tuan",
+          "week_pct": null
+        },
+        {
+          "ticker": "VIC",
+          "sector": "Bat dong san",
+          "signal": "RUI RO",
+          "reason": "Giam 1,38% tuan nhung la ma keo VN-Index giam manh nhat (-4,81 diem); tiep tuc bi khoi ngoai ban rong phien 16/10",
+          "week_pct": null
+        },
+        {
+          "ticker": "VPI",
+          "sector": "Bat dong san",
+          "signal": "RUI RO",
+          "reason": "Giam sau nhat thi truong tuan -13,33%, 7 phien giam lien tiep, test vung day thang 1/2026 (47.300-49.000)",
+          "week_pct": null
+        },
+        {
+          "ticker": "PNJ",
+          "sector": "Ban le",
+          "signal": "RUI RO",
+          "reason": "Tiep tuc bi khoi ngoai ban rong manh (105 ty phien 12/10), ap luc ban keo dai tu tuan truoc chua dut",
+          "week_pct": null
+        },
+        {
+          "ticker": "GAS",
+          "sector": "Dau khi",
+          "signal": "RUI RO",
+          "reason": "VPBankSC khuyen nghi Mua nhung gia giam 5,7% tuan (80.700 -> 76.100 d), nguoc huong khuyen nghi",
+          "week_pct": null
+        },
+        {
+          "ticker": "GVR",
+          "sector": "Cao su/KCN",
+          "signal": "RUI RO",
+          "reason": "VCBS dinh gia hop ly 39.288 d nhung gia giam 4,87% tuan (32.850 -> 31.250 d), nguoc huong khuyen nghi",
+          "week_pct": null
+        }
+      ],
+      "outlook": {
+        "risks": [
+          "VPI giam sau nhat thi truong tuan nay (-13,33%, 7 phien giam lien tiep); GAS giam 5,7%/tuan du duoc khuyen nghi Mua; khoi ngoai ban rong 11 phien lien tiep chua co dau hieu dao chieu; VN-Index can giu moc 1.700."
+        ]
+      },
+      "data_quality": [
+        "Nhap lai tu file theo doi tren Drive (BaoCao_ChungKhoan_TheoDoi), chu khong dau, khong co so lieu tung ngay; so lieu lay nguyen van tu nhat ky tuan."
+      ],
+      "sources": [
+        "Vietstock",
+        "Tinnhanhchungkhoan",
+        "Stockbiz",
+        "CafeF"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "week_id": "2026-W41",
+      "partial": true,
+      "period": {
+        "from": "2026-10-05",
+        "to": "2026-10-09",
+        "label": "05-09/10/2026"
+      },
+      "generated_at": "2026-10-09T17:00:00+07:00",
+      "disclaimer": "Day la tong hop thong tin tham khao tu tin tuc, khong phai khuyen nghi dau tu.",
+      "summary": {
+        "headline": "VN-Index giam nhe 0,15% xuong 1.735,09 diem, tuan giam thu 3 lien tiep nhung toc do giam cham lai; khoi ngoai ban rong ~13.987 ty dong tren HOSE.",
+        "vnindex_close": 1735.09,
+        "vnindex_week_pct": -0.15,
+        "foreign_net_week_bn": {
+          "hose": -13987,
+          "all_markets": null
+        },
+        "prev_week_close": 1737.71,
+        "vnindex_week_change": -2.62
+      },
+      "days": [],
+      "sector_flows": [
+        {
+          "sector": "Nang luong - Dau khi",
+          "status": "Tich cuc (hut tien)",
+          "signal": 1,
+          "tickers": [
+            "GAS",
+            "PLX",
+            "PVT",
+            "PVS"
+          ],
+          "evidence": "GAS +4,59%, PLX +3,87%, PVT +2,82% phien 08/10 (Vietstock)",
+          "outlook": "Co the duy tri ngan han neu gia dau va ty gia thuan loi; can theo doi dieu chinh sau nhip tang nong"
+        },
+        {
+          "sector": "Vat lieu - Khoang san - Hoa chat",
+          "status": "Tich cuc manh (hut tien)",
+          "signal": 1,
+          "tickers": [
+            "KSV",
+            "HGM",
+            "BKC",
+            "BMC",
+            "CSV",
+            "LAS",
+            "BFC",
+            "MSR",
+            "GVR",
+            "TVN"
+          ],
+          "evidence": "Nhom vat lieu +2,3% phien 07/10; BFC +13,74%/tuan - tang manh nhat thi truong (Vietstock)",
+          "outlook": "Dong tien mang tinh dau co ngan han, nhieu ma da tran lien tiep; rui ro dieu chinh ky thuat khi qua mua (vi du BFC)"
+        },
+        {
+          "sector": "Thuy san, Det may, Nong nghiep, Cang-Van tai bien, Ban le, Hang khong",
+          "status": "Tich cuc nhe (theo do rong)",
+          "signal": 1,
+          "tickers": [],
+          "evidence": "Theo thong ke do rong thi truong cua Nhan Dan (trich Vietstock) cac nhom nay tang kha trong tuan, nhung bai khong neu ten ma cu the",
+          "outlook": "Can them du lieu de xac nhan dong tien thuc te vao tung ma; theo doi tuan toi"
+        },
+        {
+          "sector": "Tai chinh (Ngan hang + Chung khoan)",
+          "status": "Phan hoa",
+          "signal": 0,
+          "tickers": [
+            "HDB",
+            "VPB",
+            "TCB",
+            "CTG",
+            "VIX",
+            "SHB"
+          ],
+          "evidence": "Nhom tai chinh +0,36% phien 08/10 nho HDB/VIX/VPB/TCB/CTG nhung SHB -6,94%; khoi ngoai ban rong CTG/VCB/BID thang 9 (Vietstock)",
+          "outlook": "Dong tien chon loc vao ma co cau chuyen rieng (tang von, M&A...), nhom chung khoan noi chung van yeu; theo doi KQKD Q3"
+        },
+        {
+          "sector": "Bat dong san",
+          "status": "Phan hoa",
+          "signal": 0,
+          "tickers": [
+            "NVL",
+            "VHM",
+            "DXS",
+            "TCH",
+            "DRH"
+          ],
+          "evidence": "VHM, DXS, TCH giam >3% phien 08/10; DRH giam sau nhat thi truong -28,67%/tuan; NVL tran nguoc dong (Vietstock)",
+          "outlook": "Rui ro tiep tuc neu VN-Index mat vung ho tro 1.715-1.750; dong tien chi tap trung o mot vai ma rieng le"
+        },
+        {
+          "sector": "Cong nghe - Vien thong",
+          "status": "Tieu cuc (bi rut tien)",
+          "signal": -1,
+          "tickers": [
+            "FPT",
+            "ELC",
+            "VEC"
+          ],
+          "evidence": "Nhom giam manh nhat thi truong tuan nay: FPT -3,02%, ELC -4,66%, VEC -12,6% (Vietstock)",
+          "outlook": "Ap luc co the con tiep dien ngan han do nhom da tang nong truoc do; chua co tin hieu dao chieu ro ret"
+        },
+        {
+          "sector": "Khoi ngoai toan thi truong",
+          "status": "Tieu cuc (ban rong)",
+          "signal": -1,
+          "tickers": [],
+          "evidence": "Ban rong khoang 13.987 ty dong tren HOSE trong tuan 05-09/10/2026 (Nhan Dan trich Vietstock)",
+          "outlook": "Ap luc ban rong ngoai co the con keo dai; can theo doi dau hieu dao chieu de xac nhan dong tien quay lai"
+        }
+      ],
+      "watchlist": [
+        {
+          "ticker": "GAS",
+          "sector": "Dau khi",
+          "signal": "MUA",
+          "reason": "Tang 4,59% phien 08/10, dan dau nhom nang luong-dau khi tang gia tuan nay",
+          "week_pct": null
+        },
+        {
+          "ticker": "PLX",
+          "sector": "Dau khi",
+          "signal": "MUA",
+          "reason": "Tang 3,87% phien 08/10, cung nhom nang luong giu nhip tich cuc",
+          "week_pct": null
+        },
+        {
+          "ticker": "PVT",
+          "sector": "Van tai - Dau khi",
+          "signal": "MUA",
+          "reason": "Tang 2,82% phien 08/10, nhom van tai dau khi huong loi",
+          "week_pct": null
+        },
+        {
+          "ticker": "BFC",
+          "sector": "Hoa chat",
+          "signal": "MUA",
+          "reason": "Ma tang manh nhat tuan +13,74%, vuot MA200; luu y Stochastic qua mua, co the gap khang cu ngan han",
+          "week_pct": null
+        },
+        {
+          "ticker": "KSV",
+          "sector": "Khoang san",
+          "signal": "MUA",
+          "reason": "Tran trong nhieu phien lien tiep (07-08/10) cung nhom vat lieu-khoang san",
+          "week_pct": null
+        },
+        {
+          "ticker": "HGM",
+          "sector": "Khoang san",
+          "signal": "MUA",
+          "reason": "Tran trong nhieu phien lien tiep (07-08/10) cung nhom vat lieu-khoang san",
+          "week_pct": null
+        },
+        {
+          "ticker": "BKC",
+          "sector": "Khoang san",
+          "signal": "MUA",
+          "reason": "Tran trong nhieu phien lien tiep (07-08/10) cung nhom vat lieu-khoang san",
+          "week_pct": null
+        },
+        {
+          "ticker": "HDB",
+          "sector": "Ngan hang",
+          "signal": "MUA",
+          "reason": "Duoc tu doanh CTCK mua manh (~1.500 ty phien 02/10), dan dau nhom tai chinh tang 0,36%",
+          "week_pct": null
+        },
+        {
+          "ticker": "VPB",
+          "sector": "Ngan hang",
+          "signal": "MUA",
+          "reason": "Nam trong nhom ngan hang dan dat tai chinh tang gia tuan nay cung HDB, TCB, CTG",
+          "week_pct": null
+        },
+        {
+          "ticker": "TCB",
+          "sector": "Ngan hang",
+          "signal": "THEO DOI",
+          "reason": "Nam trong nhom dan dat tai chinh nhung cung bi khoi ngoai ban rong mot so phien (~144 ty phien 02/10)",
+          "week_pct": null
+        },
+        {
+          "ticker": "STB",
+          "sector": "Ngan hang",
+          "signal": "THEO DOI",
+          "reason": "Tang manh nhat tu dau nam (+27,59% 9 thang) nho cau chuyen rieng, nhung bi khoi ngoai ban rong ~50 ty phien 02/10",
+          "week_pct": null
+        },
+        {
+          "ticker": "VIX",
+          "sector": "Chung khoan",
+          "signal": "THEO DOI",
+          "reason": "Nam trong nhom tai chinh dan dat tuan nay, nhom chung khoan noi chung van chiu ap luc dieu chinh",
+          "week_pct": null
+        },
+        {
+          "ticker": "NVL",
+          "sector": "Bat dong san",
+          "signal": "THEO DOI",
+          "reason": "Tang tran nguoc dong trong khi nhom BDS giam diem; tin hieu don le, can xac nhan them dong tien vao nhom",
+          "week_pct": null
+        },
+        {
+          "ticker": "PNJ",
+          "sector": "Ban le",
+          "signal": "RUI RO",
+          "reason": "Bi khoi ngoai ban rong manh nhieu phien (~1.200 ty phien 02/10, ~400 ty phien 07/10); ap luc ban chua dut",
+          "week_pct": null
+        },
+        {
+          "ticker": "DRH",
+          "sector": "Bat dong san",
+          "signal": "RUI RO",
+          "reason": "Giam sau nhat thi truong tuan nay -28,67%, 5 phien giam lien tiep, MACD giam",
+          "week_pct": null
+        },
+        {
+          "ticker": "SHB",
+          "sector": "Ngan hang",
+          "signal": "RUI RO",
+          "reason": "Giam 6,94% phien 08/10, ma yeu nhat nhom VN30 phien nay",
+          "week_pct": null
+        },
+        {
+          "ticker": "FPT",
+          "sector": "Cong nghe",
+          "signal": "RUI RO",
+          "reason": "Giam 3,02% trong tuan, dan dau nhom cong nghe-vien thong giam diem manh nhat thi truong",
+          "week_pct": null
+        },
+        {
+          "ticker": "VIC",
+          "sector": "Bat dong san",
+          "signal": "RUI RO",
+          "reason": "Lay di hon 4 diem VN-Index phien cuoi tuan, tiep tuc la ma keo chi so giam",
+          "week_pct": null
+        }
+      ],
+      "outlook": {
+        "risks": [
+          "Mat vung ho tro 1.715-1.750 se lam tang rui ro giam sau hon (Vietstock); khoi ngoai ban rong lien tuc; nhom Cong nghe (FPT, ELC, VEC) va mot so ma BDS (DRH -28,67%/tuan) giam manh, theo doi KQKD Q3/2026."
+        ]
+      },
+      "data_quality": [
+        "Nhap lai tu file theo doi tren Drive (BaoCao_ChungKhoan_TheoDoi), chu khong dau, khong co so lieu tung ngay; so lieu lay nguyen van tu nhat ky tuan."
+      ],
+      "sources": [
+        "Vietstock",
+        "Nhan Dan (Infographic trich Vietstock)",
+        "Tinnhanhchungkhoan"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "week_id": "2026-W40",
+      "partial": true,
+      "period": {
+        "from": "2026-09-28",
+        "to": "2026-10-02",
+        "label": "28/09-02/10/2026"
+      },
+      "generated_at": "2026-10-02T17:00:00+07:00",
+      "disclaimer": "Day la tong hop thong tin tham khao tu tin tuc, khong phai khuyen nghi dau tu.",
+      "summary": {
+        "headline": "VN-Index tuan 28/9-2/10/2026 giam 2,66% ve 1.737,71 diem, giam 5 phien lien tiep; khoi ngoai ban rong khoang 4.900 ty dong ca tuan.",
+        "vnindex_close": 1737.71,
+        "vnindex_week_pct": -2.66,
+        "foreign_net_week_bn": {
+          "hose": null,
+          "all_markets": -4900
+        },
+        "prev_week_close": 1785.11,
+        "vnindex_week_change": -47.4
+      },
+      "days": [],
+      "sector_flows": [
+        {
+          "sector": "Nhom dan dat (theo nhat ky tuan)",
+          "status": "Dan dat",
+          "signal": 1,
+          "tickers": [],
+          "evidence": "Nang luong/Dau khi dan dat giam manh nhat (BSR, PLX, PVD, GAS); Bat dong san dao chieu giam cuoi tuan sau khi dan dat dau tuan",
+          "outlook": ""
+        }
+      ],
+      "watchlist": [
+        {
+          "ticker": "LHG",
+          "sector": "",
+          "signal": "MUA",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "VTP",
+          "sector": "",
+          "signal": "MUA",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "MSR",
+          "sector": "",
+          "signal": "MUA",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "VPB",
+          "sector": "",
+          "signal": "THEO DOI",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "TCB",
+          "sector": "",
+          "signal": "THEO DOI",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "VIC",
+          "sector": "",
+          "signal": "THEO DOI",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "VHM",
+          "sector": "",
+          "signal": "THEO DOI",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "STB",
+          "sector": "",
+          "signal": "THEO DOI",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "PNJ",
+          "sector": "",
+          "signal": "THEO DOI",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        }
+      ],
+      "outlook": {
+        "risks": [
+          "PNJ giam sau ~30% trong tuan/thang, xuong day 52 tuan do su co phap ly P-Lab; khoi ngoai ban rong manh toan thi truong (~4.900 ty/tuan); VN-Index chua xac nhan tao day, theo doi vung ho tro 1.730-1.760 va KQKD Q3."
+        ]
+      },
+      "data_quality": [
+        "Nhap lai tu file theo doi tren Drive (BaoCao_ChungKhoan_TheoDoi), chu khong dau, khong co so lieu tung ngay; so lieu lay nguyen van tu nhat ky tuan."
+      ],
+      "sources": [
+        "Vietstock",
+        "FireAnt",
+        "Stockbiz",
+        "Tinnhanhchungkhoan"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "week_id": "2026-W39",
+      "partial": true,
+      "period": {
+        "from": "2026-09-21",
+        "to": "2026-09-25",
+        "label": "21-25/09/2026"
+      },
+      "generated_at": "2026-09-25T17:00:00+07:00",
+      "disclaimer": "Day la tong hop thong tin tham khao tu tin tuc, khong phai khuyen nghi dau tu.",
+      "summary": {
+        "headline": "VN-Index tuan 21-25/9/2026 giam 1,68% ve 1.785,11 diem, khong giu duoc moc 1.800 trong tuan dau tien sau nang hang FTSE; khoi ngoai ban rong ~2.900 ty dong ca hai san.",
+        "vnindex_close": 1785.11,
+        "vnindex_week_pct": -1.68,
+        "foreign_net_week_bn": {
+          "hose": null,
+          "all_markets": -2900
+        }
+      },
+      "days": [],
+      "sector_flows": [
+        {
+          "sector": "Nhom dan dat (theo nhat ky tuan)",
+          "status": "Dan dat",
+          "signal": 1,
+          "tickers": [],
+          "evidence": "Bat dong san (VIC, VHM, VRE) + KCN (BCM, KBC, VGC)",
+          "outlook": ""
+        }
+      ],
+      "watchlist": [
+        {
+          "ticker": "VPB",
+          "sector": "",
+          "signal": "MUA",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "TCB",
+          "sector": "",
+          "signal": "MUA",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "VTP",
+          "sector": "",
+          "signal": "MUA",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "FRT",
+          "sector": "",
+          "signal": "MUA",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "POW",
+          "sector": "",
+          "signal": "MUA",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "NT2",
+          "sector": "",
+          "signal": "MUA",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "QTP",
+          "sector": "",
+          "signal": "MUA",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "DPG",
+          "sector": "",
+          "signal": "MUA",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "SSB",
+          "sector": "",
+          "signal": "THEO DOI",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "PVS",
+          "sector": "",
+          "signal": "THEO DOI",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "PVC",
+          "sector": "",
+          "signal": "THEO DOI",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        },
+        {
+          "ticker": "BSR",
+          "sector": "",
+          "signal": "THEO DOI",
+          "reason": "Ghi trong nhat ky tuan, khong co ly do chi tiet",
+          "week_pct": null
+        }
+      ],
+      "outlook": {
+        "risks": [
+          "SSB giam 5 phien lien tiep (-19,29% tuan); nhom Dau khi -3,78% phien 24/9 theo gia dau the gioi; VN-Index chua lay lai moc 1.800, ap luc chot loi vung 1.845-1.900."
+        ]
+      },
+      "data_quality": [
+        "Nhap lai tu file theo doi tren Drive (BaoCao_ChungKhoan_TheoDoi), chu khong dau, khong co so lieu tung ngay; so lieu lay nguyen van tu nhat ky tuan."
+      ],
+      "sources": [
+        "Vietstock",
+        "24hMoney",
+        "Tinnhanhchungkhoan",
+        "Nguoiduatin (trich FireAnt)"
+      ]
+    }
+  ]
+}

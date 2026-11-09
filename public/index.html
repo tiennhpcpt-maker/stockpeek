@@ -200,6 +200,11 @@
     </section>
 
     <section class="report-panel" data-view="report">
+      <div class="report-modes" role="tablist" aria-label="Loại báo cáo">
+        <button id="reportModeDaily" class="report-mode active" role="tab" aria-selected="true">📋 Hàng ngày</button>
+        <button id="reportModeWeekly" class="report-mode" role="tab" aria-selected="false">📅 Tuần</button>
+      </div>
+      <div id="dailyReportWrap">
       <div class="section-head">
         <h2>📋 Báo cáo hàng ngày</h2>
         <div class="section-head-actions">
@@ -209,6 +214,16 @@
       </div>
       <p class="sector-disclaimer">Tự động tạo lúc 8:30 (bản tin sáng) và 16:00 (cuối phiên) các ngày giao dịch. Bản tin sáng, báo cáo tuần/tháng và phân tích doanh nghiệp (tổng hợp từ email) được bổ sung mỗi ngày.</p>
       <div id="reportContent"></div>
+      </div>
+      <div id="weeklyWrap" hidden>
+        <div class="section-head">
+          <h2>📅 Báo cáo tuần</h2>
+          <div class="section-head-actions">
+            <select id="weeklySelect" class="report-select" aria-label="Chọn tuần"></select>
+          </div>
+        </div>
+        <div id="weeklyContent"></div>
+      </div>
     </section>
 
     <section class="sources-panel" data-view="news">

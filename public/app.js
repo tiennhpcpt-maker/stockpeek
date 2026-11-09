@@ -1232,6 +1232,131 @@ async function addAdminSource() {
   }
 }
 
+// ===================== Báo cáo tuần =====================
+// Dữ liệu: weekly_reports.json (mỗi tuần 1 báo cáo tổng hợp sẵn, GET /api/weekly-reports).
+// Số liệu lấy từ báo chí nên có thể lệch giữa các nguồn — xem mục "Chất lượng dữ liệu".
+let weeklyData = { weeks: [] };
+let weeklyNotice = "";
+
+function wkNum(n, d = 2) {
+  return n == null ? "-" : Number(n).toLocaleString("vi-VN", { minimumFractionDigits: d, maximumFractionDigits: d });
+}
+function wkCls(n) { return n > 0 ? "up" : n < 0 ? "down" : ""; }
+function wkSign(n) { return n > 0 ? "+" : ""; }
+function wkChips(list, cls) {
+  const a = (list || []).filter(Boolean);
+  return a.length ? a.map((t) => `<span class="wk-chip ${cls || ""}">${escapeHtml(t)}</span>`).join("") : '<span class="wk-dim">Không có dữ liệu</span>';
+}
+
+async function refreshWeeklyReports() {
+  const box = document.getElementById("weeklyContent");
+  try {
+    const { data, savedAt } = await fetchWithFallback("weekly", "/api/weekly-reports");
+    weeklyData = data || { weeks: [] };
+    weeklyNotice = fallbackNotice(savedAt, weeklyData.dataSource);
+    const sel = document.getElementById("weeklySelect");
+    const prev = sel.value;
+    sel.innerHTML = weeklyData.weeks
+      .map((w) => `<option value="${escapeHtml(w.week_id)}">Tuần ${escapeHtml((w.period && w.period.label) || w.week_id)}</option>`)
+      .join("");
+    if (prev && weeklyData.weeks.some((w) => w.week_id === prev)) sel.value = prev;
+    renderWeekly();
+  } catch (e) {
+    box.innerHTML = '<div class="empty">Chưa tải được báo cáo tuần.</div>';
+  }
+}
+
+function renderWeekly() {
+  const box = document.getElementById("weeklyContent");
+  const id = document.getElementById("weeklySelect").value;
+  const w = weeklyData.weeks.find((x) => x.week_id === id) || weeklyData.weeks[0];
+  if (!w) { box.innerHTML = '<div class="empty">Chưa có báo cáo tuần nào.</div>'; return; }
+  const S = w.summary || {};
+  const fn = S.foreign_net_week_bn || {};
+  const kpi = (label, val, cls) =>
+    `<div class="report-index"><div class="ri-name">${escapeHtml(label)}</div><div class="ri-value ${cls || ""}" style="${String(val).length > 14 ? "font-size:13px" : ""}">${escapeHtml(val)}</div></div>`;
+  const kpis = [
+    kpi("VN-Index", wkNum(S.vnindex_close)),
+    kpi("Biến động tuần", `${wkSign(S.vnindex_week_pct)}${wkNum(S.vnindex_week_pct)}%`, wkCls(S.vnindex_week_pct)),
+    kpi(fn.hose != null ? "Ngoại HOSE (tuần)" : "Khối ngoại (tuần)", `${wkNum(fn.hose != null ? fn.hose : fn.all_markets, 0)} tỷ`, wkCls(fn.hose != null ? fn.hose : fn.all_markets)),
+    kpi("Hỗ trợ", S.support || "-"),
+    kpi("Kháng cự", S.resistance || "-"),
+  ].join("");
+
+  const days = w.days || [];
+  const dayRows = days.map((d) => {
+    const v = d.vnindex || {};
+    return `<tr><td>${escapeHtml(d.weekday || "")} ${escapeHtml((d.date || "").slice(8))}/${escapeHtml((d.date || "").slice(5, 7))}</td>
+      <td class="num">${wkNum(v.close)}${v.derived ? "*" : ""}</td>
+      <td class="num ${wkCls(v.change)}">${wkSign(v.change)}${wkNum(v.change)}</td>
+      <td class="num ${wkCls(v.pct)}">${wkSign(v.pct)}${wkNum(v.pct)}%</td>
+      <td class="num">${wkNum(d.liquidity_hose_bn, 0)}</td>
+      <td class="num ${wkCls(d.foreign_hose_bn)}">${wkSign(d.foreign_hose_bn)}${wkNum(d.foreign_hose_bn, 0)}</td>
+      <td>${escapeHtml(d.tag || "")}</td></tr>`;
+  }).join("");
+
+  const flows = (w.sector_flows || []).map((x) => {
+    const color = x.signal > 0 ? "var(--up)" : x.signal < 0 ? "var(--down)" : "#d9a400";
+    return `<div class="wk-flow"><span class="wk-dot" style="background:${color}"></span><div>
+      <b>${escapeHtml(x.sector)}</b> <span class="wk-dim">${escapeHtml(x.status || "")}</span><br>${wkChips(x.tickers)}
+      <div class="wk-dim">${escapeHtml(x.evidence || "")}</div>
+      <div class="wk-out">Dự báo: ${escapeHtml(x.outlook || "")}</div></div></div>`;
+  }).join("");
+
+  const wl = (w.watchlist || []).map((i) =>
+    `<tr><td><b>${escapeHtml(i.ticker)}</b></td><td>${escapeHtml(i.sector || "")}</td><td>${escapeHtml(i.signal || "")}</td>
+     <td class="num ${wkCls(i.week_pct)}">${i.week_pct == null ? "-" : wkSign(i.week_pct) + wkNum(i.week_pct) + "%"}</td>
+     <td class="wk-reason">${escapeHtml(i.reason || "")}</td></tr>`).join("");
+
+  const o = w.outlook || {};
+  const li = (a) => (a || []).map((t) => `<li>${escapeHtml(t)}</li>`).join("");
+
+  box.innerHTML = `${weeklyNotice}
+    <div class="report-card"><div class="report-summary"><b>${escapeHtml(S.headline || "")}</b></div><div class="report-indices">${kpis}</div></div>
+    ${days.length ? `<div class="report-card"><h3>Từng ngày trong tuần</h3><div class="wk-scroll"><table class="report-table wk-table">
+      <tr><td></td><td class="num wk-dim">VN-Index</td><td class="num wk-dim">+/-</td><td class="num wk-dim">%</td><td class="num wk-dim">GTGD HOSE (tỷ)</td><td class="num wk-dim">Ngoại HOSE (tỷ)</td><td class="wk-dim">Nhận xét</td></tr>${dayRows}</table></div>
+      <div class="wk-tabs" id="wkDayTabs">${days.map((d, i) => `<button class="wk-tab" data-i="${i}">${escapeHtml(d.weekday || "")} ${escapeHtml((d.date || "").slice(8))}/${escapeHtml((d.date || "").slice(5, 7))}</button>`).join("")}</div>
+      <div id="wkDayDetail"></div></div>` : ""}
+    <div class="report-card"><h3>Dòng tiền theo nhóm ngành</h3>${flows || '<span class="wk-dim">Không có dữ liệu</span>'}</div>
+    ${wl ? `<div class="report-card"><h3>Cổ phiếu theo dõi</h3><div class="wk-scroll"><table class="report-table wk-table">${wl}</table></div></div>` : ""}
+    ${o.base_case || (o.risks && o.risks.length) || (o.actions && o.actions.length) ? `<div class="report-card"><h3>Nhận định &amp; hành động</h3>${o.base_case ? `<p>${escapeHtml(o.base_case)}</p>` : ""}
+      ${o.risks && o.risks.length ? `<b>Rủi ro</b><ul>${li(o.risks)}</ul>` : ""}${o.actions && o.actions.length ? `<b>Hành động</b><ul>${li(o.actions)}</ul>` : ""}</div>` : ""}
+    ${(w.data_quality || []).length ? `<div class="report-card"><h3>Chất lượng dữ liệu</h3><ul class="wk-dq">${li(w.data_quality)}</ul>
+      ${days.length ? '<div class="wk-dim">* số suy ra từ các phiên sau, không phải số công bố trực tiếp.</div>' : ""}</div>` : ""}
+    <p class="sector-disclaimer">${escapeHtml(w.disclaimer || "")}${w.sources && w.sources.length ? "<br>Nguồn: " + escapeHtml(w.sources.join(", ")) : ""}</p>`;
+
+  const showDay = (i) => {
+    const d = days[i]; if (!d) return;
+    document.querySelectorAll("#wkDayTabs .wk-tab").forEach((b) => b.classList.toggle("on", Number(b.dataset.i) === i));
+    const lv = d.levels;
+    document.getElementById("wkDayDetail").innerHTML =
+      `<div class="report-cols"><div><b>Khối ngoại mua ròng</b><div>${wkChips(d.top_foreign_buy, "up")}</div><b>Khối ngoại bán ròng</b><div>${wkChips(d.top_foreign_sell, "down")}</div></div>
+       <div><b>Ngành tăng</b><div>${wkChips(d.sectors_up, "up")}</div><b>Ngành giảm</b><div>${wkChips(d.sectors_down, "down")}</div></div></div>
+       <p><b>Nổi bật:</b> ${escapeHtml((d.notable || []).join("; "))}</p>
+       ${lv ? `<p class="wk-dim">Hỗ trợ: ${escapeHtml(lv.support || "-")} | Kháng cự: ${escapeHtml(lv.resistance || "-")}</p>` : ""}`;
+  };
+  document.querySelectorAll("#wkDayTabs .wk-tab").forEach((b) => (b.onclick = () => showDay(Number(b.dataset.i))));
+  showDay(days.length - 1);
+}
+
+function setReportMode(mode) {
+  const weekly = mode === "weekly";
+  document.getElementById("dailyReportWrap").hidden = weekly;
+  document.getElementById("weeklyWrap").hidden = !weekly;
+  for (const [id, on] of [["reportModeDaily", !weekly], ["reportModeWeekly", weekly]]) {
+    const b = document.getElementById(id);
+    b.classList.toggle("active", on);
+    b.setAttribute("aria-selected", String(on));
+  }
+  try { localStorage.setItem("stockpeek.reportMode", mode); } catch (e) {}
+}
+document.getElementById("reportModeDaily").addEventListener("click", () => setReportMode("daily"));
+document.getElementById("reportModeWeekly").addEventListener("click", () => setReportMode("weekly"));
+document.getElementById("weeklySelect").addEventListener("change", renderWeekly);
+let savedReportMode = "daily";
+try { savedReportMode = localStorage.getItem("stockpeek.reportMode") || "daily"; } catch (e) {}
+setReportMode(savedReportMode === "weekly" ? "weekly" : "daily");
+
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({
     "&": "&amp;",
@@ -1409,8 +1534,10 @@ refreshAllHotNews();
 refreshSectorAnalysis();
 refreshMarketOverview();
 refreshDailyReports();
+refreshWeeklyReports();
 refreshIndices();
 setInterval(refreshDailyReports, 10 * 60 * 1000);
+setInterval(refreshWeeklyReports, 10 * 60 * 1000);
 setInterval(refreshQuotes, QUOTES_INTERVAL_MS);
 setInterval(refreshAllLiveNews, LIVE_NEWS_INTERVAL_MS);
 setInterval(refreshAllHotNews, HOT_NEWS_INTERVAL_MS);
@@ -1453,6 +1580,7 @@ document.addEventListener("visibilitychange", () => {
     refreshMarketOverview();
     refreshSectorAnalysis();
     refreshDailyReports();
+    refreshWeeklyReports();
   }
 });
 

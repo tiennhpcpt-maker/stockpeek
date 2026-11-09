@@ -59,3 +59,4 @@ Không có khái niệm "trọng số" trong app này. Hai cụm logic đáng ch
 - [.claude/docs/date_logic.md](.claude/docs/date_logic.md) — xử lý thời gian: parse `pubDate` RSS, múi giờ VN (+07:00), quy đổi cron UTC ↔ giờ VN.
 - [.claude/docs/auth_and_admin.md](.claude/docs/auth_and_admin.md) — hệ thống đăng nhập, session, mô hình phân quyền admin.
 - [.claude/docs/news_pipeline.md](.claude/docs/news_pipeline.md) — pipeline lấy tin RSS, gộp nhóm, xếp hạng Tin nóng/Tin trực tiếp.
+- [.claude/docs/weekly_report.md](.claude/docs/weekly_report.md) — báo cáo tuần: `weekly_reports.json`, tab Tuần, cách tác vụ dòng tiền ngành + Excel đọc lại.

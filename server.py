@@ -1028,6 +1028,9 @@ DAILY_REPORTS_PATH = "daily_reports.json"
 DAILY_ANALYSIS_PATH = "daily_analysis.json"
 DAILY_REPORTS_KEEP = 60          # số bản báo cáo tự động lưu lại
 DAILY_ANALYSIS_KEEP = 60
+# Báo cáo tuần (đã tổng hợp sẵn, đẩy bằng git như daily_analysis.json) — server chỉ đọc.
+WEEKLY_REPORTS_PATH = "weekly_reports.json"
+WEEKLY_REPORTS_API_LIMIT = 26
 DAILY_REPORTS_API_LIMIT = 20     # số bản báo cáo tự động trả về cho web
 DAILY_ANALYSIS_API_LIMIT = 60    # số bài phân tích trả về cho web
 DAILY_REPORT_SLOTS = [           # (phiên, giờ, phút, hết khung giờ bù — giờ VN)
@@ -1285,6 +1288,11 @@ def load_daily_reports():
     analyses = _load_report_list(DAILY_ANALYSIS_PATH)[:DAILY_ANALYSIS_API_LIMIT]
     return {"reports": reports, "analyses": analyses,
             "dataSource": _data_source(DAILY_REPORTS_PATH, DAILY_ANALYSIS_PATH)}
+
+
+def load_weekly_reports():
+    items = _load_report_list(WEEKLY_REPORTS_PATH)[:WEEKLY_REPORTS_API_LIMIT]
+    return {"weeks": items, "dataSource": _data_source(WEEKLY_REPORTS_PATH)}
 
 
 MARKET_VIEW_MAX_AGE_DAYS = 4  # bản tin cũ hơn thế thì không coi là "nhận định hiện tại"
@@ -1683,6 +1691,13 @@ class Handler(BaseHTTPRequestHandler):
         if parsed.path == "/api/daily-reports":
             try:
                 self._send_json({"ok": True, "data": load_daily_reports()})
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
+        if parsed.path == "/api/weekly-reports":
+            try:
+                self._send_json({"ok": True, "data": load_weekly_reports()})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return

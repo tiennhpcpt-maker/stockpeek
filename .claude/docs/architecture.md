@@ -14,6 +14,9 @@ market_overview.json    # NGỪNG DÙNG (11/2026) — server không đọc nữa
 daily_reports.json      # báo cáo hàng ngày — server tự ghi 8:30 + 16:00 (luồng nền, không AI)
 daily_analysis.json     # bài phân tích do Claude viết — scheduled task máy cá nhân push bằng git
 scripts/add_daily_analysis.py  # gộp 1 bài phân tích vào daily_analysis.json
+weekly_reports.json     # báo cáo tuần tổng hợp sẵn — đẩy bằng git, server chỉ đọc (xem weekly_report.md)
+scripts/add_weekly_report.py   # gộp 1 báo cáo tuần vào weekly_reports.json
+scripts/weekly_to_sheet.py     # đổi báo cáo tuần sang JSON cho file theo dõi Excel/Sheets
 .github/workflows/
   update-market-overview.yml   # NGỪNG DÙNG — đã tắt trên GitHub (xem "Phân vai 3 tab")
   update-sector-analysis.yml   # NGỪNG DÙNG — đã tắt trên GitHub
