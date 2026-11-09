@@ -2,6 +2,104 @@
   "items": [
     {
       "date": "2026-11-09",
+      "session": "afternoon",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán chiều (email)",
+      "generated_at": "2026-11-09T18:44:10+07:00",
+      "title": "Bản tin chiều 09/11: VN-Index -0,64% còn 1.714,32, ngoại bán ròng ~806 tỷ, kịch bản cơ sở thiên tiêu cực quanh 1.700",
+      "summary": "VN-Index giảm 11,04 điểm (-0,64%) còn 1.714,32, đáy phiên 1.701,9 (giảm hơn 21 điểm lúc thấp nhất) nên có lực bắt đáy kéo lại nhưng còn dè dặt; độ rộng tiêu cực (304 tăng/354 giảm). Khối ngoại quay lại bán ròng HOSE khoảng 806 tỷ, đảo chiều mạnh so với mua ròng 394 tỷ phiên 06/11, thanh khoản co hẹp. Dữ liệu nghiêng về kịch bản cơ sở thiên tiêu cực cho phiên 10/11, chỉ số dưới MA10 (~1.740), hỗ trợ tâm lý 1.700. Đây là bản nhanh: chưa quét lại dòng tiền theo mã và chưa có email TCBS phiên 09/11.",
+      "key_findings": [
+        "VN-Index 1.714,32 (-0,64%), HNX-Index 255,24 (-0,58%); VN30 chỉ 7 mã tăng/20 mã giảm.",
+        "Khối ngoại bán ròng HOSE ~805-807 tỷ, toàn thị trường ~-823 tỷ; top bán ròng HPG ~130, VIC ~90, PNJ ~84, FPT ~80-84 tỷ; top mua ròng VPB ~85, MBB ~61, TCB ~33 tỷ.",
+        "Tiêu dùng thiết yếu yếu nhất (-1,11%: MCH -2,93%, VNM -1,56%, MSN -2,05%); chứng khoán giảm mạnh (VND -3,34%, VIX -2,62%, SSI -2,45%, VCI -2,48%).",
+        "GTGD lệch giữa nguồn: Vietstock khớp lệnh hơn 10.150 tỷ, CafeF 13.800-14.000 tỷ (có thể gồm thỏa thuận); đều thấp hơn phiên 06/11.",
+        "Ba mã nổi bật từ bản sáng bị ảnh hưởng: HPG bị bán ròng ~130 tỷ, VIC ~90 tỷ, MSN -2,05%; điều kiện giải ngân (VN-Index > 1.740) chưa đáp ứng."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 10/11 (suy luận từ số liệu)",
+          "items": [
+            "Tích cực: giữ trên 1.700 và hồi lên 1.725-1.740, thanh khoản tăng trở lại, ngoại ngừng bán ròng.",
+            "Cơ sở: dao động 1.700-1.725, thanh khoản thấp.",
+            "Tiêu cực: thủng 1.700 / đáy phiên 1.701,9, hướng 1.690 rồi 1.680; ngoại tiếp tục bán ròng.",
+            "Dữ liệu đang nghiêng về: cơ sở thiên tiêu cực, thận trọng quanh mốc 1.700."
+          ]
+        },
+        {
+          "title": "Đối chiếu nguồn",
+          "items": [
+            "VN-Index khớp 1.714 ở Vietstock và CafeF; ngoại ròng HOSE khớp ~806 tỷ (CafeF, Vietstock, Tin nhanh chứng khoán).",
+            "GTGD lệch lớn (10.150 so với ~14.000 tỷ), khả năng do khớp lệnh so với gồm thỏa thuận; chưa kết luận."
+          ]
+        },
+        {
+          "title": "5 phiên gần nhất",
+          "items": [
+            "03/11 1.699,62 | 04/11 1.733,02 | 05/11 1.740,73 | 06/11 1.725,36 (ngoại +394 tỷ) | 09/11 1.714,32 (-0,64%; ngoại -806 tỷ)."
+          ]
+        },
+        {
+          "title": "Hạn chế của bản nhanh",
+          "items": [
+            "Không có số đóng cửa HPG, MSN trong nguồn đọc được; chưa có hỗ trợ/kháng cự cuối phiên từ nguồn; dòng tiền theo mã phiên 09/11 chưa cập nhật."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Chứng khoán",
+          "view": "Nhóm chứng khoán giảm mạnh phiên 09/11: VND -3,34%, VIX -2,62%, SSI -2,45%, VCI -2,48%; bản tin khuyến nghị hạn chế mở mới nhóm này."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "VHM giảm 2,74% và nằm trong nhóm kéo chỉ số, VIC gần đứng giá cuối phiên nhưng bị ngoại bán ròng ~90 tỷ."
+        },
+        {
+          "name": "Ngân hàng",
+          "view": "Nhóm phân hóa: VPB, ACB, BID tăng, STB -2,14%, HDB -1,33%; ngoại mua ròng VPB ~85 tỷ, MBB ~61 tỷ, TCB ~33 tỷ."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "Tiêu dùng thiết yếu yếu nhất thị trường (-1,11%): VNM -1,56%, MSN -2,05%."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG bị khối ngoại bán ròng ~130 tỷ, đứt chuỗi mua ròng 3 phiên nếu dữ liệu theo mã xác nhận."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "PNJ nằm trong top bán ròng của khối ngoại phiên 09/11 (~84 tỷ)."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "HPG",
+          "note": "Điểm 5,5 từ bản sáng; ngoại bán ròng ~130 tỷ phiên 09/11, điều kiện dừng đã chạm; chưa có giá đóng cửa trong nguồn."
+        },
+        {
+          "ticker": "MSN",
+          "note": "Điểm 5,0 từ bản sáng; -2,05% phiên 09/11; giữ ngưỡng 65.000-67.000đ."
+        },
+        {
+          "ticker": "VIC",
+          "note": "Điểm 3,5 từ bản sáng; ngoại bán ròng ~90 tỷ, lũy kế -318 tỷ/10 phiên (bản sáng) xấu thêm."
+        }
+      ],
+      "action_items": [
+        "Chưa giải ngân HPG/MSN; chỉ cân nhắc lại khi VN-Index đóng cửa trên 1.740 và ngoại quay lại mua ròng; giảm tỷ trọng nếu thủng 1.700 với thanh khoản tăng.",
+        "Đối chiếu dòng ngoại theo mã phiên 09/11 (HPG, MSN, VIC, VHM) khi CafeF cập nhật và email TCBS 'Cơ hội đầu tư' 09/11 để chấm điểm lại cho bản sáng 10/11.",
+        "Hạn chế mở mới nhóm chứng khoán (VND, VIX, SSI giảm 2,5-3,3%) và tiếp tục tránh FPT, VCB, MBB theo bản sáng."
+      ],
+      "sources": [
+        "Vietstock",
+        "CafeF",
+        "Tin nhanh chứng khoán",
+        "Bản tin sáng 09/11"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-09",
       "session": "midday",
       "kind": "bulletin",
       "origin": "Bản tin chứng khoán trưa (email)",
