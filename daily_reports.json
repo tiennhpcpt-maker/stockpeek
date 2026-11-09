@@ -3,33 +3,23 @@
     {
       "date": "2026-11-09",
       "session": "morning",
-      "generated_at": "2026-11-09T08:30:09+07:00",
+      "generated_at": "2026-11-09T14:39:19+07:00",
       "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
       "hot_news": [
         {
-          "title": "SSI: Chứng khoán có thể tạo đáy ngắn hạn trong tháng này",
-          "link": "https://24hmoney.vn/news/ssi-chung-khoan-co-the-tao-day-ngan-han-trong-thang-nay-c1a2855913.html",
-          "pubDate": "Mon, 09 Nov 2026 08:12:29 +0700",
+          "title": "Lãnh đạo và người thân mua bán cổ phiếu gì trong tuần đầu tháng 11?",
+          "link": "https://24hmoney.vn/news/lanh-dao-va-nguoi-than-mua-ban-co-phieu-gi-trong-tuan-dau-thang-11-c1a2856136.html",
+          "pubDate": "Mon, 09 Nov 2026 14:19:41 +0700",
           "sourceCount": 2,
           "sources": [
             "24hMoney",
-            "VnExpress Kinh doanh"
+            "MarketTimes Chứng khoán"
           ]
         },
         {
-          "title": "5 cổ phiếu lọt \"tầm ngắm\" trước phiên 9/11",
-          "link": "https://24hmoney.vn/news/5-co-phieu-lot-tam-ngam-truoc-phien-9-11-c1a2855813.html",
-          "pubDate": "Mon, 09 Nov 2026 08:00:00 +0700",
-          "sourceCount": 2,
-          "sources": [
-            "24hMoney",
-            "Vietstock"
-          ]
-        },
-        {
-          "title": "09/11: Đọc gì trước giờ giao dịch chứng khoán?",
-          "link": "https://24hmoney.vn/news/09-11-doc-gi-truoc-gio-giao-dich-chung-khoan-c1a2855887.html",
-          "pubDate": "Mon, 09 Nov 2026 07:43:09 +0700",
+          "title": "MCH, PVD, BSR có gì hấp dẫn?",
+          "link": "http://vietstock.vn/2026/11/mch-pvd-bsr-co-gi-hap-dan-145-1512838.htm",
+          "pubDate": "Mon, 09 Nov 2026 11:36:58 +0700",
           "sourceCount": 2,
           "sources": [
             "24hMoney",
@@ -37,9 +27,9 @@
           ]
         },
         {
-          "title": "Gần 90 CTCK nhưng “miếng bánh” thuộc về số ít: Thị trường đang có quá nhiều “zombie”?",
-          "link": "https://markettimes.vn/gan-90-ctck-nhung-mieng-banh-thuoc-ve-so-it-thi-truong-dang-co-qua-nhieu-zombie-134115.html",
-          "pubDate": "Sun, 8 Nov 2026 23:00:01 +0700",
+          "title": "Thị trường ngày 9/11: Vàng hồi phục mạnh, dầu tiếp tục giảm sâu, nông sản phân hóa",
+          "link": "https://stockbiz.vn/tin-tuc/thi-truong-ngay-911-vang-hoi-phuc-manh-dau-tiep-tuc-giam-sau-nong-san-phan-hoa/42697714",
+          "pubDate": "Mon, 09 Nov 2026 04:35:00 GMT",
           "sourceCount": 2,
           "sources": [
             "MarketTimes Chứng khoán",
@@ -47,49 +37,64 @@
           ]
         },
         {
-          "title": "Góc nhìn tuần 09-13/11: Chưa phải lúc mua dàn trải",
-          "link": "http://vietstock.vn/2026/11/goc-nhin-tuan-09-1311-chua-phai-luc-mua-dan-trai-145-1512780.htm",
-          "pubDate": "Sun, 08 Nov 2026 20:32:00 +0700",
+          "title": "Cổ phiếu đáng chú ý ngày 9/11: MSN, NLG, TCH",
+          "link": "https://stockbiz.vn/tin-tuc/co-phieu-dang-chu-y-ngay-911-msn-nlg-tch/42695896",
+          "pubDate": "Mon, 09 Nov 2026 03:34:00 GMT",
           "sourceCount": 2,
           "sources": [
-            "24hMoney",
+            "Stockbiz Thị trường",
             "Vietstock"
           ]
         },
         {
-          "title": "Thị trường chứng quyền tuần 09-13/11/2026: Sự bi quan vẫn còn",
-          "link": "http://vietstock.vn/2026/11/thi-truong-chung-quyen-tuan-09-13112026-su-bi-quan-van-con-1636-1512754.htm",
-          "pubDate": "Sun, 08 Nov 2026 20:00:00 +0700",
+          "title": "Tự doanh gom mạnh VPB, khối ngoại bán ròng kỷ lục: Thị trường đang phát tín hiệu gì?",
+          "link": "https://stockbiz.vn/tin-tuc/tu-doanh-gom-manh-vpb-khoi-ngoai-ban-rong-ky-luc-thi-truong-dang-phat-tin-hieu-gi/42692891",
+          "pubDate": "Mon, 09 Nov 2026 02:17:00 GMT",
           "sourceCount": 2,
           "sources": [
-            "24hMoney",
-            "Vietstock"
+            "Stockbiz Thị trường",
+            "Tuổi Trẻ Chứng khoán"
           ]
         },
         {
-          "title": "Vietstock Weekly 09-13/11/2026: Biến động khó lường?",
-          "link": "https://24hmoney.vn/news/vietstock-weekly-09-13-11-2026-bien-dong-kho-luong-c1a2855804.html",
-          "pubDate": "Sun, 08 Nov 2026 18:01:47 +0700",
-          "sourceCount": 2,
+          "title": "Government's EV targets expected to be reduced this week",
+          "link": "https://www.bbc.co.uk/news/articles/cqkg5g2970epo?at_medium=RSS&at_campaign=rss",
+          "pubDate": "Mon, 09 Nov 2026 07:20:17 GMT",
+          "sourceCount": 1,
           "sources": [
-            "24hMoney",
-            "Vietstock"
+            "BBC Business"
           ]
         },
         {
-          "title": "Bộ Công Thương muốn miền Bắc giảm 3.000 MW dùng điện giờ cao điểm",
-          "link": "https://vnexpress.net/bo-cong-thuong-muon-mien-bac-giam-3-000-mw-dung-dien-gio-cao-diem-5142008.html",
-          "pubDate": "Sun, 08 Nov 2026 09:38:43 +0700",
-          "sourceCount": 2,
+          "title": "Thị trường hiện tại khá nhạy cảm với 2 yếu tố lãi suất FED và giá dầu cao",
+          "link": "https://24hmoney.vn/news/thi-truong-hien-tai-kha-nhay-cam-voi-2-yeu-to-lai-suat-fed-va-gia-dau-cao-c30a2856063.html",
+          "pubDate": "Mon, 09 Nov 2026 14:13:33 +0700",
+          "sourceCount": 1,
           "sources": [
-            "Dân Trí Kinh doanh",
-            "VnExpress Kinh doanh"
+            "24hMoney"
+          ]
+        },
+        {
+          "title": "Lộ diện những cổ phiếu được DCDS mạnh tay giải ngân trong tháng 10?",
+          "link": "https://24hmoney.vn/news/lo-dien-nhung-co-phieu-duoc-dcds-manh-tay-giai-ngan-trong-thang-10-c1a2856140.html",
+          "pubDate": "Mon, 09 Nov 2026 14:07:28 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "24hMoney"
           ]
         }
       ],
       "mentioned_tickers": [
         {
-          "ticker": "SSI",
+          "ticker": "PVD",
+          "count": 1
+        },
+        {
+          "ticker": "MSN",
+          "count": 1
+        },
+        {
+          "ticker": "VPB",
           "count": 1
         }
       ],
@@ -320,7 +325,7 @@
         "summary": "VN-Index giảm 15,37 điểm (-0,88%) phiên 06/11, đạt 1.725,36 điểm, giá trị giao dịch 18.799,44 tỷ đồng. Nhóm ngành mạnh nhất: Chứng khoán (bình quân 1,22%, 4/6 mã tăng); yếu nhất: Thép (-1,85%). Tăng mạnh: VND (+5,28%), DXG (+2,33%), MSN (+1,96%). Giảm mạnh: NKG (-2,80%), DGW (-2,41%), SZC (-1,93%)."
       },
       "market_from": "2026-11-06",
-      "summary": "Phiên trước: VN-Index giảm 15,37 điểm (-0,88%) phiên 06/11, đạt 1.725,36 điểm, giá trị giao dịch 18.799,44 tỷ đồng. Nhóm ngành mạnh nhất: Chứng khoán (bình quân 1,22%, 4/6 mã tăng); yếu nhất: Thép (-1,85%). Tăng mạnh: VND (+5,28%), DXG (+2,33%), MSN (+1,96%). Giảm mạnh: NKG (-2,80%), DGW (-2,41%), SZC (-1,93%). Tin được nhiều nguồn đưa nhất: \"SSI: Chứng khoán có thể tạo đáy ngắn hạn trong tháng này\" (2 nguồn)."
+      "summary": "Phiên trước: VN-Index giảm 15,37 điểm (-0,88%) phiên 06/11, đạt 1.725,36 điểm, giá trị giao dịch 18.799,44 tỷ đồng. Nhóm ngành mạnh nhất: Chứng khoán (bình quân 1,22%, 4/6 mã tăng); yếu nhất: Thép (-1,85%). Tăng mạnh: VND (+5,28%), DXG (+2,33%), MSN (+1,96%). Giảm mạnh: NKG (-2,80%), DGW (-2,41%), SZC (-1,93%). Tin được nhiều nguồn đưa nhất: \"Lãnh đạo và người thân mua bán cổ phiếu gì trong tuần đầu tháng 11?\" (2 nguồn)."
     },
     {
       "date": "2026-11-06",
