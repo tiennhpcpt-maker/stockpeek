@@ -1,6 +1,328 @@
 {
   "items": [
     {
+      "date": "2026-11-09",
+      "session": "morning",
+      "generated_at": "2026-11-09T08:30:09+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "SSI: Chứng khoán có thể tạo đáy ngắn hạn trong tháng này",
+          "link": "https://24hmoney.vn/news/ssi-chung-khoan-co-the-tao-day-ngan-han-trong-thang-nay-c1a2855913.html",
+          "pubDate": "Mon, 09 Nov 2026 08:12:29 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "5 cổ phiếu lọt \"tầm ngắm\" trước phiên 9/11",
+          "link": "https://24hmoney.vn/news/5-co-phieu-lot-tam-ngam-truoc-phien-9-11-c1a2855813.html",
+          "pubDate": "Mon, 09 Nov 2026 08:00:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "09/11: Đọc gì trước giờ giao dịch chứng khoán?",
+          "link": "https://24hmoney.vn/news/09-11-doc-gi-truoc-gio-giao-dich-chung-khoan-c1a2855887.html",
+          "pubDate": "Mon, 09 Nov 2026 07:43:09 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Gần 90 CTCK nhưng “miếng bánh” thuộc về số ít: Thị trường đang có quá nhiều “zombie”?",
+          "link": "https://markettimes.vn/gan-90-ctck-nhung-mieng-banh-thuoc-ve-so-it-thi-truong-dang-co-qua-nhieu-zombie-134115.html",
+          "pubDate": "Sun, 8 Nov 2026 23:00:01 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Góc nhìn tuần 09-13/11: Chưa phải lúc mua dàn trải",
+          "link": "http://vietstock.vn/2026/11/goc-nhin-tuan-09-1311-chua-phai-luc-mua-dan-trai-145-1512780.htm",
+          "pubDate": "Sun, 08 Nov 2026 20:32:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Thị trường chứng quyền tuần 09-13/11/2026: Sự bi quan vẫn còn",
+          "link": "http://vietstock.vn/2026/11/thi-truong-chung-quyen-tuan-09-13112026-su-bi-quan-van-con-1636-1512754.htm",
+          "pubDate": "Sun, 08 Nov 2026 20:00:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Vietstock Weekly 09-13/11/2026: Biến động khó lường?",
+          "link": "https://24hmoney.vn/news/vietstock-weekly-09-13-11-2026-bien-dong-kho-luong-c1a2855804.html",
+          "pubDate": "Sun, 08 Nov 2026 18:01:47 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Bộ Công Thương muốn miền Bắc giảm 3.000 MW dùng điện giờ cao điểm",
+          "link": "https://vnexpress.net/bo-cong-thuong-muon-mien-bac-giam-3-000-mw-dung-dien-gio-cao-diem-5142008.html",
+          "pubDate": "Sun, 08 Nov 2026 09:38:43 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        }
+      ],
+      "mentioned_tickers": [
+        {
+          "ticker": "SSI",
+          "count": 1
+        }
+      ],
+      "title": "Bản tin sáng 09/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1725.36,
+            "change": -15.37,
+            "changePct": -0.88,
+            "tradingValue": 18799.44,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1846.39,
+            "change": -18.84,
+            "changePct": -1.01,
+            "tradingValue": 9153.72,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 256.73,
+            "change": 0.12,
+            "changePct": 0.05,
+            "tradingValue": 1135.81,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 121.75,
+            "change": -0.73,
+            "changePct": -0.6,
+            "tradingValue": 472.82,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": 1.22,
+            "up": 4,
+            "down": 1,
+            "total": 6,
+            "leader": {
+              "ticker": "VND",
+              "changePct": 5.28
+            }
+          },
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": 1.18,
+            "up": 3,
+            "down": 0,
+            "total": 3,
+            "leader": {
+              "ticker": "MSN",
+              "changePct": 1.96
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.38,
+            "up": 3,
+            "down": 5,
+            "total": 8,
+            "leader": {
+              "ticker": "STB",
+              "changePct": 1.16
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -0.43,
+            "up": 2,
+            "down": 4,
+            "total": 6,
+            "leader": {
+              "ticker": "DXG",
+              "changePct": 2.33
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": -0.98,
+            "up": 0,
+            "down": 4,
+            "total": 4,
+            "leader": {
+              "ticker": "BCM",
+              "changePct": -0.13
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": -1.05,
+            "up": 0,
+            "down": 4,
+            "total": 4,
+            "leader": {
+              "ticker": "GAS",
+              "changePct": -0.67
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -1.38,
+            "up": 0,
+            "down": 4,
+            "total": 4,
+            "leader": {
+              "ticker": "PNJ",
+              "changePct": -0.66
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": -1.85,
+            "up": 0,
+            "down": 3,
+            "total": 3,
+            "leader": {
+              "ticker": "HSG",
+              "changePct": -1.36
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "VND",
+              "last": 14950,
+              "changePct": 5.28,
+              "volume": 4045800
+            },
+            {
+              "ticker": "DXG",
+              "last": 11000,
+              "changePct": 2.33,
+              "volume": 3162740
+            },
+            {
+              "ticker": "MSN",
+              "last": 73000,
+              "changePct": 1.96,
+              "volume": 638810
+            },
+            {
+              "ticker": "VIX",
+              "last": 13350,
+              "changePct": 1.91,
+              "volume": 9387810
+            },
+            {
+              "ticker": "PDR",
+              "last": 11750,
+              "changePct": 1.73,
+              "volume": 732540
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "NKG",
+              "last": 12150,
+              "changePct": -2.8,
+              "volume": 781580
+            },
+            {
+              "ticker": "DGW",
+              "last": 38500,
+              "changePct": -2.41,
+              "volume": 106730
+            },
+            {
+              "ticker": "SZC",
+              "last": 20350,
+              "changePct": -1.93,
+              "volume": 126370
+            },
+            {
+              "ticker": "VHM",
+              "last": 62100,
+              "changePct": -1.9,
+              "volume": 519210
+            },
+            {
+              "ticker": "HCM",
+              "last": 23550,
+              "changePct": -1.87,
+              "volume": 525440
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 13350,
+              "changePct": 1.91,
+              "volume": 9387810
+            },
+            {
+              "ticker": "VND",
+              "last": 14950,
+              "changePct": 5.28,
+              "volume": 4045800
+            },
+            {
+              "ticker": "DXG",
+              "last": 11000,
+              "changePct": 2.33,
+              "volume": 3162740
+            },
+            {
+              "ticker": "SSI",
+              "last": 20400,
+              "changePct": 0.0,
+              "volume": 3115840
+            },
+            {
+              "ticker": "NVL",
+              "last": 10300,
+              "changePct": -1.44,
+              "volume": 2859240
+            }
+          ]
+        },
+        "summary": "VN-Index giảm 15,37 điểm (-0,88%) phiên 06/11, đạt 1.725,36 điểm, giá trị giao dịch 18.799,44 tỷ đồng. Nhóm ngành mạnh nhất: Chứng khoán (bình quân 1,22%, 4/6 mã tăng); yếu nhất: Thép (-1,85%). Tăng mạnh: VND (+5,28%), DXG (+2,33%), MSN (+1,96%). Giảm mạnh: NKG (-2,80%), DGW (-2,41%), SZC (-1,93%)."
+      },
+      "market_from": "2026-11-06",
+      "summary": "Phiên trước: VN-Index giảm 15,37 điểm (-0,88%) phiên 06/11, đạt 1.725,36 điểm, giá trị giao dịch 18.799,44 tỷ đồng. Nhóm ngành mạnh nhất: Chứng khoán (bình quân 1,22%, 4/6 mã tăng); yếu nhất: Thép (-1,85%). Tăng mạnh: VND (+5,28%), DXG (+2,33%), MSN (+1,96%). Giảm mạnh: NKG (-2,80%), DGW (-2,41%), SZC (-1,93%). Tin được nhiều nguồn đưa nhất: \"SSI: Chứng khoán có thể tạo đáy ngắn hạn trong tháng này\" (2 nguồn)."
+    },
+    {
       "date": "2026-11-06",
       "session": "afternoon",
       "generated_at": "2026-11-06T16:00:21+07:00",
