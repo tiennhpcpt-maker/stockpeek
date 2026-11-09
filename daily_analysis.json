@@ -1,6 +1,126 @@
 {
   "items": [
     {
+      "date": "2026-11-09",
+      "session": "midday",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán trưa (email)",
+      "generated_at": "2026-11-09T13:51:38+07:00",
+      "title": "Bản tin trưa 09/11: VN-Index dưới MA10, ngoại mua ròng trở lại, kịch bản cơ sở thận trọng",
+      "summary": "VN-Index giảm 0,88% (-15,37 điểm) còn 1.725,36 ở phiên tham chiếu 06/11, tuần giảm thứ hai liên tiếp (-0,93%), độ rộng yếu (101 tăng/212 giảm) và chỉ số nằm dưới MA10 (~1.740). Điểm sáng là khối ngoại mua ròng HOSE khoảng 260-394 tỷ, phiên mua ròng đầu tiên sau 10 phiên bán ròng, cùng nhịp hồi nhẹ của chứng khoán Mỹ. Dữ liệu nghiêng về kịch bản cơ sở, thiên thận trọng, với hỗ trợ 1.690-1.700 và kháng cự 1.740-1.760.",
+      "key_findings": [
+        "Phiên 06/11: FPT -3,97%, VHM -1,9%, VIC -1,47%, HPG -1,4%; MSN +1,96%, VND +4,58%, VIX +2,29%.",
+        "Top mua ròng HOSE: KDH ~171, VND ~99, VIX ~93, MSN ~86, VIC ~75 tỷ; top bán ròng: FPT ~151, VCB ~111, MBB ~44 tỷ.",
+        "Cả tuần mọi nhóm ngành đều giảm: nguyên vật liệu -4,07%, CNTT -3,7%, năng lượng -3,7%, BĐS -1,64%, tài chính -1,57%.",
+        "Mỹ 06/11: Nasdaq +1,09%, S&P 500 +0,31%, Dow -0,46%; việc làm tháng 10 +165.000 (dự báo 59.000); Brent ~98,3 USD, tuần -17%.",
+        "Top 3 mã nổi bật giữ nguyên: HPG 5,5 điểm, MSN 5,0 điểm, VIC 3,5 điểm (HDB cũng 3,5)."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản đầu tuần 09/11",
+          "items": [
+            "Tích cực: vượt và giữ trên 1.740, hướng 1.750-1.760 rồi 1.775-1.780; GTGD trên 16.000 tỷ; ngoại tiếp tục mua ròng.",
+            "Cơ sở: dao động 1.700-1.740; thanh khoản 14.000-16.000 tỷ.",
+            "Tiêu cực: thủng 1.690-1.700 hướng 1.680, sâu hơn 1.655; ngoại bán ròng trở lại."
+          ]
+        },
+        {
+          "title": "Đồng thuận nguồn & kỹ thuật",
+          "items": [
+            "GTGD HOSE 06/11 lệch giữa các nguồn: TCBS ~18.800 tỷ, CafeF ~15.200 tỷ, 24hMoney ~15.135 tỷ; lấy ~15.200 tỷ làm cơ sở.",
+            "Ngoại ròng HOSE cùng dấu mua ròng nhưng độ lệch lớn: TCBS trên 370 tỷ, CafeF/Vietcap 394 tỷ, VnEconomy ~260 tỷ.",
+            "Kỹ thuật: MA5 ~1.722, MA10 ~1.740; MBS hỗ trợ 1.693-1.700, kháng cự 1.775-1.780; KBS biên 1.690-1.780."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Tỷ giá trung tâm 06/11: 25.615 (-8).",
+            "Mỹ phiên 05/11 giảm sâu (S&P -4,36%, Dow -3,44%, Nasdaq -5,52%), phiên 06/11 hồi nhẹ.",
+            "Brent 98,32 USD, WTI 90,83 USD (06/11).",
+            "Xuất khẩu tháng 10 +51,43% (64,67 tỷ USD), xuất siêu 7,31 tỷ USD; VSDC ghi nhận 252.000 tài khoản mới tháng 10."
+          ]
+        },
+        {
+          "title": "Tin doanh nghiệp",
+          "items": [
+            "TCBS khuyến nghị VHM Nắm giữ (Q3 LNST mẹ 23.146 tỷ, +453% YoY).",
+            "BSR nâng kế hoạch LNST 2026 từ 2.162 lên 18.579 tỷ.",
+            "GDA lên HoSE ngày 12/11 (giá tham chiếu 12.000đ).",
+            "Tuần 09-13/11 có khoảng 26-27 doanh nghiệp chốt quyền cổ tức tiền mặt."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Ngân hàng",
+          "view": "Khối ngoại vẫn bán ròng nhóm ngân hàng: phiên 06/11 VCB -111 tỷ, MBB -44 tỷ; MBB bán ròng 653 tỷ trong 5 phiên, VPB -100 tỷ/5 phiên. HDB có 1 phiên mua ròng +21,7 tỷ nhưng vẫn -197 tỷ trong 10 phiên."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "VHM giảm 1,9% phiên 06/11 và -10% trong 1 tháng dù Q3 LNST mẹ 23.146 tỷ (+453% YoY, TCBS khuyến nghị Nắm giữ); VIC giảm 1,47%, ngoại mua ròng 2 phiên +129 tỷ nhưng -318 tỷ trong 10 phiên. Cả tuần nhóm BĐS giảm 1,64%."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "VND tăng 4,58% và VIX tăng 2,29% phiên 06/11, cùng nằm trong top mua ròng (VND ~99 tỷ, VIX ~93 tỷ); SSI +5,7%/1 tuần nhưng ngoại vẫn -241 tỷ/10 phiên. Dữ liệu ngoại theo mã còn trễ, độ tin cậy chưa cao."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG giảm 1,4% phiên 06/11 nhưng ngoại mua ròng 3 phiên đến 05/11 (+296 tỷ), LNST Q3 +106% YoY, được chấm cao nhất 5,5 điểm. Nhóm nguyên vật liệu giảm 4,07% cả tuần."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "Nhóm năng lượng giảm 3,7% cả tuần khi Brent giảm khoảng 17% trong tuần về ~98,3 USD. BSR nâng kế hoạch LNST 2026 từ 2.162 lên 18.579 tỷ; DPM bị bán ròng nhẹ (-8,9 tỷ/5 phiên)."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN tăng 1,96% phiên 06/11 và là mã được ngoại mua ròng nổi bật: +669,8 tỷ/10 phiên (8/10 phiên mua, số liệu đến 03/11), phiên 06/11 +85,7 tỷ theo tin. Đà giá 1 tuần +2,74% nhưng 1 tháng vẫn -3,91%."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "HPG",
+          "note": "5,5 điểm (dòng tiền 1,5/KQKD 2/đà giá 2). Giá 21.200 (06/11); ngoại mua ròng 3 phiên +296 tỷ, LNST Q3 +106% YoY. Theo dõi khi VN-Index đóng cửa trên 1.740, giữ vùng 20.000-20.500; dừng nếu thủng 20.000 hoặc ngoại bán ròng."
+        },
+        {
+          "ticker": "MSN",
+          "note": "5,0 điểm (2/2/1). Giá 71.300 (09/11 intraday); ngoại +669,8 tỷ/10 phiên. Giữ trên 65.000-67.000; dừng nếu thủng 65.000."
+        },
+        {
+          "ticker": "VIC",
+          "note": "3,5 điểm (0,5/2/1). Giá 234.000 (04/11, giá cũ); KQKD Q3 đột biến nhưng ngoại -318 tỷ/10 phiên. Vùng 225.000-240.000; giảm ưu tiên nếu thủng 225.000."
+        },
+        {
+          "ticker": "HDB",
+          "note": "Dự bị, 3,5 điểm; giá 22.500 (06/11), ngoại 1 phiên mua ròng +21,7 tỷ nhưng -197 tỷ/10 phiên."
+        },
+        {
+          "ticker": "PVT",
+          "note": "Dự bị, 3,0 điểm; giá 20.800 (03/11), -10,34%/1 tuần."
+        },
+        {
+          "ticker": "FPT",
+          "note": "1,0 điểm; giảm 3,97% phiên 06/11, ngoại bán ròng 10 phiên (-1.488 tỷ), sát/chạm đáy 52 tuần. Hạn chế tăng tỷ trọng."
+        }
+      ],
+      "action_items": [
+        "Ưu tiên 1: chỉ thăm dò HPG/MSN khi VN-Index đóng cửa trên 1.740 với GTGD trên 16.000 tỷ và ngoại tiếp tục mua ròng; hạ tỷ trọng nếu thủng 1.690-1.700.",
+        "Ưu tiên 2: cập nhật dòng ngoại 06/11 theo mã cho HPG, MSN, VND, VIX; làm rõ dữ liệu mâu thuẫn của KDH; kiểm tra VIX (~452 tỷ ngày 05/11) có phải giao dịch thỏa thuận không.",
+        "Ưu tiên 3: hạn chế tăng tỷ trọng FPT, VCB, MBB (bán ròng 06/11: -151, -111, -44 tỷ)."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư",
+        "CafeF",
+        "VnEconomy",
+        "24hMoney",
+        "Vietstock",
+        "MBS",
+        "KBS",
+        "Vietcap"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
       "date": "2026-11-06",
       "session": "morning",
       "kind": "bulletin",
