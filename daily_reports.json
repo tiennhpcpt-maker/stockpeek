@@ -1,6 +1,319 @@
 {
   "items": [
     {
+      "date": "2026-11-10",
+      "session": "morning",
+      "generated_at": "2026-11-10T08:30:32+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "10/11: Đọc gì trước giờ giao dịch chứng khoán?",
+          "link": "https://24hmoney.vn/news/10-11-doc-gi-truoc-gio-giao-dich-chung-khoan-c1a2856418.html",
+          "pubDate": "Tue, 10 Nov 2026 07:43:09 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Công ty địa ốc của ông Trần Bá Dương lãi hơn 1.000 tỷ đồng",
+          "link": "https://24hmoney.vn/news/cong-ty-dia-oc-cua-ong-tran-ba-duong-lai-hon-1000-ty-dong-c1a2856374.html",
+          "pubDate": "Tue, 10 Nov 2026 06:22:12 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Cổ phiếu Nvidia giảm mạnh vì bê bối ngoại tình của CEO Jensen Huang",
+          "link": "https://dantri.com.vn/kinh-doanh/co-phieu-nvidia-giam-manh-vi-be-boi-ngoai-tinh-cua-ceo-jensen-huang-20261109164204044.htm",
+          "pubDate": "Mon, 09 Nov 2026 22:08:46 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Dòng tiền chảy mạnh vào nhóm chứng khoán, bất động sản",
+          "link": "http://vietstock.vn/2026/11/dong-tien-chay-manh-vao-nhom-chung-khoan-bat-dong-san-830-1513091.htm",
+          "pubDate": "Mon, 09 Nov 2026 20:30:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Blog chứng khoán: Cầu chờ giá quá thấp",
+          "link": "https://vneconomy.vn/blog-chung-khoan-cau-cho-gia-qua-thap.htm",
+          "pubDate": "Mon, 09 Nov 2026 09:32:27 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "Trump nói FBI đang điều tra vụ ông chủ Nvidia ngoại tình với gián điệp Trung Quốc",
+          "link": "https://www.bbc.co.uk/news/articles/cqg7x7dpvym8o?at_medium=RSS&at_campaign=rss",
+          "pubDate": "Tue, 10 Nov 2026 01:22:10 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "BBC Business"
+          ]
+        },
+        {
+          "title": "Hơn 5.000 tỷ đồng tự doanh biến mất, chuyện gì đang xảy ra?",
+          "link": "https://24hmoney.vn/news/hon-5000-ty-dong-tu-doanh-bien-mat-chuyen-gi-dang-xay-ra-c1a2856436.html",
+          "pubDate": "Tue, 10 Nov 2026 08:20:09 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "24hMoney"
+          ]
+        },
+        {
+          "title": "HoSE bất ngờ ngắt kết nối giao dịch với một CTCK từ ngày 9/11",
+          "link": "https://24hmoney.vn/news/hose-bat-ngo-ngat-ket-noi-giao-dich-voi-mot-ctck-tu-ngay-9-11-c1a2856428.html",
+          "pubDate": "Tue, 10 Nov 2026 08:10:06 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "24hMoney"
+          ]
+        }
+      ],
+      "mentioned_tickers": [],
+      "title": "Bản tin sáng 10/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1714.32,
+            "change": -11.04,
+            "changePct": -0.64,
+            "tradingValue": 13826.48,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1830.13,
+            "change": -16.26,
+            "changePct": -0.88,
+            "tradingValue": 7276.84,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 255.24,
+            "change": -1.49,
+            "changePct": -0.58,
+            "tradingValue": 620.2,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 121.45,
+            "change": -0.3,
+            "changePct": -0.25,
+            "tradingValue": 481.56,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.1,
+            "up": 4,
+            "down": 3,
+            "total": 8,
+            "leader": {
+              "ticker": "VPB",
+              "changePct": 0.91
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": -0.2,
+            "up": 1,
+            "down": 1,
+            "total": 3,
+            "leader": {
+              "ticker": "NKG",
+              "changePct": 0.82
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -0.39,
+            "up": 2,
+            "down": 4,
+            "total": 6,
+            "leader": {
+              "ticker": "NVL",
+              "changePct": 1.94
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": -0.42,
+            "up": 0,
+            "down": 2,
+            "total": 4,
+            "leader": {
+              "ticker": "IDC",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": -0.62,
+            "up": 1,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "PVD",
+              "changePct": 0.58
+            }
+          },
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": -1.05,
+            "up": 1,
+            "down": 2,
+            "total": 3,
+            "leader": {
+              "ticker": "SAB",
+              "changePct": 0.47
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -1.62,
+            "up": 2,
+            "down": 2,
+            "total": 4,
+            "leader": {
+              "ticker": "FRT",
+              "changePct": 0.56
+            }
+          },
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": -2.33,
+            "up": 0,
+            "down": 6,
+            "total": 6,
+            "leader": {
+              "ticker": "HCM",
+              "changePct": -1.27
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "NVL",
+              "last": 10500,
+              "changePct": 1.94,
+              "volume": 1976580
+            },
+            {
+              "ticker": "VPB",
+              "last": 22250,
+              "changePct": 0.91,
+              "volume": 1781780
+            },
+            {
+              "ticker": "NKG",
+              "last": 12250,
+              "changePct": 0.82,
+              "volume": 416670
+            },
+            {
+              "ticker": "ACB",
+              "last": 20500,
+              "changePct": 0.74,
+              "volume": 810650
+            },
+            {
+              "ticker": "PVD",
+              "last": 17200,
+              "changePct": 0.58,
+              "volume": 250040
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "PNJ",
+              "last": 14200,
+              "changePct": -5.65,
+              "volume": 1175970
+            },
+            {
+              "ticker": "VND",
+              "last": 14450,
+              "changePct": -3.34,
+              "volume": 1649090
+            },
+            {
+              "ticker": "VHM",
+              "last": 60400,
+              "changePct": -2.74,
+              "volume": 683700
+            },
+            {
+              "ticker": "VIX",
+              "last": 13000,
+              "changePct": -2.62,
+              "volume": 4201460
+            },
+            {
+              "ticker": "VCI",
+              "last": 19700,
+              "changePct": -2.48,
+              "volume": 698990
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 13000,
+              "changePct": -2.62,
+              "volume": 4201460
+            },
+            {
+              "ticker": "HPG",
+              "last": 20900,
+              "changePct": -1.42,
+              "volume": 2285460
+            },
+            {
+              "ticker": "SSI",
+              "last": 19900,
+              "changePct": -2.45,
+              "volume": 2075350
+            },
+            {
+              "ticker": "NVL",
+              "last": 10500,
+              "changePct": 1.94,
+              "volume": 1976580
+            },
+            {
+              "ticker": "VPB",
+              "last": 22250,
+              "changePct": 0.91,
+              "volume": 1781780
+            }
+          ]
+        },
+        "summary": "VN-Index giảm 11,04 điểm (-0,64%) phiên 09/11, đạt 1.714,32 điểm, giá trị giao dịch 13.826,48 tỷ đồng. Nhóm ngành mạnh nhất: Ngân hàng (bình quân -0,10%, 4/8 mã tăng); yếu nhất: Chứng khoán (-2,33%). Tăng mạnh: NVL (+1,94%), VPB (+0,91%), NKG (+0,82%). Giảm mạnh: PNJ (-5,65%), VND (-3,34%), VHM (-2,74%)."
+      },
+      "market_from": "2026-11-09",
+      "summary": "Phiên trước: VN-Index giảm 11,04 điểm (-0,64%) phiên 09/11, đạt 1.714,32 điểm, giá trị giao dịch 13.826,48 tỷ đồng. Nhóm ngành mạnh nhất: Ngân hàng (bình quân -0,10%, 4/8 mã tăng); yếu nhất: Chứng khoán (-2,33%). Tăng mạnh: NVL (+1,94%), VPB (+0,91%), NKG (+0,82%). Giảm mạnh: PNJ (-5,65%), VND (-3,34%), VHM (-2,74%). Tin được nhiều nguồn đưa nhất: \"10/11: Đọc gì trước giờ giao dịch chứng khoán?\" (2 nguồn)."
+    },
+    {
       "date": "2026-11-09",
       "session": "afternoon",
       "generated_at": "2026-11-09T16:00:46+07:00",
