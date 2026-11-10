@@ -2,6 +2,128 @@
   "items": [
     {
       "date": "2026-11-10",
+      "session": "midday",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán trưa (email)",
+      "generated_at": "2026-11-10T13:16:19+07:00",
+      "title": "Bản tin trưa 10/11: VN-Index đảo chiều tăng 1,30% phiên sáng, trong nước dẫn dắt",
+      "summary": "VN-Index chốt phiên sáng 1.736,63 điểm (+22,31 điểm, +1,30%), đảo chiều mạnh so với phiên 09/11 (1.714,32), lấy lại MA5 (~1.723) và tiến sát MA10 (~1.735). Độ rộng 201 tăng/90 giảm/56 đứng giá, GTGD khớp lệnh sáng 8.521 tỷ. Dòng tiền do trong nước dẫn dắt, khối ngoại chỉ bán ròng rất nhẹ; VIC và VHM đóng góp ~9,5/22,3 điểm (~43%). Kịch bản phiên chiều: Cơ sở thiên tích cực.",
+      "key_findings": [
+        "Ngoại HOSE sáng bán ròng 8,7 tỷ (Dân trí ~15 tỷ lúc 11h), đối lập với -806 tỷ phiên 09/11; tự doanh và thỏa thuận chưa có số.",
+        "Chứng khoán, bất động sản, ngân hàng hút tiền; dầu khí (BSR -1,35%) và PNJ (-0,7%) bị rút tiền.",
+        "Chất xúc tác: Phố Wall và châu Á hồi phục, dầu giảm, NHNN công bố mua ngoại tệ từ 11/11 và swap 06/11.",
+        "3 mã nổi bật: HPG 5,0; VHM 3,5; VIC 3,5 (dự bị MSN 3,5, PVT 3,0).",
+        "Rủi ro: đà tăng phụ thuộc VIC/VHM; lãi suất qua đêm 4,60% (từ 3,7% ngày 03/11), CPI T10 5,09% so cùng kỳ."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên chiều 10/11",
+          "items": [
+            "Tích cực: giữ trên 1.735-1.740, vượt 1.750 (vùng 1.750-1.770 theo Yuanta).",
+            "Cơ sở: 1.725-1.745, thanh khoản chiều thấp hơn sáng.",
+            "Tiêu cực: mất 1.723 (MA5), lấp về 1.714 rồi 1.700."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: HOSE sáng -8,7 tỷ (Dân trí ~-15 tỷ lúc 11h; phiên 09/11 -806 tỷ). Bán MSN -54,6; PNJ -52,4; FPT -40,1 tỷ; mua KDH +49,8; SSI +45,4; VHM +42,5 tỷ.",
+            "Tự doanh: chưa có số.",
+            "Trong nước (suy luận): mua ròng đối ứng ~9-15 tỷ (gồm cả tự doanh).",
+            "Thỏa thuận: chưa có số phiên 10/11.",
+            "Ngành hút tiền: chứng khoán (VIX +4,23%, SSI +4,02%, VND +3,11%), BĐS (KDH +4,65%, VHM +2,81%, VIC +1,79%), ngân hàng (LPB +3,15%, VCB +1,31%), thép (HPG +1,91%). Ngành rút: dầu khí (BSR -1,35%), PNJ -0,7%."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "NHNN swap 06/11, mua ngoại tệ giao ngay từ 11/11 tỷ giá 25.500; tỷ giá liên ngân hàng 25.547.",
+            "Mỹ đêm qua: S&P +2,35%, Nasdaq +2,74%, Dow +2,15%; Brent -5,85% còn 92,57 USD.",
+            "HVN tăng trần."
+          ]
+        },
+        {
+          "title": "Lưu ý về số liệu",
+          "items": [
+            "GTGD cả phiên 09/11 lệch giữa các nguồn: 10.150 tỷ (Vietstock) vs 13.800-14.000 tỷ (CafeF/bbw/TCBS), chưa giải thích được.",
+            "Ngoại sáng nay lệch 8,7 vs ~15 tỷ do khác thời điểm cập nhật."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Chứng khoán",
+          "view": "Nhóm hút tiền mạnh phiên sáng 10/11: VIX +4,23%, SSI +4,02%, VND +3,11%; ngoại mua ròng SSI +45,4 tỷ sáng nay."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "Dẫn dắt đà hồi: VIC và VHM đóng góp ~9,5/22,3 điểm của VN-Index; KDH +4,65%, VHM +2,81%, VIC +1,79%, ngoại mua KDH +49,8 và VHM +42,5 tỷ, nhưng đà tăng phụ thuộc nhiều vào hai mã này."
+        },
+        {
+          "name": "Ngân hàng",
+          "view": "Nhóm hút tiền phiên sáng với LPB +3,15%, VCB +1,31%."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG +1,91% phiên sáng; HPG vẫn là mã nổi bật điểm cao nhất (5,0) dù ngoại bán ròng 130 tỷ phiên 09/11."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "Bị rút tiền phiên sáng, BSR -1,35% khi dầu Brent giảm 5,85% còn 92,57 USD."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "PNJ -0,7% phiên sáng, ngoại bán ròng 52,4 tỷ sáng nay (phiên 09/11 -84 tỷ)."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN bị ngoại bán ròng 54,6 tỷ phiên sáng 10/11, điểm hạ từ 4,0 xuống 3,5 nên chuyển sang danh sách dự bị."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "HPG",
+          "note": "Điểm 5,0 (dòng tiền 1/KQKD 2/đà giá 2); giữ vùng 20.000-20.500đ, dừng nếu thủng 20.000-20.050đ."
+        },
+        {
+          "ticker": "VHM",
+          "note": "Điểm 3,5 (tăng từ 2,5 nhờ dòng tiền cải thiện); ngoại +42,5 tỷ, +2,81%; rủi ro định giá và ngoại bán lẻ tẻ các phiên trước."
+        },
+        {
+          "ticker": "VIC",
+          "note": "Điểm 3,5 (tăng từ 3,0); vùng 225.000-240.000đ; ngoại 09/11 -90 tỷ."
+        },
+        {
+          "ticker": "MSN",
+          "note": "Dự bị, điểm 3,5 (hạ từ 4,0) do ngoại bán sáng nay."
+        },
+        {
+          "ticker": "PVT",
+          "note": "Dự bị, điểm 3,0."
+        },
+        {
+          "ticker": "SSI",
+          "note": "+4,02%, ngoại mua +45,4 tỷ; chưa đủ dữ liệu KQKD nên không xếp hạng."
+        }
+      ],
+      "action_items": [
+        "Chưa nên đuổi giá: chỉ cân nhắc khi VN-Index đóng cửa trên 1.740-1.750 kèm thanh khoản chiều không suy giảm; hạ tỷ trọng nếu mất 1.723 với ngoại bán trở lại.",
+        "Theo dõi ngoại và tự doanh cuối phiên; nếu ngoại quay lại bán trên 300 tỷ thì coi nhịp hồi là kỹ thuật.",
+        "Chú ý đà tăng phụ thuộc VIC/VHM; nhóm FPT, PNJ, MSN còn bị ngoại bán."
+      ],
+      "sources": [
+        "Dân trí",
+        "Tin nhanh chứng khoán",
+        "Người quan sát",
+        "VnEconomy",
+        "CafeF",
+        "index.vn",
+        "bbw.vn"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-10",
       "session": "morning",
       "kind": "bulletin",
       "origin": "Bản tin chứng khoán sáng (email)",
