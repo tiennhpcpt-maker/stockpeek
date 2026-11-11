@@ -2,6 +2,324 @@
   "items": [
     {
       "date": "2026-11-11",
+      "session": "afternoon",
+      "generated_at": "2026-11-11T16:00:31+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "Quỹ ETF ngoại xả ròng mạnh sau 2 tuần im tiếng",
+          "link": "https://24hmoney.vn/news/quy-etf-ngoai-xa-rong-manh-sau-2-tuan-im-tieng-c1a2857222.html",
+          "pubDate": "Wed, 11 Nov 2026 15:53:33 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Chứng khoán Việt Nam sẽ nghỉ giao dịch một ngày trong tháng 11",
+          "link": "https://stockbiz.vn/tin-tuc/chung-khoan-viet-nam-se-nghi-giao-dich-mot-ngay-trong-thang-11/42738587",
+          "pubDate": "Wed, 11 Nov 2026 08:35:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "CEO Novaland bán lượng cổ phiếu bằng 72% số có từ ESOP, ước thu trăm tỷ đồng",
+          "link": "https://24hmoney.vn/news/ceo-novaland-ban-luong-co-phieu-bang-72-so-co-tu-esop-uoc-thu-tram-ty-dong-c1a2857134.html",
+          "pubDate": "Wed, 11 Nov 2026 14:56:09 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Biến động sở hữu cổ đông lớn, PIT tăng trần liên tiếp",
+          "link": "http://vietstock.vn/2026/11/bien-dong-so-huu-co-dong-lon-pit-tang-tran-lien-tiep-830-1513730.htm",
+          "pubDate": "Wed, 11 Nov 2026 14:27:11 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Nhóm quỹ Dragon Capital mua 5 triệu cổ phiếu, trở lại ghế cổ đông lớn DXG",
+          "link": "http://vietstock.vn/2026/11/nhom-quy-dragon-capital-mua-5-trieu-co-phieu-tro-lai-ghe-co-dong-lon-dxg-739-1513705.htm",
+          "pubDate": "Wed, 11 Nov 2026 14:06:06 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Lãi suất trái phiếu bất động sản tối thiểu lên 12 - 12,5%/năm, doanh nghiệp địa ốc đang khát vốn?",
+          "link": "https://stockbiz.vn/tin-tuc/lai-suat-trai-phieu-bat-dong-san-toi-thieu-len-12---125nam-doanh-nghiep-dia-oc-dang-khat-von/42733487",
+          "pubDate": "Wed, 11 Nov 2026 06:08:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Doanh thu 9 tháng tăng hơn 1.200%, Anthropic nhắm mức định giá 1.400 tỷ USD khi IPO",
+          "link": "https://dantri.com.vn/kinh-doanh/doanh-thu-9-thang-tang-hon-1200-anthropic-nham-muc-dinh-gia-1400-ty-usd-khi-ipo-20261111075918488.htm",
+          "pubDate": "Wed, 11 Nov 2026 13:05:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Blog chứng khoán: Cầu chờ giá quá thấp",
+          "link": "https://vneconomy.vn/blog-chung-khoan-cau-cho-gia-qua-thap.htm",
+          "pubDate": "Tue, 10 Nov 2026 09:24:09 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "VnEconomy"
+          ]
+        }
+      ],
+      "mentioned_tickers": [
+        {
+          "ticker": "DXG",
+          "count": 1
+        }
+      ],
+      "title": "Báo cáo cuối phiên 11/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1746.9,
+            "change": 3.83,
+            "changePct": 0.22,
+            "tradingValue": 13844.23,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1855.27,
+            "change": -5.66,
+            "changePct": -0.3,
+            "tradingValue": 7077.36,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 255.73,
+            "change": -0.53,
+            "changePct": -0.21,
+            "tradingValue": 612.12,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 121.57,
+            "change": 0.16,
+            "changePct": 0.13,
+            "tradingValue": 620.57,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Thép",
+            "avgChangePct": 1.17,
+            "up": 3,
+            "down": 0,
+            "total": 3,
+            "leader": {
+              "ticker": "NKG",
+              "changePct": 1.65
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": 0.23,
+            "up": 2,
+            "down": 1,
+            "total": 4,
+            "leader": {
+              "ticker": "SZC",
+              "changePct": 1.23
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": 0.13,
+            "up": 3,
+            "down": 1,
+            "total": 4,
+            "leader": {
+              "ticker": "GAS",
+              "changePct": 1.78
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -0.3,
+            "up": 1,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "FRT",
+              "changePct": 1.09
+            }
+          },
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": -0.32,
+            "up": 1,
+            "down": 4,
+            "total": 6,
+            "leader": {
+              "ticker": "VCI",
+              "changePct": 1.0
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.35,
+            "up": 2,
+            "down": 5,
+            "total": 8,
+            "leader": {
+              "ticker": "BID",
+              "changePct": 0.78
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -0.39,
+            "up": 2,
+            "down": 3,
+            "total": 6,
+            "leader": {
+              "ticker": "VIC",
+              "changePct": 1.32
+            }
+          },
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": -0.56,
+            "up": 1,
+            "down": 2,
+            "total": 3,
+            "leader": {
+              "ticker": "SAB",
+              "changePct": 1.05
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "GAS",
+              "last": 74400,
+              "changePct": 1.78,
+              "volume": 79820
+            },
+            {
+              "ticker": "NKG",
+              "last": 12300,
+              "changePct": 1.65,
+              "volume": 720520
+            },
+            {
+              "ticker": "HSG",
+              "last": 11050,
+              "changePct": 1.38,
+              "volume": 300490
+            },
+            {
+              "ticker": "VIC",
+              "last": 245200,
+              "changePct": 1.32,
+              "volume": 174910
+            },
+            {
+              "ticker": "SZC",
+              "last": 20600,
+              "changePct": 1.23,
+              "volume": 130020
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "NVL",
+              "last": 10550,
+              "changePct": -2.76,
+              "volume": 1273570
+            },
+            {
+              "ticker": "PVD",
+              "last": 16350,
+              "changePct": -2.1,
+              "volume": 487140
+            },
+            {
+              "ticker": "STB",
+              "last": 68500,
+              "changePct": -1.72,
+              "volume": 97410
+            },
+            {
+              "ticker": "VNM",
+              "last": 54500,
+              "changePct": -1.62,
+              "volume": 331000
+            },
+            {
+              "ticker": "VPB",
+              "last": 22300,
+              "changePct": -1.11,
+              "volume": 931150
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 13300,
+              "changePct": -0.75,
+              "volume": 2388420
+            },
+            {
+              "ticker": "NVL",
+              "last": 10550,
+              "changePct": -2.76,
+              "volume": 1273570
+            },
+            {
+              "ticker": "SSI",
+              "last": 20550,
+              "changePct": -0.48,
+              "volume": 1246070
+            },
+            {
+              "ticker": "HPG",
+              "last": 21350,
+              "changePct": 0.47,
+              "volume": 1015230
+            },
+            {
+              "ticker": "VND",
+              "last": 14900,
+              "changePct": 0.0,
+              "volume": 956280
+            }
+          ]
+        },
+        "summary": "VN-Index tăng 3,83 điểm (0,22%) phiên 11/11, đạt 1.746,90 điểm, giá trị giao dịch 13.844,23 tỷ đồng. Nhóm ngành mạnh nhất: Thép (bình quân 1,17%, 3/3 mã tăng); yếu nhất: Thực phẩm - Đồ uống (-0,56%). Tăng mạnh: GAS (+1,78%), NKG (+1,65%), HSG (+1,38%). Giảm mạnh: NVL (-2,76%), PVD (-2,10%), STB (-1,72%)."
+      },
+      "summary": "VN-Index tăng 3,83 điểm (0,22%) phiên 11/11, đạt 1.746,90 điểm, giá trị giao dịch 13.844,23 tỷ đồng. Nhóm ngành mạnh nhất: Thép (bình quân 1,17%, 3/3 mã tăng); yếu nhất: Thực phẩm - Đồ uống (-0,56%). Tăng mạnh: GAS (+1,78%), NKG (+1,65%), HSG (+1,38%). Giảm mạnh: NVL (-2,76%), PVD (-2,10%), STB (-1,72%). Tin được nhiều nguồn đưa nhất: \"Quỹ ETF ngoại xả ròng mạnh sau 2 tuần im tiếng\" (2 nguồn)."
+    },
+    {
+      "date": "2026-11-11",
       "session": "morning",
       "generated_at": "2026-11-11T08:30:54+07:00",
       "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
