@@ -1,6 +1,322 @@
 {
   "items": [
     {
+      "date": "2026-11-12",
+      "session": "morning",
+      "generated_at": "2026-11-12T08:30:14+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "7 cổ phiếu Việt được thêm vào rổ MSCI Frontier Markets Small Cap Index",
+          "link": "http://vietstock.vn/2026/11/7-co-phieu-viet-duoc-them-vao-ro-msci-frontier-markets-small-cap-index-3358-1514028.htm",
+          "pubDate": "Thu, 12 Nov 2026 07:49:52 +0700",
+          "sourceCount": 4,
+          "sources": [
+            "24hMoney",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Thị trường chứng khoán cuối năm 2026: Chờ nhịp dòng tiền",
+          "link": "https://stockbiz.vn/tin-tuc/thi-truong-chung-khoan-cuoi-nam-2026-cho-nhip-dong-tien/42741662",
+          "pubDate": "Thu, 12 Nov 2026 00:11:00 GMT",
+          "sourceCount": 3,
+          "sources": [
+            "Stockbiz Thị trường",
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "12/11: Đọc gì trước giờ giao dịch chứng khoán?",
+          "link": "https://24hmoney.vn/news/12-11-doc-gi-truoc-gio-giao-dich-chung-khoan-c1a2857435.html",
+          "pubDate": "Thu, 12 Nov 2026 08:02:36 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "24hMoney",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "VN-Index tiếp tục rung lắc, cần thận trọng chốt lời từng phần",
+          "link": "https://stockbiz.vn/tin-tuc/vn-index-tiep-tuc-rung-lac-can-than-trong-chot-loi-tung-phan/42741586",
+          "pubDate": "Wed, 11 Nov 2026 23:46:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "30 năm chứng khoán Việt Nam và hành trình biến niềm tin thành dòng vốn tỷ USD",
+          "link": "https://stockbiz.vn/tin-tuc/30-nam-chung-khoan-viet-nam-va-hanh-trinh-bien-niem-tin-thanh-dong-von-ty-usd/42741409",
+          "pubDate": "Wed, 11 Nov 2026 16:45:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Lãi tăng bằng lần, hàng chục cổ phiếu vẫn \"ngụp lặn\" cách xa đỉnh giá một năm",
+          "link": "https://stockbiz.vn/tin-tuc/lai-tang-bang-lan-hang-chuc-co-phieu-van-ngup-lan-cach-xa-dinh-gia-mot-nam/42741395",
+          "pubDate": "Wed, 11 Nov 2026 16:40:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Tỷ phú Bill Gates còn nắm những cổ phiếu Việt Nam nào?",
+          "link": "https://stockbiz.vn/tin-tuc/ty-phu-bill-gates-con-nam-nhung-co-phieu-viet-nam-nao/42741393",
+          "pubDate": "Wed, 11 Nov 2026 16:38:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "VN-Index hồi phục nhẹ, hướng tới vùng 1760 điểm",
+          "link": "https://vneconomy.vn/vn-index-hoi-phuc-nhe-huong-toi-vung-1760-diem.htm",
+          "pubDate": "Wed, 11 Nov 2026 15:21:09 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "VnEconomy"
+          ]
+        }
+      ],
+      "mentioned_tickers": [],
+      "title": "Bản tin sáng 12/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1746.9,
+            "change": 3.83,
+            "changePct": 0.22,
+            "tradingValue": 13844.23,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1855.27,
+            "change": -5.66,
+            "changePct": -0.3,
+            "tradingValue": 7077.36,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 255.73,
+            "change": -0.53,
+            "changePct": -0.21,
+            "tradingValue": 612.12,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 121.57,
+            "change": 0.16,
+            "changePct": 0.13,
+            "tradingValue": 620.57,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Thép",
+            "avgChangePct": 1.17,
+            "up": 3,
+            "down": 0,
+            "total": 3,
+            "leader": {
+              "ticker": "NKG",
+              "changePct": 1.65
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": 0.23,
+            "up": 2,
+            "down": 1,
+            "total": 4,
+            "leader": {
+              "ticker": "SZC",
+              "changePct": 1.23
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": 0.13,
+            "up": 3,
+            "down": 1,
+            "total": 4,
+            "leader": {
+              "ticker": "GAS",
+              "changePct": 1.78
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -0.3,
+            "up": 1,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "FRT",
+              "changePct": 1.09
+            }
+          },
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": -0.32,
+            "up": 1,
+            "down": 4,
+            "total": 6,
+            "leader": {
+              "ticker": "VCI",
+              "changePct": 1.0
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.35,
+            "up": 2,
+            "down": 5,
+            "total": 8,
+            "leader": {
+              "ticker": "BID",
+              "changePct": 0.78
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -0.39,
+            "up": 2,
+            "down": 3,
+            "total": 6,
+            "leader": {
+              "ticker": "VIC",
+              "changePct": 1.32
+            }
+          },
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": -0.56,
+            "up": 1,
+            "down": 2,
+            "total": 3,
+            "leader": {
+              "ticker": "SAB",
+              "changePct": 1.05
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "GAS",
+              "last": 74400,
+              "changePct": 1.78,
+              "volume": 79820
+            },
+            {
+              "ticker": "NKG",
+              "last": 12300,
+              "changePct": 1.65,
+              "volume": 720520
+            },
+            {
+              "ticker": "HSG",
+              "last": 11050,
+              "changePct": 1.38,
+              "volume": 300490
+            },
+            {
+              "ticker": "VIC",
+              "last": 245200,
+              "changePct": 1.32,
+              "volume": 174910
+            },
+            {
+              "ticker": "SZC",
+              "last": 20600,
+              "changePct": 1.23,
+              "volume": 130020
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "NVL",
+              "last": 10550,
+              "changePct": -2.76,
+              "volume": 1273570
+            },
+            {
+              "ticker": "PVD",
+              "last": 16350,
+              "changePct": -2.1,
+              "volume": 487140
+            },
+            {
+              "ticker": "STB",
+              "last": 68500,
+              "changePct": -1.72,
+              "volume": 97410
+            },
+            {
+              "ticker": "VNM",
+              "last": 54500,
+              "changePct": -1.62,
+              "volume": 331000
+            },
+            {
+              "ticker": "VPB",
+              "last": 22300,
+              "changePct": -1.11,
+              "volume": 931150
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 13300,
+              "changePct": -0.75,
+              "volume": 2388420
+            },
+            {
+              "ticker": "NVL",
+              "last": 10550,
+              "changePct": -2.76,
+              "volume": 1273570
+            },
+            {
+              "ticker": "SSI",
+              "last": 20550,
+              "changePct": -0.48,
+              "volume": 1246070
+            },
+            {
+              "ticker": "HPG",
+              "last": 21350,
+              "changePct": 0.47,
+              "volume": 1015230
+            },
+            {
+              "ticker": "VND",
+              "last": 14900,
+              "changePct": 0.0,
+              "volume": 956280
+            }
+          ]
+        },
+        "summary": "VN-Index tăng 3,83 điểm (0,22%) phiên 11/11, đạt 1.746,90 điểm, giá trị giao dịch 13.844,23 tỷ đồng. Nhóm ngành mạnh nhất: Thép (bình quân 1,17%, 3/3 mã tăng); yếu nhất: Thực phẩm - Đồ uống (-0,56%). Tăng mạnh: GAS (+1,78%), NKG (+1,65%), HSG (+1,38%). Giảm mạnh: NVL (-2,76%), PVD (-2,10%), STB (-1,72%)."
+      },
+      "market_from": "2026-11-11",
+      "summary": "Phiên trước: VN-Index tăng 3,83 điểm (0,22%) phiên 11/11, đạt 1.746,90 điểm, giá trị giao dịch 13.844,23 tỷ đồng. Nhóm ngành mạnh nhất: Thép (bình quân 1,17%, 3/3 mã tăng); yếu nhất: Thực phẩm - Đồ uống (-0,56%). Tăng mạnh: GAS (+1,78%), NKG (+1,65%), HSG (+1,38%). Giảm mạnh: NVL (-2,76%), PVD (-2,10%), STB (-1,72%). Tin được nhiều nguồn đưa nhất: \"7 cổ phiếu Việt được thêm vào rổ MSCI Frontier Markets Small Cap Index\" (4 nguồn)."
+    },
+    {
       "date": "2026-11-11",
       "session": "afternoon",
       "generated_at": "2026-11-11T16:00:31+07:00",
