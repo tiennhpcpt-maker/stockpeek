@@ -2,6 +2,323 @@
   "items": [
     {
       "date": "2026-11-13",
+      "session": "afternoon",
+      "generated_at": "2026-11-13T16:00:56+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "Chính thức thông qua Luật Chứng khoán sửa đổi: Không bắt buộc tất cả người đại diện CTCK phải có chứng chỉ hành nghề",
+          "link": "https://stockbiz.vn/tin-tuc/chinh-thuc-thong-qua-luat-chung-khoan-sua-doi-khong-bat-buoc-tat-ca-nguoi-dai-dien-ctck-phai-co-chung-chi-hanh-nghe/42773465",
+          "pubDate": "Fri, 13 Nov 2026 07:37:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "VCBS: Giá thép Việt Nam kỳ vọng tăng, quặng sắt tiếp tục chịu áp lực giảm tróng quý IV",
+          "link": "https://stockbiz.vn/tin-tuc/vcbs-gia-thep-viet-nam-ky-vong-tang-quang-sat-tiep-tuc-chiu-ap-luc-giam-trong-quy-iv/42768720",
+          "pubDate": "Fri, 13 Nov 2026 06:15:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Ngân hàng Nhà nước thanh tra, xử lý nghiêm ngân hàng chây ì hạ lãi suất",
+          "link": "https://dantri.com.vn/kinh-doanh/ngan-hang-nha-nuoc-thanh-tra-xu-ly-nghiem-ngan-hang-chay-i-ha-lai-suat-20261113114701931.htm",
+          "pubDate": "Fri, 13 Nov 2026 12:02:59 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "Tuổi Trẻ Chứng khoán"
+          ]
+        },
+        {
+          "title": "Chủ tịch VSDC: Quỹ ngoại không chỉ quan tâm thị trường lên xuống, mà quan trọng là độ sâu và cơ chế quản trị rủi ro",
+          "link": "http://vietstock.vn/2026/11/chu-tich-vsdc-quy-ngoai-khong-chi-quan-tam-thi-truong-len-xuong-ma-quan-trong-la-do-sau-va-co-che-quan-tri-rui-ro-145-1514533.htm",
+          "pubDate": "Fri, 13 Nov 2026 11:28:05 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Thông qua Luật sửa đổi, bổ sung một số điều của Luật Chứng khoán: Bổ sung cơ chế thử nghiệm có kiểm soát",
+          "link": "https://stockbiz.vn/tin-tuc/thong-qua-luat-sua-doi-bo-sung-mot-so-dieu-cua-luat-chung-khoan-bo-sung-co-che-thu-nghiem-co-kiem-soat/42761794",
+          "pubDate": "Fri, 13 Nov 2026 11:12:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "VN-Index giảm nhẹ, nhà đầu tư thận trọng trước kháng cự 1750 điểm",
+          "link": "https://vneconomy.vn/vn-index-giam-nhe-nha-dau-tu-than-trong-truoc-khang-cu-1750-diem.htm",
+          "pubDate": "Thu, 12 Nov 2026 15:30:36 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "Khối ngoại bất ngờ mua ròng mạnh ở VIX, VN-Index đảo chiều thành công",
+          "link": "https://vneconomy.vn/khoi-ngoai-bat-ngo-mua-rong-manh-o-vix-vn-index-dao-chieu-thanh-cong.htm",
+          "pubDate": "Fri, 13 Nov 2026 08:32:53 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "Chứng khoán đi ngang, mã FPT tiếp tục bị khối ngoại bán ròng 221 tỷ đồng",
+          "link": "https://dantri.com.vn/kinh-doanh/chung-khoan-di-ngang-ma-fpt-tiep-tuc-bi-khoi-ngoai-ban-rong-221-ty-dong-20261113151958507.htm",
+          "pubDate": "Fri, 13 Nov 2026 15:29:58 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "Dân Trí Kinh doanh"
+          ]
+        }
+      ],
+      "mentioned_tickers": [
+        {
+          "ticker": "VIX",
+          "count": 1
+        }
+      ],
+      "title": "Báo cáo cuối phiên 13/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1734.93,
+            "change": 0.18,
+            "changePct": 0.01,
+            "tradingValue": 15137.8,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1844.91,
+            "change": 5.48,
+            "changePct": 0.3,
+            "tradingValue": 8845.53,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 254.98,
+            "change": -1.64,
+            "changePct": -0.64,
+            "tradingValue": 714.31,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 121.39,
+            "change": 0.14,
+            "changePct": 0.12,
+            "tradingValue": 272.38,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": 0.5,
+            "up": 3,
+            "down": 5,
+            "total": 8,
+            "leader": {
+              "ticker": "STB",
+              "changePct": 3.34
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -0.1,
+            "up": 1,
+            "down": 1,
+            "total": 4,
+            "leader": {
+              "ticker": "DGW",
+              "changePct": 0.13
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": -0.21,
+            "up": 1,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "PVS",
+              "changePct": 1.06
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -0.42,
+            "up": 0,
+            "down": 1,
+            "total": 6,
+            "leader": {
+              "ticker": "VIC",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": -0.49,
+            "up": 0,
+            "down": 2,
+            "total": 3,
+            "leader": {
+              "ticker": "MSN",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": -0.6,
+            "up": 0,
+            "down": 4,
+            "total": 6,
+            "leader": {
+              "ticker": "VND",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": -0.62,
+            "up": 1,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "SZC",
+              "changePct": 1.71
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": -1.11,
+            "up": 0,
+            "down": 2,
+            "total": 3,
+            "leader": {
+              "ticker": "HPG",
+              "changePct": 0.0
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "STB",
+              "last": 71200,
+              "changePct": 3.34,
+              "volume": 359780
+            },
+            {
+              "ticker": "SZC",
+              "last": 20850,
+              "changePct": 1.71,
+              "volume": 150830
+            },
+            {
+              "ticker": "TCB",
+              "last": 21850,
+              "changePct": 1.39,
+              "volume": 763370
+            },
+            {
+              "ticker": "PVS",
+              "last": 28700,
+              "changePct": 1.06,
+              "volume": 132310
+            },
+            {
+              "ticker": "VPB",
+              "last": 22100,
+              "changePct": 0.91,
+              "volume": 983880
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "PDR",
+              "last": 11500,
+              "changePct": -2.54,
+              "volume": 439940
+            },
+            {
+              "ticker": "NKG",
+              "last": 12350,
+              "changePct": -1.98,
+              "volume": 445630
+            },
+            {
+              "ticker": "IDC",
+              "last": 35000,
+              "changePct": -1.96,
+              "volume": 48630
+            },
+            {
+              "ticker": "BCM",
+              "last": 37150,
+              "changePct": -1.85,
+              "volume": 38330
+            },
+            {
+              "ticker": "HSG",
+              "last": 10900,
+              "changePct": -1.36,
+              "volume": 182340
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 13050,
+              "changePct": 0.0,
+              "volume": 2672260
+            },
+            {
+              "ticker": "NVL",
+              "last": 10400,
+              "changePct": 0.0,
+              "volume": 1427170
+            },
+            {
+              "ticker": "DXG",
+              "last": 11100,
+              "changePct": 0.0,
+              "volume": 1080390
+            },
+            {
+              "ticker": "SSI",
+              "last": 20200,
+              "changePct": -0.25,
+              "volume": 1080070
+            },
+            {
+              "ticker": "ACB",
+              "last": 20350,
+              "changePct": -0.25,
+              "volume": 1011940
+            }
+          ]
+        },
+        "summary": "VN-Index tăng 0,18 điểm (0,01%) phiên 13/11, đạt 1.734,93 điểm, giá trị giao dịch 15.137,80 tỷ đồng. Nhóm ngành mạnh nhất: Ngân hàng (bình quân 0,50%, 3/8 mã tăng); yếu nhất: Thép (-1,11%). Tăng mạnh: STB (+3,34%), SZC (+1,71%), TCB (+1,39%). Giảm mạnh: PDR (-2,54%), NKG (-1,98%), IDC (-1,96%)."
+      },
+      "summary": "VN-Index tăng 0,18 điểm (0,01%) phiên 13/11, đạt 1.734,93 điểm, giá trị giao dịch 15.137,80 tỷ đồng. Nhóm ngành mạnh nhất: Ngân hàng (bình quân 0,50%, 3/8 mã tăng); yếu nhất: Thép (-1,11%). Tăng mạnh: STB (+3,34%), SZC (+1,71%), TCB (+1,39%). Giảm mạnh: PDR (-2,54%), NKG (-1,98%), IDC (-1,96%). Tin được nhiều nguồn đưa nhất: \"Chính thức thông qua Luật Chứng khoán sửa đổi: Không bắt buộc tất cả người đại diện CTCK phải có chứng chỉ hành nghề\" (2 nguồn)."
+    },
+    {
+      "date": "2026-11-13",
       "session": "morning",
       "generated_at": "2026-11-13T08:30:26+07:00",
       "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
