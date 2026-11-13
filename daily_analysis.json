@@ -1,6 +1,350 @@
 {
   "items": [
     {
+      "date": "2026-11-13",
+      "session": "midday",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán trưa (email)",
+      "generated_at": "2026-11-13T13:43:28+07:00",
+      "title": "Bản tin trưa 13/11: phiên sáng giằng co nghiêng giảm quanh 1.731, ngoại bán ròng trên 200 tỷ, FPT phá đáy từ 07/2023",
+      "summary": "Phiên sáng 13/11 VN-Index quanh 1.731 điểm, giảm gần 3 điểm so với tham chiếu 1.734,75, sát hỗ trợ 1.730; hơn 330 mã giảm, gần 200 mã tăng, ngân hàng, chứng khoán, BĐS đỏ. Khối ngoại bán ròng trên 200 tỷ (FPT ~-110 tỷ), chậm hơn phiên 12/11; khớp lệnh sáng trên 4.700 tỷ. Kịch bản phiên chiều: Cơ sở thiên tiêu cực, không đổi. Đây là bản nhanh: chưa có số tự doanh, thỏa thuận sáng và số ngoại theo mã ngày 13/11.",
+      "key_findings": [
+        "VN-Index ~1.731 (giảm gần 3 điểm); hơn 330 mã giảm so với gần 200 mã tăng (Người Quan Sát 12:43).",
+        "Ngoại bán ròng trên 200 tỷ HOSE: FPT ~-110, BID ~-30, NVL ~-30 tỷ; mua nhỏ giọt POW, TCB.",
+        "FPT giảm 0,8% còn 49.x, thấp nhất từ 07/2023; chuỗi ngoại bán ròng có thể kéo dài thành 7 phiên.",
+        "Khu công nghiệp (SZC +2,4%, LHG +1,1%), thép (GDA kịch trần ngày niêm yết HOSE), dầu khí (PVT, PVP trên +1%) có lực mua cục bộ.",
+        "Ba mã nổi bật giữ nguyên: VHM 4,5; HPG 4,5; VIC 4,0; dự bị HDB, MSN."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên chiều 13/11",
+          "items": [
+            "Tích cực: giữ trên 1.730, ngoại giảm bán FPT, khớp lệnh chiều cải thiện, khu công nghiệp, dầu khí, thép lan tỏa; vùng 1.735-1.745.",
+            "Cơ sở (nghiêng): giằng co quanh 1.730 (MA5 ~1.733, MA10 ~1.729 theo TCBS 12/11); vùng ~1.725-1.738.",
+            "Tiêu cực: thủng 1.730 kèm ngoại bán ròng lũy kế trên 500 tỷ, FPT tiếp tục phá đáy; thử 1.700-1.715."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: HOSE bán ròng trên 200 tỷ sáng 13/11 (một nguồn), chậm hơn phiên 12/11 (-870 đến -904 tỷ) nhưng đã bằng ~1/4 cả phiên trước.",
+            "Tự doanh: sáng 13/11 chưa có số; 12/11 +325, 11/11 -557, 10/11 +515, 09/11 -458 tỷ.",
+            "Trong nước: chưa có số sáng 13/11; phiên 12/11 ≈ +550 tỷ (suy luận: 875 - 325, không phải số công bố).",
+            "Thỏa thuận: chưa có số sáng 13/11; phiên 12/11 ~4.791 tỷ (suy luận), LPB ~3.000 tỷ.",
+            "Ngành hút/rút tiền: hút ở khu công nghiệp, thép, dầu khí; rút ở ngân hàng, chứng khoán (HCM, MBS giảm trên 1%), BĐS (DIG, NVL giảm trên 1%)."
+          ]
+        },
+        {
+          "title": "Điểm nhấn",
+          "items": [
+            "Khớp lệnh sáng trên 4.700 tỷ; bài gốc ghi 'giảm trên 60%' là so với tổng cả ngày 12/11 gồm thỏa thuận, không cùng cơ sở, nửa phiên khoảng 45% khớp cả ngày 12/11 là bình thường.",
+            "TIG có khoảng 20 triệu cp mua chủ động sau 5 phiên FPT giảm sàn (Người Quan Sát).",
+            "Mới có 1 bài tổng kết phiên sáng đúng ngày; số ngoại theo mã CafeF chưa có dòng 13/11 nên điểm các mã không đổi."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Mỹ đêm 12/11: Nasdaq -0,39%, Dow -0,36%, S&P 500 -0,35%; Nvidia giảm trên 4%; WTI 88,74 USD (+2,55%), Brent 95,82 USD (+3,3%).",
+            "Tỷ giá trung tâm 12/11: 25.623 đ/USD (+12)."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Ngân hàng",
+          "view": "Còn bị rút tiền phiên sáng 13/11: BID bị ngoại bán ~30 tỷ, trong khi STB tăng trên 1%; VCB đã bị ngoại bán ròng 9 phiên liền tới 12/11 (10 phiên -604 tỷ)."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "BĐS đỏ sáng 13/11 (DIG, NVL giảm trên 1%, NVL bị ngoại bán ~30 tỷ); VHM có chuỗi ngoại mua 3 phiên ≈ +123,7 tỷ nhưng chưa có giá và số ngoại sáng nay."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "Đỏ sáng 13/11 (HCM, MBS giảm trên 1%); ngoại mua SSI, VND mới 2 phiên tới 11/11 (5 phiên +80,4 và +68,9 tỷ), chưa có số 12-13/11."
+        },
+        {
+          "name": "Thép",
+          "view": "Có lực mua cục bộ sáng 13/11 khi GDA kịch trần ngày lên sàn HOSE; HPG chưa có số ngoại riêng, 10 phiên tới 11/11 ngoại +264,9 tỷ."
+        },
+        {
+          "name": "Bất động sản khu công nghiệp",
+          "view": "Hút tiền sáng 13/11: SZC +2,4%, LHG +1,1%, thuộc nhóm giữ nhịp cục bộ trong phiên giằng co."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "Nhích lên sáng 13/11 (PVT, PVP trên +1%) khi Brent tăng 3,3% lên 95,82 USD đêm 12/11; PVT vẫn bị ngoại bán ròng 8 phiên liền tới 12/11."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "VHM",
+          "note": "4,5 điểm, không đổi: ngoại mua 3 phiên ≈ +123,7 tỷ, CafeF 5 phiên tới 11/11 vẫn -67,9 tỷ. Dừng nếu thủng 1.730 kèm ngoại bán ròng."
+        },
+        {
+          "ticker": "HPG",
+          "note": "4,5 điểm, không đổi: 10 phiên ngoại +264,9 tỷ (6/10 phiên mua), 12/11 chưa có số chốt. Dừng nếu ngoại bán liên tiếp và thủng 1.730."
+        },
+        {
+          "ticker": "VIC",
+          "note": "4,0 điểm, không đổi: ngoại +90 (11/11) rồi -35,7 tỷ (12/11), 10 phiên -374,9 tỷ; trụ kéo chỉ số 12/11 -3,55 điểm. Dừng nếu ngoại bán thêm 2 phiên."
+        },
+        {
+          "ticker": "HDB",
+          "note": "Dự bị: ngoại mua 3 phiên ≈ +150,7 tỷ, chưa chấm KQKD."
+        },
+        {
+          "ticker": "MSN",
+          "note": "Dự bị: ngoại mua 2 phiên (11-12/11), tự doanh +17 tỷ (11/11), 10 phiên +217,8 tỷ."
+        },
+        {
+          "ticker": "FPT",
+          "note": "Phá đáy từ 07/2023, giá 49.x (-0,8%); ngoại bán ròng 6 phiên tới 12/11 (5 phiên -821,5 tỷ), sáng 13/11 ~-110 tỷ."
+        }
+      ],
+      "action_items": [
+        "Phiên chiều theo dõi vùng 1.730: giữ được kèm ngoại giảm bán FPT thì có thể thăm dò nhỏ VHM, HDB; thủng 1.730 và ngoại bán ròng lũy kế trên 500 tỷ thì không bắt đáy, chờ 1.700-1.715.",
+        "Hạn chế tăng tỷ trọng FPT, VCB, PVT khi ngoại còn bán nhiều phiên, lưu ý rủi ro giữ vị thế cuối tuần.",
+        "Chờ số tự doanh, thỏa thuận 13/11 (bài 'dòng tiền cá mập' sau ~19:00) và số ngoại chốt của HPG, SSI, VND trước khi đổi điểm các mã."
+      ],
+      "sources": [
+        "Người Quan Sát",
+        "Vietstock",
+        "CafeF",
+        "TCBS Cơ hội đầu tư",
+        "24hMoney"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-13",
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "generated_at": "2026-11-13T08:24:12+07:00",
+      "title": "Bản tin sáng 13/11: hiệu chỉnh thanh khoản 12/11, tự doanh đảo sang mua ròng ~325 tỷ, kịch bản Cơ sở thiên tiêu cực",
+      "summary": "Phiên 12/11 VN-Index đóng cửa 1.734,75 (-12,15; -0,70%), sát MA5 ~1.733, trên MA10 ~1.729, hỗ trợ ~1.730 (TCBS). Hiệu chỉnh so với bản chiều: 15.100 tỷ HOSE gồm cả thỏa thuận; khớp lệnh chỉ ~10.347 tỷ, thỏa thuận ~4.791 tỷ (suy luận), riêng LPB gần 3.000 tỷ. Ngoại bán ròng ~870-904 tỷ (FPT -449,4 tỷ), tự doanh mua ròng gần 325 tỷ. Kịch bản phiên 13/11 nghiêng Cơ sở thiên tiêu cực do Mỹ giảm nhẹ, Nvidia và dầu tăng.",
+      "key_findings": [
+        "Khớp lệnh HOSE 12/11 chỉ ~10.347 tỷ, KLGD khớp giảm 5,3%; nhận định 'thanh khoản tăng khi giá giảm' ở bản chiều cần hiểu thận trọng.",
+        "Ngoại bán ròng -870 đến -904 tỷ; tự doanh đảo chiều mua ròng gần +325 tỷ (GMD gần +80, REE ~+50, NLG trên +30 tỷ) sau -557 tỷ ngày 11/11.",
+        "FPT bị ngoại bán ròng 6 phiên liền (5 phiên -821,5 tỷ); VCB bán ròng 9 phiên liền (10 phiên -604 tỷ); PVT bán ròng 8 phiên liền.",
+        "VHM và HDB hình thành chuỗi 3 phiên ngoại mua (VHM ≈ +123,7 tỷ, HDB ≈ +150,7 tỷ).",
+        "Ba mã nổi bật giữ nguyên: VHM 4,5; HPG 4,5; VIC 4,0; dự bị HDB, MSN."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 13/11",
+          "items": [
+            "Tích cực: giữ trên 1.730-1.733, ngoại giảm bán FPT, tự doanh tiếp tục mua ròng, khớp lệnh từ ~10.000 tỷ; vùng 1.745-1.750.",
+            "Cơ sở (nghiêng): giằng co quanh MA5/MA10, Mỹ giảm nhẹ, Nvidia và dầu tăng gây thận trọng; vùng ~1.720-1.745.",
+            "Tiêu cực: thủng 1.730 kèm ngoại bán ròng tiếp trên 500 tỷ; thử 1.700."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: HOSE -875 tỷ (Vietstock Daily; dải nguồn -870 đến -904), HNX -23 tỷ; mua ròng HDB ~+60, MSN ~+41, CTD ~+28,8, VHM ~+24 tỷ.",
+            "Tự doanh: mua ròng gần +325 tỷ phiên 12/11; 11/11 -557, 10/11 +515, 09/11 -458 tỷ.",
+            "Trong nước (suy luận): ≈ +550 tỷ = 875 - 325, không phải số công bố.",
+            "Thỏa thuận: ~4.791 tỷ HOSE (suy luận: 15.138 - 10.347); LPB ~3.000 tỷ, chiếm trên 62% thỏa thuận HOSE.",
+            "Ngành hút/rút tiền: hút ở dầu khí, xây dựng; rút ở CNTT (-2,44%), ngân hàng, chứng khoán, BĐS lớn."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Mỹ đêm 12/11: Nasdaq -0,39%, Dow -0,36%, S&P 500 -0,35%; Nvidia giảm hơn 4%, có lúc chạm đáy 52 tuần. WTI 88,74 USD (+2,55%), Brent 95,82 USD (+3,3%).",
+            "Tỷ giá trung tâm 12/11: 25.623 đ/USD (+12).",
+            "MSCI Frontier Markets: thêm PNJ, NLG; loại DIG, PC1, FTS, hiệu lực 01/12/2026."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Ngân hàng",
+          "view": "Bị rút tiền phiên 12/11, tự doanh đảo sang mua ròng chung thị trường (+325 tỷ, TCB ~+26 tỷ) sau hai phiên bán ngân hàng; VCB bị ngoại bán ròng 9 phiên liền (10 phiên -604 tỷ), VPB, BID mỗi mã kéo chỉ số ~2 điểm."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "VIC kéo VN-Index -3,55 điểm phiên 12/11, ngoại đảo chiều từ +90 tỷ (11/11) sang -35,7 tỷ. VHM có chuỗi 3 phiên ngoại mua ≈ +123,7 tỷ nên là điểm sáng trong nhóm đang bị rút tiền."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "Bị rút tiền phiên 12/11 (VND -2,68%, VCI -1,73%); ngoại mua SSI, VND mới 2 phiên tới 11/11 (5 phiên +80,4 và +68,9 tỷ)."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG ngoại mua 2 phiên 10-11/11 (+36,7 và +37,9 tỷ, 10 phiên +264,9 tỷ) nhưng sáng 12/11 -25,9 tỷ, chưa có số chốt ngày."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "Là nhóm hút tiền phiên 12/11 cùng xây dựng, Brent tăng 3,3% lên 95,82 USD đêm 12/11; PVT vẫn bị ngoại bán ròng 8 phiên liền (5 phiên -52,8 tỷ)."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN được ngoại mua ròng 2 phiên (11-12/11, 12/11 ~+41 tỷ), tự doanh +17 tỷ ngày 11/11; 10 phiên ngoại ≈ +288,9 tỷ."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "PNJ được thêm vào MSCI Frontier Markets (hiệu lực 01/12/2026); chưa có số dòng tiền ngành riêng cho phiên 12/11."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "VHM",
+          "note": "4,5 điểm, không đổi: ngoại mua 3 phiên ≈ +123,7 tỷ, giá -0,48%. Theo dõi VN-Index từ 1.730; dừng nếu ngoại bán ròng trở lại và thủng 1.730."
+        },
+        {
+          "ticker": "HPG",
+          "note": "4,5 điểm, không đổi: 10 phiên ngoại +264,9 tỷ, sáng 12/11 -25,9 tỷ. Dừng nếu ngoại bán liên tiếp và thủng 1.730."
+        },
+        {
+          "ticker": "VIC",
+          "note": "4,0 điểm, không đổi: ngoại +90 rồi -35,7 tỷ, 5 phiên +85,3, 10 phiên -374,9 tỷ; giá 243.000 (-0,9%). Dừng nếu ngoại bán thêm 2 phiên."
+        },
+        {
+          "ticker": "HDB",
+          "note": "Dự bị: ngoại mua 3 phiên ≈ +150,7 tỷ, là mã mua ròng mạnh nhất theo TCBS và Vietstock; chưa chấm KQKD."
+        },
+        {
+          "ticker": "MSN",
+          "note": "Dự bị: ngoại +41,1 tỷ (12/11), tự doanh +17 tỷ (11/11), chuỗi 2 phiên."
+        },
+        {
+          "ticker": "FPT",
+          "note": "Ngoại bán ròng 449,4 tỷ (12/11), 6 phiên liền, 10 phiên -806,7 tỷ; tự doanh ~+29 tỷ."
+        }
+      ],
+      "action_items": [
+        "Mở phiên 13/11 theo dõi ATO và 30 phút đầu: giữ 1.730-1.733 và ngoại giảm bán FPT thì có thể thăm dò nhỏ VHM, HDB; thủng 1.730 kèm ngoại bán ròng thì không bắt đáy, chờ vùng 1.700.",
+        "Sau phiên kiểm tra tự doanh, thỏa thuận 13/11 và số ngoại chốt 12/11 của HPG, SSI, VND trước khi quyết định.",
+        "Hạn chế tăng tỷ trọng FPT, VCB, PVT khi ngoại còn bán ròng nhiều phiên; chú ý Mỹ giảm nhẹ, Nvidia, Brent 95,82 USD và phiên cuối tuần."
+      ],
+      "sources": [
+        "Vietstock",
+        "VnEconomy",
+        "24hMoney",
+        "TCBS Cơ hội đầu tư",
+        "CafeF"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-12",
+      "session": "afternoon",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán chiều (email)",
+      "generated_at": "2026-11-12T16:17:00+07:00",
+      "title": "Bản tin chiều 12/11: VN-Index -0,7% về 1.734,75, ngoại bán ròng mạnh nhất 1 tháng, FPT bị xả gần 450 tỷ",
+      "summary": "VN-Index đóng cửa 1.734,75 điểm (-12,15; -0,7%), quay về sát vùng MA5/MA10 (~1.731-1.735) và xóa gần hết đà tăng 2 phiên trước. GTGD HOSE hơn 15.100 tỷ (VnExpress) trong khi toàn thị trường 14.639,78 tỷ (Người Đưa Tin), hai nguồn lệch. Khối ngoại HOSE bán ròng khoảng 880-904 tỷ, lớn nhất một tháng, riêng FPT -449,5 tỷ. Kịch bản phiên 13/11 nghiêng về Cơ sở thiên tiêu cực.",
+      "key_findings": [
+        "Ngoại bán ròng ~880-904 tỷ HOSE, chấm dứt chuỗi 2 phiên mua ròng: FPT -449,5, KDH -107, STB -99, SHB -56, VIC -36 tỷ; mua ròng HDB +60, MSN +41, CTD +28, VHM +24 tỷ.",
+        "FPT bị ngoại bán ròng 6 phiên liền, tổng 5 phiên -821,5 tỷ; giá -2,65%. VIC -0,9% còn 243.000 đồng, kéo chỉ số giảm 3,6-5,3 điểm (hai nguồn lệch).",
+        "Tự doanh phiên 11/11 bán ròng 557 tỷ (TCB -261, CTG -226, POW -46); phiên 12/11 chưa có số.",
+        "Ba mã nổi bật: VHM 4,5; HPG 4,5; VIC 4,0; dự bị HDB, MSN.",
+        "MSCI thêm PNJ, NLG vào MSCI Frontier Markets Index; PNJ +2,75%."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 13/11",
+          "items": [
+            "Tích cực: giữ trên 1.731-1.735, ngoại ngừng bán FPT, khớp lệnh duy trì từ ~14.000 tỷ; hồi về 1.745-1.750.",
+            "Cơ sở (nghiêng): giằng co quanh MA5/MA10, trụ VIC, FPT, ngân hàng còn áp lực; vùng ~1.720-1.745.",
+            "Tiêu cực: thủng 1.731 kèm ngoại bán ròng tiếp trên 500 tỷ; thử vùng 1.700."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: HOSE bán ròng ~880-904 tỷ (VnExpress ~880; Người Đưa Tin 904), đảo chiều mạnh từ +75 tỷ ngày 11/11.",
+            "Tự doanh: phiên 12/11 chưa có số; 11/11 bán ròng 557 tỷ, 10/11 +515 tỷ, 09/11 -458 tỷ.",
+            "Trong nước (suy luận): mua ròng tương ứng ~0,9 nghìn tỷ, suy luận từ đối ứng với bán ròng của ngoại, không phải số công bố.",
+            "Thỏa thuận: chưa có số.",
+            "Ngành hút/rút tiền: hút ở xây dựng (DPG +6,46%, CTD +3,5%), dầu khí (PLX +2,28%), truyền thông; rút ở công nghệ (FPT -2,65%), chứng khoán (VND -2,68%, VCI -1,73%), bảo hiểm, tài nguyên, BĐS, ngân hàng, bán lẻ."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Mỹ 11/11: Nasdaq +1,6%, S&P 500 +1,31%, Dow +0,49%; phiên 10/11 giảm sau CPI tháng 10 cao hơn dự báo.",
+            "Châu Á sáng 12/11: Nikkei +0,69%, Kospi +0,69%, Hang Seng -1,18%. Vàng thế giới giảm gần 3% sau CPI.",
+            "Tỷ giá trung tâm 11/11: 25.611 đ/USD (+11)."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Ngân hàng",
+          "view": "Bị rút tiền phiên 12/11: VPB -1,79%, TCB -1,37%, BID -1,08%; tự doanh phiên 11/11 bán ròng ngân hàng (TCB -261, CTG -226 tỷ) và ngoại bán STB -99, SHB -56 tỷ. HDB là điểm sáng khi được ngoại mua ròng 3 phiên (~+150,7 tỷ)."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "Nhóm bị rút tiền phiên 12/11, VIC -0,9% còn 243.000 đồng là trụ đè chỉ số mạnh nhất, ngoại -35,7 tỷ. VHM được ngoại mua ròng 3 phiên (~+123,7 tỷ) nhưng tổng 5 phiên chỉ ~+31,6 tỷ; KDH bị ngoại bán 107 tỷ."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "Bị rút tiền phiên 12/11: VND -2,68%, VCI -1,73%; ngoại mua ròng SSI và VND mới 2 phiên (số tới 11/11: +80,4 và +68,9 tỷ trong 5 phiên)."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG giảm 1,41% phiên 12/11 trong nhóm tài nguyên bị bán; ngoại mua ròng 10-11/11 (+36,7 và +37,9 tỷ, 10 phiên +264,9 tỷ) nhưng sáng 12/11 đã bán -25,9 tỷ nên chuỗi có thể đứt."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "Là nhóm hút tiền cùng xây dựng phiên 12/11 (PLX +2,28%); riêng PVT bị ngoại bán ròng 5 phiên liền tới 11/11 (-56,4 tỷ)."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN được ngoại mua ròng +41 tỷ phiên 12/11 (chuỗi 2 phiên), tự doanh +17 tỷ ngày 11/11; 10 phiên ngoại ≈ +288,9 tỷ (gồm số 12/11)."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "Nhóm bị rút tiền phiên 12/11, nhưng PNJ +2,75% nhờ được MSCI thêm vào MSCI Frontier Markets Index."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "VHM",
+          "note": "4,5 điểm (từ 4,0): ngoại mua ròng 3 phiên ~+123,7 tỷ, giá -0,48% khi thị trường -0,7%. Rủi ro BĐS bị rút tiền; dừng nếu ngoại bán trở lại và VN-Index thủng 1.731."
+        },
+        {
+          "ticker": "HPG",
+          "note": "4,5 điểm (từ 5,0): ngoại mua 10-11/11 nhưng sáng 12/11 -25,9 tỷ, giá -1,41%. Theo dõi số ngoại chốt 12/11 và VN-Index trên 1.731."
+        },
+        {
+          "ticker": "VIC",
+          "note": "4,0 điểm (từ 4,5): ngoại +90 tỷ (11/11) rồi -35,7 tỷ (12/11), giá 243.000 (-0,9%), đè chỉ số nhất. Theo dõi ngoại 13/11 và vùng 1.731-1.735."
+        },
+        {
+          "ticker": "HDB",
+          "note": "Dự bị: ngoại mua ròng 3 phiên (~+150,7 tỷ), chưa chấm KQKD."
+        },
+        {
+          "ticker": "MSN",
+          "note": "Dự bị: ngoại +41,1 tỷ (12/11), tự doanh +17 tỷ (11/11), chuỗi mới 2 phiên."
+        },
+        {
+          "ticker": "FPT",
+          "note": "Ngoại bán ròng 449,5 tỷ phiên 12/11, 6 phiên liền, 5 phiên -821,5 tỷ; giá -2,65%."
+        }
+      ],
+      "action_items": [
+        "Mở phiên 13/11 theo dõi ATO và 30 phút đầu: nếu VN-Index giữ 1.731-1.735 và ngoại giảm bán FPT có thể thăm dò VHM, HDB; nếu thủng 1.731 kèm thanh khoản tăng thì không bắt đáy, chờ vùng 1.700.",
+        "Cập nhật số chốt phiên: tự doanh, thỏa thuận 12/11 và số ngoại chốt của HPG, VIC trước khi quyết định.",
+        "Giảm tỷ trọng FPT, ngân hàng nếu ngoại và tự doanh tiếp tục bán; chú ý phiên cuối tuần và biến động quốc tế (CPI Mỹ nóng hơn dự báo, vàng giảm gần 3%)."
+      ],
+      "sources": [
+        "VnExpress",
+        "Markettimes",
+        "Người Đưa Tin",
+        "CafeF",
+        "TCBS Cơ hội đầu tư",
+        "Vietstock",
+        "SKĐS/Yuanta"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
       "date": "2026-11-12",
       "session": "midday",
       "kind": "bulletin",
