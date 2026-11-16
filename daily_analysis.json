@@ -1,6 +1,122 @@
 {
   "items": [
     {
+      "date": "2026-11-16",
+      "session": "midday",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán trưa (email)",
+      "generated_at": "2026-11-16T13:41:41+07:00",
+      "title": "Bản tin trưa 16/11: VN-Index xanh vỏ đỏ lòng nhờ Vingroup, ngoại quay lại bán ròng",
+      "summary": "Phiên sáng 16/11 VN-Index khoảng 1.743 điểm (+8), đỉnh sáng 1.752,30, nhưng độ rộng âm (240 tăng/296 giảm) và chỉ số chủ yếu nhờ VIC, VHM đóng góp gần 8 điểm. Khối ngoại bán ròng khoảng 97 tỷ trên HOSE (FPT -83 tỷ), trái với phiên 13/11 mua ròng khoảng 301 tỷ; thanh khoản sáng trên 4.200 tỷ. Ngân hàng, chứng khoán, bảo hiểm bị bán. Kịch bản chiều nghiêng về giằng co, thận trọng gần kháng cự 1.750-1.760.",
+      "key_findings": [
+        "VIC +2,06% đóng góp khoảng 8,36 điểm, VHM +0,80% đóng góp khoảng 1,21 điểm (Vietstock, 10h30); ngân hàng, chứng khoán, bảo hiểm giảm hơn 0,5%.",
+        "Ngoại bán ròng khoảng 97 tỷ HOSE sáng 16/11 (FPT -83 tỷ), sau phiên 13/11 mua ròng khoảng 301 tỷ.",
+        "3 mã nổi bật giữ nguyên: VHM 4,5; HPG 4,5; VIC 4,0 (dự bị HDB, MSN).",
+        "HDB ngoại mua ròng 4 phiên (+208,7 tỷ), MSN 3 phiên (+128,0 tỷ); FPT bán ròng 7 phiên (-1.089 tỷ) theo CafeF.",
+        "Hỗ trợ 1.730 (MA5/MA10 quanh 1.735/1.728), kháng cự 1.750-1.760."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên chiều 16/11",
+          "items": [
+            "Tích cực: vượt 1.752 và giữ kháng cự 1.750, thanh khoản cải thiện, ngoại mua ròng trở lại, ngân hàng và chứng khoán ngừng bị bán; vùng 1.750-1.765.",
+            "Cơ sở (nghiêng): giằng co trên MA10 (~1.728), quanh MA5 (~1.735), Vingroup giữ chỉ số nhưng độ rộng âm, ngoại bán ròng nhỏ; vùng 1.735-1.755.",
+            "Tiêu cực: VIC/VHM quay đầu hoặc chốt lời, VN-Index thủng 1.735 rồi 1.728 kèm ngoại bán ròng mở rộng; thử 1.715-1.720, hỗ trợ sâu 1.693-1.700."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: sáng 16/11 khoảng -97 tỷ HOSE (11h30), 10h30 khoảng -60 tỷ toàn thị trường; bán FPT, BID, VPL, mua VIC. Chốt 13/11 khoảng +301 tỷ; tuần 09-13/11 khoảng -914 tỷ.",
+            "Tự doanh: 16/11 chưa có số; tuần trước mua ròng tại VIX, TPB, VPB (chưa có giá trị).",
+            "Trong nước (suy luận): sáng 16/11 khoảng +97 tỷ, đối ứng ngoại bán ròng và gộp cả tự doanh; đây là suy luận, không phải số công bố.",
+            "Thỏa thuận: khoảng 515 tỷ toàn thị trường lúc 10h30 (PET trên 164 tỷ, SSB trên 118 tỷ); phiên 13/11 HOSE 5.365 tỷ.",
+            "Ngành hút/rút tiền: thanh khoản sáng BĐS dẫn đầu trên 571 tỷ, ngân hàng trên 423 tỷ (chịu áp lực bán), chứng khoán khoảng 269 tỷ. Tích cực: bán lẻ, tiêu dùng, thép. Rút: ngân hàng, chứng khoán, bảo hiểm, vận tải. Đây là thanh khoản theo ngành, không phải dòng tiền ròng."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Mỹ đêm 12/11: S&P 500 -0,35% còn 7.592,40; Dow Jones -0,36% còn 52.297,09; Nasdaq -0,39% còn 25.366,09.",
+            "Tỷ giá trung tâm 13/11: 25.637 đ/USD (+14); NHNN chào mua USD 25.500 từ 11/11, chưa có giao dịch thành công tới cuối tuần.",
+            "Xăng dầu từ 15h 12/11: E5RON92 giảm 1.499 xuống 19.399 đ/lít; RON95-III giảm 1.311 xuống 19.845 đ/lít; diesel giảm 1.874 xuống 26.822 đ/lít."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Ngân hàng",
+          "view": "Nhóm bị bán sáng 16/11 (giảm hơn 0,5%) với thanh khoản trên 423 tỷ, ngoại bán ròng tại BID; LPB +3,6% là điểm sáng. VCB bị ngoại bán ròng 9 phiên tới 12/11 (-164,8 tỷ trong 5 phiên), HDB ngoại mua ròng 4 phiên (+208,7 tỷ) nhưng giá -1,11% sáng nay."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "BĐS dẫn đầu thanh khoản sáng 16/11 (trên 571 tỷ), VIC +2,06% và VHM +0,80% kéo VN-Index gần 8 điểm. Chỉ số phụ thuộc Vingroup trong khi độ rộng âm; ngoại mua ròng VIC sáng nay nhưng bán ròng 2 phiên trước (-41,8 tỷ)."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "Nhóm bị bán sáng 16/11, thanh khoản khoảng 269 tỷ. SSI ngoại mua ròng 6,2 tỷ phiên 13/11, 5 phiên +20,3 tỷ, giá trị nhỏ."
+        },
+        {
+          "name": "Thép",
+          "view": "Thép được nhắc là nhóm tích cực sáng 16/11 (DBC +2,5%). HPG ngoại mua ròng 24,6 tỷ phiên 13/11 sau bán 22,1 tỷ hôm trước, 10 phiên +208,1 tỷ; chuỗi ngoại chưa hình thành."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "Nhóm tích cực sáng 16/11: DMX +2,5%, FRT +2,4%."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "Tuần trước nhóm thực phẩm giảm 3,1%; sáng 16/11 MCH +4,4%. MSN ngoại mua ròng 3 phiên (+128,0 tỷ), nhưng có rủi ro người nhà Chủ tịch đăng ký bán khoảng 8,5 triệu cp thỏa thuận."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "Tuần trước nhóm dầu khí giảm 2,1%; PVT bị ngoại bán ròng 8 phiên tới 12/11 (-52,8 tỷ trong 5 phiên)."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "VHM",
+          "note": "Điểm 4,5. Giá +0,80% sáng nay, khớp trên 140 tỷ; ngoại mua ròng 2 phiên tới 11/11 (+100,0 tỷ). Rủi ro: chỉ số phụ thuộc Vingroup, độ rộng âm. Dừng: VN-Index thủng 1.730 kèm VHM đảo chiều."
+        },
+        {
+          "ticker": "HPG",
+          "note": "Điểm 4,5. Ngoại +24,6 tỷ (13/11), 10 phiên +208,1 tỷ. Rủi ro: chuỗi ngoại mới 1 phiên. Dừng: ngoại bán ròng 2 phiên liên tiếp và thủng 1.730."
+        },
+        {
+          "ticker": "VIC",
+          "note": "Điểm 4,0. Giá +2,06% sáng nay, đóng góp khoảng 8,36 điểm, ngoại mua ròng khoảng 300.000 cp; 10 phiên -27,3 tỷ. Rủi ro: định giá, chốt lời nếu Vingroup quay đầu."
+        },
+        {
+          "ticker": "HDB",
+          "note": "Dự bị. Ngoại mua ròng 4 phiên (+208,7 tỷ) nhưng giá -1,11% và ngoại bán mạnh sáng nay; chưa chấm đủ KQKD."
+        },
+        {
+          "ticker": "MSN",
+          "note": "Dự bị. Ngoại mua ròng 3 phiên (+128,0 tỷ); rủi ro bán thỏa thuận của người nhà Chủ tịch; chưa chấm đủ KQKD."
+        },
+        {
+          "ticker": "FPT",
+          "note": "Ngoại bán ròng 7 phiên liên tiếp, tổng khoảng -1.089 tỷ, thêm khoảng -83 tỷ sáng nay."
+        }
+      ],
+      "action_items": [
+        "Phiên chiều theo dõi kháng cự 1.750-1.760 và hỗ trợ 1.735/1.728; chỉ cân nhắc thăm dò nhỏ VHM, HPG khi VN-Index vượt 1.752 với thanh khoản cải thiện và ngoại giảm bán.",
+        "Nếu Vingroup quay đầu và chỉ số thủng 1.735, không bắt đáy, chờ vùng 1.715-1.720.",
+        "Hạn chế tăng tỷ trọng FPT, VCB, PVT khi ngoại còn bán nhiều phiên; không đuổi theo mã tăng nhờ lực kéo của hai mã trụ.",
+        "Chờ số chốt ngoại theo mã (HDB, MSN, VIC, VHM) và tự doanh, thỏa thuận trước khi đổi điểm. Chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+      ],
+      "sources": [
+        "Người Quan Sát",
+        "Vietstock",
+        "Yuanta",
+        "Vietnamnet",
+        "Tin nhanh chứng khoán",
+        "TCBS Cơ hội đầu tư",
+        "CafeF"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
       "date": "2026-11-13",
       "session": "afternoon",
       "kind": "bulletin",
