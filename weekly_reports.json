@@ -2,6 +2,316 @@
   "items": [
     {
       "schema_version": 1,
+      "week_id": "2026-W46",
+      "partial": true,
+      "period": {
+        "from": "2026-11-09",
+        "to": "2026-11-13",
+        "label": "09-13/11/2026"
+      },
+      "generated_at": "2026-11-16T22:20:00+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức, không phải khuyến nghị đầu tư.",
+      "summary": {
+        "headline": "VN-Index tuần 9-13/11/2026 tăng nhẹ 9,57 điểm (+0,55%) lên 1.734,93 điểm, chững lại sau 2 tuần giảm liên tiếp; khối ngoại bán ròng ~878 tỷ cả tuần nhưng quay lại mua ròng ~301-320 tỷ phiên 13/11.",
+        "vnindex_close": 1734.93,
+        "vnindex_week_pct": 0.55,
+        "vnindex_week_change": 9.57,
+        "prev_week_close": 1725.36,
+        "foreign_net_week_bn": {
+          "hose": -807,
+          "all_markets": -878
+        },
+        "support": "1.710-1.720",
+        "resistance": "1.747-1.754, rồi 1.780"
+      },
+      "days": [],
+      "sector_flows": [
+        {
+          "sector": "Ngân hàng",
+          "status": "Tích cực nhẹ (nâng đỡ cuối phiên)",
+          "signal": 1,
+          "tickers": [
+            "STB",
+            "TCB",
+            "HDB",
+            "SHB"
+          ],
+          "evidence": "Ngân hàng giữ sắc xanh phiên 13/11 (SGGP); khối ngoại mua HDB ~58 tỷ (Znews, Tiền Phong); SHB giảm.",
+          "outlook": "Cầu cuối phiên ở nhóm trụ giữ VN-Index trên tham chiếu; nếu giữ vững 1.710-1.720 có thể tiếp tục là điểm tựa, nhưng cần thanh khoản xác nhận; nợ xấu 28 ngân hàng niêm yết +~27% sau 9 tháng là rủi ro."
+        },
+        {
+          "sector": "Công nghệ - Viễn thông",
+          "status": "Phân hóa (IT tăng phiên 13/11, FPT bị bán ròng)",
+          "signal": 0,
+          "tickers": [
+            "FPT",
+            "FOX",
+            "VGI",
+            "ABC"
+          ],
+          "evidence": "Nhóm IT tăng mạnh nhất phiên 13/11 ~+1,01%; viễn thông FOX +1,3%, ABC +1%, VGI +1% (SGGP, Thời báo Tài chính VN).",
+          "outlook": "FPT tiếp tục bị khối ngoại bán ròng >221 tỷ; áp lực dòng vốn ngoại có thể còn, cơ bản 9 tháng tốt là điểm tựa trung hạn."
+        },
+        {
+          "sector": "Bất động sản",
+          "status": "Tiêu cực (áp lực điều chỉnh)",
+          "signal": -1,
+          "tickers": [
+            "DXS",
+            "PDR",
+            "KOS",
+            "SJS",
+            "DIG",
+            "NLG",
+            "KDH",
+            "TAL"
+          ],
+          "evidence": "BĐS lấy đi ~4,11 điểm VN-Index phiên 12/11 (SKĐS); phiên 13/11 DXS -3,5%, PDR -2,5%, KOS -2,5%, SJS/DIG -2,4%; NLG +2,88%, TAL +4,8% (Thời báo Tài chính VN).",
+          "outlook": "Áp lực chốt lời còn; dòng tiền chọn lọc mã có câu chuyện riêng; Vingroup đứng tham chiếu, không tạo động lực."
+        },
+        {
+          "sector": "Chứng khoán",
+          "status": "Phân hóa - yếu",
+          "signal": 0,
+          "tickers": [
+            "VIX",
+            "HCM",
+            "VCI",
+            "VCK",
+            "AGR",
+            "VDS"
+          ],
+          "evidence": "VIX được khối ngoại mua ~308 tỷ; HCM, VCI, VCK -~1%; AGR -2,2%; TIG giảm sàn (Thời báo Tài chính VN, Tinnhanhchungkhoan).",
+          "outlook": "Dòng tiền ngoại tập trung 1 mã VIX, nhóm chứng khoán chung chưa xác nhận hút tiền lại sau nhịp tăng tuần trước."
+        },
+        {
+          "sector": "Xây dựng - Vật liệu",
+          "status": "Tiêu cực",
+          "signal": -1,
+          "tickers": [],
+          "evidence": "Xây dựng và Vật liệu giảm ~1,05% phiên 13/11 (SGGP).",
+          "outlook": "Giảm mạnh nhất các nhóm ngày 13/11; chưa có tín hiệu đảo chiều rõ."
+        },
+        {
+          "sector": "Năng lượng - Hóa chất",
+          "status": "Tiêu cực nhẹ",
+          "signal": -1,
+          "tickers": [
+            "GAS",
+            "PLX",
+            "PVD",
+            "BSR",
+            "HII",
+            "CSV",
+            "DCM",
+            "BMP"
+          ],
+          "evidence": "HII -4,1%, CSV -1,8%, DCM -1,5%; GAS -0,7%, BSR -0,6% phiên 13/11 (tudonghoangaynay, Znews).",
+          "outlook": "Nhóm hóa chất - năng lượng yếu; PVD tuần trước dẫn đầu nhóm năng lượng, cần theo dõi giá dầu."
+        },
+        {
+          "sector": "Điện - Tiện ích - Hàng không",
+          "status": "Tích cực nhẹ",
+          "signal": 1,
+          "tickers": [
+            "POW",
+            "VJC"
+          ],
+          "evidence": "Khối ngoại mua ròng POW ~86 tỷ, VJC ~58 tỷ phiên 13/11; nhóm Điện-Nước, Du lịch tăng nhẹ (SGGP, Znews).",
+          "outlook": "Dòng tiền ngoại chọn lọc; cần xác nhận thêm vài phiên."
+        },
+        {
+          "sector": "Khối ngoại toàn thị trường",
+          "status": "Bán ròng cả tuần - mua ròng phiên 13/11",
+          "signal": 0,
+          "tickers": [
+            "VIX",
+            "POW",
+            "VJC",
+            "HDB",
+            "MSN",
+            "CTD",
+            "FPT",
+            "KDH",
+            "SHB",
+            "PVS",
+            "MBS"
+          ],
+          "evidence": "Bán ròng ~878 tỷ tuần (HOSE ~807, HNX ~71) (Vietstock); phiên 13/11 mua ròng ~301-320 tỷ (Znews, SGGP, Báo Đầu tư); phiên 12/11 bán ròng ~876 tỷ, FPT ~450 tỷ (HDBS, Nhân Dân). Mua: VIX, POW, VJC, HDB, MSN, CTD; Bán: FPT, KDH (12/11), SHB, PVS, MBS (HNX).",
+          "outlook": "Mua ròng phiên 13/11 là lần đầu đáng kể sau chuỗi bán nhưng tập trung 1 mã; chưa đủ xác nhận xu hướng."
+        }
+      ],
+      "watchlist": [
+        {
+          "ticker": "VIX",
+          "sector": "Chứng khoán",
+          "signal": "MUA",
+          "reason": "Khối ngoại mua ròng mạnh nhất phiên 13/11 (~308 tỷ, ~23 triệu cp), dẫn đầu thị trường. Tín hiệu tập trung 1 mã 1 phiên, cần xác nhận; nhóm chứng khoán nói chung vẫn yếu.",
+          "week_pct": null
+        },
+        {
+          "ticker": "POW",
+          "sector": "Điện",
+          "signal": "MUA",
+          "reason": "Khối ngoại mua ròng ~86 tỷ phiên 13/11, nhóm Điện-Nước giữ sắc xanh.",
+          "week_pct": null
+        },
+        {
+          "ticker": "VJC",
+          "sector": "Hàng không",
+          "signal": "THEO DÕI",
+          "reason": "Khối ngoại mua ròng ~58 tỷ phiên 13/11.",
+          "week_pct": null
+        },
+        {
+          "ticker": "HDB",
+          "sector": "Ngân hàng",
+          "signal": "THEO DÕI",
+          "reason": "Khối ngoại mua ròng ~58-60 tỷ phiên 13/11; tuần trước từng bị khối ngoại bán ròng nhiều.",
+          "week_pct": null
+        },
+        {
+          "ticker": "STB",
+          "sector": "Ngân hàng",
+          "signal": "THEO DÕI",
+          "reason": "Cùng TCB nâng đỡ chỉ số cuối phiên 13/11.",
+          "week_pct": null
+        },
+        {
+          "ticker": "TCB",
+          "sector": "Ngân hàng",
+          "signal": "THEO DÕI",
+          "reason": "Nâng đỡ VN-Index cuối phiên 13/11 nhờ lực cầu các trụ.",
+          "week_pct": null
+        },
+        {
+          "ticker": "MSN",
+          "sector": "Tiêu dùng",
+          "signal": "THEO DÕI",
+          "reason": "Khối ngoại mua ròng ~41 tỷ.",
+          "week_pct": null
+        },
+        {
+          "ticker": "NLG",
+          "sector": "Bất động sản",
+          "signal": "THEO DÕI",
+          "reason": "+2,88% phiên 13/11 ngược dòng nhóm BĐS; tín hiệu 1 phiên, cần xác nhận.",
+          "week_pct": null
+        },
+        {
+          "ticker": "KDH",
+          "sector": "Bất động sản",
+          "signal": "THEO DÕI",
+          "reason": "+0,96% phiên 13/11; tuần trước được khối ngoại mua ròng ~171 tỷ phiên 6/11.",
+          "week_pct": null
+        },
+        {
+          "ticker": "TAL",
+          "sector": "Khác",
+          "signal": "THEO DÕI",
+          "reason": "+4,8% phiên 13/11, tiếp tục dòng tiền tuần trước; quá mua kỹ thuật, biến động cao.",
+          "week_pct": null
+        },
+        {
+          "ticker": "FPT",
+          "sector": "Công nghệ",
+          "signal": "RỦI RO",
+          "reason": "Bị khối ngoại bán ròng >221 tỷ phiên 13/11, giảm sâu nhất VN30 phiên 12/11 (-2,7%); cơ bản tốt (KQKD 9 tháng +17%) nhưng áp lực dòng vốn ngoại kéo dài.",
+          "week_pct": null
+        },
+        {
+          "ticker": "VIC",
+          "sector": "Bất động sản",
+          "signal": "RỦI RO",
+          "reason": "Đứng tham chiếu phiên 13/11, hệ sinh thái Vingroup suy yếu đầu phiên; chưa tạo động lực cho chỉ số.",
+          "week_pct": null
+        },
+        {
+          "ticker": "VHM",
+          "sector": "Bất động sản",
+          "signal": "RỦI RO",
+          "reason": "Đứng tham chiếu phiên 13/11, không tạo thêm động lực.",
+          "week_pct": null
+        },
+        {
+          "ticker": "DXS",
+          "sector": "Bất động sản",
+          "signal": "RỦI RO",
+          "reason": "-3,5% phiên 13/11, yếu nhất nhóm BĐS.",
+          "week_pct": null
+        },
+        {
+          "ticker": "PDR",
+          "sector": "Bất động sản",
+          "signal": "RỦI RO",
+          "reason": "-2,5% phiên 13/11.",
+          "week_pct": null
+        },
+        {
+          "ticker": "DIG",
+          "sector": "Bất động sản",
+          "signal": "RỦI RO",
+          "reason": "-2,4% phiên 13/11; tuần trước đã là RỦI RO (giảm sâu từ đỉnh tháng 5).",
+          "week_pct": null
+        },
+        {
+          "ticker": "SJS",
+          "sector": "Bất động sản",
+          "signal": "RỦI RO",
+          "reason": "-2,4% phiên 13/11, sau nhịp tăng trần nhờ Q3 kỷ lục.",
+          "week_pct": null
+        },
+        {
+          "ticker": "KOS",
+          "sector": "Bất động sản",
+          "signal": "RỦI RO",
+          "reason": "-2,5% phiên 13/11; tuần trước biến động cực đoan, không phải khuyến nghị mua.",
+          "week_pct": null
+        },
+        {
+          "ticker": "HII",
+          "sector": "Hóa chất",
+          "signal": "RỦI RO",
+          "reason": "-4,1% phiên 13/11, yếu nhất nhóm hóa chất.",
+          "week_pct": null
+        },
+        {
+          "ticker": "TIG",
+          "sector": "Chứng khoán",
+          "signal": "RỦI RO",
+          "reason": "Giảm sàn -10% xuống 2.700 đ phiên 13/11, khớp lệnh cao nhất sàn (34,3 triệu cp); cổ phiếu penny, thanh khoản đột biến, rủi ro rất cao.",
+          "week_pct": null
+        },
+        {
+          "ticker": "VNM",
+          "sector": "Tiêu dùng",
+          "signal": "RỦI RO",
+          "reason": "-1,1% phiên 13/11, nằm trong nhóm kéo chỉ số giảm cùng GAS, GVR, BSR.",
+          "week_pct": null
+        }
+      ],
+      "outlook": {
+        "risks": [
+          "Thanh khoản thấp, độ rộng xấu (368 mã giảm trên 3 sàn phiên 13/11); VN-Index vẫn dưới MA20 và đường xu hướng giảm từ tháng 9; khối ngoại bán ròng cả tuần, mua ròng phiên 13/11 chưa đủ xác nhận đảo chiều (chủ yếu 1 mã VIX); rủi ro mất vùng 1.710-1.720 (có thể về 1.700); CPI Mỹ và dòng vốn toàn cầu; số liệu khối ngoại/VN-Index phiên 12-13/11 lệch giữa các báo (1.734,75 so với 1.734,93), báo cáo dùng 1.734,93 theo Vietstock tuần."
+        ]
+      },
+      "data_quality": [
+        "Nhập lại từ file theo dõi trên Drive (BaoCao_ChungKhoan_TheoDoi), không có số liệu từng ngày; đã khôi phục dấu tiếng Việt, số liệu giữ nguyên văn nhật ký tuần. Thanh khoản cả tuần không có số liệu văn bản (phiên 13/11: HOSE ~15.138 tỷ)."
+      ],
+      "sources": [
+        "Vietstock (qua Investing.com)",
+        "Tinnhanhchungkhoan",
+        "Thời báo Tài chính VN",
+        "SGGP",
+        "Báo Đầu tư",
+        "Znews",
+        "Tiền Phong",
+        "Người Quan Sát",
+        "Nhân Dân"
+      ]
+    },
+    {
+      "schema_version": 1,
       "week_id": "2026-W45",
       "period": {
         "from": "2026-11-02",
