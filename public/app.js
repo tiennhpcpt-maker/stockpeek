@@ -1248,6 +1248,106 @@ function wkChips(list, cls) {
   return a.length ? a.map((t) => `<span class="wk-chip ${cls || ""}">${escapeHtml(t)}</span>`).join("") : '<span class="wk-dim">Không có dữ liệu</span>';
 }
 
+// ---- Biểu đồ SVG thuần cho tab Tuần (không dùng thư viện) ----
+// pts: [{label, value, active?}] theo thứ tự thời gian. Trả về chuỗi <svg>.
+const WK_CH = { w: 640, h: 170, padL: 8, padR: 8, padT: 22, padB: 26 };
+
+function wkLineChart(pts, opts = {}) {
+  const { w, h, padL, padR, padT, padB } = WK_CH;
+  const vals = pts.map((p) => p.value).filter((v) => v != null);
+  if (vals.length < 2) return "";
+  let lo = Math.min(...vals), hi = Math.max(...vals);
+  const pad = (hi - lo) * 0.15 || 1; lo -= pad; hi += pad;
+  const step = (w - padL - padR) / Math.max(pts.length - 1, 1);
+  const x = (i) => padL + i * step;
+  const y = (v) => padT + (1 - (v - lo) / (hi - lo)) * (h - padT - padB);
+  const valid = pts.map((p, i) => ({ ...p, i })).filter((p) => p.value != null);
+  const d = valid.map((p, k) => `${k ? "L" : "M"}${x(p.i).toFixed(1)},${y(p.value).toFixed(1)}`).join(" ");
+  const dots = valid.map((p) => {
+    const cx = x(p.i).toFixed(1), cy = y(p.value).toFixed(1);
+    const anchor = p.i === 0 ? "start" : p.i === pts.length - 1 ? "end" : "middle";
+    return `<g class="wk-pt${p.active ? " on" : ""}"${opts.clickKey ? ` data-key="${escapeHtml(p.key)}"` : ""}>
+      <circle cx="${cx}" cy="${cy}" r="${p.active ? 5.5 : 3.5}"></circle>
+      <text x="${cx}" y="${(cy - 9).toFixed(1)}" text-anchor="${anchor}" class="wk-ch-val">${escapeHtml(wkNum(p.value, opts.digits ?? 0))}</text>
+      <title>${escapeHtml(p.label)}: ${escapeHtml(wkNum(p.value))}</title></g>`;
+  }).join("");
+  const labels = pts.map((p, i) => {
+    const anchor = i === 0 ? "start" : i === pts.length - 1 ? "end" : "middle";
+    return `<text x="${x(i).toFixed(1)}" y="${h - 8}" text-anchor="${anchor}" class="wk-ch-lab${p.active ? " on" : ""}">${escapeHtml(p.label)}</text>`;
+  }).join("");
+  return `<svg class="wk-chart" viewBox="0 0 ${w} ${h}" role="img" aria-label="${escapeHtml(opts.title || "")}">
+    <path d="${d}" class="wk-ch-line"></path>${dots}${labels}</svg>`;
+}
+
+// Cột dương/âm quanh trục 0. Giá trị quá lớn so với phần còn lại (> 3 lần trung vị)
+// bị cắt ngọn để không đè bẹp các cột khác, đánh dấu bằng nét đứt.
+function wkBarChart(pts, opts = {}) {
+  const { w, h, padL, padR, padT } = WK_CH;
+  const padB = 40; // chừa chỗ cho nhãn số của cột âm, không đè lên nhãn tuần/ngày
+  const vals = pts.map((p) => p.value).filter((v) => v != null);
+  if (!vals.length) return "";
+  const abs = vals.map(Math.abs).sort((a, b) => a - b);
+  const med = abs[Math.floor(abs.length / 2)] || abs[abs.length - 1] || 1;
+  const cap = abs.length >= 4 ? Math.min(abs[abs.length - 1], med * 3) : abs[abs.length - 1];
+  const maxPos = Math.max(0, ...vals.map((v) => Math.min(v, cap)));
+  const maxNeg = Math.max(0, ...vals.map((v) => Math.min(-v, cap)));
+  const span = maxPos + maxNeg || 1;
+  const plotH = h - padT - padB;
+  const zeroY = padT + (maxPos / span) * plotH;
+  const slot = (w - padL - padR) / pts.length;
+  const bw = Math.min(slot * 0.55, 46);
+  const bars = pts.map((p, i) => {
+    const cx = padL + slot * (i + 0.5);
+    const lab = `<text x="${cx.toFixed(1)}" y="${h - 8}" text-anchor="middle" class="wk-ch-lab${p.active ? " on" : ""}">${escapeHtml(p.label)}</text>`;
+    if (p.value == null) return `<g>${lab}<text x="${cx.toFixed(1)}" y="${zeroY.toFixed(1)}" text-anchor="middle" class="wk-ch-val">–</text></g>`;
+    const clipped = Math.abs(p.value) > cap;
+    const v = Math.max(-cap, Math.min(cap, p.value));
+    const bh = Math.max((Math.abs(v) / span) * plotH, 1.5);
+    const top = v >= 0 ? zeroY - bh : zeroY;
+    const ty = v >= 0 ? top - 5 : top + bh + 12;
+    return `<g class="wk-bar ${opts.neutral ? "neu" : v >= 0 ? "up" : "down"}${p.active ? " on" : ""}${clipped ? " clip" : ""}"${opts.clickKey ? ` data-key="${escapeHtml(p.key)}"` : ""}>
+      <rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${bh.toFixed(1)}" rx="2"></rect>
+      <text x="${cx.toFixed(1)}" y="${Math.min(Math.max(ty, 10), h - padB + 14).toFixed(1)}" text-anchor="middle" class="wk-ch-val">${clipped ? "⇣ " : ""}${escapeHtml((opts.neutral ? "" : wkSign(p.value)) + wkNum(p.value, 0))}</text>
+      <title>${escapeHtml(p.label)}: ${escapeHtml(wkSign(p.value) + wkNum(p.value, 0))} tỷ${clipped ? " (cột bị cắt ngọn vì quá lớn)" : ""}</title>${lab}</g>`;
+  }).join("");
+  return `<svg class="wk-chart" viewBox="0 0 ${w} ${h}" role="img" aria-label="${escapeHtml(opts.title || "")}">
+    <line x1="${padL}" x2="${w - padR}" y1="${zeroY.toFixed(1)}" y2="${zeroY.toFixed(1)}" class="wk-ch-zero"></line>${bars}</svg>`;
+}
+
+function wkShortLabel(week) {
+  // "02-06/11/2026" -> "02-06/11"; nếu không có label thì dùng số tuần ISO.
+  if (WK_CH.w < 560) return "T" + String(week.week_id || "").replace(/^\d{4}-W0?/, ""); // màn hẹp: "T45" = tuần 45
+  const lb = (week.period && week.period.label) || "";
+  const m = lb.match(/^(\d{1,2}(?:\/\d{1,2})?\s*-\s*\d{1,2}\/\d{1,2})/);
+  return m ? m[1].replace(/\s+/g, "") : (week.week_id || "").replace(/^\d{4}-/, "");
+}
+
+function wkHistoryCard(activeId) {
+  const weeks = [...weeklyData.weeks].reverse(); // cũ -> mới
+  if (weeks.length < 2) return "";
+  const foreign = (s) => { const f = (s && s.foreign_net_week_bn) || {}; return f.hose != null ? f.hose : f.all_markets; };
+  const mixed = weeks.some((x) => ((x.summary || {}).foreign_net_week_bn || {}).hose == null);
+  const line = wkLineChart(weeks.map((x) => ({ key: x.week_id, label: wkShortLabel(x), value: (x.summary || {}).vnindex_close, active: x.week_id === activeId })),
+    { clickKey: true, digits: 0, title: "VN-Index đóng cửa cuối tuần" });
+  const bars = wkBarChart(weeks.map((x) => ({ key: x.week_id, label: wkShortLabel(x), value: foreign(x.summary), active: x.week_id === activeId })),
+    { clickKey: true, title: "Khối ngoại ròng theo tuần" });
+  return `<div class="report-card"><h3>Diễn biến qua các tuần</h3>
+    <div class="wk-ch-title">VN-Index đóng cửa cuối tuần</div>${line}
+    <div class="wk-ch-title">Khối ngoại ròng cả tuần (tỷ đồng)</div>${bars}
+    <div class="wk-dim">Bấm vào 1 tuần trên biểu đồ để xem chi tiết.${mixed ? " Khối ngoại: tuần có số HOSE thì dùng HOSE, tuần không có thì dùng số toàn thị trường, nên chỉ so sánh tương đối." : ""} Cột có dấu ⇣ quá lớn nên bị cắt ngọn.</div></div>`;
+}
+
+function wkDaysChart(days) {
+  const lab = (d) => `${(d.weekday || "").replace("Thứ ", "T").replace("Hai", "2").replace("Ba", "3").replace("Tư", "4").replace("Năm", "5").replace("Sáu", "6")} ${(d.date || "").slice(8)}/${(d.date || "").slice(5, 7)}`;
+  const line = wkLineChart(days.map((d) => ({ key: d.date, label: lab(d), value: (d.vnindex || {}).close })), { digits: 2, title: "VN-Index từng ngày" });
+  const liq = days.some((d) => d.liquidity_hose_bn != null)
+    ? wkBarChart(days.map((d) => ({ key: d.date, label: lab(d), value: d.liquidity_hose_bn })), { title: "Thanh khoản HOSE", neutral: true }) : "";
+  const fr = wkBarChart(days.map((d) => ({ key: d.date, label: lab(d), value: d.foreign_hose_bn != null ? d.foreign_hose_bn : d.foreign_all_bn })), { title: "Khối ngoại ròng từng ngày" });
+  return `<div class="wk-ch-title">VN-Index đóng cửa</div>${line}
+    <div class="wk-ch-title">Khối ngoại ròng (tỷ đồng)</div>${fr}
+    ${liq ? `<div class="wk-ch-title">GTGD HOSE (tỷ đồng)</div>${liq}` : ""}`;
+}
+
 async function refreshWeeklyReports() {
   const box = document.getElementById("weeklyContent");
   try {
@@ -1283,6 +1383,9 @@ function renderWeekly() {
     kpi("Kháng cự", S.resistance || "-"),
   ].join("");
 
+  // Vẽ biểu đồ đúng bằng bề rộng thật của khung (chữ không bị co/giãn); khung đang ẩn thì dùng 640.
+  const cw = box.clientWidth;
+  WK_CH.w = cw > 0 ? Math.max(280, Math.round(cw - 34)) : 640;
   const days = w.days || [];
   const dayRows = days.map((d) => {
     const v = d.vnindex || {};
@@ -1313,7 +1416,8 @@ function renderWeekly() {
 
   box.innerHTML = `${weeklyNotice}
     <div class="report-card"><div class="report-summary"><b>${escapeHtml(S.headline || "")}</b></div><div class="report-indices">${kpis}</div></div>
-    ${days.length ? `<div class="report-card"><h3>Từng ngày trong tuần</h3><div class="wk-scroll"><table class="report-table wk-table">
+    ${wkHistoryCard(w.week_id)}
+    ${days.length ? `<div class="report-card"><h3>Từng ngày trong tuần</h3>${wkDaysChart(days)}<div class="wk-scroll"><table class="report-table wk-table">
       <tr><td></td><td class="num wk-dim">VN-Index</td><td class="num wk-dim">+/-</td><td class="num wk-dim">%</td><td class="num wk-dim">GTGD HOSE (tỷ)</td><td class="num wk-dim">Ngoại HOSE (tỷ)</td><td class="wk-dim">Nhận xét</td></tr>${dayRows}</table></div>
       <div class="wk-tabs" id="wkDayTabs">${days.map((d, i) => `<button class="wk-tab" data-i="${i}">${escapeHtml(d.weekday || "")} ${escapeHtml((d.date || "").slice(8))}/${escapeHtml((d.date || "").slice(5, 7))}</button>`).join("")}</div>
       <div id="wkDayDetail"></div></div>` : ""}
@@ -1336,6 +1440,13 @@ function renderWeekly() {
        ${lv ? `<p class="wk-dim">Hỗ trợ: ${escapeHtml(lv.support || "-")} | Kháng cự: ${escapeHtml(lv.resistance || "-")}</p>` : ""}`;
   };
   document.querySelectorAll("#wkDayTabs .wk-tab").forEach((b) => (b.onclick = () => showDay(Number(b.dataset.i))));
+  // Bấm 1 tuần trên biểu đồ "Diễn biến qua các tuần" để chuyển sang tuần đó.
+  box.querySelectorAll(".wk-chart [data-key]").forEach((g) => (g.onclick = () => {
+    const sel = document.getElementById("weeklySelect");
+    if (!weeklyData.weeks.some((x) => x.week_id === g.dataset.key)) return;
+    sel.value = g.dataset.key;
+    renderWeekly();
+  }));
   showDay(days.length - 1);
 }
 
@@ -1349,10 +1460,17 @@ function setReportMode(mode) {
     b.setAttribute("aria-selected", String(on));
   }
   try { localStorage.setItem("stockpeek.reportMode", mode); } catch (e) {}
+  if (weekly && weeklyData.weeks.length) renderWeekly();
 }
 document.getElementById("reportModeDaily").addEventListener("click", () => setReportMode("daily"));
 document.getElementById("reportModeWeekly").addEventListener("click", () => setReportMode("weekly"));
 document.getElementById("weeklySelect").addEventListener("change", renderWeekly);
+// Khi đổi cỡ cửa sổ hoặc xoay điện thoại thì vẽ lại biểu đồ theo bề rộng mới.
+let wkResizeTimer = null;
+window.addEventListener("resize", () => {
+  clearTimeout(wkResizeTimer);
+  wkResizeTimer = setTimeout(() => { if (!document.getElementById("weeklyWrap").hidden && weeklyData.weeks.length) renderWeekly(); }, 250);
+});
 let savedReportMode = "daily";
 try { savedReportMode = localStorage.getItem("stockpeek.reportMode") || "daily"; } catch (e) {}
 setReportMode(savedReportMode === "weekly" ? "weekly" : "daily");

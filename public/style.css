@@ -1057,3 +1057,23 @@ main {
 .wk-tab { border: 1px solid var(--border); background: var(--card-bg); color: var(--text); padding: 5px 11px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 12.5px; }
 .wk-tab.on { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
 .wk-dq { margin: 0 0 6px; padding-left: 18px; font-size: 13px; }
+
+/* ---- Biểu đồ tab Tuần (SVG thuần) ---- */
+.wk-chart { display: block; width: 100%; height: auto; overflow: visible; margin: 2px 0 10px; }
+.wk-ch-title { font-size: 12.5px; color: var(--text-dim); margin-top: 6px; }
+.wk-ch-line { fill: none; stroke: var(--accent); stroke-width: 2.2; vector-effect: non-scaling-stroke; }
+.wk-ch-zero { stroke: var(--border); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.wk-ch-val, .wk-ch-lab { font-size: 11px; fill: var(--text-dim); }
+.wk-ch-lab.on { fill: var(--text); font-weight: 700; }
+.wk-pt circle { fill: var(--card-bg); stroke: var(--accent); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.wk-pt.on circle { fill: var(--accent); }
+.wk-pt.on .wk-ch-val { fill: var(--text); font-weight: 700; }
+.wk-bar.up rect { fill: var(--up); }
+.wk-bar.down rect { fill: var(--down); }
+.wk-bar.neu rect { fill: var(--text-dim); opacity: .55; }
+.wk-bar rect { opacity: .55; }
+.wk-bar.on rect { opacity: 1; }
+.wk-bar.on .wk-ch-val { fill: var(--text); font-weight: 700; }
+.wk-bar.clip rect { stroke: var(--text); stroke-dasharray: 3 2; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.wk-chart [data-key] { cursor: pointer; }
+@media (max-width: 720px) { .wk-ch-val, .wk-ch-lab { font-size: 10px; } }
