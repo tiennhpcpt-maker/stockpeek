@@ -2,6 +2,316 @@
   "items": [
     {
       "date": "2026-11-17",
+      "session": "afternoon",
+      "generated_at": "2026-11-17T16:01:00+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "Lý Nhã Kỳ: Tôi không chơi cổ phiếu",
+          "link": "https://stockbiz.vn/tin-tuc/ly-nha-ky-toi-khong-choi-co-phieu/42810539",
+          "pubDate": "Tue, 17 Nov 2026 08:48:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Ngân hàng Nhà nước nâng tỷ giá trung tâm lên kỷ lục",
+          "link": "https://vnexpress.net/ngan-hang-nha-nuoc-nang-ty-gia-trung-tam-len-ky-luc-5145650.html",
+          "pubDate": "Tue, 17 Nov 2026 15:10:01 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "VN-Index giằng co, dự báo tăng lên 1760 điểm",
+          "link": "https://vneconomy.vn/vn-index-giang-co-du-bao-tang-len-1760-diem.htm",
+          "pubDate": "Mon, 16 Nov 2026 13:31:39 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "Kiểm soát dữ liệu không tốt, doanh nghiệp có thể phải trả giá đắt",
+          "link": "https://stockbiz.vn/tin-tuc/kiem-soat-du-lieu-khong-tot-doanh-nghiep-co-the-phai-tra-gia-dat/42810643",
+          "pubDate": "Tue, 17 Nov 2026 08:59:00 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Nhóm vốn hóa lớn gây áp lực, VN-Index lùi về sát mốc 1.726 điểm",
+          "link": "https://stockbiz.vn/tin-tuc/nhom-von-hoa-lon-gay-ap-luc-vn-index-lui-ve-sat-moc-1726-diem/42810627",
+          "pubDate": "Tue, 17 Nov 2026 08:58:00 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Cổ phiếu ngân hàng lớn nhất sàn chứng khoán Việt Nam rơi xuống đáy 19 tháng: Khối ngoại bán ròng hơn 7.300 tỷ đồng, thị giá giảm gần 31% từ đỉnh",
+          "link": "https://stockbiz.vn/tin-tuc/co-phieu-ngan-hang-lon-nhat-san-chung-khoan-viet-nam-roi-xuong-day-19-thang-khoi-ngoai-ban-rong-hon-7300-ty-dong-thi-gia-giam-gan-31-tu-dinh/42810524",
+          "pubDate": "Tue, 17 Nov 2026 08:46:00 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Tính đến 16/11/2026, có 71 mã bị cắt margin trên HOSE",
+          "link": "https://vneconomy.vn/tinh-den-16112026-co-71-ma-bi-cat-margin-tren-hose.htm",
+          "pubDate": "Tue, 17 Nov 2026 08:40:47 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "63 doanh nghiệp tỷ USD và dấu ấn 30 năm thị trường chứng khoán",
+          "link": "https://stockbiz.vn/tin-tuc/63-doanh-nghiep-ty-usd-va-dau-an-30-nam-thi-truong-chung-khoan/42810404",
+          "pubDate": "Tue, 17 Nov 2026 08:35:00 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "Stockbiz Thị trường"
+          ]
+        }
+      ],
+      "mentioned_tickers": [],
+      "title": "Báo cáo cuối phiên 17/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1726.72,
+            "change": -10.17,
+            "changePct": -0.59,
+            "tradingValue": 14961.45,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1837.13,
+            "change": -7.12,
+            "changePct": -0.39,
+            "tradingValue": 8497.47,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 248.6,
+            "change": -6.31,
+            "changePct": -2.48,
+            "tradingValue": 582.65,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 122.5,
+            "change": 0.37,
+            "changePct": 0.3,
+            "tradingValue": 682.57,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": 0.21,
+            "up": 3,
+            "down": 0,
+            "total": 6,
+            "leader": {
+              "ticker": "VCI",
+              "changePct": 0.52
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": 0.21,
+            "up": 2,
+            "down": 1,
+            "total": 3,
+            "leader": {
+              "ticker": "HSG",
+              "changePct": 0.47
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -0.0,
+            "up": 3,
+            "down": 2,
+            "total": 6,
+            "leader": {
+              "ticker": "DXG",
+              "changePct": 1.83
+            }
+          },
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": -0.31,
+            "up": 1,
+            "down": 2,
+            "total": 3,
+            "leader": {
+              "ticker": "MSN",
+              "changePct": 0.28
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -0.68,
+            "up": 1,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "MWG",
+              "changePct": 0.27
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.71,
+            "up": 1,
+            "down": 7,
+            "total": 8,
+            "leader": {
+              "ticker": "STB",
+              "changePct": 1.12
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": -0.95,
+            "up": 0,
+            "down": 4,
+            "total": 4,
+            "leader": {
+              "ticker": "BCM",
+              "changePct": -0.14
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": -3.12,
+            "up": 0,
+            "down": 4,
+            "total": 4,
+            "leader": {
+              "ticker": "PVD",
+              "changePct": -2.11
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "DXG",
+              "last": 11150,
+              "changePct": 1.83,
+              "volume": 909000
+            },
+            {
+              "ticker": "STB",
+              "last": 72000,
+              "changePct": 1.12,
+              "volume": 462940
+            },
+            {
+              "ticker": "VCI",
+              "last": 19350,
+              "changePct": 0.52,
+              "volume": 504800
+            },
+            {
+              "ticker": "NVL",
+              "last": 10400,
+              "changePct": 0.48,
+              "volume": 865490
+            },
+            {
+              "ticker": "HSG",
+              "last": 10700,
+              "changePct": 0.47,
+              "volume": 179610
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "GAS",
+              "last": 70000,
+              "changePct": -3.71,
+              "volume": 112370
+            },
+            {
+              "ticker": "PLX",
+              "last": 31600,
+              "changePct": -3.51,
+              "volume": 270790
+            },
+            {
+              "ticker": "PVS",
+              "last": 27800,
+              "changePct": -3.14,
+              "volume": 334960
+            },
+            {
+              "ticker": "SZC",
+              "last": 19700,
+              "changePct": -2.72,
+              "volume": 100480
+            },
+            {
+              "ticker": "PVD",
+              "last": 16200,
+              "changePct": -2.11,
+              "volume": 304660
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 12850,
+              "changePct": 0.39,
+              "volume": 2502080
+            },
+            {
+              "ticker": "SSI",
+              "last": 19850,
+              "changePct": 0.0,
+              "volume": 1527120
+            },
+            {
+              "ticker": "HPG",
+              "last": 21000,
+              "changePct": -0.24,
+              "volume": 1266360
+            },
+            {
+              "ticker": "MBB",
+              "last": 18950,
+              "changePct": -0.26,
+              "volume": 1118440
+            },
+            {
+              "ticker": "TCB",
+              "last": 21150,
+              "changePct": -0.7,
+              "volume": 977080
+            }
+          ]
+        },
+        "summary": "VN-Index giảm 10,17 điểm (-0,59%) phiên 17/11, đạt 1.726,72 điểm, giá trị giao dịch 14.961,45 tỷ đồng. Nhóm ngành mạnh nhất: Chứng khoán (bình quân 0,21%, 3/6 mã tăng); yếu nhất: Dầu khí (-3,12%). Tăng mạnh: DXG (+1,83%), STB (+1,12%), VCI (+0,52%). Giảm mạnh: GAS (-3,71%), PLX (-3,51%), PVS (-3,14%)."
+      },
+      "summary": "VN-Index giảm 10,17 điểm (-0,59%) phiên 17/11, đạt 1.726,72 điểm, giá trị giao dịch 14.961,45 tỷ đồng. Nhóm ngành mạnh nhất: Chứng khoán (bình quân 0,21%, 3/6 mã tăng); yếu nhất: Dầu khí (-3,12%). Tăng mạnh: DXG (+1,83%), STB (+1,12%), VCI (+0,52%). Giảm mạnh: GAS (-3,71%), PLX (-3,51%), PVS (-3,14%). Tin được nhiều nguồn đưa nhất: \"Lý Nhã Kỳ: Tôi không chơi cổ phiếu\" (2 nguồn)."
+    },
+    {
+      "date": "2026-11-17",
       "session": "morning",
       "generated_at": "2026-11-17T09:19:23+07:00",
       "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
