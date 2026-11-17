@@ -1,6 +1,322 @@
 {
   "items": [
     {
+      "date": "2026-11-17",
+      "session": "morning",
+      "generated_at": "2026-11-17T09:19:23+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "VN-Index giằng co, dự báo tăng lên 1760 điểm",
+          "link": "https://vneconomy.vn/vn-index-giang-co-du-bao-tang-len-1760-diem.htm",
+          "pubDate": "Mon, 16 Nov 2026 13:31:39 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "Chứng khoán phái sinh ngày 17/11/2026: Tốt xấu đan xen",
+          "link": "http://vietstock.vn/2026/11/chung-khoan-phai-sinh-ngay-17112026-tot-xau-dan-xen-1636-1515150.htm",
+          "pubDate": "Mon, 16 Nov 2026 13:11:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "VN-Index tăng nhẹ đầu tuần, vì sao dòng tiền vẫn 'dè dặt'?",
+          "link": "https://stockbiz.vn/tin-tuc/vn-index-tang-nhe-dau-tuan-vi-sao-dong-tien-van-de-dat/42794088",
+          "pubDate": "Mon, 16 Nov 2026 09:39:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Tuổi Trẻ Chứng khoán"
+          ]
+        },
+        {
+          "title": "Thị trường hàng hoá ngày 17/11: Cao su nhích tăng, gạo duy trì ổn định",
+          "link": "https://markettimes.vn/thi-truong-hang-hoa-ngay-17-11-cao-su-nhich-tang-gao-duy-tri-on-dinh-134490.html",
+          "pubDate": "Tue, 17 Nov 2026 09:13:01 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "MarketTimes Chứng khoán"
+          ]
+        },
+        {
+          "title": "Đề xuất quy định mới về kinh doanh casino",
+          "link": "https://markettimes.vn/de-xuat-quy-dinh-moi-ve-kinh-doanh-casino-134491.html",
+          "pubDate": "Tue, 17 Nov 2026 09:13:01 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "MarketTimes Chứng khoán"
+          ]
+        },
+        {
+          "title": "Ông Thomas Nguyễn (SSI): Việt Nam là một trong những thị trường hấp dẫn nhất thế giới",
+          "link": "https://stockbiz.vn/tin-tuc/ong-thomas-nguyen-ssi-viet-nam-la-mot-trong-nhung-thi-truong-hap-dan-nhat-the-gioi/42797542",
+          "pubDate": "Tue, 17 Nov 2026 02:12:00 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Cuộc sàng lọc cổ phiếu trước những biến số tháng 12",
+          "link": "https://stockbiz.vn/tin-tuc/cuoc-sang-loc-co-phieu-truoc-nhung-bien-so-thang-12/42797342",
+          "pubDate": "Tue, 17 Nov 2026 02:09:58 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Chứng khoán hôm nay 17/11: 4 doanh nghiệp giao dịch cổ phiếu số lượng lớn",
+          "link": "https://stockbiz.vn/tin-tuc/chung-khoan-hom-nay-1711-4-doanh-nghiep-giao-dich-co-phieu-so-luong-lon/42797334",
+          "pubDate": "Tue, 17 Nov 2026 02:07:20 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "Stockbiz Thị trường"
+          ]
+        }
+      ],
+      "mentioned_tickers": [
+        {
+          "ticker": "SSI",
+          "count": 1
+        }
+      ],
+      "title": "Bản tin sáng 17/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1736.89,
+            "change": 1.96,
+            "changePct": 0.11,
+            "tradingValue": 11877.39,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1844.25,
+            "change": -0.66,
+            "changePct": -0.04,
+            "tradingValue": 6604.94,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 254.91,
+            "change": -0.07,
+            "changePct": -0.03,
+            "tradingValue": 501.11,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 122.13,
+            "change": 0.74,
+            "changePct": 0.61,
+            "tradingValue": 282.87,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": 0.02,
+            "up": 1,
+            "down": 1,
+            "total": 3,
+            "leader": {
+              "ticker": "MSN",
+              "changePct": 0.42
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -0.08,
+            "up": 1,
+            "down": 2,
+            "total": 4,
+            "leader": {
+              "ticker": "DGW",
+              "changePct": 3.29
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -0.13,
+            "up": 2,
+            "down": 4,
+            "total": 6,
+            "leader": {
+              "ticker": "VIC",
+              "changePct": 2.06
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": -0.26,
+            "up": 1,
+            "down": 1,
+            "total": 4,
+            "leader": {
+              "ticker": "PVD",
+              "changePct": 1.22
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.92,
+            "up": 1,
+            "down": 6,
+            "total": 8,
+            "leader": {
+              "ticker": "ACB",
+              "changePct": 0.49
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": -1.03,
+            "up": 0,
+            "down": 2,
+            "total": 3,
+            "leader": {
+              "ticker": "HPG",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": -1.24,
+            "up": 0,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "KBC",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": -1.45,
+            "up": 1,
+            "down": 5,
+            "total": 6,
+            "leader": {
+              "ticker": "HCM",
+              "changePct": 0.22
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "DGW",
+              "last": 40800,
+              "changePct": 3.29,
+              "volume": 131320
+            },
+            {
+              "ticker": "VIC",
+              "last": 248000,
+              "changePct": 2.06,
+              "volume": 194900
+            },
+            {
+              "ticker": "PVD",
+              "last": 16550,
+              "changePct": 1.22,
+              "volume": 186570
+            },
+            {
+              "ticker": "ACB",
+              "last": 20450,
+              "changePct": 0.49,
+              "volume": 681600
+            },
+            {
+              "ticker": "VHM",
+              "last": 62500,
+              "changePct": 0.48,
+              "volume": 392720
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "PNJ",
+              "last": 14450,
+              "changePct": -3.34,
+              "volume": 447980
+            },
+            {
+              "ticker": "SZC",
+              "last": 20250,
+              "changePct": -2.88,
+              "volume": 47290
+            },
+            {
+              "ticker": "TCB",
+              "last": 21300,
+              "changePct": -2.52,
+              "volume": 821230
+            },
+            {
+              "ticker": "HSG",
+              "last": 10650,
+              "changePct": -2.29,
+              "volume": 303140
+            },
+            {
+              "ticker": "PLX",
+              "last": 32750,
+              "changePct": -2.24,
+              "volume": 112010
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 12800,
+              "changePct": -1.92,
+              "volume": 2698200
+            },
+            {
+              "ticker": "SSI",
+              "last": 19850,
+              "changePct": -1.73,
+              "volume": 1368480
+            },
+            {
+              "ticker": "NVL",
+              "last": 10350,
+              "changePct": -0.48,
+              "volume": 1140020
+            },
+            {
+              "ticker": "HPG",
+              "last": 21050,
+              "changePct": 0.0,
+              "volume": 1021260
+            },
+            {
+              "ticker": "DXG",
+              "last": 10950,
+              "changePct": -1.35,
+              "volume": 1020200
+            }
+          ]
+        },
+        "summary": "VN-Index tăng 1,96 điểm (0,11%) phiên 16/11, đạt 1.736,89 điểm, giá trị giao dịch 11.877,39 tỷ đồng. Nhóm ngành mạnh nhất: Thực phẩm - Đồ uống (bình quân 0,02%, 1/3 mã tăng); yếu nhất: Chứng khoán (-1,45%). Tăng mạnh: DGW (+3,29%), VIC (+2,06%), PVD (+1,22%). Giảm mạnh: PNJ (-3,34%), SZC (-2,88%), TCB (-2,52%)."
+      },
+      "market_from": "2026-11-16",
+      "summary": "Phiên trước: VN-Index tăng 1,96 điểm (0,11%) phiên 16/11, đạt 1.736,89 điểm, giá trị giao dịch 11.877,39 tỷ đồng. Nhóm ngành mạnh nhất: Thực phẩm - Đồ uống (bình quân 0,02%, 1/3 mã tăng); yếu nhất: Chứng khoán (-1,45%). Tăng mạnh: DGW (+3,29%), VIC (+2,06%), PVD (+1,22%). Giảm mạnh: PNJ (-3,34%), SZC (-2,88%), TCB (-2,52%). Tin được nhiều nguồn đưa nhất: \"VN-Index giằng co, dự báo tăng lên 1760 điểm\" (2 nguồn)."
+    },
+    {
       "date": "2026-11-16",
       "session": "afternoon",
       "generated_at": "2026-11-16T16:00:26+07:00",
