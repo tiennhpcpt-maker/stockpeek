@@ -1,6 +1,89 @@
 {
   "items": [
     {
+      "date": "2026-11-17",
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "generated_at": "2026-11-17T08:15:16+07:00",
+      "title": "Bản tin sáng 17/11: VN-Index 1.736,89 thanh khoản thấp, độ rộng âm, ngoại bán FPT 8 phiên liền, kịch bản Cơ sở giằng co 1.728-1.750",
+      "summary": "Phiên tham chiếu 16/11 VN-Index đóng cửa 1.736,89 (+1,96 điểm, +0,11%), thanh khoản thấp: khớp lệnh HOSE khoảng 8.500-8.800 tỷ, tổng HOSE 11.877 tỷ. Độ rộng âm (287 mã tăng, 402 mã giảm toàn thị trường). Khối ngoại mua ròng nhẹ khoảng 13 tỷ (HOSE +20,75 tỷ), tự doanh 16/11 chưa có số. Kịch bản phiên 17/11 nghiêng Cơ sở giằng co trong vùng 1.728-1.750.",
+      "key_findings": [
+        "VN-Index 16/11 đóng cửa 1.736,89 (+0,11%), khớp lệnh HOSE chỉ khoảng 8.500-8.800 tỷ, độ rộng âm 287 tăng / 402 giảm.",
+        "Ngoại mua ròng nhẹ khoảng 13 tỷ: mua VIC +116,8 tỷ, MSN +62,3 tỷ; bán FPT -163,2 tỷ, VCB -52,9 tỷ, VPB -39,1 tỷ.",
+        "FPT bị ngoại bán ròng 8 phiên liền, tổng khoảng -1.252 tỷ.",
+        "Tự doanh 16/11 chưa có số; phiên 13/11 mua ròng 161,7 tỷ theo HDBS.",
+        "3 mã nổi bật: VHM 5,0 điểm (ngoại mua ròng 5 phiên, +197,0 tỷ), HPG 4,5, VIC 4,0; dự bị MSN, HDB."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 17/11",
+          "items": [
+            "Cơ sở (nghiêng): giằng co trong vùng 1.728-1.750."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: mua ròng nhẹ khoảng 13 tỷ (HOSE +20,75 tỷ); mua VIC +116,8, MSN +62,3 tỷ; bán FPT -163,2, VCB -52,9, VPB -39,1 tỷ.",
+            "Tự doanh: 16/11 chưa có số; 13/11 mua ròng 161,7 tỷ (HDBS)."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Bất động sản",
+          "view": "Phiên 16/11 ngoại mua ròng VIC +116,8 tỷ; VHM được ngoại mua ròng 5 phiên liền, tổng +197,0 tỷ và là mã được chấm cao nhất (5,0 điểm)."
+        },
+        {
+          "name": "Ngân hàng",
+          "view": "Phiên 16/11 ngoại bán ròng VCB -52,9 tỷ và VPB -39,1 tỷ; mail chưa có số dòng tiền toàn ngành."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN được ngoại mua ròng +62,3 tỷ phiên 16/11 và nằm trong danh sách dự bị của bản tin."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "VHM",
+          "note": "5,0 điểm: ngoại mua ròng 5 phiên, tổng +197,0 tỷ."
+        },
+        {
+          "ticker": "HPG",
+          "note": "4,5 điểm."
+        },
+        {
+          "ticker": "VIC",
+          "note": "4,0 điểm: ngoại mua ròng +116,8 tỷ phiên 16/11."
+        },
+        {
+          "ticker": "MSN",
+          "note": "Dự bị: ngoại mua ròng +62,3 tỷ phiên 16/11."
+        },
+        {
+          "ticker": "HDB",
+          "note": "Dự bị."
+        },
+        {
+          "ticker": "FPT",
+          "note": "Ngoại bán ròng -163,2 tỷ phiên 16/11, 8 phiên liền, khoảng -1.252 tỷ."
+        }
+      ],
+      "action_items": [
+        "Theo dõi vùng 1.728-1.750 của VN-Index trong phiên 17/11.",
+        "Thận trọng với FPT, VCB, VPB khi ngoại còn bán ròng."
+      ],
+      "sources": [
+        "bnews",
+        "Index.vn",
+        "Vietstock",
+        "HDBS",
+        "CafeF"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
       "date": "2026-11-16",
       "session": "afternoon",
       "kind": "bulletin",
