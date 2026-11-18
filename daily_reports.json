@@ -1,6 +1,321 @@
 {
   "items": [
     {
+      "date": "2026-11-18",
+      "session": "morning",
+      "generated_at": "2026-11-18T08:30:39+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "Giá vàng trong nước, quốc tế đồng loạt phục hồi",
+          "link": "https://dantri.com.vn/kinh-doanh/gia-vang-trong-nuoc-quoc-te-dong-loat-phuc-hoi-20261118001051666.htm",
+          "pubDate": "Wed, 18 Nov 2026 06:00:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh"
+          ]
+        },
+        {
+          "title": "Nvidia thu 115,8 tỷ USD, HĐQT không đưa ông Jensen Huang trở lại ghế CEO",
+          "link": "https://dantri.com.vn/kinh-doanh/nvidia-thu-1158-ty-usd-hdqt-khong-dua-ong-jensen-huang-tro-lai-ghe-ceo-20261118055053665.htm",
+          "pubDate": "Wed, 18 Nov 2026 05:56:56 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh"
+          ]
+        },
+        {
+          "title": "VN-Index giảm nhẹ, nhà đầu tư thận trọng chờ tín hiệu mới",
+          "link": "https://vneconomy.vn/vn-index-giam-nhe-nha-dau-tu-than-trong-cho-tin-hieu-moi.htm",
+          "pubDate": "Tue, 17 Nov 2026 14:38:26 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "Giám đốc SSI chỉ ra mấu chốt khiến câu chuyện thị trường Việt Nam trở nên khác biệt",
+          "link": "http://vietstock.vn/2026/11/giam-doc-ssi-chi-ra-mau-chot-khien-cau-chuyen-thi-truong-viet-nam-tro-nen-khac-biet-145-1515668.htm",
+          "pubDate": "Tue, 17 Nov 2026 19:05:02 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Khối ngoại tiếp tục bán ròng cổ phiếu FPT, thu về hơn 1.000 tỷ đồng trong tuần",
+          "link": "https://stockbiz.vn/tin-tuc/khoi-ngoai-tiep-tuc-ban-rong-co-phieu-fpt-thu-ve-hon-1000-ty-dong-trong-tuan/42811688",
+          "pubDate": "Tue, 17 Nov 2026 11:06:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Thanh Niên Chứng khoán"
+          ]
+        },
+        {
+          "title": "Nvidia says it won't reinstate Huang as firm reports bumper results",
+          "link": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
+          "pubDate": "Wed, 18 Nov 2026 01:18:18 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "BBC Business"
+          ]
+        },
+        {
+          "title": "Công ty chứng khoán thứ ba có vốn điều lệ vượt mốc tỷ USD",
+          "link": "https://vnexpress.net/cong-ty-chung-khoan-thu-ba-co-von-dieu-le-vuot-moc-ty-usd-5145881.html",
+          "pubDate": "Wed, 18 Nov 2026 08:09:57 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Top cổ phiếu đáng chú ý đầu phiên 18/11",
+          "link": "http://vietstock.vn/2026/11/top-co-phieu-dang-chu-y-dau-phien-1811-830-1515625.htm",
+          "pubDate": "Wed, 18 Nov 2026 08:00:00 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "Vietstock"
+          ]
+        }
+      ],
+      "mentioned_tickers": [
+        {
+          "ticker": "SSI",
+          "count": 1
+        }
+      ],
+      "title": "Bản tin sáng 18/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1726.72,
+            "change": -10.17,
+            "changePct": -0.59,
+            "tradingValue": 14961.45,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1837.13,
+            "change": -7.12,
+            "changePct": -0.39,
+            "tradingValue": 8497.47,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 248.6,
+            "change": -6.31,
+            "changePct": -2.48,
+            "tradingValue": 582.65,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 122.5,
+            "change": 0.37,
+            "changePct": 0.3,
+            "tradingValue": 682.57,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": 0.21,
+            "up": 3,
+            "down": 0,
+            "total": 6,
+            "leader": {
+              "ticker": "VCI",
+              "changePct": 0.52
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": 0.21,
+            "up": 2,
+            "down": 1,
+            "total": 3,
+            "leader": {
+              "ticker": "HSG",
+              "changePct": 0.47
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -0.0,
+            "up": 3,
+            "down": 2,
+            "total": 6,
+            "leader": {
+              "ticker": "DXG",
+              "changePct": 1.83
+            }
+          },
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": -0.31,
+            "up": 1,
+            "down": 2,
+            "total": 3,
+            "leader": {
+              "ticker": "MSN",
+              "changePct": 0.28
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -0.68,
+            "up": 1,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "MWG",
+              "changePct": 0.27
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.71,
+            "up": 1,
+            "down": 7,
+            "total": 8,
+            "leader": {
+              "ticker": "STB",
+              "changePct": 1.12
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": -0.95,
+            "up": 0,
+            "down": 4,
+            "total": 4,
+            "leader": {
+              "ticker": "BCM",
+              "changePct": -0.14
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": -3.12,
+            "up": 0,
+            "down": 4,
+            "total": 4,
+            "leader": {
+              "ticker": "PVD",
+              "changePct": -2.11
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "DXG",
+              "last": 11150,
+              "changePct": 1.83,
+              "volume": 909000
+            },
+            {
+              "ticker": "STB",
+              "last": 72000,
+              "changePct": 1.12,
+              "volume": 462940
+            },
+            {
+              "ticker": "VCI",
+              "last": 19350,
+              "changePct": 0.52,
+              "volume": 504800
+            },
+            {
+              "ticker": "NVL",
+              "last": 10400,
+              "changePct": 0.48,
+              "volume": 865490
+            },
+            {
+              "ticker": "HSG",
+              "last": 10700,
+              "changePct": 0.47,
+              "volume": 179610
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "GAS",
+              "last": 70000,
+              "changePct": -3.71,
+              "volume": 112370
+            },
+            {
+              "ticker": "PLX",
+              "last": 31600,
+              "changePct": -3.51,
+              "volume": 270790
+            },
+            {
+              "ticker": "PVS",
+              "last": 27800,
+              "changePct": -3.14,
+              "volume": 334960
+            },
+            {
+              "ticker": "SZC",
+              "last": 19700,
+              "changePct": -2.72,
+              "volume": 100480
+            },
+            {
+              "ticker": "PVD",
+              "last": 16200,
+              "changePct": -2.11,
+              "volume": 304660
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 12850,
+              "changePct": 0.39,
+              "volume": 2502080
+            },
+            {
+              "ticker": "SSI",
+              "last": 19850,
+              "changePct": 0.0,
+              "volume": 1527120
+            },
+            {
+              "ticker": "HPG",
+              "last": 21000,
+              "changePct": -0.24,
+              "volume": 1266360
+            },
+            {
+              "ticker": "MBB",
+              "last": 18950,
+              "changePct": -0.26,
+              "volume": 1118440
+            },
+            {
+              "ticker": "TCB",
+              "last": 21150,
+              "changePct": -0.7,
+              "volume": 977080
+            }
+          ]
+        },
+        "summary": "VN-Index giảm 10,17 điểm (-0,59%) phiên 17/11, đạt 1.726,72 điểm, giá trị giao dịch 14.961,45 tỷ đồng. Nhóm ngành mạnh nhất: Chứng khoán (bình quân 0,21%, 3/6 mã tăng); yếu nhất: Dầu khí (-3,12%). Tăng mạnh: DXG (+1,83%), STB (+1,12%), VCI (+0,52%). Giảm mạnh: GAS (-3,71%), PLX (-3,51%), PVS (-3,14%)."
+      },
+      "market_from": "2026-11-17",
+      "summary": "Phiên trước: VN-Index giảm 10,17 điểm (-0,59%) phiên 17/11, đạt 1.726,72 điểm, giá trị giao dịch 14.961,45 tỷ đồng. Nhóm ngành mạnh nhất: Chứng khoán (bình quân 0,21%, 3/6 mã tăng); yếu nhất: Dầu khí (-3,12%). Tăng mạnh: DXG (+1,83%), STB (+1,12%), VCI (+0,52%). Giảm mạnh: GAS (-3,71%), PLX (-3,51%), PVS (-3,14%). Tin được nhiều nguồn đưa nhất: \"Giá vàng trong nước, quốc tế đồng loạt phục hồi\" (2 nguồn)."
+    },
+    {
       "date": "2026-11-17",
       "session": "afternoon",
       "generated_at": "2026-11-17T16:01:00+07:00",
