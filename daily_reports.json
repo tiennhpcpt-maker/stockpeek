@@ -1,6 +1,306 @@
 {
   "items": [
     {
+      "date": "2026-11-19",
+      "session": "morning",
+      "generated_at": "2026-11-19T08:30:13+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "Vì sao có thời điểm VN-Index rơi hơn 50 điểm?",
+          "link": "https://stockbiz.vn/tin-tuc/vi-sao-co-thoi-diem-vn-index-roi-hon-50-diem/42831410",
+          "pubDate": "Wed, 18 Nov 2026 12:02:00 GMT",
+          "sourceCount": 3,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Tuổi Trẻ Chứng khoán"
+          ]
+        },
+        {
+          "title": "UBCKNN đẩy mạnh hiện đại hóa hạ tầng công nghệ, hướng tới ứng dụng AI giám sát thị trường chứng khoán",
+          "link": "http://vietstock.vn/2026/11/ubcknn-day-manh-hien-dai-hoa-ha-tang-cong-nghe-huong-toi-ung-dung-ai-giam-sat-thi-truong-chung-khoan-143-1515875.htm",
+          "pubDate": "Wed, 18 Nov 2026 12:01:00 GMT",
+          "sourceCount": 3,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Thanh Niên Chứng khoán",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Chứng khoán 19-11: VN-Index áp sát mốc 1.700 điểm, có nên xuống tiền bắt đáy?",
+          "link": "https://stockbiz.vn/tin-tuc/chung-khoan-19-11-vn-index-ap-sat-moc-1700-diem-co-nen-xuong-tien-bat-day/42833721",
+          "pubDate": "Thu, 19 Nov 2026 01:08:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Tuổi Trẻ Chứng khoán"
+          ]
+        },
+        {
+          "title": "Giá dầu thế giới tiếp tục giảm mạnh, xuống thấp nhất gần 3 tháng",
+          "link": "https://dantri.com.vn/kinh-doanh/gia-dau-the-gioi-tiep-tuc-giam-manh-xuong-thap-nhat-gan-3-thang-20261119061400992.htm",
+          "pubDate": "Thu, 19 Nov 2026 06:30:50 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Ủy ban Chứng khoán đưa AI vào giám sát, phát hiện sớm rủi ro thị trường",
+          "link": "https://stockbiz.vn/tin-tuc/uy-ban-chung-khoan-dua-ai-vao-giam-sat-phat-hien-som-rui-ro-thi-truong/42832893",
+          "pubDate": "Wed, 18 Nov 2026 15:56:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Tuổi Trẻ Chứng khoán"
+          ]
+        },
+        {
+          "title": "Anphabe chính thức công bố bảng xếp hạng Top 100 Nơi Làm Việc Tốt Nhất Việt Nam® 2026",
+          "link": "https://markettimes.vn/anphabe-chinh-thuc-cong-bo-bang-xep-hang-top-100-noi-lam-viec-tot-nhat-viet-nam-2026-134568.html",
+          "pubDate": "Wed, 18 Nov 2026 20:05:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Chứng khoán phái sinh ngày 19/11/2026: Phe Short lên ngôi",
+          "link": "http://vietstock.vn/2026/11/chung-khoan-phai-sinh-ngay-19112026-phe-short-len-ngoi-1636-1515855.htm",
+          "pubDate": "Wed, 18 Nov 2026 19:30:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "VN-Index mất hơn 23 điểm, khối ngoại bán ròng nghìn tỷ đồng",
+          "link": "https://stockbiz.vn/tin-tuc/vn-index-mat-hon-23-diem-khoi-ngoai-ban-rong-nghin-ty-dong/42830237",
+          "pubDate": "Wed, 18 Nov 26 19:15:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Thanh Niên Chứng khoán"
+          ]
+        }
+      ],
+      "mentioned_tickers": [],
+      "title": "Bản tin sáng 19/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1703.01,
+            "change": -23.71,
+            "changePct": -1.37,
+            "tradingValue": 17453.84,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1806.54,
+            "change": -30.59,
+            "changePct": -1.67,
+            "tradingValue": 9657.93,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 242.73,
+            "change": -5.87,
+            "changePct": -2.36,
+            "tradingValue": 702.64,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 121.12,
+            "change": -1.38,
+            "changePct": -1.13,
+            "tradingValue": 615.19,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -0.55,
+            "up": 0,
+            "down": 3,
+            "total": 6,
+            "leader": {
+              "ticker": "VRE",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": -0.74,
+            "up": 1,
+            "down": 2,
+            "total": 3,
+            "leader": {
+              "ticker": "SAB",
+              "changePct": 1.42
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -0.91,
+            "up": 1,
+            "down": 2,
+            "total": 4,
+            "leader": {
+              "ticker": "FRT",
+              "changePct": 1.78
+            }
+          },
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": -1.62,
+            "up": 0,
+            "down": 5,
+            "total": 6,
+            "leader": {
+              "ticker": "HCM",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -1.79,
+            "up": 0,
+            "down": 8,
+            "total": 8,
+            "leader": {
+              "ticker": "ACB",
+              "changePct": -0.49
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": -1.79,
+            "up": 0,
+            "down": 4,
+            "total": 4,
+            "leader": {
+              "ticker": "IDC",
+              "changePct": -0.58
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": -2.33,
+            "up": 0,
+            "down": 4,
+            "total": 4,
+            "leader": {
+              "ticker": "GAS",
+              "changePct": -0.14
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": -2.8,
+            "up": 0,
+            "down": 3,
+            "total": 3,
+            "leader": {
+              "ticker": "NKG",
+              "changePct": -2.03
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "FRT",
+              "last": 148600,
+              "changePct": 1.78,
+              "volume": 43090
+            },
+            {
+              "ticker": "SAB",
+              "last": 43000,
+              "changePct": 1.42,
+              "volume": 69590
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "PNJ",
+              "last": 13700,
+              "changePct": -4.86,
+              "volume": 742590
+            },
+            {
+              "ticker": "HSG",
+              "last": 10300,
+              "changePct": -3.74,
+              "volume": 331280
+            },
+            {
+              "ticker": "PVD",
+              "last": 15650,
+              "changePct": -3.4,
+              "volume": 481970
+            },
+            {
+              "ticker": "PVS",
+              "last": 26900,
+              "changePct": -3.24,
+              "volume": 402010
+            },
+            {
+              "ticker": "SZC",
+              "last": 19100,
+              "changePct": -3.05,
+              "volume": 91040
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 12650,
+              "changePct": -1.56,
+              "volume": 2916910
+            },
+            {
+              "ticker": "HPG",
+              "last": 20450,
+              "changePct": -2.62,
+              "volume": 2196720
+            },
+            {
+              "ticker": "VPB",
+              "last": 21000,
+              "changePct": -2.78,
+              "volume": 1500350
+            },
+            {
+              "ticker": "SSI",
+              "last": 19550,
+              "changePct": -1.51,
+              "volume": 1434460
+            },
+            {
+              "ticker": "MBB",
+              "last": 18800,
+              "changePct": -0.79,
+              "volume": 1405200
+            }
+          ]
+        },
+        "summary": "VN-Index giảm 23,71 điểm (-1,37%) phiên 18/11, đạt 1.703,01 điểm, giá trị giao dịch 17.453,84 tỷ đồng. Nhóm ngành mạnh nhất: Bất động sản (bình quân -0,55%, 0/6 mã tăng); yếu nhất: Thép (-2,80%). Tăng mạnh: FRT (+1,78%), SAB (+1,42%). Giảm mạnh: PNJ (-4,86%), HSG (-3,74%), PVD (-3,40%)."
+      },
+      "market_from": "2026-11-18",
+      "summary": "Phiên trước: VN-Index giảm 23,71 điểm (-1,37%) phiên 18/11, đạt 1.703,01 điểm, giá trị giao dịch 17.453,84 tỷ đồng. Nhóm ngành mạnh nhất: Bất động sản (bình quân -0,55%, 0/6 mã tăng); yếu nhất: Thép (-2,80%). Tăng mạnh: FRT (+1,78%), SAB (+1,42%). Giảm mạnh: PNJ (-4,86%), HSG (-3,74%), PVD (-3,40%). Tin được nhiều nguồn đưa nhất: \"Vì sao có thời điểm VN-Index rơi hơn 50 điểm?\" (3 nguồn)."
+    },
+    {
       "date": "2026-11-18",
       "session": "afternoon",
       "generated_at": "2026-11-18T16:00:23+07:00",
