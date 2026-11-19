@@ -1,6 +1,744 @@
 {
   "items": [
     {
+      "date": "2026-11-19",
+      "session": "afternoon",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán chiều (email)",
+      "generated_at": "2026-11-19T16:17:51+07:00",
+      "title": "Bản tin chiều 19/11: VN-Index giảm phiên thứ ba về 1.689,62, ngoại bán ròng 994,5 tỷ, thanh khoản thấp hơn 23% TB20",
+      "summary": "VN-Index đóng cửa 19/11 tại 1.689,62 (-13,39 điểm, -0,79%), phiên giảm thứ ba liên tiếp, ba phiên mất 47,27 điểm (-2,72%), thấp nhất khoảng một tháng; trong phiên có lúc lùi về 1.678-1.680. Khối ngoại bán ròng 994,5 tỷ trên HOSE, phiên thứ hai liên tiếp quanh mốc nghìn tỷ, dồn vào FPT, ACB, VIX, VIC, VCB; thanh khoản thấp hơn 23% so với TB 20 phiên, độ rộng 107 tăng / 207 giảm. Dòng tiền đồng thuận tiêu cực, chỉ nhóm công nghiệp (GEE, HVN) đi ngược. Phiên 20/11 nghiêng Cơ sở thiên tiêu cực nhẹ, hỗ trợ 1.678-1.685, kháng cự 1.700-1.703.",
+      "key_findings": [
+        "VN-Index 19/11 đóng 1.689,62 (-0,79%); VIC kéo ~8 điểm, CTG -0,8, VHM -0,69, BSR -0,56; lực đỡ HVN +0,57, GEE +0,39, BID +0,23 điểm.",
+        "Ngoại bán ròng 994,5 tỷ HOSE (ba sàn khoảng -1.000,2 tỷ): FPT -271,3, ACB -101,5, VIX -70,7, VIC -57,9, VCB -55,2 tỷ; mua ròng nhỏ SHS, TCB, NKG, HPG, MSN.",
+        "FPT bị ngoại bán khoảng 497 tỷ trong 2 phiên, giá -2,66%, phá đáy hơn 3 năm.",
+        "LPB thỏa thuận 107,27 triệu cổ phiếu (gần 3.497 tỷ), lũy kế tháng 11 trên 20.850 tỷ; giá LPB giảm phiên thứ ba (-2,29%).",
+        "SHS: P/E 12 tháng VN-Index ~10,8 lần (9,3 lần nếu loại Vingroup), LNST quý III của 1.124 doanh nghiệp +43%; kịch bản tích lũy 1.680-1.700."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 20/11",
+          "items": [
+            "Tích cực: giữ 1.678-1.685, hồi lên 1.700-1.703 kèm ngoại giảm bán, độ rộng cải thiện; mốc xác nhận mạnh hơn là lấy lại 1.715 (HDBS).",
+            "Cơ sở (nghiêng tiêu cực nhẹ): rung lắc 1.678-1.703, ngoại tiếp tục bán FPT, ngân hàng, VIC, thanh khoản dưới TB 20 phiên; hạn chế mua đuổi, giải ngân từng phần nếu có.",
+            "Tiêu cực: đóng cửa dưới 1.677-1.678 (đáy 20/10 theo HDBS) kèm ngoại bán trên 1.000 tỷ và thanh khoản tăng; HDBS nêu vùng kiểm định 1.674-1.686.",
+            "Đối chiếu bản trưa: kịch bản cơ sở nghiêng tiêu cực đúng hướng; chỉ số hồi lên ~1.696 buổi chiều nhưng không vượt 1.700."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: bán ròng 994,5 tỷ HOSE (mua 1.120,8; bán 2.115,3), nối tiếp -1.114,3 tỷ phiên 18/11; top 5 bán ròng khoảng 556,6 tỷ (~56%, suy luận); lũy kế 2026 tới 18/11 -125.035,9 tỷ (FiinTrade).",
+            "Tự doanh: 19/11 chưa có số; 17/11 bán ròng 663,9 tỷ (24hMoney), 18/11 khoảng -44 tỷ.",
+            "Trong nước (suy luận): khoảng +995 tỷ trên HOSE, đối ứng ngoại bán ròng, đã gồm tự doanh; dòng nội cầm chừng, chỉ tập trung HVN, GEE, CTF.",
+            "Thỏa thuận: LPB 107,27 triệu cổ phiếu, gần 3.497 tỷ; tổng thỏa thuận HOSE chưa có số.",
+            "Ngành hút/rút tiền: giữ/hút ở công nghiệp (GEE +5,13%, HVN +4,05%, CTD +2,98%, GEX +1,5%), POW +1,12%, chứng khoán cục bộ (SHS +1,54%, VND +1,07%); rút khỏi ngân hàng (LPB -2,29%, STB -1,71%, CTG -1,64%), BĐS (KDH -2,17%, VIC -2,04%, VRE -1,47%), CNTT (FPT -2,66%), dầu khí (BSR -2,29%, PVT -2,63%)."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Mỹ đêm 18/11: Dow Jones 50.198,17 (-1,11%), S&P 500 7.323,63 (-0,23%, giảm 5 phiên liền, chuỗi dài nhất từ tháng 6), Nasdaq 24.429,88 (+0,42%).",
+            "Vàng thế giới khoảng 3.730 USD (thấp nhất 14 tháng), dầu WTI giảm hơn 3%; vàng giảm do Fed cứng rắn và USD tăng.",
+            "Cả tuần 13/11-19/11 VN-Index -45,31 điểm (-2,61%); VN30 1.788,51 (-1,0%), HNX-Index 238,94 (-1,56%), UPCoM-Index 120,36 (-0,63%).",
+            "VAFI kiến nghị giảm thuế giao dịch chứng khoán từ 0,1% xuống 0,05%; đề xuất đưa cổ phiếu HNX về HOSE, nghiên cứu giao dịch xuyên trưa."
+          ]
+        },
+        {
+          "title": "Tin doanh nghiệp",
+          "items": [
+            "SHS tháng 11 khuyến nghị MWG, FRT, HPG, GMD, VCB, CTG, REE, MBB.",
+            "Vietcap nêu FPT đặt mục tiêu tỷ trọng doanh thu AI-first từ 27% (2026) lên ít nhất 40% (2027).",
+            "VCB vốn hóa giảm hơn 205.000 tỷ so với đỉnh đầu năm, P/B thấp nhất hơn một thập kỷ.",
+            "VNM về mức thấp nhất gần 13 tháng dù lãi hơn 8.600 tỷ; GEX giảm gần 45% từ đỉnh; Chủ tịch Kosy bị tạm hoãn xuất cảnh, KOS mất hơn 90% giá trị (theo tiêu đề index.vn)."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Ngân hàng",
+          "view": "Ngân hàng bị rút tiền phiên 19/11: LPB -2,29%, STB -1,71%, CTG -1,64% (kéo -0,8 điểm), ACB -0,99%; ngoại bán ACB -101,5 tỷ, VCB -55,2 tỷ, chỉ TCB được mua +17,1 tỷ. LPB có thỏa thuận lớn 3.497 tỷ, VCB P/B thấp nhất hơn một thập kỷ."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "BĐS tiếp tục bị bán phiên 19/11: VIC -2,04% lấy ~8 điểm của VN-Index (ngoại bán 57,9 tỷ), KDH -2,17%, VRE -1,47%, VHM -0,66%; VIC bị ngoại bán khoảng 243,8 tỷ trong 2 phiên 18-19/11."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "Nhóm chứng khoán phân hóa phiên 19/11: SHS +1,54% (ngoại mua +27,3 tỷ ba sàn), VND +1,07%, trong khi VIX bị ngoại bán ròng 70,7 tỷ và SSI đứng tham chiếu."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "Dầu khí đảo chiều giảm buổi chiều 19/11 sau khi giữ xanh phiên sáng: BSR -2,29% (kéo -0,56 điểm), PVT -2,63%, chỉ PLX còn +0,49%; dầu WTI giảm hơn 3% đêm 18/11."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN được ngoại mua ròng +13,6 tỷ phiên 19/11 nhưng giá -0,85% (dòng tiền ngược giá); VNM về mức thấp nhất gần 13 tháng dù lãi hơn 8.600 tỷ."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG được ngoại mua ròng +14,8 tỷ, NKG +15,7 tỷ phiên 19/11; SHS đưa HPG vào danh mục tháng 11 với P/E dự phóng 2026 ~6,5 lần, LN ròng cả năm dự báo +75%."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "Nhóm bán lẻ kém phiên 19/11 (MWG -0,69%); FRT được ngoại mua +21,9 tỷ phiên 18/11 và cùng MWG nằm trong danh mục khuyến nghị tháng 11 của SHS."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "FRT",
+          "note": "5,5 điểm (không đổi): ngoại mua +21,9 tỷ phiên 18/11, có trong danh mục tháng 11 của SHS. Theo dõi VN-Index giữ trên 1.678-1.680; dừng nếu VN-Index đóng dưới 1.677 hoặc ngoại bán ròng FRT trở lại."
+        },
+        {
+          "ticker": "VHM",
+          "note": "4,0 điểm (không đổi, dòng tiền chưa cải thiện): giá -0,66% ngày 19/11, ngoại bán 64 tỷ phiên 18/11; có thể hạ điểm dòng tiền nếu ngoại bán thêm ngày 20/11."
+        },
+        {
+          "ticker": "MSN",
+          "note": "4,0 điểm (không đổi): ngoại mua ròng +13,6 tỷ nhưng giá -0,85%. Theo dõi ngoại duy trì mua phiên 20/11; dừng nếu ngoại đảo chiều bán."
+        },
+        {
+          "ticker": "HPG",
+          "note": "Dự bị 3,0 điểm: ngoại mua ròng +14,8 tỷ; theo dõi ngoại mua thành chuỗi từ 3 phiên."
+        },
+        {
+          "ticker": "FPT",
+          "note": "Ngoại bán ròng 271,3 tỷ ngày 19/11, khoảng 497 tỷ trong 2 phiên; giá -2,66%, phá đáy hơn 3 năm."
+        }
+      ],
+      "action_items": [
+        "Duy trì tỷ trọng an toàn, hạn chế mua đuổi nhịp hồi thiếu thanh khoản; chỉ giải ngân từng phần khi VN-Index giữ 1.678-1.685 và ngoại bán ròng giảm dưới 500 tỷ/phiên.",
+        "Phiên 20/11: nếu đóng cửa dưới 1.677-1.678 kèm ngoại bán trên 1.000 tỷ và thanh khoản tăng thì ưu tiên phòng thủ; nếu lấy lại 1.700-1.703 với độ rộng cải thiện thì nới dần.",
+        "Ưu tiên theo dõi mã có dòng tiền ngược chiều (FRT, MSN, HPG, nhóm công nghiệp GEE, HVN), chỉ hành động khi ngoại và tự doanh đồng thuận."
+      ],
+      "sources": [
+        "index.vn",
+        "Tuổi Trẻ",
+        "Đầu Tư Tài Chính",
+        "VnExpress",
+        "Vietstock",
+        "CafeF",
+        "VnEconomy",
+        "HDBS",
+        "24hMoney",
+        "Người Quan Sát"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-19",
+      "session": "midday",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán trưa (email)",
+      "generated_at": "2026-11-19T13:13:29+07:00",
+      "title": "Bản tin trưa 19/11: VN-Index thủng 1.700 về 1.688,89, ngoại bán ròng 525 tỷ, trùng đáo hạn VN30F1M",
+      "summary": "Phiên sáng 19/11 VN-Index thủng mốc 1.700, chốt 1.688,89 (-14,12 điểm, -0,83%); khớp lệnh HOSE 4.990 tỷ, thấp hơn 21% so với TB 20 phiên, độ rộng 89 tăng / 188 giảm cho thấy bên mua đứng ngoài. Khối ngoại bán ròng 525,2 tỷ, phiên bán ròng thứ ba liên tiếp; tự doanh phiên 18/11 chỉ bán ròng nhẹ khoảng 44 tỷ. Dòng tiền đồng thuận tiêu cực, chỉ năng lượng và dầu khí giữ sắc xanh. Phiên chiều nghiêng Cơ sở thiên tiêu cực do trùng đáo hạn VN30F1M, ngưỡng cần canh 1.684-1.685.",
+      "key_findings": [
+        "VN-Index sáng 19/11 về 1.688,89 (-0,83%); VIC kéo -8,21 điểm, VHM -1,20, VPB -0,62, CTG -0,57 điểm.",
+        "Ngoại bán ròng 525,2 tỷ (mua 449,5; bán 974,7): FPT -156,9, VIC -69,8, MBB -38,1, CTG -30,8, HDB -29,6, VCB -28,4 tỷ.",
+        "Phiên 18/11 là phiên ngoại bán ròng trên 1.000 tỷ đầu tiên từ 7/10; tháng 11 bán ròng khoảng 3,1 nghìn tỷ tới hết 18/11, tập trung ngân hàng -424, BĐS -244, công nghệ -233 tỷ (18/11).",
+        "Năng lượng giữ sắc xanh: PVD +2,24%, PLX +1,3%, POW +0,37%; chứng khoán cục bộ VND +1,79%, VIX +0,79%.",
+        "3 mã nổi bật giữ nguyên: FRT 5,5, VHM 4,0 (dòng tiền xấu đi), MSN 4,0; dự bị HPG 3,0."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên chiều 19/11",
+          "items": [
+            "Tích cực: hồi lên vùng 1.695-1.703 kèm ngoại giảm bán, thanh khoản cải thiện; ổn định ngắn hạn nhưng chưa đủ xác nhận đảo chiều.",
+            "Cơ sở (nghiêng tiêu cực): dao động 1.684-1.700, ngoại tiếp tục bán FPT, VIC, ngân hàng, biến động tăng ở ATC do đáo hạn phái sinh; hạn chế mua đuổi nhịp hồi.",
+            "Tiêu cực: thủng 1.684-1.685 kèm thanh khoản tăng, nhịp giảm có thể mở rộng."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: sáng 19/11 bán ròng 525,2 tỷ HOSE, nối tiếp -1.114,3 tỷ phiên 18/11; tháng 11 khoảng -3,1 nghìn tỷ tới hết 18/11; lũy kế năm trên 125.000 tỷ.",
+            "Tự doanh: phiên 18/11 bán ròng khoảng 44 tỷ (bán VCB, TCB, MSB; mua VIC, VRE, PVT), hạ mạnh so với -666 tỷ phiên 17/11; 19/11 chưa có số.",
+            "Trong nước (suy luận): phiên 18/11 khoảng +1.158 tỷ, sáng 19/11 nội cùng tự doanh khoảng +525 tỷ; không phải số công bố, nội hấp thụ nhưng giá vẫn giảm.",
+            "Thỏa thuận: phiên 18/11 6.297,2 tỷ; sáng 19/11 chưa có số.",
+            "Ngành hút/rút tiền: giữ tiền ở năng lượng - tiện ích (PVD, PLX, POW, BSR) và chứng khoán cục bộ (VND, VIX); rút khỏi họ Vin, BĐS, CNTT (FPT -2,02%), ngân hàng (HDB -1,57%, VPB -1,43%, MBB -1,33%)."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Đêm 18/11: Fed phát tín hiệu tăng lãi suất, chứng khoán Mỹ giảm, Dow Jones mất hơn 560 điểm, Nasdaq tăng nhẹ; vàng và dầu giảm sâu.",
+            "19/11 trùng ngày đáo hạn hợp đồng VN30F1M, cần canh biến động ATC.",
+            "Yuanta khuyến nghị hạ tỷ trọng, ưu tiên bảo vệ danh mục, hạn chế bắt đáy; Kafi dự báo vùng giằng co 1.685-1.725 cho 19/11."
+          ]
+        },
+        {
+          "title": "Tin doanh nghiệp",
+          "items": [
+            "VNM về mức thấp nhất gần 13 tháng dù lãi hơn 8.600 tỷ (theo tiêu đề index.vn).",
+            "KDH và HHV nằm trong danh sách cổ phiếu đáng chú ý ngày 19/11 (theo tiêu đề index.vn).",
+            "FPT bị ngoại bán bình quân 1,7 triệu cổ phiếu/phiên từ đầu quý IV (VBSE)."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Bất động sản",
+          "view": "Họ Vin tiếp tục bị bán sáng 19/11: VIC -2,08% kéo VN-Index -8,21 điểm (ngoại bán 69,8 tỷ sau -185,9 tỷ phiên 18/11), VHM -1,15% (-1,20 điểm); phiên 18/11 ngoại rút khỏi BĐS khoảng 244 tỷ."
+        },
+        {
+          "name": "Ngân hàng",
+          "view": "Ngân hàng là nhóm bị ngoại bán nhiều nhất (khoảng -424 tỷ phiên 18/11); sáng 19/11 HDB -1,57%, VPB -1,43%, MBB -1,33%, ngoại tiếp tục bán MBB -38,1, CTG -30,8, HDB -29,6, VCB -28,4 tỷ, chỉ TCB được mua +14,9 tỷ."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "Dầu khí là nhóm giữ sắc xanh hiếm hoi sáng 19/11: PVD +2,24%, PLX +1,3%, BSR +0,21%; BSR được ngoại mua ròng +21 tỷ phiên 18/11 và tự doanh giải ngân vào PVT."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "Cổ phiếu chứng khoán tăng cục bộ sáng 19/11 dù thị trường giảm: VND +1,79%, VIX +0,79%."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN được ngoại mua ròng +14,9 tỷ sáng 19/11, lớn nhất trong nhóm mã có số; VNM về mức thấp nhất gần 13 tháng dù lãi hơn 8.600 tỷ."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG được ngoại mua ròng +11,9 tỷ sáng 19/11 giữa lúc thị trường bị bán, giữ vị trí dự bị 3,0 điểm."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "FRT giữ 5,5 điểm nhờ ngoại mua ròng +22 tỷ phiên 18/11 ngược dòng bán chung; sáng 19/11 chưa có số mới."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "FRT",
+          "note": "5,5 điểm (không đổi): ngoại mua +22 tỷ phiên 18/11 ngược dòng bán. Theo dõi VN-Index giữ trên 1.684 và ngoại không đảo sang bán; dừng nếu ngoại bán ròng trở lại kèm giá thủng nền gần nhất."
+        },
+        {
+          "ticker": "VHM",
+          "note": "4,0 điểm (không đổi, dòng tiền xấu đi): ngoại bán 64 tỷ phiên 18/11, sáng 19/11 giá -1,15%. Dừng nếu tiếp tục giảm cùng thanh khoản tăng."
+        },
+        {
+          "ticker": "MSN",
+          "note": "4,0 điểm (không đổi): ngoại mua ròng +14,9 tỷ sáng 19/11. Dừng nếu ngoại đảo chiều bán."
+        },
+        {
+          "ticker": "HPG",
+          "note": "Dự bị 3,0 điểm: ngoại mua ròng +11,9 tỷ sáng 19/11; cần thêm dữ liệu giá và thanh khoản phiên chiều."
+        },
+        {
+          "ticker": "POW",
+          "note": "Ngoại mua ròng hai buổi liên tiếp: +134 tỷ phiên 18/11 và +9,7 tỷ sáng 19/11, giá +0,37%."
+        }
+      ],
+      "action_items": [
+        "Duy trì tỷ trọng cổ phiếu an toàn, hạn chế mua mới hoặc mua đuổi phiên chiều; chỉ nới khi VN-Index hồi trên 1.703 với ngoại giảm bán.",
+        "Điểm kiểm tra 14h30-14h45 (ATC, đáo hạn VN30F1M): nếu thủng 1.684-1.685 kèm thanh khoản tăng thì ưu tiên phòng thủ.",
+        "Ưu tiên theo dõi nhóm có dòng tiền ngược chiều (năng lượng, dầu khí, FRT, MSN, POW), chỉ hành động khi ngoại và tự doanh đồng thuận."
+      ],
+      "sources": [
+        "index.vn",
+        "Sức khỏe & Đời sống",
+        "Người Quan Sát",
+        "Vietstock",
+        "VOH",
+        "BBW",
+        "CafeF"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-19",
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "generated_at": "2026-11-19T08:15:06+07:00",
+      "title": "Bản tin sáng 19/11: VN-Index 1.703,01 thấp nhất từ 3/11, ngoại bán ròng 1.114 tỷ phiên thứ hai, 1.700 là mốc tâm lý",
+      "summary": "Phiên 18/11 VN-Index đóng 1.703,01 (-23,71 điểm, -1,37%), thấp nhất từ 3/11, dưới MA50 phiên thứ 18 liên tiếp; trong phiên có lúc xuống 1.677 rồi thu hẹp nhờ cầu bắt đáy cuối phiên. Khối ngoại bán ròng 1.114,3 tỷ trên HOSE, phiên thứ hai liên tiếp; khớp lệnh 11.156,6 tỷ (+16,3%) nhưng vẫn thấp hơn TB 30 phiên 7,6%, thỏa thuận 6.297,2 tỷ. Các dòng có số đồng thuận tiêu cực, chỉ cầu nội bắt đáy đỡ giá. Phiên 19/11 nghiêng tiêu cực, hỗ trợ 1.700 và 1.690, kháng cự 1.727-1.731.",
+      "key_findings": [
+        "VN-Index 18/11 đóng 1.703,01 (-1,37%), có lúc xuống 1.677 sau 14h; độ rộng HOSE 64 tăng / 272 giảm / 49 đứng giá.",
+        "Ngoại bán ròng 1.114,3 tỷ HOSE: FPT -225,9, VIC -185,9, MBB -87,7, VCB -75,2 tỷ; chỉ mua KDH +41,6, FRT +22,0, BSR +21,0 tỷ.",
+        "Kỹ thuật (TCBS): MA5 ~1.727, MA10 1.731, MA20 1.739, MA50 1.753; hỗ trợ 1.700, kế tiếp đáy tháng 10 quanh 1.690.",
+        "P/E VN-Index dưới 10 lần nếu loại nhóm Vingroup; hơn 1/3 cổ phiếu VN30 giảm trên 30% từ đỉnh, VN-Index giảm khoảng 11% từ đỉnh lịch sử.",
+        "3 mã nổi bật giữ nguyên: FRT 5,5, VHM 4,0, MSN 4,0; dự bị HPG 3,0."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 19/11",
+          "items": [
+            "Tích cực: giữ được 1.700, ngoại giảm bán ròng, lấy lại vùng 1.727-1.731 (hội tụ MA5 và MA10); kháng cự kế tiếp quanh MA20 1.739.",
+            "Cơ sở (nghiêng tiêu cực): dao động 1.690-1.727, kiểm tra lại 1.700; ngoại tiếp tục bán các trụ FPT, VIC, VCB, MBB; thanh khoản dưới bình quân 30 phiên.",
+            "Tiêu cực: thủng 1.700 và ngoại bán ròng trên 1.000 tỷ lần nữa; hỗ trợ kế tiếp quanh 1.690, mốc thấp trong phiên 18/11 là 1.677.",
+            "Lưu ý: 19/11 có thể là ngày đáo hạn phái sinh (suy theo lịch, chưa có nguồn xác nhận), biến động cuối phiên có thể mạnh."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: bán ròng 1.114,3 tỷ HOSE (TCBS), toàn thị trường khoảng -1.152 tỷ; phiên bán ròng thứ hai liên tiếp, bán mạnh dần về cuối phiên; lũy kế năm -125.082,3 tỷ.",
+            "Tự doanh: 18/11 chưa có số; 17/11 bán ròng 666 tỷ (CafeF).",
+            "Trong nước (suy luận): khoảng +1.114 tỷ trên HOSE, đối ứng ngoại bán ròng, gồm cả tự doanh; có cầu bắt đáy cuối phiên.",
+            "Thỏa thuận: 6.297,2 tỷ (TCBS), chiếm khoảng 36% tổng giá trị 17.453,8 tỷ (suy luận); số theo mã chưa có.",
+            "Ngành hút/rút tiền: 20/20 ngành giảm; trụ kéo điểm VIC -4,8, VCB -2,2, VHM -1,7, VPB -1,2 điểm. Dòng tiền ngành cuối phiên chưa có số."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Mỹ phiên 17/11: Dow Jones -1,64% (50.759,42), S&P 500 -1,03% (7.340,53), Nasdaq -0,74% (24.328,38). Chưa có số phiên 18/11.",
+            "Nvidia công bố doanh thu quý 3 tài khóa 2027 đạt 115,8 tỷ USD (+103%), dự báo quý tiếp theo khoảng 130 tỷ USD; cổ phiếu tăng ngoài giờ.",
+            "Brent 93,14 USD/thùng (+0,76%, phiên 17/11). Tỷ giá trung tâm 25.656 đồng/USD (18/11), cao nhất từ trước đến nay.",
+            "Vàng thế giới có thời điểm xuống dưới 3.800 USD/ounce, vàng miếng trong nước phá đáy 2026."
+          ]
+        },
+        {
+          "title": "Tin doanh nghiệp",
+          "items": [
+            "VPX chốt 30/11/2026 phát hành 843,75 triệu cổ phiếu thưởng tỷ lệ 100:45, vốn điều lệ dự kiến lên 27.187,5 tỷ đồng.",
+            "PHP (TCBS Nắm giữ): Q3/2026 doanh thu thuần 930 tỷ (+33%), LNST 406 tỷ (+56%), biên gộp 53,2%; P/E dự phóng 9,1 lần.",
+            "FPT tạm ứng cổ tức tiền mặt khoảng 1.886 tỷ đồng; BSC dự phóng LNST 2026 là 10.647 tỷ (+13,6%), BSC, ACBS, SBBS giữ khuyến nghị Mua.",
+            "Bộ Công Thương ban hành Quyết định 3055/QĐ-BCT ngày 17/11 điều chỉnh Quy hoạch hạ tầng dự trữ, cung ứng xăng dầu, khí đốt quốc gia."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Bất động sản",
+          "view": "BĐS là nhóm kéo giảm chính phiên 18/11: VIC -4,8 điểm (ngoại bán 185,9 tỷ), VHM -1,7 điểm (ngoại bán 64 tỷ, đứt chuỗi mua); KDH ngược chiều được ngoại mua ròng +41,6 tỷ."
+        },
+        {
+          "name": "Ngân hàng",
+          "view": "Ngân hàng tiếp tục bị ngoại bán phiên 18/11 (MBB -87,7 tỷ, VCB -75,2 tỷ), VCB kéo chỉ số -2,2 điểm, VPB -1,2 điểm; VCB chỉ mua ròng 1/10 phiên gần nhất."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "FRT giữ 5,5 điểm, dẫn đầu top 3: ngoại mua +22,0 tỷ ngày 18/11 (9/10 phiên mua), giá 148.600 (+1,78%), LNTT 9 tháng +114%; TCBS vừa phát hành báo cáo ngành Bán lẻ Q3/2026."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "BSR được ngoại mua ròng +21,0 tỷ phiên 18/11; Brent hồi lên 93,14 USD (+0,76%, phiên 17/11) và Bộ Công Thương điều chỉnh quy hoạch hạ tầng dự trữ, cung ứng xăng dầu, khí đốt quốc gia."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN giữ 4,0 điểm: ngoại mua 10 phiên +357,8 tỷ (số trễ tới 13/11), KL tuần khoảng 60% TB tháng, LN 9 tháng trên 10.300 tỷ; có tin thoái vốn 0,56% của cổ đông liên quan lãnh đạo."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG ở dự bị 3,0 điểm: giá 20.850 sát đáy 52 tuần 20.050, 1 năm -15,06%, dù LN 9 tháng 23.746 tỷ vượt 8% kế hoạch và ngoại mua ròng 7/10 phiên tới 16/11."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "FRT",
+          "note": "5,5 điểm (giữ): ngoại +22,0 tỷ ngày 18/11 ngược chiều thị trường, KQKD 9 tháng vượt 11% kế hoạch, đà giá tháng +5,39%. Theo dõi VN-Index giữ 1.700 và giá trên 146.000; dừng nếu ngoại bán ròng liên tiếp 2-3 phiên."
+        },
+        {
+          "ticker": "VHM",
+          "note": "4,0 điểm (giữ): ngoại bán 64 tỷ ngày 18/11 sau chuỗi mua 5 phiên; LN 9 tháng trên 75.000 tỷ, P/E 5,2. Dừng nếu ngoại bán thêm và chỉ số thủng 1.700."
+        },
+        {
+          "ticker": "MSN",
+          "note": "4,0 điểm (giữ): ngoại mua 10 phiên +357,8 tỷ (tới 13/11), giá 71.700 (17/11), P/E 11,0. Theo dõi giữ trên 70.000."
+        },
+        {
+          "ticker": "HPG",
+          "note": "Dự bị 3,0 điểm: sát đáy 52 tuần; dừng nếu thủng 20.050."
+        },
+        {
+          "ticker": "FPT",
+          "note": "Ngoại bán ròng 225,9 tỷ ngày 18/11, thủng đáy 3 năm; sắp tạm ứng cổ tức khoảng 1.886 tỷ, BSC dự phóng LNST 2026 +13,6%."
+        }
+      ],
+      "action_items": [
+        "Nếu VN-Index mở cửa dưới 1.700 hoặc ngoại bán ròng trên 1.000 tỷ lần nữa, giữ kỷ luật tỷ trọng, không bắt đáy các trụ bị ngoại bán (FPT, VIC, VCB, MBB).",
+        "Lưu ý phiên có thể là ngày đáo hạn phái sinh nên biến động cuối phiên có thể lớn.",
+        "Theo dõi FRT, VHM, MSN; chỉ xem xét khi chỉ số lấy lại vùng 1.727-1.731 và ngoại ngừng bán ròng."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư",
+        "Vietstock",
+        "VietnamPlus",
+        "BNEWS",
+        "SGGP",
+        "Báo Tin Tức",
+        "Người Đưa Tin",
+        "Thương Trường",
+        "24h",
+        "CafeF"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-18",
+      "session": "afternoon",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán chiều (email)",
+      "generated_at": "2026-11-18T16:17:00+07:00",
+      "title": "Bản tin chiều 18/11: VN-Index mất 23,71 điểm về 1.703,01, thủng hỗ trợ 1.710, ngoại bán ròng 1.113 tỷ",
+      "summary": "VN-Index đóng cửa 18/11 tại 1.703,01 (-23,71 điểm, -1,37%), phiên giảm mạnh nhất từ đầu tháng 11, thủng hỗ trợ 1.710-1.715; độ rộng HOSE 64 tăng / 272 giảm, 20/20 nhóm ngành giảm. Khối ngoại bán ròng 1.113,3 tỷ trên HOSE, tập trung FPT, VIC, MBB, VCB, VHM; khớp lệnh 11.332 tỷ, tăng so với 17/11 nhưng vẫn dưới TB 30 phiên. Các dòng có số đồng thuận tiêu cực, tự doanh 18/11 chưa có số. Phiên 19/11 nghiêng Cơ sở thiên tiêu cực, 1.700 là mốc tâm lý; FRT vào top 3 với 5,5 điểm.",
+      "key_findings": [
+        "VN-Index 18/11 đóng 1.703,01 (-1,37%); VIC -4,80, VCB -2,24, VHM -1,69, VPB -1,24 điểm; 26/30 mã VN30 giảm.",
+        "Ngoại bán ròng 1.113,3 tỷ HOSE (toàn thị trường -1.152 tỷ): FPT -225, VIC -186, MBB -88, VCB -76, VHM -64 tỷ; chỉ mua KDH +41, FRT +22, BSR +21, POW +16 tỷ.",
+        "FPT thủng đáy hơn 3 năm (khoảng 47.050 đồng), bị ngoại bán ròng 9/10 phiên; BSC, ACBS, SBBS vẫn giữ khuyến nghị MUA.",
+        "Khớp lệnh 11.332 tỷ (+18% so với 17/11) nhưng thấp hơn khoảng 6,5% so với TB30; thỏa thuận khoảng 6.122 tỷ (suy luận).",
+        "3 mã nổi bật: FRT 5,5 (mới), VHM 4,0, MSN 4,0 (cùng giảm từ 4,5); HPG hạ xuống dự bị 3,0."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 19/11",
+          "items": [
+            "Tích cực: giữ được 1.700, ngoại giảm bán ròng, lấy lại 1.710-1.715 (nay là kháng cự); kháng cự kế tiếp 1.734-1.740 (hội tụ MA5/MA10/MA20).",
+            "Cơ sở (nghiêng tiêu cực): giằng co dưới 1.710-1.715, kiểm tra lại 1.700; ngoại tiếp tục bán các trụ; chỉ số dưới cả MA5, MA10, MA20, MA50.",
+            "Tiêu cực: thủng 1.700 cùng ngoại bán ròng trên 1.000 tỷ lần nữa; mốc hỗ trợ thấp hơn chưa có nguồn xác nhận.",
+            "Lưu ý: 19/11 là thứ Năm thứ ba của tháng, thường là phiên đáo hạn phái sinh (suy theo lịch, chưa có nguồn xác nhận)."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: bán ròng 1.113,3 tỷ HOSE (mua 1.128,0; bán 2.241,3), tăng tốc từ -368,6 tỷ lúc 10:30; phiên bán ròng thứ hai liên tiếp sau -359,5 tỷ ngày 17/11; lũy kế năm khoảng -125.082 tỷ (suy luận).",
+            "Tự doanh: 18/11 chưa có số; 17/11 bán ròng 666 tỷ (CafeF) / 675 tỷ (Người Quan Sát).",
+            "Trong nước (suy luận): khoảng +1.113 tỷ trên HOSE, đối ứng ngoại bán ròng, gồm cả tự doanh; không phải số công bố.",
+            "Thỏa thuận: khoảng 6.122 tỷ (suy luận từ tổng 17.454 trừ khớp 11.332), chiếm khoảng 35% GTGD; số theo mã cuối phiên chưa có.",
+            "Ngành hút/rút tiền: 20/20 ngành giảm; ngân hàng, phần mềm (FPT) và chứng khoán dẫn thanh khoản nhưng đều giảm, BĐS và ngân hàng kéo điểm. Chưa có số dòng tiền ròng theo ngành."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Mỹ phiên 16/11: S&P 500 -1,92% (7.416,59), Nasdaq -2,49% (24.509,76), Dow -1,41% (51.608,17).",
+            "Dầu phiên 16/11: Brent 92,44 USD (-3,55%), WTI 85,39 USD (-3,58%).",
+            "Tỷ giá trung tâm 17/11: 25.652 đồng/USD, kỷ lục mới vượt mức 25.646 của 14/10.",
+            "HNX và UPCoM: ngoại bán ròng lần lượt 27 tỷ và 11 tỷ."
+          ]
+        },
+        {
+          "title": "Tin doanh nghiệp",
+          "items": [
+            "VHM: lợi nhuận 9 tháng trên 75.000 tỷ, gấp khoảng 5 lần cùng kỳ, vượt xa kế hoạch năm (báo chí); P/E 5,2, P/B 1,8.",
+            "HPG: lãi 9 tháng 23.746 tỷ, vượt 8% kế hoạch năm.",
+            "VPBankS chốt ngày chia cổ phiếu thưởng tỷ lệ 45%; SMC kéo dài thời gian chào bán thêm gần 1 tháng.",
+            "VHC tạm ứng cổ tức 30%, chốt 10/12/2026, chi trả dự kiến 22/12."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Bất động sản",
+          "view": "BĐS kéo chỉ số mạnh nhất phiên 18/11: VIC -4,80 điểm (ngoại bán ròng 186 tỷ), VHM -1,69 điểm (ngoại bán 64 tỷ, đứt chuỗi mua 5 phiên); KDH là điểm sáng hiếm hoi với ngoại mua ròng +41,4 tỷ."
+        },
+        {
+          "name": "Ngân hàng",
+          "view": "Ngân hàng là nhóm kéo giảm lớn thứ hai phiên 18/11: VCB -2,24 điểm, VPB -1,24 điểm; ngoại bán ròng MBB -88 tỷ, VCB -76 tỷ. MSB được ngoại mua nhẹ 2 phiên nhưng 10 phiên vẫn bán ròng -181,9 tỷ."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "FRT đi ngược thị trường phiên 18/11: giá 148.600 (+1,78%), ngoại mua ròng +22,0 tỷ (9/10 phiên mua), LNTT 9 tháng 1.724 tỷ (+114%), vượt 11% kế hoạch năm, vào top 3 mã nổi bật với 5,5 điểm."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "Nhóm chứng khoán khớp 376 tỷ lúc 10:30 (VIX 106, SSI 79, VND 42 tỷ) nhưng giảm theo thị trường; VIX bị ngoại bán 19,7 tỷ lúc 10:30. VPBankS chốt chia cổ phiếu thưởng 45%."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "BSR được ngoại mua ròng +21,0 tỷ phiên 18/11, ngược với PVT vẫn bị bán (-12,95 tỷ lúc 10:30) sau phiên dầu khí giảm mạnh 17/11."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN hạ từ 4,5 xuống 4,0 điểm: ngoại mua 10 phiên +357,8 tỷ (số tới 13/11) nhưng 18/11 không nằm trong top mua, KL tuần thấp hơn 40% TB tháng; LN 9 tháng trên 10.300 tỷ, P/E 11,0."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG hạ xuống dự bị 3,0 điểm: giá 20.850 (11:30 18/11) chỉ cao hơn đáy 52 tuần 20.050 khoảng 4%, tuần -2,34%, dù lãi 9 tháng 23.746 tỷ vượt 8% kế hoạch và ngoại mua ròng 7/10 phiên tới 16/11."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "FRT",
+          "note": "5,5 điểm (mới vào top): ngoại +22,0 tỷ ngày 18/11, giá +1,78% lên 148.600, KQKD 9 tháng vượt 11% kế hoạch, đà giá tháng +5,39%. Theo dõi giá giữ trên 146.000; dừng nếu ngoại bán ròng liên tiếp 2-3 phiên."
+        },
+        {
+          "ticker": "VHM",
+          "note": "4,0 điểm (giảm từ 4,5): ngoại đảo chiều bán 64 tỷ ngày 18/11; LN 9 tháng trên 75.000 tỷ, P/E 5,2, P/B 1,8. Theo dõi ngoại quay lại mua; dừng nếu bán thêm và chỉ số thủng 1.700."
+        },
+        {
+          "ticker": "MSN",
+          "note": "4,0 điểm (giảm từ 4,5): ngoại mua 10 phiên +357,8 tỷ (tới 13/11), KL tuần thấp; giá 71.700 (17/11), P/E 11,0. Theo dõi giữ trên 70.000; dừng nếu ngoại bán ròng nhiều phiên."
+        },
+        {
+          "ticker": "HPG",
+          "note": "Dự bị 3,0 điểm (hạ từ 4,5): sát đáy 52 tuần 20.050, đà giá âm; dừng nếu thủng 20.050."
+        },
+        {
+          "ticker": "FPT",
+          "note": "Ngoại bán ròng 225 tỷ ngày 18/11, 9/10 phiên bán; giá thủng đáy hơn 3 năm, dù BSC, ACBS, SBBS vẫn khuyến nghị MUA."
+        }
+      ],
+      "action_items": [
+        "Nếu phiên 19/11 mở cửa dưới 1.700 hoặc ngoại bán ròng trên 1.000 tỷ lần nữa, giữ kỷ luật tỷ trọng, không bắt đáy các trụ bị ngoại bán (FPT, VIC, VCB, MBB).",
+        "Theo dõi FRT, VHM, MSN theo điều kiện riêng; chỉ xem xét khi chỉ số lấy lại 1.710-1.715 và ngoại ngừng bán ròng.",
+        "Đối chiếu số tự doanh 18/11, thỏa thuận cuối phiên và dòng tiền ngành để cập nhật chấm điểm cho bản sáng 19/11."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư",
+        "CafeF",
+        "Index.vn",
+        "Người Đưa Tin",
+        "Người Quan Sát",
+        "Vietstock",
+        "24hMoney",
+        "VnEconomy"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-18",
+      "session": "midday",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán trưa (email)",
+      "generated_at": "2026-11-18T13:14:48+07:00",
+      "title": "Bản tin trưa 18/11: VN-Index về 1.717,03, ngoại bán ròng tăng tốc từ 520 tỷ, FPT bị xả hơn 210 tỷ",
+      "summary": "Phiên sáng 18/11 VN-Index giảm 9,69 điểm (-0,56%) về 1.717,03, đáy sáng 1.711,99, chưa thủng hỗ trợ 1.710-1.715; độ rộng HOSE rất xấu với 51 tăng / 246 giảm. Khối ngoại bán ròng tăng tốc từ 82 tỷ (9:30) lên 368,6 tỷ (10:30) và từ 520 tỷ cuối sáng (một nguồn), riêng FPT hơn 210 tỷ; thỏa thuận khoảng 800 tỷ dồn vào LPB, MSB. Dòng tiền đồng thuận tiêu cực, tự doanh 18/11 chưa có số. Kịch bản chiều nghiêng Cơ sở thiên tiêu cực; MSN được chốt 4,5 điểm sau khi tra KQKD và đà giá.",
+      "key_findings": [
+        "VN-Index sáng 18/11 về 1.717,03 (-0,56%), đáy 1.711,99; độ rộng HOSE 51 tăng / 246 giảm, 32 mã sàn lúc 10:30.",
+        "Ngoại bán ròng tăng tốc: 82 tỷ (9:30), 368,6 tỷ (10:30), từ 520 tỷ cuối sáng (một nguồn); FPT bị bán hơn 210 tỷ, giá -2,99%.",
+        "VIC là trụ kéo chỉ số mạnh nhất (-4,50 điểm lúc 10:30), tiếp theo VCB -1,38, VHM -0,85, BID -0,64 điểm.",
+        "Thỏa thuận khoảng 800 tỷ lúc 10:30, LPB 386,1 và MSB 205,2 tỷ (~74%): giao dịch chuyển nhượng, chưa phải cầu mới.",
+        "3 mã nổi bật: VHM 4,5, HPG 4,5, MSN 4,5 (chốt); dự bị VIC 3,5, HDB."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên chiều 18/11",
+          "items": [
+            "Tích cực: giữ 1.711-1.715, ngoại thu hẹp bán ròng hoặc đảo chiều, có lực bắt đáy cuối phiên; hồi về 1.726 đến 1.734-1.740 (hội tụ MA5/10/20).",
+            "Cơ sở (nghiêng): giằng co quanh hỗ trợ, thanh khoản thấp, ngoại còn bán FPT, VCB; vùng khoảng 1.710-1.730.",
+            "Tiêu cực: thủng 1.710-1.711 kèm ngoại bán mở rộng, trụ VIC, VCB, FPT giảm tiếp; thử 1.700, sâu hơn 1.690.",
+            "Kỹ thuật: tỷ lệ mã trên MA20 và MA50 lùi xuống 24,2% và 29,2% lúc 10:30; P/E VN-Index 10,95 lần, P/B 1,81 lần (Vietstock 18/11)."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: sáng 18/11 bán ròng từ 520 tỷ (một nguồn); lúc 10:30 bán FPT -164,5, GMD -21,0, VIX -19,7, VCB -14,3, PVT -13,0; mua POW +15,0, DCM +5,4, HCM +4,2 tỷ. 5 phiên 12-18/11 khoảng -1.437 tỷ (tạm tính).",
+            "Tự doanh: sáng 18/11 chưa có số; 17/11 bán gần 660 tỷ (GMD -281).",
+            "Trong nước (suy luận): sáng nay không suy luận được vì thiếu tự doanh; phiên 17/11 khoảng +1.020 tỷ, không phải số công bố.",
+            "Thỏa thuận: khoảng 800 tỷ lúc 10:30 (LPB 386,1, MSB 205,2, TCB 50,0, MWG 41,3 tỷ).",
+            "Ngành hút/rút tiền: rút khỏi ngân hàng (thanh khoản 669,1 tỷ, VCB -1,34%, VPB -1,85%), phần mềm (FPT), chứng khoán và nhóm Vingroup; điện (POW), dầu khí (BSR, GAS) và MCH đỡ nhẹ. Số là thanh khoản và giá ngành, không phải dòng tiền ròng."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Mỹ đêm 17/11: Dow Jones mất hơn 800 điểm, S&P 500 xuống thấp nhất từ tháng 7; vàng chật vật phục hồi sau đáy một năm, dầu tăng nhẹ.",
+            "Lãnh đạo Fed bác kịch bản tăng lãi suất 0,5 điểm phần trăm tháng 12 nhưng lưu ý chính sách thắt chặt có thể kéo sang 2027.",
+            "Tỷ giá trung tâm trên 25.650 đ/USD, DXY áp sát 104; 29 ngân hàng niêm yết chi hơn 560.220 tỷ trả lãi tiền gửi 9 tháng (+52,7%).",
+            "Khuyến nghị CTCK: SHS kiểm định 1.720, thậm chí 1.700, kháng cự 1.750-1.780; VCBS giữ 1.720-1.730; VOH dự báo 1.710-1.740; ưu tiên bảo vệ danh mục."
+          ]
+        },
+        {
+          "title": "Tin doanh nghiệp",
+          "items": [
+            "MSN Q3/2026: doanh thu thuần 36.981 tỷ (+74,7%), NPAT Pre-MI 4.552 tỷ (gấp 2,4 lần), 9 tháng 10.325 tỷ (+131,1%), vượt kế hoạch cơ sở điều chỉnh 10.000 tỷ.",
+            "MWG LNST quý III/2026 tăng 75%; GAS lãi 9 tháng vượt 50% kế hoạch; FPT doanh thu, lợi nhuận 10 tháng vẫn tăng hai chữ số nhưng bị ngoại bán ròng mạnh.",
+            "SJS dự kiến phát hành 200 triệu cổ phiếu; SMC gia hạn chào bán gần 37 triệu cổ phiếu; ủy viên HĐQT VIT đăng ký bán gần 1,7 triệu cổ phiếu."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Ngân hàng",
+          "view": "Ngân hàng dẫn thanh khoản sáng 18/11 (669,1 tỷ lúc 10:30) nhưng đều giảm: VCB -1,34% (kéo chỉ số -1,38 điểm), VPB -1,85%, HDB -1,12%, TCB -0,71%; ngoại bán VCB -14,3 tỷ, thỏa thuận lớn ở LPB và MSB không phản ánh cầu mới."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "Nhóm Vingroup bị bán sáng 18/11: VIC kéo VN-Index -4,50 điểm lúc 10:30, VHM -0,85 điểm; chuỗi ngoại mua VHM +197,0 tỷ tới 16/11 chưa được xác nhận thêm."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "Chứng khoán đứng thứ ba về thanh khoản (376,4 tỷ lúc 10:30) nhưng các trụ đều giảm: VIX -0,78%, SSI -0,76%, VND -1,05%, SHS -0,76%; ngoại bán VIX -19,7 tỷ, chỉ HCM được mua +4,2 tỷ."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "Sau phiên giảm mạnh 17/11, BSR và GAS đỡ nhẹ chỉ số sáng 18/11 (+0,21 và +0,20 điểm) khi dầu hồi; PVT vẫn bị ngoại bán -13,0 tỷ. GAS báo lãi 9 tháng vượt 50% kế hoạch."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN có KQKD Q3 mạnh (doanh thu 36.981 tỷ, +74,7%; 9 tháng NPAT Pre-MI 10.325 tỷ, +131,1%) và chuỗi ngoại mua 5 phiên khoảng +337,3 tỷ tới 17/11; MCH đỡ chỉ số +0,36 điểm sáng 18/11."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG được ngoại mua +2,4 tỷ lúc 9:30 rồi rời top mua, kéo VN30 -1,33 điểm lúc 10:30; chuỗi mua 3 phiên (+91,6 tỷ) chưa được xác nhận phiên thứ 4."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "MWG báo LNST quý III/2026 tăng 75% và có giao dịch thỏa thuận 41,3 tỷ sáng 18/11."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "VHM",
+          "note": "4,5 điểm (giữ): ngoại mua ròng 5 phiên +197,0 tỷ tới 16/11, sáng 18/11 chưa có số, nhóm Vingroup bị bán. Theo dõi VN-Index giữ 1.711-1.715; dừng nếu thủng 1.710 hoặc ngoại bán ròng VHM 2 phiên liên tiếp."
+        },
+        {
+          "ticker": "HPG",
+          "note": "4,5 điểm (giữ, hạ 0,5 nếu chiều ngoại bán): ngoại +51 tỷ ngày 17/11, chuỗi 3 phiên +91,6 tỷ; rủi ro thuế chống bán phá giá EU. Dừng nếu ngoại bán ròng 2 phiên kèm VN-Index thủng 1.710."
+        },
+        {
+          "ticker": "MSN",
+          "note": "Chốt 4,5 điểm (từ 4,0 tạm): dòng tiền 1,5, KQKD 2, đà giá 1 (1 tuần -1,24%, 1 tháng +0,42%, 1 quý +7,17%; giá 71.700 ngày 17/11). Dừng nếu ngoại bán ròng 2 phiên liên tiếp."
+        },
+        {
+          "ticker": "FPT",
+          "note": "Ngoại bán ròng phiên thứ 10 (sáng 18/11 hơn -210 tỷ), lũy kế khoảng -1.609 tỷ (tạm tính); giá -2,99% cuối sáng."
+        },
+        {
+          "ticker": "POW",
+          "note": "Điểm sáng nhỏ: ngoại mua +15,0 tỷ lúc 10:30 ngày 18/11; chuỗi chưa xác định, chưa phải xu hướng."
+        }
+      ],
+      "action_items": [
+        "Phiên chiều theo dõi hỗ trợ 1.710-1.715 (đáy sáng 1.711,99) và kháng cự 1.726-1.740; không bắt đáy khi ngoại còn bán ròng mở rộng.",
+        "Nếu thủng 1.710 kèm ngoại bán thêm thì chờ vùng 1.700 hoặc 1.690; chỉ thăm dò nhỏ khi chỉ số giữ trên 1.715 và ngoại thu hẹp bán.",
+        "Cuối phiên xác nhận ngoại MSN, VHM (chuỗi 6), HPG (phiên 4); nếu hai trong ba bị bán ròng thì hạ điểm dòng tiền.",
+        "Hạn chế tăng tỷ trọng FPT, ngân hàng vốn hóa lớn (VCB, VPB), VIC khi ngoại còn bán."
+      ],
+      "sources": [
+        "Vietstock",
+        "Người Quan Sát",
+        "Báo Nghệ An",
+        "Tin nhanh chứng khoán",
+        "Tuổi Trẻ",
+        "VOH",
+        "VTV",
+        "BBW",
+        "CafeF",
+        "Doanh nhân - Báo Pháp luật VN",
+        "LSVN"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-18",
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "generated_at": "2026-11-18T08:29:38+07:00",
+      "title": "Bản tin sáng 18/11: VN-Index mất 10,17 điểm về 1.726,72, ngoại và tự doanh cùng bán gần 1.100 tỷ, MSN vào top 3",
+      "summary": "Phiên 17/11 VN-Index giảm 10,17 điểm (-0,59%) về 1.726,72, đóng dưới cả MA5/10/20/50 và thấp nhất từ 9/11; dầu khí, ngân hàng, công nghệ kéo xuống. Khối ngoại bán ròng 359,5 tỷ trên HOSE, tự doanh bán ròng hơn 660 tỷ; khớp lệnh 9.596,8 tỷ, thấp hơn 20,8% so với TB 30 phiên. Dòng tiền đồng thuận tiêu cực, chỉ dòng nội (suy luận) và BĐS ngoài Vingroup, điện nước đỡ giá. Kịch bản 18/11 nghiêng Cơ sở thiên tiêu cực do Mỹ giảm mạnh hai đêm liên tiếp.",
+      "key_findings": [
+        "VN-Index 17/11 đóng 1.726,72 (-0,59%), phiên thứ 17 liên tiếp dưới MA50 (~1.755); độ rộng khoảng 107-113 tăng / 199-220 giảm.",
+        "Ngoại bán ròng 359,5 tỷ (bán FPT -147, VCB -102, MBB -65; mua MSN +147, POW +54, HPG +51); tự doanh bán ròng hơn 660 tỷ, GMD -281 tỷ.",
+        "MSN đạt chuỗi ngoại mua ròng 5 phiên (11-17/11) khoảng +337,3 tỷ (tạm tính), mua ròng mạnh nhất sàn khi thị trường bị bán.",
+        "FPT bị ngoại bán ròng phiên thứ 9 liên tiếp (05-17/11) khoảng -1.399 tỷ (tạm tính); VCB cũng bị bán kéo dài.",
+        "3 mã nổi bật: VHM 4,5, HPG 4,5, MSN từ 4,0 (tạm, chưa chấm đà giá); dự bị VIC (hạ xuống 3,5), HDB."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 18/11",
+          "items": [
+            "Tích cực: giữ 1.715-1.720 từ đầu phiên, ngoại hạ bán ròng hoặc đảo chiều mua, khớp lệnh vượt 9.600 tỷ; hồi kỹ thuật về 1.734-1.740 (hội tụ MA5/10/20).",
+            "Cơ sở (nghiêng): mở cửa yếu theo Mỹ, giằng co, thanh khoản thấp, phân hóa ngành; vùng khoảng 1.710-1.735 (TVS, VCBS 1.720-1.740).",
+            "Tiêu cực: thủng 1.710-1.715 kèm ngoại và tự doanh bán mở rộng, dầu khí và ngân hàng tiếp tục giảm; thử 1.700, sâu hơn 1.690 (Yuanta).",
+            "Kỹ thuật (TCBS, 17/11): MA5 ~1.736, MA10 ~1.734, MA20 ~1.740, MA50 ~1.755; hỗ trợ 1.710-1.715, kháng cự 1.734-1.740; đường xu hướng giảm từ tháng 9 là ngưỡng cần vượt."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: phiên 17/11 bán ròng 359,5 tỷ trên HOSE (TCBS), đảo chiều bán sau 2 phiên mua; 5 phiên 11-17/11 khoảng -840 tỷ (ước tính); lũy kế năm bán ròng 123.968,2 tỷ.",
+            "Tự doanh: bán ròng hơn 660 tỷ (Vietstock), bán mạnh nhất GMD -281 tỷ, mua nhiều nhất MBB +26,5 tỷ.",
+            "Trong nước (suy luận): khoảng +1.020 tỷ, đối ứng phần bán của ngoại và tự doanh; không phải số công bố.",
+            "Thỏa thuận: 5.364,6 tỷ (TCBS), chiếm khoảng 36% GTGD; danh sách mã chưa có số.",
+            "Ngành hút/rút tiền: rút khỏi dầu khí (-3,63%), khai khoáng (-3,75%), vận tải hàng hóa (-2,73%), ngân hàng, công nghệ (-1,79%); hút vào xây dựng (+0,85%), điện & năng lượng (+0,7%), nước (+0,54%), BĐS ngoài Vingroup. Số là biến động giá ngành, không phải dòng tiền ròng."
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Mỹ phiên 16/11: S&P 500 -1,92% còn 7.416,59; Nasdaq -2,49% còn 24.509,76; Dow Jones -1,41% còn 51.608,17. Đêm 17/11 Dow giảm hơn 800 điểm, S&P 500 thấp nhất từ tháng 7.",
+            "Dầu 16/11: Brent -3,55% còn 92,44 USD, WTI -3,58% còn 85,39 USD. Tỷ giá trung tâm 17/11: 25.652 đ/USD, vượt kỷ lục cũ 25.646.",
+            "EU áp thuế chống bán phá giá 16% với một số sản phẩm thép cán nguội Việt Nam từ 17/11.",
+            "Vĩ mô tháng 10: xuất nhập khẩu +3,7% đạt 122,03 tỷ USD; CPI +0,20% so với tháng trước; FDI thực hiện 24,08 tỷ USD (+13,1%).",
+            "Khuyến nghị CTCK cho 18/11: VCBS giằng co 1.720-1.740, có thể hồi kỹ thuật; TVS thận trọng; CSI giữ danh mục, chưa vội mua; YSVN hạ tỷ trọng cổ phiếu về 40/60; Yuanta hỗ trợ 1.690."
+          ]
+        },
+        {
+          "title": "Tin doanh nghiệp",
+          "items": [
+            "FRT được TCBS khuyến nghị NẮM GIỮ: Q3 doanh thu 17.530 tỷ (+34% YoY), LNST 440 tỷ (gấp đôi cùng kỳ), 9 tháng LNTT 1.724 tỷ (+114%), vượt 11% kế hoạch năm.",
+            "MSN báo lãi 9 tháng vượt 10.300 tỷ, hoàn thành sớm kế hoạch năm (theo tiêu đề báo).",
+            "TCH: nhóm quỹ liên quan Dragon Capital nâng sở hữu lên 5,04%, thành cổ đông lớn từ 13/11. VHC tạm ứng cổ tức 30% bằng tiền, chốt quyền 10/12/2026.",
+            "BCM lập công ty BĐS vốn 300 tỷ; CII nhắm 5 dự án giao thông gần 170 nghìn tỷ giai đoạn 2027-2032."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Dầu khí",
+          "view": "Dầu khí giảm mạnh nhất phiên 17/11 (-3,63%): PVT -5,26%, BSR -4,7%, PLX -3,51%, PVS -3,14% theo giá dầu giảm (Brent -3,55% còn 92,44 USD phiên 16/11); PVT bị ngoại bán ròng 8 phiên tới 12/11."
+        },
+        {
+          "name": "Ngân hàng",
+          "view": "Ngân hàng kéo chỉ số phiên 17/11 với VCB -2,07%, BID -2,05%; ngoại bán VCB -102 tỷ và MBB -65 tỷ, VCB bị bán kéo dài nhiều phiên. HDB đứt chuỗi mua ròng 4 phiên từ 16/11."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "BĐS phân hóa phiên 17/11: nhóm ngoài Vingroup tăng (KDH +3,64%, DXG +1,83%) trong khi VIC về tham chiếu; VHM được ngoại mua ròng 5 phiên 10-16/11 (+197,0 tỷ)."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN là điểm sáng phiên 17/11 khi được ngoại mua ròng mạnh nhất sàn (+147 tỷ), nâng chuỗi mua 5 phiên lên khoảng +337,3 tỷ (tạm tính), hỗ trợ bởi lãi 9 tháng vượt 10.300 tỷ."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG được ngoại mua +51 tỷ phiên 17/11, chuỗi mua 3 phiên +91,6 tỷ, nhưng nhóm nguyên vật liệu giảm 1,84% và EU áp thuế chống bán phá giá 16% với một số sản phẩm thép cán nguội Việt Nam từ 17/11."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "Nhóm tài chính giảm 0,69% phiên 17/11; tự doanh CTCK bán ròng hơn 660 tỷ toàn thị trường. VND được ngoại mua ròng 5 phiên 10-16/11 (+35,1 tỷ)."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "FRT có Q3 doanh thu 17.530 tỷ (+34% YoY), LNST 440 tỷ gấp đôi cùng kỳ, được TCBS khuyến nghị NẮM GIỮ; YSVN nêu MWG, FRT trong nhóm mã đáng chú ý."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "VHM",
+          "note": "4,5 điểm (giữ nguyên): ngoại mua ròng 5 phiên +197,0 tỷ tới 16/11, BĐS ngoài Vingroup tăng. Theo dõi VN-Index giữ 1.710-1.715 và ngoại VHM 18/11; dừng nếu VN-Index thủng 1.710 hoặc ngoại bán ròng 2 phiên liền."
+        },
+        {
+          "ticker": "HPG",
+          "note": "4,5 điểm (giữ nguyên): ngoại +51 tỷ phiên 17/11, chuỗi 3 phiên +91,6 tỷ; rủi ro thuế chống bán phá giá EU. Dừng nếu ngoại bán ròng 2 phiên kèm VN-Index thủng 1.710."
+        },
+        {
+          "ticker": "MSN",
+          "note": "Mới vào top 3, từ 4,0 điểm (tạm, chưa chấm đà giá): ngoại mua ròng 5 phiên khoảng +337,3 tỷ, +147 tỷ ngay phiên thị trường bị bán; lãi 9 tháng vượt 10.300 tỷ. Dừng nếu ngoại bán ròng 2 phiên liên tiếp."
+        },
+        {
+          "ticker": "VIC",
+          "note": "Dự bị, hạ xuống 3,5 điểm: ngoại +116,8 tỷ phiên 16/11, giá 17/11 về tham chiếu, chưa có số ngoại 17/11."
+        },
+        {
+          "ticker": "FPT",
+          "note": "Ngoại bán ròng phiên thứ 9 liên tiếp (05-17/11) khoảng -1.399 tỷ (tạm tính), riêng 17/11 -147 tỷ."
+        }
+      ],
+      "action_items": [
+        "Đầu phiên 18/11 theo dõi hỗ trợ 1.710-1.715 và kháng cự 1.734-1.740; không mua đuổi khi thị trường mở cửa theo Mỹ.",
+        "Nếu thủng 1.710 kèm ngoại và tự doanh bán mở rộng thì không bắt đáy, chờ vùng 1.700 hoặc 1.690; chỉ thăm dò tỷ trọng nhỏ khi chỉ số giữ trên 1.720 và ngoại quay lại mua.",
+        "Hạn chế tăng tỷ trọng FPT, VCB, ngân hàng, dầu khí (PVT, BSR, PLX, PVS, GAS) khi ngoại và tự doanh còn bán; giữ tỷ trọng cổ phiếu thấp đến trung bình.",
+        "Cuối phiên 18/11 xác nhận dòng tiền ngoại ở MSN (chuỗi 6), VHM (chuỗi 6), HPG (chuỗi 4)."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư",
+        "Thời báo Tài chính",
+        "Thời báo Ngân hàng",
+        "Vietstock",
+        "VOV",
+        "Thương Trường",
+        "CafeF"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
       "date": "2026-11-17",
       "session": "midday",
       "kind": "bulletin",
