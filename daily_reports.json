@@ -1,6 +1,328 @@
 {
   "items": [
     {
+      "date": "2026-11-20",
+      "session": "morning",
+      "generated_at": "2026-11-20T08:30:35+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "VN-Index giảm 3 phiên liên tiếp, về dưới 1.700 điểm",
+          "link": "https://tuoitre.vn/vn-index-giam-3-phien-lien-tiep-ve-duoi-1700-diem-100261119154114635.htm",
+          "pubDate": "Thu, 19 Nov 26 16:20:00 +0700",
+          "sourceCount": 3,
+          "sources": [
+            "Thanh Niên Chứng khoán",
+            "Tuổi Trẻ Chứng khoán",
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "Thị trường chứng khoán vẫn cần thêm những doanh nghiệp tỷ USD",
+          "link": "https://stockbiz.vn/tin-tuc/thi-truong-chung-khoan-van-can-them-nhung-doanh-nghiep-ty-usd/42852287",
+          "pubDate": "Fri, 20 Nov 2026 01:14:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Ba giám đốc cao cấp của PNJ đồng loạt từ nhiệm",
+          "link": "https://tuoitre.vn/ba-giam-doc-cao-cap-cua-pnj-dong-loat-tu-nhiem-100261119194939785.htm",
+          "pubDate": "Fri, 20 Nov 2026 03:13:28 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Tuổi Trẻ Chứng khoán",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Thủ tướng: Đưa chứng khoán trở thành kênh huy động vốn trung và dài hạn chủ lực nền kinh tế",
+          "link": "https://tuoitre.vn/thu-tuong-dua-chung-khoan-tro-thanh-kenh-huy-dong-von-trung-va-dai-han-chu-luc-nen-kinh-te-100261119150627319.htm",
+          "pubDate": "Thu, 19 Nov 2026 15:43:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Tuổi Trẻ Chứng khoán"
+          ]
+        },
+        {
+          "title": "Hơn 5.000 nhân viên của một doanh nghiệp sắp thành triệu phú",
+          "link": "https://markettimes.vn/hon-5-000-nhan-vien-cua-mot-doanh-nghiep-sap-thanh-trieu-phu-134646.html",
+          "pubDate": "Thu, 19 Nov 2026 22:20:01 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Đáo hạn phái sinh kéo chứng khoán lùi về điểm thấp nhất 1 tháng qua",
+          "link": "https://stockbiz.vn/tin-tuc/dao-han-phai-sinh-keo-chung-khoan-lui-ve-diem-thap-nhat-1-thang-qua/42848908",
+          "pubDate": "Thu, 19 Nov 2026 09:50:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "30 năm ngành chứng khoán: Người trong cuộc kể chuyện hậu trường trước lúc khai mở thị trường",
+          "link": "https://stockbiz.vn/tin-tuc/30-nam-nganh-chung-khoan-nguoi-trong-cuoc-ke-chuyen-hau-truong-truoc-luc-khai-mo-thi-truong/42848745",
+          "pubDate": "Thu, 19 Nov 2026 09:31:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Tuổi Trẻ Chứng khoán"
+          ]
+        },
+        {
+          "title": "Thị trường tiếp tục “tra tấn” tâm lý, khối ngoại bán ròng mạnh",
+          "link": "https://vneconomy.vn/thi-truong-tiep-tuc-tra-tan-tam-ly-khoi-ngoai-ban-rong-manh.htm",
+          "pubDate": "Thu, 19 Nov 2026 16:17:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Vietstock",
+            "VnEconomy"
+          ]
+        }
+      ],
+      "mentioned_tickers": [
+        {
+          "ticker": "PNJ",
+          "count": 1
+        }
+      ],
+      "title": "Bản tin sáng 20/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1689.62,
+            "change": -13.39,
+            "changePct": -0.79,
+            "tradingValue": 15008.74,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1788.51,
+            "change": -18.03,
+            "changePct": -1.0,
+            "tradingValue": 9569.31,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 238.94,
+            "change": -3.79,
+            "changePct": -1.56,
+            "tradingValue": 645.07,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 120.36,
+            "change": -0.76,
+            "changePct": -0.63,
+            "tradingValue": 285.38,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Thép",
+            "avgChangePct": 0.85,
+            "up": 2,
+            "down": 0,
+            "total": 3,
+            "leader": {
+              "ticker": "NKG",
+              "changePct": 2.07
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": 0.32,
+            "up": 1,
+            "down": 0,
+            "total": 4,
+            "leader": {
+              "ticker": "BCM",
+              "changePct": 1.26
+            }
+          },
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": 0.25,
+            "up": 2,
+            "down": 0,
+            "total": 6,
+            "leader": {
+              "ticker": "VND",
+              "changePct": 1.07
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": 0.15,
+            "up": 2,
+            "down": 1,
+            "total": 4,
+            "leader": {
+              "ticker": "PNJ",
+              "changePct": 0.73
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": -0.37,
+            "up": 1,
+            "down": 2,
+            "total": 4,
+            "leader": {
+              "ticker": "PLX",
+              "changePct": 0.49
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.7,
+            "up": 1,
+            "down": 6,
+            "total": 8,
+            "leader": {
+              "ticker": "BID",
+              "changePct": 0.49
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -1.0,
+            "up": 0,
+            "down": 6,
+            "total": 6,
+            "leader": {
+              "ticker": "DXG",
+              "changePct": -0.45
+            }
+          },
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": -1.05,
+            "up": 0,
+            "down": 3,
+            "total": 3,
+            "leader": {
+              "ticker": "SAB",
+              "changePct": -0.58
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "NKG",
+              "last": 12300,
+              "changePct": 2.07,
+              "volume": 437840
+            },
+            {
+              "ticker": "BCM",
+              "last": 36250,
+              "changePct": 1.26,
+              "volume": 23480
+            },
+            {
+              "ticker": "VND",
+              "last": 14150,
+              "changePct": 1.07,
+              "volume": 1027630
+            },
+            {
+              "ticker": "PNJ",
+              "last": 13800,
+              "changePct": 0.73,
+              "volume": 529870
+            },
+            {
+              "ticker": "FRT",
+              "last": 149400,
+              "changePct": 0.54,
+              "volume": 26080
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "VIC",
+              "last": 240000,
+              "changePct": -2.04,
+              "volume": 177860
+            },
+            {
+              "ticker": "VNM",
+              "last": 51100,
+              "changePct": -1.73,
+              "volume": 307960
+            },
+            {
+              "ticker": "STB",
+              "last": 69000,
+              "changePct": -1.71,
+              "volume": 147040
+            },
+            {
+              "ticker": "CTG",
+              "last": 30000,
+              "changePct": -1.64,
+              "volume": 559790
+            },
+            {
+              "ticker": "VRE",
+              "last": 23500,
+              "changePct": -1.47,
+              "volume": 222910
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 12700,
+              "changePct": 0.4,
+              "volume": 3061040
+            },
+            {
+              "ticker": "VPB",
+              "last": 20900,
+              "changePct": -0.48,
+              "volume": 1690730
+            },
+            {
+              "ticker": "HPG",
+              "last": 20450,
+              "changePct": 0.0,
+              "volume": 1535420
+            },
+            {
+              "ticker": "SSI",
+              "last": 19550,
+              "changePct": 0.0,
+              "volume": 1349480
+            },
+            {
+              "ticker": "NVL",
+              "last": 10300,
+              "changePct": -0.48,
+              "volume": 1177080
+            }
+          ]
+        },
+        "summary": "VN-Index giảm 13,39 điểm (-0,79%) phiên 19/11, đạt 1.689,62 điểm, giá trị giao dịch 15.008,74 tỷ đồng. Nhóm ngành mạnh nhất: Thép (bình quân 0,85%, 2/3 mã tăng); yếu nhất: Thực phẩm - Đồ uống (-1,05%). Tăng mạnh: NKG (+2,07%), BCM (+1,26%), VND (+1,07%). Giảm mạnh: VIC (-2,04%), VNM (-1,73%), STB (-1,71%)."
+      },
+      "market_from": "2026-11-19",
+      "summary": "Phiên trước: VN-Index giảm 13,39 điểm (-0,79%) phiên 19/11, đạt 1.689,62 điểm, giá trị giao dịch 15.008,74 tỷ đồng. Nhóm ngành mạnh nhất: Thép (bình quân 0,85%, 2/3 mã tăng); yếu nhất: Thực phẩm - Đồ uống (-1,05%). Tăng mạnh: NKG (+2,07%), BCM (+1,26%), VND (+1,07%). Giảm mạnh: VIC (-2,04%), VNM (-1,73%), STB (-1,71%). Tin được nhiều nguồn đưa nhất: \"VN-Index giảm 3 phiên liên tiếp, về dưới 1.700 điểm\" (3 nguồn)."
+    },
+    {
       "date": "2026-11-19",
       "session": "afternoon",
       "generated_at": "2026-11-19T16:00:50+07:00",
