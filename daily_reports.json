@@ -2,6 +2,332 @@
   "items": [
     {
       "date": "2026-11-20",
+      "session": "afternoon",
+      "generated_at": "2026-11-20T16:00:17+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "VN-Index giảm 3 phiên liên tiếp, về dưới 1.700 điểm",
+          "link": "https://tuoitre.vn/vn-index-giam-3-phien-lien-tiep-ve-duoi-1700-diem-100261119154114635.htm",
+          "pubDate": "Thu, 19 Nov 26 16:20:00 +0700",
+          "sourceCount": 3,
+          "sources": [
+            "Thanh Niên Chứng khoán",
+            "Tuổi Trẻ Chứng khoán",
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "Góc nhìn 20/11: VN-Index có thể còn lùi về 1,660 điểm?",
+          "link": "http://vietstock.vn/2026/11/goc-nhin-2011-vn-index-co-the-con-lui-ve-1660-diem-145-1516309.htm",
+          "pubDate": "Fri, 20 Nov 2026 07:22:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Thị trường chứng khoán Việt Nam cần định vị thương hiệu để tạo khác biệt",
+          "link": "http://vietstock.vn/2026/11/thi-truong-chung-khoan-viet-nam-can-dinh-vi-thuong-hieu-de-tao-khac-biet-143-1516424.htm",
+          "pubDate": "Fri, 20 Nov 2026 11:10:52 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Cổ phiếu đáng chú ý ngày 20/11: ACB, FPT, TCB",
+          "link": "https://stockbiz.vn/tin-tuc/co-phieu-dang-chu-y-ngay-2011-acb-fpt-tcb/42854739",
+          "pubDate": "Fri, 20 Nov 2026 02:37:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Ba giám đốc cao cấp của PNJ đồng loạt từ nhiệm",
+          "link": "https://tuoitre.vn/ba-giam-doc-cao-cap-cua-pnj-dong-loat-tu-nhiem-100261119194939785.htm",
+          "pubDate": "Fri, 20 Nov 2026 03:13:28 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Tuổi Trẻ Chứng khoán",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "VN-Index thu hẹp đà giảm cuối phiên, nhóm năng lượng hút tiền",
+          "link": "https://stockbiz.vn/tin-tuc/vn-index-thu-hep-da-giam-cuoi-phien-nhom-nang-luong-hut-tien/42867944",
+          "pubDate": "Fri, 20 Nov 2026 08:55:00 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Tinned food and long-life milk boost retail sales after 'Be Ready' campaign launch",
+          "link": "https://www.bbc.co.uk/news/articles/ck053mzy2qqeo?at_medium=RSS&at_campaign=rss",
+          "pubDate": "Fri, 20 Nov 2026 08:49:33 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "BBC Business"
+          ]
+        },
+        {
+          "title": "Giá xăng giảm 5 kỳ liên tiếp, vé máy bay Tết vẫn tăng",
+          "link": "https://dantri.com.vn/kinh-doanh/gia-xang-giam-5-ky-lien-tiep-ve-may-bay-tet-van-tang-20261120153640524.htm",
+          "pubDate": "Fri, 20 Nov 2026 15:45:03 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "Dân Trí Kinh doanh"
+          ]
+        }
+      ],
+      "mentioned_tickers": [
+        {
+          "ticker": "ACB",
+          "count": 1
+        },
+        {
+          "ticker": "TCB",
+          "count": 1
+        },
+        {
+          "ticker": "PNJ",
+          "count": 1
+        }
+      ],
+      "title": "Báo cáo cuối phiên 20/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1688.79,
+            "change": -0.83,
+            "changePct": -0.05,
+            "tradingValue": 15932.99,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1786.84,
+            "change": -1.67,
+            "changePct": -0.09,
+            "tradingValue": 9719.99,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 234.59,
+            "change": -4.35,
+            "changePct": -1.82,
+            "tradingValue": 695.34,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 119.14,
+            "change": -1.22,
+            "changePct": -1.01,
+            "tradingValue": 369.62,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Dầu khí",
+            "avgChangePct": 1.41,
+            "up": 3,
+            "down": 0,
+            "total": 4,
+            "leader": {
+              "ticker": "PVD",
+              "changePct": 3.51
+            }
+          },
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": 0.85,
+            "up": 2,
+            "down": 1,
+            "total": 6,
+            "leader": {
+              "ticker": "VND",
+              "changePct": 3.89
+            }
+          },
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": -0.13,
+            "up": 1,
+            "down": 2,
+            "total": 3,
+            "leader": {
+              "ticker": "VNM",
+              "changePct": 0.59
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": -0.28,
+            "up": 0,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "IDC",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.44,
+            "up": 3,
+            "down": 5,
+            "total": 8,
+            "leader": {
+              "ticker": "TCB",
+              "changePct": 2.91
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -0.83,
+            "up": 1,
+            "down": 3,
+            "total": 6,
+            "leader": {
+              "ticker": "VIC",
+              "changePct": 0.79
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": -1.05,
+            "up": 0,
+            "down": 2,
+            "total": 3,
+            "leader": {
+              "ticker": "HPG",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -1.57,
+            "up": 0,
+            "down": 4,
+            "total": 4,
+            "leader": {
+              "ticker": "MWG",
+              "changePct": -0.55
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "VND",
+              "last": 14700,
+              "changePct": 3.89,
+              "volume": 1770160
+            },
+            {
+              "ticker": "PVD",
+              "last": 16200,
+              "changePct": 3.51,
+              "volume": 634020
+            },
+            {
+              "ticker": "TCB",
+              "last": 21200,
+              "changePct": 2.91,
+              "volume": 1320060
+            },
+            {
+              "ticker": "STB",
+              "last": 70800,
+              "changePct": 2.61,
+              "volume": 493010
+            },
+            {
+              "ticker": "SSI",
+              "last": 20000,
+              "changePct": 2.3,
+              "volume": 2574500
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "NVL",
+              "last": 9980,
+              "changePct": -3.11,
+              "volume": 2101490
+            },
+            {
+              "ticker": "DGW",
+              "last": 38950,
+              "changePct": -2.62,
+              "volume": 72620
+            },
+            {
+              "ticker": "MBB",
+              "last": 18250,
+              "changePct": -2.41,
+              "volume": 1338820
+            },
+            {
+              "ticker": "ACB",
+              "last": 19600,
+              "changePct": -2.24,
+              "volume": 997890
+            },
+            {
+              "ticker": "PNJ",
+              "last": 13500,
+              "changePct": -2.17,
+              "volume": 513210
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 12700,
+              "changePct": 0.0,
+              "volume": 2678030
+            },
+            {
+              "ticker": "SSI",
+              "last": 20000,
+              "changePct": 2.3,
+              "volume": 2574500
+            },
+            {
+              "ticker": "NVL",
+              "last": 9980,
+              "changePct": -3.11,
+              "volume": 2101490
+            },
+            {
+              "ticker": "VND",
+              "last": 14700,
+              "changePct": 3.89,
+              "volume": 1770160
+            },
+            {
+              "ticker": "VPB",
+              "last": 20500,
+              "changePct": -1.91,
+              "volume": 1727480
+            }
+          ]
+        },
+        "summary": "VN-Index giảm 0,83 điểm (-0,05%) phiên 20/11, đạt 1.688,79 điểm, giá trị giao dịch 15.932,99 tỷ đồng. Nhóm ngành mạnh nhất: Dầu khí (bình quân 1,41%, 3/4 mã tăng); yếu nhất: Bán lẻ (-1,57%). Tăng mạnh: VND (+3,89%), PVD (+3,51%), TCB (+2,91%). Giảm mạnh: NVL (-3,11%), DGW (-2,62%), MBB (-2,41%)."
+      },
+      "summary": "VN-Index giảm 0,83 điểm (-0,05%) phiên 20/11, đạt 1.688,79 điểm, giá trị giao dịch 15.932,99 tỷ đồng. Nhóm ngành mạnh nhất: Dầu khí (bình quân 1,41%, 3/4 mã tăng); yếu nhất: Bán lẻ (-1,57%). Tăng mạnh: VND (+3,89%), PVD (+3,51%), TCB (+2,91%). Giảm mạnh: NVL (-3,11%), DGW (-2,62%), MBB (-2,41%). Tin được nhiều nguồn đưa nhất: \"VN-Index giảm 3 phiên liên tiếp, về dưới 1.700 điểm\" (3 nguồn)."
+    },
+    {
+      "date": "2026-11-20",
       "session": "morning",
       "generated_at": "2026-11-20T08:30:35+07:00",
       "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
