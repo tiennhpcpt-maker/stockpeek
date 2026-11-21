@@ -2,6 +2,266 @@
   "items": [
     {
       "schema_version": 1,
+      "week_id": "2026-W47",
+      "partial": true,
+      "period": {
+        "from": "2026-11-16",
+        "to": "2026-11-20",
+        "label": "16-20/11/2026"
+      },
+      "generated_at": "2026-11-21T10:55:00+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức, không phải khuyến nghị đầu tư.",
+      "summary": {
+        "headline": "VN-Index tuần 16-20/11/2026 giảm 46,14 điểm (-2,66%) về 1.688,79 điểm sau 4 phiên giảm liên tiếp, đánh mất mốc 1.700; HNX-Index giảm 20,39 điểm (-8%) về 234,59.",
+        "vnindex_close": 1688.79,
+        "vnindex_week_pct": -2.66,
+        "vnindex_week_change": -46.14,
+        "prev_week_close": 1734.93,
+        "foreign_net_week_bn": {
+          "hose": null,
+          "all_markets": -8500
+        },
+        "support": "1.680 (đáy tháng 10), rồi 1.650-1.660 (đáy tháng 7)",
+        "resistance": "1.700"
+      },
+      "days": [],
+      "sector_flows": [
+        {
+          "sector": "Ngân hàng",
+          "status": "Tiêu cực (bị bán ròng mạnh)",
+          "signal": -1,
+          "tickers": [
+            "VCB",
+            "MBB",
+            "ACB",
+            "SHB",
+            "LPB",
+            "TCB"
+          ],
+          "evidence": "18/11: LPB -4,63%, SHB -3,24%, VCB -2,5%; khối ngoại bán ròng MBB ~88 tỷ, VCB ~76 tỷ, SHB ~63 tỷ, HDB ~41 tỷ, LPB ~38 tỷ; 20/11 VCB, MBB, VPB, BID lấy đi 3,56 điểm VN-Index (Thời báo Tài chính VN, Vietstock).",
+          "outlook": "Áp lực có thể còn nếu VN-Index thủng 1.680 (nhóm trụ ngân hàng gây áp lực lớn lên chỉ số); TCB là điểm sáng đơn lẻ."
+        },
+        {
+          "sector": "Công nghệ - Viễn thông",
+          "status": "Tiêu cực (bị rút tiền)",
+          "signal": -1,
+          "tickers": [
+            "FPT"
+          ],
+          "evidence": "FPT xuyên đáy hơn 3 năm (~47.050 đ sáng 18/11); khối ngoại bán ròng >1.000 tỷ tuần đến 17/11, ~226 tỷ phiên 18/11 (Doanh nhân Pháp luật, Thời báo Tài chính VN).",
+          "outlook": "Áp lực dòng vốn ngoại có thể còn tiếp diễn; CTCK vẫn giữ MUA nhưng giá chưa tạo đáy."
+        },
+        {
+          "sector": "Bất động sản",
+          "status": "Phân hóa",
+          "signal": 0,
+          "tickers": [
+            "VIC",
+            "TCH",
+            "KDH",
+            "VHM"
+          ],
+          "evidence": "VIC bị khối ngoại bán ròng ~186 tỷ phiên 18/11; VHM ~64 tỷ; KDH được mua ~42 tỷ (Doanh nhân Pháp luật, Người Quan Sát, FireAnt).",
+          "outlook": "Chỉ số phụ thuộc Vingroup; BĐS bị bán ròng phiên sáng 20/11 (-1,4%) nhưng hồi phục cuối phiên; dòng tiền chọn lọc."
+        },
+        {
+          "sector": "Chứng khoán",
+          "status": "Phân hóa - yếu",
+          "signal": 0,
+          "tickers": [
+            "VND",
+            "VIX",
+            "SHS"
+          ],
+          "evidence": "VND tăng mạnh phiên 20/11 giúp VN-Index hồi cuối phiên (Index.vn, Người Quan Sát); VIX bị ngoại bán 19/11; SHS bị ngoại bán HNX 17,9 tỷ 20/11; HNX-Index -8% tuần.",
+          "outlook": "Chưa xác nhận hút tiền trở lại; lực bắt đáy VND chỉ 1 phiên; nhóm chứng khoán -0,9% phiên sáng 20/11."
+        },
+        {
+          "sector": "Điện - Tiện ích",
+          "status": "Tích cực (hút tiền) đầu tuần",
+          "signal": 1,
+          "tickers": [
+            "POW",
+            "REE",
+            "HDG",
+            "NT2"
+          ],
+          "evidence": "POW +3,57%, REE +1,22%, HDG +0,61%, NT2 +0,43% phiên 16/11 (HDBS); khối ngoại mua ròng POW ~134 tỷ (18/11), ~150 tỷ (20/11).",
+          "outlook": "SSV nhận định khả năng các nhịp tăng điện/BĐS dân dụng kéo dài chưa cao; POW là mã được ngoại mua rõ nhất."
+        },
+        {
+          "sector": "Dầu khí - Năng lượng",
+          "status": "Phân hóa nhẹ",
+          "signal": 0,
+          "tickers": [
+            "BSR",
+            "PVS"
+          ],
+          "evidence": "BSR được ngoại mua ~21 tỷ 18/11; PVS bị ngoại bán HNX 13 tỷ 20/11; dữ liệu hạn chế (Người Quan Sát, Doanh nhân Pháp luật).",
+          "outlook": "Dầu khí +0,6% phiên sáng 20/11 ngược thị trường; chưa đủ dữ liệu xếp hạng đầy đủ."
+        },
+        {
+          "sector": "Khối ngoại toàn thị trường",
+          "status": "Tiêu cực (bán ròng mạnh 3 phiên liên tiếp)",
+          "signal": -1,
+          "tickers": [
+            "POW",
+            "TCH",
+            "MSN",
+            "KDH",
+            "FRT",
+            "BSR",
+            "FPT",
+            "VIC",
+            "MBB",
+            "VCB",
+            "ACB",
+            "SHB",
+            "VIX"
+          ],
+          "evidence": "Bán ròng ~1.152 tỷ (18/11, 3 sàn), ~995 tỷ (19/11, HOSE), ~843 tỷ (20/11, HOSE); tổng tuần ~8.500 tỷ theo Thương Trường - chưa đối chiếu được với từng phiên 16-17/11. Mua: POW, TCH, MSN, KDH, FRT, BSR; Bán: FPT, VIC, MBB, VCB, ACB, SHB, VIX.",
+          "outlook": "Nếu tiếp tục rút vốn, VN-Index có thể kiểm định 1.650-1.660; theo dõi dấu hiệu đảo chiều và tỷ giá/FED tháng 12."
+        }
+      ],
+      "watchlist": [
+        {
+          "ticker": "POW",
+          "sector": "Điện",
+          "signal": "MUA",
+          "reason": "Khối ngoại mua ròng mạnh nhất: ~134 tỷ phiên 18/11 và ~150 tỷ phiên 20/11 (dẫn đầu); +3,57% phiên 16/11, dẫn đầu nhóm điện (cùng REE, HDG, NT2). Tín hiệu dòng tiền ngoại, chưa phải khuyến nghị của CTCK trong tuần.",
+          "week_pct": null
+        },
+        {
+          "ticker": "TCB",
+          "sector": "Ngân hàng",
+          "signal": "THEO DÕI",
+          "reason": "Ngược dòng tăng mạnh phiên 20/11 (đóng góp +1,31 điểm, FireAnt); nằm trong 3 mã được CTCK khuyến nghị phiên 20/11 (TCB, ACB, FPT - theo tiêu đề bài Index.vn); nhóm ngân hàng chung bị bán ròng.",
+          "week_pct": null
+        },
+        {
+          "ticker": "ACB",
+          "sector": "Ngân hàng",
+          "signal": "THEO DÕI",
+          "reason": "Được CTCK khuyến nghị phiên 20/11 (theo tiêu đề) nhưng bị khối ngoại bán ròng (nằm trong top bán 19/11; cùng FPT bị bán >120 tỷ phiên sáng 20/11); tín hiệu trái chiều, cần xác nhận.",
+          "week_pct": null
+        },
+        {
+          "ticker": "FPT",
+          "sector": "Công nghệ",
+          "signal": "THEO DÕI",
+          "reason": "Xuyên đáy hơn 3 năm (~47.050 đ sáng 18/11); BSC, ACBS, SBBS giữ MUA, Mirae kỳ vọng LN tăng tốc Q4; VCI giữ MUA nhưng hạ 5% giá mục tiêu (82.100 -> 77.800 đ). Chưa tạo đáy: khối ngoại bán ròng >1.000 tỷ tuần đến 17/11, ~226 tỷ phiên 18/11.",
+          "week_pct": null
+        },
+        {
+          "ticker": "TCH",
+          "sector": "Bất động sản",
+          "signal": "THEO DÕI",
+          "reason": "Ngược dòng tăng mạnh phiên 20/11; nằm trong top khối ngoại mua ròng phiên 20/11 (sau POW); tín hiệu 1 phiên, cần xác nhận.",
+          "week_pct": null
+        },
+        {
+          "ticker": "VND",
+          "sector": "Chứng khoán",
+          "signal": "THEO DÕI",
+          "reason": "Ngược dòng tăng mạnh phiên 20/11 giúp VN-Index thoát hiểm cuối phiên; tín hiệu 1 phiên, nhóm chứng khoán chung còn bị bán.",
+          "week_pct": null
+        },
+        {
+          "ticker": "MSN",
+          "sector": "Tiêu dùng",
+          "signal": "THEO DÕI",
+          "reason": "Nằm trong top khối ngoại mua ròng phiên 20/11 (sau POW, TCH).",
+          "week_pct": null
+        },
+        {
+          "ticker": "KDH",
+          "sector": "Bất động sản",
+          "signal": "THEO DÕI",
+          "reason": "Khối ngoại mua ròng nhiều nhất phiên 18/11 (~42 tỷ); tín hiệu 1 phiên.",
+          "week_pct": null
+        },
+        {
+          "ticker": "FRT",
+          "sector": "Bán lẻ",
+          "signal": "THEO DÕI",
+          "reason": "Khối ngoại mua ròng ~22 tỷ phiên 18/11 (thứ 2 sau KDH); quy mô nhỏ, tín hiệu 1 phiên.",
+          "week_pct": null
+        },
+        {
+          "ticker": "MCH",
+          "sector": "Bán lẻ - Tiêu dùng",
+          "signal": "THEO DÕI",
+          "reason": "Cổ phiếu tăng tiêu biểu tuần (+6,88%), đang test đường Middle Bollinger; tín hiệu trái chiều: từng bị khối ngoại bán ròng kỷ lục tháng 10.",
+          "week_pct": null
+        },
+        {
+          "ticker": "VIC",
+          "sector": "Bất động sản",
+          "signal": "THEO DÕI",
+          "reason": "Kéo VN-Index +3,04 điểm phiên 20/11 nhưng bị khối ngoại bán ròng ~186 tỷ phiên 18/11; Mirae: nhịp tăng tuần 9-13/11 chủ yếu nhờ nhóm Vingroup. Chỉ số phụ thuộc nhóm vốn hóa lớn.",
+          "week_pct": null
+        },
+        {
+          "ticker": "VCB",
+          "sector": "Ngân hàng",
+          "signal": "RỦI RO",
+          "reason": "Giảm 2,5% phiên 18/11; ghì chỉ số -1,03 điểm phiên 20/11; bị khối ngoại bán ròng (76 tỷ phiên 18/11; nằm trong top bán cả tuần).",
+          "week_pct": null
+        },
+        {
+          "ticker": "MBB",
+          "sector": "Ngân hàng",
+          "signal": "RỦI RO",
+          "reason": "Bị khối ngoại bán ròng ~88 tỷ phiên 18/11 (nằm trong top bán cả tuần); ghì chỉ số -0,93 điểm phiên 20/11.",
+          "week_pct": null
+        },
+        {
+          "ticker": "SHB",
+          "sector": "Ngân hàng",
+          "signal": "RỦI RO",
+          "reason": "Giảm 3,24% phiên 18/11; khối ngoại bán ròng ~63 tỷ.",
+          "week_pct": null
+        },
+        {
+          "ticker": "LPB",
+          "sector": "Ngân hàng",
+          "signal": "RỦI RO",
+          "reason": "Giảm 4,63% phiên 18/11; khối ngoại bán ròng ~38 tỷ.",
+          "week_pct": null
+        },
+        {
+          "ticker": "HHP",
+          "sector": "Khác",
+          "signal": "RỦI RO",
+          "reason": "Giảm 22,34% tuần, chuỗi 12 phiên giảm liên tiếp (giảm sâu nhất tuần theo Vietstock); không xác định được nhóm ngành/nguyên nhân từ nguồn đọc.",
+          "week_pct": null
+        }
+      ],
+      "outlook": {
+        "risks": [
+          "FED có thể tăng lãi suất tháng 12 (DXY 103,1; lợi suất Mỹ 5,15%) gây áp lực tỷ giá/dòng vốn ngoại; khối ngoại bán ròng kéo dài (số liệu tuần ~8.500 tỷ từ Thương Trường chưa đối chiếu được với tổng các phiên 18-20/11 ~3.000 tỷ); mất 1.680 có thể về 1.650-1.660 (ACBS, BVSC, Kafi); thanh khoản thấp, độ rộng xấu; FPT chưa tạo đáy; HHP -22,34%/tuần (12 phiên giảm liên tiếp); phụ thuộc nhóm vốn hóa lớn (VIC +3,04 điểm phiên 20/11)."
+        ]
+      },
+      "data_quality": [
+        "Nhập lại từ file theo dõi trên Drive (BaoCao_ChungKhoan_TheoDoi), không có số liệu từng ngày; đã khôi phục dấu tiếng Việt, số liệu giữ nguyên văn nhật ký tuần. Khối ngoại tuần ~8.500 tỷ (Thương Trường) chưa đối chiếu được với tổng các phiên; thanh khoản phiên 20/11 HOSE 15.933 tỷ, thấp hơn ~7% so TB20."
+      ],
+      "sources": [
+        "Vietstock (qua Investing.com)",
+        "FireAnt",
+        "Thời báo Tài chính VN",
+        "Doanh nhân Pháp luật",
+        "Người Quan Sát",
+        "VnEconomy (qua Baomoi)",
+        "Tiền Phong",
+        "HDBS",
+        "Index.vn",
+        "CafeF",
+        "Thương Trường",
+        "TTTCTT"
+      ]
+    },
+    {
+      "schema_version": 1,
       "week_id": "2026-W46",
       "partial": true,
       "period": {
