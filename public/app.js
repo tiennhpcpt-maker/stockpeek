@@ -563,9 +563,16 @@ function renderMarketOverview(data, savedAt) {
       : !isTodayVN(a.date)
         ? `<div class="overview-stale">Chưa có bản tin hôm nay — đang hiện bản tin ngày ${fmtReportDate(a.date)}.</div>`
         : "";
-    const autoBlock = data.stale && data.auto
-      ? `<div class="overview-block"><div class="overview-block-title">Tóm tắt tự động mới nhất · ${escapeHtml(data.auto.title || "")}</div><div class="overview-summary">${escapeHtml(data.auto.summary || "")}</div></div>`
+    // Báo cáo tự động (server tạo đúng 8:30/16:00) mới hơn bản tin Claude (đăng từ máy cá nhân,
+    // hay trễ) thì hiện lên đầu, để tab Thị trường không đứng sau tab Báo cáo.
+    const autoNewer = !!(data.auto && data.auto.generated_at && a.generated_at
+      && new Date(data.auto.generated_at) > new Date(a.generated_at));
+    const autoBlock = data.auto && (data.stale || autoNewer)
+      ? `<div class="overview-block overview-latest"><div class="overview-block-title">🕒 Cập nhật mới nhất (tự động${data.auto.generated_at ? ", lúc " + escapeHtml(new Date(data.auto.generated_at).toLocaleString("vi-VN")) : ""}) · ${escapeHtml(data.auto.title || "")}</div><div class="overview-summary">${escapeHtml(data.auto.summary || "")}</div></div>`
       : "";
+    if (autoNewer && data.auto.generated_at) {
+      updatedEl.textContent = "Cập nhật lúc " + new Date(data.auto.generated_at).toLocaleString("vi-VN");
+    }
     box.innerHTML = `
       ${fallbackNotice(savedAt, data.dataSource)}
       ${stale}
