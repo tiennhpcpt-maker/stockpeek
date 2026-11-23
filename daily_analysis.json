@@ -2,6 +2,99 @@
   "items": [
     {
       "date": "2026-11-23",
+      "session": "afternoon",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán chiều (email)",
+      "generated_at": "2026-11-23T16:15:56+07:00",
+      "title": "Bản tin chiều 23/11: VN-Index hồi lên 1.697, chấm dứt chuỗi 4 phiên giảm nhờ VIC và VHM",
+      "summary": "VN-Index đóng cửa 1.697,14 điểm (+8,35; +0,49%), hồi hơn 24 điểm từ đáy khoảng 1.673 và chấm dứt chuỗi 4 phiên giảm. Độ rộng HOSE 164 tăng/136 giảm (sáng là 91/201), nhưng gần 95% mức tăng điểm đến từ VIC và VHM (+7,92/8,35 điểm, tính toán). Khối ngoại bán ròng 407,1 tỷ HOSE, phiên thứ 5 liên tiếp; thanh khoản thấp, GTGD HOSE 12.691 tỷ.",
+      "key_findings": [
+        "VN-Index 1.697,14 (+0,49%), hồi từ đáy khoảng 1.673; gần 95% mức tăng điểm đến từ VIC và VHM.",
+        "Khối ngoại bán ròng 407,1 tỷ HOSE (phiên thứ 5 liên tiếp) nhưng mua ròng mạnh POW +176,8 và GMD +61,4 tỷ; FPT đảo chiều mua ròng +23,8 tỷ sau 12 phiên bán.",
+        "GTGD HOSE 12.691 tỷ, giảm khoảng 20% so với 20/11; nguồn ghi thấp hơn 24% so với TB20.",
+        "3 mã nổi bật: FRT 4,0; MSN 3,5; VHM 3,0. HPG hạ còn 2,5 vì ngoại đảo sang bán ròng (dự bị HPG; theo dõi POW)."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên kế tiếp (25/11, nếu 24/11 nghỉ giao dịch)",
+          "items": [
+            "Cơ sở: mail chỉ nêu kịch bản Cơ sở, không có thêm chi tiết các kịch bản khác trong phần tóm tắt."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: HOSE -407,1 tỷ (phiên thứ 5 liên tiếp bán ròng); mua ròng POW +176,8, GMD +61,4, FPT +23,8 tỷ.",
+            "Tự doanh: chưa có số cả ngày.",
+            "Trong nước: hấp thụ lượng ngoại bán.",
+            "Thỏa thuận: chưa có số cả ngày."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Bất động sản",
+          "view": "VIC và VHM đóng góp gần 95% mức tăng điểm của VN-Index phiên 23/11 (+7,92 và +8,35 điểm, tính toán), giúp chỉ số hồi và chấm dứt chuỗi 4 phiên giảm; VHM nằm trong 3 mã nổi bật với 3,0 điểm."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG bị hạ còn 2,5 điểm (dự bị) trong bản chiều 23/11 vì khối ngoại đảo sang bán ròng."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "FRT dẫn đầu danh sách mã nổi bật với 4,0 điểm trong bản tin chiều 23/11."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN giữ 3,5 điểm trong danh sách mã nổi bật của bản tin chiều 23/11."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "FRT",
+          "note": "4,0 điểm (đầu tư 0,5; kết quả kinh doanh 2,0; định giá 1,5)."
+        },
+        {
+          "ticker": "MSN",
+          "note": "3,5 điểm (đầu tư 0,5; kết quả kinh doanh 2,0; định giá 1,0)."
+        },
+        {
+          "ticker": "VHM",
+          "note": "3,0 điểm; cùng VIC đóng góp gần 95% mức tăng điểm của VN-Index phiên 23/11."
+        },
+        {
+          "ticker": "HPG",
+          "note": "Hạ còn 2,5 điểm (dự bị) vì khối ngoại đảo sang bán ròng."
+        },
+        {
+          "ticker": "POW",
+          "note": "Khối ngoại mua ròng mạnh +176,8 tỷ; đưa vào danh sách theo dõi."
+        },
+        {
+          "ticker": "GMD",
+          "note": "Khối ngoại mua ròng +61,4 tỷ phiên 23/11."
+        },
+        {
+          "ticker": "FPT",
+          "note": "Khối ngoại đảo chiều mua ròng +23,8 tỷ sau 12 phiên bán."
+        }
+      ],
+      "action_items": [
+        "Theo dõi POW trong danh sách quan sát; HPG chuyển sang dự bị do ngoại bán ròng.",
+        "Lưu ý thanh khoản thấp và khối ngoại bán ròng 5 phiên liên tiếp khi giải ngân."
+      ],
+      "sources": [
+        "index.vn",
+        "Dân trí",
+        "Tuổi Trẻ",
+        "CafeF",
+        "ĐTCK",
+        "TCBS Cơ hội đầu tư"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-23",
       "session": "midday",
       "kind": "bulletin",
       "origin": "Bản tin chứng khoán trưa (email)",
