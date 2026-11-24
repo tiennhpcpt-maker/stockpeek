@@ -1,6 +1,328 @@
 {
   "items": [
     {
+      "date": "2026-11-24",
+      "session": "morning",
+      "generated_at": "2026-11-24T08:30:41+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "Doanh nghiệp bất động sản “gánh” 3.300 tỷ đồng trái phiếu bị phạt vì chậm công bố thông tin",
+          "link": "https://markettimes.vn/doanh-nghiep-bat-dong-san-ganh-3-300-ty-dong-trai-phieu-bi-phat-vi-cham-cong-bo-thong-tin-134766.html",
+          "pubDate": "Tue, 24 Nov 2026 07:02:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Xóa nợ lệ phí môn bài: Người nộp thuế không phải làm hồ sơ",
+          "link": "https://dantri.com.vn/kinh-doanh/xoa-no-le-phi-mon-bai-nguoi-nop-thue-khong-phai-lam-ho-so-20261123232723902.htm",
+          "pubDate": "Tue, 24 Nov 2026 05:50:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Ngân hàng SCB có chủ tịch mới",
+          "link": "https://vnexpress.net/ngan-hang-scb-co-chu-tich-moi-5148245.html",
+          "pubDate": "Tue, 24 Nov 2026 00:21:11 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Cổ phiếu Nvidia tăng vọt 30% khi tỷ phú Jensen Huang trở lại vị trí CEO",
+          "link": "https://dantri.com.vn/kinh-doanh/co-phieu-nvidia-tang-vot-30-khi-ty-phu-jensen-huang-tro-lai-vi-tri-ceo-20261123220947406.htm",
+          "pubDate": "Mon, 23 Nov 2026 23:18:04 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Thêm 4 nhân sự cấp cao PNJ cùng từ nhiệm chỉ trong một ngày",
+          "link": "https://dantri.com.vn/kinh-doanh/them-4-nhan-su-cap-cao-pnj-cung-tu-nhiem-chi-trong-mot-ngay-20261123222742274.htm",
+          "pubDate": "Mon, 23 Nov 2026 22:49:31 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Quỹ ngoại quy mô 23.000 tỷ chỉ ra yếu tố then chốt còn thiếu đối với chứng khoán Việt Nam",
+          "link": "https://stockbiz.vn/tin-tuc/quy-ngoai-quy-mo-23000-ty-chi-ra-yeu-to-then-chot-con-thieu-doi-voi-chung-khoan-viet-nam/42893642",
+          "pubDate": "Mon, 23 Nov 2026 15:21:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Chứng khoán Việt Nam sau 3 thập kỷ: Kênh dẫn vốn hàng triệu tỷ đồng cho nền kinh tế",
+          "link": "https://stockbiz.vn/tin-tuc/chung-khoan-viet-nam-sau-3-thap-ky-kenh-dan-von-hang-trieu-ty-dong-cho-nen-kinh-te/42893570",
+          "pubDate": "Mon, 23 Nov 2026 15:04:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Hàng nhập khẩu mua online không quá 1 triệu đồng được miễn thuế nhập khẩu từ tháng 3/2027",
+          "link": "https://dantri.com.vn/kinh-doanh/hang-nhap-khau-mua-online-khong-qua-1-trieu-dong-duoc-mien-thue-nhap-khau-tu-thang-32027-20261123203040284.htm",
+          "pubDate": "Mon, 23 Nov 2026 20:39:29 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        }
+      ],
+      "mentioned_tickers": [
+        {
+          "ticker": "PNJ",
+          "count": 1
+        }
+      ],
+      "title": "Bản tin sáng 24/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1697.14,
+            "change": 8.35,
+            "changePct": 0.49,
+            "tradingValue": 12690.88,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1791.12,
+            "change": 4.28,
+            "changePct": 0.24,
+            "tradingValue": 7060.41,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 232.23,
+            "change": -2.36,
+            "changePct": -1.01,
+            "tradingValue": 471.46,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 119.17,
+            "change": 0.03,
+            "changePct": 0.03,
+            "tradingValue": 251.92,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": 0.64,
+            "up": 2,
+            "down": 1,
+            "total": 3,
+            "leader": {
+              "ticker": "VNM",
+              "changePct": 1.75
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": 0.57,
+            "up": 3,
+            "down": 1,
+            "total": 4,
+            "leader": {
+              "ticker": "IDC",
+              "changePct": 1.75
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": 0.3,
+            "up": 3,
+            "down": 3,
+            "total": 6,
+            "leader": {
+              "ticker": "VHM",
+              "changePct": 1.82
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": -0.08,
+            "up": 0,
+            "down": 1,
+            "total": 3,
+            "leader": {
+              "ticker": "HSG",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": -0.29,
+            "up": 2,
+            "down": 2,
+            "total": 4,
+            "leader": {
+              "ticker": "PVS",
+              "changePct": 0.75
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.35,
+            "up": 4,
+            "down": 4,
+            "total": 8,
+            "leader": {
+              "ticker": "CTG",
+              "changePct": 0.83
+            }
+          },
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": -0.47,
+            "up": 1,
+            "down": 3,
+            "total": 6,
+            "leader": {
+              "ticker": "VCI",
+              "changePct": 0.53
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -2.08,
+            "up": 0,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "FRT",
+              "changePct": 0.0
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "VHM",
+              "last": 61500,
+              "changePct": 1.82,
+              "volume": 402600
+            },
+            {
+              "ticker": "IDC",
+              "last": 34800,
+              "changePct": 1.75,
+              "volume": 77030
+            },
+            {
+              "ticker": "VNM",
+              "last": 52300,
+              "changePct": 1.75,
+              "volume": 212600
+            },
+            {
+              "ticker": "VIC",
+              "last": 245700,
+              "changePct": 1.57,
+              "volume": 133370
+            },
+            {
+              "ticker": "SAB",
+              "last": 43000,
+              "changePct": 1.3,
+              "volume": 43680
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "PNJ",
+              "last": 12600,
+              "changePct": -6.67,
+              "volume": 1616280
+            },
+            {
+              "ticker": "TCB",
+              "last": 20750,
+              "changePct": -2.12,
+              "volume": 1086000
+            },
+            {
+              "ticker": "GAS",
+              "last": 69300,
+              "changePct": -1.7,
+              "volume": 37990
+            },
+            {
+              "ticker": "VND",
+              "last": 14450,
+              "changePct": -1.7,
+              "volume": 882910
+            },
+            {
+              "ticker": "STB",
+              "last": 69700,
+              "changePct": -1.55,
+              "volume": 105670
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 12650,
+              "changePct": -0.39,
+              "volume": 2480010
+            },
+            {
+              "ticker": "PNJ",
+              "last": 12600,
+              "changePct": -6.67,
+              "volume": 1616280
+            },
+            {
+              "ticker": "SSI",
+              "last": 19750,
+              "changePct": -1.25,
+              "volume": 1526270
+            },
+            {
+              "ticker": "MBB",
+              "last": 18100,
+              "changePct": -0.82,
+              "volume": 1229480
+            },
+            {
+              "ticker": "HPG",
+              "last": 20400,
+              "changePct": -0.24,
+              "volume": 1201360
+            }
+          ]
+        },
+        "summary": "VN-Index tăng 8,35 điểm (0,49%) phiên 23/11, đạt 1.697,14 điểm, giá trị giao dịch 12.690,88 tỷ đồng. Nhóm ngành mạnh nhất: Thực phẩm - Đồ uống (bình quân 0,64%, 2/3 mã tăng); yếu nhất: Bán lẻ (-2,08%). Tăng mạnh: VHM (+1,82%), IDC (+1,75%), VNM (+1,75%). Giảm mạnh: PNJ (-6,67%), TCB (-2,12%), GAS (-1,70%)."
+      },
+      "market_from": "2026-11-23",
+      "summary": "Phiên trước: VN-Index tăng 8,35 điểm (0,49%) phiên 23/11, đạt 1.697,14 điểm, giá trị giao dịch 12.690,88 tỷ đồng. Nhóm ngành mạnh nhất: Thực phẩm - Đồ uống (bình quân 0,64%, 2/3 mã tăng); yếu nhất: Bán lẻ (-2,08%). Tăng mạnh: VHM (+1,82%), IDC (+1,75%), VNM (+1,75%). Giảm mạnh: PNJ (-6,67%), TCB (-2,12%), GAS (-1,70%). Tin được nhiều nguồn đưa nhất: \"Doanh nghiệp bất động sản “gánh” 3.300 tỷ đồng trái phiếu bị phạt vì chậm công bố thông tin\" (2 nguồn)."
+    },
+    {
       "date": "2026-11-23",
       "session": "afternoon",
       "generated_at": "2026-11-23T16:00:53+07:00",
