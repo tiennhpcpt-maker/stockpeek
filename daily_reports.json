@@ -2,6 +2,316 @@
   "items": [
     {
       "date": "2026-11-24",
+      "session": "afternoon",
+      "generated_at": "2026-11-24T16:00:27+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "Giá vàng tăng mạnh sau tin ông Jensen Huang trở lại ghế CEO Nvidia",
+          "link": "https://dantri.com.vn/kinh-doanh/gia-vang-tang-manh-sau-tin-ong-jensen-huang-tro-lai-ghe-ceo-nvidia-20261124064131658.htm",
+          "pubDate": "Tue, 24 Nov 2026 11:49:27 +0700",
+          "sourceCount": 3,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "VN-Index hồi phục kỹ thuật, khuyến nghị thận trọng, chưa mua vội",
+          "link": "https://stockbiz.vn/tin-tuc/vn-index-hoi-phuc-ky-thuat-khuyen-nghi-than-trong-chua-mua-voi/42894150",
+          "pubDate": "Tue, 24 Nov 2026 00:37:01 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "Khai mở thị trường tỷ USD công nghiệp văn hóa, tạo động lực kinh tế mới",
+          "link": "https://dantri.com.vn/kinh-doanh/khai-mo-thi-truong-ty-usd-cong-nghiep-van-hoa-tao-dong-luc-kinh-te-moi-20261124124544002.htm",
+          "pubDate": "Tue, 24 Nov 2026 15:31:00 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "Dân Trí Kinh doanh"
+          ]
+        },
+        {
+          "title": "Việt Nam cần gần 1.000 tỷ USD phát triển ngành điện đến năm 2050",
+          "link": "https://dantri.com.vn/kinh-doanh/viet-nam-can-gan-1000-ty-usd-phat-trien-nganh-dien-den-nam-2050-20261124143505254.htm",
+          "pubDate": "Tue, 24 Nov 2026 14:47:00 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "Dân Trí Kinh doanh"
+          ]
+        },
+        {
+          "title": "Sabeco, Sữa Quốc Tế Lof chi cổ tức với hàng trăm đến hàng ngàn tỉ đồng",
+          "link": "https://thanhnien.vn/sabeco-sua-quoc-te-lof-chi-co-tuc-voi-hang-tram-den-hang-ngan-ti-dong-185261124114626777.htm",
+          "pubDate": "Tue, 24 Nov 26 14:45:00 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "Thanh Niên Chứng khoán"
+          ]
+        },
+        {
+          "title": "Vietnam Airlines nhận giải nhất về bình đẳng giới tại nơi làm việc",
+          "link": "https://vnexpress.net/vietnam-airlines-nhan-giai-nhat-ve-binh-dang-gioi-tai-noi-lam-viec-5148400.html",
+          "pubDate": "Tue, 24 Nov 2026 14:30:00 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Jensen Huang tái xuất cho thấy tầm ảnh hưởng khó thay thế",
+          "link": "https://vnexpress.net/jensen-huang-tai-xuat-cho-thay-tam-anh-huong-kho-thay-the-5148332.html",
+          "pubDate": "Tue, 24 Nov 2026 14:00:00 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Thanh tra Chính phủ chỉ rõ loạt bất cập trong quản lý nhà, đất tại Tập đoàn Than - Khoáng sản",
+          "link": "https://markettimes.vn/thanh-tra-chinh-phu-chi-ro-loat-bat-cap-trong-quan-ly-nha-dat-tai-tap-doan-than-khoang-san-134780.html",
+          "pubDate": "Tue, 24 Nov 2026 13:46:01 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "MarketTimes Chứng khoán"
+          ]
+        }
+      ],
+      "mentioned_tickers": [],
+      "title": "Báo cáo cuối phiên 24/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1697.14,
+            "change": 8.35,
+            "changePct": 0.49,
+            "tradingValue": 12690.88,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1791.12,
+            "change": 4.28,
+            "changePct": 0.24,
+            "tradingValue": 7060.41,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 232.23,
+            "change": -2.36,
+            "changePct": -1.01,
+            "tradingValue": 471.46,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 119.17,
+            "change": 0.03,
+            "changePct": 0.03,
+            "tradingValue": 251.92,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": 0.64,
+            "up": 2,
+            "down": 1,
+            "total": 3,
+            "leader": {
+              "ticker": "VNM",
+              "changePct": 1.75
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": 0.57,
+            "up": 3,
+            "down": 1,
+            "total": 4,
+            "leader": {
+              "ticker": "IDC",
+              "changePct": 1.75
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": 0.3,
+            "up": 3,
+            "down": 3,
+            "total": 6,
+            "leader": {
+              "ticker": "VHM",
+              "changePct": 1.82
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": -0.08,
+            "up": 0,
+            "down": 1,
+            "total": 3,
+            "leader": {
+              "ticker": "HSG",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": -0.29,
+            "up": 2,
+            "down": 2,
+            "total": 4,
+            "leader": {
+              "ticker": "PVS",
+              "changePct": 0.75
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.35,
+            "up": 4,
+            "down": 4,
+            "total": 8,
+            "leader": {
+              "ticker": "CTG",
+              "changePct": 0.83
+            }
+          },
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": -0.47,
+            "up": 1,
+            "down": 3,
+            "total": 6,
+            "leader": {
+              "ticker": "VCI",
+              "changePct": 0.53
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -2.08,
+            "up": 0,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "FRT",
+              "changePct": 0.0
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "VHM",
+              "last": 61500,
+              "changePct": 1.82,
+              "volume": 402600
+            },
+            {
+              "ticker": "IDC",
+              "last": 34800,
+              "changePct": 1.75,
+              "volume": 77030
+            },
+            {
+              "ticker": "VNM",
+              "last": 52300,
+              "changePct": 1.75,
+              "volume": 212600
+            },
+            {
+              "ticker": "VIC",
+              "last": 245700,
+              "changePct": 1.57,
+              "volume": 133370
+            },
+            {
+              "ticker": "SAB",
+              "last": 43000,
+              "changePct": 1.3,
+              "volume": 43680
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "PNJ",
+              "last": 12600,
+              "changePct": -6.67,
+              "volume": 1616280
+            },
+            {
+              "ticker": "TCB",
+              "last": 20750,
+              "changePct": -2.12,
+              "volume": 1086000
+            },
+            {
+              "ticker": "GAS",
+              "last": 69300,
+              "changePct": -1.7,
+              "volume": 37990
+            },
+            {
+              "ticker": "VND",
+              "last": 14450,
+              "changePct": -1.7,
+              "volume": 882910
+            },
+            {
+              "ticker": "STB",
+              "last": 69700,
+              "changePct": -1.55,
+              "volume": 105670
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 12650,
+              "changePct": -0.39,
+              "volume": 2480010
+            },
+            {
+              "ticker": "PNJ",
+              "last": 12600,
+              "changePct": -6.67,
+              "volume": 1616280
+            },
+            {
+              "ticker": "SSI",
+              "last": 19750,
+              "changePct": -1.25,
+              "volume": 1526270
+            },
+            {
+              "ticker": "MBB",
+              "last": 18100,
+              "changePct": -0.82,
+              "volume": 1229480
+            },
+            {
+              "ticker": "HPG",
+              "last": 20400,
+              "changePct": -0.24,
+              "volume": 1201360
+            }
+          ]
+        },
+        "summary": "VN-Index tăng 8,35 điểm (0,49%) phiên 24/11, đạt 1.697,14 điểm, giá trị giao dịch 12.690,88 tỷ đồng. Nhóm ngành mạnh nhất: Thực phẩm - Đồ uống (bình quân 0,64%, 2/3 mã tăng); yếu nhất: Bán lẻ (-2,08%). Tăng mạnh: VHM (+1,82%), IDC (+1,75%), VNM (+1,75%). Giảm mạnh: PNJ (-6,67%), TCB (-2,12%), GAS (-1,70%)."
+      },
+      "summary": "VN-Index tăng 8,35 điểm (0,49%) phiên 24/11, đạt 1.697,14 điểm, giá trị giao dịch 12.690,88 tỷ đồng. Nhóm ngành mạnh nhất: Thực phẩm - Đồ uống (bình quân 0,64%, 2/3 mã tăng); yếu nhất: Bán lẻ (-2,08%). Tăng mạnh: VHM (+1,82%), IDC (+1,75%), VNM (+1,75%). Giảm mạnh: PNJ (-6,67%), TCB (-2,12%), GAS (-1,70%). Tin được nhiều nguồn đưa nhất: \"Giá vàng tăng mạnh sau tin ông Jensen Huang trở lại ghế CEO Nvidia\" (3 nguồn)."
+    },
+    {
+      "date": "2026-11-24",
       "session": "morning",
       "generated_at": "2026-11-24T08:30:41+07:00",
       "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
