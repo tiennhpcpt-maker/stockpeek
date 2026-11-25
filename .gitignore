@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .DS_Store
 sources.json
+
+# Đồ thị tri thức graphify (tạo cục bộ)
+graphify-out/
