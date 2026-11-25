@@ -982,7 +982,17 @@ def get_live_sectors():
         reports = _load_report_list(DAILY_REPORTS_PATH)
         prev = (next((r for r in reports if r.get("session") == "afternoon" and (r.get("market") or {}).get("sectors")), None)
                 or next((r for r in reports if (r.get("market") or {}).get("sectors")), None))
-        if prev:
+        today = now_vn.strftime("%Y-%m-%d")
+        last_good_today = (_live_sectors_last_good.get("sectors")
+                           and _live_sectors_last_good.get("generated_at", "")[:10] == today)
+        if last_good_today:
+            # Trong ngày đã có kết quả trực tiếp (VPS chập chờn / thiếu giá giữa phiên):
+            # số liệu vài phút trước sát hơn báo cáo cuối phiên hôm trước.
+            result["live"] = False
+            result["asOf"] = today
+            result["lastLiveAt"] = _live_sectors_last_good["generated_at"]
+            result["sectors"] = _live_sectors_last_good["sectors"]
+        elif prev:
             result["live"] = False
             result["asOf"] = prev.get("market_from") or prev["date"]
             result["sectors"] = prev["market"]["sectors"]
@@ -1007,6 +1017,7 @@ def get_live_sectors():
                 "title": analysis.get("title"),
                 "items": analysis.get("sectors") or [],
                 "tickerNotes": notes,
+                "stale": is_stale_analysis(analysis),
             }
     result["dataSource"] = _data_source(DAILY_REPORTS_PATH, DAILY_ANALYSIS_PATH)
     if result.get("live"):

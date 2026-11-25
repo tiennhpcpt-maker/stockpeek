@@ -624,18 +624,27 @@ function renderSectorAnalysis(data, savedAt) {
   const grid = document.getElementById("sectorGrid");
   document.getElementById("sectorDisclaimer").textContent = data.disclaimer || "";
   const when = data.generated_at ? new Date(data.generated_at).toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" }) : "";
+  const lastLive = data.lastLiveAt
+    ? new Date(data.lastLiveAt).toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" })
+    : "";
   document.getElementById("sectorUpdated").textContent = data.live
     ? `${data.statusLabel || ""} · cập nhật ${when}`
-    : `${data.statusLabel || ""} · số liệu phiên ${fmtReportDate(data.asOf)}`;
+    : lastLive
+      ? `${data.statusLabel || ""} · giá lúc ${lastLive}`
+      : `${data.statusLabel || ""} · số liệu phiên ${fmtReportDate(data.asOf)}`;
   let notice = fallbackNotice(savedAt, data.dataSource);
   if (!savedAt && data.legacy) {
     notice += `<div class="overview-stale">⚠️ Chưa lấy được giá — đang hiện bảng ngành dự phòng ngày ${fmtReportDate(data.asOf)}.</div>`;
+  }
+  if (!savedAt && lastLive) {
+    notice += `<div class="overview-stale">⚠️ Tạm chưa lấy được giá mới — đang hiện bảng ngành tính lúc ${lastLive} hôm nay.</div>`;
   }
 
   const views = data.views || {};
   const notes = views.tickerNotes || {};
   const viewByName = new Map((views.items || []).map((v) => [v.name, v.view]));
-  const noteSource = views.date ? `Bản tin ${fmtReportDate(views.date)}` : "Bản tin";
+  // Bản tin quá MARKET_VIEW_MAX_AGE_DAYS ngày (server gắn views.stale) → ghi rõ là bản tin cũ.
+  const noteSource = (views.date ? `Bản tin ${fmtReportDate(views.date)}` : "Bản tin") + (views.stale ? " — bản tin cũ, chỉ tham khảo" : "");
 
   const sectors = data.sectors || [];
   if (!sectors.length) {

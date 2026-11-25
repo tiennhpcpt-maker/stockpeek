@@ -82,7 +82,7 @@ Nguyên tắc: các tab Thị trường, Ngành, Báo cáo **không bao giờ đ
 |---|---|---|
 | Server `_load_report_list` (chỉ đọc) | GitHub API lỗi / 404 / rỗng | bản đọc được gần nhất trong RAM → file `daily_*.json` đi kèm bản deploy. Ghi (`update_github_file`, `force=True`) KHÔNG bao giờ dùng dự phòng. API trả `dataSource` = github/memory/bundled |
 | Server `get_market_view` | bản tin cũ hơn `MARKET_VIEW_MAX_AGE_DAYS` | vẫn trả bản tin + `stale: true`, web kèm tóm tắt tự động mới nhất |
-| Server `get_live_sectors` | chưa có giá khớp / VPS lỗi | báo cáo cuối phiên → báo cáo bất kỳ có số liệu ngành → kết quả trực tiếp gần nhất trong RAM → `sector_analysis.json` cũ (`legacy: true`) |
+| Server `get_live_sectors` | chưa có giá khớp / VPS lỗi | kết quả trực tiếp trong RAM nếu tính trong hôm nay (`lastLiveAt`) → báo cáo cuối phiên → báo cáo bất kỳ có số liệu ngành → kết quả trực tiếp gần nhất trong RAM → `sector_analysis.json` cũ (`legacy: true`). Nhận định ngành của bản tin kèm `views.stale` (quá `MARKET_VIEW_MAX_AGE_DAYS`), web ghi "bản tin cũ" |
 | Server `get_quotes` | VPS lỗi | trả giá cũ trong cache dù quá `QUOTES_STALE_TTL` |
 | Trình duyệt `fetchWithFallback` | không gọi được server / API lỗi | bản tải thành công gần nhất trong localStorage (`stockpeek.cache.*`) |
 
