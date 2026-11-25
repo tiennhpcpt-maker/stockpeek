@@ -1094,7 +1094,90 @@ def get_live_sectors():
 DAILY_REPORTS_PATH = "daily_reports.json"
 DAILY_ANALYSIS_PATH = "daily_analysis.json"
 DAILY_REPORTS_KEEP = 60          # số bản báo cáo tự động lưu lại
-DAILY_ANALYSIS_KEEP = 60
+DAILY_ANALYSIS_KEEP = 150  # khớp KEEP trong scripts/add_daily_analysis.py
+
+# ===================== Nhận bài phân tích trực tiếp từ routine cloud =====================
+# Routine "Digest chứng khoán trưa và chiều" (Claude cloud) viết bản tin xong thì POST
+# thẳng bài lên /api/ingest/analysis — không còn phải qua Gmail → máy Mac → git push
+# (máy ngủ/mất mạng là bài trễ). Xác thực bằng mã bí mật INGEST_TOKEN (env Render,
+# KHÔNG bao giờ đưa vào repo). Kiểm tra dữ liệu giống scripts/add_daily_analysis.py.
+INGEST_TOKEN = os.environ.get("INGEST_TOKEN", "")
+ANALYSIS_SECTOR_NAMES = [name for name, _ in SECTOR_TICKERS]
+_ANALYSIS_LIST_KEYS = ("key_findings", "action_items", "sources", "sectors", "tickers", "sections")
+_ANALYSIS_ALLOWED_KEYS = {
+    "date", "session", "kind", "origin", "generated_at", "title", "summary", "disclaimer",
+} | set(_ANALYSIS_LIST_KEYS)
+# Web để công khai: chặn các dấu hiệu nội dung riêng tư lọt vào (xem SKILL.md tác vụ Mac).
+_ANALYSIS_FORBIDDEN = ("[DATA]", "[PICKS]", "[STREAK]", "drive.google.com", "docs.google.com",
+                       "mail.google.com", "số tài khoản", "sao kê")
+ANALYSIS_DISCLAIMER = (
+    "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, "
+    "không phải khuyến nghị đầu tư."
+)
+
+
+def validate_analysis_entry(entry):
+    """Trả về bản đã làm sạch của 1 bài phân tích, sai thì raise ValueError(lý do)."""
+    if not isinstance(entry, dict):
+        raise ValueError("Bài phải là 1 object JSON")
+    unknown = set(entry) - _ANALYSIS_ALLOWED_KEYS
+    if unknown:
+        raise ValueError(f"Trường không hỗ trợ: {', '.join(sorted(unknown))}")
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(entry.get("date", ""))):
+        raise ValueError("Thiếu hoặc sai 'date' (YYYY-MM-DD)")
+    if entry.get("session") not in (None, "morning", "midday", "afternoon"):
+        raise ValueError("'session' chỉ nhận morning, midday hoặc afternoon")
+    if entry.get("kind") not in (None, "bulletin", "weekly", "monthly", "company"):
+        raise ValueError("'kind' chỉ nhận bulletin, weekly, monthly hoặc company")
+    for key in ("title", "summary"):
+        if not isinstance(entry.get(key), str) or not entry[key].strip():
+            raise ValueError(f"Thiếu '{key}'")
+    for key in _ANALYSIS_LIST_KEYS:
+        if key in entry and not isinstance(entry[key], list):
+            raise ValueError(f"'{key}' phải là danh sách")
+    for sec in entry.get("sections", []):
+        if not isinstance(sec, dict) or not isinstance(sec.get("items", []), list):
+            raise ValueError("'sections' phải là danh sách {title, items[]}")
+    for sec in entry.get("sectors", []):
+        if not isinstance(sec, dict) or not str(sec.get("view", "")).strip():
+            raise ValueError("'sectors' phải là danh sách {name, view} và view không rỗng")
+        if sec.get("name") not in ANALYSIS_SECTOR_NAMES:
+            raise ValueError(f"Tên ngành không hợp lệ: {sec.get('name')!r}. Chỉ dùng: {', '.join(ANALYSIS_SECTOR_NAMES)}")
+    for t in entry.get("tickers", []):
+        if not isinstance(t, dict) or not re.fullmatch(r"[A-Z0-9]{2,10}", str(t.get("ticker", ""))):
+            raise ValueError("'tickers' phải là danh sách {ticker, note} với mã chữ hoa")
+    text = json.dumps(entry, ensure_ascii=False)
+    lowered = text.lower()
+    for bad in _ANALYSIS_FORBIDDEN:
+        if bad.lower() in lowered:
+            raise ValueError(f"Bài có nội dung không được đăng công khai: {bad!r}")
+    if len(text) > 40_000:
+        raise ValueError("Bài quá dài (tối đa ~40 KB)")
+    clean = dict(entry)
+    clean.setdefault("generated_at", datetime.now(VN_TZ).strftime("%Y-%m-%dT%H:%M:%S+07:00"))
+    clean.setdefault("disclaimer", ANALYSIS_DISCLAIMER)
+    return clean
+
+
+def add_analysis_entry(entry):
+    """Ghi 1 bài đã kiểm tra vào daily_analysis.json qua GitHub (thay bài trùng date+session+kind)."""
+    key = (entry["date"], entry.get("session"), entry.get("kind"))
+    result = {}
+
+    def mutate(data):
+        items = [a for a in _items_of(data)
+                 if (a.get("date"), a.get("session"), a.get("kind")) != key]
+        result["replaced"] = len(_items_of(data)) - len(items)
+        items.append(entry)
+        items.sort(key=lambda a: a.get("generated_at", ""), reverse=True)
+        items = items[:DAILY_ANALYSIS_KEEP]
+        result["total"] = len(items)
+        return {"items": items}
+
+    label = f"{entry['date']} ({entry.get('kind') or ''} {entry.get('session') or ''})".replace("  ", " ")
+    update_github_file(DAILY_ANALYSIS_PATH, {"items": []}, mutate, f"Bản tin từ routine cloud {label}")
+    _report_last_good.pop(DAILY_ANALYSIS_PATH, None)
+    return result
 # Báo cáo tuần (đã tổng hợp sẵn, đẩy bằng git như daily_analysis.json) — server chỉ đọc.
 WEEKLY_REPORTS_PATH = "weekly_reports.json"
 WEEKLY_REPORTS_API_LIMIT = 26
@@ -1918,6 +2001,43 @@ class Handler(BaseHTTPRequestHandler):
                     self._send_json({"ok": False, "error": f"Chỉ cho phép tối đa {MAX_SOURCES} nguồn"}, 400)
                 else:
                     self._send_json({"ok": False, "error": str(e)}, 400)
+            except Exception as e:
+                self._send_json({"ok": False, "error": str(e)}, 502)
+            return
+
+        if parsed.path == "/api/ingest/analysis":
+            # Xem chú thích ở INGEST_TOKEN. Sai mã quá nhiều lần thì chặn theo IP.
+            if not INGEST_TOKEN:
+                self._send_json({"ok": False, "error": "Server chưa cấu hình INGEST_TOKEN"}, 503)
+                return
+            auth = self.headers.get("Authorization") or ""
+            given = auth[7:].strip() if auth.startswith("Bearer ") else ""
+            if not given or not hmac.compare_digest(given.encode(), INGEST_TOKEN.encode()):
+                if not _check_rate_limit("ingest", self._client_ip(), 20, 3600):
+                    self._send_json({"ok": False, "error": "Sai mã quá nhiều lần"}, 429)
+                    return
+                self._send_json({"ok": False, "error": "Sai hoặc thiếu mã xác thực"}, 401)
+                return
+            try:
+                body = self._read_json_body()
+            except Exception:
+                self._send_json({"ok": False, "error": "Dữ liệu gửi lên không hợp lệ"}, 400)
+                return
+            dry_run = bool(body.pop("dry_run", False)) if isinstance(body, dict) else False
+            try:
+                entry = validate_analysis_entry(body)
+            except ValueError as e:
+                self._send_json({"ok": False, "error": str(e)}, 400)
+                return
+            if dry_run:
+                self._send_json({"ok": True, "dry_run": True, "date": entry["date"],
+                                 "session": entry.get("session"), "kind": entry.get("kind")})
+                return
+            try:
+                result = add_analysis_entry(entry)
+                print(f"[ingest] Đã ghi bài {entry['date']} {entry.get('kind')} {entry.get('session')}", flush=True)
+                self._send_json({"ok": True, "date": entry["date"], "session": entry.get("session"),
+                                 "kind": entry.get("kind"), **result})
             except Exception as e:
                 self._send_json({"ok": False, "error": str(e)}, 502)
             return
