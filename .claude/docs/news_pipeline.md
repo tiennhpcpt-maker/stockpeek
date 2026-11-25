@@ -46,3 +46,7 @@ Nguồn có `"lang": "en"` trong `sources.json`/`users["sources"]` sẽ tự d�
 ## Thêm nguồn tin mới — luôn validate trước khi lưu
 
 `validate_feed(url)` được gọi trước `add_source_entry`/`add_user_source` ở cả `/api/sources` (POST) và `/api/admin/sources` (POST) — thử fetch + parse XML thật, báo lỗi ngay nếu URL không phải RSS hợp lệ. Không bỏ qua bước này khi thêm route mới liên quan đến thêm nguồn tin.
+
+## Chặn SSRF khi thêm nguồn
+
+`fetch_feed_url` kiểm tra host (`_is_public_hostname`) rồi mở URL qua `_SAFE_FEED_OPENER`: mỗi bước chuyển hướng 3xx được kiểm tra lại (`_SafeRedirectHandler`, tối đa 5 bước), vì `urlopen` mặc định đi theo chuyển hướng tới bất kỳ địa chỉ nào — URL công khai trả 302 → 127.0.0.1 / 169.254.169.254 từng lách được kiểm tra. Đọc tối đa 5 MB (`MAX_FEED_BYTES`).

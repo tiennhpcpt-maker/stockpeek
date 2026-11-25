@@ -30,6 +30,10 @@ Muốn thêm 1 admin gốc mới: thêm email vào `ADMIN_EMAILS` trên Render d
 
 `/api/admin/*` (users, users/role, sources) đều gọi `self._require_admin()` đầu route — trả 401 nếu chưa login, 403 nếu login nhưng không phải admin. Không tái sử dụng logic check quyền này bằng cách so sánh `currentUser.role === "admin"` ở phía client làm điều kiện bảo mật — client-side check chỉ để ẩn/hiện UI, **quyền thật luôn được server enforce lại**.
 
+**Khách chưa đăng nhập chỉ được XEM nguồn tin**: `POST`/`DELETE /api/sources` trả 401 khi chưa đăng nhập (trước 11/2026 khách thêm/xoá thẳng vào `sources.json` dùng chung — ai cũng chèn nguồn rác hoặc xoá tin của mọi khách được). Web ẩn ô thêm/nút xoá với khách (`sourcesEditable`).
+
+Giới hạn khác: đăng ký tối đa 5 tài khoản / giờ / IP (`_check_register_rate_limit`), body JSON tối đa 64 KB (`MAX_JSON_BODY`), danh mục tối đa 50 mã, mã phải khớp `[A-Z0-9]{2,10}`.
+
 `/api/admin/sources` thao tác thẳng lên `sources.json` (danh sách mặc định toàn hệ thống, dùng cho khách và user mới), khác với `/api/sources` — endpoint này trả về danh sách **cá nhân** của user nếu đã đăng nhập, hoặc danh sách mặc định nếu là khách. Hai endpoint này không dùng chung 1 nguồn dữ liệu khi user đã đăng nhập.
 
 ## Giới hạn đăng nhập sai theo IP

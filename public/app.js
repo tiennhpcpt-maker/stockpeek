@@ -7,6 +7,7 @@ const INDICES_INTERVAL_MS = 30000;
 const SECTOR_INTERVAL_MS = 60 * 1000;
 
 let sources = [];
+let sourcesEditable = false; // true khi đã đăng nhập (danh sách nguồn riêng)
 let currentUser = null;
 
 function buildSparklinePath(series, width, height) {
@@ -393,8 +394,13 @@ async function refreshSources() {
     const json = await res.json();
     if (!json.ok) throw new Error(json.error || "lỗi không xác định");
     sources = json.data;
+    // Khách chưa đăng nhập chỉ xem danh sách mặc định (server chặn thêm/xoá),
+    // đăng nhập thì sửa danh sách riêng của mình.
+    sourcesEditable = !!json.personal;
     renderSources();
     document.getElementById("resetSourcesBtn").hidden = !json.personal;
+    document.querySelectorAll(".source-edit-only").forEach((el) => { el.hidden = !sourcesEditable; });
+    document.getElementById("sourceGuestNote").hidden = sourcesEditable;
   } catch (e) {
     document.getElementById("sourcesList").innerHTML =
       `<div class="empty">Lỗi lấy danh sách nguồn: ${e.message}</div>`;
@@ -434,7 +440,7 @@ function renderSources() {
         <span class="source-category-badge">${s.category === "tech" ? "💻 Công nghệ" : "📊 Chứng khoán"}</span>
         ${s.lang && s.lang !== "vi" ? '<span class="source-lang-badge">Dịch → VI</span>' : ""}
         <span class="source-url">${escapeHtml(s.url)}</span>
-        <button class="source-remove" data-name="${escapeHtml(s.name)}">Xoá</button>
+        ${sourcesEditable ? `<button class="source-remove" data-name="${escapeHtml(s.name)}">Xoá</button>` : ""}
       </div>`
     )
     .join("");

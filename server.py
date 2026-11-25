@@ -42,6 +42,8 @@ DEFAULT_SOURCES = [
 ]
 
 MAX_SOURCES = 15
+MAX_WATCHLIST = 50          # mã trong danh mục theo dõi của 1 tài khoản
+MAX_JSON_BODY = 64 * 1024   # byte; body JSON lớn hơn bị từ chối
 NEWS_CACHE_TTL = 60  # 1 phút - để Tin nóng/Tin trực tiếp cập nhật gần thời gian thực
 _news_cache = {}  # key: tuple(sorted urls) -> {"data":[...], "ts": float, "lock": Lock}
 _news_cache_meta_lock = threading.Lock()
@@ -267,16 +269,31 @@ def _log_ip_source_once(source, xff_len):
         print(f"[auth] IP cho giới hạn đăng nhập lấy từ {source} (X-Forwarded-For có {xff_len} phần tử)", flush=True)
 
 
-def _check_login_rate_limit(ip):
+def _check_rate_limit(bucket, ip, limit, window):
+    """Đếm số lần gọi theo (bucket, ip) trong `window` giây; True = còn trong giới hạn."""
     now = time.time()
+    key = (bucket, ip)
     with _login_attempts_lock:
-        attempts = [t for t in _login_attempts.get(ip, []) if now - t < LOGIN_RATE_WINDOW]
+        attempts = [t for t in _login_attempts.get(key, []) if now - t < window]
         attempts.append(now)
-        _login_attempts[ip] = attempts
+        _login_attempts[key] = attempts
         if len(_login_attempts) > 1000:
-            oldest_ip = min(_login_attempts, key=lambda k: _login_attempts[k][-1])
-            del _login_attempts[oldest_ip]
-        return len(attempts) <= LOGIN_RATE_LIMIT
+            oldest = min(_login_attempts, key=lambda k: _login_attempts[k][-1])
+            del _login_attempts[oldest]
+        return len(attempts) <= limit
+
+
+def _check_login_rate_limit(ip):
+    return _check_rate_limit("login", ip, LOGIN_RATE_LIMIT, LOGIN_RATE_WINDOW)
+
+
+# Mỗi tài khoản mới = 1 commit vào repo private users.json, nên chặn tạo hàng loạt.
+REGISTER_RATE_LIMIT = 5
+REGISTER_RATE_WINDOW = 60 * 60
+
+
+def _check_register_rate_limit(ip):
+    return _check_rate_limit("register", ip, REGISTER_RATE_LIMIT, REGISTER_RATE_WINDOW)
 
 
 def hash_password(password, salt_hex=None):
@@ -640,7 +657,28 @@ def fetch_feed_url(url, timeout=8):
         raise ValueError("Chỉ hỗ trợ URL http/https")
     if not parsed.hostname or not _is_public_hostname(parsed.hostname):
         raise ValueError("URL không hợp lệ hoặc trỏ tới địa chỉ nội bộ")
-    return fetch_url(url, timeout=timeout)
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    # Không dùng fetch_url(): urlopen mặc định tự đi theo chuyển hướng 3xx tới BẤT KỲ địa
+    # chỉ nào, nên URL công khai chỉ cần trả 302 → 127.0.0.1/169.254.169.254 là lách
+    # được kiểm tra ở trên. _SafeRedirectHandler kiểm tra lại từng bước chuyển hướng.
+    with _SAFE_FEED_OPENER.open(req, timeout=timeout) as resp:
+        return resp.read(MAX_FEED_BYTES + 1)[:MAX_FEED_BYTES]
+
+
+MAX_FEED_BYTES = 5 * 1024 * 1024  # RSS thật chỉ vài trăm KB; chặn URL trả file khổng lồ
+
+
+class _SafeRedirectHandler(urllib.request.HTTPRedirectHandler):
+    max_redirections = 5
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        p = urlparse(newurl)
+        if p.scheme not in ("http", "https") or not p.hostname or not _is_public_hostname(p.hostname):
+            raise urllib.error.HTTPError(newurl, code, "Chuyển hướng tới địa chỉ nội bộ bị chặn", headers, fp)
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+_SAFE_FEED_OPENER = urllib.request.build_opener(_SafeRedirectHandler)
 
 
 QUOTES_FRESH_TTL = 10   # giây: dưới ngưỡng này trả cache, không gọi VPS
@@ -1773,6 +1811,9 @@ class Handler(BaseHTTPRequestHandler):
 
     def _read_json_body(self):
         length = int(self.headers.get("Content-Length", 0) or 0)
+        if length > MAX_JSON_BODY:
+            # Mọi API chỉ nhận JSON vài trăm byte; không đọc cả body khổng lồ vào RAM.
+            raise ValueError("Dữ liệu gửi lên quá lớn")
         raw = self.rfile.read(length) if length else b""
         if not raw:
             return {}
@@ -1794,17 +1835,20 @@ class Handler(BaseHTTPRequestHandler):
             if not name or not url:
                 self._send_json({"ok": False, "error": "Cần nhập cả tên nguồn và URL"}, 400)
                 return
+            # Khách chưa đăng nhập KHÔNG được sửa sources.json (danh sách mặc định của cả web):
+            # trước 11/2026 route này cho khách thêm/xoá nguồn chung — ai cũng chèn được nguồn
+            # rác hoặc xoá hết tin của mọi khách. Danh sách chung chỉ sửa qua /api/admin/sources.
+            user = self._current_user()
+            if not user:
+                self._send_json({"ok": False, "error": "Cần đăng nhập để thêm nguồn tin riêng"}, 401)
+                return
             try:
                 validate_feed(url)
             except Exception as e:
                 self._send_json({"ok": False, "error": f"Không lấy được RSS từ URL này: {e}"}, 400)
                 return
             try:
-                user = self._current_user()
-                if user:
-                    new_sources = add_user_source(user["id"], name, url, lang, category)
-                else:
-                    new_sources = add_source_entry(name, url, lang, category)
+                new_sources = add_user_source(user["id"], name, url, lang, category)
                 _news_cache.clear()
                 self._send_json({"ok": True, "data": new_sources})
             except ValueError as e:
@@ -1895,6 +1939,12 @@ class Handler(BaseHTTPRequestHandler):
             if not ticker:
                 self._send_json({"ok": False, "error": "Thiếu mã cổ phiếu"}, 400)
                 return
+            if not re.fullmatch(r"[A-Z0-9]{2,10}", ticker):
+                self._send_json({"ok": False, "error": "Mã cổ phiếu không hợp lệ"}, 400)
+                return
+            if ticker not in (user.get("watchlist") or []) and len(user.get("watchlist") or []) >= MAX_WATCHLIST:
+                self._send_json({"ok": False, "error": f"Danh mục tối đa {MAX_WATCHLIST} mã"}, 400)
+                return
             try:
                 new_list = add_user_ticker(user["id"], ticker)
                 self._send_json({"ok": True, "data": new_list})
@@ -1908,10 +1958,13 @@ class Handler(BaseHTTPRequestHandler):
             except Exception:
                 self._send_json({"ok": False, "error": "Dữ liệu gửi lên không hợp lệ"}, 400)
                 return
+            if not _check_register_rate_limit(self._client_ip()):
+                self._send_json({"ok": False, "error": "Tạo quá nhiều tài khoản, vui lòng thử lại sau"}, 429)
+                return
             email = (body.get("email") or "").strip().lower()
             password = body.get("password") or ""
-            name = (body.get("name") or "").strip()
-            if not email or "@" not in email:
+            name = (body.get("name") or "").strip()[:80]
+            if not email or "@" not in email or len(email) > 254:
                 self._send_json({"ok": False, "error": "Email không hợp lệ"}, 400)
                 return
             try:
@@ -2002,12 +2055,13 @@ class Handler(BaseHTTPRequestHandler):
         if parsed.path == "/api/sources":
             qs = parse_qs(parsed.query)
             name = qs.get("name", [""])[0]
+            user = self._current_user()
+            if not user:
+                # Xem chú thích ở POST /api/sources: khách không được xoá nguồn chung.
+                self._send_json({"ok": False, "error": "Cần đăng nhập để xoá nguồn tin riêng"}, 401)
+                return
             try:
-                user = self._current_user()
-                if user:
-                    new_sources = remove_user_source(user["id"], name)
-                else:
-                    new_sources = remove_source_entry(name)
+                new_sources = remove_user_source(user["id"], name)
                 _news_cache.clear()
                 self._send_json({"ok": True, "data": new_sources})
             except Exception as e:
