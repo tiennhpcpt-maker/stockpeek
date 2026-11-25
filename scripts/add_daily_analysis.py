@@ -26,7 +26,7 @@ from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PATH = os.path.join(ROOT, "daily_analysis.json")
-KEEP = 60
+KEEP = 150  # ~3 bài/ngày ≈ 2,5 tháng, ~800 KB (đọc qua GitHub API: server tự chuyển sang tải raw khi file > 1 MB)
 VN_TZ = timezone(timedelta(hours=7))
 # Tên ngành phải khớp CHÍNH XÁC SECTOR_TICKERS trong server.py — tab "Ngành" gắn
 # nhận định vào thẻ ngành theo tên. Đổi danh sách ngành ở server thì sửa cả ở đây.

@@ -31,3 +31,7 @@ Muốn thêm 1 admin gốc mới: thêm email vào `ADMIN_EMAILS` trên Render d
 `/api/admin/*` (users, users/role, sources) đều gọi `self._require_admin()` đầu route — trả 401 nếu chưa login, 403 nếu login nhưng không phải admin. Không tái sử dụng logic check quyền này bằng cách so sánh `currentUser.role === "admin"` ở phía client làm điều kiện bảo mật — client-side check chỉ để ẩn/hiện UI, **quyền thật luôn được server enforce lại**.
 
 `/api/admin/sources` thao tác thẳng lên `sources.json` (danh sách mặc định toàn hệ thống, dùng cho khách và user mới), khác với `/api/sources` — endpoint này trả về danh sách **cá nhân** của user nếu đã đăng nhập, hoặc danh sách mặc định nếu là khách. Hai endpoint này không dùng chung 1 nguồn dữ liệu khi user đã đăng nhập.
+
+## Giới hạn đăng nhập sai theo IP
+
+`_check_login_rate_limit` (10 lần / 5 phút) dùng `Handler._client_ip()`: ưu tiên `CF-Connecting-IP` / `True-Client-IP` (proxy tự ghi đè), không có thì phần tử **cuối** của `X-Forwarded-For`. Không dùng phần tử đầu — người gửi tự điền được, đã thử trên Render 11/2026 là lách được giới hạn. Log `[auth] IP cho giới hạn đăng nhập lấy từ …` (1 lần mỗi nguồn, không ghi IP) cho biết đang dùng header nào.

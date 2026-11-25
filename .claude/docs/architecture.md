@@ -38,6 +38,8 @@ Mọi "ghi dữ liệu" là commit trực tiếp vào 1 trong 2 repo GitHub, qua
 
 **Vì sao tách 2 repo**: repo code là public để deploy miễn phí trên Render qua "Public Git Repository". Dữ liệu tài khoản (kể cả đã hash) không bao giờ được đưa vào repo public.
 
+`load_github_file` đọc qua Contents API; file > 1 MB (API trả `content` rỗng) thì tự tải bản thô (`Accept: application/vnd.github.raw`). `daily_analysis.json` giữ tối đa 150 bài (`KEEP` trong `scripts/add_daily_analysis.py`, ~800 KB).
+
 `update_github_file(path, default, mutate_fn, message, repo=...)` là điểm ghi duy nhất: đọc file mới nhất (bỏ qua cache), áp `mutate_fn`, ghi lại; nếu gặp HTTP 409 (ai đó ghi đè đồng thời) thì tự đọc lại và thử lại tối đa 3 lần. Mọi hàm ghi dữ liệu (`add_source_entry`, `create_local_user`, `update_user_data`, `set_user_role`, ...) đều đi qua hàm này — không tự viết logic ghi file riêng.
 
 ## Các lớp cache trong bộ nhớ (RAM, mất khi restart)

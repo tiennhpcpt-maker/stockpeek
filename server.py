@@ -110,14 +110,18 @@ def _get_installation_token():
         return token
 
 
-def _github_request(method, url, body=None):
-    headers = {"User-Agent": "stockPeek", "Accept": "application/vnd.github+json"}
+def _github_request(method, url, body=None, raw=False):
+    # raw=True: lấy nội dung file thô (Accept: vnd.github.raw) — dùng cho file > 1 MB,
+    # vì Contents API dạng JSON trả "content" rỗng với file lớn hơn 1 MB.
+    headers = {"User-Agent": "stockPeek",
+               "Accept": "application/vnd.github.raw" if raw else "application/vnd.github+json"}
     if GITHUB_APP_CONFIGURED:
         headers["Authorization"] = f"Bearer {_get_installation_token()}"
     data = json.dumps(body).encode("utf-8") if body is not None else None
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
-    with urllib.request.urlopen(req, timeout=10) as resp:
-        return json.loads(resp.read())
+    with urllib.request.urlopen(req, timeout=20 if raw else 10) as resp:
+        payload = resp.read()
+    return payload.decode("utf-8") if raw else json.loads(payload)
 
 
 def load_github_file(path, default, force=False, repo=None):
@@ -132,7 +136,11 @@ def load_github_file(path, default, force=False, repo=None):
     url = f"https://api.github.com/repos/{repo}/contents/{path}"
     try:
         resp = _github_request("GET", url)
-        content = base64.b64decode(resp["content"]).decode("utf-8")
+        if resp.get("content"):
+            content = base64.b64decode(resp["content"]).decode("utf-8")
+        else:
+            # File > 1 MB: Contents API không kèm nội dung (encoding "none") → tải bản thô.
+            content = _github_request("GET", url, raw=True)
         data = json.loads(content)
         sha = resp["sha"]
     except urllib.error.HTTPError as e:
@@ -247,6 +255,16 @@ LOGIN_RATE_LIMIT = 10
 LOGIN_RATE_WINDOW = 5 * 60
 _login_attempts = {}  # ip -> [timestamps]
 _login_attempts_lock = threading.Lock()
+
+
+_ip_source_logged = set()
+
+
+def _log_ip_source_once(source, xff_len):
+    """Ghi 1 lần mỗi nguồn IP (chỉ tên header, không ghi IP) để kiểm tra trên log Render."""
+    if source not in _ip_source_logged:
+        _ip_source_logged.add(source)
+        print(f"[auth] IP cho giới hạn đăng nhập lấy từ {source} (X-Forwarded-For có {xff_len} phần tử)")
 
 
 def _check_login_rate_limit(ip):
@@ -1557,9 +1575,20 @@ class Handler(BaseHTTPRequestHandler):
         return "session=; Path=/; HttpOnly; Max-Age=0; SameSite=Lax"
 
     def _client_ip(self):
-        xff = self.headers.get("X-Forwarded-For")
+        # KHÔNG lấy phần tử đầu của X-Forwarded-For: người gửi tự điền được, đổi mỗi
+        # lần là lách giới hạn đăng nhập sai (đã thử trên Render 11/2026). Ưu tiên
+        # header do proxy (Cloudflare trước Render) tự ghi đè; không có thì lấy phần tử
+        # proxy gần nhất nối vào cuối X-Forwarded-For.
+        xff = [p.strip() for p in (self.headers.get("X-Forwarded-For") or "").split(",") if p.strip()]
+        for h in ("CF-Connecting-IP", "True-Client-IP"):
+            v = (self.headers.get(h) or "").strip()
+            if v:
+                _log_ip_source_once(h, len(xff))
+                return v
         if xff:
-            return xff.split(",")[0].strip()
+            _log_ip_source_once("X-Forwarded-For[-1]", len(xff))
+            return xff[-1]
+        _log_ip_source_once("socket", 0)
         return self.client_address[0]
 
     def _current_user(self):

@@ -4984,6 +4984,41 @@
       "kind": "bulletin",
       "origin": "Bản tin chứng khoán sáng (email)",
       "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-10-06",
+      "generated_at": "2026-10-06T09:33:00+07:00",
+      "title": "Bản tin sáng 06/10: VN-Index ngắt chuỗi 5 phiên giảm",
+      "summary": "VN-Index phiên 05/10 tăng 0,89% (+15,49 điểm) lên 1.753,20 điểm, chấm dứt 5 phiên giảm, nhưng thanh khoản khớp lệnh giảm 29,9% xuống thấp nhất từ 20/8 và khối ngoại bán ròng phiên thứ 9. Lực kéo từ Vingroup, Thép và một số Ngân hàng/Bán lẻ. Chỉ số dưới toàn bộ MA5-MA50. Vĩ mô tích cực (GDP 9 tháng +9,01%) nhưng TCBS khuyên thận trọng với cổ phiếu chứng khoán.",
+      "key_findings": [
+        "Thanh khoản khớp lệnh HoSE 10.126 tỷ, thấp hơn 24,9% TB30.",
+        "Khối ngoại bán TCB, VHM, PNJ, VNM; mua HPG, DGW, GMD.",
+        "GDP Q3 +9,95% YoY, 9T +9,01%; nhập siêu 19,42 tỷ USD; CPI 9T +4,52%.",
+        "Việc làm Mỹ yếu làm giảm kỳ vọng Fed tăng lãi suất; Nasdaq +1,19%.",
+        "PNJ dự kiến trích lập dự phòng 7.071 tỷ liên quan sự cố kim cương."
+      ],
+      "tickers": [
+        {
+          "ticker": "CTS",
+          "note": "TCBS Chờ mua — P/B ~1,9x cao hơn ngành, beta ~1,2; chờ thanh khoản cải thiện."
+        },
+        {
+          "ticker": "PNJ",
+          "note": "Rủi ro trích lập dự phòng 7.071 tỷ đồng."
+        }
+      ],
+      "action_items": [
+        "Chỉ giải ngân mới khi vượt vững 1.757-1.775 kèm thanh khoản cải thiện.",
+        "Rà soát mã bị khối ngoại bán mạnh (TCB, VHM, PNJ, VNM); chưa tăng tỷ trọng CTS.",
+        "Cập nhật rủi ro PNJ và tái cấu trúc GEE."
+      ],
+      "sources": [
+        "TCBS Cơ hội đầu tư"
+      ],
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
     }
   ]
 }
