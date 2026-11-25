@@ -264,7 +264,7 @@ def _log_ip_source_once(source, xff_len):
     """Ghi 1 lần mỗi nguồn IP (chỉ tên header, không ghi IP) để kiểm tra trên log Render."""
     if source not in _ip_source_logged:
         _ip_source_logged.add(source)
-        print(f"[auth] IP cho giới hạn đăng nhập lấy từ {source} (X-Forwarded-For có {xff_len} phần tử)")
+        print(f"[auth] IP cho giới hạn đăng nhập lấy từ {source} (X-Forwarded-For có {xff_len} phần tử)", flush=True)
 
 
 def _check_login_rate_limit(ip):
