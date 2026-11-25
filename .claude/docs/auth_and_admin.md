@@ -39,3 +39,7 @@ Giới hạn khác: đăng ký tối đa 5 tài khoản / giờ / IP (`_check_re
 ## Giới hạn đăng nhập sai theo IP
 
 `_check_login_rate_limit` (10 lần / 5 phút) dùng `Handler._client_ip()`: ưu tiên `CF-Connecting-IP` / `True-Client-IP` (proxy tự ghi đè), không có thì phần tử **cuối** của `X-Forwarded-For`. Không dùng phần tử đầu — người gửi tự điền được, đã thử trên Render 11/2026 là lách được giới hạn. Log `[auth] IP cho giới hạn đăng nhập lấy từ …` (1 lần mỗi nguồn, không ghi IP) cho biết đang dùng header nào.
+
+## Header bảo mật
+
+`Handler.end_headers` thêm cho mọi phản hồi: `X-Frame-Options: DENY` + `Content-Security-Policy: frame-ancestors 'none'` (chống nhúng trang vào iframe — clickjacking), `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`. CSP chỉ đặt `frame-ancestors` để không chặn script/style hiện có. Vì có `nosniff`, file tĩnh mới phải trả đúng Content-Type.

@@ -1593,6 +1593,18 @@ CONTENT_TYPES = {
 
 
 class Handler(BaseHTTPRequestHandler):
+    def end_headers(self):
+        # Header bảo mật cho MỌI phản hồi (JSON, file tĩnh, redirect):
+        # - chống nhúng trang vào iframe của site khác (clickjacking — lừa bấm nút xoá
+        #   tài khoản trong trang quản trị). CSP chỉ đặt frame-ancestors để không chặn
+        #   script/style hiện có.
+        # - nosniff: trình duyệt không đoán lại kiểu file.
+        self.send_header("X-Frame-Options", "DENY")
+        self.send_header("Content-Security-Policy", "frame-ancestors 'none'")
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
+        super().end_headers()
+
     def _send_json(self, obj, status=200, set_cookie=None):
         body = json.dumps(obj, ensure_ascii=False).encode("utf-8")
         self.send_response(status)
