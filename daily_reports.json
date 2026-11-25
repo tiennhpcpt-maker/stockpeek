@@ -2,6 +2,321 @@
   "items": [
     {
       "date": "2026-11-25",
+      "session": "afternoon",
+      "generated_at": "2026-11-25T16:00:01+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "Định hình 'bộ công cụ' mới cho thị trường chứng khoán Việt Nam",
+          "link": "https://stockbiz.vn/tin-tuc/dinh-hinh-bo-cong-cu-moi-cho-thi-truong-chung-khoan-viet-nam/42909372",
+          "pubDate": "Wed, 25 Nov 2026 08:04:00 GMT",
+          "sourceCount": 3,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Thanh Niên Chứng khoán"
+          ]
+        },
+        {
+          "title": "VN-Index lùi về 1.687 điểm, khối ngoại bán ròng hơn 5.600 tỷ đồng",
+          "link": "https://stockbiz.vn/tin-tuc/vn-index-lui-ve-1687-diem-khoi-ngoai-ban-rong-hon-5600-ty-dong/42910254",
+          "pubDate": "Wed, 25 Nov 2026 08:49:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Thanh Niên Chứng khoán"
+          ]
+        },
+        {
+          "title": "Việt Nam - Điểm đến mới của dòng vốn toàn cầu",
+          "link": "https://stockbiz.vn/tin-tuc/viet-nam---diem-den-moi-cua-dong-von-toan-cau/42903886",
+          "pubDate": "Wed, 25 Nov 2026 13:09:33 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "30 năm chứng khoán Việt Nam: Quy mô tạo nền, chất lượng tạo sức bật",
+          "link": "https://stockbiz.vn/tin-tuc/30-nam-chung-khoan-viet-nam-quy-mo-tao-nen-chat-luong-tao-suc-bat/42903830",
+          "pubDate": "Wed, 25 Nov 2026 05:08:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Tuổi Trẻ Chứng khoán"
+          ]
+        },
+        {
+          "title": "Đề xuất nghiên cứu đường dây siêu cao áp hơn 1.000km kéo điện ra Bắc",
+          "link": "https://dantri.com.vn/kinh-doanh/de-xuat-nghien-cuu-duong-day-sieu-cao-ap-hon-1000km-keo-dien-ra-bac-20261125110350225.htm",
+          "pubDate": "Wed, 25 Nov 2026 11:41:16 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Cổ phiếu đáng chú ý ngày 25/11: FPT, HDG, POW",
+          "link": "https://stockbiz.vn/tin-tuc/co-phieu-dang-chu-y-ngay-2511-fpt-hdg-pow/42898537",
+          "pubDate": "Wed, 25 Nov 2026 02:15:41 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Vàng trong nước, quốc tế quay đầu giảm mạnh",
+          "link": "https://dantri.com.vn/kinh-doanh/vang-trong-nuoc-quoc-te-quay-dau-giam-manh-20261125084422926.htm",
+          "pubDate": "Wed, 25 Nov 2026 08:52:56 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Energy bills to rise by 26% from January",
+          "link": "https://www.bbc.co.uk/news/articles/cm20qnq33e90o?at_medium=RSS&at_campaign=rss",
+          "pubDate": "Wed, 25 Nov 2026 08:38:13 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "BBC Business"
+          ]
+        }
+      ],
+      "mentioned_tickers": [],
+      "title": "Báo cáo cuối phiên 25/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1687.45,
+            "change": -9.69,
+            "changePct": -0.57,
+            "tradingValue": 16091.2,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1778.58,
+            "change": -12.54,
+            "changePct": -0.7,
+            "tradingValue": 10559.92,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 227.46,
+            "change": -4.77,
+            "changePct": -2.05,
+            "tradingValue": 802.09,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 119.82,
+            "change": 0.65,
+            "changePct": 0.55,
+            "tradingValue": 413.83,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": 0.8,
+            "up": 2,
+            "down": 1,
+            "total": 3,
+            "leader": {
+              "ticker": "SAB",
+              "changePct": 2.44
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -0.16,
+            "up": 2,
+            "down": 2,
+            "total": 4,
+            "leader": {
+              "ticker": "PNJ",
+              "changePct": 1.59
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.48,
+            "up": 1,
+            "down": 6,
+            "total": 8,
+            "leader": {
+              "ticker": "ACB",
+              "changePct": 0.51
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": -0.58,
+            "up": 1,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "IDC",
+              "changePct": 0.57
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": -1.56,
+            "up": 1,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "GAS",
+              "changePct": 0.29
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -1.62,
+            "up": 0,
+            "down": 5,
+            "total": 6,
+            "leader": {
+              "ticker": "VRE",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": -2.15,
+            "up": 0,
+            "down": 5,
+            "total": 6,
+            "leader": {
+              "ticker": "HCM",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": -3.1,
+            "up": 0,
+            "down": 3,
+            "total": 3,
+            "leader": {
+              "ticker": "HSG",
+              "changePct": -0.99
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "SAB",
+              "last": 44050,
+              "changePct": 2.44,
+              "volume": 166510
+            },
+            {
+              "ticker": "PNJ",
+              "last": 12800,
+              "changePct": 1.59,
+              "volume": 1146530
+            },
+            {
+              "ticker": "IDC",
+              "last": 35000,
+              "changePct": 0.57,
+              "volume": 109630
+            },
+            {
+              "ticker": "ACB",
+              "last": 19850,
+              "changePct": 0.51,
+              "volume": 644440
+            },
+            {
+              "ticker": "DGW",
+              "last": 38900,
+              "changePct": 0.39,
+              "volume": 25730
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "NKG",
+              "last": 11350,
+              "changePct": -6.58,
+              "volume": 740920
+            },
+            {
+              "ticker": "NVL",
+              "last": 9500,
+              "changePct": -3.94,
+              "volume": 1025960
+            },
+            {
+              "ticker": "DXG",
+              "last": 10500,
+              "changePct": -3.23,
+              "volume": 704170
+            },
+            {
+              "ticker": "VND",
+              "last": 14000,
+              "changePct": -3.11,
+              "volume": 1074940
+            },
+            {
+              "ticker": "VIX",
+              "last": 12300,
+              "changePct": -2.77,
+              "volume": 3233740
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 12300,
+              "changePct": -2.77,
+              "volume": 3233740
+            },
+            {
+              "ticker": "SSI",
+              "last": 19300,
+              "changePct": -2.28,
+              "volume": 1491830
+            },
+            {
+              "ticker": "VPB",
+              "last": 20250,
+              "changePct": -0.98,
+              "volume": 1399250
+            },
+            {
+              "ticker": "TCB",
+              "last": 20700,
+              "changePct": -0.24,
+              "volume": 1174100
+            },
+            {
+              "ticker": "PNJ",
+              "last": 12800,
+              "changePct": 1.59,
+              "volume": 1146530
+            }
+          ]
+        },
+        "summary": "VN-Index giảm 9,69 điểm (-0,57%) phiên 25/11, đạt 1.687,45 điểm, giá trị giao dịch 16.091,20 tỷ đồng. Nhóm ngành mạnh nhất: Thực phẩm - Đồ uống (bình quân 0,80%, 2/3 mã tăng); yếu nhất: Thép (-3,10%). Tăng mạnh: SAB (+2,44%), PNJ (+1,59%), IDC (+0,57%). Giảm mạnh: NKG (-6,58%), NVL (-3,94%), DXG (-3,23%)."
+      },
+      "summary": "VN-Index giảm 9,69 điểm (-0,57%) phiên 25/11, đạt 1.687,45 điểm, giá trị giao dịch 16.091,20 tỷ đồng. Nhóm ngành mạnh nhất: Thực phẩm - Đồ uống (bình quân 0,80%, 2/3 mã tăng); yếu nhất: Thép (-3,10%). Tăng mạnh: SAB (+2,44%), PNJ (+1,59%), IDC (+0,57%). Giảm mạnh: NKG (-6,58%), NVL (-3,94%), DXG (-3,23%). Tin được nhiều nguồn đưa nhất: \"Định hình 'bộ công cụ' mới cho thị trường chứng khoán Việt Nam\" (3 nguồn)."
+    },
+    {
+      "date": "2026-11-25",
       "session": "morning",
       "generated_at": "2026-11-25T08:30:17+07:00",
       "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
