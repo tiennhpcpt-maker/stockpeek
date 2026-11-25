@@ -1,6 +1,464 @@
 {
   "items": [
     {
+      "date": "2026-11-25",
+      "session": "afternoon",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán chiều (email)",
+      "generated_at": "2026-11-25T16:14:28+07:00",
+      "title": "Bản tin chiều 25/11: VN-Index thất bại tại 1.700-1.705, ngoại bán ròng khoảng 5.676 tỷ",
+      "summary": "VN-Index đóng cửa 1.687,45 (-9,69; -0,57%), thất bại tại vùng 1.700-1.705 và xóa phần hồi của hai phiên trước; HOSE 227 mã giảm, 84 mã tăng, 14 mã giảm sàn. Kịch bản Cơ sở của bản sáng và trưa bị phá về cận dưới. Thanh khoản các nguồn không thống nhất nên chưa kết luận được xu hướng.",
+      "key_findings": [
+        "Khối ngoại bán ròng khoảng 5.676 tỷ HOSE (phiên thứ 6 liên tiếp)",
+        "VIC khoảng 4.700 tỷ qua 3 lệnh thỏa thuận; loại VIC thì bán ròng khoảng 976 tỷ (suy luận)",
+        "Độ rộng xấu: 227 giảm, 84 tăng, 14 giảm sàn",
+        "3 mã nổi bật: FRT 4,0; MSN 3,0; VHM 2,5 (VHM giảm 0,5 so với bản trưa)",
+        "Kịch bản phiên 26/11: Cơ sở, lệch tiêu cực"
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 26/11",
+          "items": [
+            "Cơ sở, lệch tiêu cực: hỗ trợ 1.666-1.672, kháng cự 1.700-1.705"
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: bán ròng khoảng 5.676 tỷ HOSE, phiên thứ 6 liên tiếp (VIC khoảng 4.700 tỷ thỏa thuận; loại VIC khoảng 976 tỷ, suy luận)",
+            "Tự doanh: chưa có số phiên 25/11",
+            "Thỏa thuận: khoảng 8.000 tỷ",
+            "Thanh khoản: khớp lệnh khoảng 12.700 tỷ (15h29), tổng khoảng 16.000 tỷ (15h44); các nguồn không thống nhất"
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Bất động sản",
+          "view": "VIC bị khối ngoại bán ròng khoảng 4.700 tỷ qua 3 lệnh thỏa thuận; VHM bị hạ còn 2,5 điểm."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN giữ 3,0 điểm; VNM và SAB có số riêng theo mã nhưng chưa đủ cơ sở định giá để chấm điểm."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "FRT",
+          "note": "Điểm 4,0 (0,5; 2,0; 1,5)"
+        },
+        {
+          "ticker": "MSN",
+          "note": "Điểm 3,0 (0,0; 2,0; 1,0)"
+        },
+        {
+          "ticker": "VHM",
+          "note": "Điểm 2,5, giảm 0,5 so với bản trưa"
+        },
+        {
+          "ticker": "HPG",
+          "note": "Dự bị, 2,0 điểm"
+        }
+      ],
+      "action_items": [
+        "Theo dõi vùng hỗ trợ 1.666-1.672 trong phiên 26/11",
+        "Theo dõi tự doanh và chuỗi ngoại bán ròng"
+      ],
+      "sources": [
+        "Người Quan Sát",
+        "FireAnt",
+        "Vietstock Nhịp đập",
+        "MoneyF"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-25",
+      "session": "midday",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán trưa (email)",
+      "generated_at": "2026-11-25T13:14:35+07:00",
+      "title": "Bản tin trưa 25/11: VN-Index sáng 1.699,38, ngoại bán ròng 676,1 tỷ",
+      "summary": "VN-Index đóng cửa phiên sáng 1.699,38 (+0,13%), dao động 1.694,5-1.704,9, chưa vượt bền vững kháng cự 1.700-1.705; độ rộng nghiêng giảm (134 tăng/147 giảm). Kịch bản Cơ sở của bản sáng đang diễn ra đúng. Tự doanh chưa có số phiên 25/11.",
+      "key_findings": [
+        "Khối ngoại bán ròng 676,1 tỷ HOSE, riêng chứng chỉ quỹ FUEVFVND 301,2 tỷ (khoảng 44%)",
+        "Khớp lệnh sáng 4.087 tỷ, thấp; thỏa thuận tối thiểu 408,5 tỷ (số 10h45)",
+        "Điểm số dựa chủ yếu vào VIC (+1,93 điểm)",
+        "3 mã nổi bật: FRT 4,0; MSN 3,0; VHM 3,0 (dự bị HPG 2,0)",
+        "MSN và VHM giảm 0,5 điểm so với bản sáng do dòng tiền yếu đi"
+      ],
+      "sections": [
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: bán ròng 676,1 tỷ HOSE phiên sáng (FUEVFVND 301,2 tỷ)",
+            "Thỏa thuận: tối thiểu 408,5 tỷ (số 10h45)",
+            "Tự doanh: chưa có số phiên 25/11"
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Bất động sản",
+          "view": "VIC là mã gánh điểm số phiên sáng 25/11 (+1,93 điểm); VHM bị hạ còn 3,0 điểm do thành phần dòng tiền yếu đi."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN giảm xuống 3,0 điểm do dòng tiền yếu đi; VNM và SAB chưa đủ cơ sở định giá để chấm điểm."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "FRT",
+          "note": "Điểm 4,0 (0,5; 2,0; 1,5)"
+        },
+        {
+          "ticker": "MSN",
+          "note": "Điểm 3,0, giảm 0,5 vì dòng tiền yếu"
+        },
+        {
+          "ticker": "VHM",
+          "note": "Điểm 3,0, giảm 0,5 vì dòng tiền yếu"
+        },
+        {
+          "ticker": "HPG",
+          "note": "Dự bị, 2,0 điểm"
+        }
+      ],
+      "action_items": [
+        "Theo dõi khả năng vượt bền vững 1.700-1.705 trong phiên chiều",
+        "Theo dõi tự doanh và dòng ngoại cả phiên"
+      ],
+      "sources": [
+        "index.vn",
+        "Vietstock Nhịp đập",
+        "TCBS"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-25",
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "generated_at": "2026-11-25T08:14:07+07:00",
+      "title": "Bản tin sáng 25/11: Giao dịch lại sau nghỉ lễ, rủi ro tâm lý ở nhóm công nghệ",
+      "summary": "Phiên gần nhất (23/11) VN-Index đóng cửa 1.697,14 (+0,49%), dưới MA5/10/20/50, kháng cự 1.700-1.701, hỗ trợ 1.666-1.672; hôm nay giao dịch lại, chưa có số liệu phiên 25/11. Phiên Mỹ 24/11 phân hóa: Dow +0,85%, S&P 500 -0,50%, Nasdaq -1,48%, bán dẫn giảm mạnh. Kịch bản 25/11: Cơ sở.",
+      "key_findings": [
+        "Mỹ 24/11: Dow +0,85% (50.018,70), S&P 500 -0,50%, Nasdaq -1,48%, NVDA -5,86%",
+        "S&P 500 lũy kế +4,21% so với 20/11 (7.201,09)",
+        "Ngoại bán ròng 407,1 tỷ (TCBS: 418,9 tỷ) phiên thứ 5, tự doanh mua ròng 376,5 tỷ",
+        "Khớp lệnh 8.651,2 tỷ, thấp hơn 26,5% so với TB30",
+        "3 mã nổi bật: FRT 4,0; MSN 3,5; VHM 3,5; HPG dự bị hạ còn 2,0"
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 25/11",
+          "items": [
+            "Cơ sở: giằng co quanh vùng kháng cự 1.700-1.701, rủi ro tâm lý ở nhóm công nghệ"
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: bán ròng 407,1 tỷ (phiên 23/11, phiên thứ 5 liên tiếp); lũy kế năm -127.338,5 tỷ",
+            "Tự doanh: mua ròng 376,5 tỷ",
+            "Trong nước (suy luận): còn lại khoảng +31 tỷ",
+            "Thỏa thuận: 4.039,7 tỷ"
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Phố Wall 24/11 phân hóa, bán dẫn giảm mạnh (NVDA -5,86%)"
+          ]
+        }
+      ],
+      "sectors": [],
+      "tickers": [
+        {
+          "ticker": "FRT",
+          "note": "Điểm 4,0 (0,5; 2,0; 1,5)"
+        },
+        {
+          "ticker": "MSN",
+          "note": "Điểm 3,5"
+        },
+        {
+          "ticker": "VHM",
+          "note": "Điểm 3,5"
+        },
+        {
+          "ticker": "HPG",
+          "note": "Dự bị, giảm xuống 2,0 vì ngoại bán ròng"
+        }
+      ],
+      "action_items": [
+        "Theo dõi phản ứng quanh 1.700-1.701 và khớp lệnh khi mở cửa lại"
+      ],
+      "sources": [
+        "TCBS",
+        "CafeF",
+        "Vietcap",
+        "Vietstock"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-24",
+      "session": "afternoon",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán chiều (email)",
+      "generated_at": "2026-11-24T16:12:15+07:00",
+      "title": "Bản tin chiều 24/11: Không có phiên giao dịch, chờ xác nhận mốc 1.700-1.701",
+      "summary": "Hôm nay không có phiên giao dịch (HoSE-HNX nghỉ lễ) nên chưa có số liệu mới; nhận định dựa trên phiên 23/11. VN-Index 1.697,14 (+0,49%), dưới MA5/10/20/50, kháng cự 1.700-1.701, hỗ trợ 1.666-1.672. Kịch bản phiên 25/11: Cơ sở, lệch tích cực nhẹ, cần xác nhận bằng khớp lệnh.",
+      "key_findings": [
+        "Đà hồi 23/11 phụ thuộc VIC/VHM (khoảng 95% mức tăng điểm)",
+        "Ngoại bán ròng phiên thứ 5 (407,1 tỷ theo hệ thống; 418,9 tỷ theo TCBS), tự doanh mua ròng 376,5 tỷ",
+        "Khớp lệnh 8.651,2 tỷ, thấp hơn 26,5% so với TB30",
+        "Mỹ 20/11: S&P 500 -3,70%, Nasdaq -5,28%",
+        "3 mã nổi bật giữ nguyên: FRT 4,0; MSN 3,5; VHM 3,5"
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 25/11",
+          "items": [
+            "Tích cực: vượt và giữ trên 1.700-1.701 với khớp lệnh cải thiện",
+            "Cơ sở: giằng co 1.690-1.710",
+            "Tiêu cực: thủng 1.666-1.672"
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: -407,1 / -418,9 tỷ (lệch 2,9%); bán HDB, VPX, SSI; mua POW, GMD, HVN",
+            "Tự doanh: +376,5 tỷ (khớp +218,2; thỏa thuận +158,3)",
+            "Trong nước (suy luận): còn lại khoảng +31 tỷ",
+            "Thỏa thuận: 4.039,7 tỷ; tổng GTGD 12.690,9 tỷ",
+            "Ngành hút tiền: Công nghệ-Viễn thông, Vingroup, Điện, Vận tải; chịu áp lực: Bán lẻ, Ngân hàng, Chứng khoán, Dầu khí"
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Tỷ giá trung tâm 25.668 VND/USD, cao kỷ lục",
+            "Luật KDBĐS sửa đổi hiệu lực 1/7/2027"
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Bất động sản",
+          "view": "VIC/VHM đóng góp khoảng 95% mức tăng điểm của VN-Index phiên 23/11; Luật KDBĐS sửa đổi hiệu lực 1/7/2027."
+        },
+        {
+          "name": "Ngân hàng",
+          "view": "Chịu áp lực dòng tiền phiên 23/11, HDB nằm trong nhóm ngoại bán ròng."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "Chịu áp lực dòng tiền phiên 23/11, SSI nằm trong nhóm ngoại bán ròng."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "Chịu áp lực dòng tiền phiên 23/11; PNJ không còn thanh toán T+120 bằng tiền cho toàn bộ sản phẩm (tồn kho khoảng 17.000 tỷ)."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "Nằm trong nhóm chịu áp lực dòng tiền phiên 23/11 (TCBS)."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "FRT",
+          "note": "Điểm 4,0"
+        },
+        {
+          "ticker": "MSN",
+          "note": "Điểm 3,5"
+        },
+        {
+          "ticker": "VHM",
+          "note": "Điểm 3,5"
+        },
+        {
+          "ticker": "HPG",
+          "note": "Dự bị, 2,5 điểm"
+        }
+      ],
+      "action_items": [
+        "Trước phiên 25/11: chờ xác nhận mốc 1.700-1.701 cùng khớp lệnh trước khi tăng tỷ trọng",
+        "Theo dõi chuỗi ngoại và tự doanh phiên 25/11; ngoại còn bán ròng thì thận trọng với SSI, HDB",
+        "Giảm theo dõi/dừng nếu VN-Index thủng 1.666-1.672"
+      ],
+      "sources": [
+        "TCBS",
+        "CafeF",
+        "Tiền Phong"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-24",
+      "session": "midday",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán trưa (email)",
+      "generated_at": "2026-11-24T13:12:00+07:00",
+      "title": "Bản tin trưa 24/11: HoSE, HNX nghỉ lễ, số liệu giữ nguyên phiên 23/11",
+      "summary": "24/11 HoSE và HNX nghỉ giao dịch nên không có diễn biến phiên sáng; số liệu giữ nguyên bản sáng. VN-Index 1.697,14 (+0,49%), dưới MA5/10/20/50, kháng cự 1.700-1.701, hỗ trợ 1.666-1.672. Chưa có số liệu mới để đổi điểm các mã nổi bật.",
+      "key_findings": [
+        "Ngoại bán ròng phiên thứ 5: 407,1 tỷ (bản sáng) hoặc 418,9 tỷ (TCBS), lệch 2,9%",
+        "Tự doanh mua ròng 376,5 tỷ",
+        "Khớp lệnh 8.651,2 tỷ, thấp hơn 26,5% so với TB 30 phiên",
+        "PNJ công bố không còn thanh toán T+120 bằng tiền cho toàn bộ sản phẩm (tồn kho khoảng 17.000 tỷ)",
+        "Luật KDBĐS sửa đổi hiệu lực 1/7/2027; tỷ giá trung tâm 25.668 đồng/USD, cao kỷ lục"
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 25/11",
+          "items": [
+            "Tích cực: vượt và giữ trên 1.700-1.701 với khớp lệnh cải thiện",
+            "Cơ sở: giằng co quanh 1.690-1.710",
+            "Tiêu cực: thủng 1.666-1.672"
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: -407,1 tỷ (bản sáng) / -418,9 tỷ (TCBS); bán HDB, VPX, SSI; mua POW, GMD, HVN; lũy kế năm -127.338,5 tỷ",
+            "Tự doanh: +376,5 tỷ (khớp +218,2; thỏa thuận +158,3)",
+            "Trong nước (suy luận): khoảng +31 tỷ",
+            "Thỏa thuận: 4.039,7 tỷ",
+            "Ngành hút tiền: Công nghệ-Viễn thông, Vingroup, Điện, Vận tải; chịu áp lực: Bán lẻ, Ngân hàng, Chứng khoán, Dầu khí"
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Ngân hàng",
+          "view": "Chịu áp lực dòng tiền phiên 23/11; HDB nằm trong nhóm ngoại bán ròng."
+        },
+        {
+          "name": "Chứng khoán",
+          "view": "Chịu áp lực dòng tiền phiên 23/11; SSI nằm trong nhóm ngoại bán ròng."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "Chịu áp lực dòng tiền phiên 23/11; PNJ công bố không còn thanh toán T+120 bằng tiền cho toàn bộ sản phẩm (tồn kho khoảng 17.000 tỷ)."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "Nằm trong nhóm chịu áp lực dòng tiền phiên 23/11 (TCBS)."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "VIC, VHM hỗ trợ chỉ số phiên 23/11; Luật KDBĐS sửa đổi có hiệu lực 1/7/2027."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "FRT",
+          "note": "Điểm 4,0, không đổi"
+        },
+        {
+          "ticker": "MSN",
+          "note": "Điểm 3,5, không đổi"
+        },
+        {
+          "ticker": "VHM",
+          "note": "Điểm 3,5, không đổi"
+        },
+        {
+          "ticker": "HPG",
+          "note": "Dự bị, 2,5 điểm"
+        }
+      ],
+      "action_items": [
+        "Trước phiên 25/11: chờ xác nhận mốc 1.700-1.701 và khớp lệnh trước khi tăng tỷ trọng",
+        "Theo dõi chuỗi ngoại và tự doanh phiên 25/11; ngoại còn bán ròng thì thận trọng với SSI, HDB",
+        "Dừng/giảm theo dõi nếu VN-Index thủng 1.666-1.672"
+      ],
+      "sources": [
+        "TCBS",
+        "CafeF",
+        "Tiền Phong"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-24",
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "generated_at": "2026-11-24T08:15:24+07:00",
+      "title": "Bản tin sáng 24/11: Nghỉ lễ, VN-Index 1.697,14 chấm dứt chuỗi 4 phiên giảm (phiên 23/11)",
+      "summary": "24/11 thị trường nghỉ Ngày Văn hóa Việt Nam, giao dịch lại 25/11; nhận định dựa trên phiên 23/11. VN-Index đóng cửa 1.697,14 (+0,49%), chấm dứt chuỗi 4 phiên giảm, sát kháng cự 1.700-1.701 nhưng vẫn dưới MA5, MA10, MA20, MA50. Phố Wall bật mạnh 23/11 sau khi Nvidia phục chức CEO cho ông Jensen Huang, châu Á hồi phục.",
+      "key_findings": [
+        "VN-Index 1.697,14 (+8,35 điểm; +0,49%), dưới cả 4 đường MA",
+        "Khớp lệnh 8.651,2 tỷ, thấp hơn 26,5% so với trung bình 30 phiên",
+        "Khối ngoại bán ròng phiên thứ 5 nhưng tự doanh mua ròng bù gần hết",
+        "Phố Wall 23/11: S&P 500 +4,73%, Nasdaq +6,51%, Dow +3,01%",
+        "3 mã nổi bật: FRT 4,0; MSN 3,5; VHM 3,5"
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 25/11",
+          "items": [
+            "Cơ sở, lệch tích cực: kháng cự 1.700-1.701, chưa vượt được MA5/10/20/50"
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: bán ròng 407,1 tỷ HOSE (phiên thứ 5)",
+            "Tự doanh: mua ròng 376,5 tỷ (khớp lệnh +218,2; thỏa thuận +158,3)",
+            "Trong nước (suy luận): phần còn lại ròng khoảng +31 tỷ",
+            "Thỏa thuận: 4.039,7 tỷ; tổng thanh khoản 12.690,9 tỷ"
+          ]
+        },
+        {
+          "title": "Vĩ mô & quốc tế",
+          "items": [
+            "Phố Wall bật mạnh phiên 23/11 sau tin Nvidia phục chức CEO cho ông Jensen Huang",
+            "Châu Á 24/11 hồi phục mạnh"
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Bất động sản",
+          "view": "VHM được nâng lên 3,5 điểm nhờ dòng tiền ngoại đảo sang mua ròng; nhóm Vingroup nằm trong nhóm hút tiền phiên 23/11."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "FRT",
+          "note": "Điểm 4,0 (đầu tư 0,5; kết quả 2,0; định giá 1,5)"
+        },
+        {
+          "ticker": "MSN",
+          "note": "Điểm 3,5 (0,5; 2,0; 1,0)"
+        },
+        {
+          "ticker": "VHM",
+          "note": "Điểm 3,5, tăng từ 3,0 do ngoại đảo sang mua ròng"
+        },
+        {
+          "ticker": "HPG",
+          "note": "Dự bị, 2,5 điểm"
+        }
+      ],
+      "action_items": [
+        "Theo dõi phản ứng của VN-Index quanh kháng cự 1.700-1.701 khi giao dịch lại 25/11"
+      ],
+      "sources": [
+        "TCBS",
+        "Vietstock",
+        "CafeF"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
       "date": "2026-11-23",
       "session": "afternoon",
       "kind": "bulletin",
@@ -4518,41 +4976,6 @@
         "Theo dõi hỗ trợ 1.750-1.754; hạn chế mở vị thế mới nếu mất ngưỡng và khối ngoại tiếp tục bán.",
         "Quan sát DMX, NVL, DIG; chỉ giải ngân khi dòng tiền xác nhận.",
         "Lưu ý rủi ro khối ngoại bán ròng 10 phiên và tác động Thông tư 145."
-      ],
-      "sources": [
-        "TCBS Cơ hội đầu tư"
-      ],
-      "session": "morning",
-      "kind": "bulletin",
-      "origin": "Bản tin chứng khoán sáng (email)",
-      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
-    },
-    {
-      "date": "2026-10-06",
-      "generated_at": "2026-10-06T09:33:00+07:00",
-      "title": "Bản tin sáng 06/10: VN-Index ngắt chuỗi 5 phiên giảm",
-      "summary": "VN-Index phiên 05/10 tăng 0,89% (+15,49 điểm) lên 1.753,20 điểm, chấm dứt 5 phiên giảm, nhưng thanh khoản khớp lệnh giảm 29,9% xuống thấp nhất từ 20/8 và khối ngoại bán ròng phiên thứ 9. Lực kéo từ Vingroup, Thép và một số Ngân hàng/Bán lẻ. Chỉ số dưới toàn bộ MA5-MA50. Vĩ mô tích cực (GDP 9 tháng +9,01%) nhưng TCBS khuyên thận trọng với cổ phiếu chứng khoán.",
-      "key_findings": [
-        "Thanh khoản khớp lệnh HoSE 10.126 tỷ, thấp hơn 24,9% TB30.",
-        "Khối ngoại bán TCB, VHM, PNJ, VNM; mua HPG, DGW, GMD.",
-        "GDP Q3 +9,95% YoY, 9T +9,01%; nhập siêu 19,42 tỷ USD; CPI 9T +4,52%.",
-        "Việc làm Mỹ yếu làm giảm kỳ vọng Fed tăng lãi suất; Nasdaq +1,19%.",
-        "PNJ dự kiến trích lập dự phòng 7.071 tỷ liên quan sự cố kim cương."
-      ],
-      "tickers": [
-        {
-          "ticker": "CTS",
-          "note": "TCBS Chờ mua — P/B ~1,9x cao hơn ngành, beta ~1,2; chờ thanh khoản cải thiện."
-        },
-        {
-          "ticker": "PNJ",
-          "note": "Rủi ro trích lập dự phòng 7.071 tỷ đồng."
-        }
-      ],
-      "action_items": [
-        "Chỉ giải ngân mới khi vượt vững 1.757-1.775 kèm thanh khoản cải thiện.",
-        "Rà soát mã bị khối ngoại bán mạnh (TCB, VHM, PNJ, VNM); chưa tăng tỷ trọng CTS.",
-        "Cập nhật rủi ro PNJ và tái cấu trúc GEE."
       ],
       "sources": [
         "TCBS Cơ hội đầu tư"
