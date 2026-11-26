@@ -2,6 +2,90 @@
   "items": [
     {
       "date": "2026-11-26",
+      "session": "afternoon",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán chiều (email)",
+      "generated_at": "2026-11-26T16:18:35+07:00",
+      "title": "Bản tin chiều 26/11: VN-Index giảm mạnh 3,42%, thủng hỗ trợ 1.666-1.672",
+      "summary": "VN-Index đóng cửa 1.629,68 điểm (-57,77 điểm; -3,42%), thủng vùng hỗ trợ 1.666-1.672. Khối ngoại bán ròng 187,5 tỷ đồng trên HOSE, phiên bán ròng thứ 7 liên tiếp. Tổng giá trị giao dịch 16.044 tỷ đồng (một nguồn ghi khớp lệnh gần 13.500 tỷ), tự doanh chưa có số. Kịch bản phiên 27/11 là Cơ sở, lệch tiêu cực. Bản tin chưa có bảng chi tiết dòng tiền theo mã.",
+      "key_findings": [
+        "VN-Index 1.629,68 điểm, giảm 57,77 điểm (-3,42%), thủng hỗ trợ 1.666-1.672.",
+        "Khối ngoại bán ròng 187,5 tỷ đồng trên HOSE, phiên thứ 7 liên tiếp.",
+        "Tổng GTGD HOSE 16.044 tỷ đồng; nguồn khác ghi khớp lệnh gần 13.500 tỷ.",
+        "Mã nổi bật theo dõi: VNM 4,0; SAB 4,0; CTD 3,5 (xếp hạng theo dõi, không phải khuyến nghị mua).",
+        "Phiên 27/11: hỗ trợ 1.600-1.630, kháng cự 1.660-1.680."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 27/11",
+          "items": [
+            "Cơ sở, lệch tiêu cực: thị trường cần ổn định quanh vùng hỗ trợ 1.600-1.630.",
+            "Kháng cự gần: 1.660-1.680."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: bán ròng 187,5 tỷ đồng trên HOSE, phiên thứ 7 liên tiếp.",
+            "Tự doanh: chưa có số.",
+            "Thỏa thuận: khoảng 2.500 tỷ đồng (suy luận)."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "VNM và SAB cùng được xếp 4,0 điểm theo dõi, MSN ở danh sách dự bị với 3,0 điểm."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG ở mức 2,0 điểm theo dõi, chưa nổi bật trong phiên giảm mạnh."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "VHM ở mức 2,5 điểm theo dõi, thuộc nhóm dự bị."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "VNM",
+          "note": "4,0 điểm theo dõi, nổi bật nhất bản tin; không phải khuyến nghị mua."
+        },
+        {
+          "ticker": "SAB",
+          "note": "4,0 điểm theo dõi; không phải khuyến nghị mua."
+        },
+        {
+          "ticker": "CTD",
+          "note": "3,5 điểm theo dõi; không phải khuyến nghị mua."
+        },
+        {
+          "ticker": "MSN",
+          "note": "Dự bị, 3,0 điểm."
+        },
+        {
+          "ticker": "VHM",
+          "note": "Dự bị, 2,5 điểm."
+        },
+        {
+          "ticker": "HPG",
+          "note": "Dự bị, 2,0 điểm."
+        }
+      ],
+      "action_items": [
+        "Theo dõi phản ứng của VN-Index quanh hỗ trợ 1.600-1.630 trong phiên 27/11.",
+        "Bảng và phụ lục chỉ để tham khảo, không phải khuyến nghị đầu tư."
+      ],
+      "sources": [
+        "Index.vn",
+        "CafeF",
+        "VnExpress",
+        "TCBS"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-26",
       "session": "midday",
       "kind": "bulletin",
       "origin": "Bản tin chứng khoán trưa (email)",
