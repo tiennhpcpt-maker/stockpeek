@@ -1,6 +1,95 @@
 {
   "items": [
     {
+      "date": "2026-11-26",
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "generated_at": "2026-11-26T08:18:37+07:00",
+      "title": "Bản tin sáng 26/11: VN-Index lùi về 1.687,45, dòng tiền ngoại bán ròng mạnh",
+      "summary": "VN-Index đóng phiên 25/11 ở 1.687,45 điểm (-9,69; -0,57%), nằm dưới các đường MA5/10/20/50, khớp lệnh thấp hơn 27,7% so với trung bình 30 phiên. Dòng tiền mâu thuẫn: khối ngoại bán ròng 5.674,4 tỷ trên HOSE (phiên bán ròng thứ 6, riêng VIC 4.701 tỷ) trong khi tự doanh mua ròng 719 tỷ, trong đó 482 tỷ là chứng chỉ quỹ FUEVFVND. Kịch bản 26/11: Cơ sở, lệch tiêu cực.",
+      "key_findings": [
+        "VN-Index 1.687,45 điểm (-0,57%), dưới MA5/10/20/50; MA20 quanh 1.724, MA50 quanh 1.744",
+        "Giá trị khớp lệnh HOSE 8.446,3 tỷ, thấp hơn 27,7% so với TB30",
+        "Khối ngoại bán ròng 5.674,4 tỷ trên HOSE, chuỗi 6 phiên; VIC bị bán ròng 4.701 tỷ",
+        "Tự doanh mua ròng 719 tỷ (482 tỷ là chứng chỉ quỹ FUEVFVND); thỏa thuận 7.644,9 tỷ",
+        "3 mã nổi bật: FRT 3,5; GMD 3,5; VHM 3,0"
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 26/11",
+          "items": [
+            "Cơ sở, lệch tiêu cực",
+            "Hỗ trợ: 1.666-1.672",
+            "Kháng cự: 1.693-1.700"
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: bán ròng 5.674,4 tỷ trên HOSE, phiên thứ 6 liên tiếp; VIC 4.701 tỷ",
+            "Tự doanh: mua ròng 719 tỷ, trong đó 482 tỷ là chứng chỉ quỹ FUEVFVND",
+            "Thỏa thuận: 7.644,9 tỷ"
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Bất động sản",
+          "view": "VIC bị khối ngoại bán ròng 4.701 tỷ trong phiên 25/11; VHM được chấm 3,0 điểm, nằm trong nhóm nổi bật của bản tin."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "FRT dẫn đầu bản tin với 3,5 điểm."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG được chấm 2,0 điểm, chưa vào nhóm nổi bật."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "MSN (2,5) và VNM (2,5) nằm trong danh sách dự bị, chưa đủ điểm vào nhóm nổi bật; SAB chưa đủ cơ sở chấm."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "FRT",
+          "note": "3,5 điểm (đột phá 0,5; kết quả 2,0; định giá 1,0), nổi bật nhất bản tin."
+        },
+        {
+          "ticker": "GMD",
+          "note": "3,5 điểm (đột phá 1,0; kết quả 1,5; định giá 1,0)."
+        },
+        {
+          "ticker": "VHM",
+          "note": "3,0 điểm (đột phá 0,5; kết quả 2,0; định giá 0,5)."
+        },
+        {
+          "ticker": "MSN",
+          "note": "Dự bị, 2,5 điểm (kết quả 2,0; định giá 0,5)."
+        },
+        {
+          "ticker": "VNM",
+          "note": "Dự bị, 2,5 điểm (đột phá 1,0; kết quả 1,5)."
+        },
+        {
+          "ticker": "HPG",
+          "note": "2,0 điểm (kết quả 2,0)."
+        }
+      ],
+      "action_items": [
+        "Theo dõi vùng hỗ trợ 1.666-1.672 và kháng cự 1.693-1.700 của VN-Index",
+        "Theo dõi diễn biến bán ròng của khối ngoại, đặc biệt VIC"
+      ],
+      "sources": [
+        "TCBS",
+        "CafeF",
+        "Vietstock",
+        "TNCK"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
       "date": "2026-11-25",
       "session": "afternoon",
       "kind": "bulletin",
