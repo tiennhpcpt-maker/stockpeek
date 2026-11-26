@@ -319,10 +319,17 @@ def _b64url_decode(s):
     return base64.urlsafe_b64decode(padded.encode("ascii"))
 
 
-def create_session_token(user_id):
+def create_session_token(user):
+    """Cookie phiên ký HMAC, không lưu phía server. Trường "sv" = session_version của
+    tài khoản lúc tạo: đăng xuất (hoặc gắn Google vào tài khoản đăng ký thường) tăng
+    session_version, nên mọi phiên cũ trên mọi thiết bị hết hiệu lực ngay, không phải
+    chờ 30 ngày. Phiên tạo trước 26/11/2026 không có "sv" -> coi là 0."""
     if not SESSION_SECRET:
         raise RuntimeError("Server chưa cấu hình SESSION_SECRET")
-    payload = json.dumps({"uid": user_id, "exp": int(time.time()) + SESSION_MAX_AGE})
+    payload = json.dumps({
+        "uid": user["id"], "sv": int(user.get("session_version") or 0),
+        "exp": int(time.time()) + SESSION_MAX_AGE,
+    })
     payload_b64 = _b64url_encode(payload.encode("utf-8"))
     sig = hmac.new(SESSION_SECRET.encode("utf-8"), payload_b64.encode("ascii"), hashlib.sha256).hexdigest()
     return f"{payload_b64}.{sig}"
@@ -341,7 +348,7 @@ def verify_session_token(token):
         return None
     if payload.get("exp", 0) < time.time():
         return None
-    return payload.get("uid")
+    return payload
 
 
 def _is_admin(user):
@@ -459,6 +466,8 @@ def find_or_create_google_user(google_id, email, name):
         # thật đăng nhập Google (chiếm tài khoản đặt trước). Từ đó chỉ đăng nhập Google.
         return update_user_data(existing_by_email["id"], lambda u: {
             **u, "google_id": google_id, "provider": "google", "salt": None, "password_hash": None,
+            # Thu hồi luôn các phiên đang mở bằng mật khẩu cũ.
+            "session_version": int(u.get("session_version") or 0) + 1,
         })
 
     result = {}
@@ -1709,6 +1718,12 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def _send_server_error(self, e, status=502):
+        """Lỗi nội bộ (GitHub API, VPS, mạng...): ghi chi tiết vào log Render, trình
+        duyệt chỉ nhận câu chung — không lộ tên repo, đường dẫn, thông báo của API."""
+        print(f"[lỗi] {self.command} {urlparse(self.path).path}: {type(e).__name__}: {e}", flush=True)
+        self._send_json({"ok": False, "error": "Máy chủ đang gặp lỗi, vui lòng thử lại sau"}, status)
+
     def _session_cookie_header(self, token, max_age=SESSION_MAX_AGE):
         secure = " Secure;" if os.environ.get("PORT") else ""
         return f"session={token}; Path=/; HttpOnly;{secure} Max-Age={max_age}; SameSite=Lax"
@@ -1744,13 +1759,16 @@ class Handler(BaseHTTPRequestHandler):
             return None
         if "session" not in c:
             return None
-        uid = verify_session_token(c["session"].value)
-        if not uid:
+        payload = verify_session_token(c["session"].value)
+        if not payload or not payload.get("uid"):
             return None
         try:
-            return find_user_by_id(uid)
+            user = find_user_by_id(payload["uid"])
         except Exception:
             return None
+        if not user or int(payload.get("sv") or 0) != int(user.get("session_version") or 0):
+            return None  # phiên đã bị thu hồi (đăng xuất ở thiết bị khác)
+        return user
 
     def _require_admin(self):
         """Trả về user hiện tại nếu là admin, ngược lại tự gửi lỗi 401/403 và
@@ -1786,7 +1804,7 @@ class Handler(BaseHTTPRequestHandler):
                 data = get_quotes(tickers)
                 self._send_json({"ok": True, "data": data, "ts": time.time()})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/indices":
@@ -1794,7 +1812,7 @@ class Handler(BaseHTTPRequestHandler):
                 data = get_market_indices()
                 self._send_json({"ok": True, "data": data, "ts": time.time()})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/news":
@@ -1808,7 +1826,7 @@ class Handler(BaseHTTPRequestHandler):
                 data = get_news(sources, category)
                 self._send_json({"ok": True, "data": data["items"], "errors": data["errors"]})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/sources":
@@ -1820,7 +1838,7 @@ class Handler(BaseHTTPRequestHandler):
                     data, _ = load_sources()
                     self._send_json({"ok": True, "data": data, "personal": False})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/watchlist":
@@ -1831,7 +1849,7 @@ class Handler(BaseHTTPRequestHandler):
                 else:
                     self._send_json({"ok": True, "data": None, "personal": False})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/auth/me":
@@ -1839,7 +1857,7 @@ class Handler(BaseHTTPRequestHandler):
                 user = self._current_user()
                 self._send_json({"ok": True, "data": _public_user(user)})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/auth/google/login":
@@ -1872,28 +1890,28 @@ class Handler(BaseHTTPRequestHandler):
             try:
                 self._send_json({"ok": True, "data": get_live_sectors()})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/daily-reports":
             try:
                 self._send_json({"ok": True, "data": load_daily_reports()})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/weekly-reports":
             try:
                 self._send_json({"ok": True, "data": load_weekly_reports()})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/market-overview":
             try:
                 self._send_json({"ok": True, "data": get_market_view()})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/admin/users":
@@ -1903,7 +1921,7 @@ class Handler(BaseHTTPRequestHandler):
                 users = [_admin_user_view(u) for u in list_all_users()]
                 self._send_json({"ok": True, "data": users})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/admin/sources":
@@ -1913,7 +1931,7 @@ class Handler(BaseHTTPRequestHandler):
                 data, _ = load_sources(force=True)
                 self._send_json({"ok": True, "data": data})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         self.serve_static(parsed.path)
@@ -1966,9 +1984,9 @@ class Handler(BaseHTTPRequestHandler):
                 elif str(e) == "MAX":
                     self._send_json({"ok": False, "error": f"Chỉ cho phép tối đa {MAX_SOURCES} nguồn"}, 400)
                 else:
-                    self._send_json({"ok": False, "error": str(e)}, 400)
+                    self._send_server_error(e, 400)
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/sources/reset":
@@ -1981,7 +1999,7 @@ class Handler(BaseHTTPRequestHandler):
                 _news_cache.clear()
                 self._send_json({"ok": True, "data": new_sources})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/admin/sources":
@@ -2014,9 +2032,9 @@ class Handler(BaseHTTPRequestHandler):
                 elif str(e) == "MAX":
                     self._send_json({"ok": False, "error": f"Chỉ cho phép tối đa {MAX_SOURCES} nguồn"}, 400)
                 else:
-                    self._send_json({"ok": False, "error": str(e)}, 400)
+                    self._send_server_error(e, 400)
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/ingest/analysis":
@@ -2062,7 +2080,7 @@ class Handler(BaseHTTPRequestHandler):
                 self._send_json({"ok": True, "date": entry["date"], "session": entry.get("session"),
                                  "kind": entry.get("kind"), **result})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/admin/daily-report/generate":
@@ -2077,7 +2095,7 @@ class Handler(BaseHTTPRequestHandler):
                     report = generate_daily_report(session)
                 self._send_json({"ok": True, "data": report})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/watchlist":
@@ -2104,7 +2122,7 @@ class Handler(BaseHTTPRequestHandler):
                 new_list = add_user_ticker(user["id"], ticker)
                 self._send_json({"ok": True, "data": new_list})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/auth/register":
@@ -2124,7 +2142,7 @@ class Handler(BaseHTTPRequestHandler):
                 return
             try:
                 user = create_local_user(email, password, name)
-                token = create_session_token(user["id"])
+                token = create_session_token(user)
                 self._send_json(
                     {"ok": True, "data": _public_user(user)},
                     set_cookie=self._session_cookie_header(token),
@@ -2135,9 +2153,9 @@ class Handler(BaseHTTPRequestHandler):
                 elif str(e) == "WEAK_PASSWORD":
                     self._send_json({"ok": False, "error": "Mật khẩu cần ít nhất 6 ký tự"}, 400)
                 else:
-                    self._send_json({"ok": False, "error": str(e)}, 400)
+                    self._send_server_error(e, 400)
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/auth/login":
@@ -2161,17 +2179,29 @@ class Handler(BaseHTTPRequestHandler):
                 if not verify_password(password, user["salt"], user["password_hash"]):
                     self._send_json({"ok": False, "error": "Email hoặc mật khẩu không đúng"}, 401)
                     return
-                token = create_session_token(user["id"])
+                token = create_session_token(user)
                 self._send_json(
                     {"ok": True, "data": _public_user(user)},
                     set_cookie=self._session_cookie_header(token),
                 )
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/auth/logout":
-            self._send_json({"ok": True}, set_cookie=self._clear_cookie_header())
+            # Đăng xuất = thu hồi mọi phiên của tài khoản (mọi thiết bị): cookie ký HMAC
+            # không lưu phía server, nên chỉ xoá cookie thì ai đã chép được cookie vẫn
+            # dùng tiếp tới 30 ngày. Tốn 1 lần ghi users.json; lỗi ghi vẫn xoá cookie.
+            user = self._current_user()
+            revoked = False
+            if user:
+                try:
+                    update_user_data(user["id"], lambda u: {
+                        **u, "session_version": int(u.get("session_version") or 0) + 1})
+                    revoked = True
+                except Exception as e:
+                    print(f"[logout] không thu hồi được phiên: {e!r}", flush=True)
+            self._send_json({"ok": True, "revoked": revoked}, set_cookie=self._clear_cookie_header())
             return
 
         if parsed.path == "/api/admin/users/role":
@@ -2197,9 +2227,9 @@ class Handler(BaseHTTPRequestHandler):
                 elif str(e) == "USER_NOT_FOUND":
                     self._send_json({"ok": False, "error": "Không tìm thấy tài khoản"}, 404)
                 else:
-                    self._send_json({"ok": False, "error": str(e)}, 400)
+                    self._send_server_error(e, 400)
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         self.send_error(404)
@@ -2220,7 +2250,7 @@ class Handler(BaseHTTPRequestHandler):
                 _news_cache.clear()
                 self._send_json({"ok": True, "data": new_sources})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/admin/sources":
@@ -2233,7 +2263,7 @@ class Handler(BaseHTTPRequestHandler):
                 _news_cache.clear()
                 self._send_json({"ok": True, "data": new_sources})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/watchlist":
@@ -2247,7 +2277,7 @@ class Handler(BaseHTTPRequestHandler):
                 new_list = remove_user_ticker(user["id"], ticker)
                 self._send_json({"ok": True, "data": new_list})
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         if parsed.path == "/api/admin/users":
@@ -2266,9 +2296,9 @@ class Handler(BaseHTTPRequestHandler):
                 if str(e) == "USER_NOT_FOUND":
                     self._send_json({"ok": False, "error": "Không tìm thấy tài khoản"}, 404)
                 else:
-                    self._send_json({"ok": False, "error": str(e)}, 400)
+                    self._send_server_error(e, 400)
             except Exception as e:
-                self._send_json({"ok": False, "error": str(e)}, 502)
+                self._send_server_error(e)
             return
 
         self.send_error(404)
@@ -2340,7 +2370,7 @@ class Handler(BaseHTTPRequestHandler):
                 return
 
             user = find_or_create_google_user(google_id, email, name)
-            session_token = create_session_token(user["id"])
+            session_token = create_session_token(user)
             self.send_response(302)
             self.send_header("Location", "/")
             self.send_header("Set-Cookie", self._session_cookie_header(session_token))
