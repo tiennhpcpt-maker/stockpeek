@@ -2,6 +2,68 @@
   "items": [
     {
       "date": "2026-11-26",
+      "session": "midday",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán trưa (email)",
+      "generated_at": "2026-11-26T13:17:04+07:00",
+      "title": "Bản tin trưa 26/11: VN-Index thủng hỗ trợ 1.666-1.672, rổ theo dõi FRT, GMD, VNM",
+      "summary": "Hết phiên sáng 26/11, VN-Index đóng ở 1.661,41 điểm (-26,04; -1,54%), thủng vùng hỗ trợ 1.666-1.672. HOSE có 38 mã tăng, 288 mã giảm. Khớp lệnh HOSE phiên sáng 6.136,6 tỷ theo VnEconomy (Index.vn ghi 6.701 tỷ). Khối ngoại mua ròng nhẹ 11,7 tỷ; tự doanh và thỏa thuận chưa có số. Đây là bản nhanh, chưa quét dòng tiền theo mã đầy đủ.",
+      "key_findings": [
+        "VN-Index 1.661,41 điểm (-1,54%), thủng hỗ trợ 1.666-1.672.",
+        "Độ rộng yếu: 38 mã tăng, 288 mã giảm trên HOSE.",
+        "Khớp lệnh HOSE phiên sáng 6.136,6 tỷ (VnEconomy); Index.vn ghi 6.701 tỷ.",
+        "Khối ngoại mua ròng nhẹ 11,7 tỷ; tự doanh và thỏa thuận chưa có số.",
+        "3 mã nổi bật tạm tính: FRT 3,5; GMD 3,5; VNM 3,0 (xếp hạng theo dõi, không phải khuyến nghị mua)."
+      ],
+      "sections": [
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: mua ròng nhẹ 11,7 tỷ phiên sáng.",
+            "Tự doanh: chưa có số.",
+            "Thỏa thuận: chưa có số."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Bán lẻ",
+          "view": "FRT dẫn đầu rổ theo dõi tạm tính với 3,5 điểm trong phiên sáng thị trường giảm mạnh."
+        },
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "VNM nằm trong rổ theo dõi với 3,0 điểm tạm tính."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "FRT",
+          "note": "Điểm tạm tính 3,5; xếp hạng theo dõi, không phải khuyến nghị mua."
+        },
+        {
+          "ticker": "GMD",
+          "note": "Điểm tạm tính 3,5; xếp hạng theo dõi, không phải khuyến nghị mua."
+        },
+        {
+          "ticker": "VNM",
+          "note": "Điểm tạm tính 3,0; xếp hạng theo dõi, không phải khuyến nghị mua."
+        }
+      ],
+      "action_items": [
+        "Theo dõi việc VN-Index lấy lại vùng 1.666-1.672 trong phiên chiều.",
+        "Chỉ tham khảo, không phải khuyến nghị đầu tư."
+      ],
+      "sources": [
+        "VnEconomy",
+        "Index.vn",
+        "CafeF",
+        "Vietstock",
+        "TCBS"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-26",
       "session": "morning",
       "kind": "bulletin",
       "origin": "Bản tin chứng khoán sáng (email)",
