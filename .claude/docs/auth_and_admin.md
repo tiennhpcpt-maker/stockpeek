@@ -16,7 +16,7 @@ Tài khoản Google và tài khoản email trùng nhau qua **cùng email** sẽ 
 
 ```python
 def _is_admin(user):
-    if (user.get("email") or "").lower() in ADMIN_EMAILS:
+    if user.get("google_id") and (user.get("email") or "").lower() in ADMIN_EMAILS:
         return True
     return user.get("role") == "admin"
 ```
@@ -24,7 +24,7 @@ def _is_admin(user):
 - **`ADMIN_EMAILS`** (biến môi trường Render, danh sách email phân tách bởi dấu phẩy): admin "gốc", **không thể gỡ qua UI trang quản trị**. Cố tình thiết kế vậy để tránh việc admin tự bấm nhầm "Bỏ admin"/"Xoá" cho chính mình rồi mất quyền truy cập vĩnh viễn (nút tương ứng bị `disabled` phía client khi `id === currentUser.id`, và phía server cũng chặn ở endpoint).
 - **`role: "admin"`** trong `users.json`: cấp qua UI (nút "Cấp admin" trong tab Tài khoản), gỡ được qua UI. Đây là cách cấp quyền cho admin thứ 2 trở đi.
 
-Muốn thêm 1 admin gốc mới: thêm email vào `ADMIN_EMAILS` trên Render dashboard rồi bảo người đó đăng nhập bằng đúng email đó — **không** sửa `users.json` bằng tay để gán `role: "admin"` cho mục đích này (dùng sai lớp, họ vẫn gỡ được quyền qua UI).
+Muốn thêm 1 admin gốc mới: thêm email vào `ADMIN_EMAILS` trên Render dashboard rồi bảo người đó đăng nhập bằng đúng email đó **bằng Google** (từ 26/11/2026 admin gốc theo email chỉ tính với tài khoản có `google_id`, vì đăng ký thường không xác minh email; Google cũng phải báo `email_verified`). Liên kết Google vào tài khoản đăng ký thường sẽ xoá mật khẩu cũ (chống chiếm tài khoản đặt trước) — **không** sửa `users.json` bằng tay để gán `role: "admin"` cho mục đích này (dùng sai lớp, họ vẫn gỡ được quyền qua UI).
 
 ## API admin — tách biệt hoàn toàn API thường
 
