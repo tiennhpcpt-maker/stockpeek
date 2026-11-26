@@ -43,3 +43,12 @@ Giới hạn khác: đăng ký tối đa 5 tài khoản / giờ / IP (`_check_re
 ## Header bảo mật
 
 `Handler.end_headers` thêm cho mọi phản hồi: `X-Frame-Options: DENY` + `Content-Security-Policy: frame-ancestors 'none'` (chống nhúng trang vào iframe — clickjacking), `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`. CSP chỉ đặt `frame-ancestors` để không chặn script/style hiện có. Vì có `nosniff`, file tĩnh mới phải trả đúng Content-Type.
+
+## Thu hồi phiên (từ 26/11/2026)
+Cookie phiên ký HMAC mang `sv` = `session_version` của tài khoản trong users.json. `_current_user` so `sv` với `session_version`; lệch là phiên bị thu hồi.
+- **Đăng xuất** tăng `session_version` → đăng xuất **mọi thiết bị** (1 lần ghi users.json).
+- Gắn Google vào tài khoản đăng ký thường cũng tăng `session_version`.
+- Phiên tạo trước khi có `sv` coi là 0, nên deploy không đăng xuất ai.
+
+## Lỗi trả về trình duyệt
+Lỗi nội bộ (GitHub API, VPS, mạng) đi qua `Handler._send_server_error`: chi tiết ghi log Render (`[lỗi] ...`), trình duyệt chỉ nhận "Máy chủ đang gặp lỗi". Xem lỗi thật trong Logs của Render.
