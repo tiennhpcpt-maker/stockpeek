@@ -2013,6 +2013,11 @@ class Handler(BaseHTTPRequestHandler):
             auth = self.headers.get("Authorization") or ""
             given = auth[7:].strip() if auth.startswith("Bearer ") else ""
             if not given or not hmac.compare_digest(given.encode(), INGEST_TOKEN.encode()):
+                # Chẩn đoán (không ghi giá trị mã): có header không, độ dài mã gửi / mã server.
+                print(f"[ingest] 401: Authorization={'có' if auth else 'không'}, "
+                      f"Bearer={'có' if auth.startswith('Bearer ') else 'không'}, "
+                      f"dài mã gửi={len(given)}, dài mã server={len(INGEST_TOKEN)}, "
+                      f"server có khoảng trắng đầu/cuối={INGEST_TOKEN != INGEST_TOKEN.strip()}", flush=True)
                 if not _check_rate_limit("ingest", self._client_ip(), 20, 3600):
                     self._send_json({"ok": False, "error": "Sai mã quá nhiều lần"}, 429)
                     return
