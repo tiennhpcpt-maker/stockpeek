@@ -2010,14 +2010,18 @@ class Handler(BaseHTTPRequestHandler):
             if not INGEST_TOKEN:
                 self._send_json({"ok": False, "error": "Server chưa cấu hình INGEST_TOKEN"}, 503)
                 return
-            auth = self.headers.get("Authorization") or ""
-            given = auth[7:].strip() if auth.startswith("Bearer ") else ""
-            if not given or not hmac.compare_digest(given.encode(), INGEST_TOKEN.encode()):
-                # Chẩn đoán (không ghi giá trị mã): có header không, độ dài mã gửi / mã server.
+            # Proxy "Thông tin bí mật cho mạng" của môi trường cloud gắn header Authorization,
+            # nhưng không chắc đúng dạng "Bearer <mã>" (đã gặp 11/2026) — nhận cả "bearer <mã>",
+            # "Bearer<mã>" hoặc chỉ "<mã>".
+            auth = (self.headers.get("Authorization") or "").strip()
+            m = re.match(r"(?i)bearer\s*", auth)
+            given = (auth[m.end():] if m else auth).strip()
+            expected = INGEST_TOKEN.strip()
+            if not given or not hmac.compare_digest(given.encode(), expected.encode()):
+                # Chẩn đoán (không ghi giá trị mã): dạng header và độ dài.
                 print(f"[ingest] 401: Authorization={'có' if auth else 'không'}, "
-                      f"Bearer={'có' if auth.startswith('Bearer ') else 'không'}, "
-                      f"dài mã gửi={len(given)}, dài mã server={len(INGEST_TOKEN)}, "
-                      f"server có khoảng trắng đầu/cuối={INGEST_TOKEN != INGEST_TOKEN.strip()}", flush=True)
+                      f"tiền tố bearer={'có' if m else 'không'}, dài header={len(auth)}, "
+                      f"dài mã gửi={len(given)}, dài mã server={len(expected)}", flush=True)
                 if not _check_rate_limit("ingest", self._client_ip(), 20, 3600):
                     self._send_json({"ok": False, "error": "Sai mã quá nhiều lần"}, 429)
                     return
