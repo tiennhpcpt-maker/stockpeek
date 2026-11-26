@@ -1,6 +1,319 @@
 {
   "items": [
     {
+      "date": "2026-11-26",
+      "session": "morning",
+      "generated_at": "2026-11-26T08:30:09+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "Chứng khoán 26-11: Sau phiên khối ngoại bán ròng hơn 5.600 tỉ đồng, VN-Index có thể lùi mốc nào?",
+          "link": "https://stockbiz.vn/tin-tuc/chung-khoan-26-11-sau-phien-khoi-ngoai-ban-rong-hon-5600-ti-dong-vn-index-co-the-lui-moc-nao/42914886",
+          "pubDate": "Thu, 26 Nov 2026 01:00:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Thanh Niên Chứng khoán"
+          ]
+        },
+        {
+          "title": "Bộ Công Thương thông tin về mức thuế Mỹ đề xuất với hàng Việt Nam",
+          "link": "https://dantri.com.vn/kinh-doanh/bo-cong-thuong-thong-tin-ve-muc-thue-my-de-xuat-voi-hang-viet-nam-20261125231428010.htm",
+          "pubDate": "Thu, 26 Nov 2026 00:16:18 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "VN-Index mất thêm 13 điểm, thủng mốc 1.700 điểm",
+          "link": "https://thanhnien.vn/vn-index-mat-them-13-diem-thung-moc-1700-diem-185261119161022859.htm",
+          "pubDate": "Wed, 25 Nov 2026 14:06:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Thanh Niên Chứng khoán"
+          ]
+        },
+        {
+          "title": "Chứng khoán phái sinh ngày 26/11/2026: Chưa hết thận trọng",
+          "link": "http://vietstock.vn/2026/11/chung-khoan-phai-sinh-ngay-26112026-chua-het-than-trong-1636-1517617.htm",
+          "pubDate": "Wed, 25 Nov 2026 19:30:00 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Vietstock",
+            "VnEconomy"
+          ]
+        },
+        {
+          "title": "US announces new tariffs on host of countries including China",
+          "link": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
+          "pubDate": "Thu, 26 Nov 2026 01:20:14 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "BBC Business"
+          ]
+        },
+        {
+          "title": "Đọc nhanh 26-11: Vốn hóa Thaiholdings giảm hơn 62.000 tỉ đồng từ đỉnh",
+          "link": "https://stockbiz.vn/tin-tuc/doc-nhanh-26-11-von-hoa-thaiholdings-giam-hon-62000-ti-dong-tu-dinh/42915007",
+          "pubDate": "Thu, 26 Nov 2026 01:16:00 GMT",
+          "sourceCount": 1,
+          "sources": [
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Giá cà phê xuống dưới 70.000 đồng/kg, người trồng cân nhắc bán hay giữ",
+          "link": "https://dantri.com.vn/kinh-doanh/gia-ca-phe-xuong-duoi-70000-dongkg-nguoi-trong-can-nhac-ban-hay-giu-20261126075639658.htm",
+          "pubDate": "Thu, 26 Nov 2026 08:08:58 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "Dân Trí Kinh doanh"
+          ]
+        },
+        {
+          "title": "Top cổ phiếu đáng chú ý đầu phiên 26/11",
+          "link": "http://vietstock.vn/2026/11/top-co-phieu-dang-chu-y-dau-phien-2611-830-1517832.htm",
+          "pubDate": "Thu, 26 Nov 2026 08:00:00 +0700",
+          "sourceCount": 1,
+          "sources": [
+            "Vietstock"
+          ]
+        }
+      ],
+      "mentioned_tickers": [],
+      "title": "Bản tin sáng 26/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1687.45,
+            "change": -9.69,
+            "changePct": -0.57,
+            "tradingValue": 16091.2,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1778.58,
+            "change": -12.54,
+            "changePct": -0.7,
+            "tradingValue": 10559.92,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 227.46,
+            "change": -4.77,
+            "changePct": -2.05,
+            "tradingValue": 802.09,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 119.82,
+            "change": 0.65,
+            "changePct": 0.55,
+            "tradingValue": 413.83,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": 0.8,
+            "up": 2,
+            "down": 1,
+            "total": 3,
+            "leader": {
+              "ticker": "SAB",
+              "changePct": 2.44
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": -0.16,
+            "up": 2,
+            "down": 2,
+            "total": 4,
+            "leader": {
+              "ticker": "PNJ",
+              "changePct": 1.59
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": -0.48,
+            "up": 1,
+            "down": 6,
+            "total": 8,
+            "leader": {
+              "ticker": "ACB",
+              "changePct": 0.51
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": -0.58,
+            "up": 1,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "IDC",
+              "changePct": 0.57
+            }
+          },
+          {
+            "name": "Dầu khí",
+            "avgChangePct": -1.56,
+            "up": 1,
+            "down": 3,
+            "total": 4,
+            "leader": {
+              "ticker": "GAS",
+              "changePct": 0.29
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": -1.62,
+            "up": 0,
+            "down": 5,
+            "total": 6,
+            "leader": {
+              "ticker": "VRE",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": -2.15,
+            "up": 0,
+            "down": 5,
+            "total": 6,
+            "leader": {
+              "ticker": "HCM",
+              "changePct": 0.0
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": -3.1,
+            "up": 0,
+            "down": 3,
+            "total": 3,
+            "leader": {
+              "ticker": "HSG",
+              "changePct": -0.99
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "SAB",
+              "last": 44050,
+              "changePct": 2.44,
+              "volume": 166510
+            },
+            {
+              "ticker": "PNJ",
+              "last": 12800,
+              "changePct": 1.59,
+              "volume": 1146530
+            },
+            {
+              "ticker": "IDC",
+              "last": 35000,
+              "changePct": 0.57,
+              "volume": 109630
+            },
+            {
+              "ticker": "ACB",
+              "last": 19850,
+              "changePct": 0.51,
+              "volume": 644440
+            },
+            {
+              "ticker": "DGW",
+              "last": 38900,
+              "changePct": 0.39,
+              "volume": 25730
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "NKG",
+              "last": 11350,
+              "changePct": -6.58,
+              "volume": 740920
+            },
+            {
+              "ticker": "NVL",
+              "last": 9500,
+              "changePct": -3.94,
+              "volume": 1025960
+            },
+            {
+              "ticker": "DXG",
+              "last": 10500,
+              "changePct": -3.23,
+              "volume": 704170
+            },
+            {
+              "ticker": "VND",
+              "last": 14000,
+              "changePct": -3.11,
+              "volume": 1074940
+            },
+            {
+              "ticker": "VIX",
+              "last": 12300,
+              "changePct": -2.77,
+              "volume": 3233740
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 12300,
+              "changePct": -2.77,
+              "volume": 3233740
+            },
+            {
+              "ticker": "SSI",
+              "last": 19300,
+              "changePct": -2.28,
+              "volume": 1491830
+            },
+            {
+              "ticker": "VPB",
+              "last": 20250,
+              "changePct": -0.98,
+              "volume": 1399250
+            },
+            {
+              "ticker": "TCB",
+              "last": 20700,
+              "changePct": -0.24,
+              "volume": 1174100
+            },
+            {
+              "ticker": "PNJ",
+              "last": 12800,
+              "changePct": 1.59,
+              "volume": 1146530
+            }
+          ]
+        },
+        "summary": "VN-Index giảm 9,69 điểm (-0,57%) phiên 25/11, đạt 1.687,45 điểm, giá trị giao dịch 16.091,20 tỷ đồng. Nhóm ngành mạnh nhất: Thực phẩm - Đồ uống (bình quân 0,80%, 2/3 mã tăng); yếu nhất: Thép (-3,10%). Tăng mạnh: SAB (+2,44%), PNJ (+1,59%), IDC (+0,57%). Giảm mạnh: NKG (-6,58%), NVL (-3,94%), DXG (-3,23%)."
+      },
+      "market_from": "2026-11-25",
+      "summary": "Phiên trước: VN-Index giảm 9,69 điểm (-0,57%) phiên 25/11, đạt 1.687,45 điểm, giá trị giao dịch 16.091,20 tỷ đồng. Nhóm ngành mạnh nhất: Thực phẩm - Đồ uống (bình quân 0,80%, 2/3 mã tăng); yếu nhất: Thép (-3,10%). Tăng mạnh: SAB (+2,44%), PNJ (+1,59%), IDC (+0,57%). Giảm mạnh: NKG (-6,58%), NVL (-3,94%), DXG (-3,23%). Tin được nhiều nguồn đưa nhất: \"Chứng khoán 26-11: Sau phiên khối ngoại bán ròng hơn 5.600 tỉ đồng, VN-Index có thể lùi mốc nào?\" (2 nguồn)."
+    },
+    {
       "date": "2026-11-25",
       "session": "afternoon",
       "generated_at": "2026-11-25T16:00:01+07:00",
