@@ -42,6 +42,7 @@ DEFAULT_SOURCES = [
 ]
 
 MAX_SOURCES = 15
+MAX_QUOTE_TICKERS = 60  # 1 lần /api/quotes: đủ cho danh mục (50) + chỉ số
 MAX_WATCHLIST = 50          # mã trong danh mục theo dõi của 1 tài khoản
 MAX_JSON_BODY = 64 * 1024   # byte; body JSON lớn hơn bị từ chối
 NEWS_CACHE_TTL = 60  # 1 phút - để Tin nóng/Tin trực tiếp cập nhật gần thời gian thực
@@ -346,7 +347,10 @@ def verify_session_token(token):
 def _is_admin(user):
     if not user:
         return False
-    if (user.get("email") or "").lower() in ADMIN_EMAILS:
+    # Đăng ký thường không xác minh email: ai cũng tạo được tài khoản mang email
+    # admin nếu email đó chưa có tài khoản. Nên "admin gốc" theo email chỉ tính khi
+    # tài khoản đã gắn Google (Google đã xác minh email_verified lúc đăng nhập).
+    if user.get("google_id") and (user.get("email") or "").lower() in ADMIN_EMAILS:
         return True
     return user.get("role") == "admin"
 
@@ -449,8 +453,13 @@ def find_or_create_google_user(google_id, email, name):
         return existing
     existing_by_email = find_user_by_email(email)
     if existing_by_email:
-        # Tài khoản email này đã tồn tại (đăng ký thường) -> liên kết thêm Google.
-        return update_user_data(existing_by_email["id"], lambda u: {**u, "google_id": google_id})
+        # Tài khoản email này đã tồn tại (đăng ký thường) -> liên kết Google và BỎ mật
+        # khẩu cũ: đăng ký thường không xác minh email, nên người tạo trước tài khoản
+        # mang email của người khác sẽ giữ mật khẩu và vào được tài khoản sau khi chủ
+        # thật đăng nhập Google (chiếm tài khoản đặt trước). Từ đó chỉ đăng nhập Google.
+        return update_user_data(existing_by_email["id"], lambda u: {
+            **u, "google_id": google_id, "provider": "google", "salt": None, "password_hash": None,
+        })
 
     result = {}
 
@@ -1765,7 +1774,12 @@ class Handler(BaseHTTPRequestHandler):
         if parsed.path == "/api/quotes":
             qs = parse_qs(parsed.query)
             raw_tickers = qs.get("tickers", [",".join(DEFAULT_TICKERS)])[0]
-            tickers = [t.strip().upper() for t in raw_tickers.split(",") if t.strip()]
+            # Lọc mã hợp lệ và giới hạn số lượng: mỗi mã lạ là 1 lần gọi VPS + 1 mục cache
+            # trong RAM, không chặn thì 1 request dài là đủ làm chậm/đầy bộ nhớ server.
+            tickers = list(dict.fromkeys(
+                t for t in (x.strip().upper() for x in raw_tickers.split(","))
+                if re.fullmatch(r"[A-Z0-9]{2,10}", t)
+            ))[:MAX_QUOTE_TICKERS]
             if not tickers:
                 tickers = DEFAULT_TICKERS
             try:
@@ -1906,7 +1920,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def _read_json_body(self):
         length = int(self.headers.get("Content-Length", 0) or 0)
-        if length > MAX_JSON_BODY:
+        if length < 0 or length > MAX_JSON_BODY:
             # Mọi API chỉ nhận JSON vài trăm byte; không đọc cả body khổng lồ vào RAM.
             raise ValueError("Dữ liệu gửi lên quá lớn")
         raw = self.rfile.read(length) if length else b""
@@ -2308,7 +2322,7 @@ class Handler(BaseHTTPRequestHandler):
 
             id_token = token_resp.get("id_token", "")
             if not id_token:
-                print(f"[google-oauth] no id_token in response: {token_resp}")
+                print(f"[google-oauth] no id_token in response (keys: {sorted(token_resp)})")
                 self._redirect_login_error("no_id_token")
                 return
             payload_b64 = id_token.split(".")[1]
@@ -2319,6 +2333,10 @@ class Handler(BaseHTTPRequestHandler):
 
             if not google_id:
                 self._redirect_login_error("no_sub")
+                return
+            if payload.get("email_verified") not in (True, "true"):
+                # Email chưa xác minh thì không được dùng để khớp tài khoản / quyền admin.
+                self._redirect_login_error("email_not_verified")
                 return
 
             user = find_or_create_google_user(google_id, email, name)
@@ -2343,7 +2361,7 @@ class Handler(BaseHTTPRequestHandler):
             path = "/index.html"
         safe_path = os.path.normpath(path).lstrip("/")
         file_path = os.path.join(PUBLIC_DIR, safe_path)
-        if not os.path.abspath(file_path).startswith(PUBLIC_DIR):
+        if not os.path.abspath(file_path).startswith(os.path.abspath(PUBLIC_DIR) + os.sep):
             self.send_error(403)
             return
         if not os.path.isfile(file_path):
