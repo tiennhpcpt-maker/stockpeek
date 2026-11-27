@@ -2,6 +2,315 @@
   "items": [
     {
       "date": "2026-11-27",
+      "session": "afternoon",
+      "generated_at": "2026-11-27T16:00:24+07:00",
+      "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
+      "hot_news": [
+        {
+          "title": "20 năm Vinamilk đồng hành cùng thị trường chứng khoán Việt Nam",
+          "link": "http://vietstock.vn/2026/11/20-nam-vinamilk-dong-hanh-cung-thi-truong-chung-khoan-viet-nam-830-1518447.htm",
+          "pubDate": "Fri, 27 Nov 2026 12:49:19 +0700",
+          "sourceCount": 3,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Cổ phiếu dầu khí, bất động sản đồng loạt bứt phá, VN-Index lấy lại hơn 24 điểm",
+          "link": "https://stockbiz.vn/tin-tuc/co-phieu-dau-khi-bat-dong-san-dong-loat-but-pha-vn-index-lay-lai-hon-24-diem/42952238",
+          "pubDate": "Fri, 27 Nov 2026 08:39:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Nhiều ngành đang có định giá dưới mức hợp lý",
+          "link": "http://vietstock.vn/2026/11/nhieu-nganh-dang-co-dinh-gia-duoi-muc-hop-ly-145-1518403.htm",
+          "pubDate": "Fri, 27 Nov 2026 07:46:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Vietstock"
+          ]
+        },
+        {
+          "title": "Chủ tịch IOSCO: Niềm tin và minh bạch làm nên sức mạnh thị trường chứng khoán",
+          "link": "https://stockbiz.vn/tin-tuc/chu-tich-iosco-niem-tin-va-minh-bach-lam-nen-suc-manh-thi-truong-chung-khoan/42949154",
+          "pubDate": "Fri, 27 Nov 2026 07:08:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường"
+          ]
+        },
+        {
+          "title": "Ba định hướng lớn với thị trường chứng khoán",
+          "link": "https://stockbiz.vn/tin-tuc/ba-dinh-huong-lon-voi-thi-truong-chung-khoan/42946915",
+          "pubDate": "Fri, 27 Nov 2026 06:14:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "Thanh Niên Chứng khoán"
+          ]
+        },
+        {
+          "title": "Thủ tướng Lê Minh Hưng: Thuế Hoa Kỳ áp với hàng Việt Nam sẽ thấp hơn nhiều dự kiến",
+          "link": "https://markettimes.vn/thu-tuong-le-minh-hung-thue-hoa-ky-ap-voi-hang-viet-nam-se-thap-hon-nhieu-du-kien-134905.html",
+          "pubDate": "Fri, 27 Nov 2026 13:03:04 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "MarketTimes Chứng khoán",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "'Chứng khoán phải là kênh huy động vốn trung, dài hạn'",
+          "link": "https://vnexpress.net/chung-khoan-phai-la-kenh-huy-dong-von-trung-dai-han-5149538.html",
+          "pubDate": "Fri, 27 Nov 2026 05:02:00 GMT",
+          "sourceCount": 2,
+          "sources": [
+            "Stockbiz Thị trường",
+            "VnExpress Kinh doanh"
+          ]
+        },
+        {
+          "title": "Thủ tướng: Việt Nam cơ bản kết thúc đàm phán thuế đối ứng với Mỹ",
+          "link": "https://dantri.com.vn/kinh-doanh/thu-tuong-viet-nam-co-ban-ket-thuc-dam-phan-thue-doi-ung-voi-my-20261127105029680.htm",
+          "pubDate": "Fri, 27 Nov 2026 11:12:39 +0700",
+          "sourceCount": 2,
+          "sources": [
+            "Dân Trí Kinh doanh",
+            "VnExpress Kinh doanh"
+          ]
+        }
+      ],
+      "mentioned_tickers": [],
+      "title": "Báo cáo cuối phiên 27/11",
+      "market": {
+        "indices": [
+          {
+            "name": "VN-INDEX",
+            "value": 1653.9,
+            "change": 24.22,
+            "changePct": 1.49,
+            "tradingValue": 11269.14,
+            "foreignNet": null
+          },
+          {
+            "name": "VN30-INDEX",
+            "value": 1753.53,
+            "change": 24.65,
+            "changePct": 1.43,
+            "tradingValue": 5327.37,
+            "foreignNet": null
+          },
+          {
+            "name": "HNX-INDEX",
+            "value": 228.11,
+            "change": 1.54,
+            "changePct": 0.68,
+            "tradingValue": 583.51,
+            "foreignNet": null
+          },
+          {
+            "name": "UPCOM",
+            "value": 118.22,
+            "change": -0.22,
+            "changePct": -0.19,
+            "tradingValue": 379.11,
+            "foreignNet": null
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Dầu khí",
+            "avgChangePct": 7.39,
+            "up": 4,
+            "down": 0,
+            "total": 4,
+            "leader": {
+              "ticker": "PVS",
+              "changePct": 10.0
+            }
+          },
+          {
+            "name": "Bán lẻ",
+            "avgChangePct": 2.66,
+            "up": 3,
+            "down": 0,
+            "total": 4,
+            "leader": {
+              "ticker": "FRT",
+              "changePct": 5.04
+            }
+          },
+          {
+            "name": "Bất động sản",
+            "avgChangePct": 2.36,
+            "up": 6,
+            "down": 0,
+            "total": 6,
+            "leader": {
+              "ticker": "NVL",
+              "changePct": 6.1
+            }
+          },
+          {
+            "name": "Thép",
+            "avgChangePct": 1.58,
+            "up": 3,
+            "down": 0,
+            "total": 3,
+            "leader": {
+              "ticker": "NKG",
+              "changePct": 3.11
+            }
+          },
+          {
+            "name": "Ngân hàng",
+            "avgChangePct": 1.18,
+            "up": 8,
+            "down": 0,
+            "total": 8,
+            "leader": {
+              "ticker": "MBB",
+              "changePct": 2.82
+            }
+          },
+          {
+            "name": "Bất động sản khu công nghiệp",
+            "avgChangePct": 1.08,
+            "up": 3,
+            "down": 1,
+            "total": 4,
+            "leader": {
+              "ticker": "IDC",
+              "changePct": 3.24
+            }
+          },
+          {
+            "name": "Chứng khoán",
+            "avgChangePct": 0.4,
+            "up": 3,
+            "down": 1,
+            "total": 6,
+            "leader": {
+              "ticker": "VND",
+              "changePct": 2.25
+            }
+          },
+          {
+            "name": "Thực phẩm - Đồ uống",
+            "avgChangePct": 0.12,
+            "up": 1,
+            "down": 2,
+            "total": 3,
+            "leader": {
+              "ticker": "MSN",
+              "changePct": 1.32
+            }
+          }
+        ],
+        "movers": {
+          "gainers": [
+            {
+              "ticker": "PVS",
+              "last": 27500,
+              "changePct": 10.0,
+              "volume": 539650
+            },
+            {
+              "ticker": "PVD",
+              "last": 16550,
+              "changePct": 6.77,
+              "volume": 783670
+            },
+            {
+              "ticker": "GAS",
+              "last": 72500,
+              "changePct": 6.62,
+              "volume": 154330
+            },
+            {
+              "ticker": "PLX",
+              "last": 31000,
+              "changePct": 6.16,
+              "volume": 235700
+            },
+            {
+              "ticker": "NVL",
+              "last": 9390,
+              "changePct": 6.1,
+              "volume": 1358440
+            }
+          ],
+          "losers": [
+            {
+              "ticker": "VCI",
+              "last": 18200,
+              "changePct": -1.36,
+              "volume": 810570
+            },
+            {
+              "ticker": "SAB",
+              "last": 43600,
+              "changePct": -0.57,
+              "volume": 79010
+            },
+            {
+              "ticker": "KBC",
+              "last": 26200,
+              "changePct": -0.38,
+              "volume": 88410
+            },
+            {
+              "ticker": "VNM",
+              "last": 52500,
+              "changePct": -0.38,
+              "volume": 134370
+            }
+          ],
+          "volume": [
+            {
+              "ticker": "VIX",
+              "last": 12000,
+              "changePct": 0.84,
+              "volume": 2314130
+            },
+            {
+              "ticker": "SSI",
+              "last": 18900,
+              "changePct": 0.0,
+              "volume": 1679760
+            },
+            {
+              "ticker": "VPB",
+              "last": 20050,
+              "changePct": 1.78,
+              "volume": 1493180
+            },
+            {
+              "ticker": "HPG",
+              "last": 19900,
+              "changePct": 1.53,
+              "volume": 1485810
+            },
+            {
+              "ticker": "NVL",
+              "last": 9390,
+              "changePct": 6.1,
+              "volume": 1358440
+            }
+          ]
+        },
+        "summary": "VN-Index tăng 24,22 điểm (1,49%) phiên 27/11, đạt 1.653,90 điểm, giá trị giao dịch 11.269,14 tỷ đồng. Nhóm ngành mạnh nhất: Dầu khí (bình quân 7,39%, 4/4 mã tăng); yếu nhất: Thực phẩm - Đồ uống (0,12%). Tăng mạnh: PVS (+10,00%), PVD (+6,77%), GAS (+6,62%). Giảm mạnh: VCI (-1,36%), SAB (-0,57%), KBC (-0,38%)."
+      },
+      "summary": "VN-Index tăng 24,22 điểm (1,49%) phiên 27/11, đạt 1.653,90 điểm, giá trị giao dịch 11.269,14 tỷ đồng. Nhóm ngành mạnh nhất: Dầu khí (bình quân 7,39%, 4/4 mã tăng); yếu nhất: Thực phẩm - Đồ uống (0,12%). Tăng mạnh: PVS (+10,00%), PVD (+6,77%), GAS (+6,62%). Giảm mạnh: VCI (-1,36%), SAB (-0,57%), KBC (-0,38%). Tin được nhiều nguồn đưa nhất: \"20 năm Vinamilk đồng hành cùng thị trường chứng khoán Việt Nam\" (3 nguồn)."
+    },
+    {
+      "date": "2026-11-27",
       "session": "morning",
       "generated_at": "2026-11-27T08:30:40+07:00",
       "disclaimer": "Đây là tổng hợp thông tin tham khảo từ tin tức và báo cáo phân tích thị trường, không phải khuyến nghị đầu tư. Nhà đầu tư cần tự nghiên cứu thêm và cân nhắc kỹ trước khi ra quyết định.",
