@@ -1,6 +1,104 @@
 {
   "items": [
     {
+      "date": "2026-11-27",
+      "session": "morning",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán sáng (email)",
+      "generated_at": "2026-11-27T08:18:33+07:00",
+      "title": "Bản tin sáng 27/11: VN-Index giảm sâu 3,42% về 1.629,68, kịch bản cơ sở lệch tiêu cực",
+      "summary": "Phiên tham chiếu 26/11, VN-Index đóng cửa 1.629,68 điểm (-3,42%, -57,77 điểm). Khớp lệnh HOSE 13.479 tỷ, tổng giá trị 16.043,7 tỷ gồm thỏa thuận 2.564,6 tỷ. Khối ngoại bán ròng 186,9 tỷ, tự doanh bán ròng 219 tỷ. Kịch bản cơ sở lệch tiêu cực, hỗ trợ 1.591-1.615 và kháng cự 1.650-1.672.",
+      "key_findings": [
+        "VN-Index 1.629,68 điểm (-3,42%), thấp hơn MA20 (1.717) và MA50 (1.740)",
+        "Thanh khoản khớp lệnh HOSE 13.479 tỷ, cao hơn trung bình 30 phiên khoảng 11.782 tỷ (suy luận)",
+        "Khối ngoại bán ròng 186,9 tỷ, chuỗi bán ròng 7 phiên; tự doanh bán ròng 219 tỷ",
+        "Dòng tiền trong nước còn lại khoảng +406 tỷ (suy luận)",
+        "Mã theo dõi nổi bật: VNM 4,0; SAB 4,0; CTD 3,5; dự bị MSN 3,5"
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 27/11",
+          "items": [
+            "Cơ sở, lệch tiêu cực",
+            "Hỗ trợ: 1.591-1.615",
+            "Kháng cự: 1.650-1.672"
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: bán ròng 186,9 tỷ trên HOSE, chuỗi bán ròng 7 phiên",
+            "Tự doanh: bán ròng 219 tỷ",
+            "Trong nước (suy luận): còn lại khoảng +406 tỷ",
+            "Thỏa thuận: 2.564,6 tỷ"
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "VNM và SAB cùng được chấm 4,0 điểm, đứng đầu danh sách theo dõi; MSN là mã dự bị với 3,5 điểm."
+        },
+        {
+          "name": "Thép",
+          "view": "HPG được chấm 2,5 điểm, ở mức trung tính trong danh sách quét."
+        },
+        {
+          "name": "Bất động sản",
+          "view": "VHM được chấm 2,5 điểm, ở mức trung tính."
+        },
+        {
+          "name": "Bán lẻ",
+          "view": "FRT được chấm 2,5 điểm, ở mức trung tính."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "VNM",
+          "note": "Điểm 4,0; dòng tiền mua ròng 4 phiên liên tiếp"
+        },
+        {
+          "ticker": "SAB",
+          "note": "Điểm 4,0; mua ròng 3 phiên liên tiếp"
+        },
+        {
+          "ticker": "CTD",
+          "note": "Điểm 3,5; chuỗi mua ròng ít nhất 10 phiên"
+        },
+        {
+          "ticker": "MSN",
+          "note": "Mã dự bị, điểm 3,5"
+        },
+        {
+          "ticker": "HPG",
+          "note": "Điểm 2,5; đang bán ròng 3 phiên"
+        },
+        {
+          "ticker": "FRT",
+          "note": "Điểm 2,5"
+        },
+        {
+          "ticker": "VHM",
+          "note": "Điểm 2,5"
+        },
+        {
+          "ticker": "GMD",
+          "note": "Điểm 2,0"
+        }
+      ],
+      "action_items": [
+        "Theo dõi vùng hỗ trợ 1.591-1.615 của VN-Index",
+        "Ưu tiên theo dõi VNM, SAB, CTD; dự bị MSN"
+      ],
+      "sources": [
+        "TCBS",
+        "CafeF",
+        "Vietstock",
+        "VnEconomy"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
       "date": "2026-11-26",
       "session": "afternoon",
       "kind": "bulletin",
