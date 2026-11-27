@@ -2,6 +2,84 @@
   "items": [
     {
       "date": "2026-11-27",
+      "session": "afternoon",
+      "kind": "bulletin",
+      "origin": "Bản tin chứng khoán chiều (email)",
+      "generated_at": "2026-11-27T16:19:08+07:00",
+      "title": "Bản tin chiều 27/11: VN-Index hồi mạnh lên 1.653,90, khối ngoại quay lại mua ròng",
+      "summary": "VN-Index đóng cửa 1.653,90 điểm, tăng 24,22 điểm (+1,49%). Khối ngoại mua ròng khoảng 563-571 tỷ đồng trên HOSE sau 7 phiên bán ròng liên tiếp. Thanh khoản giảm so với trung bình 30 phiên; số liệu tự doanh chưa có. Mail ghi bảng và phụ lục xem ở bản HTML nên bản tóm tắt này không có quét dòng tiền chi tiết theo mã.",
+      "key_findings": [
+        "VN-Index +1,49% lên 1.653,90 điểm.",
+        "Khối ngoại mua ròng khoảng 563-571 tỷ trên HOSE, chấm dứt chuỗi 7 phiên bán ròng.",
+        "Thanh khoản giảm; số tự doanh chưa có.",
+        "3 mã theo dõi nổi bật: SAB 4,0; PVT 4,0; MSN 3,5. Dự bị: MBB 3,5; VNM 3,5 (VNM đã chạm dấu hiệu dừng).",
+        "Kịch bản 30/11 là Cơ sở: hỗ trợ 1.630-1.648, kháng cự 1.660-1.672."
+      ],
+      "sections": [
+        {
+          "title": "Kịch bản phiên 30/11",
+          "items": [
+            "Cơ sở: hỗ trợ 1.630-1.648, kháng cự 1.660-1.672."
+          ]
+        },
+        {
+          "title": "Bức tranh dòng tiền",
+          "items": [
+            "Khối ngoại: mua ròng khoảng 563-571 tỷ trên HOSE sau 7 phiên bán.",
+            "Tự doanh: chưa có số."
+          ]
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Thực phẩm - Đồ uống",
+          "view": "SAB (4,0) và MSN (3,5) nằm trong nhóm theo dõi nổi bật; VNM (3,5) là mã dự bị nhưng đã chạm dấu hiệu dừng."
+        },
+        {
+          "name": "Ngân hàng",
+          "view": "MBB (3,5) là mã dự bị. Chuỗi dòng tiền: HDB và VCB đang bị bán ròng nhiều phiên liên tiếp."
+        },
+        {
+          "name": "Dầu khí",
+          "view": "PVT đạt 4,0 điểm, thuộc nhóm theo dõi nổi bật."
+        }
+      ],
+      "tickers": [
+        {
+          "ticker": "SAB",
+          "note": "4,0 điểm, mã theo dõi nổi bật; có chuỗi dòng tiền tích cực nhiều phiên."
+        },
+        {
+          "ticker": "PVT",
+          "note": "4,0 điểm, mã theo dõi nổi bật."
+        },
+        {
+          "ticker": "MSN",
+          "note": "3,5 điểm, mã theo dõi nổi bật."
+        },
+        {
+          "ticker": "MBB",
+          "note": "3,5 điểm, mã dự bị."
+        },
+        {
+          "ticker": "VNM",
+          "note": "3,5 điểm, mã dự bị; đã chạm dấu hiệu dừng."
+        }
+      ],
+      "action_items": [
+        "Theo dõi SAB, PVT, MSN; dự bị MBB, VNM (VNM đã chạm dấu hiệu dừng).",
+        "Phiên 30/11 quan sát vùng hỗ trợ 1.630-1.648 và kháng cự 1.660-1.672."
+      ],
+      "sources": [
+        "Index.vn",
+        "CafeF",
+        "Vietstock",
+        "TCBS"
+      ],
+      "disclaimer": "Bài phân tích do Claude tổng hợp từ tin tức công khai, chỉ mang tính tham khảo, không phải khuyến nghị đầu tư."
+    },
+    {
+      "date": "2026-11-27",
       "session": "midday",
       "kind": "bulletin",
       "origin": "Bản tin chứng khoán trưa (email)",
