@@ -52,3 +52,6 @@ Cookie phiên ký HMAC mang `sv` = `session_version` của tài khoản trong us
 
 ## Lỗi trả về trình duyệt
 Lỗi nội bộ (GitHub API, VPS, mạng) đi qua `Handler._send_server_error`: chi tiết ghi log Render (`[lỗi] ...`), trình duyệt chỉ nhận "Máy chủ đang gặp lỗi". Xem lỗi thật trong Logs của Render.
+
+## CSP và header bảo mật (từ 28/11/2026)
+`CSP_HEADER` trong server.py chỉ cho script/style/ảnh/kết nối từ chính web (`'self'`), không script nội dòng, không `eval`. **Thêm CDN, font Google, ảnh ngoài hay gọi API site khác từ trình duyệt thì phải mở thêm nguồn đó trong `CSP_HEADER`**, không thì trình duyệt chặn im lặng (xem Console). HSTS chỉ bật khi chạy trên Render. Kết nối treo bị cắt sau 30 giây (`Handler.timeout`). Body JSON phải là object.
