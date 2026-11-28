@@ -48,7 +48,7 @@ async function refreshIndices() {
     document.getElementById("indicesUpdated").textContent =
       "Cập nhật " + new Date(json.ts * 1000).toLocaleTimeString("vi-VN");
   } catch (e) {
-    grid.innerHTML = `<div class="empty">Lỗi lấy dữ liệu chỉ số: ${e.message}</div>`;
+    grid.innerHTML = `<div class="empty">Lỗi lấy dữ liệu chỉ số: ${escapeHtml(e.message)}</div>`;
   }
 }
 
@@ -261,7 +261,7 @@ async function refreshHotNews(category = "stock") {
     document.getElementById(dom.hotUpdated).textContent =
       "Cập nhật " + new Date().toLocaleTimeString("vi-VN");
   } catch (e) {
-    list.innerHTML = `<div class="empty">Lỗi lấy tin tức: ${e.message}</div>`;
+    list.innerHTML = `<div class="empty">Lỗi lấy tin tức: ${escapeHtml(e.message)}</div>`;
   }
 }
 
@@ -347,7 +347,7 @@ async function refreshLiveNews(category = "stock") {
     document.getElementById(dom.liveUpdated).textContent =
       "Cập nhật " + new Date().toLocaleTimeString("vi-VN");
   } catch (e) {
-    list.innerHTML = `<div class="empty">Lỗi lấy tin tức: ${e.message}</div>`;
+    list.innerHTML = `<div class="empty">Lỗi lấy tin tức: ${escapeHtml(e.message)}</div>`;
   }
 }
 
@@ -403,7 +403,7 @@ async function refreshSources() {
     document.getElementById("sourceGuestNote").hidden = sourcesEditable;
   } catch (e) {
     document.getElementById("sourcesList").innerHTML =
-      `<div class="empty">Lỗi lấy danh sách nguồn: ${e.message}</div>`;
+      `<div class="empty">Lỗi lấy danh sách nguồn: ${escapeHtml(e.message)}</div>`;
   }
 }
 
@@ -831,7 +831,7 @@ function renderReportNews(news) {
     .map((n) => {
       const href = safeUrl(n.link);
       const title = escapeHtml(n.title);
-      return `<li>${href ? `<a href="${href}" target="_blank" rel="noopener">${title}</a>` : title}
+      return `<li>${href ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener">${title}</a>` : title}
         <span class="rn-meta">${n.sourceCount} nguồn · ${escapeHtml((n.sources || []).join(", "))} · ${timeAgo(n.pubDate)}</span></li>`;
     })
     .join("");

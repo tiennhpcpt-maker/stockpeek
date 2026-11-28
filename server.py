@@ -1693,15 +1693,33 @@ CONTENT_TYPES = {
 }
 
 
+CSP_HEADER = (
+    "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; "
+    "img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; "
+    "form-action 'self'; frame-ancestors 'none'"
+)
+
+
 class Handler(BaseHTTPRequestHandler):
+    # Kết nối gửi request quá chậm/treo bị cắt sau 30 giây, không giữ luồng mãi.
+    timeout = 30
+
     def end_headers(self):
         # Header bảo mật cho MỌI phản hồi (JSON, file tĩnh, redirect):
         # - chống nhúng trang vào iframe của site khác (clickjacking — lừa bấm nút xoá
         #   tài khoản trong trang quản trị). CSP chỉ đặt frame-ancestors để không chặn
         #   script/style hiện có.
         # - nosniff: trình duyệt không đoán lại kiểu file.
+        # - CSP đầy đủ (từ 28/11/2026): chỉ chạy script từ chính web, không script nội
+        #   dòng, không tải gì từ site khác -> lỡ có lỗi XSS thì mã chèn vào cũng không
+        #   chạy/không gửi dữ liệu ra ngoài được. Web không dùng CDN, font hay ảnh ngoài;
+        #   thêm nguồn ngoài nào thì phải mở thêm ở đây. style 'unsafe-inline' vì app.js
+        #   có vài thuộc tính style="" trong HTML sinh ra.
+        # - HSTS (chỉ trên Render): luôn dùng HTTPS.
         self.send_header("X-Frame-Options", "DENY")
-        self.send_header("Content-Security-Policy", "frame-ancestors 'none'")
+        self.send_header("Content-Security-Policy", CSP_HEADER)
+        if os.environ.get("PORT"):
+            self.send_header("Strict-Transport-Security", "max-age=31536000")
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
         super().end_headers()
@@ -1944,7 +1962,11 @@ class Handler(BaseHTTPRequestHandler):
         raw = self.rfile.read(length) if length else b""
         if not raw:
             return {}
-        return json.loads(raw.decode("utf-8"))
+        data = json.loads(raw.decode("utf-8"))
+        if not isinstance(data, dict):
+            # Mọi API nhận object; gửi [] hay "x" trước đây làm body.get() văng lỗi.
+            raise ValueError("Body phải là JSON object")
+        return data
 
     def do_POST(self):
         parsed = urlparse(self.path)
@@ -2086,7 +2108,11 @@ class Handler(BaseHTTPRequestHandler):
         if parsed.path == "/api/admin/daily-report/generate":
             if not self._require_admin():
                 return
-            body = self._read_json_body() or {}
+            try:
+                body = self._read_json_body()
+            except Exception:
+                self._send_json({"ok": False, "error": "Dữ liệu gửi lên không hợp lệ"}, 400)
+                return
             session = body.get("session")
             if session not in ("morning", "afternoon"):
                 session = "afternoon" if datetime.now(VN_TZ).hour >= 16 else "morning"
